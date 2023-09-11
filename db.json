@@ -1,0 +1,217 @@
+{
+	"user": {
+		"info": {
+			"id": 1,
+			"cpf": "10101149728"
+		},
+		"glogalProgress": 0,
+		"unidades": [
+			{
+				"title": "Feliz por Termos Você",
+				"image": "https://i.ibb.co/VYjTRPT/card-img01.png",
+				"progress": 50,
+				"status": 0,
+				"content": [
+					{
+						"lessonsTitle": "Introdução",
+						"lessons": [
+							{
+								"title": "Mensagem especial / Klanjer",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 1,
+								"userRating": 0,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Cápsula do tempo",
+								"icon": "capsula",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 2,
+								"userRating": 0,
+								"status": 0,
+								"block": 0
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Um Sonho que Virou Compromisso",
+				"image": "https://i.ibb.co/chYNqzG/card-img02.png",
+				"progress": 5,
+				"status": 0,
+				"content": [
+					{
+						"lessonsTitle": "Nossa História",
+						"lessons": [
+							{
+								"title": "Fundação do Hospital",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 3,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 0,
+								"block": 0
+							}
+						]
+					},
+					{
+						"lessonsTitle": "Nossa História",
+						"lessons": [
+							{
+								"title": "Fundação do Hospital",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 5,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 1,
+								"status": 0,
+								"block": 0
+							}
+						]
+					},
+					{
+						"lessonsTitle": "Nossa História",
+						"lessons": [
+							{
+								"title": "Fundação do Hospital",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 3,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 0,
+								"block": 0
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Meus Benefícios e Oportunidades",
+				"image": "https://i.ibb.co/rpkStYn/card-img03.png",
+				"progress": 5,
+				"status": 0,
+				"content": [
+					{
+						"lessonsTitle": "Título da primeira lição - unidade 3",
+						"lessons": [
+							{
+								"title": "Título do objeto 1 - lição 1",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 2,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Título do objeto 2 - lição 1",
+								"icon": "capsula",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 3,
+								"status": 0,
+								"block": 0
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Jeito Einstein de Ser",
+				"image": "https://i.ibb.co/FzCHSDg/card-img04.png",
+				"progress": 5,
+				"status": 0,
+				"content": [
+					{
+						"lessonsTitle": "Título da primeira lição - unidade 4",
+						"lessons": [
+							{
+								"title": "Título do objeto 1 - lição 1",
+								"icon": "video",
+								"time": 3,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+								"objectRating": 4,
+								"status": 0,
+								"block": 0
+							},
+							{
+								"title": "Título do objeto 2 - lição 1",
+								"icon": "capsula",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 5,
+								"status": 0,
+								"block": 0
+							}
+						]
+					}
+				]
+			}
+		],
+		"capsula": {
+			"status": 1,
+			"content": []
+		},
+		"galeria": {
+			"status": 1,
+			"content": []
+		},
+		"start": {
+			"status": 1,
+			"content": []
+		},
+		"workplace": {
+			"status": 1,
+			"content": []
+		}
+	}
+}
