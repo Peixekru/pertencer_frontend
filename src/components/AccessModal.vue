@@ -121,10 +121,11 @@
 </template>
 
 <script setup>
-
     import { ref, watch } from 'vue'
     import { useAppStore } from '../store/app'
     import { useTheme } from "vuetify";
+
+    import { useSystemColors } from "./composables/useSystemStyle"
 
     //Inicia a store
     const appStore = useAppStore()
@@ -133,27 +134,21 @@
     const theme = useTheme();
 
 
-    const colorSelect = ref("0")
+    const colorSelect = ref(appStore.appData.themeNumber)
 
     watch(colorSelect, () => {
-        setTheme(myThemes[colorSelect.value])  
+        //Guarda a seleção do botão referente ao thema escolhido
+        appStore.appData.themeNumber = colorSelect
+        //Seleciona o thema 
+        appStore.appData.colorTheme = useSystemColors(colorSelect.value);
+        //Aplica o thema 
+        theme.global.name.value = appStore.appData.colorTheme
+        //Verifica se thema é escuro ou claro
+        appStore.isDarkMode = theme.global.current.value.dark
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
     })
 
-
-    const myThemes =
-        [
-            "light",
-            "customLightTheme",
-            "dark",
-            "customDarkTheme"
-        ];
-
-        
-    const setTheme = (selectedTheme) => {
-        theme.global.name.value = selectedTheme;
-        appStore.themeName = selectedTheme;
-        appStore.isDarkMode = theme.global.current.value.dark
-    };
 
 </script>
 

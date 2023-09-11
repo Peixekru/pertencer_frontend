@@ -5,6 +5,8 @@
 			"cpf": "10101149728"
 		},
 		"glogalProgress": 0,
+		"colorTheme" : "light",
+		"themeNumber": "0",
 		"unidades": [
 			{
 				"title": "Feliz por Termos Você",
@@ -210,6 +212,7 @@
 		},
 		"galeria": {
 			"status": 1,
+			"totalUsers" : 234,
 			"content": {
 				"userImgs" : [
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++01&font=montserrat",
@@ -220,7 +223,7 @@
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++06&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++07&font=montserrat"
 				],
-				"globalImags" : [
+				"globalImgs" : [
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++01&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++02&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++03&font=montserrat",

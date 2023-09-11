@@ -112,6 +112,7 @@
     const router = useRouter()
     
     appStore.currentRoute = router.currentRoute.value.fullPath
+    
 
     onMounted( () => {
         //Inicializa os primeiros itens

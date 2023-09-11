@@ -47,7 +47,8 @@
                             class="pe-4"
                             :class="appStore.isDarkMode ? 'text-primary' : 'text-white'"
                             >
-                            234 pessoas enviaram <span class="font-weight-bold">12.567 imagens!</span>
+                            {{ appStore.totalUsers }} pessoas enviaram 
+                            <span class="font-weight-bold">{{ appStore.totalGlobalImgs }} imagens!</span>
                             </p>  
                         
                     </v-col>
@@ -110,6 +111,12 @@
 <script setup>
     import { useAppStore } from '../store/app'
     const appStore = useAppStore()
+
+    //Armazena o total de usuários que enviaram imagens
+    appStore.totalUsers = appStore.appData.galeria.totalUsers
+    //Armazena o total de imagen envidas para para todas as galerias
+    appStore.totalGlobalImgs = appStore.appData.galeria.content.globalImgs.length
+
 
     const devAlert = (msg) => {
         alert(msg)

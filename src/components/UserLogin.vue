@@ -26,6 +26,7 @@
         placeholder="CPF"
         required
         color="primary"
+        type="number"
         ></v-text-field>
 
 

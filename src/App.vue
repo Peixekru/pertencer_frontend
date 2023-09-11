@@ -21,6 +21,7 @@
 	import { onMounted } from 'vue'
 	import { RouterView } from 'vue-router'
 	import { useAppStore } from '@/store/app'
+	import { useTheme } from "vuetify";
 
 	import TopBar from '@/components/TopBar.vue'
 	import FloatMenu from '@/components/FloatMenu.vue'
@@ -31,17 +32,25 @@
 
 	const appStore = useAppStore()
 
+	//Inicia os themas do Vuetify
+    const theme = useTheme();
+
 	//Carrega dados do usuário
 	useApiGet('/user');
 
 onMounted(() => {
 	//Armazena valors iniciais do tamanho da tela, #App e posição do scroll
 	useScreenMonitor()
+
 	//Monitora o tamanhos da tela e do #App
 	window.addEventListener('resize', useScreenMonitor)
 	//Monitora o scroll da tela
 	window.addEventListener('scroll', useScreenMonitor)
 
+	//Aplica o thema 
+	theme.global.name.value = appStore.appData.colorTheme
+    //Verifica se thema é escuro ou claro
+    appStore.isDarkMode = theme.global.current.value.dark
 })
 </script>
 

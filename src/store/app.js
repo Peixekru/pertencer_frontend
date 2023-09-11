@@ -40,6 +40,7 @@ export const useAppStore = defineStore('app', {
 
 		//Temas
 		themeName: 'light',
+		themeNumber: "0",
 		isDarkMode: false,
 
 		//Tamanhos e posições da tela e do app
@@ -55,6 +56,10 @@ export const useAppStore = defineStore('app', {
 		sendDate: '',
 		countdown: '',
 		progress: 0,
+
+		//Galeria de fotos
+		totalUsers: 0,
+		totalGlobalImgs: 0
 	}),
 
 })
