@@ -8,68 +8,67 @@ import { createVuetify } from 'vuetify'
 
 /* Custom Thems */
 const customDarkTheme = {
-  dark: true,
-  colors: {
-    background: "#15202b",
-    surface: "#15202b",
-    primary: "#00FFCD",
-    secondary: "#03dac6",
-    error: "#ff5722",
-    info: "#2196F3",
-    success: "#4caf50",
-    warning: "#fb8c00",
-  },
+	dark: true,
+	colors: {
+		background: "#15202b",
+		surface: "#15202b",
+		primary: "#00FFCD",
+		secondary: "#03dac6",
+		error: "#ff5722",
+		info: "#2196F3",
+		success: "#4caf50",
+		warning: "#fb8c00",
+	},
 };
 
 const customLightTheme = {
-  dark: false,
-  colors: {
-    background: "#bdbdbd",
-    surface: "#e0e0e0",
-    primary: "#004F99",
-    secondary: "#00ccff",
-    error: "#ffcc00",
-    info: "#2196F3",
-    success: "#4caf50",
-    warning: "#fb8c00",
-  },
+	dark: false,
+	colors: {
+		background: "#bdbdbd",
+		surface: "#e0e0e0",
+		primary: "#004F99",
+		secondary: "#00ccff",
+		error: "#ffcc00",
+		info: "#2196F3",
+		success: "#4caf50",
+		warning: "#fb8c00",
+	},
 };
 
 
 /* Export vuetify */
 export default createVuetify({
 
-  /*
-  icons: {
-    defaultSet: 'fa',
-    aliases,
-    sets: {
-      fa,
-    },
-  },
+	/*
+	icons: {
+		defaultSet: 'fa',
+		aliases,
+		sets: {
+		fa,
+		},
+	},
+  	*/
+	
+	theme: {
+		defaultTheme: "light",
+		themes: {
+		customDarkTheme,
+		customLightTheme,
 
-  */
- 
-  theme: {
-    defaultTheme: "light",
-    themes: {
-      customDarkTheme,
-      customLightTheme,
+		light: {
+			colors: {
+			primary: "#004F81",
+			secondary: "#5BC6E8",
+			}
+		},
 
-      light: {
-        colors: {
-          primary: "#004F81",
-          secondary: "#5BC6E8",
-        }
-      },
+		dark: {
+			colors: {
+			primary: "#5BC6E8",
+			secondary: "#004F81",
+			}
+		},
 
-      dark: {
-        colors: {
-          primary: "#5BC6E8",
-          secondary: "#004F81",
-        }
-      },
-
-    },
-  },
+		},
+	},
 });

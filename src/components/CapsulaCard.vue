@@ -51,12 +51,12 @@
                             <p 
                             class="font-weight-bold"
                             :class="appStore.isDarkMode ? 'text-primary' : 'text-white'">
-                                365 dias para a abertura 
+                                {{ appStore.countdown }} dias para a abertura 
                             </p>
                             <p
                             :class="appStore.isDarkMode ? 'text-primary' : 'text-white'"
                             >
-                                07/07/2024
+                                {{ appStore.sendDate }}
                             </p>  
                         </div>
 
@@ -66,7 +66,7 @@
                         'px-4' : 'pe-4' "
                         >
                             <v-progress-linear
-                            :model-value="50"
+                            :model-value="appStore.progress"
                             :color="appStore.isDarkMode ? 'primary' : 'secondary'"
                             height="10"
                             rounded
@@ -133,17 +133,44 @@
 
 
 <script setup>
+    import { ref, onMounted } from 'vue';
     import { useAppStore } from '../store/app'
     const appStore = useAppStore()
 
     const devAlert = (msg) => {
         alert(msg)
     }
+
+    onMounted(() => {
+        //Armazena a data de envio
+        appStore.sendDate = appStore.appData.capsula.content[0].sendDate
+
+        let startDate = new Date(appStore.appData.capsula.content[0].startDate)
+        let sendDate = new Date(appStore.sendDate)
+        let currentDate = new Date()
+
+        //Calcula a quantidade de dias restantes para envio
+        let difference = sendDate.getTime() - currentDate.getTime()
+        let countdown = Math.ceil(difference / (1000 * 3600 * 24))
+        if (countdown < 0) { appStore.countdown = 0 } 
+        else { appStore.countdown = countdown }
+
+        //Converte o tempo para envio em dias
+        let totalDaysCalc = sendDate.getTime() - startDate.getTime()
+        let totalDays = Math.abs(Math.ceil(totalDaysCalc / (1000 * 3600 * 24)))
+
+        //Calcula o progresso da barra
+        let progressCalc = (currentDate.getTime() - startDate.getTime() )
+        let progressDays = Math.ceil(progressCalc / (1000 * 3600 * 24))
+        let progressBar = (((progressDays -1) * 100) / totalDays).toFixed(1)
+
+        if(progressBar >= 100){ appStore.progress = 100 } 
+        else { appStore.progress = progressBar }
+    })
 </script>
 
 <style scoped>
     .bg-card-icon-opacity{
         opacity: .1;
     }
-
 </style>
