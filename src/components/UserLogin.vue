@@ -26,7 +26,6 @@
         placeholder="CPF"
         required
         color="primary"
-        type="number"
         ></v-text-field>
 
 
@@ -51,7 +50,7 @@
         size="large"
         rounded
         @click="login != '' && login.length == 11 && senha != ''? 
-        $router.push('/home') : snackbar = true"
+        sendInfos() : snackbar = true"
         >
         Entrar
         </v-btn>
@@ -98,8 +97,13 @@
 
 <script setup>
 
-    import { ref } from 'vue'
+    import { ref, onMounted } from 'vue'
     import { useAppStore } from '../store/app'
+    import { useRouter } from 'vue-router'
+
+    import { useApiGet } from '@/components/composables/useApi'
+
+    const router = useRouter()
 
     //Inicia a store
     const appStore = useAppStore()
@@ -111,6 +115,16 @@
     const login = ref('')
     const senha = ref('')
 
+    async function sendInfos () {
+        useApiGet(':3001', '/login', {"login": login.value, "senha": senha.value})
+        loadHome()
+    }
+
+    const loadHome = () => {
+            useApiGet(':3006', '/user', {"Key": "Logoin"});
+            router.push('/home')
+    }
+
     //Mensagem snapbar
     const snackbar = ref(false)
     const text = ref('Oops... Seu login ou senha estão incorretos.')
@@ -121,5 +135,10 @@
     const teste = (msg) => {
         alert(msg)
     }
+
+    onMounted(() => {
+        localStorage.removeItem('userToken')
+        appStore.logginStatus = false
+    })
 
 </script>

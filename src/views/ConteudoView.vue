@@ -29,6 +29,7 @@
     if (!appStore.navigationStart){
         router.push('/home')
     }
+    
 </script>
 
 <style scoped>

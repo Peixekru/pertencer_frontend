@@ -1,5 +1,5 @@
 import { useAppStore } from '../../store/app'
-//import { useApiPost } from './useApi'
+import { useApiPost } from './useApi'
 
 export function useBlockStatus(obj) {
 
@@ -89,7 +89,6 @@ export function useBlockStatus(obj) {
     //Atualiza o localStorage
     localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 
-    //Atualiza dados no banco
-    //useApiPost( '/user', JSON.parse(localStorage.getItem('localAppData')) )
-
+    //Atualiza o Backend
+    useApiPost('/user', JSON.parse(localStorage.getItem('localAppData')));
 }

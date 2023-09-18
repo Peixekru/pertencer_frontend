@@ -103,7 +103,7 @@
                     src="../assets/img/btn-back-unidade.svg"
                     max-width="38"
                     min-width="38"
-                    @click="$router.push('/home'); appStore.isFinished = false"
+                    @click="$router.push('/home'); appStore.isFinished = false;"
                     />
                 </a>
 

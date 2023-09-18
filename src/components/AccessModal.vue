@@ -125,6 +125,7 @@
     import { useAppStore } from '../store/app'
     import { useTheme } from "vuetify";
 
+    import { useApiPost } from '../components/composables/useApi'
     import { useSystemColors } from "./composables/useSystemStyle"
 
     //Inicia a store
@@ -147,6 +148,8 @@
         appStore.isDarkMode = theme.global.current.value.dark
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        //Atualiza o Backend
+        useApiPost('/user', JSON.parse(localStorage.getItem('localAppData')));
     })
 
 

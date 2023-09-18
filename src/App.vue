@@ -27,7 +27,7 @@
 	import FloatMenu from '@/components/FloatMenu.vue'
 	import FooterBar from '@/components/FooterBar.vue'
 
-	import { useApiGet } from '@/components/composables/useApi'
+	//import { useApiGet } from '@/components/composables/useApi'
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
 
 	const appStore = useAppStore()
@@ -36,7 +36,8 @@
     const theme = useTheme();
 
 	//Carrega dados do usuário
-	useApiGet('/user');
+	//useApiGet(':3006', '/user', {"Key": "Logoin"});
+	
 
 onMounted(() => {
 	//Armazena valors iniciais do tamanho da tela, #App e posição do scroll
@@ -47,20 +48,21 @@ onMounted(() => {
 	//Monitora o scroll da tela
 	window.addEventListener('scroll', useScreenMonitor)
 
-	//Aplica o thema 
-	theme.global.name.value = appStore.appData.colorTheme
-    //Verifica se thema é escuro ou claro
-    appStore.isDarkMode = theme.global.current.value.dark
+
+	//Verifica o localStorage
+	if (localStorage.getItem('localAppData')) {
+		appStore.appData = JSON.parse(localStorage.getItem('localAppData'));
+
+		//Aplica o thema 
+		theme.global.name.value = appStore.appData.colorTheme
+		//Verifica se thema é escuro ou claro
+		appStore.isDarkMode = theme.global.current.value.dark
+	} 
+
 })
 </script>
 
 <style>
-	/*
-		@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-		#app {
-			font-family: "Nunito", sans-serif !important;
-		}
-	*/
 	a {
 		cursor: pointer;
 	}

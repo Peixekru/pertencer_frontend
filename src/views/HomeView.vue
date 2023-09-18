@@ -104,6 +104,7 @@
     import { useRouter } from 'vue-router'
 
     import { useProgressCalc } from '@/components/composables/useProgress'
+    import { useApiGet } from '@/components/composables/useApi'
 
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
@@ -112,8 +113,12 @@
     const router = useRouter()
     
     appStore.currentRoute = router.currentRoute.value.fullPath
-    
 
+    console.log(appStore.logginStatus)
+
+    //Carrega dados do usuário
+	useApiGet(':3006', '/user', {"Key": "Logoin"});
+    
     onMounted( () => {
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
