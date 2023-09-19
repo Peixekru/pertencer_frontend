@@ -4,9 +4,6 @@ import { defineStore } from 'pinia'
 export const useAppStore = defineStore('app', {
 	state: () => ({
 
-		//Login
-		logginStatus: '',
-
 		//Rotas
 		currentRoute: '/',
 		nexRoute: [],

@@ -123,13 +123,14 @@
 <script setup>
     import { ref, watch } from 'vue'
     import { useAppStore } from '../store/app'
+    import { useApiStore } from '../store/api'
     import { useTheme } from "vuetify";
 
-    import { useApiPost } from '../components/composables/useApi'
     import { useSystemColors } from "./composables/useSystemStyle"
 
     //Inicia a store
     const appStore = useAppStore()
+    const apiStore = useApiStore()
 
     //Inicia os themas do Vuetify
     const theme = useTheme();
@@ -148,8 +149,10 @@
         appStore.isDarkMode = theme.global.current.value.dark
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        
         //Atualiza o Backend
-        useApiPost('/user', JSON.parse(localStorage.getItem('localAppData')));
+        //port / path / data
+        apiStore.usePost('3006', '/1', JSON.parse(localStorage.getItem('localAppData')))
     })
 
 

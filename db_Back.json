@@ -1,9 +1,5 @@
 {
-  "user": {
-    "info": {
-      "id": 1,
-      "cpf": "10101149728"
-    },
+  "1": {
     "glogalProgress": 35.714285714285715,
     "colorTheme": "customDarkTheme",
     "themeNumber": "3",

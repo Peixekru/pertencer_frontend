@@ -1,9 +1,10 @@
 import { useAppStore } from '../../store/app'
-import { useApiPost } from './useApi'
+import { useApiStore } from '../../store/api'
 
 export function useBlockStatus(obj) {
 
     const appStore = useAppStore();
+    const apiStore = useApiStore();
 
     const unidadeNum = parseInt(obj[0]);
     const conteudoNum = parseInt(obj[1]);
@@ -88,7 +89,6 @@ export function useBlockStatus(obj) {
 
     //Atualiza o localStorage
     localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-
-    //Atualiza o Backend
-    useApiPost('/user', JSON.parse(localStorage.getItem('localAppData')));
+    //port / path / data
+    apiStore.usePost('3006', '/1', JSON.parse(localStorage.getItem('localAppData')))
 }

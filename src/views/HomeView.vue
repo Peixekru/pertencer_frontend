@@ -102,30 +102,31 @@
     import { onMounted } from 'vue'
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
+    import { useTheme } from "vuetify";
 
     import { useProgressCalc } from '@/components/composables/useProgress'
-    import { useApiGet } from '@/components/composables/useApi'
 
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
+    
 
     const appStore = useAppStore() 
     const router = useRouter()
+    const theme = useTheme();
     
     appStore.currentRoute = router.currentRoute.value.fullPath
-
-    console.log(appStore.logginStatus)
-
-    //Carrega dados do usuário
-	useApiGet(':3006', '/user', {"Key": "Logoin"});
     
     onMounted( () => {
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
         appStore.appData.unidades[0].content[0].lessons[0].block = 1
+
+        //Aplica o thema 
+        theme.global.name.value = appStore.appData.colorTheme
+        //Verifica se thema é escuro ou claro
+        appStore.isDarkMode = theme.global.current.value.dark
     })
 </script>
-
 
 
 <style scoped>

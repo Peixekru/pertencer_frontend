@@ -1,18 +1,14 @@
 {
-	"user": {
-		"info": {
-			"id": 1,
-			"cpf": "10101149728"
-		},
-		"glogalProgress": 0,
-		"colorTheme" : "light",
-		"themeNumber": "0",
+	"1": {
+		"glogalProgress": 35.714285714285715,
+		"colorTheme": "customDarkTheme",
+		"themeNumber": "3",
 		"unidades": [
 			{
 				"title": "Feliz por Termos Você",
 				"image": "https://i.ibb.co/VYjTRPT/card-img01.png",
 				"progress": 0,
-				"status": 0,
+				"status": 1,
 				"content": [
 					{
 						"lessonsTitle": "Introdução",
@@ -24,8 +20,8 @@
 								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
 								"objectRating": 1,
 								"userRating": 0,
-								"status": 0,
-								"block": 0
+								"status": 1,
+								"block": 1
 							},
 							{
 								"title": "Cápsula do tempo",
@@ -34,8 +30,8 @@
 								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
 								"objectRating": 2,
 								"userRating": 0,
-								"status": 0,
-								"block": 0
+								"status": 1,
+								"block": 1
 							}
 						]
 					}
@@ -45,7 +41,7 @@
 				"title": "Um Sonho que Virou Compromisso",
 				"image": "https://i.ibb.co/chYNqzG/card-img02.png",
 				"progress": 5,
-				"status": 0,
+				"status": 1,
 				"content": [
 					{
 						"lessonsTitle": "Nossa História",
@@ -56,8 +52,26 @@
 								"time": 3,
 								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
 								"objectRating": 3,
-								"status": 0,
-								"block": 0
+								"status": 1,
+								"block": 1
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 1,
+								"block": 1
+							},
+							{
+								"title": "Albert Einstein",
+								"icon": "slide",
+								"time": 5,
+								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+								"objectRating": 4,
+								"status": 1,
+								"block": 1
 							},
 							{
 								"title": "Albert Einstein",
@@ -66,25 +80,7 @@
 								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
 								"objectRating": 4,
 								"status": 0,
-								"block": 0
-							},
-							{
-								"title": "Albert Einstein",
-								"icon": "slide",
-								"time": 5,
-								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
-								"objectRating": 4,
-								"status": 0,
-								"block": 0
-							},
-							{
-								"title": "Albert Einstein",
-								"icon": "slide",
-								"time": 5,
-								"img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
-								"objectRating": 4,
-								"status": 0,
-								"block": 0
+								"block": 1
 							}
 						]
 					},
@@ -204,17 +200,17 @@
 			"content": [
 				{
 					"startDate": "07/29/2023",
-					"sendDate" : "07/07/2024",
-					"style" : 1,
-					"sendMessage" : "Lorem ipsum dor sir magnum ant lorem sir magnum ipsum lorem dor logus."
+					"sendDate": "07/07/2024",
+					"style": 1,
+					"sendMessage": "Lorem ipsum dor sir magnum ant lorem sir magnum ipsum lorem dor logus."
 				}
 			]
 		},
 		"galeria": {
 			"status": 1,
-			"totalUsers" : 234,
+			"totalUsers": 234,
 			"content": {
-				"userImgs" : [
+				"userImgs": [
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++01&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++02&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++03&font=montserrat",
@@ -223,7 +219,7 @@
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++06&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=user++image++07&font=montserrat"
 				],
-				"globalImgs" : [
+				"globalImgs": [
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++01&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++02&font=montserrat",
 					"https://placehold.co/600x400/fff/eaeaea?text=global++image++03&font=montserrat",

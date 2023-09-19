@@ -59,6 +59,19 @@ onMounted(() => {
 		appStore.isDarkMode = theme.global.current.value.dark
 	} 
 
+	const clearStorage = () => {
+
+		const session = sessionStorage.getItem('userInfos');
+
+		if (session == null) {
+			localStorage.removeItem('userInfos');
+		}
+
+		//sessionStorage.setItem('register', 1);
+	}
+
+	window.addEventListener('load', clearStorage);
+
 })
 </script>
 

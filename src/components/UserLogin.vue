@@ -18,9 +18,9 @@
         <div class="text-subtitle-1 text-medium-emphasis">Login</div>
                 
         <v-text-field
-        v-model="login"
+        v-model="user"
         :counter="11"
-        :class="login.length == 11 ? 'text-success' : '' "
+        :class="user.length == 11 ? 'text-success' : '' "
         maxlength="11"
         prepend-inner-icon="mdi-account-outline"
         placeholder="CPF"
@@ -32,7 +32,7 @@
         <div class="text-subtitle-1 text-medium-emphasis">Senha</div>
 
         <v-text-field
-        v-model="senha"
+        v-model="password"
         :append-inner-icon=" isVisible ? 'mdi-eye-off' : 'mdi-eye' "
         :type=" isVisible? 'text' : 'password' "
         prepend-inner-icon="mdi-lock-outline"
@@ -49,8 +49,8 @@
         color="primary"
         size="large"
         rounded
-        @click="login != '' && login.length == 11 && senha != ''? 
-        sendInfos() : snackbar = true"
+        @click="user != '' && user.length == 11 && password != ''? 
+        submmitUser() : snackbar = true"
         >
         Entrar
         </v-btn>
@@ -60,7 +60,8 @@
         :location="location"
         :timeout="timeout"
         >
-            {{ text }}
+            {{ sbText }}
+
             <template #actions>
                 <v-btn
                 icon="mdi-close"
@@ -99,35 +100,33 @@
 
     import { ref, onMounted } from 'vue'
     import { useAppStore } from '../store/app'
-    import { useRouter } from 'vue-router'
-
-    import { useApiGet } from '@/components/composables/useApi'
-
-    const router = useRouter()
+    import { useAuthStore } from '../store/userAuth'
 
     //Inicia a store
     const appStore = useAppStore()
+    const authStore = useAuthStore()
 
     //Exibe / esconde a senha
     const isVisible = ref(false)
 
-    //Registra login e senha
-    const login = ref('')
-    const senha = ref('')
+    //Armezena user e password
+    const user = ref('')
+    const password = ref('')
 
-    async function sendInfos () {
-        useApiGet(':3001', '/login', {"login": login.value, "senha": senha.value})
-        loadHome()
-    }
+    //Limpa informações do usuário persistentes
+    localStorage.removeItem("userInfos");
 
-    const loadHome = () => {
-            useApiGet(':3006', '/user', {"Key": "Logoin"});
-            router.push('/home')
+    //Envia os dados para validação de login
+    const submmitUser = () => {
+        authStore.useLogin(
+            // port / path / { user, password }
+            '3001', '/login', {"user": user.value, "password": password.value}
+        )
     }
 
     //Mensagem snapbar
     const snackbar = ref(false)
-    const text = ref('Oops... Seu login ou senha estão incorretos.')
+    const sbText = ref('Oops... Seu login ou senha estão incorretos.')
     const location = ref('bottom')
     const timeout = ref(3000)
 
