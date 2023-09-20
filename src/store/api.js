@@ -6,17 +6,17 @@ import axios from 'axios';
 export const useApiStore = defineStore('api', {
     state: () => ({
         server: 'http://localhost:',
-        fakeLoginServer: 'https://fakebackend.onrender.com'
+        fakeServer: 'https://fakebackend.onrender.com'
     }),
 
     actions: {
-        async useGet(port, path) {
+        async useGet(path, data) {
 
             const appStore = useAppStore()
 
             try {
                 //const response = await axios.get( this.server + port + path );
-                const response = await axios.get( this.akeLoginServer + path );
+                const response = await axios.get( this.fakeServer + path, data );
                 appStore.appData = response.data
             } catch (error) {
                 //Erro na resposta do servidor
@@ -25,12 +25,11 @@ export const useApiStore = defineStore('api', {
         },
 
 
-        async usePost(port, path, data) {
-
+        async usePost(path, data) {
 	
             //axios.post(this.server + port + path, data).then(function (response) {
-            axios.post(this.fakeLoginServer + path, data).then(function (response) {
-                console.log(port, ' - Tudo certo com o envio de: ', response);
+            axios.post(this.fakeServer + path, data).then(function (response) {
+                console.log(' - Tudo certo com o envio de: ', response);
             })
             .catch(function (error) {
                 //erro no envio

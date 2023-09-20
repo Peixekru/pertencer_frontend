@@ -5,8 +5,8 @@ import axios from 'axios';
 
 export const useAuthStore = defineStore('userAuth', {
     state: () => ({
-        server: 'http://localhost:',
-        fakeLoginServer: 'https://fakebackend.onrender.com'
+        localServer: 'http://localhost:',
+        fakeServer: 'https://fakebackend.onrender.com'
     }),
 
     getters: {
@@ -14,21 +14,23 @@ export const useAuthStore = defineStore('userAuth', {
     },
 
     actions: {
-        async useLogin(port, path, data) {
+        async useLogin(path, data) {
 
             const appStore = useAppStore()
 
             try {
                 //Envia user e passawor -> Armazena id e token
-                //const response = await axios.get( this.server + port + path, data );
-                const response = await axios.get( this.fakeLoginServer + path, data );
-                sessionStorage.setItem('userInfos', JSON.stringify(response.data)); // Persistente
+                const response = await axios.get( this.fakeServer + path, data );
+                localStorage.setItem('userId', JSON.stringify(response.data.userId)); // Persistente
+                sessionStorage.setItem('token', JSON.stringify(response.data.token)); // Persistente Parcial
 
                 try { 
                     //Envia token -> Armazena dados 
-                    const userInfos = JSON.parse(sessionStorage.getItem('userInfos'));
-                    //const response = await axios.get( this.server + '3006' + '/' + userInfos.userId, userInfos.token );
-                    const response = await axios.get( this.fakeLoginServer + '/' + userInfos.userId, userInfos.token );
+                    const userId = JSON.parse(localStorage.getItem('userId'));
+                    const token = JSON.parse(sessionStorage.getItem('token'));
+                    const response = await axios.get( this.fakeServer + '/' + userId, token );
+
+                    
                     appStore.appData = response.data; // Local
                     localStorage.setItem('localAppData', JSON.stringify(response.data)); // Persistente 
 
@@ -36,7 +38,7 @@ export const useAuthStore = defineStore('userAuth', {
                     this.$router.push('/home'); 
 
                     //Debug
-                    console.log('Token recebido e enviado: ', userInfos.token) 
+                    console.log('Token recebido e enviado: ', token) 
 
                 } catch (error) {
                     //Erro na rquisição de dados do usuário

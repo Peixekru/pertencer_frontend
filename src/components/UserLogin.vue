@@ -119,8 +119,8 @@
     //Envia os dados para validação de login
     const submmitUser = () => {
         authStore.useLogin(
-            // port / path / { user, password }
-            '3001', '/login', {"user": user.value, "password": password.value}
+            // path / { user, password }
+            '/login', {"user": user.value, "password": password.value}
         )
     }
 

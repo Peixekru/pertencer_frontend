@@ -89,6 +89,9 @@ export function useBlockStatus(obj) {
 
     //Atualiza o localStorage
     localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+    //Atualiza backend
+    const userId = JSON.parse(localStorage.getItem('userId'));
     //port / path / data
-    apiStore.usePost('3006', '/1', JSON.parse(localStorage.getItem('localAppData')))
+    apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 }
