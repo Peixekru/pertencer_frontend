@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export const useApiStore = defineStore('api', {
     state: () => ({
-        server: 'http://localhost:',
+        //server: 'http://localhost:',
         fakeServer: 'https://fakebackend.onrender.com'
     }),
 

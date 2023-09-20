@@ -59,7 +59,10 @@ export const useAppStore = defineStore('app', {
 
 		//Galeria de fotos
 		totalUsers: 0,
-		totalGlobalImgs: 0
+		totalGlobalImgs: 0,
+
+		//Systema
+		globalOverlay: false
 	}),
 
 })

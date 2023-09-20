@@ -36,7 +36,7 @@ const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
 	//retorna o scroll para o início quando quando a rota atual é modificada
-	scrollBehavior(to, from, savedPosition) {
+	scrollBehavior(savedPosition) {
 		if (savedPosition) {
 		return savedPosition
 		} else {

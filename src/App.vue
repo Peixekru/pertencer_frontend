@@ -8,7 +8,7 @@
 			</template>
 
 			<FooterBar v-if="appStore.currentRoute == '/conteudo'" />
-
+			<v-overlay v-model="appStore.globalOverlay"/>
 			<!--//Carrega as Views-->
 			<router-view />
 
@@ -27,16 +27,12 @@
 	import FloatMenu from '@/components/FloatMenu.vue'
 	import FooterBar from '@/components/FooterBar.vue'
 
-	//import { useApiGet } from '@/components/composables/useApi'
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
 
 	const appStore = useAppStore()
 
 	//Inicia os themas do Vuetify
     const theme = useTheme();
-
-	//Carrega dados do usuário
-	//useApiGet(':3006', '/user', {"Key": "Logoin"});
 	
 
 onMounted(() => {

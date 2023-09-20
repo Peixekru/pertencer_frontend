@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export const useAuthStore = defineStore('userAuth', {
     state: () => ({
-        localServer: 'http://localhost:',
+        //localServer: 'http://localhost:',
         fakeServer: 'https://fakebackend.onrender.com'
     }),
 

@@ -56,13 +56,134 @@
                             max-width="40"
                             @click="appStore.accessModal = true"
                             />
+
+                        
+
+                            <!--Menu quest compoent-->
+                            <v-menu 
+                            class="d-flex justify-center" 
+                            width="200px"
+                            v-model="showMenu"
+                            >
+                                <!--btn quest-->
+                                <template 
+                                v-slot:activator="{ props }"
+                                >
+                                    <v-img
+                                    v-bind="props"
+                                    class="mx-1"
+                                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                    src="../assets/img/quest-top-icon.svg"
+                                    max-width="40"
+                                    />           
+                                </template>
+
+                                <!--Tooltip-->
+                                <v-icon
+                                size="x-large"
+                                color="surface"
+                                icon="mdi-triangle"
+                                class="h-auto mt-2 tool-tip animate__animated animate__fadeInUp"
+                                />
+
+                                <!--Menu quest-->
+                                <v-card
+                                class="mx-auto rounded-lg "
+                                :class="!appStore.isMobile ? 'custom-card' : 'custom-card-mobile' "
+                                >
+                                    <v-container class="d-flex justify-space-between align-start">
+
+                                        <v-img 
+                                        v-if="!appStore.isMobile"
+                                        class="mx-1 animate__animated animate__shakeY"
+                                        :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                        src="../assets/img/quest-menu-img.svg"
+                                        width="60"
+                                        /> 
+
+                                        <v-sheet 
+                                        class="d-flex flex-column"
+                                        :class="!appStore.isMobile ? 'ms-6' : ''"
+                                        >
+
+                                            <p class="text-body-2 font-weight-medium">
+                                            Como posso te ajudar agora?
+                                            </p>
+
+                                            <v-sheet 
+                                            class="d-flex justify-space-between px-1 py-2 my-3 rounded-lg custom-menu-shadow"
+                                            >
+                                                <v-card 
+                                                min-width="84"
+                                                elevation="2" 
+                                                class="pa-2 mx-1 d-flex flex-column align-center"
+                                                @click="todo('Criar fluxo de Dúvida')"
+                                                >
+                                                    <v-img
+                                                    class="mb-2"
+                                                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                                    src="../assets/img/quest-top-btn-icon01.svg"
+                                                    width="18"
+                                                    /> 
+                                                    <p class="text-center text-caption text-medium-emphasis btn-txt-line">
+                                                        O que fazer <br/> nessa tela?
+                                                    </p>
+                                                </v-card>
+
+                                                <v-card 
+                                                min-width="84"
+                                                elevation="2" 
+                                                class="pa-2 mx-1 d-flex flex-column align-center"
+                                                @click="todo('Criar fluxo do FAQ')"
+                                                >
+                                                    <v-img   
+                                                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                                    src="../assets/img/quest-top-btn-icon02.svg"
+                                                    width="38"
+                                                    /> 
+                                                    <p class="text-center text-caption text-medium-emphasis mb-1 btn-txt-line">
+                                                        FAQ
+                                                    </p>
+                                                </v-card>
+
+                                                <v-card 
+                                                min-width="84"
+                                                elevation="2" 
+                                                class="pa-2 mx-1 d-flex flex-column align-center"
+                                                @click="todo('Criar fluxo de Contato')"
+                                                >
+                                                    <v-img
+                                                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                                    src="../assets/img/quest-top-btn-icon03.svg"
+                                                    width="28"
+                                                    /> 
+                                                    <p class="text-center text-caption text-medium-emphasis mb-1 btn-txt-line">
+                                                        Contato
+                                                    </p>
+                                                </v-card>
+
+                                                
+                                            </v-sheet>
+
+                                            <v-btn 
+                                                class="bg-primary letter-normal"
+                                                density="comfortable"
+                                                color="deep-purple-accent-4"
+                                                elevation="0"
+                                                rounded
+                                                >
+                                                FECHAR AJUDA
+                                            </v-btn>
+
+                                        </v-sheet>
+
+
+                                    </v-container>
+
+                                </v-card>
+
+                            </v-menu>
                     
-                            <v-img
-                            class="mx-1"
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
-                            src="../assets/img/quest-top-icon.svg"
-                            max-width="40"
-                            />
 
                     </div>
                 </v-toolbar-title>
@@ -120,6 +241,7 @@
 
 
 <script setup>
+    import { ref, watch } from 'vue';
     import { useAppStore } from '../store/app'
     import AccessModal from './AccessModal.vue'
     import MobileBackBtns from './MobileBackBtns.vue';
@@ -127,13 +249,21 @@
 
     const appStore = useAppStore()
 
+    const showMenu = ref(false)
+
+    watch(showMenu, () => {
+        appStore.globalOverlay = !appStore.globalOverlay
+    })
+
     const todo = (msg) => {
         alert(msg)
     }
 </script>
 
 
-<style scoped>
+
+
+<style lang="scss" scoped>
     .btn-top-grup{
         width: 100%;
     }
@@ -151,5 +281,23 @@
     }
     .mouse-click{
         cursor: pointer;
+    }
+    .custom-card{
+        transform: translateX(-50%);
+    }
+    .custom-card-mobile{
+        left: -56px;
+    }
+    .custom-menu-shadow{
+        box-shadow: inset 0px 0px 6px rgba(0,0,0,0.4);
+    }
+    .btn-txt-line{
+        line-height: 1.1;
+        font-size: 0.65em !important;
+    }
+
+    .tool-tip{
+        line-height: .6 !important;
+        margin-left: 4px !important;
     }
 </style>
