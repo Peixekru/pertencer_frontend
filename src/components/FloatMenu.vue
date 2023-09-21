@@ -1,5 +1,8 @@
 <template>
 
+    <!--Modal da cápsula do tempo-->
+    <CapsulaModal />
+
     <v-sheet
     :elevation="!appStore.isMobile > 600 ? 4 : 0"
     :color="!appStore.isMobile ? '' : 'transparent'"
@@ -15,9 +18,9 @@
         class="d-flex align-center justify-center my-1"
         :class="!appStore.isMobile ? 
         'rounded-circle btn-color' : 'bg-transparent' "
+        @click = "getMenuAction( index + 1)"
         >
             <v-img  
-            class=""
             :class="appStore.isDarkMode ||
             appStore.currentRoute == '/conteudo' &&
             !appStore.isMobile ?
@@ -25,8 +28,7 @@
             :src="getImg(index + 1)"
             :max-width="index == 0 || index == 3 ? 
             32 : index == 2 ? 20 : 26"
-            @click = "getMenuAction( index + 1)"
-            />
+            />  
         </v-sheet>
 
         <!--Progresso (Gota)-->
@@ -41,6 +43,8 @@
     import { useAppStore } from '../store/app'
     import ProgressGlobal from './ProgressGlobal.vue';
 
+    import CapsulaModal from './CapsulaModal.vue'
+
     //Inicia a store
     const appStore = useAppStore()
 
@@ -50,7 +54,7 @@
     } 
     // Desenvolver funcionalidades
     const getMenuAction = (i) => {
-        if (i == 1) { alert('Desenvover Cápsula do Tempo para o btn0' + i) }
+        if (i == 1) {appStore.capsulaModal = true }
         if (i == 2) { alert('Desenvover Galeria de Fotos para o btn0' + i) }
         if (i == 3) { alert('Desenvover Capsula do tempo para o btn0' + i) }
         if (i == 4) { alert('Desenvover Capsula do tempo para o btn0' + i) }

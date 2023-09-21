@@ -31,6 +31,18 @@
                 />
 
             </div>
+
+            <!--Load Image-->
+            <template v-slot:placeholder>
+                <div class="d-flex align-start justify-end fill-height pe-2 pt-2">
+                    <v-progress-circular
+                    size="20"
+                    width="3"
+                    color="primary"
+                    indeterminate
+                    />
+                </div>
+            </template>
             
         </v-img>
 

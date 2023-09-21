@@ -3,7 +3,7 @@
 <svg width="100%" height="100%" viewBox="0 0 35 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1,0,0,1,-15997,-14596.2)">
         <g transform="matrix(1,0,0,1,15120,14320.1)">
-            <text x="877px" y="320.774px" style="font-family:'FontAwesome6Pro-Regular', 'Font Awesome 6 Pro';font-size:55px;fill:rgb(112,112,112);"></text>
+            <path d="M877,318.303L877,278.557C877.143,277.053 877.967,276.23 879.471,276.086C880.115,276.086 880.688,276.301 881.189,276.731L910.623,302.834C911.124,303.336 911.375,303.944 911.375,304.661C911.232,306.093 910.444,306.881 909.012,307.024L895.369,307.024L901.707,320.667C902.208,322.17 901.779,323.316 900.418,324.104C898.914,324.605 897.768,324.176 896.98,322.815L890.643,309.172L881.189,320.022C880.688,320.523 880.079,320.774 879.363,320.774C877.931,320.631 877.143,319.807 877,318.303ZM901.707,301.868L882.156,284.465L882.156,310.999L888.602,303.586C889.604,302.441 890.893,301.868 892.469,301.868L901.707,301.868Z" style="fill:rgb(112,112,112);fill-rule:nonzero;"/>
         </g>
     </g>
 </svg>

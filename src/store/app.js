@@ -35,8 +35,11 @@ export const useAppStore = defineStore('app', {
 		allFinished: false,
 
 		//Modais
+		///
 		accessModal: false,
 		colorSelect: 0,
+		///
+		capsulaModal: false,
 
 		//Temas
 		themeName: 'light',

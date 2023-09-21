@@ -71,7 +71,10 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style lang="scss">
+
+	$primary: #00FFCD;
+
 	a {
 		cursor: pointer;
 	}

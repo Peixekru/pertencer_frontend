@@ -1,7 +1,7 @@
 <template>
     <v-dialog
     v-model="appStore.accessModal"
-    width="auto"
+    max-width="1000px"
     >
         <v-card
             class="rounded-xl"
@@ -17,40 +17,37 @@
                     theme="light"
                 >
 
-                    <v-container 
-                    class="d-flex"
-                    :class="appStore.screenWidth > 837 ? 'justify-center' : 'justify-start' "
+                    <v-container
+                    color="transparent"
+                    width="100%"
+                    class=" d-flex align-center"
+                    :class="!appStore.isMobile ? 'justify-center' : 'justify-start'"
                     >
-                        <v-sheet 
-                        color="transparent"
-                        :width=" appStore.screenWidth > 837 ? '50%' : '100%'"
-                        class="d-flex justify-start align-center">
-                            <v-img
-                            v-if="!appStore.isMobile"
-                            class="me-4"
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
-                            src="../assets/img/acess-top-icon.svg"
-                            max-width="40"
-                            />
 
-                            <v-toolbar-title 
-                            v-if="!appStore.isMobile"
-                            class="text-h5"
-                            :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
-                            > 
-                                Recursos de Acessibilidade
-                            </v-toolbar-title>
+                        <v-img
+                        v-if="!appStore.isMobile"
+                        class="me-4"
+                        :class="appStore.isDarkMode ? 'white-svg' : '' "
+                        src="../assets/img/acess-top-icon.svg"
+                        max-width="40"
+                        />
 
-                            <v-toolbar-title 
-                            v-else
-                            class="text-h5"
-                            :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
-                            > 
-                                Acessibilidade
-                            </v-toolbar-title>
+                        <h5
+                        v-if="!appStore.isMobile"
+                        class="text-h5"
+                        :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
+                        > 
+                            Recursos de Acessibilidade
+                        </h5>
 
+                        <v-toolbar-title 
+                        v-else
+                        class="text-h5"
+                        :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
+                        > 
+                            Acessibilidade
+                        </v-toolbar-title>
 
-                        </v-sheet>
                     </v-container>
 
                     <template v-slot:append>
@@ -77,6 +74,8 @@
                     Cursor.
                 </p>
             </v-card-text>
+
+
 
             <h2 class="ms-8 mt-4">
                 Cores
