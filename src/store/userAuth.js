@@ -5,8 +5,7 @@ import axios from 'axios';
 
 export const useAuthStore = defineStore('userAuth', {
     state: () => ({
-        //localServer: 'http://localhost:',
-        fakeServer: 'https://fakebackend.onrender.com'
+        fakeServer: import.meta.env.VITE_FAKESERVER
     }),
 
     getters: {

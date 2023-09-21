@@ -102,7 +102,7 @@
     import { onMounted } from 'vue'
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
-    import { useTheme } from "vuetify";
+    import { useTheme } from "vuetify"
 
     import { useProgressCalc } from '@/components/composables/useProgress'
 
