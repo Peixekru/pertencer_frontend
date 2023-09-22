@@ -10,7 +10,7 @@
             <!--Top Modal-->
             <v-sheet
                 height="80"  
-                class="d-flex align-center"
+                class="d-flex align-center w-100 rounded-t-xl fixed-bar"
                 :class=" appStore.isDarkMode ? 'container-dark' : 'container-light' "
             >
                 <v-toolbar
@@ -54,6 +54,7 @@
 
             <!--Content Modal-->  
             <v-container fluid
+            class="mt-16"
             :class="appStore.isMobile ? 'py-6 px-10' : 'py-10 px-16'"
             >
                 <v-container fluid
@@ -80,10 +81,10 @@
                     <v-col 
                     cols="12"
                     md="4"
+                    class="py-0"
                     >
                         <!--Group Container-->
                         <v-sheet
-                        height="300px"
                         class="d-flex justify-space-between flex-column"
                         >
                             <v-container fluid 
@@ -107,23 +108,12 @@
 
                                 <!--Box text-->
                                 <v-card
-                                max-height="196px"
+                                height="196px"
                                 elevation="0"
                                 class="px-6 py-4 rounded-lg custom-card-desabled"
                                 >
                                     <p class="text-caption text-disabled">
-                                        Lorem ipsum dolor sit am et, consetetur sadipscing elitr,
-                                        sed diam nonumy eirm od tempor invidunt ut labore et
-                                        dolore magna aliquyam erat, sed diam voluptua. At vero
-                                        eos et accusam et justo duo dolores et ea rebum. Stet
-                                        clita kasd gubergren, no sea takimata sanctus est Lorem
-                                        ipsum dolor sit am et. Lorem ipsum dolor sit am et,
-                                        consetetur sadipscing elitr, sed diam	nonumy eirm od
-                                        tempor invidunt ut labore et dolore magna aliquyam erat,
-                                        sed diam voluptua. At vero eos et accusam et justo duo
-                                        dolores et ea rebum. Stet clita kasd gubergren, no sea
-                                        takimata sanctus est Lorem ipsum dolor sit am et.
-                                        Lorem ipsum dolor sit am et, consetetur sadipscing .
+                                        {{ appStore.appData.capsula.content[0].sendMessage }}
                                     </p>
                                 </v-card>
 
@@ -131,7 +121,7 @@
 
                             <!--Desabled btn-->
                             <v-container
-                            class="d-flex justify-center"
+                            class="d-flex justify-center py-4"
                             >
                                 <v-btn 
                                 block 
@@ -141,7 +131,6 @@
                                 class="text-primary letter-normal"
                                 density="comfortable"
                                 rounded
-                                color="deep-purple-accent-4"
                                 >
                                     Gravar
                                 </v-btn>
@@ -156,10 +145,11 @@
                     <v-col 
                     cols="12"
                     md="4"
+                    class="py-0"
+                    :class="appStore.screenWidth >= 960 ? 'side-border' : '' "
                     >
                         <!--Group Container-->
                         <v-sheet
-                        height="300px"
                         class="d-flex justify-space-between flex-column"
                         >
                             <v-container fluid 
@@ -183,28 +173,35 @@
                                 </v-sheet>
 
                                 <!--Frames Gallery-->
-                                <v-container 
-                                fluid class="d-flex flex-wrap pa-0"
-                                v-model="imgSelect"
-                                >
-                                    <v-img
+                                <v-container class="py-2 px-2">
+
+                                <v-row>
+                                    <v-col
+                                    class="pa-0"
+                                    cols="4"
+                                    v-model="imgSelect"
                                     v-for="i in 6"
-                                    width="72"
-                                    class="rounded-lg mx-1 my-1"
-                                    :class="imgSelect == i ? 'selected-style elevation-6' : 'elevation-1' "
-                                    lazy-src="https://placehold.co/80x80/eaeaea/ffffff?text=img&font=montserra"
-                                    :src="getImg(i + 1)"
-                                    >
-                                        <!--Load Image-->
-                                        <template v-slot:placeholder>
-                                            <div class="d-flex align-center justify-center fill-height">
-                                                <v-progress-circular
-                                                color="primary"
-                                                indeterminate
-                                                />
-                                            </div>
-                                        </template>
-                                    </v-img>
+                                    >                 
+                                        <v-img
+
+                                        class="rounded-lg mx-1 my-1"
+                                        :class="imgSelect == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
+                                        lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
+                                        :src="getImg(i + 1)"
+                                        @click="imgSelect = i"
+                                        >
+                                            <!--Load Image-->
+                                            <template v-slot:placeholder>
+                                                <div class="d-flex align-center justify-center fill-height">
+                                                    <v-progress-circular
+                                                    color="primary"
+                                                    indeterminate
+                                                    />
+                                                </div>
+                                            </template>
+                                        </v-img>
+                                    </v-col>
+                                </v-row>
 
                                 </v-container>
                             
@@ -212,7 +209,7 @@
 
                             <!--Desabled btn-->
                             <v-container
-                            class="d-flex justify-center"
+                            class="d-flex justify-center py-4"
                             >
                                 <v-btn 
                                 block
@@ -234,10 +231,10 @@
                     <v-col 
                     cols="12"
                     md="4"
+                    class="py-0"
                     >
                         <!--Group Container-->
                         <v-sheet
-                            height="300px"
                             class="d-flex justify-space-between flex-column"
                         >
                             <v-container fluid 
@@ -251,7 +248,7 @@
                                     v-if="!appStore.isMobile"
                                     class="me-2"
                                     :class="appStore.isDarkMode ? 'white-svg' : '' "
-                                    src="../assets/img/capsula-modal-icon2.svg"
+                                    src="../assets/img/capsula-modal-icon3.svg"
                                     max-width="20"
                                     /> 
                                     
@@ -294,7 +291,7 @@
                         
                             <!--Desabled btn-->
                             <v-container
-                            class="d-flex justify-center"
+                            class="d-flex justify-center py-0"
                             >
                                 <v-btn
                                 v-if="mail != '' || confirmMail != ''"
@@ -347,14 +344,13 @@
 
     const mail = ref('')
     const confirmMail = ref('')
-    const imgSelect = (3)
+    const imgSelect = ref(appStore.appData.capsula.content[0].style)
 
     //Mensagem snapbar
     var snackbar = ref(false)
     var sbText = ref('Seu e-mail foi atualizado com sucesso!')
     const location = ref('bottom')
     const timeout = ref(3000)
-
 
     const getImg = (index) => {
     // Carrega imagens dos btns
@@ -372,9 +368,20 @@
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
         overflow-y: scroll;
     }
-
     .selected-style{
         border: 3px solid $secondaryLight;
+    }
+    .anim{
+        animation: fadeIn;
+        animation-duration: 2s; 
+    }
+    .fixed-bar {
+        position: fixed;
+        z-index: 3000;
+    }
+    .side-border{
+        border-left: 1px dashed rgba(100, 100, 100, 0.5);
+        border-right: 1px dashed rgba(100, 100, 100, 0.5);;
     }
 
 </style>
