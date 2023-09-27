@@ -59,13 +59,29 @@ export const useAppStore = defineStore('app', {
 		sendDate: '',
 		countdown: '',
 		progress: 0,
+		msg:'',
+		capsulaCardKey: 0,
 
 		//Galeria de fotos
 		totalUsers: 0,
 		totalGlobalImgs: 0,
 
 		//Systema
-		globalOverlay: false
+		globalOverlay: false,
+
+		//Global Msgs
+		msgVisibilty: false,
+		msgText: '',
+		msgColor: ''
 	}),
+
+	actions: {
+		//Global Msgs
+		globalMsg (msg, color) {
+			this.msgVisibilty = true
+        	this.msgColor = color
+        	this.msgText = msg
+		}
+	}
 
 })

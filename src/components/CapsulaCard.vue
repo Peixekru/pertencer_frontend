@@ -90,14 +90,10 @@
             sm="8"
             lg="7"
             >
-                <v-card-text>
-                    <p>
-                        Lorem ipsum dolor sit amet,
-                        consetetur sadipscing elitr, sed diam
-                        nonumy eirm od tem por invidunt ut
-                        labore et dolore m agna aliquyam
-                        erat, sed diam voluptua. At vero eos
-                        et accusam et justo duo dolores.
+                <v-card-text
+                >
+                    <p class="text">
+                        {{ appStore.appData.capsula.content.sendMessage }}
                     </p>
                     <v-btn 
                     class="bg-primary letter-normal mt-6 px-4"
@@ -105,7 +101,7 @@
                     rounded
                     color="deep-purple-accent-4"
                     :min-width="appStore.isMobile ? '100%' : '240' "
-                    @click="devAlert('Desenvolver Cápsula do tempo')"
+                    @click="appStore.capsulaModal = true"
                     >
                     Mensagem para o futuro
                     </v-btn>
@@ -133,7 +129,7 @@
 
 
 <script setup>
-    import { ref, onMounted } from 'vue';
+    import { onMounted } from 'vue';
     import { useAppStore } from '../store/app'
     const appStore = useAppStore()
 
@@ -143,9 +139,9 @@
 
     onMounted(() => {
         //Armazena a data de envio
-        appStore.sendDate = appStore.appData.capsula.content[0].sendDate
+        appStore.sendDate = appStore.appData.capsula.content.sendDate
 
-        let startDate = new Date(appStore.appData.capsula.content[0].startDate)
+        let startDate = new Date(appStore.appData.capsula.content.startDate)
         let sendDate = new Date(appStore.sendDate)
         let currentDate = new Date()
 
@@ -173,4 +169,12 @@
     .bg-card-icon-opacity{
         opacity: .1;
     }
+    .text {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7; /* number of lines to show */
+                line-clamp: 7;
+        -webkit-box-orient: vertical;
+}
 </style>

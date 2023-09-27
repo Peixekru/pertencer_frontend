@@ -2,6 +2,8 @@
 	<template v-if="appStore.appData != 'undefined'">
 		<v-app>
 
+			<GlobalMsg />
+
 			<template v-if="appStore.currentRoute != '/'">
 				<TopBar />
 				<FloatMenu />
@@ -9,6 +11,7 @@
 
 			<FooterBar v-if="appStore.currentRoute == '/conteudo'" />
 			<v-overlay v-model="appStore.globalOverlay"/>
+			
 			<!--//Carrega as Views-->
 			<router-view />
 
@@ -19,20 +22,26 @@
 
 <script setup>
 	import { onMounted } from 'vue'
-	import { RouterView } from 'vue-router'
+	import { RouterView, useRouter } from 'vue-router'
 	import { useAppStore } from '@/store/app'
 	import { useTheme } from "vuetify";
 
 	import TopBar from '@/components/TopBar.vue'
 	import FloatMenu from '@/components/FloatMenu.vue'
 	import FooterBar from '@/components/FooterBar.vue'
+	import GlobalMsg from './components/GlobalMsg.vue';
 
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
 
 	const appStore = useAppStore()
+	const router = useRouter()
 
 	//Inicia os themas do Vuetify
     const theme = useTheme();
+
+	if (!JSON.parse(sessionStorage.getItem('loginState'))){
+            router.push('/')
+        }
 	
 
 onMounted(() => {

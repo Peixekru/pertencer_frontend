@@ -1,7 +1,7 @@
 <template>
     <v-row class="d-class justify-space-between mx-1 pt-10">
     
-        <CapsulaCard 
+        <CapsulaCard :key="appStore.capsulaCardKey"
         v-if="appStore.appData.capsula.status == 1" 
         />
 
@@ -22,10 +22,13 @@
 
 
 <script setup>
+    //import { ref } from 'vue';
     import { useAppStore } from '../store/app'
     import CapsulaCard from '../components/CapsulaCard.vue'
     import GalleryCard from '../components/GalleryCard.vue'
     import StarterCard from '../components/StarterCard.vue'
     import WorkplaceCard from '../components/WorkplaceCard.vue'
     const appStore = useAppStore()
+
+    //const capsulaCardKey = ref(appStore.capsulaCardKey);
 </script>

@@ -50,28 +50,10 @@
         size="large"
         rounded
         @click="user != '' && user.length == 11 && password != ''? 
-        submmitUser() : snackbar = true"
+        submmitUser() : appStore.globalMsg('Oops! Login ou senha incorretos. ', 'error')"
         >
         Entrar
         </v-btn>
-
-        <v-snackbar
-        v-model="snackbar"
-        :location="location"
-        :timeout="timeout"
-        >
-            {{ sbText }}
-
-            <template #actions>
-                <v-btn
-                icon="mdi-close"
-                color="secundary"
-                variant="plain"
-                @click="snackbar = false"
-                />
-            </template>
-        </v-snackbar>
-
 
         <v-card-text class="text-center mb-4">
             <a
@@ -123,12 +105,6 @@
             '/login', {"user": user.value, "password": password.value}
         )
     }
-
-    //Mensagem snapbar
-    const snackbar = ref(false)
-    const sbText = ref('Oops... Seu login ou senha estão incorretos.')
-    const location = ref('bottom')
-    const timeout = ref(3000)
 
     //Debug tool
     const teste = (msg) => {

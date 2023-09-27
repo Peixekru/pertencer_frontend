@@ -115,8 +115,9 @@
     const theme = useTheme();
     
     appStore.currentRoute = router.currentRoute.value.fullPath
-    
+
     onMounted( () => {
+        
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
         appStore.appData.unidades[0].content[0].lessons[0].block = 1
@@ -125,6 +126,7 @@
         theme.global.name.value = appStore.appData.colorTheme
         //Verifica se thema é escuro ou claro
         appStore.isDarkMode = theme.global.current.value.dark
+        
     })
 </script>
 

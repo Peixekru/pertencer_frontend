@@ -22,6 +22,7 @@ export const useAuthStore = defineStore('userAuth', {
                 const response = await axios.get( this.fakeServer + path, data );
                 localStorage.setItem('userId', JSON.stringify(response.data.userId)); // Persistente
                 sessionStorage.setItem('token', JSON.stringify(response.data.token)); // Persistente Parcial
+                sessionStorage.setItem('loginState', true); // Controla o status de login
 
                 try { 
                     //Envia token -> Armazena dados 

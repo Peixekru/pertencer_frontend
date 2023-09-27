@@ -107,35 +107,31 @@
                                 </v-sheet>
 
                                 <!--Box text-->
-                                <v-card
-                                height="196px"
-                                elevation="0"
-                                class="px-6 py-4 rounded-lg custom-card-desabled"
-                                >
-                                    <p class="text-caption text-disabled">
-                                        {{ appStore.appData.capsula.content[0].sendMessage }}
-                                    </p>
-                                </v-card>
+                                <textarea
+                                v-model="msg"
+                                class="px-6 py-4 rounded-lg text-medium-emphasis text-caption"
+                                >{{msg}}</textarea>
 
                             </v-container>
 
-                            <!--Desabled btn-->
+                            <!--btn-->
                             <v-container
                             class="d-flex justify-center py-4"
                             >
                                 <v-btn 
                                 block 
-                                disabled
-                                variant="outlined"
-                                append-icon="mdi-check-circle-outline"
-                                class="text-primary letter-normal"
-                                density="comfortable"
                                 rounded
+                                density="comfortable"
+                                class="bg-primary letter-normal"
+                                :append-icon="!msgIsModified ? 'mdi-check-circle-outline' : ''"
+                                :disabled="!msgIsModified"
+                                @click="updateMsg"
                                 >
                                     Gravar
                                 </v-btn>
                             </v-container>
                         </v-sheet>
+
 
 
 
@@ -157,7 +153,7 @@
                             >
                                 <!--Title-->
                                 <v-sheet 
-                                class="d-flex align-center mb-3"
+                                class="d-flex align-center mb-4"
                                 >       
                                     <v-img
                                     v-if="!appStore.isMobile"
@@ -179,16 +175,15 @@
                                     <v-col
                                     class="pa-0"
                                     cols="4"
-                                    v-model="imgSelect"
+                                    v-model="msgStyle"
                                     v-for="i in 6"
                                     >                 
                                         <v-img
-
                                         class="rounded-lg mx-1 my-1"
-                                        :class="imgSelect == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
+                                        :class="msgStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
                                         lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
                                         :src="getImg(i + 1)"
-                                        @click="imgSelect = i"
+                                        @click="msgStyle = i"
                                         >
                                             <!--Load Image-->
                                             <template v-slot:placeholder>
@@ -207,18 +202,18 @@
                             
                             </v-container>
 
-                            <!--Desabled btn-->
+                            <!--btn-->
                             <v-container
-                            class="d-flex justify-center py-4"
+                            class="d-flex justify-center py-6"
                             >
                                 <v-btn 
-                                block
-                                disabled
-                                variant="outlined"
-                                append-icon="mdi-check-circle-outline"
-                                class="text-primary letter-normal"
-                                density="comfortable"
+                                block 
                                 rounded
+                                density="comfortable"
+                                class="bg-primary letter-normal"
+                                :append-icon="!styleIsModified ? 'mdi-check-circle-outline' : ''"
+                                :disabled="!styleIsModified"
+                                @click="updateStyle"
                                 >
                                     Escolher
                                 </v-btn>
@@ -261,27 +256,30 @@
                                 <v-container class="pa-0" fluid>
 
                                     <v-form fast-fail @submit.prevent>
-                                        <v-text-field
-                                            v-model="mail"
-                                            label="digite seu e-mail"
-                                            color="primary"
-                                        ></v-text-field>
 
                                         <v-text-field
-                                            v-model="confirmMail"
-                                            label="confirme seu e-mail"
-                                            color="primary"
+                                        v-model="mail"
+                                        label= 'e-mail'
+                                        color="primary"
+                                        :messages="!mailIsModified ?'e-mail salvo!' : '' "
+                                        />
 
-                                            :append-inner-icon="mail && confirmMail != '' ?
-                                            mail == confirmMail ? 
-                                            'mdi-check-circle-outline' : 'mdi-alert-circle-outline' : 
-                                            '' "
-                                            :class="mail && confirmMail != '' ?
-                                            mail == confirmMail ? 
-                                            'text-success' : 'text-error' : 
-                                            '' "
+                                        <v-text-field
+                                        v-if="mailIsModified"
+                                        v-model="confirmMail"
+                                        label="confirme seu e-mail"
+                                        color="primary"
 
-                                        ></v-text-field>
+                                        :append-inner-icon="mail && confirmMail != '' ?
+                                        mail == confirmMail ? 
+                                        'mdi-check-circle-outline' : 'mdi-alert-circle-outline' : 
+                                        '' "
+                                        :class="mail && confirmMail != '' ?
+                                        mail == confirmMail ? 
+                                        'text-success' : 'text-error' : 
+                                        '' "
+                                        class="animate__animated animate__fadeIn"
+                                        />
 
                                     </v-form>
 
@@ -289,19 +287,19 @@
                             
                             </v-container>
                         
-                            <!--Desabled btn-->
+                            <!--btn-->
                             <v-container
                             class="d-flex justify-center py-0"
                             >
                                 <v-btn
-                                v-if="mail != '' || confirmMail != ''"
+                                v-if="mailIsModified"
                                 :disabled="mail != confirmMail"
                                 block 
                                 type="submit"
                                 density="comfortable"
                                 rounded
                                 class="bg-primary letter-normal animate__animated animate__fadeInDown"
-                                @click="snackbar = true"
+                                @click="updateMail"
                                 >
                                     Confirmar
                                 </v-btn>
@@ -316,41 +314,118 @@
 
     </v-dialog>
 
-    <v-snackbar
-    v-model="snackbar"
-    :location="location"
-    :timeout="timeout"
-    >
-        {{ sbText }}
-
-        <template #actions>
-            <v-btn
-            icon="mdi-close"
-            color="secundary"
-            variant="plain"
-            @click="snackbar = false"
-            />
-        </template>
-    </v-snackbar>
-
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { ref, watch } from 'vue'
     import { useAppStore } from '../store/app'
+    import { useApiStore } from '../store/api'
 
-    //Inicia a store
     const appStore = useAppStore()
+    const apiStore = useApiStore();
 
-    const mail = ref('')
+
+
+    //MSG//
+
+    //1. Recupera e armazena mensagem
+    const savedMsg = appStore.appData.capsula.content.sendMessage
+    var msg = ref(savedMsg) 
+
+    //2. Observa se houve mudança na mensagem
+    var msgIsModified = ref(false)
+    watch(msg, () => { 
+        if (msg.value != appStore.appData.capsula.content.sendMessage){
+            msgIsModified.value = true
+        }else{
+            msgIsModified.value = false
+        }
+    })
+
+    //3. Grava alterações
+    const updateMsg = () => {
+        //Modifica a mensagem
+        appStore.appData.capsula.content.sendMessage = msg.value
+        //Modifica a data de gravação para a data atual
+        appStore.appData.capsula.content.startDate = new Date().toLocaleDateString()
+        //Desabilita o botão gravar
+        msgIsModified.value = false
+        //Armazena dados no localstorage e backend
+        saveData()
+
+        appStore.globalMsg('Mensagem alterada com sucesso!', 'success')
+    }
+
+
+    //STYLE
+
+    //1. Recupera estilo selecionado
+    const msgStyle = ref(appStore.appData.capsula.content.style)
+
+    //2. Observa se outro estilo foi escolhindo
+    var styleIsModified = ref(false)
+    watch(msgStyle, () => { 
+        if (msgStyle.value != appStore.appData.capsula.content.style){
+            styleIsModified.value = true
+        }else{
+            styleIsModified.value = false
+        }
+    })
+
+    //3. Grava alterações
+    const updateStyle = () => {
+        //Atualiza o card da cápsula na home
+        appStore.capsulaCardKey += 1
+        //Modifica o estilo
+        appStore.appData.capsula.content.style = msgStyle.value
+        //Desabilita o botão escolher
+        styleIsModified.value = false
+        //Armazena dados no localstorage e backend
+        saveData()
+
+        appStore.globalMsg('Estilo alterado com sucesso!', 'success')
+    }
+
+
+    //MAIL
+
+    //1. Recupera email gravado
+    const mail = ref(appStore.appData.capsula.content.email)
     const confirmMail = ref('')
-    const imgSelect = ref(appStore.appData.capsula.content[0].style)
 
-    //Mensagem snapbar
-    var snackbar = ref(false)
-    var sbText = ref('Seu e-mail foi atualizado com sucesso!')
-    const location = ref('bottom')
-    const timeout = ref(3000)
+    //2. Observa se o e-mail foi modificado
+    var mailIsModified = ref(false)
+    watch(mail, () => { 
+        if (mail.value != appStore.appData.capsula.content.email){
+            mailIsModified.value = true
+        }else{
+            mailIsModified.value = false
+        }
+    })
+
+    //3. Grava alterações
+    const updateMail = () => {
+        //Modifica o e-mail para envio
+        appStore.appData.capsula.content.email = mail.value
+        //Desabilita o botão confirmal
+        mailIsModified.value = false
+        //Armazena dados no localstorage e backend
+        saveData()
+
+        appStore.globalMsg('E-mail alterado com sucesso!', 'success')
+    }
+
+
+    //Grava alterações no localstorage e no backend
+    const saveData = () => {
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+    }
+
 
     const getImg = (index) => {
     // Carrega imagens dos btns
@@ -358,15 +433,14 @@
     return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
     } 
 
+
 </script>
 
 <style lang="scss" scoped>
     @import '../assets/styles/mainStyles.scss';
-    
-    .custom-card-desabled{
-        background-color: rgba(120, 120, 120, 0.05);
+    .custom-v-text-area{
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
-        overflow-y: scroll;
+        border: none !important;
     }
     .selected-style{
         border: 3px solid $secondaryLight;
@@ -383,7 +457,16 @@
         border-left: 1px dashed rgba(100, 100, 100, 0.5);
         border-right: 1px dashed rgba(100, 100, 100, 0.5);;
     }
-
+    textarea{
+        width: 100%;
+        height:203px;
+        border: none;
+        outline: none;
+        resize: none; /*remove the resize handle on the bottom right*/
+        background-color: rgba(120, 120, 120, 0.05);
+        box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
+        overflow-y: scroll;
+    }
 </style>
 
 
