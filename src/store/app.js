@@ -61,6 +61,7 @@ export const useAppStore = defineStore('app', {
 		progress: 0,
 		msg:'',
 		capsulaCardKey: 0,
+		capsulaModalKey: 0,
 
 		//Galeria de fotos
 		totalUsers: 0,

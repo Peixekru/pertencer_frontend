@@ -90,8 +90,7 @@
             sm="8"
             lg="7"
             >
-                <v-card-text
-                >
+                <v-card-text>
                     <p class="text">
                         {{ appStore.appData.capsula.content.sendMessage }}
                     </p>
@@ -176,5 +175,6 @@
         -webkit-line-clamp: 7; /* number of lines to show */
                 line-clamp: 7;
         -webkit-box-orient: vertical;
+        width: 480px;
 }
 </style>

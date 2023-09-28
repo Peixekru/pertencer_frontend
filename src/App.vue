@@ -5,6 +5,9 @@
 			<GlobalMsg />
 
 			<template v-if="appStore.currentRoute != '/'">
+				<!--Modal da cápsula do tempo-->
+				<CapsulaModal :key="appStore.capsulaModalKey"/>
+				
 				<TopBar />
 				<FloatMenu />
 			</template>
@@ -29,7 +32,9 @@
 	import TopBar from '@/components/TopBar.vue'
 	import FloatMenu from '@/components/FloatMenu.vue'
 	import FooterBar from '@/components/FooterBar.vue'
-	import GlobalMsg from './components/GlobalMsg.vue';
+
+	import CapsulaModal from '@/components/CapsulaModal.vue'
+	import GlobalMsg from '@/components/GlobalMsg.vue'
 
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
 

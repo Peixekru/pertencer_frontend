@@ -182,7 +182,7 @@
                                         class="rounded-lg mx-1 my-1"
                                         :class="msgStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
                                         lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
-                                        :src="getImg(i + 1)"
+                                        :src="getImg(i)"
                                         @click="msgStyle = i"
                                         >
                                             <!--Load Image-->

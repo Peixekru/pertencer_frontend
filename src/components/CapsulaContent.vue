@@ -118,7 +118,7 @@
                                     class="rounded-lg mx-1 my-1"
                                     :class="msgStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
                                     lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
-                                    :src="getImg(i + 1)"
+                                    :src="getImg(i)"
                                     @click="msgStyle = i"
                                     >
                                         <!--Load Image-->
@@ -352,6 +352,8 @@
     const saveData = () => {
         //Atualiza o card da cápsula na home
         appStore.capsulaCardKey += 1
+        //Atualiza o modal da cápsula
+        appStore.capsulaModalKey += 1
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
         //Atualiza backend
@@ -396,7 +398,7 @@
     }
     textarea{
         width: 100%;
-        height:280px;
+        height:320px;
         border: none;
         outline: none;
         resize: none; /*remove the resize handle on the bottom right*/

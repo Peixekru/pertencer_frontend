@@ -1,8 +1,4 @@
 <template>
-
-    <!--Modal da cápsula do tempo-->
-    <CapsulaModal />
-
     <v-sheet
     :elevation="!appStore.isMobile > 600 ? 4 : 0"
     :color="!appStore.isMobile ? '' : 'transparent'"
@@ -19,8 +15,6 @@
         :class="!appStore.isMobile ? 
         'rounded-circle btn-color' : 'bg-transparent' " 
         >
-        <!--@click = "getMenuAction( index + 1)" 
-        > -->
             <v-sheet
             width="100%"
             height="100%"
@@ -28,7 +22,6 @@
             :class=" blockBtn(i) ? 'opacity-control' : '' "
             color="transparent"
             >
-
                 <v-img
                 :class="appStore.isDarkMode ||
                 appStore.currentRoute == '/conteudo' &&
@@ -38,41 +31,23 @@
                 :max-width="index == 0 || index == 3 ? 
                 32 : index == 2 ? 20 : 26"
                 />  
-            
             </v-sheet>
         </v-sheet>
-
-        <!--Progresso (Gota)-->
+        <!--Progresso Global -> Gota -->
         <ProgressGlobal />
-
     </v-sheet>
-    
 </template>
-
 
 <script setup>
     import { useAppStore } from '../store/app'
     import ProgressGlobal from './ProgressGlobal.vue';
 
-    import CapsulaModal from './CapsulaModal.vue'
-
-    //Inicia a store
     const appStore = useAppStore()
 
+    // Carrega icones dos btns
     const getImg = (index) => {
-    // Carrega imagens dos btns
     return  new URL(`../assets/img/side-icon-${index}.svg`, import.meta.url).href
-    } 
-    /*
-    // Desenvolver funcionalidades
-    const getMenuAction = (i) => {
-        if (i == 1) {appStore.capsulaModal = true }
-        if (i == 2) { alert('Desenvover Galeria de Fotos para o btn0' + i) }
-        if (i == 3) { alert('Desenvover Capsula do tempo para o btn0' + i) }
-        if (i == 4) { alert('Desenvover Capsula do tempo para o btn0' + i) }
-    }
-    */
-    
+    }     
     const blockBtn = (i) => {
         if (i == 1 && appStore.appData.capsula.status == 1) { return false }
         else if (i == 2 && appStore.appData.galeria.status == 1) { return false }
@@ -80,9 +55,7 @@
         else if (i == 4) { return true }
         else { return true }
     }
-    
 </script>
-
 
 <style scoped>
     .side-position{
