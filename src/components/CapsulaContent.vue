@@ -250,6 +250,8 @@
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
 
+    import { useStartProgress } from './composables/useProgress'
+
     const appStore = useAppStore()
     const apiStore = useApiStore();
 
@@ -263,18 +265,21 @@
     const confirmMail = ref('')
 
     const isUnlocked = ref(false)
-
+    // Carrega imagens dos estilos
+    const getImg = (index) => {
+    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`, import.meta.url).href
+    return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
+    } 
 
     if ( appStore.appData.capsula.status != 1) {
 
         let unlockBtn = ref([ false, false, false ])
-    
+
         const check = () => {
             if (unlockBtn.value.every(v => v === true)) 
             { isUnlocked.value = true } else { isUnlocked.value = false }
         }
-    
-    
+
         //MSG
         watch(msg, () => { 
             if (msg.value != appStore.appData.capsula.content.sendMessage){
@@ -284,8 +289,6 @@
             }
             check()
         })
-    
-    
         //MAIL
         watch(mail, () => { 
             if (mail.value != appStore.appData.capsula.content.email){
@@ -295,7 +298,6 @@
             }
             check()
         })
-    
         //CONFIRM MAIL
         watch(confirmMail, () => { 
             if (confirmMail.value != '' && confirmMail.value == mail.value){
@@ -307,27 +309,17 @@
         })
 
     } else {
-
         watch(confirmMail, () => { 
             if (confirmMail.value != '' && confirmMail.value == mail.value){
                 isUnlocked.value = true
             }else{
                 isUnlocked.value = false
             }
-        })
-        
-        
-
-                    
-
+        }) 
     }
-
-
-
 
     // Inicia a cápsula do tempo
     const startCapsula = () => {
-
         //Inicia a cápsula 
         appStore.appData.capsula.status = 1
 
@@ -350,10 +342,17 @@
 
     //Grava alterações no localstorage e no backend
     const saveData = () => {
+        //Finaliza conteúdo
+        appStore.finishedContent(true)
+        //Lebera conteúdo seguinte e modifica o status do corrente para concluido
+        useStartProgress();
+
+
         //Atualiza o card da cápsula na home
         appStore.capsulaCardKey += 1
         //Atualiza o modal da cápsula
         appStore.capsulaModalKey += 1
+
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
         //Atualiza backend
@@ -362,15 +361,8 @@
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
         //Feedback usuário
-        appStore.globalMsg('Oba! Sua mensagem foi salva!', 'success')
+        //appStore.globalMsg('Oba! Sua mensagem foi salva!', 'success')
     }
-
-
-    const getImg = (index) => {
-    // Carrega imagens dos btns
-    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`, import.meta.url).href
-    return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
-    } 
 
 
 </script>

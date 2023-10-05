@@ -12,7 +12,7 @@
 <script setup>
     import { useAppStore } from "../store/app"
     import ContentTopInfo from "./ContentTopInfo.vue"
-    import Config from "../components/contents/Config.vue"
+    import Config from "./contents/Config.vue"
     const appStore = useAppStore()
 </script>
 

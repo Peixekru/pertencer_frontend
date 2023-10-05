@@ -7,6 +7,9 @@
 			<template v-if="appStore.currentRoute != '/'">
 				<!--Modal da cápsula do tempo-->
 				<CapsulaModal :key="appStore.capsulaModalKey"/>
+
+				<!--Modal da galeria de imagens-->
+				<GalleryModal/>
 				
 				<TopBar />
 				<FloatMenu />
@@ -34,6 +37,7 @@
 	import FooterBar from '@/components/FooterBar.vue'
 
 	import CapsulaModal from '@/components/CapsulaModal.vue'
+	import GalleryModal from '@/components/GalleryModal.vue'
 	import GlobalMsg from '@/components/GlobalMsg.vue'
 
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'

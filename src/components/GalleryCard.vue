@@ -81,7 +81,7 @@
                     rounded
                     color="deep-purple-accent-4"
                     :min-width="appStore.isMobile ? '100%' : '240' "
-                    @click="devAlert('Desenvolver Galeria')"
+                    @click="appStore.galleryModal = true"
                     >
                     Enviar imagem
                     </v-btn>

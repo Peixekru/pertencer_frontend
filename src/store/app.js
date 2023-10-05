@@ -40,6 +40,8 @@ export const useAppStore = defineStore('app', {
 		colorSelect: 0,
 		///
 		capsulaModal: false,
+		///
+		galleryModal: false,
 
 		//Temas
 		themeName: 'light',
@@ -66,6 +68,7 @@ export const useAppStore = defineStore('app', {
 		//Galeria de fotos
 		totalUsers: 0,
 		totalGlobalImgs: 0,
+		galleryCardKey: 0,
 
 		//Systema
 		globalOverlay: false,
@@ -82,6 +85,10 @@ export const useAppStore = defineStore('app', {
 			this.msgVisibilty = true
         	this.msgColor = color
         	this.msgText = msg
+		},
+
+		finishedContent (param) {
+			this.isFinished  = param
 		}
 	}
 

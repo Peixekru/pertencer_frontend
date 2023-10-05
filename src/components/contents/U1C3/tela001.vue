@@ -439,16 +439,16 @@
     import { onMounted } from "vue";
     import { useAppStore } from '../../../store/app'
     import { useStartProgress } from '../../../components/composables/useProgress'
-    import { useBlockStatus } from '../../../components/composables/useBlockStatus'
     const appStore = useAppStore();
-    // *! função que finaliza a unidade //
+    // função que finaliza a unidade //
     const finishedContent = () => {
-        appStore.isFinished = true
-    }
-    onMounted(() => {
-        //Atualiza o status do objeto
-        appStore.currentSelectedObject.status = 1
+        appStore.finishedContent(true)
+    } 
+    onMounted(() => {     
         useStartProgress();
-        useBlockStatus(appStore.currentObjectIndex)
     })
 </script> 
+
+<style scoped>
+    @import '../GlobalStyles/contentGlobalStyles.css';
+</style>

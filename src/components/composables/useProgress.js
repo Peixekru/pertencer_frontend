@@ -1,4 +1,5 @@
 import { useAppStore } from '../../store/app'
+import { useBlockStatus } from './useBlockStatus'
 
 export function useProgressCalc(select, i) {
 
@@ -63,5 +64,11 @@ export function useStartProgress(){
     progressEl.addEventListener('animationend', () => {
         progressEl.classList.remove('animate__animated', 'animate__swing');
     }); 
+
+    //Atualiza o status do objeto atual
+    appStore.currentSelectedObject.status = 1
+
+    //Marca o conteúdo atual como concluído e libera o seguinte
+    useBlockStatus(appStore.currentObjectIndex)
 
 }

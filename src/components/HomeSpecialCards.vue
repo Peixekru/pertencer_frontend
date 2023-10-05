@@ -5,7 +5,7 @@
         v-if="appStore.appData.capsula.status == 1" 
         />
 
-        <GalleryCard 
+        <GalleryCard :key="appStore.galleryCardKey"
         v-if="appStore.appData.galeria.status == 1" 
         />
 
