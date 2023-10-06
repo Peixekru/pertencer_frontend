@@ -9,7 +9,7 @@
 				<CapsulaModal :key="appStore.capsulaModalKey"/>
 
 				<!--Modal da galeria de imagens-->
-				<GalleryModal/>
+				<GalleryModal :key="appStore.galleryModalKey"/>
 				
 				<TopBar />
 				<FloatMenu />

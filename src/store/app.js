@@ -4,6 +4,8 @@ import { defineStore } from 'pinia'
 export const useAppStore = defineStore('app', {
 	state: () => ({
 
+		//Global Controllers
+
 		//Rotas
 		currentRoute: '/',
 		nexRoute: [],
@@ -69,6 +71,8 @@ export const useAppStore = defineStore('app', {
 		totalUsers: 0,
 		totalGlobalImgs: 0,
 		galleryCardKey: 0,
+		gallerySendImageKey: 0,
+
 
 		//Systema
 		globalOverlay: false,
