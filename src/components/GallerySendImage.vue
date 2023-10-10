@@ -599,7 +599,7 @@
         const newImage = {
             "path": finalImage.value,
             "style": galleryStyle.value,
-            "visible": true
+            "visible": false
         }
 
         appStore.appData.galeria.content.userImgs.unshift(newImage);

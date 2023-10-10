@@ -44,6 +44,9 @@ export const useAppStore = defineStore('app', {
 		capsulaModal: false,
 		///
 		galleryModal: false,
+		isZoomImg: false,
+		selectedGallery: null,
+		selectedImg: null,
 
 		//Temas
 		themeName: 'light',

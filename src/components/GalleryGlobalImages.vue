@@ -1,10 +1,10 @@
 <template>
     <v-container fluid
     class="d-flex flex-wrap  pa-2 rounded-lg custom-container">
-
+        <!--Images from system-->
         <v-card
         v-for="(i, index) in appStore.appData.galeria.content.globalImgs.length" :key="index"
-        width="124"
+        :width="appStore.isMobile ? 82 : 124"
         class="ma-2 rounded-0"
         elevation="2"
         color="transparent"
@@ -16,6 +16,7 @@
             :aspect-ratio="1"
             class=" show-image "
             cover
+            @click="zoomImage(index)"
             >
                 <!--Moldura da imagem-->
                 <v-img
@@ -38,12 +39,16 @@
 
         </v-card>
 
+
+        <!--Zoom image component-->
+        <GalleryZoomImage :aplyFrames="aplyFrames" />
+
     </v-container>
 </template>
 
 <script setup>
-    //import { ref } from 'vue'
     import { useAppStore } from '../store/app'
+    import GalleryZoomImage from './GalleryZoomImage'
     const appStore = useAppStore()
 
     //Adiciona as molduras na imagem final
@@ -51,6 +56,11 @@
         return  new URL(`../assets/img/img-frame-style-${index}.svg`, import.meta.url).href
     }
 
+    const zoomImage = (selectedImg) => {
+        appStore.isZoomImg = true
+        appStore.selectedImg = selectedImg
+        appStore.selectedGallery = 'globalImages'
+    }
 
 
 </script>

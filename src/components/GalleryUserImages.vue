@@ -4,7 +4,7 @@
 
         <v-card
         v-for="(i, index) in appStore.appData.galeria.content.userImgs.length" :key="index"
-        width="124"
+        :width="appStore.isMobile ? 82 : 124"
         class="ma-2 rounded-0"
         elevation="0"
         color="transparent"
@@ -18,6 +18,7 @@
             :class=" !appStore.appData.galeria.content.userImgs[index].visible ? 'hide-image' : 'show-image' "
             cover
             :id="'userImage' + index"
+            @click="zoomImage(index)"
             >
                 <!--Moldura da imagem-->
                 <v-img
@@ -67,17 +68,26 @@
 
         </v-card>
 
+        <!--Zoom image component-->
+        <GalleryZoomImage :aplyFrames="aplyFrames" />
+
     </v-container>
 </template>
 
 <script setup>
-    //import { ref } from 'vue'
     import { useAppStore } from '../store/app'
+    import GalleryZoomImage from './GalleryZoomImage'
     const appStore = useAppStore()
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
         return  new URL(`../assets/img/img-frame-style-${index}.svg`, import.meta.url).href
+    }
+
+    const zoomImage = (selectedImg) => {
+        appStore.isZoomImg = true
+        appStore.selectedImg = selectedImg
+        appStore.selectedGallery = 'userImages'
     }
 
     const hideImage = (index) => {
@@ -100,7 +110,7 @@
         box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, .1);
     }
     .hide-image{
-        opacity: .3;
+        opacity: .3 !important;
         transition: opacity 1s;
     }
     .show-image{
