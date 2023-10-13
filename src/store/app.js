@@ -11,6 +11,11 @@ export const useAppStore = defineStore('app', {
 		nexRoute: [],
 		navigationStart: false,
 
+		//Primeiro acesso
+		isChangedPassword: false,
+		isReadyToGo: false,
+		isTutorial: false,
+
 		//Unidades
 		currentUnidadeNumber: 0,
 		currentUnidadeTitle: '',

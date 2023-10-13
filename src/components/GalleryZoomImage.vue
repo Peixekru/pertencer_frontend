@@ -59,7 +59,7 @@
 
 
             <v-card
-            class="d-flex justify-start align-center user-info-pos rounded-pill custom-pa pe-4"
+            class="d-flex justify-start align-center user-info-pos rounded-pill custom-pa pe-4 animate__animated animate__bounce"
             :class="appStore.isDarkMode ? 'bg-white' : 'bg-black'"
             >
 
@@ -71,16 +71,13 @@
                 width="40"
                 /> 
 
-                <p 
-                v-if="appStore.selectedGallery == 'globalImages'"
-                >
+                <p v-if="appStore.selectedGallery == 'globalImages'">
                     {{ appStore.appData.galeria.content.globalImgs[appStore.selectedImg].userName }}
                 </p>
-                <p 
-                v-else
-                >
+                <p v-else>
                     Você
                 </p>
+                
             </v-card>
         
         </v-container>

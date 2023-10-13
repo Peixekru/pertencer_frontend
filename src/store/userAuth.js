@@ -34,8 +34,12 @@ export const useAuthStore = defineStore('userAuth', {
                     appStore.appData = response.data; // Local
                     localStorage.setItem('localAppData', JSON.stringify(response.data)); // Persistente 
 
-                    //Encaminha para home
-                    this.$router.push('/home'); 
+                    //Encaminha para home ou primeiro acesso     
+                    if(response.data.firstAccess){
+                        this.$router.push('/welcome'); 
+                    } else {
+                        this.$router.push('/home'); 
+                    }
 
                     //Debug
                     console.log('Token recebido e enviado: ', token) 
