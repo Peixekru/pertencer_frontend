@@ -9,13 +9,14 @@
         v-if="appStore.appData.galeria.status == 1" 
         />
 
+        <!--
         <StarterCard
         v-if="appStore.appData.start.status == 1"
         />
 
         <WorkplaceCard 
         v-if="appStore.appData.workplace.status == 1"
-        />
+        />-->
 
     </v-row>
 </template>

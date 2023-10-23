@@ -323,6 +323,10 @@
         //Inicia a cápsula 
         appStore.appData.capsula.status = 1
 
+        //! INICIA A GALERIA (REVER)
+        appStore.appData.galeria.status = 1
+
+
         //Modifica a mensagem
         appStore.appData.capsula.content.sendMessage = msg.value
         //Modifica a data de gravação para a data atual
@@ -346,6 +350,10 @@
         appStore.finishedContent(true)
         //Lebera conteúdo seguinte e modifica o status do corrente para concluido
         useStartProgress();
+
+
+        //! INICIA A GALERIA (REVER)
+        appStore.galleryCardKey += 1
 
 
         //Atualiza o card da cápsula na home

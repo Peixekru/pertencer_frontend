@@ -353,6 +353,8 @@
         //Armazena dados no localstorage e backend
         saveData()
 
+        
+
         appStore.globalMsg('Mensagem alterada com sucesso!', 'success')
     }
 

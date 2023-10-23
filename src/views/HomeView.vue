@@ -75,9 +75,9 @@
                     </v-row>
 
                         <!--cards especiais-->
-                        <!--<HomeSpecialCards
+                        <HomeSpecialCards
                         class="mt-16"
-                        />-->
+                        />
 
                     <div class="spacer" />
 
