@@ -6,20 +6,16 @@
 
 				<div 
 				class="side-fx-color-start" 
-				:class="objectCardSelect > 0 ? 'mt-3' : ''" 
 				/>
 
 				<div v-if="appStore.isTablet"
 				class="side-fx-color-end" 
-				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
 				
 				<div v-else
 				class="side-fx-color-end-md" 
-				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
 
-			
 			</template>
 		</v-container>
 
@@ -30,7 +26,7 @@
 
 			<v-slide-group 
 			v-model="objectCardSelect" 
-			center-active 
+			center-active
 			show-arrows
 			>
 				<div :class="content.lessons.length < 3 &&
@@ -43,29 +39,72 @@
 				:key="i"
 				v-slot="{ isSelected }"
 				>
-					<v-sheet
-					class="mb-4 ms-4 d-flex align-center"
-					:color="isSelected ? 'primary stroke-adjust' : 'transparent'"
-					:elevation="isSelected ? 4 : 0"
+				
+					<v-tooltip 
+					location="top"
+					max-width="280"
 					>
-						<!--Card Conteúdo-->
-						<ConteudoCard
-						class="border-primary"
-						:elevationNumber="isSelected ? 0 : 2"
-						:title="i.title"
-						:icon="i.icon"
-						:cardImg="i.img"
-						:time="i.time"
-						:staus="i.status"
-						:block="i.block"
-						@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"  
-						/>
-					</v-sheet>
+						<v-sheet 
+						class="d-flex justify-start align-center pa-4 rounded-lg elevation-4">
+							<v-img 
+							class="me-4 animate__animated animate__shakeY"
+							:class="appStore.isDarkMode ? 'white-svg' : '' "
+							src="@/assets/img/quest-menu-img.svg"
+							width="30"
+							/> 
+							<p class="text-caption">
+							Acesse os conteúdos anteriores para desbloquear esse módulo.
+							</p>
+						</v-sheet>
+
+						<template v-slot:activator="{ props }">
+
+							<v-sheet
+							class="mb-4 ms-4 d-flex align-center"
+							color="transparent"
+							elevation="0"
+							v-bind="i.block ? false : props"
+							>
+								<!--Card Conteúdo-->
+								<ConteudoCard
+								:elevationNumber="isSelected ? 0 : 2"
+								:title="i.title"
+								:icon="i.icon"
+								:cardImg="i.img"
+								:time="i.time"
+								:staus="i.status"
+								:block="i.block"
+								:selected="i.selected"
+								@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"  
+								/>
+							</v-sheet>
+
+						</template>
+					</v-tooltip>
 
 				</v-slide-group-item>
 			</v-slide-group>
 		</v-sheet>
+		<!--Primeiro acesso 9 -->
+		<v-container class="pa-0 noClick" 
+		:class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
+		v-if="appStore.welcomeStepCounter == 9"
+		>
+			<WelcomeTooltip 
+			:class="appStore.isMobile ? 'custom-tooltip-pos-mobile' : 'custom-tooltip-pos'"
+			:toolTipShow="true" 
+			:toolTipPos="0" 
+			:toolTipAdjust="appStore.isMobile ? [0, 0, -84, -10] : [24, 0, 0, 0]" 
+			:hideToolTipButton = true
+			:toolTipW = "280"
+			> 
+				<template v-slot:text>
+					<span class="font-weight-bold">{{ ToolTipText }}</span>
+				</template>
+			</WelcomeTooltip>
+		</v-container>
 	</v-container>
+	
 
 
 	<!--Mobile vresion (Carousel)-->
@@ -85,25 +124,66 @@
 			v-for="(i, index) in content.lessons"
 			:key="i"
 			>
-				<v-sheet
-				class="mx-0"
-				color="transparent"
+				<v-tooltip 
+				location="top"
+				max-width="280"
 				>
-					<!--Card Conteúdo-->
-					<ConteudoCard
-					class="border-primary"
-					:title="i.title"
-					:icon="i.icon"
-					:cardImg="i.img"
-					:time="i.time"
-					:staus="i.status"
-					:block="i.block"
-					@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"
-					/>
-				</v-sheet>  
-		
+					<v-sheet 
+					class="d-flex justify-start align-center pa-4 rounded-lg elevation-4">
+						<v-img 
+						class="me-4 animate__animated animate__shakeY"
+						:class="appStore.isDarkMode ? 'white-svg' : '' "
+						src="@/assets/img/quest-menu-img.svg"
+						width="30"
+						/> 
+						<p class="text-caption">
+						Acesse os conteúdos anteriores para desbloquear esse módulo.
+						</p>
+					</v-sheet>
+
+					<template v-slot:activator="{ props }">
+
+						<v-sheet
+						class="mx-0"
+						color="transparent"
+						v-bind="i.block ? false : props"
+						>
+							<!--Card Conteúdo-->
+							<ConteudoCard
+							:title="i.title"
+							:icon="i.icon"
+							:cardImg="i.img"
+							:time="i.time"
+							:staus="i.status"
+							:block="i.block"
+							:selected="i.selected"
+							@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"
+							/>
+						</v-sheet>  
+
+					</template>
+				</v-tooltip>
 			</v-carousel-item>
 		</v-carousel>
+
+		<!--Primeiro acesso 9 -->
+		<v-container class="pa-0 noClick" 
+		:class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
+		v-if="appStore.welcomeStepCounter == 9"
+		>
+			<WelcomeTooltip 
+			:class="appStore.isMobile ? 'custom-tooltip-pos-mobile' : 'custom-tooltip-pos'"
+			:toolTipShow="true" 
+			:toolTipPos="0" 
+			:toolTipAdjust="appStore.isMobile ? [24, 0, 0, 0] : [24, 0, 0, 0]" 
+			:hideToolTipButton = true
+			:toolTipW = "280"
+			> 
+				<template v-slot:text>
+					<span class="font-weight-bold">{{ ToolTipText }}</span>
+				</template>
+			</WelcomeTooltip>
+		</v-container>
 
 	</v-container>
 
@@ -116,28 +196,48 @@
 	import { useLoadCurrentObject } from "../components/composables/useLoadObject"
 	
 	import ConteudoCard from "@/components/ConteudoCard.vue"
+	import WelcomeTooltip from '@/components/WelcomeTooltip'
 
 	const appStore = useAppStore()
 	const router = useRouter()
+	const objectCardSelect = ref(appStore.currentContentNumber)
 
-	const objectCardSelect = ref(null);
+
+	
+	const showTooltip = ref(false)
+
 
 	const loadObject = ( unidade, contentIndex, index, content ) => {
+
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')
+
+		//Finaliza etapa
+		if(appStore.welcomeStepCounter == 9){
+			//Atualiza o localStorage
+			appStore.appData.firstAccess = 5
+			localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+			//console.log(appStore.appData.firstAccess)
+			
+			//Primeiro acesso -> 10
+			appStore.welcomeStepCounter = 10
+			//console.log('welcomeSteps = ' + appStore.welcomeStepCounter);
+        }
 	}
 
-	defineProps({
+
+	/*--Primeiro acesso */
+	const ToolTipText = ref( "Agora é com você! Boa jornada!" );
+
+	const teste = defineProps({
 		content: Object,
 		contentIndex: Number,
 	})
 </script>
 
-
-<style scoped>
+<style land="scss" scoped>
 	.stroke-adjust {
 		border-radius: 12px 29px 12px 12px;
-		border-width: 6px;
 	}
 	.container-pos {
 		position: absolute;
@@ -172,5 +272,40 @@
 	}
 	.spacer{
 		width: 52px;
+	}
+
+
+	/*--Primeiro acesso */
+    .custom-container{
+        position: fixed;
+        z-index: 5000;
+		top: 456px;
+        left: 0px;
+    }
+    .custom-tooltip-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -67px;
+		left: 235px;
+    }
+
+	.custom-container-mobile{
+        position: fixed;
+        z-index: 5000;
+		top: 456px;
+        left: 0px;
+    }
+    .custom-tooltip-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -67px;
+		left: 50%;
+    }
+	.noClick{
+		pointer-events: none; 
+	}
+
+	.v-tooltip :deep(.v-overlay__content) {
+		background-color: transparent !important;
 	}
 </style>

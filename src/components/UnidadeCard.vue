@@ -1,9 +1,10 @@
 <template>
+
+    <v-container>
     <v-card
     class="rounded-lg px-4"
-    :class=" cardStatus ? '' : 'desabled-card' "
-    :width="appStore.isMobile ? '100%' : '300'"
-    min-width="240"
+    :class=" cardStatus ?  appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ?  numCard == 0 ? 'heighlight-Card' : '' : '' : 'desabled-card' "
+    :width="appStore.isMobile ? '100%' : '270'"
     elevation="10"
     >
         <v-card-text class="px-0">
@@ -48,6 +49,7 @@
 
         <div class="d-flex justify-space-between align-center mb-6">
             <v-btn 
+            :disabled = "appStore.welcomeStepCounter == 2 "
             class="bg-primary letter-normal"
             density="comfortable"
             rounded
@@ -61,16 +63,84 @@
                 {{ cPage }} de {{ lPage }}
             </p>
 
-        </div>
-        
+        </div>       
 
     </v-card>
-    
+
+    <!--Primeiro acesso -> 2 -->
+    <v-container 
+    class="pa-0" 
+    v-if="appStore.welcomeStepCounter == 2 && numCard == 0"
+    >
+        <WelcomeTooltip 
+        :class="appStore.isMobile ? 'custom-tooltip-pos-mobile' : 'custom-tooltip-pos'"
+        :toolTipShow="true" 
+        :toolTipPos="2" 
+        :toolTipAdjust="appStore.isMobile ? [0, 0, -84, -10] : [0, 0, -44, -70]" 
+        @my-click-event="appStore.welcomeStepCounter = 3; 
+        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        > 
+            <template v-slot:text>
+                Estas são as unidades do nosso programa. Elas devem
+                ser acessadas seguindo uma ordem. Por isso, serão
+                liberadas conform e o seu progresso. A unidade que você
+                está cursando estará em	destaque.
+            </template>
+        </WelcomeTooltip>
+    </v-container>
+
+
+    <!--Primeiro acesso 7 -->
+    <v-container 
+    class="pa-0" 
+    v-if="appStore.welcomeStepCounter == 7 && numCard == 0"
+    >
+        <WelcomeTooltip 
+        :class="appStore.isMobile ? 'custom-tooltip-02-pos-mobile' : 'custom-tooltip-02-pos'"
+        :toolTipShow="true" 
+        :toolTipPos="2" 
+        :toolTipAdjust="appStore.isMobile ? [-42, 0, 0, 0] : [-46, 0, 0, 0]" 
+        :hideToolTipButton = true
+        :toolTipW = "280"
+        > 
+            <template v-slot:text>
+                Clique aqui e acesse
+                a Unidade 01
+            </template>
+        </WelcomeTooltip>
+    </v-container>
+
+
+    <!--Primeiro acesso 15 -->
+    <v-container class="pa-0" 
+    v-if="appStore.welcomeStepCounter == 15 && numCard == 0"
+    >
+        <WelcomeTooltip 
+        :class="appStore.isMobile ? 'custom-tooltip-03-pos-mobile' : 'custom-tooltip-03-pos'"
+        :toolTipShow="true" 
+        :toolTipPos="2" 
+        :toolTipAdjust="appStore.isMobile ? [-42, 0, 0, 0] : [-46, 0, 0, 0]" 
+        :hideToolTipButton = true
+        :toolTipW = "280"
+        > 
+            <template v-slot:text>
+                Agora acesse a
+                <span class="font-weight-bold">Unidade 02</span>
+            </template>
+        </WelcomeTooltip>
+    </v-container>
+
+
+
+</v-container>
+
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
+
+    import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
     const route = useRouter()
@@ -85,7 +155,22 @@
         }
 
         appStore.navigationStart = true
+
+        //Finaliza etapa
+        if(appStore.welcomeStepCounter == 7){
+            //Atualiza o localStorage
+            appStore.appData.firstAccess = 4
+            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+            console.log(appStore.appData.firstAccess)
         
+        } else if (appStore.welcomeStepCounter == 15){
+            //Atualiza o localStorage
+            appStore.appData.firstAccess = 8
+            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+            console.log(appStore.appData.firstAccess)
+        }
+        
+        //console.log(appStore.appData.firstAccess)
         route.push('/unidade')
     }
 
@@ -101,12 +186,58 @@
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import '../styles/main.scss';
     .letter-normal{
         letter-spacing: normal;
     }
     .desabled-card{
         opacity: .5;
         pointer-events: none;
+    }
+
+    /*--Primeiro acesso */
+    .custom-tooltip-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -115px !important;
+        left: 212px !important;
+    }
+    .custom-tooltip-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -135px !important;
+    }
+    .custom-tooltip-02-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -70px !important;
+    }
+    .custom-tooltip-02-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -70px !important;
+        left: 142px !important;
+    }
+    .custom-tooltip-03-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: 332px !important;
+    }
+    .custom-tooltip-03-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -70px !important;
+        left: 435px !important;
+    }
+    .heighlight-Card{
+        border: 5px solid $secondaryLight;
+        scale: 1.1;
+        animation: pulse;
+        right: 12px;
+        top: 17px;
+        animation-duration: 1s; 
+        
     }
 </style>

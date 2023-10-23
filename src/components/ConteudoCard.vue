@@ -1,4 +1,5 @@
 <template>
+
     <v-card 
     class="mx-auto rounded-te-xl" 
     :class="block == 0  ? 'desabled-card' : '' "
@@ -10,6 +11,26 @@
         :lazy-src="`${cardImg}`"
         :src="`${cardImg}`"
         >
+
+        <!--Marker -->
+        <v-sheet 
+        width="100%"
+        height="60"
+        color="primary"
+        v-if="selected == 1"
+        class="d-flex justify-start align-center pa-3 rounded-lg rounded-bs-0 rounded-be-0 elevation-2"
+        style="position: absolute; 0; left:0"
+        >
+            <v-img 
+            class="me-2"
+            :class="appStore.isDarkMode ? 'white-svg' : 'white-svg' "
+            src="@/assets/img/quest-menu-img.svg"
+            max-width="60"
+            /> 
+            <p class="font-weight-bold">
+                Você está aqui!
+            </p>
+        </v-sheet>
 
             <div v-if="staus == 1"
             class="w-100 pe-1 pt-1 d-flex justify-end animate__animated animate__fadeIn animate__delay-0.8s" >
@@ -45,6 +66,7 @@
             </template>
             
         </v-img>
+        
 
         <v-card-actions class="py-0 bg-secondary px-0 ">
 
@@ -82,19 +104,24 @@
                         </div>
                     </div>
 
+
                 </template>
             </v-list-item>
         </v-card-actions>
 
     </v-card>
+
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
+
+
     //Inicia a store
     const appStore = useAppStore()
 
-    defineProps({
+
+    const cardProps = defineProps({
         title: String,
         icon: String,
         cardImg: String,
@@ -102,13 +129,16 @@
         content: Number,
         index: Number,
         staus: Number,
-        block: Number
+        block: Number,
+        selected: Number,
     })
 
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../styles/main.scss';
+
     .icon-opacity{
         opacity: .5;
     }
@@ -123,4 +153,9 @@
         opacity: .5;
         pointer-events: none;
     }
+
+    .custom-tooltip {
+        opacity: .2 !important;
+    }
+    
 </style>

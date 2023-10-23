@@ -12,10 +12,8 @@
 </template>
 
 <script setup>
-
     import { useAppStore } from "../store/app"
     import { useRouter } from "vue-router"
-
     import ContentSkin from "@/components/ContentSkin.vue"
 
 
@@ -28,6 +26,17 @@
 
     if (!appStore.navigationStart){
         router.push('/home')
+    }
+
+   
+
+    //Quinta parte dos welcomeSteps -> 10
+	if (appStore.appData.firstAccess == 5){
+        appStore.welcomeStepCounter = 10
+		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+    } else if (appStore.appData.firstAccess == 6) {
+        appStore.welcomeStepCounter = 14
+		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
     }
     
 </script>

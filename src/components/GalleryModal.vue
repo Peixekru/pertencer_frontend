@@ -122,7 +122,7 @@
 
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .fixed-bar {
         position: fixed;
         z-index: 3000;

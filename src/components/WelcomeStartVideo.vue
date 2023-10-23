@@ -45,7 +45,6 @@
             </v-container>
 
         </v-container>
-
     </v-container>
 </template>
 
@@ -67,7 +66,11 @@
 
     //Finaliza etapa
     const goNext = () => {
-        appStore.isTutorial = true
+        //Atualiza o localStorage
+        appStore.appData.firstAccess = 3
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        console.log(appStore.appData.firstAccess)
+        
         router.push('/home')
     }
     

@@ -1,11 +1,11 @@
 <template>  
     <!--Modal de acessibilidade-->
     <AccessModal />
-
+    
     <v-app-bar 
-    :class=" appStore.isMobile && 
+    :class=" appStore.isMobile &&
     appStore.currentRoute != '/conteudo'|| 
-    appStore.appScrol > 40 && 
+    appStore.appScrol > 40 &&
     appStore.currentRoute != '/conteudo'|| 
     appStore.currentRoute == '/unidade' && appStore.navigationStart ?  
     appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
@@ -42,13 +42,13 @@
 
                     <div 
                     class="d-flex btn-top-grup " 
-                    :class=" !appStore.isMobile ? 'justify-center' : 'justify-start', 'ms-3' "
+                    :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
                     bg-opacity="0" >
 
                             <MobileBackBtns 
                             v-if="appStore.currentRoute != '/home' && appStore.isMobile"
                             />
-                    
+
                             <v-img
                             class="mx-1 mouse-click"
                             :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -56,8 +56,6 @@
                             max-width="40"
                             @click="appStore.accessModal = true"
                             />
-
-                        
 
                             <!--Menu quest compoent-->
                             <v-menu 
@@ -183,7 +181,6 @@
                                 </v-card>
 
                             </v-menu>
-                    
 
                     </div>
                 </v-toolbar-title>
@@ -200,7 +197,7 @@
                 class="bg-primary mx-2 animate__animated animate__fadeInRight"
                 rounded
                 min-width="180px"
-                @click="todo('Criar fluxo de introdução.')"
+                @click="appStore.videoModal = true"
                 >
                     REVER INTRODUÇÃO
                 </v-btn>
@@ -232,10 +229,78 @@
         </v-row>   
     </v-app-bar>
 
+
+
+    <!--Primeiro acesso -> 04 -->
+    <v-sheet 
+    class="pa-0 custom-container" 
+    v-if="!appStore.isMobile && appStore.welcomeStepCounter == 4"
+    >
+        <WelcomeTooltip 
+        class="custom-tooltip-pos"
+        :toolTipShow="true" 
+        :toolTipPos="0" 
+        :toolTipAdjust="[12, 0, 0, 120]" 
+        @my-click-event="appStore.welcomeStepCounter = 5;
+        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        > 
+            <template v-slot:text>
+                <p>Quer rever o vídeo</p>
+                <p>introdutório? Acesse por aqui.</p>
+            </template>
+        </WelcomeTooltip>
+    </v-sheet>
+
+    <!--Primeiro acesso -> 05 -->
+    <v-sheet 
+    class="pa-0" 
+    :class="appStore.isMobile ? 'custom-container-02-mobile' : 'custom-container-02'"
+    v-if="appStore.welcomeStepCounter == 5"
+    >
+        <WelcomeTooltip 
+        :class="appStore.isMobile ? 'custom-tooltip-02-pos-mobile' : 'custom-tooltip-02-pos'"
+        :toolTipShow="true" 
+        :toolTipPos="0" 
+        :toolTipAdjust="appStore.isMobile ?  [-32, 0, 0, -122] : [-10, 0, 0, -29]" 
+        @my-click-event="appStore.welcomeStepCounter = 6;
+        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        > 
+            <template v-slot:text>
+                Queremos proporcionar a melhor experiência
+                possível para todos, por isso, oferecem os alguns
+                recursos de acessibilidade para te auxiliar.
+            </template>
+        </WelcomeTooltip>
+    </v-sheet>
+
+    <!--Primeiro acesso -> 06 -->
+    <v-sheet 
+    class="pa-0" 
+    :class="appStore.isMobile ? 'custom-container-02-mobile' : 'custom-container-02'"
+    v-if="appStore.welcomeStepCounter == 6"
+    >
+        <WelcomeTooltip 
+        :class="appStore.isMobile ? 'custom-tooltip-03-pos-mobile' : 'custom-tooltip-03-pos'"
+        :toolTipShow="true" 
+        :toolTipPos="0" 
+        :toolTipAdjust="appStore.isMobile ?  [11, 0, 0, -110] : [12, 0, 0, 19]" 
+        @my-click-event="appStore.welcomeStepCounter = 7;
+        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        > 
+            <template v-slot:text>
+                Quando quiser rever essas dicas,<br/>
+                clique aqui.
+            </template>
+        </WelcomeTooltip>
+    </v-sheet>
+
+
+
     <!--AppBar secundária-->
     <SecondaryTopBar 
     v-if="appStore.currentRoute == '/unidade' && appStore.navigationStart"
     />
+
 
 </template>
 
@@ -246,6 +311,8 @@
     import AccessModal from './AccessModal.vue'
     import MobileBackBtns from './MobileBackBtns.vue';
     import SecondaryTopBar from './SecondaryTopBar.vue'
+
+    import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
 
@@ -259,8 +326,6 @@
         alert(msg)
     }
 </script>
-
-
 
 
 <style lang="scss" scoped>
@@ -295,9 +360,53 @@
         line-height: 1.1;
         font-size: 0.65em !important;
     }
-
     .tool-tip{
         line-height: .6 !important;
         margin-left: 4px !important;
+    }
+
+    /*--Primeiro acesso */
+    .custom-container{
+        position: fixed;
+        z-index: 5000;
+        right: 228px;
+        top: -18px;
+    }
+    .custom-tooltip-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -67px;
+    }
+    .custom-container-02{
+        position: fixed;
+        z-index: 5000;
+        left: 50%;
+        top: -18px;
+    }
+    .custom-container-02-mobile{
+        position: fixed;
+        z-index: 5000;
+        left: 195px;
+        top: -18px;
+    }
+    .custom-tooltip-02-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -62px;
+    }
+    .custom-tooltip-02-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -52px;
+    }
+    .custom-tooltip-03-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -81px;
+    }
+    .custom-tooltip-03-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -81px;
     }
 </style>

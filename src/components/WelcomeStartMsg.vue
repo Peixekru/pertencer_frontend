@@ -13,7 +13,6 @@
             class="welcome-icon"
             >
                 <v-img 
-                v-if="!appStore.isMobile"
                 width="100"
                 
                 :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -29,13 +28,11 @@
                     </div> 
             
                 </v-img> 
-            
             </v-sheet>
-        
         </v-sheet>
 
         <v-card
-        width="400"
+        width="360"
         class="mx-auto rounded-lg px-4 py-8"
         elevation="8"
         >
@@ -60,7 +57,6 @@
                 </v-btn>
             
             </v-container>
-        
         </v-card>
     </v-sheet>
 </template>
@@ -73,24 +69,30 @@
 
     //Animação do personagem
     const blinkEye = ref(false);
-    const animIcon = ref(false);
-    
+    const animIcon = ref(false); 
+    //Eye
     const eyeInterval = setInterval(() => {
         blinkEye.value = !blinkEye.value
     }, 2000);
-
+    //Body
     const iconInterval = setInterval(() => {
         animIcon.value = !animIcon.value
     }, 4000);
 
+
     //Finaliza etapa
     const goNext = () => {
+        //Para Animação do personagem
         clearInterval(eyeInterval)
         clearInterval(iconInterval)
-        appStore.isReadyToGo = true
-    }
-</script>
 
+        //Atualiza o localStorage
+        appStore.appData.firstAccess = 2
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        console.log(appStore.appData.firstAccess)
+    }
+
+</script>
 
 <style scoped>
     .custom-container-pos{

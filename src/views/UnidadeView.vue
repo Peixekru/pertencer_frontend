@@ -15,9 +15,8 @@
 		/>
 
 		<v-container 
-		class="mt-16 pt-10 px-0"
 		:class="appStore.isTablet ? 
-		'pe-16' : '' "
+		appStore.welcomeStepCounter == 9 ? 'px-0 pe-16' : 'mt-16 pt-10 px-0 pe-16' : appStore.welcomeStepCounter == 9 ? 'px-0' : 'mt-16 pt-10 px-0' "
 		>
 			<v-row>
 
@@ -36,6 +35,7 @@
 					<SliderGroups 
 					:content = "i"
 					:contentIndex = "index"
+				
 					/>
 
 				</v-col> 
@@ -55,9 +55,9 @@
 			src="../assets/img/login-footer-logo.svg"
 			/>
 		</v-container>
-
-    
 	</v-container>
+	
+
 </template>
 
 <script setup>
@@ -75,6 +75,22 @@
 	if (!appStore.navigationStart){
 		router.push('/home')
 	}
+
+	//Segunda parte dos welcomeSteps -> 7
+	if (appStore.appData.firstAccess == 4){
+        appStore.welcomeStepCounter = 8
+		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+    } 
+	//Setima parte dos welcomeSteps -> 15
+	else if (appStore.appData.firstAccess == 7) {
+        appStore.welcomeStepCounter = 15
+    } 
+	//Setima parte dos welcomeSteps -> 16
+	else if (appStore.appData.firstAccess == 8) {
+        appStore.welcomeStepCounter = 16
+    } 
+	
+
 </script>
 
 <style scoped>
@@ -106,4 +122,5 @@
 	.h6-position{
 		position: relative;
 	}
+
 </style>

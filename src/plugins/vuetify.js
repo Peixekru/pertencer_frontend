@@ -1,7 +1,9 @@
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
+//import '@/styles/main.scss'
 
-//import '@fortawesome/fontawesome-free/css/all.css' // Ensure your project is capable of handling css files
+
+//import '@fortawe//some/fontawesome-free/css/all.css' // Ensure your project is capable of handling css files
 import { createVuetify } from 'vuetify'
 //import { aliases, fa } from 'vuetify/iconsets/fa'
 

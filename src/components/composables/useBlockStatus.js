@@ -10,13 +10,38 @@ export function useBlockStatus(obj) {
     const conteudoNum = parseInt(obj[1]);
     const objetoNum = parseInt(obj[2]);
 
+
+    //Desmarca todos os selecionados
+    for(let a = 0 ; a < appStore.appData.unidades.length; a++){
+
+        console.log(appStore.appData.unidades[a])
+
+        for(let b = 0 ; b < appStore.appData.unidades[a].content.length; b++){
+
+            for(let c = 0 ; c < appStore.appData.unidades[a].content[b].lessons.length; c++){
+
+            //console.log(appStore.appData.unidades[a].content[b].lessons[c].selected)
+            appStore.appData.unidades[a].content[b].lessons[c].selected = 0
+
+            }
+        }
+    }
+
+
+
+
+
     //Testa se ainda existe navegação dentro do objeto { Carousel }
     if (appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons.length > objetoNum + 1){
         //Desbloqueia o objeto seguinte
         appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons[objetoNum + 1].block = 1;
+
+        //Seleciona o objeto 
+        appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons[objetoNum + 1].selected = 1;
+
         //Armazena o número da unidade atual
         appStore.nextUnidadeNumber = unidadeNum + 1;
-        //Armazena o título da unidade atual
+        //Armazena o título da unidade atualx
         appStore.nextUnidadeTitle = appStore.appData.unidades[unidadeNum].title;
 
         //Armazena o conteúdo do objeto seguinte
@@ -36,6 +61,11 @@ export function useBlockStatus(obj) {
         if (appStore.appData.unidades[unidadeNum].content.length > conteudoNum + 1){
             //Desbloqueia o primeiro bojeto do carousel seguinte
             appStore.appData.unidades[unidadeNum].content[conteudoNum + 1].lessons[0].block = 1;
+
+            //Seleciona o objeto 
+            appStore.appData.unidades[unidadeNum].content[conteudoNum + 1].lessons[0].selected = 1;
+
+
             //Armazena o número da unidade atual
             appStore.nextUnidadeNumber = unidadeNum + 1;
             //Armazena o título da unidade atual
@@ -58,6 +88,10 @@ export function useBlockStatus(obj) {
             if(appStore.appData.unidades.length > unidadeNum + 1) {
                 //Desbloqueia o primeiro bojeto da unidade seguinte
                 appStore.appData.unidades[unidadeNum + 1].content[0].lessons[0].block = 1;
+
+                 //Seleciona o objeto
+                appStore.appData.unidades[unidadeNum + 1].content[0].lessons[0].selected = 1;
+
                 //Armazena o número da unidade unidade seguinte
                 appStore.nextUnidadeNumber = unidadeNum + 2;
                 //Armazena o título da unidade atual

@@ -35,7 +35,7 @@ export const useAuthStore = defineStore('userAuth', {
                     localStorage.setItem('localAppData', JSON.stringify(response.data)); // Persistente 
 
                     //Encaminha para home ou primeiro acesso     
-                    if(response.data.firstAccess){
+                    if(response.data.firstAccess < 5){
                         this.$router.push('/welcome'); 
                     } else {
                         this.$router.push('/home'); 

@@ -5,17 +5,28 @@
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
     > 
 
+
         <v-container fluid
-        class="fill-height"
+        class="pa-0 fill-height"
         :class="appStore.isDarkMode ? 
         'bg-home-img-dark' : 'bg-home-img-light' "
+        
         > 
 
-            <v-container class="mt-16 animate__animated animate__fadeInUp">
+            <v-container
+            :class="appStore.appData.firstAccess == 3  ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeIn'"
+            >
 
-                    
-                    <div class="d-flex justify-start animate__animated animate__fadeIn animate__delay-1s">
+                <!--Primeiro acesso -> Overlay perdura até welcomeStep 6 -->
+                <WelcomeModalFx 
+                v-if="appStore.welcomeStepCounter > 0  && 
+                appStore.welcomeStepCounter <= 6 "
+                />
 
+                <v-container 
+                class="mt-12 px-0 pa-0"
+                >
+                    <div class="d-flex justify-start mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s">
                         <div>
                             <v-img
                             :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -37,22 +48,12 @@
                                 nessa jornada de sucesso!
                             </p>
                         </div>
-
                     </div>
-
-                <v-container 
-                class="mt-12 px-0"
-                >
-                    <v-row>
+                    
+                    <v-row class="mx-4">
                         <v-col
-                        v-for=" 
-                        (i, index) in appStore.appData.unidades" 
-                        :key="index"
-                        cols="12"
-                        sm="6"
-                        md="4"
-                        lg="3"
-                        xxl="2"
+                        v-for="(i, index) in appStore.appData.unidades" :key="index"
+                        cols="12" sm="6" md="4" lg="3" xxl="2"
                         >      
                             <div 
                             class="d-flex justify-center"
@@ -66,15 +67,17 @@
                                 :progress = "useProgressCalc('progressBar', index)"
                                 :cPage = "useProgressCalc('progressNum', index)"
                                 :lPage = "useProgressCalc('total', index)"
+                                :class = "appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ? index == 0 ? 'card-level' : '' : 
+                                appStore.welcomeStepCounter == 15 ? 'card-level' : '' "
                                 />
                             </div>   
                         </v-col>
                     </v-row>
 
                         <!--cards especiais-->
-                        <HomeSpecialCards
+                        <!--<HomeSpecialCards
                         class="mt-16"
-                        />
+                        />-->
 
                     <div class="spacer" />
 
@@ -95,6 +98,7 @@
         </v-container>
 
     </v-container>
+
 </template>
 
 
@@ -103,16 +107,16 @@
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
     import { useTheme } from "vuetify"
-
     import { useProgressCalc } from '@/components/composables/useProgress'
-
+    import { useApiStore } from '@/store/api'
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
-    
+	import WelcomeModalFx from '@/components/WelcomeModalFx.vue';
 
     const appStore = useAppStore() 
     const router = useRouter()
-    const theme = useTheme();
+    const theme = useTheme()
+    const apiStore = useApiStore()
     
     appStore.currentRoute = router.currentRoute.value.fullPath
 
@@ -125,9 +129,34 @@
         //Aplica o thema 
         theme.global.name.value = appStore.appData.colorTheme
         //Verifica se thema é escuro ou claro
-        appStore.isDarkMode = theme.global.current.value.dark
-        
+        appStore.isDarkMode = theme.global.current.value.dark     
+
+        //Inicia os welcomeSteps -> 1
+        if (appStore.appData.firstAccess == 3){ 
+            appStore.welcomeStepCounter = 1 
+            console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+        } else if (appStore.appData.firstAccess == 7) {
+            //Atualiza o localStorage
+            appStore.welcomeStepCounter = 15
+            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+            console.log(appStore.appData.firstAccess)
+
+            ///FINALIZA O PRIMEIRO ACESSO
+            //Atualiza backend
+            const userId = JSON.parse(localStorage.getItem('userId'));
+            //port / path / data
+            apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+            //User Feedback
+            appStore.globalMsg('Você já sabe tudo sobre a plataforma. Aproveite os conteúdos! ', 'success')
+
+        } else{
+            appStore.welcomeStepCounter = 0
+            console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+        }
+
     })
+    
 </script>
 
 
@@ -138,6 +167,7 @@
         background-repeat: no-repeat;
         background-position: top; 
         background-attachment: fixed;
+        z-index: 0;
     }
     .bg-home-img-dark {
         background: url(../assets/img/home-bg-img-dark.png);
@@ -160,5 +190,16 @@
     }
     .title-align{
         margin-left: 15.5%;
+    }
+    .custom-container-w{
+        padding: 0 200px !important;
+    }
+    .card-level{
+        position: relative;
+        z-index: 5000;
+    }
+    .anim-card{
+        animation: pulse; 
+        animation-duration: 1s;
     }
 </style>

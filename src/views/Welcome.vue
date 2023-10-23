@@ -1,7 +1,6 @@
 <template>
-    
     <v-sheet 
-    v-if="!appStore.isChangedPassword"
+    v-if="appStore.appData.firstAccess == 0"
     color="#133B44"
     class=" d-flex align-center fill-height"
     >   
@@ -11,8 +10,7 @@
 
     <v-container 
     v-else
-    fluid 
-    class="fill-height pa-0 animate__animated animate__fadeIn"
+    fluid class="fill-height pa-0 animate__animated animate__fadeIn"
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
     > 
         <v-container fluid
@@ -28,12 +26,12 @@
 
                 <!--Welcome Msg-->
                 <WelcomeStartMsg 
-                v-if="!appStore.isReadyToGo"
+                v-if="appStore.appData.firstAccess == 1"
                 class="animate__animated animate__fadeInUp" /> 
 
                 <!--Welcome Video-->
                 <WelcomeStartVideo 
-                v-else
+                v-if="appStore.appData.firstAccess == 2"
                 />
                 
             </v-responsive>
@@ -103,8 +101,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: rgba(0, 79, 129, 0.6) !important; 
         backdrop-filter: blur(8px) !important;
     }

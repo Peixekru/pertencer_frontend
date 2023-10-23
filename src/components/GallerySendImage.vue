@@ -620,7 +620,7 @@
 
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .custom-v-text-area{
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
         border: none !important;
