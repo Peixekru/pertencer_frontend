@@ -28,22 +28,22 @@
         router.push('/home')
     }
 
-   
-
     //Quinta parte dos welcomeSteps -> 10
 	if (appStore.appData.firstAccess == 5){
         appStore.welcomeStepCounter = 10
-		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
     } else if (appStore.appData.firstAccess == 6) {
         appStore.welcomeStepCounter = 14
-		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
     }
     
 </script>
 
 <style scoped>
     .content-bg-gcolor-light{
-        background-color: #133B44;
+        background-color: #1B1F45;
+        background-image: url("../assets/img/bg-gradiente-blue.svg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position:relative;
     }
     .content-bg-gcolor-dark{
         background-color: #01121D;

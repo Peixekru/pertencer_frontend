@@ -59,18 +59,11 @@
         appStore.finishedContent(true)
         useStartProgress();
 
-
-        //Log do primeiro acesso
-       // appStore.welcomeStepCounter = 11
-        //console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
-
         //Terceira parte dos welcomeSteps -> 10
         if (appStore.appData.firstAccess == 5){
             appStore.welcomeStepCounter = 11
-            console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
         } else if (appStore.appData.firstAccess == 6) {
             appStore.welcomeStepCounter = 14
-            console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
         }
     } 
 

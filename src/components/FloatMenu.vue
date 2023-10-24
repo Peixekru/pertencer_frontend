@@ -48,8 +48,7 @@
             :toolTipShow="true" 
             :toolTipPos="1" 
             :toolTipAdjust="[0, 0, 0, 20]" 
-            @my-click-event="appStore.welcomeStepCounter = 4;
-            console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+            @my-click-event="appStore.welcomeStepCounter = 4"
             >
                 <template v-slot:text>
                     {{ toolTipText }}
@@ -67,8 +66,7 @@
             :toolTipShow="true" 
             :toolTipPos="1" 
             :toolTipAdjust="[0, 0, 0, 20]" 
-            @my-click-event="appStore.welcomeStepCounter = 12;
-            console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+            @my-click-event="appStore.welcomeStepCounter = 12"
             >
                 <template v-slot:text>
                     {{ toolTipText02 }}
@@ -111,8 +109,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="[-32, 0, 0, 68]" 
-        @my-click-event="appStore.welcomeStepCounter = 4;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 4"
         >
             <template v-slot:text>
                 {{ toolTipText }}
@@ -131,8 +128,7 @@
         :toolTipPos="0" 
         :toolTipAdjust="[-12, 0, 0, 130]" 
         :toolTipR ="0"
-        @my-click-event="appStore.welcomeStepCounter = 12;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 12"
         >
             <template v-slot:text>
                 {{ toolTipText02 }}
@@ -215,7 +211,7 @@
         right: 0;
         z-index: 2000;
         transform: translate(0%, -50%);
-        background-color:rgba( 0, 0, 0, .1);
+        background-color:rgba( 10, 30, 60, .5);
     }
     .top-position{
         position:fixed;
@@ -224,14 +220,14 @@
         z-index: 2000;
     }
     .btn-color {
-        background-color:rgba( 0, 0, 0, .1);
-        box-shadow: inset 1px 1px 3px rgba( 0, 0, 0, .1);
+        background-color:rgba( 0, 0, 0, .5);
+        box-shadow: inset 1px 1px 3px rgba( 0, 0, 0, .3);
     }
     .no-active-icon{
-        opacity: .3;
+        opacity: .1;
     }
     .opacity-control{
-        opacity: 0.5 !important;
+        opacity: 0.3 !important;
     }
     .custom-tooltip-pos{
         position: absolute !important;

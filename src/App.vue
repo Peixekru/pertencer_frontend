@@ -45,8 +45,7 @@
 				:toolTipShow="false" 
 				:toolTipPos="1" 
 				:toolTipAdjust="[0, 0, 0, 0]" 
-				@my-click-event="appStore.welcomeStepCounter = 2;
-				console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+				@my-click-event="appStore.welcomeStepCounter = 2"
 				> 
 					<template v-slot:text>
 						Esta é a tela principal da sua jornada. Aqui você vai
@@ -64,8 +63,7 @@
 				:toolTipShow="false" 
 				:toolTipPos="2" 
 				:toolTipAdjust="appStore.isMobile ? [0, 0, 0, 0] : [0, 0, 0, 0]" 
-				@my-click-event="appStore.welcomeStepCounter = 9;
-				console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+				@my-click-event="appStore.welcomeStepCounter = 9"
 				> 
 					<template v-slot:text>
 						Esta é a tela de conteúdos da unidade. Eu vou tentar
@@ -152,7 +150,7 @@
 	}
 	.container-light {
 		background: rgb(100, 207, 241);
-		background: linear-gradient(45deg, rgba(100, 207, 241, 1) 0%, rgba(75, 255, 239, 1) 100%) !important;
+		background: linear-gradient(45deg, rgba(0, 164, 245, 1) 50%, rgba(75, 255, 239, 1) 100%) !important;
 	}
 	.container-dark {
 		background: rgb(0, 20, 40);

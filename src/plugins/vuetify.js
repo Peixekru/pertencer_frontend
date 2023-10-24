@@ -29,7 +29,7 @@ const customLightTheme = {
 		background: "#bdbdbd",
 		surface: "#e0e0e0",
 		primary: "#004F99",
-		secondary: "#00ccff",
+		secondary: "#00A4E1",
 		error: "#ffcc00",
 		info: "#2196F3",
 		success: "#4caf50",
@@ -59,7 +59,7 @@ export default createVuetify({
 
 		light: {
 			colors: {
-			primary: "#004F81",
+			primary: "#1B1F45",
 			secondary: "#5BC6E8",
 			}
 		},

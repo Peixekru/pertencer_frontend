@@ -122,7 +122,7 @@
             
             </v-col>
         </v-row>
-    </v-card>
+    </v-card>   
 </template>
 
 

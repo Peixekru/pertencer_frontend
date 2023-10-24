@@ -31,7 +31,6 @@
         appStore.currentSelectedObject.userRating = contentRating.value
         if (appStore.welcomeStepCounter == 12){
             appStore.welcomeStepCounter = 13
-			console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
         }
     })
 

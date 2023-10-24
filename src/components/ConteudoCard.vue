@@ -50,7 +50,6 @@
                 color="black"
                 icon="mdi-lock-outline" 
                 />
-
             </div>
 
             <!--Load Image-->
@@ -64,7 +63,6 @@
                     />
                 </div>
             </template>
-            
         </v-img>
         
 
@@ -77,7 +75,6 @@
                 >
                     {{ title }}
                 </div>
-
                 <template v-slot:append>
                     <div class="justify-self-end">
                         <div class="d-flex justify-end align-center">
@@ -103,8 +100,6 @@
                             </v-card-subtitle>
                         </div>
                     </div>
-
-
                 </template>
             </v-list-item>
         </v-card-actions>
@@ -115,12 +110,7 @@
 
 <script setup>
     import { useAppStore } from '../store/app'
-
-
-    //Inicia a store
     const appStore = useAppStore()
-
-
     const cardProps = defineProps({
         title: String,
         icon: String,
@@ -132,12 +122,11 @@
         block: Number,
         selected: Number,
     })
-
 </script>
 
 
 <style lang="scss" scoped>
-@import '../styles/main.scss';
+    @import '../styles/main.scss';  
 
     .icon-opacity{
         opacity: .5;
@@ -153,9 +142,7 @@
         opacity: .5;
         pointer-events: none;
     }
-
     .custom-tooltip {
         opacity: .2 !important;
     }
-    
 </style>

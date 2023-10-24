@@ -13,22 +13,12 @@ export function useBlockStatus(obj) {
 
     //Desmarca todos os selecionados
     for(let a = 0 ; a < appStore.appData.unidades.length; a++){
-
-        console.log(appStore.appData.unidades[a])
-
         for(let b = 0 ; b < appStore.appData.unidades[a].content.length; b++){
-
             for(let c = 0 ; c < appStore.appData.unidades[a].content[b].lessons.length; c++){
-
-            //console.log(appStore.appData.unidades[a].content[b].lessons[c].selected)
-            appStore.appData.unidades[a].content[b].lessons[c].selected = 0
-
+                appStore.appData.unidades[a].content[b].lessons[c].selected = 0
             }
         }
     }
-
-
-
 
 
     //Testa se ainda existe navegação dentro do objeto { Carousel }

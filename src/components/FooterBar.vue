@@ -113,7 +113,6 @@
             console.log(appStore.appData.firstAccess)
 
             appStore.welcomeStepCounter = 14
-			console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
         }
 
         //Finaliza etapa -> 6

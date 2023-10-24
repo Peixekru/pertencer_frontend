@@ -79,7 +79,6 @@
 	//Segunda parte dos welcomeSteps -> 7
 	if (appStore.appData.firstAccess == 4){
         appStore.welcomeStepCounter = 8
-		console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
     } 
 	//Setima parte dos welcomeSteps -> 15
 	else if (appStore.appData.firstAccess == 7) {

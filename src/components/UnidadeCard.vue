@@ -1,10 +1,10 @@
 <template>
 
-    <v-container>
+
     <v-card
     class="rounded-lg px-4"
     :class=" cardStatus ?  appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ?  numCard == 0 ? 'heighlight-Card' : '' : '' : 'desabled-card' "
-    :width="appStore.isMobile ? '100%' : '270'"
+    :width="appStore.isMobile ? '100%' : '100%'"
     elevation="10"
     >
         <v-card-text class="px-0">
@@ -77,8 +77,7 @@
         :toolTipShow="true" 
         :toolTipPos="2" 
         :toolTipAdjust="appStore.isMobile ? [0, 0, -84, -10] : [0, 0, -44, -70]" 
-        @my-click-event="appStore.welcomeStepCounter = 3; 
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 3"
         > 
             <template v-slot:text>
                 Estas são as unidades do nosso programa. Elas devem
@@ -130,10 +129,6 @@
         </WelcomeTooltip>
     </v-container>
 
-
-
-</v-container>
-
 </template>
 
 <script setup>
@@ -182,6 +177,7 @@
         progress: Number,
         cPage: Number,
         lPage: Number,
+        class: String
     })
 </script>
 

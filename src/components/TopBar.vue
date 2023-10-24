@@ -8,7 +8,8 @@
     appStore.appScrol > 40 &&
     appStore.currentRoute != '/conteudo'|| 
     appStore.currentRoute == '/unidade' && appStore.navigationStart ?  
-    appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
+    //appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
+    appStore.isDarkMode ? 'container-dark' : 'container-light' :
     appStore.appScrol > 40 || 
     appStore.currentRoute == '/conteudo' && appStore.navigationStart ?  
     appStore.isDarkMode ? 'container-dark' : 'container-light'
@@ -22,15 +23,16 @@
         <v-row>
 
             <!--Left-->
+            
             <v-col 
-            class="d-flex align-center"
+            class="d-flex align-center ms-4"
             cols="2" v-if=" !appStore.isMobile ">
                 <v-img
                 v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart"
                 class="ms-4 animate__animated animate__fadeIn"
                 :class="appStore.isDarkMode ? 'white-svg' : '' "
-                src="../assets/img/top-logo-unidade.svg"
-                min-width="300"
+                src="../assets/img/logo-home_w_1.svg"
+                min-width="200"
                 />
             </v-col>
             
@@ -41,7 +43,7 @@
                 <v-toolbar-title>
 
                     <div 
-                    class="d-flex btn-top-grup " 
+                    class="d-flex btn-top-grup mt-1" 
                     :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
                     bg-opacity="0" >
 
@@ -241,8 +243,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="[12, 0, 0, 120]" 
-        @my-click-event="appStore.welcomeStepCounter = 5;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 5"
         > 
             <template v-slot:text>
                 <p>Quer rever o vídeo</p>
@@ -262,8 +263,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [-32, 0, 0, -122] : [-10, 0, 0, -29]" 
-        @my-click-event="appStore.welcomeStepCounter = 6;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 6"
         > 
             <template v-slot:text>
                 Queremos proporcionar a melhor experiência
@@ -284,8 +284,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [11, 0, 0, -110] : [12, 0, 0, 19]" 
-        @my-click-event="appStore.welcomeStepCounter = 7;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 7"
         > 
             <template v-slot:text>
                 Quando quiser rever essas dicas,<br/>
