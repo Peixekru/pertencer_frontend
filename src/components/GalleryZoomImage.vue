@@ -96,7 +96,7 @@
 </script>
 
 <style lang="scss">
-    @import '../styles/main.scss';
+    @import '../assets/styles/mainStyles.scss';
     
     .close-bt-pos{
         position: absolute;

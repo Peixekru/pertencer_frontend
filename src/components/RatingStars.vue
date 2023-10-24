@@ -29,10 +29,12 @@
 
     watch(contentRating, () => {
         appStore.currentSelectedObject.userRating = contentRating.value
+<<<<<<< HEAD
         if (appStore.welcomeStepCounter == 12){
             appStore.welcomeStepCounter = 13
-			console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
         }
+=======
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     })
 
 </script>

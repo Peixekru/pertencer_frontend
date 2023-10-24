@@ -1,5 +1,4 @@
 <template>
-
     <v-card 
     class="mx-auto rounded-te-xl" 
     :class="block == 0  ? 'desabled-card' : '' "
@@ -11,26 +10,6 @@
         :lazy-src="`${cardImg}`"
         :src="`${cardImg}`"
         >
-
-        <!--Marker -->
-        <v-sheet 
-        width="100%"
-        height="60"
-        color="primary"
-        v-if="selected == 1"
-        class="d-flex justify-start align-center pa-3 rounded-lg rounded-bs-0 rounded-be-0 elevation-2"
-        style="position: absolute; 0; left:0"
-        >
-            <v-img 
-            class="me-2"
-            :class="appStore.isDarkMode ? 'white-svg' : 'white-svg' "
-            src="@/assets/img/quest-menu-img.svg"
-            max-width="60"
-            /> 
-            <p class="font-weight-bold">
-                Você está aqui!
-            </p>
-        </v-sheet>
 
             <div v-if="staus == 1"
             class="w-100 pe-1 pt-1 d-flex justify-end animate__animated animate__fadeIn animate__delay-0.8s" >
@@ -50,7 +29,6 @@
                 color="black"
                 icon="mdi-lock-outline" 
                 />
-
             </div>
 
             <!--Load Image-->
@@ -64,9 +42,7 @@
                     />
                 </div>
             </template>
-            
         </v-img>
-        
 
         <v-card-actions class="py-0 bg-secondary px-0 ">
 
@@ -77,7 +53,6 @@
                 >
                     {{ title }}
                 </div>
-
                 <template v-slot:append>
                     <div class="justify-self-end">
                         <div class="d-flex justify-end align-center">
@@ -103,25 +78,28 @@
                             </v-card-subtitle>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
 
-
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
                 </template>
             </v-list-item>
         </v-card-actions>
 
     </v-card>
-
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
-
-
+<<<<<<< HEAD
+    const appStore = useAppStore()
+    const cardProps = defineProps({
+=======
     //Inicia a store
     const appStore = useAppStore()
 
-
-    const cardProps = defineProps({
+    defineProps({
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
         title: String,
         icon: String,
         cardImg: String,
@@ -129,16 +107,18 @@
         content: Number,
         index: Number,
         staus: Number,
-        block: Number,
-        selected: Number,
+        block: Number
     })
-
 </script>
 
 
+<<<<<<< HEAD
 <style lang="scss" scoped>
-@import '../styles/main.scss';
+    @import '../styles/main.scss';  
 
+=======
+<style scoped>
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     .icon-opacity{
         opacity: .5;
     }
@@ -153,9 +133,10 @@
         opacity: .5;
         pointer-events: none;
     }
-
+<<<<<<< HEAD
     .custom-tooltip {
         opacity: .2 !important;
     }
-    
+=======
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 </style>

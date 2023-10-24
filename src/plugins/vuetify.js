@@ -1,9 +1,7 @@
 import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
-//import '@/styles/main.scss'
 
-
-//import '@fortawe//some/fontawesome-free/css/all.css' // Ensure your project is capable of handling css files
+//import '@fortawesome/fontawesome-free/css/all.css' // Ensure your project is capable of handling css files
 import { createVuetify } from 'vuetify'
 //import { aliases, fa } from 'vuetify/iconsets/fa'
 
@@ -29,7 +27,7 @@ const customLightTheme = {
 		background: "#bdbdbd",
 		surface: "#e0e0e0",
 		primary: "#004F99",
-		secondary: "#00ccff",
+		secondary: "#00A4E1",
 		error: "#ffcc00",
 		info: "#2196F3",
 		success: "#4caf50",
@@ -59,7 +57,7 @@ export default createVuetify({
 
 		light: {
 			colors: {
-			primary: "#004F81",
+			primary: "#1B1F45",
 			secondary: "#5BC6E8",
 			}
 		},

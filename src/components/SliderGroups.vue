@@ -1,64 +1,85 @@
 <template>
 
+	<!--Desktop version-->
 	<v-container v-if="!appStore.isMobile">
+		<!--Posiciona elementos-->
 		<v-container class="container-pos d-flex justify-space-between align-center">
-			<template v-if="content.lessons.length > 2">
 
+			<!--Aplica efeitos laterais caso a quantidade de itens for maior que dois-->
+			<template v-if="content.lessons.length > 2">
 				<div 
 				class="side-fx-color-start" 
+				:class="objectCardSelect > 0 ? 'mt-3' : ''" 
 				/>
-
 				<div v-if="appStore.isTablet"
 				class="side-fx-color-end" 
+				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
-				
 				<div v-else
 				class="side-fx-color-end-md" 
+				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
+<<<<<<< HEAD
+=======
 
+			
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 			</template>
+
 		</v-container>
 
+
+		<!--Background dos Carouseis-->
 		<v-sheet color="rgba(0,0,0, .1)" rounded="lg" class="mx-auto" elevation="0">
+
+			<!--Titulo dos Carouseis-->
 			<h1 class="text-h5 ms-12 pt-2 pb-1 text-primary">
 				{{ content.lessonsTitle }}
 			</h1>
 
+			<!--Carousel Group-->
 			<v-slide-group 
 			v-model="objectCardSelect" 
-			center-active
+			center-active 
 			show-arrows
 			>
+				<!--Ajusta o espaço dos Carouseis caso sejam menos que 3 por unidade-->
 				<div :class="content.lessons.length < 3 &&
 				appStore.screenWidth > 750 ? 
 				'spacer' : '' " 
 				/>
 
+				<!--Loop nos itens do Carousel-->
 				<v-slide-group-item
 				v-for="(i, index) in content.lessons"
 				:key="i"
 				v-slot="{ isSelected }"
 				>
-				
+<<<<<<< HEAD
+					<!--Tooltip nos itens inativos-->
 					<v-tooltip 
 					location="top"
 					max-width="280"
 					>
 						<v-sheet 
 						class="d-flex justify-start align-center pa-4 rounded-lg elevation-4">
+							<!--Icone do tooltip-->
 							<v-img 
 							class="me-4 animate__animated animate__shakeY"
 							:class="appStore.isDarkMode ? 'white-svg' : '' "
 							src="@/assets/img/quest-menu-img.svg"
 							width="30"
 							/> 
+							<!--Txt do tooltip-->
 							<p class="text-caption">
-							Acesse os conteúdos anteriores para desbloquear esse módulo.
+								{{ toolTipText }}
 							</p>
 						</v-sheet>
+						
+						<!--Ativador do mouseOver-->
+						<template #activator="{ props }">
 
-						<template v-slot:activator="{ props }">
-
+							<!--Agrupador do card-->
 							<v-sheet
 							class="mb-4 ms-4 d-flex align-center"
 							color="transparent"
@@ -80,12 +101,35 @@
 							</v-sheet>
 
 						</template>
+
 					</v-tooltip>
+=======
+					<v-sheet
+					class="mb-4 ms-4 d-flex align-center"
+					:color="isSelected ? 'primary stroke-adjust' : 'transparent'"
+					:elevation="isSelected ? 4 : 0"
+					>
+						<!--Card Conteúdo-->
+						<ConteudoCard
+						class="border-primary"
+						:elevationNumber="isSelected ? 0 : 2"
+						:title="i.title"
+						:icon="i.icon"
+						:cardImg="i.img"
+						:time="i.time"
+						:staus="i.status"
+						:block="i.block"
+						@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"  
+						/>
+					</v-sheet>
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 
 				</v-slide-group-item>
 			</v-slide-group>
 		</v-sheet>
-		<!--Primeiro acesso 9 -->
+<<<<<<< HEAD
+
+		<!--Primeiro acesso -> Passo 9 -->
 		<v-container class="pa-0 noClick" 
 		:class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
 		v-if="appStore.welcomeStepCounter == 9"
@@ -103,46 +147,58 @@
 				</template>
 			</WelcomeTooltip>
 		</v-container>
+
 	</v-container>
 	
+	<!--Mobile vresion-->
+	<v-container v-else>
+=======
+	</v-container>
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 
-
-	<!--Mobile vresion (Carousel)-->
-	<v-container v-if="appStore.isMobile">
-
+		<!--Titulo dos Carouseis-->
 		<h1 class="text-h5 pb-1 text-primary">
 		{{ content.lessonsTitle }}
 		</h1>
-	
+
+		<!--Carousel Group-->
 		<v-carousel
+		v-model="objectCardSelect" 
 		progress="primary"
 		hide-delimiters
 		height="254"
 		class="pt-3"
 		>
+			<!--Loop nos itens do Carousel-->
 			<v-carousel-item
 			v-for="(i, index) in content.lessons"
 			:key="i"
 			>
+<<<<<<< HEAD
+				<!--Tooltip nos itens inativos-->
 				<v-tooltip 
 				location="top"
 				max-width="280"
 				>
 					<v-sheet 
 					class="d-flex justify-start align-center pa-4 rounded-lg elevation-4">
+						<!--Icone do tooltip-->
 						<v-img 
 						class="me-4 animate__animated animate__shakeY"
 						:class="appStore.isDarkMode ? 'white-svg' : '' "
 						src="@/assets/img/quest-menu-img.svg"
 						width="30"
 						/> 
+						<!--Txt do tooltip-->
 						<p class="text-caption">
-						Acesse os conteúdos anteriores para desbloquear esse módulo.
+							{{ toolTipText }}
 						</p>
 					</v-sheet>
 
+					<!--Ativador do mouseOver-->
 					<template v-slot:activator="{ props }">
 
+						<!--Agrupador do card-->
 						<v-sheet
 						class="mx-0"
 						color="transparent"
@@ -166,7 +222,7 @@
 			</v-carousel-item>
 		</v-carousel>
 
-		<!--Primeiro acesso 9 -->
+		<!--Primeiro acesso -> Passo 9 Mobile -->
 		<v-container class="pa-0 noClick" 
 		:class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
 		v-if="appStore.welcomeStepCounter == 9"
@@ -185,6 +241,28 @@
 			</WelcomeTooltip>
 		</v-container>
 
+=======
+				<v-sheet
+				class="mx-0"
+				color="transparent"
+				>
+					<!--Card Conteúdo-->
+					<ConteudoCard
+					class="border-primary"
+					:title="i.title"
+					:icon="i.icon"
+					:cardImg="i.img"
+					:time="i.time"
+					:staus="i.status"
+					:block="i.block"
+					@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"
+					/>
+				</v-sheet>  
+		
+			</v-carousel-item>
+		</v-carousel>
+
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 	</v-container>
 
 </template>
@@ -196,48 +274,55 @@
 	import { useLoadCurrentObject } from "../components/composables/useLoadObject"
 	
 	import ConteudoCard from "@/components/ConteudoCard.vue"
-	import WelcomeTooltip from '@/components/WelcomeTooltip'
+
+
 
 	const appStore = useAppStore()
 	const router = useRouter()
+
+<<<<<<< HEAD
+	//Número do slide em destaque
 	const objectCardSelect = ref(appStore.currentContentNumber)
 
+	//Texto do tooltip
+	const toolTipText = ref('Acesse os conteúdos anteriores para desbloquear esse módulo.')
 
+	//Primeiro acesso -> Text Passo 9
+	const ToolTipText = ref( "Agora é com você! Boa jornada!" );
 	
-	const showTooltip = ref(false)
+	//Carrega página de conteúdo
+=======
+	const objectCardSelect = ref(null);
 
-
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 	const loadObject = ( unidade, contentIndex, index, content ) => {
-
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')
+<<<<<<< HEAD
 
-		//Finaliza etapa
+		//Primeiro acesso -> Passo 9
 		if(appStore.welcomeStepCounter == 9){
 			//Atualiza o localStorage
 			appStore.appData.firstAccess = 5
 			localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-			//console.log(appStore.appData.firstAccess)
-			
-			//Primeiro acesso -> 10
 			appStore.welcomeStepCounter = 10
-			//console.log('welcomeSteps = ' + appStore.welcomeStepCounter);
         }
+=======
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 	}
 
-
-	/*--Primeiro acesso */
-	const ToolTipText = ref( "Agora é com você! Boa jornada!" );
-
-	const teste = defineProps({
+	defineProps({
 		content: Object,
 		contentIndex: Number,
 	})
+
 </script>
 
-<style land="scss" scoped>
+
+<style scoped>
 	.stroke-adjust {
 		border-radius: 12px 29px 12px 12px;
+		border-width: 6px;
 	}
 	.container-pos {
 		position: absolute;
@@ -273,9 +358,9 @@
 	.spacer{
 		width: 52px;
 	}
+<<<<<<< HEAD
 
-
-	/*--Primeiro acesso */
+	/*--Primeiro acesso styles */
     .custom-container{
         position: fixed;
         z-index: 5000;
@@ -304,8 +389,9 @@
 	.noClick{
 		pointer-events: none; 
 	}
-
 	.v-tooltip :deep(.v-overlay__content) {
 		background-color: transparent !important;
 	}
+=======
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 </style>

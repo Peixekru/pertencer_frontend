@@ -1,10 +1,18 @@
 <template>
+<<<<<<< HEAD
 
-    <v-container>
+
     <v-card
     class="rounded-lg px-4"
     :class=" cardStatus ?  appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ?  numCard == 0 ? 'heighlight-Card' : '' : '' : 'desabled-card' "
-    :width="appStore.isMobile ? '100%' : '270'"
+    :width="appStore.isMobile ? '100%' : '100%'"
+=======
+    <v-card
+    class="rounded-lg px-4"
+    :class=" cardStatus ? '' : 'desabled-card' "
+    :width="appStore.isMobile ? '100%' : '300'"
+    min-width="240"
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     elevation="10"
     >
         <v-card-text class="px-0">
@@ -49,7 +57,6 @@
 
         <div class="d-flex justify-space-between align-center mb-6">
             <v-btn 
-            :disabled = "appStore.welcomeStepCounter == 2 "
             class="bg-primary letter-normal"
             density="comfortable"
             rounded
@@ -63,9 +70,11 @@
                 {{ cPage }} de {{ lPage }}
             </p>
 
-        </div>       
+        </div>
+        
 
     </v-card>
+<<<<<<< HEAD
 
     <!--Primeiro acesso -> 2 -->
     <v-container 
@@ -77,8 +86,7 @@
         :toolTipShow="true" 
         :toolTipPos="2" 
         :toolTipAdjust="appStore.isMobile ? [0, 0, -84, -10] : [0, 0, -44, -70]" 
-        @my-click-event="appStore.welcomeStepCounter = 3; 
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 3"
         > 
             <template v-slot:text>
                 Estas são as unidades do nosso programa. Elas devem
@@ -130,17 +138,14 @@
         </WelcomeTooltip>
     </v-container>
 
-
-
-</v-container>
-
+=======
+    
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
-
-    import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
     const route = useRouter()
@@ -155,22 +160,7 @@
         }
 
         appStore.navigationStart = true
-
-        //Finaliza etapa
-        if(appStore.welcomeStepCounter == 7){
-            //Atualiza o localStorage
-            appStore.appData.firstAccess = 4
-            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-            console.log(appStore.appData.firstAccess)
         
-        } else if (appStore.welcomeStepCounter == 15){
-            //Atualiza o localStorage
-            appStore.appData.firstAccess = 8
-            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-            console.log(appStore.appData.firstAccess)
-        }
-        
-        //console.log(appStore.appData.firstAccess)
         route.push('/unidade')
     }
 
@@ -182,62 +172,17 @@
         progress: Number,
         cPage: Number,
         lPage: Number,
+        class: String
     })
 </script>
 
 
-<style lang="scss" scoped>
-
-@import '../styles/main.scss';
+<style scoped>
     .letter-normal{
         letter-spacing: normal;
     }
     .desabled-card{
         opacity: .5;
         pointer-events: none;
-    }
-
-    /*--Primeiro acesso */
-    .custom-tooltip-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -115px !important;
-        left: 212px !important;
-    }
-    .custom-tooltip-pos-mobile{
-        position: absolute !important;
-        z-index: 5000;
-        top: -135px !important;
-    }
-    .custom-tooltip-02-pos-mobile{
-        position: absolute !important;
-        z-index: 5000;
-        top: -70px !important;
-    }
-    .custom-tooltip-02-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -70px !important;
-        left: 142px !important;
-    }
-    .custom-tooltip-03-pos-mobile{
-        position: absolute !important;
-        z-index: 5000;
-        top: 332px !important;
-    }
-    .custom-tooltip-03-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -70px !important;
-        left: 435px !important;
-    }
-    .heighlight-Card{
-        border: 5px solid $secondaryLight;
-        scale: 1.1;
-        animation: pulse;
-        right: 12px;
-        top: 17px;
-        animation-duration: 1s; 
-        
     }
 </style>

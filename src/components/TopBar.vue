@@ -1,14 +1,15 @@
 <template>  
     <!--Modal de acessibilidade-->
     <AccessModal />
-    
+
     <v-app-bar 
-    :class=" appStore.isMobile &&
+    :class=" appStore.isMobile && 
     appStore.currentRoute != '/conteudo'|| 
-    appStore.appScrol > 40 &&
+    appStore.appScrol > 40 && 
     appStore.currentRoute != '/conteudo'|| 
     appStore.currentRoute == '/unidade' && appStore.navigationStart ?  
-    appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
+    //appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
+    appStore.isDarkMode ? 'container-dark' : 'container-light' :
     appStore.appScrol > 40 || 
     appStore.currentRoute == '/conteudo' && appStore.navigationStart ?  
     appStore.isDarkMode ? 'container-dark' : 'container-light'
@@ -22,15 +23,16 @@
         <v-row>
 
             <!--Left-->
+            
             <v-col 
-            class="d-flex align-center"
+            class="d-flex align-center ms-4"
             cols="2" v-if=" !appStore.isMobile ">
                 <v-img
                 v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart"
                 class="ms-4 animate__animated animate__fadeIn"
                 :class="appStore.isDarkMode ? 'white-svg' : '' "
-                src="../assets/img/top-logo-unidade.svg"
-                min-width="300"
+                src="../assets/img/logo-home_w_1.svg"
+                min-width="200"
                 />
             </v-col>
             
@@ -41,14 +43,19 @@
                 <v-toolbar-title>
 
                     <div 
-                    class="d-flex btn-top-grup " 
+<<<<<<< HEAD
+                    class="d-flex btn-top-grup mt-1" 
                     :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
+=======
+                    class="d-flex btn-top-grup " 
+                    :class=" !appStore.isMobile ? 'justify-center' : 'justify-start', 'ms-3' "
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
                     bg-opacity="0" >
 
                             <MobileBackBtns 
                             v-if="appStore.currentRoute != '/home' && appStore.isMobile"
                             />
-
+                    
                             <v-img
                             class="mx-1 mouse-click"
                             :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -56,6 +63,8 @@
                             max-width="40"
                             @click="appStore.accessModal = true"
                             />
+
+                        
 
                             <!--Menu quest compoent-->
                             <v-menu 
@@ -181,6 +190,7 @@
                                 </v-card>
 
                             </v-menu>
+                    
 
                     </div>
                 </v-toolbar-title>
@@ -197,7 +207,7 @@
                 class="bg-primary mx-2 animate__animated animate__fadeInRight"
                 rounded
                 min-width="180px"
-                @click="appStore.videoModal = true"
+                @click="todo('Criar fluxo de introdução.')"
                 >
                     REVER INTRODUÇÃO
                 </v-btn>
@@ -229,6 +239,7 @@
         </v-row>   
     </v-app-bar>
 
+<<<<<<< HEAD
 
 
     <!--Primeiro acesso -> 04 -->
@@ -241,8 +252,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="[12, 0, 0, 120]" 
-        @my-click-event="appStore.welcomeStepCounter = 5;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 5"
         > 
             <template v-slot:text>
                 <p>Quer rever o vídeo</p>
@@ -262,8 +272,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [-32, 0, 0, -122] : [-10, 0, 0, -29]" 
-        @my-click-event="appStore.welcomeStepCounter = 6;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 6"
         > 
             <template v-slot:text>
                 Queremos proporcionar a melhor experiência
@@ -284,8 +293,7 @@
         :toolTipShow="true" 
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [11, 0, 0, -110] : [12, 0, 0, 19]" 
-        @my-click-event="appStore.welcomeStepCounter = 7;
-        console.log('welcomeSteps = ' + appStore.welcomeStepCounter);"
+        @my-click-event="appStore.welcomeStepCounter = 7"
         > 
             <template v-slot:text>
                 Quando quiser rever essas dicas,<br/>
@@ -296,11 +304,12 @@
 
 
 
+=======
+>>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     <!--AppBar secundária-->
     <SecondaryTopBar 
     v-if="appStore.currentRoute == '/unidade' && appStore.navigationStart"
     />
-
 
 </template>
 
@@ -311,8 +320,6 @@
     import AccessModal from './AccessModal.vue'
     import MobileBackBtns from './MobileBackBtns.vue';
     import SecondaryTopBar from './SecondaryTopBar.vue'
-
-    import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
 
@@ -326,6 +333,8 @@
         alert(msg)
     }
 </script>
+
+
 
 
 <style lang="scss" scoped>
@@ -360,53 +369,9 @@
         line-height: 1.1;
         font-size: 0.65em !important;
     }
+
     .tool-tip{
         line-height: .6 !important;
         margin-left: 4px !important;
-    }
-
-    /*--Primeiro acesso */
-    .custom-container{
-        position: fixed;
-        z-index: 5000;
-        right: 228px;
-        top: -18px;
-    }
-    .custom-tooltip-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -67px;
-    }
-    .custom-container-02{
-        position: fixed;
-        z-index: 5000;
-        left: 50%;
-        top: -18px;
-    }
-    .custom-container-02-mobile{
-        position: fixed;
-        z-index: 5000;
-        left: 195px;
-        top: -18px;
-    }
-    .custom-tooltip-02-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -62px;
-    }
-    .custom-tooltip-02-pos-mobile{
-        position: absolute !important;
-        z-index: 5000;
-        top: -52px;
-    }
-    .custom-tooltip-03-pos{
-        position: absolute !important;
-        z-index: 5000;
-        top: -81px;
-    }
-    .custom-tooltip-03-pos-mobile{
-        position: absolute !important;
-        z-index: 5000;
-        top: -81px;
     }
 </style>

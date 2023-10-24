@@ -3,7 +3,8 @@ import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', {
 	state: () => ({
-		
+
+		//Global Controllers
 
 		//Rotas
 		currentRoute: '/',
@@ -13,7 +14,7 @@ export const useAppStore = defineStore('app', {
 		//Primeiro acesso
 		isChangedPassword: false,
 		isReadyToGo: false,
-		welcomeStepCounter: 0,
+		isTutorial: false,
 
 		//Unidades
 		currentUnidadeNumber: 0,
@@ -21,17 +22,12 @@ export const useAppStore = defineStore('app', {
 		nextUnidadeTitle: '',
 		totalItems: [],
 
-		//Slider
-		currentSliderNumber: 0,
-
 		//Objetos
 		currentContent: {},
 		currentContentNumber: 0,
 		currentObjectIndex:[],
 		currentContentTitle: "",
 		currentSelectedObject: 0,
-
-		moveContent: 0,
 
 		isLastObject: false,
 		objectRating: 0,
@@ -46,7 +42,6 @@ export const useAppStore = defineStore('app', {
 		allFinished: false,
 
 		//Modais
-		videoModal: false,
 		///
 		accessModal: false,
 		colorSelect: 0,
@@ -57,7 +52,6 @@ export const useAppStore = defineStore('app', {
 		isZoomImg: false,
 		selectedGallery: null,
 		selectedImg: null,
-		
 
 		//Temas
 		themeName: 'light',
@@ -106,8 +100,7 @@ export const useAppStore = defineStore('app', {
 		},
 
 		finishedContent (param) {
-			this.isFinished = param
-			
+			this.isFinished  = param
 		}
 	}
 
