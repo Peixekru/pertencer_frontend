@@ -9,24 +9,13 @@
 			<template v-if="content.lessons.length > 2">
 				<div 
 				class="side-fx-color-start" 
-				:class="objectCardSelect > 0 ? 'mt-3' : ''" 
 				/>
 				<div v-if="appStore.isTablet"
 				class="side-fx-color-end" 
-				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
 				<div v-else
 				class="side-fx-color-end-md" 
-				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-			
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 			</template>
 
 		</v-container>
@@ -36,15 +25,16 @@
 		<v-sheet color="rgba(0,0,0, .1)" rounded="lg" class="mx-auto" elevation="0">
 
 			<!--Titulo dos Carouseis-->
-			<h1 class="text-h5 ms-12 pt-2 pb-1 text-primary">
+			<h1 class="text-h5 ms-12 pt-2 pb-1 text-white">
 				{{ content.lessonsTitle }}
 			</h1>
 
 			<!--Carousel Group-->
 			<v-slide-group 
 			v-model="objectCardSelect" 
-			center-active 
+			center-active
 			show-arrows
+			
 			>
 				<!--Ajusta o espaço dos Carouseis caso sejam menos que 3 por unidade-->
 				<div :class="content.lessons.length < 3 &&
@@ -58,10 +48,6 @@
 				:key="i"
 				v-slot="{ isSelected }"
 				>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 					<!--Tooltip nos itens inativos-->
 					<v-tooltip 
 					location="top"
@@ -109,34 +95,10 @@
 						</template>
 
 					</v-tooltip>
-=======
-					<v-sheet
-					class="mb-4 ms-4 d-flex align-center"
-					:color="isSelected ? 'primary stroke-adjust' : 'transparent'"
-					:elevation="isSelected ? 4 : 0"
-					>
-						<!--Card Conteúdo-->
-						<ConteudoCard
-						class="border-primary"
-						:elevationNumber="isSelected ? 0 : 2"
-						:title="i.title"
-						:icon="i.icon"
-						:cardImg="i.img"
-						:time="i.time"
-						:staus="i.status"
-						:block="i.block"
-						@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"  
-						/>
-					</v-sheet>
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 
 				</v-slide-group-item>
 			</v-slide-group>
 		</v-sheet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 
 		<!--Primeiro acesso -> Passo 9 -->
 		<v-container class="pa-0 noClick" 
@@ -161,12 +123,6 @@
 	
 	<!--Mobile vresion-->
 	<v-container v-else>
-<<<<<<< HEAD
-=======
-	</v-container>
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 
 		<!--Titulo dos Carouseis-->
 		<h1 class="text-h5 pb-1 text-primary">
@@ -186,10 +142,6 @@
 			v-for="(i, index) in content.lessons"
 			:key="i"
 			>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 				<!--Tooltip nos itens inativos-->
 				<v-tooltip 
 				location="top"
@@ -256,28 +208,6 @@
 			</WelcomeTooltip>
 		</v-container>
 
-=======
-				<v-sheet
-				class="mx-0"
-				color="transparent"
-				>
-					<!--Card Conteúdo-->
-					<ConteudoCard
-					class="border-primary"
-					:title="i.title"
-					:icon="i.icon"
-					:cardImg="i.img"
-					:time="i.time"
-					:staus="i.status"
-					:block="i.block"
-					@click="loadObject(appStore.currentUnidadeNumber, contentIndex, index, content)"
-					/>
-				</v-sheet>  
-		
-			</v-carousel-item>
-		</v-carousel>
-
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 	</v-container>
 
 </template>
@@ -287,20 +217,17 @@
 	import { useAppStore } from "../store/app"
 	import { useRouter } from "vue-router"
 	import { useLoadCurrentObject } from "../components/composables/useLoadObject"
+	import { useApiStore } from '@/store/api'
 	
 	import ConteudoCard from "@/components/ConteudoCard.vue"
-
-
+	import WelcomeTooltip from '@/components/WelcomeTooltip'
 
 
 
 	const appStore = useAppStore()
 	const router = useRouter()
+	const apiStore = useApiStore()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 	//Número do slide em destaque
 	const objectCardSelect = ref(appStore.currentContentNumber)
 
@@ -311,17 +238,10 @@
 	const ToolTipText = ref( "Agora é com você! Boa jornada!" );
 	
 	//Carrega página de conteúdo
-<<<<<<< HEAD
-=======
-	const objectCardSelect = ref(null);
-
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 	const loadObject = ( unidade, contentIndex, index, content ) => {
+
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')
-<<<<<<< HEAD
 
 		//Primeiro acesso -> Passo 9
 		if(appStore.welcomeStepCounter == 9){
@@ -329,9 +249,17 @@
 			appStore.appData.firstAccess = 5
 			localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 			appStore.welcomeStepCounter = 10
-        }
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+
+        }else if (appStore.appData.firstAccess == 8 && appStore.welcomeStepCounter == 16){
+			///FINALIZA O PRIMEIRO ACESSO
+			appStore.appData.firstAccess = 'finished'
+            //Atualiza backend
+            const userId = JSON.parse(localStorage.getItem('userId'));
+            //port / path / data
+            apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+            //User Feedback
+            appStore.globalMsg('Você já sabe tudo sobre a plataforma. Aproveite os conteúdos! ', 'success')
+		}
 	}
 
 	defineProps({
@@ -341,11 +269,9 @@
 
 </script>
 
-
-<style scoped>
+<style land="scss" scoped>
 	.stroke-adjust {
 		border-radius: 12px 29px 12px 12px;
-		border-width: 6px;
 	}
 	.container-pos {
 		position: absolute;
@@ -381,7 +307,6 @@
 	.spacer{
 		width: 52px;
 	}
-<<<<<<< HEAD
 
 	/*--Primeiro acesso styles */
     .custom-container{
@@ -415,6 +340,4 @@
 	.v-tooltip :deep(.v-overlay__content) {
 		background-color: transparent !important;
 	}
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 </style>

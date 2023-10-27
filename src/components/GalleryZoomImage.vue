@@ -10,7 +10,8 @@
         >
             <v-card
             class="rounded-0 pa-14"
-            width="90%"
+            width="80%"
+            color="#fff"
             >
             <!--btn close--->
             <v-icon 
@@ -96,7 +97,7 @@
 </script>
 
 <style lang="scss">
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     
     .close-bt-pos{
         position: absolute;

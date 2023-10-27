@@ -1,0 +1,101 @@
+$primaryLight: #5BC6E8;
+$secondaryLight: #00FFCD;
+$infoLight: #62C9CE;
+
+$primaryDark: #5BC6E8;
+$secondarDark: #004F81;
+
+
+$loginGradienteLightColor1: #1B1F45;
+$loginGradienteLightColor2: #00A4E1;
+$loginGradienteLightColor3: #5BC6E8;
+
+$loginGradienteDarkColor1: #000000;
+$loginGradienteDarkColor2: #0c0e20;
+$loginGradienteDarkColor3: #12152e;
+
+
+a {
+    cursor: pointer;
+}
+
+
+.login-gradiente-light{
+    background: linear-gradient(
+        62deg, 
+        $loginGradienteLightColor1 0%, 
+        $loginGradienteLightColor2 50%, 
+        $loginGradienteLightColor3 100%
+    )
+}
+
+.login-gradiente-dark{
+    background: linear-gradient(
+        62deg, 
+        $loginGradienteDarkColor1 0%, 
+        $loginGradienteDarkColor2 50%, 
+        $loginGradienteDarkColor3 100%
+    )
+    
+}
+
+.bg-img-graf{
+    background-image: url("../assets/img/bg-login.png");
+    background-position: center;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .8; 
+}
+
+.background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.vimeo-player{
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:100%; 
+    height:100%; 
+    border-radius: 10px
+}
+
+.secondary-svg{
+    filter: invert(56%) sepia(45%) saturate(3115%) hue-rotate(160deg) brightness(90%) contrast(101%);
+}
+
+.white-svg {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(81deg) brightness(150%) contrast(102%) !important;
+}
+
+
+
+
+
+
+.container-light {
+    background: rgb(100, 207, 241);
+    background: linear-gradient(45deg, rgba(0, 164, 245, 1) 50%, rgba(75, 255, 239, 1) 100%) !important;
+}
+.container-dark {
+    background: rgb(0, 20, 40);
+    background: linear-gradient(45deg, rgba(0, 20, 40, 1) 0%, rgba(0, 79, 135, 1) 100%) !important;
+}
+.img-icon-opacity-light {
+    opacity: 0.2 !important;
+}
+.img-icon-opacity-dark {
+    opacity: 0.04 !important;
+}

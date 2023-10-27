@@ -1,15 +1,15 @@
 <template>  
     <!--Modal de acessibilidade-->
     <AccessModal />
-
+    
     <v-app-bar 
-    :class=" appStore.isMobile && 
+    :class=" appStore.isMobile &&
     appStore.currentRoute != '/conteudo'|| 
-    appStore.appScrol > 40 && 
+    appStore.appScrol > 40 &&
     appStore.currentRoute != '/conteudo'|| 
     appStore.currentRoute == '/unidade' && appStore.navigationStart ?  
-    //appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
-    appStore.isDarkMode ? 'container-dark' : 'container-light' :
+    appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
+    appStore.isDarkMode ? 'container-dark' : 'container-light' &&
     appStore.appScrol > 40 || 
     appStore.currentRoute == '/conteudo' && appStore.navigationStart ?  
     appStore.isDarkMode ? 'container-dark' : 'container-light'
@@ -25,14 +25,14 @@
             <!--Left-->
             
             <v-col 
-            class="d-flex align-center ms-4"
-            cols="2" v-if=" !appStore.isMobile ">
+            class="d-flex align-center ms-4 pa-0"
+            cols="3" v-if=" !appStore.isMobile ">
                 <v-img
                 v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart"
-                class="ms-4 animate__animated animate__fadeIn"
-                :class="appStore.isDarkMode ? 'white-svg' : '' "
-                src="../assets/img/logo-home_w_1.svg"
-                min-width="200"
+                class="ms-4 pa-0 animate__animated animate__fadeIn"
+                :class="appStore.isDarkMode || appStore.currentRoute == '/conteudo' ? 'white-svg' : '' "
+                src="../assets/img/top-logo.svg"
+                max-width="200"
                 />
             </v-col>
             
@@ -43,22 +43,14 @@
                 <v-toolbar-title>
 
                     <div 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
                     class="d-flex btn-top-grup mt-1" 
                     :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
-=======
-                    class="d-flex btn-top-grup " 
-                    :class=" !appStore.isMobile ? 'justify-center' : 'justify-start', 'ms-3' "
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
                     bg-opacity="0" >
 
                             <MobileBackBtns 
                             v-if="appStore.currentRoute != '/home' && appStore.isMobile"
                             />
-                    
+
                             <v-img
                             class="mx-1 mouse-click"
                             :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -66,8 +58,6 @@
                             max-width="40"
                             @click="appStore.accessModal = true"
                             />
-
-                        
 
                             <!--Menu quest compoent-->
                             <v-menu 
@@ -176,7 +166,7 @@
                                             </v-sheet>
 
                                             <v-btn 
-                                                class="bg-primary letter-normal"
+                                                class="bg-primary text-secondary letter-normal"
                                                 density="comfortable"
                                                 color="deep-purple-accent-4"
                                                 elevation="0"
@@ -193,7 +183,6 @@
                                 </v-card>
 
                             </v-menu>
-                    
 
                     </div>
                 </v-toolbar-title>
@@ -202,22 +191,22 @@
             <!--Righ--> 
             <v-col 
             v-if="!appStore.isMobile"
-            cols="2" 
+            cols="3" 
             class="d-flex justify-end align-center me-3">
 
                 <v-btn v-if="appStore.currentRoute == '/home'"
                 density="comfortable"
-                class="bg-primary mx-2 animate__animated animate__fadeInRight"
+                class="bg-primary mx-2 text-secondary animate__animated animate__fadeInRight"
                 rounded
                 min-width="180px"
-                @click="todo('Criar fluxo de introdução.')"
+                @click="appStore.videoModal = true"
                 >
                     REVER INTRODUÇÃO
                 </v-btn>
 
                 <v-btn v-if="appStore.currentRoute == '/conteudo' && appStore.navigationStart"
                 density="comfortable"
-                class="bg-primary me-3 animate__animated animate__fadeIn"
+                class="bg-primary text-secondary me-3 animate__animated animate__fadeIn"
                 rounded
                 min-width="180px"
                 @click="$router.push('/unidade'); 
@@ -242,7 +231,6 @@
         </v-row>   
     </v-app-bar>
 
-<<<<<<< HEAD
 
 
     <!--Primeiro acesso -> 04 -->
@@ -274,7 +262,7 @@
         :class="appStore.isMobile ? 'custom-tooltip-02-pos-mobile' : 'custom-tooltip-02-pos'"
         :toolTipShow="true" 
         :toolTipPos="0" 
-        :toolTipAdjust="appStore.isMobile ?  [-32, 0, 0, -122] : [-10, 0, 0, -29]" 
+        :toolTipAdjust="appStore.isMobile ?  [-28, 0, 0, -123] : [-8, 0, 0, -22]" 
         @my-click-event="appStore.welcomeStepCounter = 6"
         > 
             <template v-slot:text>
@@ -295,7 +283,7 @@
         :class="appStore.isMobile ? 'custom-tooltip-03-pos-mobile' : 'custom-tooltip-03-pos'"
         :toolTipShow="true" 
         :toolTipPos="0" 
-        :toolTipAdjust="appStore.isMobile ?  [11, 0, 0, -110] : [12, 0, 0, 19]" 
+        :toolTipAdjust="appStore.isMobile ?  [12, 0, 0, -110] : [12, 0, 0, 26]" 
         @my-click-event="appStore.welcomeStepCounter = 7"
         > 
             <template v-slot:text>
@@ -307,12 +295,11 @@
 
 
 
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     <!--AppBar secundária-->
     <SecondaryTopBar 
     v-if="appStore.currentRoute == '/unidade' && appStore.navigationStart"
     />
+
 
 </template>
 
@@ -323,6 +310,8 @@
     import AccessModal from './AccessModal.vue'
     import MobileBackBtns from './MobileBackBtns.vue';
     import SecondaryTopBar from './SecondaryTopBar.vue'
+
+    import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
 
@@ -336,8 +325,6 @@
         alert(msg)
     }
 </script>
-
-
 
 
 <style lang="scss" scoped>
@@ -372,9 +359,53 @@
         line-height: 1.1;
         font-size: 0.65em !important;
     }
-
     .tool-tip{
         line-height: .6 !important;
         margin-left: 4px !important;
+    }
+
+    /*--Primeiro acesso */
+    .custom-container{
+        position: fixed;
+        z-index: 5000;
+        right: 228px;
+        top: -18px;
+    }
+    .custom-tooltip-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -67px;
+    }
+    .custom-container-02{
+        position: fixed;
+        z-index: 5000;
+        left: 50%;
+        top: -18px;
+    }
+    .custom-container-02-mobile{
+        position: fixed;
+        z-index: 5000;
+        left: 195px;
+        top: -18px;
+    }
+    .custom-tooltip-02-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -62px;
+    }
+    .custom-tooltip-02-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -52px;
+    }
+    .custom-tooltip-03-pos{
+        position: absolute !important;
+        z-index: 5000;
+        top: -81px;
+    }
+    .custom-tooltip-03-pos-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: -81px;
     }
 </style>

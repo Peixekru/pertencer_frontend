@@ -2,27 +2,22 @@
     
     <v-container fluid 
     class="fill-height"
-    :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
+    :class="appStore.isDarkMode ? 'login-gradiente-dark' : 'login-gradiente-light' "
     >   
-        <div 
-        class="bg-img-icon-1" 
-        :class="appStore.isDarkMode ? 'img-icon-opacity-dark' : 'img-icon-opacity-light' "
-        />
-
-        <div 
-        class="bg-img-icon-2"
-        :class="appStore.isDarkMode ? 'img-icon-opacity-dark' : 'img-icon-opacity-light' "
+        <v-container fluid
+        class="pa-0 bg-img-graf" 
+        :class="appStore.isDarkMode ? 'bg-img-graf-opacity-dark' : '' " 
         />
 
         <v-responsive 
-        class="align-center fill-height
-        ">
+        class="align-center fill-height"
+        >
             <!--Card Login-->
             <UserLogin /> 
 
         </v-responsive>
-    </v-container>
 
+    </v-container>
 </template>
 
 
@@ -41,31 +36,9 @@
 
 
 
-<style scoped>
-    .bg-img-icon-1{
-        background-image: url("../assets/img/login-big-icon.svg");
-        position: absolute;
-        height: 60%;
-        width: 100%;
-        top: -25%;
-        right: -10%;
+<style lang="scss" scoped>
+    @import '../styles/main.scss';
+    .bg-img-graf-opacity-dark{
+        opacity: .3 !important;
     }
-
-    .bg-img-icon-2{
-        background-image: url("../assets/img/login-big-icon.svg");
-        position: absolute;
-        height: 70%;
-        width: 100%;
-        top: 25%;
-        right: -65%;
-    }
-
-    .img-icon-opacity-light{
-        opacity: .2; 
-    }
-
-    .img-icon-opacity-dark{
-        opacity: .04; 
-    }
-
 </style>

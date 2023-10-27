@@ -35,7 +35,7 @@
             index > 4 && index < 11? 
             44 : 34"
             :src="getImg(index - 1)"
-            class="animate__animated animate__fadeIn"
+            class="secondary-svg animate__animated animate__fadeIn"
             />
 
             <v-img  
@@ -44,7 +44,7 @@
             "
             max-width="44"
             :src="getImg(10)"
-            class="animate__animated animate__fadeIn"
+            class="secondary-svg animate__animated animate__fadeIn"
             />
         </v-sheet>
 

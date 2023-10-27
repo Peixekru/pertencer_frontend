@@ -1,8 +1,10 @@
 <template>
+
     <v-card 
     class="mx-auto rounded-te-xl" 
     :class="block == 0  ? 'desabled-card' : '' "
     rounded="lg"
+    elevation="4"
     min-width="280"
     >
         <v-img 
@@ -11,12 +13,32 @@
         :src="`${cardImg}`"
         >
 
+        <!--Marker -->
+        <v-sheet 
+        width="100%"
+        height="60"
+        color="primary"
+        v-if="selected == 1"
+        class="d-flex justify-start align-center pa-3 rounded-lg rounded-bs-0 rounded-be-0 elevation-2"
+        style="position: absolute; 0; left:0"
+        >
+            <v-img 
+            class="me-2"
+            :class="appStore.isDarkMode ? 'white-svg' : 'white-svg' "
+            src="@/assets/img/quest-menu-img.svg"
+            max-width="60"
+            /> 
+            <p class="font-weight-bold">
+                Você está aqui!
+            </p>
+        </v-sheet>
+
             <div v-if="staus == 1"
             class="w-100 pe-1 pt-1 d-flex justify-end animate__animated animate__fadeIn animate__delay-0.8s" >
                 <v-icon 
                 size="x-large"
-                color="success"
-                icon="mdi-check-circle-outline"
+                color="info"
+                icon="mdi mdi-check-circle"
                 />
             </div>
 
@@ -43,18 +65,19 @@
                 </div>
             </template>
         </v-img>
+        
 
-        <v-card-actions class="py-0 bg-secondary px-0 ">
+        <v-card-actions class="py-0 bg-accent px-0 ">
 
             <v-list-item class="w-100">
                 <div 
                 class="pa-0 font-weight-medium text-caption title-size"
                 :class="appStore.isDarkMode ? '' : 'text-medium-emphasis' "
                 >
-                    {{ title }}
+                    <p class="text-white">{{ title }}</p>
                 </div>
                 <template v-slot:append>
-                    <div class="justify-self-end">
+                    <div class="justify-self-end text-white">
                         <div class="d-flex justify-end align-center">
 
                             <v-icon v-if="icon == 'video'"
@@ -73,41 +96,23 @@
                             class="me-1" icon="mdi-timeline-clock-outline" 
                             />
 
-                            <v-card-subtitle class="pa-0 text-caption font-weight-medium">
+                            <p class="pa-0 text-caption font-weight-medium">
                                 {{ time }} min
-                            </v-card-subtitle>
+                            </p>
                         </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
                 </template>
             </v-list-item>
         </v-card-actions>
 
     </v-card>
+
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
-<<<<<<< HEAD
-<<<<<<< HEAD
     const appStore = useAppStore()
     const cardProps = defineProps({
-=======
-    //Inicia a store
-    const appStore = useAppStore()
-
-    defineProps({
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
-    const appStore = useAppStore()
-    const cardProps = defineProps({
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
         title: String,
         icon: String,
         cardImg: String,
@@ -115,18 +120,15 @@
         content: Number,
         index: Number,
         staus: Number,
-        block: Number
+        block: Number,
+        selected: Number,
     })
 </script>
 
 
-<<<<<<< HEAD
 <style lang="scss" scoped>
     @import '../styles/main.scss';  
 
-=======
-<style scoped>
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     .icon-opacity{
         opacity: .5;
     }
@@ -141,16 +143,7 @@
         opacity: .5;
         pointer-events: none;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     .custom-tooltip {
         opacity: .2 !important;
     }
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
-    .custom-tooltip {
-        opacity: .2 !important;
-    }
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 </style>

@@ -13,12 +13,12 @@
             <v-img
             class="me-4"
             :class="appStore.isDarkMode ? 'white-svg' : '' "
-            src="../assets/img/side-icon-1.svg"
+            src="../assets/img/side-icon-1-dark.svg"
             max-width="40"
             />
 
             <h5 
-            class="text-h5 w-auto"
+            class="text-h5 w-auto font-weight-bold"
             :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
             > 
                 Cápsula do tempo
@@ -217,7 +217,7 @@
                                                 type="button"   
                                                 density="comfortable"
                                                 rounded
-                                                class="bg-primary letter-normal animate__animated animate__fadeInDown"
+                                                class="bg-primary text-secondary letter-normal animate__animated animate__fadeInDown"
                                                 @click="startCapsula"
                                                 >
                                                     Confirmar
@@ -267,8 +267,8 @@
     const isUnlocked = ref(false)
     // Carrega imagens dos estilos
     const getImg = (index) => {
-    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`, import.meta.url).href
-    return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
+    return  new URL(`../assets/img/galeriaStyle-${index}.png`, import.meta.url).href
+    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
     } 
 
     if ( appStore.appData.capsula.status != 1) {
@@ -377,13 +377,13 @@
 
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .custom-v-text-area{
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
         border: none !important;
     }
     .selected-style{
-        border: 3px solid $secondaryLight;
+        border: 3px solid $infoLight;
     }
     .anim{
         animation: fadeIn;

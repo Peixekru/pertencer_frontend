@@ -27,12 +27,12 @@
                             v-if="!appStore.isMobile"
                             class="me-4"
                             :class="appStore.isDarkMode ? 'white-svg' : '' "
-                            src="../assets/img/side-icon-1.svg"
+                            src="../assets/img/side-icon-1-dark.svg"
                             max-width="40"
                             />
 
                             <h5 
-                            class="text-h5 w-auto"
+                            class="text-h5 w-auto "
                             :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
                             > 
                                 Cápsula do tempo
@@ -174,9 +174,9 @@
                                 <v-row>
                                     <v-col
                                     class="pa-0"
-                                    cols="4"
+                                    cols="6"
                                     v-model="msgStyle"
-                                    v-for="i in 6"
+                                    v-for="i in 4"
                                     >                 
                                         <v-img
                                         class="rounded-lg mx-1 my-1"
@@ -431,21 +431,21 @@
 
     const getImg = (index) => {
     // Carrega imagens dos btns
-    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`, import.meta.url).href
-    return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
+    return  new URL(`../assets/img/galeriaStyle-${index}.png`, import.meta.url).href
+    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
     } 
 
 
 </script>
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .custom-v-text-area{
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
         border: none !important;
     }
     .selected-style{
-        border: 3px solid $secondaryLight;
+        border: 3px solid $infoLight;
     }
     .anim{
         animation: fadeIn;
@@ -461,7 +461,7 @@
     }
     textarea{
         width: 100%;
-        height:203px;
+        height:307px;
         border: none;
         outline: none;
         resize: none; /*remove the resize handle on the bottom right*/

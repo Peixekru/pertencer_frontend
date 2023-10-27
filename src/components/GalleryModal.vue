@@ -27,7 +27,7 @@
                         v-if="!appStore.isMobile"
                         class="me-4"
                         :class="appStore.isDarkMode ? 'white-svg' : '' "
-                        src="../assets/img/side-icon-2.svg"
+                        src="../assets/img/side-icon-2-dark.svg"
                         max-width="40"
                         />
 
@@ -122,7 +122,7 @@
 
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .fixed-bar {
         position: fixed;
         z-index: 3000;

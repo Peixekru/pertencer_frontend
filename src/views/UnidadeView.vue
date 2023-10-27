@@ -4,24 +4,21 @@
 	fluid class="fill-height"
 	:class="appStore.isDarkMode ? 'container-dark' : 'container-light'">
 
-		<div
-			class="bg-img-icon-1"
-			:class="appStore.isDarkMode ? 'img-icon-opacity-dark' : 'img-icon-opacity-light'"
-		/>
+		<!--Vídeo de background-->
+        <video id="bg-video" class="background-video" autoplay loop muted poster="../assets/img/intro-video-cover.png">
+            <source src="../assets/img/intro-video.mp4" type="video/mp4">
+        </video>
 
-		<div
-			class="bg-img-icon-2"
-			:class="appStore.isDarkMode ? 'img-icon-opacity-dark' : 'img-icon-opacity-light'"
-		/>
 
-		<v-container 
-		class="mt-16 pt-10 px-0"
+		
+
+		<v-container
 		:class="appStore.isTablet ? 
-		'pe-16' : '' "
+		appStore.welcomeStepCounter == 9 ? 'px-0 pe-16' : 'mt-16 pt-10 px-0 pe-16' : appStore.welcomeStepCounter == 9 ? 'px-0' : 'mt-16 pt-10 px-0' "
 		>
 			<v-row>
 
-				<h6 class="text-h6 text-primary mt-16 pt-10 ms-7 h6-position animate__animated animate__fadeIn animate__delay-1s">
+				<h6 class="text-h6 text-white mt-16 pt-10 ms-7 h6-position animate__animated animate__fadeIn animate__delay-1s">
 				Conteúdos dessa unidade:
 				</h6>
 
@@ -36,6 +33,7 @@
 					<SliderGroups 
 					:content = "i"
 					:contentIndex = "index"
+				
 					/>
 
 				</v-col> 
@@ -45,19 +43,19 @@
 
 		</v-container>
 
+
 		<v-container fluid 
 		class="img-pos"
 		>
 			<v-img
 			class="mx-auto animate__animated animate__fadeIn animate__delay-1s"
-			:class="appStore.isDarkMode ? 'white-svg' : '' "
 			max-width="200"
-			src="../assets/img/login-footer-logo.svg"
+			src="../assets/img/home-footer-logo.svg"
 			/>
 		</v-container>
-
-    
 	</v-container>
+	
+
 </template>
 
 <script setup>
@@ -75,7 +73,7 @@
 	if (!appStore.navigationStart){
 		router.push('/home')
 	}
-<<<<<<< HEAD
+
 
 	//Segunda parte dos welcomeSteps -> 7
 	if (appStore.appData.firstAccess == 4){
@@ -89,29 +87,11 @@
 	else if (appStore.appData.firstAccess == 8) {
         appStore.welcomeStepCounter = 16
     } 
-	
 
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
 </script>
 
 <style scoped>
-	.bg-img-icon-1 {
-		background-image: url("../assets/img/login-big-icon.svg");
-		position: absolute;
-		height: 60%;
-		width: 100%;
-		top: -25%;
-		right: -10%;
-	}
-	.bg-img-icon-2 {
-		background-image: url("../assets/img/login-big-icon.svg");
-		position: absolute;
-		height: 70%;
-		width: 100%;
-		top: 25%;
-		right: -65%;
-	}
+
 	.spacer{
 		height: 100px;
 	}
@@ -124,4 +104,5 @@
 	.h6-position{
 		position: relative;
 	}
+
 </style>

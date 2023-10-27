@@ -3,11 +3,11 @@
     color="transparent"
     class="d-flex justify-start align-center px-0 pb-0"
     >
-        <h2 class="text-h2 font-weight-bold top-title-number" >
+        <h2 class="text-h2 font-weight-bold text-info" >
             0{{ appStore.currentUnidadeNumber + 1}}
         </h2>
         <div class="text-white ps-4">
-            <h5 class="text-h5">
+            <h5 class="text-h5 font-weight-bold">
                 {{ appStore.currentUnidadeTitle }}
             </h5>
             <p class="text-caption">
@@ -50,9 +50,6 @@
 
 
 <style scoped>
-    .top-title-number{
-        color: #00FFCD;
-    }
     .content-opacity{
         opacity: .5;
     }

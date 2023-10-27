@@ -29,11 +29,15 @@ export function useProgressCalc(select, i) {
     }
     
     // calculo bara de progresso unidade [Hanna]
-    const progressPercent = (totalTrueItems.length * 100) / totalItems.length
+    let progressPercent = (totalTrueItems.length * 100) / totalItems.length
 
     if (select == 'total') { return totalItems.length }
     if (select == 'progressNum') { return totalTrueItems.length }
-    if (select == 'progressBar') { return progressPercent }
+    if (select == 'progressBar') { 
+        //Caso a barra de progresso não esteja visível, compensa em 5%
+        if (progressPercent < 5){progressPercent = 5}
+        return progressPercent 
+    }
 
 }
 

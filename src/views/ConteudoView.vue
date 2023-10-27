@@ -12,10 +12,8 @@
 </template>
 
 <script setup>
-
     import { useAppStore } from "../store/app"
     import { useRouter } from "vue-router"
-
     import ContentSkin from "@/components/ContentSkin.vue"
 
 
@@ -40,16 +38,9 @@
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-    .content-bg-gcolor-ligght{
-=======
     .content-bg-gcolor-light{
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
-        background-color: #1B1F45;
-        background-image: url("../assets/img/bg-gradiente-blue.svg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        position:relative;
+        background: rgb(27,31,69);
+        background: linear-gradient(0deg, rgba(27,31,69,1) 0%, rgba(27,31,69,1) 70%, rgba(0,164,225,1) 100%);
     }
     .content-bg-gcolor-dark{
         background-color: #01121D;

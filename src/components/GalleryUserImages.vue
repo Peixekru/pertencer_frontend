@@ -81,7 +81,7 @@
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
-        return  new URL(`../assets/img/img-frame-style-${index}.svg`, import.meta.url).href
+        return  new URL(`../assets/img/galleryFrame-${index}.svg`, import.meta.url).href
     }
 
     const zoomImage = (selectedImg) => {

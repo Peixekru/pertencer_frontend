@@ -78,7 +78,7 @@
                                 width="100%" 
                                 rounded
                                 density="comfortable"
-                                class="bg-primary letter-normal rounded-pill text-center text-button my-0 v-sheet-Btn"
+                                class="bg-primary text-secondary letter-normal rounded-pill text-center text-button my-0 v-sheet-Btn"
                                 >
                                     <span v-if="selectedFile == null">Enviar</span>
                                     <span v-else>Trocar</span>
@@ -163,7 +163,7 @@
                             rounded
                             type="button"
                             density="comfortable"
-                            class="bg-primary letter-normal"
+                            class="bg-primary text-secondary letter-normal"
                             @click="toggleCam"
                             >
                                 <span v-if="!isCamOpen">Câmera</span>
@@ -246,7 +246,7 @@
                                 :class="finalImage != null ?    
                                 galleryStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' :
                                 'disable-style-selector' "
-                                :lazy-src="getImg(i)"
+                              
                                 :src="getImg(i)"
                                 @click="galleryStyle = i"
                                 >
@@ -582,15 +582,19 @@
 
     //Retorna as imagens das molduras
     const getImg = (index) => {
-        let colors = ['F4F4F4', '004F81', '00FFCD', '5BC6E8', '3DDEDE', '003358']
+        return  new URL(`../assets/img/galleryFrame-${index}.svg`, import.meta.url).href
+        /*let colors = ['F4F4F4', '004F81', '00FFCD', '5BC6E8', '3DDEDE', '003358']
         for(var i = 1; i <= 6; i++){
-            if (index == i){ return  new URL(`https://placehold.co/80x80/${colors[i-1]}/666666?text=img${index}&font=montserrat`).href }
-        }
+            if (index == i){ 
+                return  new URL(`https://placehold.co/80x80/${colors[i-1]}/666666?text=img${index}&font=montserrat`).href 
+            }
+        }*/
     } 
+
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
-        return  new URL(`../assets/img/img-frame-style-${index}.svg`, import.meta.url).href
+        return  new URL(`../assets/img/galleryFrame-${index}.svg`, import.meta.url).href
     }
 
     //*SEND FINAL IMAGE
@@ -620,7 +624,7 @@
 
 
 <style lang="scss" scoped>
-    @import '../assets/styles/mainStyles.scss';
+    @import '../styles/main.scss';
     .custom-v-text-area{
         box-shadow: inset 0px 0px 6px rgba(0,0,0,0.1) !important;
         border: none !important;
@@ -675,7 +679,7 @@
     }
     .disable-style-selector{
         pointer-events: none;
-        opacity: .1;
+        opacity: .5;
     }
     .anim-final-img{
         animation: bounceIn; 

@@ -7,7 +7,6 @@
     max-width="380"
     rounded="xl"
     >
-
         <!--Top Modal-->
         <v-sheet
         height="80"  
@@ -27,19 +26,14 @@
                     <v-img
                     v-if="!appStore.isMobile"
                     class="me-4"
-                    :class="appStore.isDarkMode ? 'white-svg' : '' "
                     src="../assets/img/login-change-icon.svg"
                     max-width="40"
                     />
 
-                    <h5 
-                    class="text-h5 font-weight-bold  w-auto"
-                    :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
-                    > 
+                    <h5 class="text-h5 font-weight-bold text-white w-auto"> 
                         Troque sua senha 
                     </h5>
                 </v-container>
-
             </v-toolbar>
         </v-sheet>
 
@@ -48,7 +42,7 @@
         >
             <v-sheet 
             color="transparent" 
-            class="text-start mb-5 mt-2"
+            class="text-start text-subtitle-1 font-weight-light mb-5 mt-2 mx-4"
             >
                 <a>
                 Lorem ipsum dolor sit am et,
@@ -60,11 +54,9 @@
                 </a>
             </v-sheet>
 
-
             <v-container
             class="px-10"
             >
-
                 <div class="text-subtitle-1 text-medium-emphasis">Nova senha:</div>
 
                 <v-text-field
@@ -77,10 +69,9 @@
                 prepend-inner-icon="mdi-lock-outline"
                 placeholder="- - -"
                 required
-                color="primary"
+                color="secondary"
                 @click:append-inner="isVisible= !isVisible"
                 />
-
 
                 <div class="text-subtitle-1 text-medium-emphasis">Repita a senha:</div>
 
@@ -90,10 +81,10 @@
                 :append-inner-icon=" isVisible ? 'mdi-eye-off' : 'mdi-eye' "
                 :type=" isVisible? 'text' : 'password' "
                 :class="password == passwordConfirm && password.length >= 6 ? 'text-success' :  passwordConfirm != '' &&  password.length >= 6?  'text-error' : '' "
-                prepend-inner-icon="mdi-lock-outline"
+                prepend-inner-icon="mdi mdi-lock-check-outline"
                 placeholder="- - -"
                 required
-                color="primary"
+                color="secondary"
                 @click:append-inner="isVisible= !isVisible"
                 />
 
@@ -101,7 +92,7 @@
                 :disabled ="password != passwordConfirm || password.length < 6 || isFinishBtn"
                 :append-icon="isFinishBtn ? 'mdi-check-circle-outline' : '' "
                 block
-                class="mb-6 mt-4"
+                class="mb-6 mt-4 text-secondary"
                 color="primary"
                 size="large"
                 rounded
@@ -124,19 +115,9 @@
                 >
                 Ok, vamos lá?
                 </v-btn>
-            
             </v-container>
-
-
-
-        
         </v-container>
-
-
-
-
     </v-card>
-
 </template>
 
 
@@ -158,21 +139,24 @@
     const passwordConfirm = ref('')
     const isFinishBtn = ref(false)
 
+    //Finaliza etapa
     const goNext = () => {
-        appStore.isChangedPassword = true
+        //Atualiza o localStorage
+        appStore.appData.firstAccess = 1
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
     }
 
     //Altera senha do usuário
-    const submmitUser = () => {
-
-        isFinishBtn.value = true
+    const submmitUser = () => { 
         //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'))
-        //port / path / data
-        apiStore.usePost('/' + userId , password.value)
+        const token = JSON.parse(sessionStorage.getItem('token'))
+        apiStore.usePost('/login', {"userId": userId,"token": token, "newPassword": password.value})
 
-
+        //User Feedback
         appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
+
+        isFinishBtn.value = true
     }
 
 </script>

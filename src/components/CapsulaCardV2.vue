@@ -1,63 +1,61 @@
 <template>
     <v-col 
-    class=""
-    cols="12" sm="6" md="4" lg="3" xxl="2"
+    cols="12" sm="6" md="3" lg="3" xxl="2"
     >
-        <v-img
-        cover
-        :src="appStore.isDarkMode ? 
-        'https://placehold.co/600x600/1C252E/22303E?text=++image++Cápsula&font=montserra' : 
-        'https://placehold.co/600x600/fff/eaeaea?text=++image++Cápsula&font=montserra' "
-        :aspect-ratio="1"
-        max-width="460"
-        class="rounded-circle elevation-6 mouse-click d-flex align-center"
-        @click="appStore.capsulaModal = true"
-        >
-
             <div class="text-center">
 
-                <v-progress-circular
-                :rotate="360"
-                :size="270"
-                :width="12"
-                :model-value="value"
-                color="secondary"
-                >
-                    <v-container class="d-flex flex-column align-center mt-2">
-                        <v-img 
-                        :class="appStore.isDarkMode ? 'white-svg' : ''" 
-                        src="../assets/img/side-icon-1.svg"
-                        width="70" 
-                        />
-                        
-                        <h5 class="text-h5 text-primary font-weight-bold py-2">
-                            Cápsula do tempo
-                        </h5>
-                            <p 
-                            class="font-weight-bold"
-                            :class="appStore.isDarkMode ? 'text-white' : 'text-primary'"
-                            >
-                                {{ appStore.countdown }} dias para a abertura 
-                            </p>
+                <v-container class="d-flex flex-column align-center mt-2">
 
-                            <p 
-                            :class="appStore.isDarkMode ? 'text-white' : 'text-primary' "
-                            >
-                                {{ appStore.sendDate }}
-                            </p>
+                    <h5 class="text-h5 text-info font-weight-bold py-2">
+                        Cápsula do tempo
+                    </h5>
 
-                            <h3 
-                            class="text-h3 font-weight-bold text-primary ps-1"
+                    <v-container class="d-flex justify-center">
+                        <v-sheet color="transparent" class="d-flex justify-start align-center">
+
+                            <v-img 
+                            class="me-4"
+                            :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
+                            src="../assets/img/capsula-icon.svg"
+                            width="70" 
+                            />
+                            
+
+                            <div 
+                            v-if="appStore.appData.capsula.status == 1"
+                            class="text-h5 font-weight-bold text-info text-start animate__animated animate__fadeInRight line-small"
                             >
-                                {{ value }}<span class="text-subtitle-1">%</span>
-                            </h3>
-                    
+                                <p class="text-caption text-white">Faltam</p> 
+                                <p> {{ appStore.countdown }} </p> 
+                                <p class="text-caption text-white">dias.</p>
+                            </div>
+
+                            <v-icon
+                            v-if="appStore.appData.capsula.status == 0"
+                            color="info"
+                            icon="mdi-lock-outline"
+                            size="x-large"
+                            ></v-icon>
+
+                        </v-sheet>
                     </v-container>
 
-                </v-progress-circular>
+                    <v-btn
+                    block 
+                    :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
+                    :disabled="appStore.appData.capsula.status == 0"
+                    type="button"
+                    density="comfortable"
+                    rounded
+                    class="bg-info text-primary letter-normal animate__animated animate__fadeInDown"
+                    @click="appStore.capsulaModal = true"
+                    >
+                        CONSULTAR
+                    </v-btn>
+                
+                </v-container>
 
             </div>
-        </v-img>
     </v-col>
 </template>
 
@@ -95,13 +93,16 @@
         else { appStore.progress = progressBar }
     })
 
-
 </script>
 
 <style scoped>
-
     .mouse-click{
         cursor: pointer;
     }
-
+    .line-small {
+        line-height: .8;
+    }
+    .opacity-control{
+        opacity: .3 !important;
+    }
 </style>

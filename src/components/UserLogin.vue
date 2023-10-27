@@ -3,7 +3,7 @@
     <v-card 
     transition="scroll-x-transition"
     class="mx-auto px-10 py-6 animate__animated animate__fadeInUp"
-    elevation="8"
+    elevation="4"
     max-width="380"
     rounded="xl"
     >
@@ -11,7 +11,7 @@
     <v-img
         class="mx-auto my-8"
         :class="appStore.isDarkMode ? 'white-svg' : '' "
-        max-width="350"
+        max-width="250"
         src="../assets/img/login-top-logo.svg"
     ></v-img>
 
@@ -25,7 +25,7 @@
         prepend-inner-icon="mdi-account-outline"
         placeholder="CPF"
         required
-        color="primary"
+        color="secondary"
         ></v-text-field>
 
 
@@ -38,14 +38,14 @@
         prepend-inner-icon="mdi-lock-outline"
         placeholder="- - -"
         required
-        color="primary"
+        color="secondary"
         @click:append-inner="isVisible= !isVisible"
         ></v-text-field>
 
 
         <v-btn
         block
-        class="mb-6 mt-4"
+        class="my-3 text-secondary"
         color="primary"
         size="large"
         rounded

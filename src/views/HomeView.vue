@@ -4,23 +4,20 @@
     class="fill-height px-0 pt-0 pb-0"
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
     > 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+        <!--Vídeo de background-->
+        <video id="bg-video" class="background-video" autoplay loop muted poster="../assets/img/intro-video-cover.png">
+            <source src="../assets/img/intro-video.mp4" type="video/mp4">
+        </video>
 
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
-        <v-container fluid
-        class="fill-height"
+        <!--</v-container>-->
+        <!--<v-container fluid
+        class="pa-0 fill-height"
         :class="appStore.isDarkMode ? 
         'bg-home-img-dark' : 'bg-home-img-light' "
-        > 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
+        > -->
+        
             <v-container
+            class="fill-height"
             :class="appStore.appData.firstAccess == 3  ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeIn'"
             >
                 <!--Primeiro acesso -> Overlay perdura até welcomeStep 6 -->
@@ -30,78 +27,54 @@
                 />
 
                 <v-container
-                class="mt-12 px-0 pa-0"
+                class="mt-16 px-0 pa-0"
                 >
-                    <div class="d-flex justify-start mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s">
-=======
+                    <div class="mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s">
 
-            <v-container class="mt-16 animate__animated animate__fadeInUp">
-
-                    
-                    <div class="d-flex justify-start animate__animated animate__fadeIn animate__delay-1s">
-
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-                        <div>
                             <v-img
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
-                            width="72"
-                            src="../assets/img/home-title-icon.svg"
-                            />
-                        </div>
-
-                        <div class="v-col-lg-6 pe-12">
-                            <v-img
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
                             min-width="200"
-                            max-width="460"
+                            max-width="360"
                             src="../assets/img/logo-home-type.svg"
                             /> 
                             
-                            <p class="text-h6 font-weight-light text-medium-emphasis mt-4">
-                                Estamos empolgados em contar com o seu talento e dedicação 
-                                nessa jornada de sucesso!
+                            <p style="color:white !important;" class="text-h6 font-weight-light text-medium-emphasis mt-4">
+                                PROGRAMA DE INTEGRAÇÃO E SOCIALIZAÇÃO DA PESSOA COLABORADORA
                             </p>
-                        </div>
 
                     </div>
-<<<<<<< HEAD
                     
                     <v-row>
                         <v-col
                         class="pa-4"
                         v-for="(i, index) in appStore.appData.unidades" :key="index"
-                        cols="12" sm="6" md="4" lg="3" xxl="2"
-=======
+                        cols="12" sm="6" md="6" lg="3" xxl="2"
+                        >    
+                            <!--Container usado que traz o Card 1 para o topo da fila z-index => " card-level "-->
+                            <v-sheet
+                            color="transparent"
+                            class="pa-0"
+                            :class = "appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ? 
+                                index == 0 ? 'card-level' : '' : 
+                                appStore.welcomeStepCounter == 15 ? 'card-level' : '' "
+                            >
+                            
+                                <div 
+                                class="d-flex justify-center"
+                                :class = "i > 1 ? 'opacity-fill' : '' ">
+                                    <!--Card Component-->
+                                    <UnidadeCard 
+                                    :numCard = "index" 
+                                    :title = "i.title"
+                                    :cardStatus = "i.status"
+                                    :cardImg = "getImg(index + 1)"
+                                    :progress = "useProgressCalc('progressBar', index)"
+                                    :cPage = "useProgressCalc('progressNum', index)"
+                                    :lPage = "useProgressCalc('total', index)"
+                                    />
+                                </div>   
 
-                <v-container 
-                class="mt-12 px-0"
-                >
-                    <v-row>
-                        <v-col
-                        v-for=" 
-                        (i, index) in appStore.appData.unidades" 
-                        :key="index"
-                        cols="12"
-                        sm="6"
-                        md="4"
-                        lg="3"
-                        xxl="2"
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
-                        >      
-                            <div 
-                            class="d-flex justify-center"
-                            :class = "i > 1 ? 'opacity-fill' : '' ">
-                                <!--Card Component-->
-                                <UnidadeCard 
-                                :numCard = "index" 
-                                :title = "i.title"
-                                :cardStatus = "i.status"
-                                :cardImg = "i.image"
-                                :progress = "useProgressCalc('progressBar', index)"
-                                :cPage = "useProgressCalc('progressNum', index)"
-                                :lPage = "useProgressCalc('total', index)"
-                                />
-                            </div>   
+                            </v-sheet>
+
                         </v-col>
                     </v-row>
 
@@ -115,20 +88,18 @@
                 </v-container> 
             </v-container>
 
-        </v-container>
-
         <v-container fluid 
         class="img-pos"
         >
             <v-img
             class="mx-auto animate__animated animate__fadeIn animate__delay-1s"
-            :class="appStore.isDarkMode ? 'white-svg' : '' "
             max-width="200"
-            src="../assets/img/login-footer-logo.svg"
+            src="../assets/img/home-footer-logo.svg"
             />
         </v-container>
 
     </v-container>
+
 </template>
 
 
@@ -137,21 +108,25 @@
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
     import { useTheme } from "vuetify"
-
     import { useProgressCalc } from '@/components/composables/useProgress'
-
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
-    
+	import WelcomeModalFx from '@/components/WelcomeModalFx.vue';
 
     const appStore = useAppStore() 
     const router = useRouter()
-    const theme = useTheme();
+    const theme = useTheme()
     
     appStore.currentRoute = router.currentRoute.value.fullPath
 
+    const getImg = (index) => {
+    return  new URL(`../assets/img/unidade-card-${index}.png`, import.meta.url).href
+    //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
+    } 
+
     onMounted( () => {
         
+
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
         appStore.appData.unidades[0].content[0].lessons[0].block = 1
@@ -159,8 +134,9 @@
         //Aplica o thema 
         theme.global.name.value = appStore.appData.colorTheme
         //Verifica se thema é escuro ou claro
-<<<<<<< HEAD
         appStore.isDarkMode = theme.global.current.value.dark     
+
+
 
         //Inicia os welcomeSteps -> 1
         if (appStore.appData.firstAccess == 3){ 
@@ -168,37 +144,28 @@
         } else if (appStore.appData.firstAccess == 7) {
             //Atualiza o localStorage
             appStore.welcomeStepCounter = 15
-            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+            localStorage.setItem('localAppData', JSON.stringify(appStore.appData));            
 
-            ///FINALIZA O PRIMEIRO ACESSO
-            //Atualiza backend
-            const userId = JSON.parse(localStorage.getItem('userId'));
-            //port / path / data
-            apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
-
-            //User Feedback
-            appStore.globalMsg('Você já sabe tudo sobre a plataforma. Aproveite os conteúdos! ', 'success')
-
-        } else{
-            appStore.welcomeStepCounter = 0
-            console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+        }else if (appStore.appData.firstAccess == 'finished') {
+            appStore.welcomeStepCounter = 'finished'
         }
-
-=======
-        appStore.isDarkMode = theme.global.current.value.dark
         
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+        console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
     })
+    
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
+    @import '../styles/main.scss';
+
     .bg-home-img-light {
         background: url(../assets/img/home-bg-img-light.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top; 
         background-attachment: fixed;
+        z-index: 0;
     }
     .bg-home-img-dark {
         background: url(../assets/img/home-bg-img-dark.png);
@@ -221,5 +188,16 @@
     }
     .title-align{
         margin-left: 15.5%;
+    }
+    .custom-container-w{
+        padding: 0 200px !important;
+    }
+    .card-level{
+        position: relative;
+        z-index: 5000;
+    }
+    .anim-card{
+        animation: pulse; 
+        animation-duration: 1s;
     }
 </style>

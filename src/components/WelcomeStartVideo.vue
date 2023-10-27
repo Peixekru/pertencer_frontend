@@ -37,6 +37,7 @@
             <v-container 
             class="d-flex justify-center">
                 <v-btn 
+                class="text-white"
                 variant="tonal"
                 @click="goNext"
                 >
@@ -45,7 +46,6 @@
             </v-container>
 
         </v-container>
-
     </v-container>
 </template>
 
@@ -62,12 +62,18 @@
     const isVideoPlay = ref(false)
 
     const startVideo = () => {
+        const videoEl = document.getElementById("bg-video");
+        videoEl.pause();
+        
         isVideoPlay.value = true;
     }
 
     //Finaliza etapa
     const goNext = () => {
-        appStore.isTutorial = true
+        //Atualiza o localStorage
+        appStore.appData.firstAccess = 3
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        
         router.push('/home')
     }
     

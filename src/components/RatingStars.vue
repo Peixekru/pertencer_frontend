@@ -2,7 +2,7 @@
 
 
         <v-sheet
-        :color="!appStore.isMobile ? 'primary' : 'transparent'"
+        :color="!appStore.isMobile ? 'accent' : 'transparent'"
         height="50px"
         width="140px"
         class="d-flex align-center px-2 rounded-e-xl"
@@ -29,12 +29,9 @@
 
     watch(contentRating, () => {
         appStore.currentSelectedObject.userRating = contentRating.value
-<<<<<<< HEAD
         if (appStore.welcomeStepCounter == 12){
             appStore.welcomeStepCounter = 13
         }
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
     })
 
 </script>
