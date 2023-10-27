@@ -40,7 +40,11 @@
 </script>
 
 <style scoped>
+<<<<<<< HEAD
     .content-bg-gcolor-ligght{
+=======
+    .content-bg-gcolor-light{
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
         background-color: #1B1F45;
         background-image: url("../assets/img/bg-gradiente-blue.svg");
         background-repeat: no-repeat;

@@ -79,9 +79,12 @@
                         </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
                 </template>
             </v-list-item>
         </v-card-actions>
@@ -92,6 +95,7 @@
 <script setup>
     import { useAppStore } from '../store/app'
 <<<<<<< HEAD
+<<<<<<< HEAD
     const appStore = useAppStore()
     const cardProps = defineProps({
 =======
@@ -100,6 +104,10 @@
 
     defineProps({
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+    const appStore = useAppStore()
+    const cardProps = defineProps({
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
         title: String,
         icon: String,
         cardImg: String,
@@ -134,9 +142,15 @@
         pointer-events: none;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     .custom-tooltip {
         opacity: .2 !important;
     }
 =======
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+    .custom-tooltip {
+        opacity: .2 !important;
+    }
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 </style>

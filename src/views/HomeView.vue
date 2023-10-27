@@ -5,15 +5,21 @@
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
     > 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
         <v-container fluid
         class="fill-height"
         :class="appStore.isDarkMode ? 
         'bg-home-img-dark' : 'bg-home-img-light' "
         > 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
             <v-container
             :class="appStore.appData.firstAccess == 3  ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeIn'"
             >

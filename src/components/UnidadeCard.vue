@@ -2,10 +2,15 @@
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
     <v-card
     class="rounded-lg px-4"
     :class=" cardStatus ?  appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ?  numCard == 0 ? 'heighlight-Card' : '' : '' : 'desabled-card' "
     :width="appStore.isMobile ? '100%' : '100%'"
+<<<<<<< HEAD
 =======
     <v-card
     class="rounded-lg px-4"
@@ -13,6 +18,8 @@
     :width="appStore.isMobile ? '100%' : '300'"
     min-width="240"
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
     elevation="10"
     >
         <v-card-text class="px-0">
@@ -138,9 +145,12 @@
         </WelcomeTooltip>
     </v-container>
 
+<<<<<<< HEAD
 =======
     
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 </template>
 
 <script setup>

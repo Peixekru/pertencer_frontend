@@ -10,7 +10,6 @@ export function useBlockStatus(obj) {
     const conteudoNum = parseInt(obj[1]);
     const objetoNum = parseInt(obj[2]);
 
-<<<<<<< HEAD
 
     //Desmarca todos os selecionados
     for(let a = 0 ; a < appStore.appData.unidades.length; a++){
@@ -21,9 +20,7 @@ export function useBlockStatus(obj) {
         }
     }
 
-
-=======
->>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+    
     //Testa se ainda existe navegação dentro do objeto { Carousel }
     if (appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons.length > objetoNum + 1){
         //Desbloqueia o objeto seguinte

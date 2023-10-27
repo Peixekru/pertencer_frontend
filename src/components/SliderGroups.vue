@@ -20,10 +20,13 @@
 				:class="objectCardSelect > 0 ? 'mt-3' : '' " 
 				/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 			
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 			</template>
 
 		</v-container>
@@ -56,6 +59,9 @@
 				v-slot="{ isSelected }"
 				>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 					<!--Tooltip nos itens inativos-->
 					<v-tooltip 
 					location="top"
@@ -128,6 +134,9 @@
 			</v-slide-group>
 		</v-sheet>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 
 		<!--Primeiro acesso -> Passo 9 -->
 		<v-container class="pa-0 noClick" 
@@ -152,9 +161,12 @@
 	
 	<!--Mobile vresion-->
 	<v-container v-else>
+<<<<<<< HEAD
 =======
 	</v-container>
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 
 		<!--Titulo dos Carouseis-->
 		<h1 class="text-h5 pb-1 text-primary">
@@ -175,6 +187,9 @@
 			:key="i"
 			>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 				<!--Tooltip nos itens inativos-->
 				<v-tooltip 
 				location="top"
@@ -277,10 +292,15 @@
 
 
 
+
+
 	const appStore = useAppStore()
 	const router = useRouter()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 	//Número do slide em destaque
 	const objectCardSelect = ref(appStore.currentContentNumber)
 
@@ -291,10 +311,13 @@
 	const ToolTipText = ref( "Agora é com você! Boa jornada!" );
 	
 	//Carrega página de conteúdo
+<<<<<<< HEAD
 =======
 	const objectCardSelect = ref(null);
 
 >>>>>>> parent of 7bf2dd1 (Primeiro acesso)
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
 	const loadObject = ( unidade, contentIndex, index, content ) => {
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')

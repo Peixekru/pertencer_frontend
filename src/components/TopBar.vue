@@ -44,6 +44,9 @@
 
                     <div 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 092ac239c2bbc5f25ddc4aa6a18778e1cb86e965
                     class="d-flex btn-top-grup mt-1" 
                     :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
 =======
