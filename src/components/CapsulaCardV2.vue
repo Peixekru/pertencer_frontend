@@ -42,12 +42,12 @@
 
                     <v-btn
                     block 
-                    :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
+                    :class="appStore.appData.capsula.status == 0 ? appStore.isDarkMode ? 'opacity-control text-white' : 'opacity-control text-primary' : appStore.isDarkMode ? 'text-white' : 'text-primary' "
                     :disabled="appStore.appData.capsula.status == 0"
                     type="button"
                     density="comfortable"
                     rounded
-                    class="bg-info text-primary letter-normal animate__animated animate__fadeInDown"
+                    class="bg-info letter-normal animate__animated animate__fadeInDown"
                     @click="appStore.capsulaModal = true"
                     >
                         CONSULTAR

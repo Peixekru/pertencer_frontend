@@ -51,6 +51,15 @@ export const useAppStore = defineStore('app', {
 		///
 		accessModal: false,
 		colorSelect: 0,
+
+		switchBtn0: false,
+		switchBtn1: false,
+		switchBtn2: false,
+		switchBtn3: false,
+		switchBtn4: false,
+		switchBtn5: false,
+
+
 		///
 		capsulaModal: false,
 		///
@@ -64,6 +73,10 @@ export const useAppStore = defineStore('app', {
 		themeName: 'light',
 		themeNumber: "0",
 		isDarkMode: false,
+
+		fontSize: 1,
+		lineSize: 1,
+		zoomSize: 1,
 
 		//Tamanhos e posições da tela e do app
 		isMobile: false,

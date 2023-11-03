@@ -3,8 +3,8 @@ export function useSystemColors(index) {
     const systemThemes =
         [
             "light",
-            "customLightTheme",
             "dark",
+            "customLightTheme",
             "customDarkTheme"
         ];
 
