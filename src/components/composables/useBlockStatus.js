@@ -111,6 +111,7 @@ export function useBlockStatus(obj) {
     };
 
 
+
     //Atualiza o localStorage
     localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 

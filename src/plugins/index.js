@@ -11,10 +11,14 @@ import vuetify from './vuetify'
 import pinia from '../store'
 import router from '../router'
 
+
+
 // Inclui o router no pinia
 pinia.use(({ store }) => {
 	store.$router = markRaw(router)
 });
+
+
 
 export function registerPlugins (app) {
 	loadFonts()

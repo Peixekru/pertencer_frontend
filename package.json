@@ -17,6 +17,7 @@
     "vue": "^3.2.0",
     "vue-axios": "^3.5.2",
     "vue-confetti-explosion": "^1.0.2",
+    "vue-iframes": "^0.0.20",
     "vue-router": "^4.0.0",
     "vuetify": "^3.0.0",
     "webfontloader": "^1.0.0"
@@ -27,6 +28,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "sass": "^1.66.1",
     "vite": "^4.2.0",
-    "vite-plugin-vuetify": "^1.0.0"
+    "vite-plugin-vuetify": "^1.0.0",
+    "vue-friendly-iframe": "^0.20.0"
   }
 }
