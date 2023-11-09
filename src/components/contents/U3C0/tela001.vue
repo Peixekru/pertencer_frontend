@@ -439,13 +439,25 @@
     import { onMounted } from "vue";
     import { useAppStore } from '../../../store/app'
     import { useStartProgress } from '../../../components/composables/useProgress'
+    import { useRouter } from 'vue-router'
+
+    const router = useRouter()
+
     const appStore = useAppStore();
     // função que finaliza a unidade //
     const finishedContent = () => {
-        appStore.finishedContent(true)
+        //appStore.finishedContent(true)
+        useStartProgress();
+        router.push('/home')
     } 
     onMounted(() => {
-        useStartProgress();
+
+        //libera o "Workplace" 
+        appStore.appData.galeria.status = 1
+		//atualiza o componente "Workplace na home"
+        appStore.galleryCardKey += 1
+		//Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
     })
 </script> 
 

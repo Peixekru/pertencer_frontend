@@ -1,5 +1,4 @@
 <template>
-
     <v-card 
     class="mx-auto rounded-te-xl" 
     :class="block == 0  ? 'desabled-card' : '' "

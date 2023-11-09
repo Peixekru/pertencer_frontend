@@ -57,7 +57,7 @@
 						class="d-flex justify-start align-center pa-4 rounded-lg elevation-4">
 							<!--Icone do tooltip-->
 							<v-img 
-							class="me-4 animate__animated animate__shakeY"
+							class="me-4 animate__animated animate__fadeIn"
 							:class="appStore.isDarkMode ? 'white-svg' : '' "
 							src="@/assets/img/quest-menu-img.svg"
 							width="30"

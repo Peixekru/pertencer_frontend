@@ -4,7 +4,7 @@
     :color="!appStore.isMobile ? '' : 'transparent'"
     class="d-flex px-1 me-2 rounded-pill "
     :class="!appStore.isMobile ? 
-    'flex-column side-position' : 'top-position' "
+    appStore.appData.access.color == 0 ? 'flex-column side-position' : 'flex-column side-position-mono' : 'top-position' "
     >
         <v-sheet 
         v-for=" (i, index) in 4" 
@@ -197,9 +197,9 @@
     }        
     const blockBtn = (i) => {
         if (i == 1 && appStore.appData.capsula.status == 1) { return false }
-        else if (i == 2) { return true }
-        else if (i == 3) { return true }
-        else if (i == 4) { return true }
+        else if (i == 2 && appStore.appData.start.status == 1) { return false }
+        else if (i == 3 && appStore.appData.workplace.status == 1) { return false }
+        else if (i == 4 && appStore.appData.galeria.status == 1) { return false }
         else { return true }
     }
 </script>
@@ -212,6 +212,14 @@
         z-index: 2000;
         transform: translate(0%, -50%);
         background-color:rgba( 10, 30, 60, .4);
+    }
+    .side-position-mono{
+        position:fixed;
+        top:50%;
+        right: 0;
+        z-index: 2000;
+        transform: translate(0%, -50%);
+        background-color:rgba( 0, 0, 0, .4);
     }
     .top-position{
         position:fixed;

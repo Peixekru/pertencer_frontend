@@ -446,6 +446,14 @@
     } 
     onMounted(() => {
         useStartProgress();
+
+        //libera o "Workplace" 
+        appStore.appData.workplace.status = 1
+		//atualiza o componente "Workplace na home"
+        appStore.workPlaceCardKey += 1
+		//Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
     })
 </script> 
 

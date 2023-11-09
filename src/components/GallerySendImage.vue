@@ -243,10 +243,13 @@
                                 :id="'style' + i"
                                 disabled
                                 class="rounded-lg mx-1 my-1"
+
                                 :class="finalImage != null ?    
-                                galleryStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' :
-                                'disable-style-selector' "
-                              
+                                galleryStyle == i ?
+                                appStore.appData.access.color == 1 ? 'selected-style elevation-6 anim grayscale-filter' : 'selected-style elevation-6 anim' : 
+                                appStore.appData.access.color == 1 ? 'elevation-1 grayscale-filter' : 'elevation-1' :
+                                appStore.appData.access.color == 1 ? 'disable-style-selector grayscale-filter' : 'isable-style-selector' "
+
                                 :src="getImg(i)"
                                 @click="galleryStyle = i"
                                 >
@@ -334,7 +337,7 @@
                         class="py-3"
                         >
                             <!--Confetti Effect-->
-                            <v-container  class="pa-0 d-flex justify-center">
+                            <!--<v-container  class="pa-0 d-flex justify-center">
                                 <ConfettiExplosion
                                 v-if="isStyleSelected && finalImage != null " 
                                 :particleSize="3"
@@ -344,7 +347,7 @@
                                 :stageWidth="400"
                                 :colors="['#00FFCD', '#004F81', '#5BC6E8', '#39DCDE']"
                                 />
-                            </v-container>
+                            </v-container>-->
 
                             <v-sheet
                             id="finalImage"
@@ -359,6 +362,7 @@
                                     :src="aplyFrames(galleryStyle)" 
                                     :aspect-ratio="1"
                                     class="border-image-pos"
+                                    :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                                     />
 
                                     <v-img

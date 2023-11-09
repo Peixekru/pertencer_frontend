@@ -1,19 +1,18 @@
 <template>
 
+    <v-sheet
+    :color="!appStore.isMobile ? 'accent' : 'transparent'"
+    height="50px"
+    width="140px"
+    class="d-flex align-center px-2 rounded-e-xl "
+    >
+        <v-rating
+        v-model="contentRating" 
+        size="24"
+        hover
+        />
 
-        <v-sheet
-        :color="!appStore.isMobile ? 'accent' : 'transparent'"
-        height="50px"
-        width="140px"
-        class="d-flex align-center px-2 rounded-e-xl"
-        >
-            <v-rating
-            v-model="contentRating" 
-            hover
-            size="24"
-            />
-
-        </v-sheet>
+    </v-sheet>
         
 </template>
 

@@ -21,6 +21,7 @@
 
             <v-img
                 class="rounded elevation-2"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' : '' "
                 aspect-ratio="16/9"
                 cover
                 :lazy-src="`${cardImg}`"
@@ -69,14 +70,14 @@
 
         <div class="d-flex justify-space-between align-center mb-6">
             <v-btn 
+            type="button"
             :disabled = "appStore.welcomeStepCounter == 2 "
             class="bg-primary text-secondary letter-normal"
             density="comfortable"
             rounded
-            color="deep-purple-accent-4"
             @click="selectCard(numCard, title)"
             >
-            Acessar Unidade
+                Acessar Unidade
             </v-btn>
 
             <p class="text-caption" >

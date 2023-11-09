@@ -14,7 +14,7 @@ export function useScreenMonitor(){
     appStore.appWidth = app.offsetWidth
 
     //Captura o movimento do scroll da tela
-    appStore.appScrol = window.top.scrollY
+    appStore.appScroll = window.top.scrollY
 
     //Verifica se Screen Size é xs- ou xs+
     if(window.innerWidth > 600) { appStore.isMobile = false }

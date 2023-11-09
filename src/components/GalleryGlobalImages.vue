@@ -14,7 +14,8 @@
             :lazy-src="appStore.appData.galeria.content.globalImgs[index].path"
             :src="appStore.appData.galeria.content.globalImgs[index].path"
             :aspect-ratio="1"
-            class=" show-image "
+            class="show-image"
+            :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
             cover
             @click="zoomImage(index)"
             >
@@ -24,6 +25,7 @@
                 :src="aplyFrames(appStore.appData.galeria.content.globalImgs[index].style)"
                 :aspect-ratio="1"
                 class="border-image-pos"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                 />
 
                 <!--Load Image-->

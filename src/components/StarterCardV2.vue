@@ -35,7 +35,7 @@
                     density="comfortable"
                     rounded
                     class="bg-info letter-normal animate__animated animate__fadeInDown"
-                    @click="appStore.galleryModal = true"
+
                     >
                         CONHECER
                     </v-btn>

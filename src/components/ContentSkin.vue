@@ -3,9 +3,11 @@
     class="px-0" 
     :class="!appStore.isMobile ? 
     'pe-16' : '' ">
-        <div class="top-margin" />
-        <ContentTopInfo />  
-        <Config />
+        <v-container class="pa-0" :class="appStore.appData.access.color == 1 ? 'grayscale-filter' : '' ">
+            <div class="top-margin" />
+            <ContentTopInfo />  
+            <Config  class="mt-6"/>
+        </v-container>
     </v-container>
 </template>
 

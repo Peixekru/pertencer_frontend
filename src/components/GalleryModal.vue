@@ -11,7 +11,9 @@
             <v-sheet
             height="80"  
             class="d-flex align-center w-100 rounded-t-xl fixed-bar"
-            :class=" appStore.isDarkMode ? 'container-dark' : 'container-light' "
+            :class=" appStore.isDarkMode ? 
+            appStore.appData.access.color == 0 ? 'container-dark' : 'container-dark-mono' :
+            appStore.appData.access.color == 0 ? 'container-light' : 'container-light-mono' "
             >
                 <v-toolbar
                 color="rgba(0, 0, 0, 0)"
@@ -27,13 +29,13 @@
                         v-if="!appStore.isMobile"
                         class="me-4"
                         :class="appStore.isDarkMode ? 'white-svg' : '' "
-                        src="../assets/img/side-icon-2-dark.svg"
+                        src="../assets/img/gallery-top-icon.svg"
                         max-width="40"
                         />
 
                         <h5 
                         class="text-h5 w-auto"
-                        :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
+                        :class=" appStore.isDarkMode ? 'text-white' : 'primary' "
                         > 
                             Galeria
                         </h5>
@@ -43,7 +45,7 @@
                         <v-icon 
                         icon="mdi-close-circle-outline" 
                         size="48px"
-                        :color=" appStore.isDarkMode ? 'white' : 'primary'"
+                        :color=" appStore.isDarkMode ? 'white' : 'text-primary'"
                         @click="appStore.galleryModal = false"
                         />
                     </template>

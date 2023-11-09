@@ -5,12 +5,17 @@
 	:class="appStore.isDarkMode ? 'container-dark' : 'container-light'">
 
 		<!--Vídeo de background-->
-        <video id="bg-video" class="background-video" autoplay loop muted poster="../assets/img/intro-video-cover.png">
-            <source src="../assets/img/intro-video.mp4" type="video/mp4">
-        </video>
-
-
-		
+        <div 
+        :class="appStore.isDarkMode ? 
+        appStore.appData.access.color == 0 ? 'video-overlay' : 'video-overlay grayscale-filter' : 
+        appStore.appData.access.color == 0 ? 'background-video' : 'background-video grayscale-filter'"
+        >
+            <video 
+            id="bg-video" 
+            autoplay loop muted poster="../assets/img/intro-video-cover.png">
+                <source v-if="!appStore.blockAnimation" src="../assets/img/intro-video.mp4" type="video/mp4">
+            </video>
+        </div>
 
 		<v-container
 		:class="appStore.isTablet ? 

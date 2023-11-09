@@ -5,9 +5,9 @@
 
         <GalleryCardV2 :key="appStore.galleryCardKey"/>
 
-        <StarterCardV2 />
+        <StarterCardV2 :key="appStore.startCardKey"/>
 
-        <WorkplaceCardV2 />
+        <WorkplaceCardV2 :key="appStore.workPlaceCardKey"/>
         
 
         <!--<CapsulaCard :key="appStore.capsulaCardKey"

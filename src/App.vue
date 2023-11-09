@@ -1,7 +1,20 @@
 <template>
+
 	<template v-if="appStore.appData != 'undefined'">
-		<v-app>
+		<v-app class="cursor-preview">
 			
+			<!--Marcador de mouse-->
+			<CustomCursor
+			v-if="appStore.tdah == true"
+			:targets="[ 'a', 'button', 'input', 'textarea', 'v-btn__content', 'v-responsive__content' ]"
+			:circleColor="!appStore.isDarkMode ? 'rgba(0,0,0, .1)' : 'rgba(255,255,255, .1)' "
+			:circleColorHover="!appStore.isDarkMode ? 'rgba(0,0,0, .3)' : 'rgba(255,255,255, .3)' "
+			:dotColor="!appStore.isDarkMode ? 'rgba(0,0,0, .1)' : 'rgba(255,255,255, .1)'"
+			:dotColorHover="!appStore.isDarkMode ? 'rgba(255,255,255, .1)' : 'rgba(0,0,0, .1)' "
+			:hoverSize="4"
+			/>
+
+			<!--Envio de mensagens do sistema (feedback user)-->
 			<GlobalMsg />
 
 			<template v-if="appStore.currentRoute != '/'">
@@ -93,7 +106,9 @@
 	import { onMounted } from 'vue'
 	import { RouterView, useRouter } from 'vue-router'
 	import { useAppStore } from '@/store/app'
-	import { useTheme } from "vuetify";
+	import { useTheme } from "vuetify"
+    import { useContrastSelect, useColorSelect } from "@/components/composables/useSystemStyle"
+	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
 	import TopBar from '@/components/TopBar'
 	import FloatMenu from '@/components/FloatMenu'
 	import FooterBar from '@/components/FooterBar'
@@ -103,7 +118,7 @@
 	import GlobalMsg from '@/components/GlobalMsg'
 	import WelcomeTooltip from '@/components/WelcomeTooltip'
 	import WelcomeModalFx from '@/components/WelcomeModalFx.vue';
-	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
+	import CustomCursor from '@/components/CustomCursor'
 
 	const appStore = useAppStore()
 	const router = useRouter()
@@ -113,6 +128,7 @@
 	if (!JSON.parse(sessionStorage.getItem('loginState'))){
             router.push('/')
         }
+
 
 	onMounted(() => {
 		//Armazena valors iniciais do tamanho da tela, #App e posição do scroll
@@ -124,10 +140,13 @@
 
 		//Verifica o localStorage
 		if (localStorage.getItem('localAppData')) {
-			appStore.appData = JSON.parse(localStorage.getItem('localAppData'));
+			appStore.appData = JSON.parse(localStorage.getItem('localAppData'))
 
 			//Aplica o thema 
-			theme.global.name.value = appStore.appData.colorTheme
+			theme.global.name.value = useContrastSelect(appStore.appData.access.contrast, appStore.appData.access.color == 0)
+			theme.global.name.value = useColorSelect(appStore.appData.access.color, theme.global.current.value.dark)
+			//console.log(useSystemColors(appStore.appData.access.contrast))
+			//theme.global.name.value = appStore.appData.colorTheme
 			appStore.isDarkMode = theme.global.current.value.dark
 		} 
 
@@ -143,6 +162,18 @@
 
 </script>
 
+
+
+
+
+
 <style lang="scss">
 	@import './styles/main.scss';
+
+	//html *
+	//{
+	//font-size: 1em !important;
+	//}
+
+
 </style>

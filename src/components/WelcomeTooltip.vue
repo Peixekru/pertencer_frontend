@@ -30,7 +30,7 @@
         >
 
             <v-img 
-            class="mx-1 animate__animated animate__shakeY"
+            class="mx-1 animate__animated animate__fadeIn"
             :class="appStore.isDarkMode ? 'white-svg' : '' "
             src="@/assets/img/quest-menu-img.svg"
             width="60"

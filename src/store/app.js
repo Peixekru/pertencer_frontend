@@ -50,16 +50,6 @@ export const useAppStore = defineStore('app', {
 		videoModal: false,
 		///
 		accessModal: false,
-		colorSelect: 0,
-
-		switchBtn0: false,
-		switchBtn1: false,
-		switchBtn2: false,
-		switchBtn3: false,
-		switchBtn4: false,
-		switchBtn5: false,
-
-
 		///
 		capsulaModal: false,
 		///
@@ -69,14 +59,53 @@ export const useAppStore = defineStore('app', {
 		selectedImg: null,
 		
 
-		//Temas
-		themeName: 'light',
-		themeNumber: "0",
+		//////////////////
+		//ACESSIBILIDADE//
+		//////////////////
+
+		//Ferramentas
 		isDarkMode: false,
 
+		//PERFIS//
+
+		switchBtn0: false,
+		switchBtn1: false,
+		switchBtn2: false,
+		switchBtn3: false,
+		switchBtn4: false,
+		switchBtn5: false,
+
+
+		//AJUSTES//
+
+		//Contraste
+		themeName: 'light',
+		contrastNumber: "0",
+
+		//Cores
+		useColorSelectNumber:"0",
+		//Cursor
+		cursorSelect: "0",
+		//Tamanho da fonte
 		fontSize: 1,
+		//Espaçamento de linha
 		lineSize: 1,
+		//Zoom
 		zoomSize: 1,
+
+		//AJUSTES//
+		leitorTexto: false,
+		navTeclado: false,
+		linkMarker: false,
+		blockAnimation: false,
+		contentFocus: false,
+		contentGuid: false,
+
+
+		tdah: false,
+
+
+	
 
 		//Tamanhos e posições da tela e do app
 		isMobile: false,
@@ -85,7 +114,7 @@ export const useAppStore = defineStore('app', {
 		screenWidth: 0,
 		appHeight: 0,
 		appWidth: 0,
-		appScrol: 0,
+		appScroll: 0,
 
 		//Capsula do tempo
 		sendDate: '',
@@ -102,13 +131,21 @@ export const useAppStore = defineStore('app', {
 		gallerySendImageKey: 0,
 
 
+		//SpecialHomeComponents
+		startCardKey: 0,
+		workPlaceCardKey: 0,
+
+
 		//Systema
 		globalOverlay: false,
 
 		//Global Msgs
 		msgVisibilty: false,
 		msgText: '',
-		msgColor: ''
+		msgColor: '',
+
+
+		isFinished: false
 	}),
 
 	actions: {
@@ -120,8 +157,7 @@ export const useAppStore = defineStore('app', {
 		},
 
 		finishedContent (param) {
-			this.isFinished = param
-			
+			this.isFinished = param			
 		},
 	}
 

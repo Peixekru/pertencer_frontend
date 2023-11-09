@@ -28,7 +28,8 @@
                 :lazy-src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
                 :src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
                 :aspect-ratio="1"
-                class=" show-image "
+                class="show-image"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                 cover
                 >
                     <!--Moldura da imagem-->
@@ -46,6 +47,7 @@
                 :src="appStore.appData.galeria.content.userImgs[appStore.selectedImg].path"
                 :aspect-ratio="1"
                 class=" show-image "
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                 cover
                 >
                     <!--Moldura da imagem-->
@@ -69,6 +71,7 @@
                 src="../assets/img/user-avatar.svg"
                 :aspect-ratio="1"
                 class="boder-user-image me-2 rounded-pill"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                 width="40"
                 /> 
 

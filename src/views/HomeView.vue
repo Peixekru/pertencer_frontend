@@ -5,9 +5,17 @@
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
     > 
         <!--Vídeo de background-->
-        <video id="bg-video" class="background-video" autoplay loop muted poster="../assets/img/intro-video-cover.png">
-            <source src="../assets/img/intro-video.mp4" type="video/mp4">
-        </video>
+        <div 
+        :class="appStore.isDarkMode ? 
+        appStore.appData.access.color == 0 ? 'video-overlay' : 'video-overlay grayscale-filter' : 
+        appStore.appData.access.color == 0 ? 'background-video' : 'background-video grayscale-filter'"
+        >
+            <video 
+            id="bg-video" 
+            autoplay loop muted poster="../assets/img/intro-video-cover.png">
+                <source v-if="!appStore.blockAnimation" src="../assets/img/intro-video.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <!--</v-container>-->
         <!--<v-container fluid
@@ -108,6 +116,7 @@
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
     import { useTheme } from "vuetify"
+    import { useContrastSelect, useColorSelect} from "@/components/composables/useSystemStyle"
     import { useProgressCalc } from '@/components/composables/useProgress'
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
@@ -125,14 +134,15 @@
     } 
 
     onMounted( () => {
-        
 
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
         appStore.appData.unidades[0].content[0].lessons[0].block = 1
 
         //Aplica o thema 
-        theme.global.name.value = appStore.appData.colorTheme
+        theme.global.name.value = useContrastSelect(appStore.appData.access.contrast, appStore.appData.access.color == 0)
+        theme.global.name.value = useColorSelect(appStore.appData.access.color, theme.global.current.value.dark);
+        //theme.global.name.value = appStore.appData.colorTheme
         //Verifica se thema é escuro ou claro
         appStore.isDarkMode = theme.global.current.value.dark     
 

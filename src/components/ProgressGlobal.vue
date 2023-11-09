@@ -35,7 +35,8 @@
             index > 4 && index < 11? 
             44 : 34"
             :src="getImg(index - 1)"
-            class="secondary-svg animate__animated animate__fadeIn"
+            class="animate__animated animate__fadeIn"
+            :class="appStore.appData.access.color == 0 ? 'secondary-svg' : 'secondary-svg-mono' " 
             />
 
             <v-img  
@@ -44,7 +45,8 @@
             "
             max-width="44"
             :src="getImg(10)"
-            class="secondary-svg animate__animated animate__fadeIn"
+            class="animate__animated animate__fadeIn"
+            :class="appStore.appData.access.color == 0 ? 'secondary-svg' : 'secondary-svg-mono' " 
             />
         </v-sheet>
 

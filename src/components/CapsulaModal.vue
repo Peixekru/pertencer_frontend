@@ -11,7 +11,9 @@
             <v-sheet
                 height="80"  
                 class="d-flex align-center w-100 rounded-t-xl fixed-bar"
-                :class=" appStore.isDarkMode ? 'container-dark' : 'container-light' "
+                :class=" appStore.isDarkMode ? 
+                appStore.appData.access.color == 0 ? 'container-dark' : 'container-dark-mono' :
+                appStore.appData.access.color == 0 ? 'container-light' : 'container-light-mono' "
             >
                 <v-toolbar
                     color="rgba(0, 0, 0, 0)"
@@ -26,14 +28,17 @@
                             <v-img
                             v-if="!appStore.isMobile"
                             class="me-4"
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
-                            src="../assets/img/side-icon-1-dark.svg"
+
+                            :class="appStore.isDarkMode ? 'white-svg' : 
+                            appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
+
+                            src="../assets/img/capsula-top-icon.svg"
                             max-width="40"
                             />
 
                             <h5 
                             class="text-h5 w-auto "
-                            :class=" appStore.isDarkMode ? 'text-white' : 'text-primary' "
+                            :class=" appStore.isDarkMode ? 'text-white' : 'primary' "
                             > 
                                 Cápsula do tempo
                             </h5>
@@ -43,7 +48,7 @@
                         <v-icon 
                         icon="mdi-close-circle-outline" 
                         size="48px"
-                        :color=" appStore.isDarkMode ? 'white' : 'primary'"
+                        :color=" appStore.isDarkMode ? 'white' : 'text-primary'"
                         @click="appStore.capsulaModal = false"
                         />
                     </template>
@@ -63,7 +68,8 @@
                     <v-img 
                     v-if="!appStore.isMobile"
                     class="me-4 animate__animated animate__shakeY"
-                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                    :class="appStore.isDarkMode ? 'white-svg' : 
+                    appStore.appData.access.color == 1 ? 'icon-dark-blue-mono-svg' : '' "
                     src="../assets/img/quest-menu-img.svg"
                     width="36"
                     />  
@@ -180,8 +186,11 @@
                                     >                 
                                         <v-img
                                         class="rounded-lg mx-1 my-1"
-                                        :class="msgStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
-                                        lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
+
+                                        :class="msgStyle == i ? 
+                                        appStore.appData.access.color == 1 ? 'selected-style elevation-6 anim grayscale-filter' : 'selected-style elevation-6 anim' :
+                                        appStore.appData.access.color == 1 ? 'elevation-1 grayscale-filter' : 'elevation-1' " 
+                                        :lazy-src="getImg(i)"
                                         :src="getImg(i)"
                                         @click="msgStyle = i"
                                         >

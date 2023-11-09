@@ -15,7 +15,9 @@
             :src="appStore.appData.galeria.content.userImgs[index].path"
             :aspect-ratio="1"
             class="elevation-2"
-            :class=" !appStore.appData.galeria.content.userImgs[index].visible ? 'hide-image' : 'show-image' "
+            :class=" !appStore.appData.galeria.content.userImgs[index].visible ? 
+            appStore.appData.access.color == 1 ? 'hide-image grayscale-filter' : 'hide-image' :
+            appStore.appData.access.color == 1 ? 'show-image grayscale-filter' : 'show-image' "
             cover
             :id="'userImage' + index"
             @click="zoomImage(index)"
@@ -26,6 +28,7 @@
                 :src="aplyFrames(appStore.appData.galeria.content.userImgs[index].style)"
                 :aspect-ratio="1"
                 class="border-image-pos"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                 />
 
                 <!--Load Image-->

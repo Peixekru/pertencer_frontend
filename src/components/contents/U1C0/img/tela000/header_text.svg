@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="575" height="498" viewBox="0 0 575 498">
+  <defs>
+    <filter id="VOLUNTARIADO_EINSTEIN_Uma_história_de_amor_">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161" result="color"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
+      <feComposite operator="in" in="color"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <filter id="A_história_do_voluntariado_Einstein_se_baseia_na_força_e_na_persistência_de_um_grupo_de_pessoas_unidas_pelo_amor_dedicação_e_profissionalismo_com_o_propósito_de_promover_bem-estar_e_transformação_social._">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161" result="color-2"/>
+      <feComposite operator="out" in="SourceGraphic" in2="blur-2"/>
+      <feComposite operator="in" in="color-2"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Grupo_4467" data-name="Grupo 4467" transform="translate(-318 -301)">
+    <g data-type="innerShadowGroup">
+      <text id="VOLUNTARIADO_EINSTEIN_Uma_história_de_amor_2" data-name="VOLUNTARIADO EINSTEIN
+Uma história de amor
+" transform="translate(319 301)" fill="#fff" font-size="65" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="63">VOLUNTARIADO </tspan><tspan x="0" y="142">EINSTEIN</tspan><tspan font-size="40"><tspan x="0" y="197">Uma história de amor</tspan><tspan x="0" y="246"></tspan></tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 318, 301)" filter="url(#VOLUNTARIADO_EINSTEIN_Uma_história_de_amor_)">
+        <text id="VOLUNTARIADO_EINSTEIN_Uma_história_de_amor_3" data-name="VOLUNTARIADO EINSTEIN
+Uma história de amor
+" transform="translate(1)" fill="#fff" font-size="65" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="63">VOLUNTARIADO </tspan><tspan x="0" y="142">EINSTEIN</tspan><tspan font-size="40"><tspan x="0" y="197">Uma história de amor</tspan><tspan x="0" y="246"></tspan></tspan></text>
+      </g>
+    </g>
+    <g data-type="innerShadowGroup">
+      <text id="A_história_do_voluntariado_Einstein_se_baseia_na_força_e_na_persistência_de_um_grupo_de_pessoas_unidas_pelo_amor_dedicação_e_profissionalismo_com_o_propósito_de_promover_bem-estar_e_transformação_social._2" data-name="A história do voluntariado Einstein se baseia na força e na persistência de um grupo de pessoas unidas pelo amor, dedicação e profissionalismo com o propósito de promover bem-estar e transformação social.
+" transform="translate(319 540)" fill="#fff" font-size="30" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="29">A história do voluntariado Einstein se </tspan><tspan x="0" y="66">baseia na força e na persistência de </tspan><tspan x="0" y="103">um grupo de pessoas unidas pelo </tspan><tspan x="0" y="140">amor, dedicação e profissionalismo </tspan><tspan x="0" y="177">com o propósito de promover bem-</tspan><tspan x="0" y="214">estar e transformação social.</tspan><tspan x="0" y="251"></tspan></text>
+      <g transform="matrix(1, 0, 0, 1, 318, 301)" filter="url(#A_história_do_voluntariado_Einstein_se_baseia_na_força_e_na_persistência_de_um_grupo_de_pessoas_unidas_pelo_amor_dedicação_e_profissionalismo_com_o_propósito_de_promover_bem-estar_e_transformação_social._)">
+        <text id="A_história_do_voluntariado_Einstein_se_baseia_na_força_e_na_persistência_de_um_grupo_de_pessoas_unidas_pelo_amor_dedicação_e_profissionalismo_com_o_propósito_de_promover_bem-estar_e_transformação_social._3" data-name="A história do voluntariado Einstein se baseia na força e na persistência de um grupo de pessoas unidas pelo amor, dedicação e profissionalismo com o propósito de promover bem-estar e transformação social.
+" transform="translate(1 239)" fill="#fff" font-size="30" font-family="Montserrat-Medium, Montserrat" font-weight="500"><tspan x="0" y="29">A história do voluntariado Einstein se </tspan><tspan x="0" y="66">baseia na força e na persistência de </tspan><tspan x="0" y="103">um grupo de pessoas unidas pelo </tspan><tspan x="0" y="140">amor, dedicação e profissionalismo </tspan><tspan x="0" y="177">com o propósito de promover bem-</tspan><tspan x="0" y="214">estar e transformação social.</tspan><tspan x="0" y="251"></tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

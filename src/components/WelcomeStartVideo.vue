@@ -4,7 +4,7 @@
     fluid
     class="pa-4"
     >
-        <!--Button-->
+        <!--Button
         <v-container
         v-if="!isVideoPlay" 
         class="d-flex justify-center animate__animated animate__bounce"
@@ -16,11 +16,10 @@
             class="video-btn-custom"
             @click="startVideo"
             />
-        </v-container>
+        </v-container>-->
 
         <!--Vimeo-->
         <v-container 
-        v-else
         fluid
         class="animate__animated animate__fadeInUp"
         >
@@ -55,18 +54,26 @@
     import { ref } from 'vue';
     import { useAppStore } from '@/store/app'
     import { useRouter } from "vue-router"
+import { onMounted } from 'vue';
     
     const appStore = useAppStore() 
     const router = useRouter()
 
-    const isVideoPlay = ref(false)
+    const isVideoPlay = ref(true)
 
-    const startVideo = () => {
+    onMounted(() =>{
+        isVideoPlay.value = false;
+
+        const videoEl = document.getElementById("bg-video");
+        videoEl.pause();
+    })
+
+    /*const startVideo = () => {
         const videoEl = document.getElementById("bg-video");
         videoEl.pause();
         
         isVideoPlay.value = true;
-    }
+    }*/
 
     //Finaliza etapa
     const goNext = () => {

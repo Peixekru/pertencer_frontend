@@ -3,20 +3,16 @@
     <AccessModal />
     
     <v-app-bar 
-    :class=" appStore.isMobile &&
-    appStore.currentRoute != '/conteudo'|| 
-    appStore.appScrol > 40 &&
-    appStore.currentRoute != '/conteudo'|| 
-    appStore.currentRoute == '/unidade' && appStore.navigationStart ?  
-    appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' :
-    appStore.isDarkMode ? 'container-dark' : 'container-light' &&
-    appStore.appScrol > 40 || 
-    appStore.currentRoute == '/conteudo' && appStore.navigationStart ?  
-    appStore.isDarkMode ? 'container-dark' : 'container-light'
+    :class=" 
+    appStore.appScroll > 40 ||
+    appStore.isMobile || 
+    appStore.currentRoute == '/unidade' ||
+    appStore.currentRoute == '/conteudo' ? 
+    appStore.isDarkMode ? 'top-opacity-dark blur-fx' : 'top-opacity-light blur-fx' 
     : 'transparent-color' "
 
     :elevation=" appStore.isMobile || 
-    appStore.appScrol > 40 || 
+    appStore.appScroll > 40 || 
     appStore.currentRoute != '/home' && appStore.navigationStart ? 
     4 : 0 "
     >
@@ -30,7 +26,7 @@
                 <v-img
                 v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart"
                 class="ms-4 pa-0 animate__animated animate__fadeIn"
-                :class="appStore.isDarkMode || appStore.currentRoute == '/conteudo' ? 'white-svg' : '' "
+                :class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-mono-svg' "
                 src="../assets/img/top-logo.svg"
                 max-width="200"
                 />
@@ -50,15 +46,19 @@
                             <MobileBackBtns 
                             v-if="appStore.currentRoute != '/home' && appStore.isMobile"
                             />
-
+                            
                             <v-img
                             class="mx-1 mouse-click"
-                            :class="appStore.isDarkMode ? 'white-svg' : '' "
+                            :class="appStore.isDarkMode ? 'white-svg' : appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
                             src="../assets/img/acess-top-icon.svg"
                             max-width="40"
                             @click="appStore.accessModal = true"
-                            />
+                            >
+                                <v-btn variant="plain" v-ripple="false"/>
+                            </v-img>
 
+    
+                            
                             <!--Menu quest compoent-->
                             <v-menu 
                             class="d-flex justify-center" 
@@ -72,10 +72,12 @@
                                     <v-img
                                     v-bind="props"
                                     class="mx-1"
-                                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                                    :class="appStore.isDarkMode ? 'white-svg' : appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
                                     src="../assets/img/quest-top-icon.svg"
                                     max-width="40"
-                                    />           
+                                    > 
+                                        <v-btn variant="plain" v-ripple="false"/>
+                                    </v-img>
                                 </template>
 
                                 <!--Tooltip-->
@@ -99,7 +101,7 @@
                                         :class="appStore.isDarkMode ? 'white-svg' : '' "
                                         src="../assets/img/quest-menu-img.svg"
                                         width="60"
-                                        /> 
+                                        />
 
                                         <v-sheet 
                                         class="d-flex flex-column"
@@ -141,6 +143,7 @@
                                                     src="../assets/img/quest-top-btn-icon02.svg"
                                                     width="38"
                                                     /> 
+                                                    
                                                     <p class="text-center text-caption text-medium-emphasis mb-1 btn-txt-line">
                                                         FAQ
                                                     </p>
@@ -177,7 +180,6 @@
 
                                         </v-sheet>
 
-
                                     </v-container>
 
                                 </v-card>
@@ -201,7 +203,7 @@
                 min-width="180px"
                 @click="appStore.videoModal = true"
                 >
-                    REVER INTRODUÇÃO
+                    <a>REVER INTRODUÇÃO</a>
                 </v-btn>
 
                 <v-btn v-if="appStore.currentRoute == '/conteudo' && appStore.navigationStart"
@@ -219,12 +221,14 @@
                     <v-img
                     v-if="appStore.currentRoute != '/home' && appStore.navigationStart"
                     class="cursor-hand-click animate__animated animate__fadeInRight"
-                    :class="appStore.isDarkMode ? 'white-svg' : '' "
+                    :class="appStore.isDarkMode ? 'white-svg' : appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
                     src="../assets/img/btn-back-unidade.svg"
                     max-width="38"
                     min-width="38"
                     @click="$router.push('/home'); appStore.isFinished = false;"
-                    />
+                    >
+                        <v-btn variant="plain" v-ripple="false"/>
+                    </v-img>
                 </a>
 
             </v-col>

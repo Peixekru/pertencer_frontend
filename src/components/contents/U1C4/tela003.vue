@@ -439,13 +439,23 @@
     import { onMounted } from "vue";
     import { useAppStore } from '../../../store/app'
     import { useStartProgress } from '../../../components/composables/useProgress'
+    
     const appStore = useAppStore();
+
+
     // função que finaliza a unidade //
     const finishedContent = () => {
         appStore.finishedContent(true)
     } 
     onMounted(() => {
         useStartProgress();
+        
+        //libera o "Começando bem" 
+        appStore.appData.start.status = 1
+		//atualiza o componente "Começando bem na home"
+        appStore.startCardKey += 1
+		//Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
     })
 </script> 
 

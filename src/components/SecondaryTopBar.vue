@@ -5,7 +5,10 @@
     height="100"
     >
         <v-container fluid class="d-flex justify-start align-center ps-16 pe-0">
-            <h1 class="text-h2 font-weight-bold text-info" >
+            <h1 
+            class="text-h2 font-weight-bold"
+            :class="appStore.isDarkMode ? 'text-white' : 'text-info'" 
+            >
                 0{{ appStore.currentUnidadeNumber + 1}}
             </h1>
             <h5 class="text-h5 font-weight-bold ps-4">
@@ -15,9 +18,9 @@
             <v-img
             v-if="appStore.screenWidth > 740"
             class="ms-auto"
-            :class="appStore.isDarkMode ? 'white-svg' : '' "
+            :class="appStore.appData.access.color == 1 ? 'grayscale-filter' : '' "
             :src="getImg(appStore.currentUnidadeNumber + 1)"
-            max-width="246"
+            max-width="248"
             />
 
         </v-container>

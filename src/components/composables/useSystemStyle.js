@@ -1,13 +1,43 @@
-export function useSystemColors(index) {
+export function useContrastSelect(index, isMono) {
 
-    const systemThemes =
+    const contrast =
         [
             "light",
             "dark",
-            "customLightTheme",
-            "customDarkTheme"
+        ];
+    
+    const contrastMono =
+        [
+            "lightMono",
+            "darkMono",
         ];
 
-    return systemThemes[index];
+        if (isMono){
+            return contrast[index];
+        } else {
+            return contrastMono[index];
+        }
+
+}
+
+export function useColorSelect(index, isDark) {
+
+    const colorDark =
+        [
+            "dark",
+            "darkMono"
+        ];
+    
+    const colorLight =
+        [
+            "light",
+            "lightMono"
+        ];
+
+    if (isDark){
+        return colorDark[index];
+    } else {
+        return colorLight[index];
+    }
 
 }

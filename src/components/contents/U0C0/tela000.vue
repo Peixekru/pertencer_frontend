@@ -8,6 +8,7 @@
             SameSite="None"
             allow="autoplay; fullscreen; picture-in-picture;" 
             class="vimeo-player"
+            :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
             />
         </div>
     </v-container>

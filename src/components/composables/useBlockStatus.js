@@ -1,6 +1,7 @@
 import { useAppStore } from '../../store/app'
 import { useApiStore } from '../../store/api'
 
+
 export function useBlockStatus(obj) {
 
     const appStore = useAppStore();
@@ -104,7 +105,6 @@ export function useBlockStatus(obj) {
             }
             //Finaliza o curso
             else{
-                alert('Treinamento concluido.');
                 appStore.allFinished = true;
             }
         }

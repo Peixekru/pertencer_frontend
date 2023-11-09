@@ -27,9 +27,18 @@
             <!--//*! Manter? Overlay Fx-->
             <v-sheet class="overlay-fx"/>
 
-            <video id="bg-video" class="background-video" autoplay loop muted poster="../assets/img/intro-video-cover.png">
-                <source src="../assets/img/intro-video.mp4" type="video/mp4">
-            </video>
+            <!--Vídeo de background-->
+            <div 
+            :class="appStore.isDarkMode ? 
+            appStore.appData.access.color == 0 ? 'video-overlay' : 'video-overlay grayscale-filter' : 
+            appStore.appData.access.color == 0 ? 'background-video' : 'background-video grayscale-filter'"
+            >
+                <video 
+                id="bg-video" 
+                loop="true" autoplay="autoplay" controls muted poster="../assets/img/intro-video-cover.png">
+                    <source v-if="!appStore.blockAnimation" src="../assets/img/intro-video.mp4" type="video/mp4">
+                </video>
+            </div>
 
             <!--Welcome Msg-->
             <WelcomeStartMsg 

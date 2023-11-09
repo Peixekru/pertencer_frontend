@@ -116,11 +116,14 @@
                                 >                 
                                     <v-img
                                     class="rounded-lg mx-1 my-1"
-                                    :class="msgStyle == i ? 'selected-style elevation-6 anim' : 'elevation-1' "
-                                    lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
+                                    :class="msgStyle == i ? 
+                                    appStore.appData.access.color == 1 ? 'selected-style elevation-6 anim grayscale-filter' : 'selected-style elevation-6 anim' :
+                                    appStore.appData.access.color == 1 ? 'elevation-1 grayscale-filter' : 'elevation-1' " 
+                                    :lazy-src="getImg(i)"
                                     :src="getImg(i)"
                                     @click="msgStyle = i"
                                     >
+                                        <v-btn variant="plain" v-ripple="false"/>
                                         <!--Load Image-->
                                         <template v-slot:placeholder>
                                             <div class="d-flex align-center justify-center fill-height">
@@ -197,8 +200,7 @@
                                                 'mdi-check-circle-outline' : 'mdi-alert-circle-outline' : 
                                                 '' "
                                                 :class="mail && confirmMail != '' ?
-                                                mail == confirmMail ? 
-                                                'text-success' : 'text-error' : 
+                                                mail == confirmMail ? 'text-success' : 'text-error' : 
                                                 '' "
                                                 class="animate__animated animate__fadeIn"
                                                 />

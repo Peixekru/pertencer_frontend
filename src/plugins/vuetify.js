@@ -7,33 +7,39 @@ import "vuetify/styles";
 import { createVuetify } from 'vuetify'
 //import { aliases, fa } from 'vuetify/iconsets/fa'
 
-
-/* Custom Thems */
-const customDarkTheme = {
+const darkMono = {
 	dark: true,
 	colors: {
-		background: "#15202b",
-		surface: "#15202b",
-		primary: "#00FFCD",
-		secondary: "#03dac6",
-		error: "#ff5722",
-		info: "#2196F3",
-		success: "#4caf50",
-		warning: "#fb8c00",
+		primary: "#d1d1d1",
+		secondary: "#434343",
+
+		background: "#000",
+		surface: "#212121",
+
+		info: "#616161",
+		accent: '#3c3c3c',
+
+		error: "#333",
+		success: "#2f2f2f",
+		warning: "#666",
 	},
 };
 
-const customLightTheme = {
+const lightMono = {
 	dark: false,
 	colors: {
+		primary: "#2f2f2f",
+		secondary: "#a3a3a3",
+
 		background: "#bdbdbd",
-		surface: "#e0e0e0",
-		primary: "#004F99",
-		secondary: "#00A4E1", 
-		error: "#ffcc00",
-		info: "#2196F3",
-		success: "#4caf50",
-		warning: "#fb8c00",
+		surface: '#F4F4F4',
+
+		info: "#9a9a9a",
+		accent: '#575757',
+
+		error: "#333",
+		success: "#2f2f2f",
+		warning: "#666",
 	},
 };
 
@@ -54,8 +60,10 @@ export default createVuetify({
 	theme: {
 		defaultTheme: "light",
 		themes: {
-		customDarkTheme,
-		customLightTheme,
+
+		darkMono,
+		lightMono,
+
 
 		light: {
 			colors: {
@@ -71,6 +79,7 @@ export default createVuetify({
 			colors: {
 			primary: "#5BC6E8",
 			secondary: "#004F81",
+			surface: '#1b1b1e',
 			info: "#62C9CE",
 			accent: '#2B7080',
 			}

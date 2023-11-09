@@ -58,7 +58,10 @@ export function useStartProgress(){
 
     // calculo progresso do curso (Gota) 
     const totalProgress = (progressNum * 100) / total
-    appStore.appData.glogalProgress = totalProgress
+
+    if (totalProgress <= 30 ) {appStore.appData.glogalProgress = 30} else{
+        appStore.appData.glogalProgress = totalProgress
+    }
 
 
     //Controla animação do progresso global
