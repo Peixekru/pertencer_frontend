@@ -18,24 +18,27 @@
                     <p :class="appStore.isDarkMode ? '' : 'text-accent'">Próximo conteúdo:</p>
 
                     <h5
-                        class="text-h6 font-weight-light text-title-line"
+                        class="text-h5 font-weight-light text-title-line"
                         :class="appStore.isDarkMode ? '' : 'text-accent'"
                     >
-                        Unidade {{ appStore.nextUnidadeNumber }}: {{ appStore.nextUnidadeTitle }}
+                        {{ appStore.nextContent.title }}
                     </h5>
                 </div>
             </div>
 
             <v-btn
-                :disabled="appStore.currentSelectedObject.userRating == 0 &&  appStore.appData.firstAccess < 6"
-                density="comfortable"
-                class="bg-primary mx-8 text-secondary"
-                rounded
-                min-width="180px"
-                height="28px"
-                @click = "nextObject"
+            :disabled="appStore.currentSelectedObject.userRating == 0 &&  appStore.appData.firstAccess < 6"
+            density="comfortable"
+            class="bg-primary mx-8 text-secondary"
+            rounded
+            min-width="180px"
+            height="28px"
+            @click = "nextObject"
             >
-                Prosseguir
+
+            <span v-if="appStore.allFinished == false"> Prosseguir </span>
+            <span v-else> Concluir </span>
+
             </v-btn>
         </v-container>
     </v-bottom-navigation>        
@@ -93,6 +96,7 @@
     import WelcomeTooltip from './WelcomeTooltip'
     import RatingStars from "./RatingStars.vue";
 
+
     //Inicia a store
     const appStore = useAppStore();
 
@@ -102,7 +106,13 @@
     appStore.currentRoute = router.currentRoute.value.fullPath;
 
     const nextObject = () => {
-        useLoadNextObject(appStore.nextContent)
+
+        if (appStore.allFinished == false) {
+            useLoadNextObject(appStore.nextContent)
+        } else {
+            router.push('/home')
+        }
+
         appStore.isFinished = false
 
         //Finaliza etapa -> 5

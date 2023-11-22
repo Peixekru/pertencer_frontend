@@ -15,7 +15,8 @@
     appStore.appScroll > 40 || 
     appStore.currentRoute != '/home' && appStore.navigationStart ? 
     4 : 0 "
-    >
+     >
+     <!--dir="ltr" v-kbd-trap.roving.horizontal.escrefocus-->
         <v-row>
 
             <!--Left-->
@@ -24,9 +25,10 @@
             class="d-flex align-center ms-4 pa-0"
             cols="3" v-if=" !appStore.isMobile ">
                 <v-img
-                v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart"
+                v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart ||
+                appStore.appScroll > 40 && appStore.currentRoute  == '/home'"
                 class="ms-4 pa-0 animate__animated animate__fadeIn"
-                :class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-mono-svg' "
+                :class="appStore.isDarkMode ? 'white-svg' : appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
                 src="../assets/img/top-logo.svg"
                 max-width="200"
                 />
@@ -40,8 +42,10 @@
 
                     <div 
                     class="d-flex btn-top-grup mt-1" 
-                    :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 ? 'justify-start ms-12' : 'justify-start ms-3' "
-                    bg-opacity="0" >
+                    :class=" !appStore.isMobile ? 'justify-center' : appStore.welcomeStepCounter == 5 || appStore.welcomeStepCounter == 4 && appStore.isMobile
+                    ? 'justify-start ms-12' : 'justify-start ms-3' "
+                    bg-opacity="0" 
+                    >
 
                             <MobileBackBtns 
                             v-if="appStore.currentRoute != '/home' && appStore.isMobile"
@@ -56,6 +60,7 @@
                             >
                                 <v-btn variant="plain" v-ripple="false"/>
                             </v-img>
+
 
     
                             
@@ -119,7 +124,7 @@
                                                 min-width="84"
                                                 elevation="2" 
                                                 class="pa-2 mx-1 d-flex flex-column align-center"
-                                                @click="todo('Criar fluxo de Dúvida')"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-img
                                                     class="mb-2"
@@ -136,12 +141,12 @@
                                                 min-width="84"
                                                 elevation="2" 
                                                 class="pa-2 mx-1 d-flex flex-column align-center"
-                                                @click="todo('Criar fluxo do FAQ')"
                                                 >
                                                     <v-img   
                                                     :class="appStore.isDarkMode ? 'white-svg' : '' "
                                                     src="../assets/img/quest-top-btn-icon02.svg"
                                                     width="38"
+                                                    style="opacity: .5;"
                                                     /> 
                                                     
                                                     <p class="text-center text-caption text-medium-emphasis mb-1 btn-txt-line">
@@ -153,7 +158,7 @@
                                                 min-width="84"
                                                 elevation="2" 
                                                 class="pa-2 mx-1 d-flex flex-column align-center"
-                                                @click="todo('Criar fluxo de Contato')"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-img
                                                     :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -260,7 +265,7 @@
     <v-sheet 
     class="pa-0" 
     :class="appStore.isMobile ? 'custom-container-02-mobile' : 'custom-container-02'"
-    v-if="appStore.welcomeStepCounter == 5"
+    v-if="appStore.welcomeStepCounter == 5 || appStore.welcomeStepCounter == 4 && appStore.isMobile"
     >
         <WelcomeTooltip 
         :class="appStore.isMobile ? 'custom-tooltip-02-pos-mobile' : 'custom-tooltip-02-pos'"
@@ -349,6 +354,9 @@
     }
     .mouse-click{
         cursor: pointer;
+    }
+    .button:focus {
+        border: 2px solid #666;
     }
     .custom-card{
         transform: translateX(-50%);

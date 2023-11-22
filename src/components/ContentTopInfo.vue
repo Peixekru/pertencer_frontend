@@ -15,13 +15,15 @@
                         {{ appStore.currentUnidadeTitle }}
                     </h5>
                     <p class="text-caption">
-                        {{ appStore.currentContent.lessonsTitle }} / 
+                       <!-- {{ appStore.currentContent.lessonsTitle }} / -->
                         {{ appStore.currentContentTitle }}
                     </p>
                 </div>
             </v-container>
             
         </v-col> 
+
+        <!--
 
         <v-col cols="12" lg="5" md="12">
             <v-container 
@@ -40,11 +42,12 @@
                 color="white"
                 size="16"
                 class="ms-2 star-size"
-                readonly="true"
+                readonly
 
                 />
             </v-container>
         </v-col>
+        -->
 
     </v-row>
 

@@ -1,5 +1,4 @@
 <template>
-
 	<template v-if="appStore.appData != 'undefined'">
 		<v-app class="cursor-preview">
 			
@@ -18,11 +17,17 @@
 			<GlobalMsg />
 
 			<template v-if="appStore.currentRoute != '/'">
+
 				<!--Modal da cápsula do tempo-->
 				<CapsulaModal :key="appStore.capsulaModalKey"/>
 
 				<!--Modal da galeria de imagens-->
 				<GalleryModal />
+
+				<!--Modal Começando bem -->
+				<StartModal  />
+				
+				<WorkplaceModal />
 
 				<!--Modal vídeo de introdução-->
 				<WelcomeVideoModal />
@@ -33,7 +38,7 @@
 				appStore.welcomeStepCounter >= 4 || 
 				appStore.appData.firstAccess >= 5 
 				">
-					<TopBar />
+					<TopBar ref="trapRef"/>
 				</template>
 				
 				<template 
@@ -108,29 +113,38 @@
 	import { useAppStore } from '@/store/app'
 	import { useTheme } from "vuetify"
     import { useContrastSelect, useColorSelect } from "@/components/composables/useSystemStyle"
-	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'
+	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'	
 	import TopBar from '@/components/TopBar'
 	import FloatMenu from '@/components/FloatMenu'
 	import FooterBar from '@/components/FooterBar'
 	import CapsulaModal from '@/components/CapsulaModal'
 	import GalleryModal from '@/components/GalleryModal'
+	import StartModal from '@/components/StartModal'
+	import WorkplaceModal from '@/components/WorkplaceModal'
 	import WelcomeVideoModal from '@/components/WelcomeVideoModal'
 	import GlobalMsg from '@/components/GlobalMsg'
 	import WelcomeTooltip from '@/components/WelcomeTooltip'
-	import WelcomeModalFx from '@/components/WelcomeModalFx.vue';
+	import WelcomeModalFx from '@/components/WelcomeModalFx.vue'
 	import CustomCursor from '@/components/CustomCursor'
+
+
 
 	const appStore = useAppStore()
 	const router = useRouter()
-    const theme = useTheme();
+    const theme = useTheme()
+
 
 	//Se não estiver logado Volta para LoginView
 	if (!JSON.parse(sessionStorage.getItem('loginState'))){
             router.push('/')
         }
 
+		
+	
 
 	onMounted(() => {
+
+
 		//Armazena valors iniciais do tamanho da tela, #App e posição do scroll
 		useScreenMonitor()
 
@@ -145,7 +159,6 @@
 			//Aplica o thema 
 			theme.global.name.value = useContrastSelect(appStore.appData.access.contrast, appStore.appData.access.color == 0)
 			theme.global.name.value = useColorSelect(appStore.appData.access.color, theme.global.current.value.dark)
-			//console.log(useSystemColors(appStore.appData.access.contrast))
 			//theme.global.name.value = appStore.appData.colorTheme
 			appStore.isDarkMode = theme.global.current.value.dark
 		} 
@@ -174,6 +187,8 @@
 	//{
 	//font-size: 1em !important;
 	//}
+	
+
 
 
 </style>

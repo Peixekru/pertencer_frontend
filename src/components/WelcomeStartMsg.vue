@@ -37,10 +37,9 @@
         elevation="8"
         >
             <v-card-text>
-                Olá, eu sou o XXX e estou por aqui para ser seu guia e te ajudar
-                nessa jornada. Lorem ipsum dolor sit am et, consetetur sadipscing
-                elitr, sed diam nonumy eirm od tem por invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua.
+                Olá! Serei o seu guia nesta plataforma. Estou aqui para informar, facilitar e garantir uma experiência incrível para você.
+                Pronto para começar? Clique em “Iniciar Jornada" e aproveite ao máximo tudo o que preparamos para seu primeiro momento 
+                de aprendiado conosc o.
             </v-card-text>
 
             <v-container

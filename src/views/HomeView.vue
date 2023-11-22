@@ -7,8 +7,8 @@
         <!--Vídeo de background-->
         <div 
         :class="appStore.isDarkMode ? 
-        appStore.appData.access.color == 0 ? 'video-overlay' : 'video-overlay grayscale-filter' : 
-        appStore.appData.access.color == 0 ? 'background-video' : 'background-video grayscale-filter'"
+        appStore.appData.access.color == '0' ? 'video-overlay' : 'video-overlay grayscale-filter' : 
+        appStore.appData.access.color == '0' ? 'video-overlay-clean' : 'video-overlay-clean grayscale-filter'"
         >
             <video 
             id="bg-video" 
@@ -40,12 +40,11 @@
                     <div class="mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s">
 
                             <v-img
-                            min-width="200"
-                            max-width="360"
+                            max-width="380"
                             src="../assets/img/logo-home-type.svg"
                             /> 
                             
-                            <p style="color:white !important;" class="text-h6 font-weight-light text-medium-emphasis mt-4">
+                            <p style="color:white !important;" class="text-h6 font-weight-light text-medium-emphasis pt-6">
                                 PROGRAMA DE INTEGRAÇÃO E SOCIALIZAÇÃO DA PESSOA COLABORADORA
                             </p>
 
@@ -91,6 +90,7 @@
                         class="mt-16"
                         />
 
+
                     <div class="spacer" />
 
                 </v-container> 
@@ -120,7 +120,11 @@
     import { useProgressCalc } from '@/components/composables/useProgress'
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
-	import WelcomeModalFx from '@/components/WelcomeModalFx.vue';
+	import WelcomeModalFx from '@/components/WelcomeModalFx.vue'
+
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
+
 
     const appStore = useAppStore() 
     const router = useRouter()
@@ -132,6 +136,7 @@
     return  new URL(`../assets/img/unidade-card-${index}.png`, import.meta.url).href
     //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
     } 
+    
 
     onMounted( () => {
 
@@ -161,9 +166,15 @@
         }
         
         console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
+
+
+        useBeepSound()
+
     })
+
     
 </script>
+
 
 
 <style lang="scss" scoped>

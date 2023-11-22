@@ -23,9 +23,11 @@
         fluid
         class="animate__animated animate__fadeInUp"
         >
+
+        
             <div class="vimeo-container">
                 <iframe
-                src="https://player.vimeo.com/video/372349574?h=1abc33ff76&color=ebf490&title=0&byline=0&portrait=0&autoplay=1" 
+                src="https://player.vimeo.com/video/885690955?h=ac5bc51c9c&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479&autoplay=1" 
                 frameborder="0" 
                 allow="autoplay; fullscreen; picture-in-picture" 
                 class="vimeo-player"
@@ -33,6 +35,7 @@
             </div>
 
             <!--Btn Pular Vídeo-->
+            <!--
             <v-container 
             class="d-flex justify-center">
                 <v-btn 
@@ -43,6 +46,7 @@
                     Pular o vídeo
                 </v-btn>
             </v-container>
+            -->
 
         </v-container>
     </v-container>
@@ -83,6 +87,39 @@ import { onMounted } from 'vue';
         
         router.push('/home')
     }
+    
+    function initVimeoEventListeners() {
+      const vimeoIframes = document.querySelectorAll('iframe[src*="player.vimeo.com"]');
+      
+      vimeoIframes.forEach(iframe => {
+        const player = new Vimeo.Player(iframe);
+        
+        player.on('ended', function() {
+          console.log('Video Ended!');
+          goNext();
+        });
+      });
+    }
+
+    function loadScript(url, callback) {
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = url;
+
+      if (callback) {
+        script.onload = callback;
+      }
+
+      document.head.appendChild(script);
+    }
+
+    loadScript(
+      'https://player.vimeo.com/api/player.js',
+      function() {
+        initVimeoEventListeners();
+        console.log('Loaded Vimeo Player API');
+      }
+    );
     
 </script>
 

@@ -53,10 +53,17 @@ export const useAppStore = defineStore('app', {
 		///
 		capsulaModal: false,
 		///
+		startModal: false,
+		///
+		workplaceModal: false,
+		///
 		galleryModal: false,
 		isZoomImg: false,
 		selectedGallery: null,
 		selectedImg: null,
+
+
+		selectedItem: 0,
 		
 
 		//////////////////

@@ -98,6 +98,7 @@
                                                 true-value = true
                                                 false-value = false
                                                 class="switch-position"
+                                                disabled
                                                 />
 
                                             <v-sheet 
@@ -118,6 +119,7 @@
                                                 true-value = true
                                                 false-value = false
                                                 class="switch-position"
+                                                disabled
                                                 />
 
                                             <v-sheet 
@@ -198,6 +200,7 @@
                                                 true-value = true
                                                 false-value = false
                                                 class="switch-position"
+                                                disabled
                                                 />
 
                                             <v-sheet 
@@ -245,7 +248,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.fontSize == 0 ? 'bg-primary' : '' "
-                                                @click="appStore.fontSize = 0"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-font" 
@@ -261,7 +264,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.fontSize == 1 ? 'bg-primary' : '' "
-                                                @click="appStore.fontSize = 1"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-font"
@@ -276,7 +279,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg"
                                                 :class="appStore.fontSize == 2 ? 'bg-primary' : '' "
-                                                @click="appStore.fontSize = 2"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-font" 
@@ -358,7 +361,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.lineSize == 0 ? 'bg-primary' : '' "
-                                                @click="appStore.lineSize = 0"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-line-spacing" 
@@ -374,7 +377,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.lineSize == 1 ? 'bg-primary' : '' "
-                                                @click="appStore.lineSize = 1"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-line-spacing"
@@ -389,7 +392,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg"
                                                 :class="appStore.lineSize == 2 ? 'bg-primary' : '' "
-                                                @click="appStore.lineSize = 2"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-format-line-spacing" 
@@ -471,7 +474,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.zoomSize == 0 ? 'bg-primary' : '' "
-                                                @click="appStore.zoomSize = 0"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-file-document-outline" 
@@ -487,7 +490,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg me-3"
                                                 :class="appStore.zoomSize == 1 ? 'bg-primary' : '' "
-                                                @click="appStore.zoomSize = 1"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-file-document-outline"
@@ -502,7 +505,7 @@
                                                 elevation="4" 
                                                 class="d-flex justify-center align-center rounded-lg"
                                                 :class="appStore.zoomSize == 2 ? 'bg-primary' : '' "
-                                                @click="appStore.zoomSize = 2"
+                                                style="opacity: .5;"
                                                 >
                                                     <v-icon 
                                                     icon="mdi-file-document-outline" 
@@ -607,6 +610,7 @@
                                 :color="appStore.leitorTexto ? 'primary text-secondary' : ''"
                                 class="text-none text-medium-emphasis rounded-lg py-0 px-1 me-3"
                                 @click="leitorTexto()"
+                                disabled
                                 >
                                     <p 
                                     class="text-caption text-high-emphasis btn-line-height"
@@ -631,6 +635,7 @@
                                 :color="appStore.navTeclado ? 'primary text-secondary' : ''"
                                 class="text-none text-medium-emphasis rounded-lg py-0 px-1 me-3"
                                 @click="navTeclado()"
+                                disabled
                                 >
                                     <p 
                                     class="text-caption text-high-emphasis btn-line-height"
@@ -655,6 +660,7 @@
                                 :color="appStore.linkMarker ? 'primary text-secondary' : ''"
                                 class="text-none text-medium-emphasis rounded-lg py-0 px-1 me-3"
                                 @click="linkMarker()"
+                                disabled
                                 >
                                     <p 
                                     class="text-caption text-high-emphasis btn-line-height"
@@ -701,6 +707,7 @@
                                 :color="appStore.contentFocus ? 'primary text-secondary' : ''"
                                 class="text-none text-medium-emphasis rounded-lg py-0 px-1 me-3"
                                 @click="contentFocus()"
+                                disabled
                                 >
                                     <p 
                                     class="text-caption text-high-emphasis btn-line-height"
@@ -725,6 +732,7 @@
                                 :color="appStore.contentGuid ? 'primary text-secondary' : ''"
                                 class="text-none text-medium-emphasis rounded-lg py-0 px-1 me-3"
                                 @click="contentGuid()"
+                                disabled
                                 >
                                     <p 
                                     class="text-caption text-high-emphasis btn-line-height"
@@ -1001,6 +1009,8 @@ import { onMounted } from 'vue';
 
 
 
+
+
     //SAVE ALL
     const seveAccessProphile = () => {
         //Atualiza o localStorage
@@ -1019,7 +1029,6 @@ import { onMounted } from 'vue';
 
     
     onMounted(()=>{
-        console.log(document.querySelector("body"))
         document.querySelector("body").classList.add("cursor-test")
     })
     

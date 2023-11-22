@@ -24,6 +24,9 @@ export function useBlockStatus(obj) {
 
     //Testa se ainda existe navegação dentro do objeto { Carousel }
     if (appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons.length > objetoNum + 1){
+
+        appStore.allFinished = false;
+        
         //Desbloqueia o objeto seguinte
         appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons[objetoNum + 1].block = 1;
 
@@ -50,6 +53,9 @@ export function useBlockStatus(obj) {
     //Testa se ainda existe navegação dentro da unidade
     } else {
         if (appStore.appData.unidades[unidadeNum].content.length > conteudoNum + 1){
+
+            appStore.allFinished = false;
+
             //Desbloqueia o primeiro bojeto do carousel seguinte
             appStore.appData.unidades[unidadeNum].content[conteudoNum + 1].lessons[0].block = 1;
 
@@ -77,6 +83,9 @@ export function useBlockStatus(obj) {
         //Testa se ainda existe unidade no curso
         } else {
             if(appStore.appData.unidades.length > unidadeNum + 1) {
+
+                appStore.allFinished = false;
+
                 //Desbloqueia o primeiro bojeto da unidade seguinte
                 appStore.appData.unidades[unidadeNum + 1].content[0].lessons[0].block = 1;
 

@@ -13,9 +13,16 @@
 </template>
 
 <script setup>
+    import { onMounted } from "vue";
     import { useAppStore } from "../store/app"
     import { useRouter } from "vue-router"
     import ContentSkin from "@/components/ContentSkin.vue"
+
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
+    onMounted(() => {
+        useBeepSound()
+    })
 
 
     //Inicia a store

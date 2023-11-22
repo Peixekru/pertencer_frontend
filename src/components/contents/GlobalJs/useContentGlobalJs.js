@@ -6,9 +6,9 @@ export function useScrollMonitor(el) {
     if (window.scrollY >= scrollableHeight) {
         //Verifica se o Id do último elemnto está inteiro na tela
         try {
-            return useElementDetector(document.querySelector(el))
+            //return useElementDetector(document.querySelector(el))
         } catch (error) {
-            //console.log('Elemento ainda não está inteiro na tela');
+            console.log('Elemento ainda não está inteiro na tela');
         }
     }
 
@@ -18,6 +18,8 @@ export function useScrollMonitor(el) {
 
 //Retorna se um elemento está complatamente ou parcialmente (true / false) dentro da tela
 export function useElementDetector(el) {
+
+    
     
     //Retorna se um elemento está complatamente ou parcialmente (true / false) dentro da tela
 	const elementIsVisibleInViewport = (el, partiallyVisible = false) => {

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="436" height="436" viewBox="0 0 436 436">
+  <g id="Grupo_5535" data-name="Grupo 5535" transform="translate(-542 -1901)">
+    <g id="Grupo_5530" data-name="Grupo 5530">
+      <g id="Retângulo_2676" data-name="Retângulo 2676" transform="translate(978 2335) rotate(180)" fill="rgba(0,101,189,0.1)" stroke="#0065bd" stroke-width="7">
+        <path d="M76,0h94A169,169,0,0,1,339,169v94a76,76,0,0,1-76,76H169A169,169,0,0,1,0,170V76A76,76,0,0,1,76,0Z" stroke="none"/>
+        <path d="M76,3.5h94A165.5,165.5,0,0,1,335.5,169v94A72.5,72.5,0,0,1,263,335.5H169A165.5,165.5,0,0,1,3.5,170V76A72.5,72.5,0,0,1,76,3.5Z" fill="none"/>
+      </g>
+      <text id="Mitzvá" transform="translate(800 2157)" fill="#004f81" font-size="59" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="-100.861" y="0">Mitzvá</tspan></text>
+      <text id="BOAS_AÇÕES" data-name="BOAS AÇÕES" transform="translate(800 2197)" fill="#0065bd" font-size="26" font-family="Montserrat-Regular, Montserrat"><tspan x="-88.088" y="0">BOAS AÇÕES</tspan></text>
+      <path id="Retângulo_2679" data-name="Retângulo 2679" d="M5,0H17A15,15,0,0,1,32,15V27a5,5,0,0,1-5,5H15A15,15,0,0,1,0,17V5A5,5,0,0,1,5,0Z" transform="translate(579 2244)" fill="#0065bd"/>
+      <path id="Retângulo_2680" data-name="Retângulo 2680" d="M10,0H24A25,25,0,0,1,49,25V39A10,10,0,0,1,39,49H25A25,25,0,0,1,0,24V10A10,10,0,0,1,10,0Z" transform="translate(610 2286)" fill="#0065bd"/>
+    </g>
+    <rect id="Retângulo_3282" data-name="Retângulo 3282" width="436" height="436" transform="translate(542 1901)" fill="none"/>
+  </g>
+</svg>

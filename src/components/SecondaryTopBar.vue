@@ -4,7 +4,10 @@
     color="primary"
     height="100"
     >
-        <v-container fluid class="d-flex justify-start align-center ps-16 pe-0">
+        <v-container fluid 
+        class="d-flex justify-start align-center pe-0"
+        :class="appStore.isMobile ? 'ps-6' :  'ps-16' "
+        >
             <h1 
             class="text-h2 font-weight-bold"
             :class="appStore.isDarkMode ? 'text-white' : 'text-info'" 

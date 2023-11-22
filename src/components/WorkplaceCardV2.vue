@@ -38,7 +38,7 @@
                     density="comfortable"
                     rounded
                     class="bg-info letter-normal animate__animated animate__fadeInDown"
-    
+                    @click="appStore.workplaceModal = true"
                     >
                         ACESSAR
                     </v-btn>

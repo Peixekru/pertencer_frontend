@@ -23,9 +23,10 @@
             color="transparent"
             >
                 <v-img
-                :class="appStore.isDarkMode && appStore.isMobile  ?
-                'white-svg' : '' "
-                :src="appStore.isMobile ? getImgDark(index + 1) : getImg(index + 1)"
+                :src="
+                appStore.isMobile && appStore.welcomeStepCounter != 3  ? getImgDark(index + 1) : 
+                getImg(index + 1)"
+
                 :max-width="index == 0 || index == 3 ? 
                 32 : index == 2 ? 30 : 22"
                 />  
@@ -204,7 +205,8 @@
     }
 </script>
 
-<style scoped>
+<style  lang="scss" scoped>
+@import '../styles/main.scss';
     .side-position{
         position:fixed;
         top:50%;

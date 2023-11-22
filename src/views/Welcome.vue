@@ -30,15 +30,18 @@
             <!--Vídeo de background-->
             <div 
             :class="appStore.isDarkMode ? 
-            appStore.appData.access.color == 0 ? 'video-overlay' : 'video-overlay grayscale-filter' : 
-            appStore.appData.access.color == 0 ? 'background-video' : 'background-video grayscale-filter'"
+            appStore.appData.access.color == '0' ? 'video-overlay' : 'video-overlay grayscale-filter' : 
+            appStore.appData.access.color == '0' ? 'video-overlay-clean' : 'video-overlay-clean grayscale-filter'"
             >
                 <video 
                 id="bg-video" 
-                loop="true" autoplay="autoplay" controls muted poster="../assets/img/intro-video-cover.png">
+                autoplay loop muted poster="../assets/img/intro-video-cover.png">
                     <source v-if="!appStore.blockAnimation" src="../assets/img/intro-video.mp4" type="video/mp4">
                 </video>
             </div>
+
+    
+            
 
             <!--Welcome Msg-->
             <WelcomeStartMsg 

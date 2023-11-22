@@ -137,6 +137,7 @@
     .title-size{
         max-width: 180px;
         line-height: 120%;
+        
     }
     .desabled-card{
         opacity: .5;

@@ -45,12 +45,9 @@
             class="text-start text-subtitle-1 font-weight-light mb-5 mt-2 mx-4"
             >
                 <a>
-                Lorem ipsum dolor sit am et,
-                consetetur sadipscing elitr, sed
-                diam nonumy eirm od tem por
-                invidunt ut labore et dolore m agna
-                aliquyam erat, sed diam voluptua.
-                At vero eos et accusam et.
+                    Para garantir a segurança de sua conta, solicitamos que crie uma nova senha numérica de 
+                    seis caracteres. Insira a senha desejada no campo abaixo e repita-a para confirmação. 
+                    Agradecemos por sua colaboração.
                 </a>
             </v-sheet>
 

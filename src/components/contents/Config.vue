@@ -18,30 +18,6 @@
         appStore.currentObjectIndex[1] == '0' " 
         />
 
-        <U1C1 
-        v-if="
-        appStore.currentObjectIndex[0] == '1' &&
-        appStore.currentObjectIndex[1] == '1' " 
-        />
-
-        <U1C2 
-        v-if="
-        appStore.currentObjectIndex[0] == '1' &&
-        appStore.currentObjectIndex[1] == '2' " 
-        />
-
-        <U1C3 
-        v-if="
-        appStore.currentObjectIndex[0] == '1' &&
-        appStore.currentObjectIndex[1] == '3' " 
-        />
-
-        <U1C4 
-        v-if="
-        appStore.currentObjectIndex[0] == '1' &&
-        appStore.currentObjectIndex[1] == '4' " 
-        />
-
         <!--//* Unidade 3 -->
         <U2C0 
         v-if="
@@ -66,14 +42,10 @@
     const appStore = useAppStore()
 
     //Importação das unidades
-    import U0C0 from "./U0C0.vue"
-    import U1C0 from "./U1C0.vue"
-    import U1C1 from "./U1C1.vue"
-    import U1C2 from "./U1C2.vue"
-    import U1C3 from "./U1C3.vue"
-    import U1C4 from "./U1C4.vue"
-    import U2C0 from "./U2C0.vue"
-    import U3C0 from "./U3C0.vue"
+    import U0C0 from "./U0.vue"
+    import U1C0 from "./U1.vue"
+    import U2C0 from "./U2.vue"
+    import U3C0 from "./U3.vue"
 
 </script>
 

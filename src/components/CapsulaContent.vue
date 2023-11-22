@@ -31,8 +31,9 @@
         <v-container fluid>
                 
             <p>
-                Lorem ipsum dolor sit am et, consetetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.
+                Utilize a Cápsula do Tempo para enviar uma mensagem para seu "eu" do futuro. 
+                Compartilhe suas expectativas, metas e sonhos aqui dentro do Einstein. Insira seu e-mail, e daqui a um ano, 
+                reviva suas palavras. Não se preocupe. Só você receberá a mensagem. O futuro começa agora.
             </p>
 
 
@@ -68,7 +69,7 @@
                         <!--Box text-->
                         <textarea
                         v-model="msg"
-                        class="px-6 py-4 rounded-lg text-medium-emphasis text-caption"
+                        class="px-6 py-4 rounded-lg text-medium-emphasis"
                         >{{msg}}</textarea>
 
                     </v-container>
@@ -325,10 +326,6 @@
         //Inicia a cápsula 
         appStore.appData.capsula.status = 1
 
-        //! INICIA A GALERIA (REVER)
-        appStore.appData.galeria.status = 1
-
-
         //Modifica a mensagem
         appStore.appData.capsula.content.sendMessage = msg.value
         //Modifica a data de gravação para a data atual
@@ -352,11 +349,6 @@
         appStore.finishedContent(true)
         //Lebera conteúdo seguinte e modifica o status do corrente para concluido
         useStartProgress();
-
-
-        //! INICIA A GALERIA (REVER)
-        appStore.galleryCardKey += 1
-
 
         //Atualiza o card da cápsula na home
         appStore.capsulaCardKey += 1

@@ -75,8 +75,9 @@
                     />  
                     
                     <p>
-                        Lorem ipsum dolor sit am et, consetetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore
-                        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.
+                        Utilize a Cápsula do Tempo para enviar uma mensagem para seu "eu" do futuro. 
+                        Compartilhe suas expectativas, metas e sonhos aqui dentro do Einstein. Insira seu e-mail, e daqui a um ano, 
+                        reviva suas palavras. Não se preocupe. Só você receberá a mensagem. O futuro começa agora.
                     </p>
                 </v-container>
 
@@ -115,7 +116,7 @@
                                 <!--Box text-->
                                 <textarea
                                 v-model="msg"
-                                class="px-6 py-4 rounded-lg text-medium-emphasis text-caption"
+                                class="px-6 py-4 rounded-lg text-medium-emphasis "
                                 >{{msg}}</textarea>
 
                             </v-container>

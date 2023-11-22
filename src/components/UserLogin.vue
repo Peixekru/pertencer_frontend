@@ -11,7 +11,7 @@
     <v-img
         class="mx-auto my-8"
         :class="appStore.isDarkMode ? 'white-svg' : '' "
-        max-width="250"
+        max-width="220"
         src="../assets/img/login-top-logo.svg"
     ></v-img>
 
@@ -50,7 +50,7 @@
         size="large"
         rounded
         @click="user != '' && user.length == 11 && password != ''? 
-        submmitUser() : appStore.globalMsg('Oops! Login ou senha incorretos. ', 'error')"
+        submmitUser() : appStore.globalMsg('Oops! Seu login precisa ter 11 caracteres', 'error')"
         >
         Entrar
         </v-btn>
@@ -98,21 +98,16 @@
     //Limpa informações do usuário persistentes
     localStorage.removeItem("userInfos");
 
+
+
     //Envia os dados para validação de login
     const submmitUser = () => {
         authStore.useLogin(
             // path / { user, password }
-            '/login', {"user": user.value, "password": password.value}
+            {"username": user.value, "password": password.value }
         )
     }
-
-    //Debug tool
-    const teste = (msg) => {
-        alert(msg)
-    }
-
     onMounted(() => {
-        localStorage.removeItem('userToken')
         appStore.logginStatus = false
     })
 
