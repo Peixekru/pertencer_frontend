@@ -6,6 +6,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_voluntariado/header.png" />
+		<v-img class="show_1277" src="./img/tela_voluntariado/header.png"/>
 		<v-img class="show_mobile" src="./img/tela_voluntariado/header_mob.png" />
 		<v-img src="./img/tela_voluntariado/header_text.svg" class="header_text"
 			title="VOLUNTARIADO EINSTEIN. Uma história de amor. A história do voluntariado Einstein se baseia na força e na persistência de um grupo de pessoas unidas pelo amor, dedicação e profissionalismo com o propósito de promover bem-estar e transformação social." />
@@ -283,8 +284,8 @@
 					</p>
 				</v-card-text>
 			</v-col>
-			<v-col cols="12" md="3">
-				<v-img class=" reveal fade-right" src="./img/tela_voluntariado/ilustra_eraumavez.svg" />
+			<v-col cols="12" md="3" aligh-self="center" align="center">
+				<v-img class="reveal fade-right ilus_era_uma_vez" src="./img/tela_voluntariado/ilustra_eraumavez.svg" />
 			</v-col>
 		</v-row>
 		<v-card class="box_dicas pl-0 pr-0 my-10  reveal fade-bottom">
@@ -293,8 +294,9 @@
 				abaixo.
 			</v-card-text>
 		</v-card>
+		
 		<v-card elevation="3" width="100%" class="mx-auto rounded-lg reveal fade-bottom">
-			<v-timeline class="timeline_carroussel" direction="horizontal">
+			<!--<v-timeline class="timeline_carroussel" direction="horizontal">
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -380,7 +382,7 @@
 					</template>
 				</v-timeline-item>
 
-			</v-timeline>
+			</v-timeline>-->
 			<v-carousel show-arrows="hover" hide-delimiters color="primary" :continuous="false">
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
@@ -710,9 +712,9 @@
 		
 		<v-row class="">
 			<v-col cols="12" md="12">
-				<v-img 
-				height="400"
-				src="./img/tela_voluntariado/img_nossa_marca.png" />
+				<v-img class="show_desktop" height="430" src="./img/tela_voluntariado/img_nossa_marca.png" />
+				<v-img class="show_1277" height="300" src="./img/tela_voluntariado/img_nossa_marca.png" />
+				<v-img class="show_mobile" height="200" src="./img/tela_voluntariado/img_nossa_marca.png" />
 			</v-col>
 		</v-row>
 		
@@ -1300,7 +1302,7 @@
 	v-show="isContent11Visible"
 	id="content11" 
 	width="100%"
-	class="mt-n4 mx-auto rounded-lg pt-0 footer pb-10"
+	class="mt-n4 mx-auto rounded-lg pt-0 footer"
 	style="z-index:1; background-color: #dc7689;"  
 	>
 
@@ -1645,7 +1647,7 @@
 	background-size: cover;
 	padding-left: 6% !important;
 	padding-right: 6% !important;
-	margin-bottom: 130px;
+	margin-bottom: 30px;
 }
 
 .footericons {
@@ -1669,4 +1671,20 @@
 	/* background: rgb(var(--v-theme-on-surface)); */
 	border: 2px solid #62C9CE !important;
 }
+@media screen and (max-width: 1277px){
+	.ilus_era_uma_vez{
+	width:90%;
+	}
+	}
+	@media screen and (max-width: 960px){
+	.ilus_era_uma_vez{
+	width:60%;
+	}
+	}
+@media screen and (max-width: 768px){
+	.ilus_era_uma_vez{
+	width:50%;
+	}
+	}
+
 </style>

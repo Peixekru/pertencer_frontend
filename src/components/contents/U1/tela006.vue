@@ -7,8 +7,8 @@
     elevation = "6"
     >
 		<v-img class="show_desktop" src="./img/tela_estrutura/header.png"/>
+		<v-img class="show_1277" src="./img/tela_estrutura/header.png"/>
 		<v-img class="show_mobile" src="./img/tela_estrutura/header_mobile.png"/>
-	
 		<v-img src="./img/tela_estrutura/header_text.svg" class="header_text" title="O EINSTEIN. NOSSA ESTRUTURA E CONQUISTAS."/>
 
 	</v-card>

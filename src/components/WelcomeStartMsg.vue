@@ -39,7 +39,7 @@
             <v-card-text>
                 Olá! Serei o seu guia nesta plataforma. Estou aqui para informar, facilitar e garantir uma experiência incrível para você.
                 Pronto para começar? Clique em “Iniciar Jornada" e aproveite ao máximo tudo o que preparamos para seu primeiro momento 
-                de aprendiado conosc o.
+                de aprendizado conosco.
             </v-card-text>
 
             <v-container

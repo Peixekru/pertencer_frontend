@@ -2,65 +2,66 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "5Z0zVsj6rdF":
+      case "65vPCBrzVAb":
         Script1();
         break;
-      case "6ZMPz3pDfQj":
+      case "6QTPneDNvf6":
         Script2();
         break;
-      case "6372Nj8nug4":
+      case "5xlPBsM2aud":
         Script3();
         break;
-      case "6lvWhGYS6wX":
+      case "6VOZYv5KVGk":
         Script4();
         break;
-      case "5qy1wp9Szrq":
+      case "6SeuONc8Pn5":
         Script5();
         break;
-      case "5wZiDUy2Zz1":
+      case "6gb8NjEoh9e":
         Script6();
         break;
   }
 }
 
-//Encurtador de path
-function path(element) {
-  return parent.parent.document.querySelector(`#${element}`);
-}
-
 function Script1()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 
 function Script2()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 
 function Script3()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 
 function Script4()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 
 function Script5()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 
 function Script6()
 {
-  let iFrameAction1 = path("iframeId1");
-  iFrameAction1.click();
+  //let iFrameAction1 = path("iframeId1");
+//  iFrameAction1.click();
+parent.parent.document.querySelector("#iframeId1").click();
 }
 

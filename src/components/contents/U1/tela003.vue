@@ -2,6 +2,7 @@
 	<!-- header AMIGOH -->
 	<v-card class="card_header mx-auto rounded-lg pa-6" width="100%" elevation="6">
 		<v-img class="show_desktop" src="./img/tela_amigoh/header.png" />
+		<v-img class="show_1277" src="./img/tela_amigoh/header.png"/>
 		<v-img class="show_mobile" src="./img/tela_amigoh/header_mob.png" />
 
 		<v-img src="./img/tela_amigoh/header_text.svg" class="header_text"
@@ -160,7 +161,7 @@
 			</v-col>
 
 			<v-col cols="12" md="12">
-				<v-card class="reveal fade-bottom box_cont2">
+				<v-card class="reveal fade-bottom box_cont2 pa-4 mt-n2 mb-4">
 					<p>Equação fundamental do AmigoH: Criatividade + tempo de dedicação = participação com prazer</p>
 				</v-card>
 
@@ -423,14 +424,17 @@
 					</v-sheet>
 				</v-card>
 			</v-col>
+		<v-col>	
+
+		</v-col>
 
 		</v-row>
 
 		<!-- cards frente e verso  -->
 
-		<v-card class=" reveal fade-bottom box_cont2_cards mt-8">
-			<p>Veja mais detalhes sobre esses e outros projetos em <a style="color:white"
-					href="https://amigoh.com.br/portfolio-de-projetos/"> https://amigoh.com.br/portfolio-de-projetos/. </a>
+		<v-card class="reveal fade-bottom box_cont2_cards mt-8">
+			<p>
+			<a style="color:white;text-decoration:none" href="https://amigoh.com.br/portfolio-de-projetos/"><strong>Clique aqui</strong></a> e veja mais detalhes sobre esses e outros projetos.
 			</p>
 		</v-card>
 
@@ -498,7 +502,7 @@
 
 	<!-- conteúdo 06 -->
 	<v-card v-show="isContent06Visible" id="content06" width="100%" elevation="6"
-		class="mt-n4 mx-auto rounded-lg pt-0 footer2" style="z-index:0;margin-bottom:130px;">
+		class="mt-n4 mx-auto rounded-lg pt-0 footer2" style="z-index:0;margin-bottom:30px;">
 		<v-img class="mx-auto grade_header mt-4" src="./img/tela_amigoh/grade_branco.png" />
 
 		<v-container fill-height class="">
@@ -644,20 +648,11 @@ onMounted(() => {
 	text-align: center;
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
 	background-color: #E17000;
-	margin-top: 10px;
-	padding: 15px;
-}
-
-.text_cont2 h5 {}
-
-.text_cont2 h4 {
-	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 .box_cont2 p {
 	color: #ffffff !important;
-	font-size: 1.2rem !important;
+	font-size: 1rem !important;
 	line-height: 2rem;
 }
 
@@ -911,13 +906,21 @@ onMounted(() => {
 	padding-right: 6% !important;
 }
 
-.notebook {}
-
 .card-bg-img {
 	background-image: url("./img/tela_amigoh/card_fundo.png");
 	background-size: cover;
 }
+@media screen and (max-width: 1277px) {
+.text_cont2 {
+		width: 80%;
+		margin-top: 10px
+	}
 
+.box_cont2 p {
+	font-size: 0.8rem !important;
+	line-height: 1em;
+}
+}
 @media screen and (max-width: 768px) {
 	.fundo_cont2 {
 		max-width: 100%;
@@ -926,10 +929,19 @@ onMounted(() => {
 		background-repeat: no-repeat;
 		background-position: center;
 	}
+	
+	h1{
+	font-size:1.6em!important;
+	}
+	h2{
+	font-size:1.4em!important;
+	}
+	
+
 
 	.text_cont2 {
-		width: 60%;
-		margin-top: 10px
+		width: 80%;
+		margin-top: 70px
 	}
 
 	.text_cont2 h5 {
@@ -953,7 +965,7 @@ onMounted(() => {
 		text-align: center;
 		box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
 		background-color: #E17000;
-		margin-top: 10px;
+		margin-top: 30px!important;
 		padding: 15px;
 	}
 

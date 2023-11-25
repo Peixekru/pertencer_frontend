@@ -21,33 +21,30 @@
         :height="!appStore.isMobile ? 72 : 62"  
         class="d-flex align-end justify-center my-1 progress-bg-percent"
         :class="!appStore.isMobile ? '' : 'progress-bg-right-adjust-mobile' "
-        v-for=" (i, index) in 11" 
+        v-for=" (i, index) in 20" 
         :key="i"
         >
             <v-img  
             v-if="
-            appStore.appData.glogalProgress <= index * (10) &&
-            appStore.appData.glogalProgress >= (index * (10)) - 10 &&
-            appStore.appData.glogalProgress != 0 &&
-            appStore.appData.glogalProgress != 100
+            appStore.appData.glogalProgress >= index * 5
             "
-            :max-width=" 
-            index > 4 && index < 11? 
-            44 : 34"
-            :src="getImg(index - 1)"
+            max-width="46"
+            :src="getImg(index)"
+            style="margin-bottom: 4px;"
             class="animate__animated animate__fadeIn"
             :class="appStore.appData.access.color == 0 ? 'secondary-svg' : 'secondary-svg-mono' " 
             />
 
+<!--
             <v-img  
-            v-if="
-            appStore.appData.glogalProgress == 100
-            "
+            v-else
             max-width="44"
-            :src="getImg(10)"
+            :src="getImg(20)"
             class="animate__animated animate__fadeIn"
             :class="appStore.appData.access.color == 0 ? 'secondary-svg' : 'secondary-svg-mono' " 
             />
+            -->
+            
         </v-sheet>
 
         <div class="d-flex align-center justify-center drop-deform">

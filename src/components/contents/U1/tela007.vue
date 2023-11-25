@@ -17,33 +17,34 @@
 	//Imports
 	import { onMounted } from "vue"
 	import { useAppStore } from '../../../store/app'
+	import { useApiStore } from '../../../store/api'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
 
+	//Inicia api de comunicação com db
+	const apiStore = useApiStore();
+
 	//Finaliza o conteúdo e atualiza progresso
 	const finishedContent = () => {
 		appStore.finishedContent(true)
 		useStartProgress()
+
+		//libera o Relógio no menu lateral
+		appStore.appData.badges.clock = 1
+
+		//Atualiza o localStorage
+		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+		//Atualiza backend
+		const userId = JSON.parse(localStorage.getItem('userId'));
+		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 	}
 
     onMounted(() => {
 		//Finaliza o conteúdo pelo Storylyne
 		document.getElementById ("iframeId1").addEventListener ("click", finishedContent, false)
-
-
-		//Remove os dados do StoryLine do LocalStorage
-		localStorage.removeItem('5vL5Kys7oNn');
-
-		//libera o "Workplace" 
-        appStore.appData.workplace.status = 1
-		//atualiza o componente "Workplace na home"
-        appStore.workPlaceCardKey += 1
-		//Atualiza o localStorage
-        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
-
-
     })
 
 </script> 

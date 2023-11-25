@@ -7,6 +7,7 @@
 	style="z-index:21;"
 	>
 		<v-img class="show_desktop" src="./img/tela_ensino/header.png" />
+		<v-img class="show_1277" src="./img/tela_ensino/header.png" />
 		<v-img class="show_mobile" src="./img/tela_ensino/header_mob.png" />
 		<v-img src="./img/tela_ensino/header_text.svg" class="header_text"
 			title="ENSINO CORPORATIVO E DESENVOLVIMENTO" />
@@ -711,8 +712,58 @@
 
 		<v-card-text style="background-color:white">
 		  <v-window v-model="tab" bg-color="white">
-			<v-window-item value="one">
-			  <v-row class="pa-10">
+			<v-window-item value="one" class="pa-8">
+			  <p>
+				O Programa de Incentivo Educacional é uma iniciativa Einstein que tem como propósito estimular os colaboradores a aprimorarem a sua formação profissional. O Einstein oferece bolsas para os cursos Técnicos, de Graduação, de Pós-graduação e de Mestrado.
+				</p>
+			</v-window-item>
+				
+				
+
+			<v-window-item value="two" class="pa-8">
+			 <p>
+			 Os principais objetivos são:
+				</p>
+				<ul class="ml-8 mt-4">
+					<li>Desenvolver e capacitar os colaboradores da SBIBAE atrelados às estratégias de investimento em Educação de cada Diretoria.</li>
+					<li>Valorizar e reconhecer os colaboradores com melhores desempenhos.</li>
+					<li>Criar oportunidades de crescimento e desenvolvimento de carreira.</li>
+					<li>Propiciar a fidelização e retenção de profissionais.</li>
+					<li>Suprir a escassez de mão de obra com foco nas necessidades atuais e futuras da Sociedade.</li>
+				</ul>
+
+			</v-window-item>
+
+			<v-window-item value="three" class="pa-8">
+			  	<p>
+			  		Os cursos podem ser realizados tanto na Faculdade do Einstein como em outras faculdades. É preciso, porém, observar alguns critérios para poder participar do incentivo:
+				</p>
+				<ul class="ml-8 mt-4">
+					<li>Ser colaborador com registro CLT - Aprendiz e estagiário não são elegíveis</li>
+					<li>Ter obtido no mínimo AT na última avaliação de competências</li>
+					<li>Não possuir advertência ou suspensão nos últimos 12 meses</li>
+					<li>Tempo de instituição:</li>
+						<ul class="ml-8">
+							<li>Para curso técnico, graduação, pós-graduação e mestrado: mínimo 6 meses</li>
+							<li>Para cursos de pós-graduação na Faculdade Einstein: mínimo 3 meses</li>
+						</ul>
+					</ul>
+				
+
+
+
+
+
+
+
+
+
+     
+	 
+			</v-window-item>
+			
+			<v-window-item value="four">
+			 <v-row class="pa-10">
 					<v-col cols="12" md="6">
 						<p>
 							<strong>Curso Técnico:</strong>
@@ -807,18 +858,6 @@
 				
 				
 
-			</v-window-item>
-
-			<v-window-item value="two">
-			  Two
-			</v-window-item>
-
-			<v-window-item value="three">
-			  Three
-			</v-window-item>
-			
-			<v-window-item value="four">
-			  Three
 			</v-window-item>
 		  </v-window>
 		</v-card-text>

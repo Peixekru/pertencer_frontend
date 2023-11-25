@@ -1,6 +1,6 @@
 <template>
 	<!--Exemplo iFrame aplicado-->
-	<div class="container-iframe">
+	<div class="container-iframe-w-footer">
 		<iframe 
 			id="iframeId1"
 			src="/U2_iTela005/story.html"
@@ -26,15 +26,22 @@
 	const finishedContent = () => {
 		appStore.finishedContent(true)
 		useStartProgress()
+
+		//libera o Coração no menu lateral
+		appStore.appData.badges.heart = 1
+
+		//Atualiza o localStorage
+		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+		//Atualiza backend
+		const userId = JSON.parse(localStorage.getItem('userId'));
+		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
 	}
 
     onMounted(() => {
-		//Remove os dados do StoryLine do LocalStorage
-		localStorage.removeItem('5p8DIs8PoXk');
-
 		//Finaliza o conteúdo pelo Storylyne
 		document.getElementById ("iframeId1").addEventListener ("click", finishedContent, false)
-
     })
 
 </script> 

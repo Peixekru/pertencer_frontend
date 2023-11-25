@@ -181,4 +181,25 @@ a {
     cursor: auto !important;
 }
 
+.v-btn--icon.v-btn--density-default .custom-carousel{
+    width: 2px !important;
+}
 
+/*
+.v-btn--icon.v-btn--density-default {
+    width: calc(var(--v-btn-height) - 5 );
+    height: calc(var(--v-btn-height) - 5);
+}
+
+*/
+
+.v-carousel__progress {
+    height: 10px !important;
+}
+
+.v-window__controls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px !important;
+}

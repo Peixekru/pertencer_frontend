@@ -97,6 +97,9 @@
 
 	
 	/* telas de conteudo */
+	.verde-svg {
+		filter: invert(100%) sepia(87%) saturate(1708%) hue-rotate(85deg) brightness(101%) contrast(92%);
+	}
 	.col_card_trans_pri{
 	margin: 0px 4px 0px -12px;
 	}
@@ -154,6 +157,7 @@
 	padding:0!Important;
 	border-radius: 18px 18px 0px 0px!important;
 	z-index: 10;
+	background-color: #246496!important;
 	}
 	.header_text{
 	position: absolute;
@@ -243,9 +247,21 @@
 	.show_mobile{
 		display: none;
 		}
+	.show_1277{
+		display: none;
+		}
 	@media screen and (max-width: 1277px){
 		.box_dicas{
 		width:70%!important;
+		}
+		.show_1277{
+		display: block;
+		}
+		.show_mobile{
+		display: none;
+		}
+		.show_desktop{
+		display: none;
 		}
 	}
 	@media screen and (max-width: 768px){
@@ -253,6 +269,9 @@
 		display: block;
 		}
 		.show_desktop{
+		display: none;
+		}
+		.show_1277{
 		display: none;
 		}
 		.v-card-conteudos{

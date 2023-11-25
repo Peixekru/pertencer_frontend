@@ -1,0 +1,626 @@
+<template>
+    <v-dialog v-model="appStore.debugModal" max-width="1100px">
+        
+        <v-card
+        color="transparent"
+        elevation="0"
+        class="mx-auto px-6"
+        >
+            <v-card
+            class="mx-auto my-8 text-center"
+            rounded = "lg"
+            max-width="344"
+            title="APAGAR"
+            subtitle="Apagar todos os dados do curso."
+            @click="cleanData"
+            >
+                <v-icon color="error" icon="mdi-alert-circle-outline" size="x-large" class="mb-4"/>
+            </v-card>
+        </v-card>
+
+    </v-dialog>
+</template>
+
+<script setup>
+
+    import { useAppStore } from '../store/app'
+    import { useApiStore } from '../store/api'
+    import { useRouter } from 'vue-router'
+
+    const appStore = useAppStore()
+    const apiStore = useApiStore()
+    const router = useRouter()
+
+    //JSON LIMPO
+    const cleanDataContent = {
+        "firstAccess": 0,
+        "welcomeStepCounter": 0,
+        "glogalProgress": 0,
+        "access": {
+            "baixaVisao": "0",
+            "habMotoras": "0",
+            "daltonismo": "0",
+            "epilepsia": "0",
+            "tdah": "0",
+            "dislexia": "0",
+            "fontSize": "1",
+            "lineSize": "1",
+            "zoomSize": "0",
+            "contrast": "0",
+            "color": "0",
+            "cursor": "0",
+            "textSpeech": "0",
+            "keyboardNavigation": "0",
+            "linkHighlight": "0",
+            "animationBlock": "0",
+            "readFocus": "0",
+            "readGuid": "0"
+        },
+        "colorTheme": "light",
+        "themeNumber": "0",
+        "unidades": [
+            {
+                "title": "Felizes por termos você",
+                "image": "https://i.ibb.co/VYjTRPT/card-img01.png",
+                "progress": 0,
+                "status": 0,
+                "content": [
+                    {
+                        "lessonsTitle": "",
+                        "lessons": [
+                            {
+                                "title": "Boas-vindas com Sidney Klajner",
+                                "icon": "video",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 1
+                            },
+                            {
+                                "title": "Cápsula do tempo",
+                                "icon": "capsula",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 2,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Um sonho que virou compromisso",
+                "image": "https://i.ibb.co/chYNqzG/card-img02.png",
+                "progress": 0,
+                "status": 0,
+                "content": [
+                    {
+                        "lessonsTitle": "",
+                        "lessons": [
+                            {
+                                "title": "Linha do Tempo - Nossa História",
+                                "icon": "slide",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Vídeo manifesto",
+                                "icon": "video",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Missão, Visão e Valores",
+                                "icon": "tree",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++03&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "AmigoH",
+                                "icon": "tree",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++04&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Voluntariado Einstein",
+                                "icon": "tree",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++04&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Presença Einstein",
+                                "icon": "tree",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++04&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Nossa estrutura e conquistas",
+                                "icon": "tree",
+                                "time": 4,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++04&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Relógio - Quiz game",
+                                "icon": "slide",
+                                "time": 2,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++04&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Meus Benefícios e Oportunidades",
+                "image": "https://i.ibb.co/rpkStYn/card-img03.png",
+                "progress": 0,
+                "status": 0,
+                "content": [
+                    {
+                        "lessonsTitle": "",
+                        "lessons": [
+                            {
+                                "title": "Benefícios",
+                                "icon": "slide",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Ações de Desenvolvimento",
+                                "icon": "tree",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Gestão de Desempenho",
+                                "icon": "slide",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Experiência do Colaborador",
+                                "icon": "slide",
+                                "time": 4,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Plano de Carreira e Oportunidades",
+                                "icon": "tree",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Coração - Jogo da Memória",
+                                "icon": "slide",
+                                "time": 4,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Jeito Einstein de ser",
+                "image": "https://i.ibb.co/FzCHSDg/card-img04.png",
+                "progress": 0,
+                "status": 0,
+                "content": [
+                    {
+                        "lessonsTitle": "",
+                        "lessons": [
+                            {
+                                "title": "Diversidade, Equidade e Inclusão",
+                                "icon": "video",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++01&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Qualidade e Segurança",
+                                "icon": "tree",
+                                "time": 4,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Ética e Compliance",
+                                "icon": "tree",
+                                "time": 3,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "Experiência do Paciente",
+                                "icon": "slide",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
+                                "title": "#Agora eu sou uma gotinha Einstein - Encerramento com Sidney Klajner",
+                                "icon": "video",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "capsula": {
+            "status": 0,
+            "content": {
+                "startDate": "",
+                "sendDate": "07/02/2024",
+                "email": "",
+                "style": 1,
+                "sendMessage": ""
+            }
+        },
+        "galeria": {
+            "status": 0,
+            "totalUsers": 233,
+            "content": {
+                "userImgs": [
+                    {
+                        "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhD3cqCQfweIVcDo7Gi1rlq2B56SIXzssmsFtj8H1qq44l3OmxedGLBykjExplh13STGk&usqp=CAU",
+                        "style": 1,
+                        "visible": "true"
+                    },
+                    {
+                        "path": "https://www.natcom.org/sites/default/files/styles/scale_w300/public/cm-current/2017_CommCurrents_Selfies_1.png?itok=DxNQHNoY",
+                        "style": 2,
+                        "visible": "true"
+                    },
+                    {
+                        "path": "https://assets.teenvogue.com/photos/561574b74d46a6396e4137f7/16:9/w_2560%2Cc_limit/trans-teen-lede.jpg",
+                        "style": 3,
+                        "visible": "true"
+                    },
+                    {
+                        "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi66wqP7R3KPwLVu_LpyzfifJ1swgJXHT_5A&usqp=CAU",
+                        "style": 4,
+                        "visible": "true"
+                    },
+                    {
+                        "path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIdFNWVE8Dzaj9kD44Vh5sflNS3wryWX2MWA&usqp=CAU",
+                        "style": 5,
+                        "visible": "true"
+                    },
+                    {
+                        "path": "https://cdn.thehollywoodgossip.com/uploads/2017/09/rain-brown-manic-monday-selfie.png",
+                        "style": 1,
+                        "visible": "true"
+                    }
+                ],
+                "globalImgs": [
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++01&font=montserrat",
+                        "style": 1,
+                        "userName": "Anderson garcia"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++02&font=montserrat",
+                        "style": 3,
+                        "userName": "Mariana Ramos"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++03&font=montserrat",
+                        "style": 2,
+                        "userName": "João Pedro"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++04&font=montserrat",
+                        "style": 4,
+                        "userName": "Fabiana Moura"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++05&font=montserrat",
+                        "style": 6,
+                        "userName": "Natália Vasconcellos"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++06&font=montserrat",
+                        "style": 5,
+                        "userName": "Pulo Lima"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++07&font=montserrat",
+                        "style": 3,
+                        "userName": "Lucas Barbosa"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++08&font=montserrat",
+                        "style": 1,
+                        "userName": "Janaina Gullar"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++09&font=montserrat",
+                        "style": 4,
+                        "userName": "Luana Bessa"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++10&font=montserrat",
+                        "style": 6,
+                        "userName": "Tiago Gonzalles"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++11&font=montserrat",
+                        "style": 2,
+                        "userName": "Robson Nunes"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++12&font=montserrat",
+                        "style": 1,
+                        "userName": "Gilberto Nonato"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++13&font=montserrat",
+                        "style": 4,
+                        "userName": "Tereza Lima"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++14&font=montserrat",
+                        "style": 2,
+                        "userName": "José Andrade"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++15&font=montserrat",
+                        "style": 3,
+                        "userName": "Fátima Silva"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++16&font=montserrat",
+                        "style": 6,
+                        "userName": "Alberto Farias"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++17&font=montserrat",
+                        "style": 2,
+                        "userName": "Fernado Pscoal"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++18&font=montserrat",
+                        "style": 3,
+                        "userName": "Andrey Lessa"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++19&font=montserrat",
+                        "style": 1,
+                        "userName": "Monica Satto"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++20&font=montserrat",
+                        "style": 3,
+                        "userName": "Olivier Tarrine"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++21&font=montserrat",
+                        "style": 4,
+                        "userName": "Hanna Santana"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++22&font=montserrat",
+                        "style": 3,
+                        "userName": "Flávia Lisboa"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++23&font=montserrat",
+                        "style": 5,
+                        "userName": "Aurélio Junior"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++24&font=montserrat",
+                        "style": 5,
+                        "userName": "Morcos Santos"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++25&font=montserrat",
+                        "style": 4,
+                        "userName": "Livia Borba"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++26&font=montserrat",
+                        "style": 3,
+                        "userName": "Adamastor Rezende"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++27&font=montserrat",
+                        "style": 2,
+                        "userName": "Luciano Gonsalves"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++28&font=montserrat",
+                        "style": 4,
+                        "userName": "Zélia de Melo"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++29&font=montserrat",
+                        "style": 5,
+                        "userName": "Frankllin Dutra"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++30&font=montserrat",
+                        "style": 6,
+                        "userName": "Aline Ribeiro"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++31&font=montserrat",
+                        "style": 1,
+                        "userName": "José Messias"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++32&font=montserrat",
+                        "style": 2,
+                        "userName": "Paula Amorim"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++33&font=montserrat",
+                        "style": 1,
+                        "userName": "Amanda de Souza"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++34&font=montserrat",
+                        "style": 4,
+                        "userName": "Luiz Gustavo"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++35&font=montserrat",
+                        "style": 5,
+                        "userName": "Marcella Ferreira"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++36&font=montserrat",
+                        "style": 6,
+                        "userName": "Francisco Ribeiro"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++37&font=montserrat",
+                        "style": 5,
+                        "userName": "Magno Louro"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++38&font=montserrat",
+                        "style": 4,
+                        "userName": "Atilla Souza"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++39&font=montserrat",
+                        "style": 1,
+                        "userName": "Ingrid Guimarães"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++40&font=montserrat",
+                        "style": 4,
+                        "userName": "Joana Lopes"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++41&font=montserrat",
+                        "style": 2,
+                        "userName": "Kelly Oliveira"
+                    },
+                    {
+                        "path": "https://placehold.co/600x400/fff/eaeaea?text=user++42&font=montserrat",
+                        "style": 5,
+                        "userName": "Otávio Caetano"
+                    }
+                ]
+            }
+        },
+        "start": {
+            "status": 0,
+            "content": []
+        },
+        "workplace": {
+            "status": 0,
+            "content": []
+        },
+        "badges": {
+            "capsula" : 0,
+            "clock" : 0,
+            "heart": 0,
+            "picture" : 0
+        }
+    }
+
+    const cleanData = () => {
+
+        console.log('foi')
+
+        //Fecha modal debug
+        appStore.debugModal = false
+
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(cleanDataContent));
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+        //Volta para página de login
+        router.push('/')
+
+    }
+
+</script>
+
+<style lang="scss" scoped>
+@import '../styles/main.scss';
+</style>
+
+

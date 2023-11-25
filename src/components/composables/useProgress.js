@@ -35,7 +35,7 @@ export function useProgressCalc(select, i) {
     if (select == 'progressNum') { return totalTrueItems.length }
     if (select == 'progressBar') { 
         //Caso a barra de progresso não esteja visível, compensa em 5%
-        if (progressPercent < 5){progressPercent = 5}
+      /*  if (progressPercent < 5){progressPercent = 5} */
         return progressPercent 
     }
 
@@ -59,9 +59,9 @@ export function useStartProgress(){
     // calculo progresso do curso (Gota) 
     const totalProgress = (progressNum * 100) / total
 
-    if (totalProgress <= 30 ) {appStore.appData.glogalProgress = 30} else{
+    //if (totalProgress <= 30 ) {appStore.appData.glogalProgress = 30} else{
         appStore.appData.glogalProgress = totalProgress
-    }
+    //}
 
 
     //Controla animação do progresso global

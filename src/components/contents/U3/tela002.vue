@@ -6,6 +6,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_etica/header.png" />
+		<v-img class="show_1277" src="./img/tela_etica/header.png" />
 		<v-img class="show_mobile" src="./img/tela_etica/header_mob.png" />
 		<v-img src="./img/tela_etica/header_text.svg" class="header_text"
 			title="ÉTICA E COMPLIANCE. Esse lema traduz o jeito Einstein de ser e reforça o compromisso que está presente desde a sua fundação:SEMPRE VALORIZAR E PRIORIZAR A CONDUTA ÉTICA EM TODAS AS SUAS ATIVIDADES." />
@@ -193,10 +194,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_01.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_01.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -215,10 +216,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_02.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_02.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -237,10 +238,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_03.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_03.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -259,10 +260,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_04.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_04.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -281,10 +282,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_05.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_05.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -303,18 +304,18 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_06.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_06.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
-												6º Canal de Denúncias:
-											</h2>
-											<p class="mt-4">
-												 Permite que qualquer pessoa (interna ou externa) relate eventuais violações ao Manual de Conduta Ética.
-											</p>
+										6º Canal de Denúncias:
+									</h2>
+									<p class="mt-4">
+										 Permite que qualquer pessoa (interna ou externa) relate eventuais violações ao Manual de Conduta Ética.
+									</p>
 								</v-col>
 							</v-row>
 					</v-sheet>
@@ -325,10 +326,10 @@
 						color="transparent"
 						width="100%"
 						height="100%"
-						class="d-flex justify-end px-8 py-8">
+						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
-								<v-col cols="12" md="6">
-									<v-img src="./img/tela_etica/mand_07.png"/>
+								<v-col cols="12" md="6" align="center">
+									<v-img width="90%" src="./img/tela_etica/mand_07.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -591,13 +592,105 @@
 		
 		<v-container class="mx-auto" align="center">
 		
-		<img height="500" src="./img/tela_etica/cont4_info.png" usemap="#image-map">
+		<img height="500" class="show_desktop" src="./img/tela_etica/cont4_info.png" usemap="#image-map">
+		
+		<img height="500" class="show_1277" src="./img/tela_etica/cont4_info.png" usemap="#image-map">
+		
+		<img height="300" class="show_mobile" src="./img/tela_etica/cont4_info.png" usemap="#image-map_mobile">
 
 		<map name="image-map">
-			<area target="" alt="auditoria" title="auditoria" href="#" coords="373,151,35" shape="circle">
-			<area target="" alt="gestão de riscos" title="gestão de riscos" href="#" coords="255,359,34" shape="circle">
-			<area target="" alt="compliance" title="compliance" href="#" coords="135,146,36" shape="circle">
+			<area style="cursor:pointer" target="" alt="auditoria" title="auditoria" coords="373,151,35" shape="circle"
+			@click="
+			isTooltip1Visible = true;
+			isTooltip2Visible = false;
+			isTooltip3Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="gestão de riscos" title="gestão de riscos" coords="255,359,34" shape="circle"
+			@click="
+			isTooltip2Visible = true;
+			isTooltip1Visible = false;
+			isTooltip3Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="compliance" title="compliance" coords="135,146,36" shape="circle"
+			@click="
+			isTooltip3Visible = true;
+			isTooltip2Visible = false;
+			isTooltip1Visible = false;
+			">
 		</map>
+		
+		<map name="image-map_mobile">
+			<area style="cursor:pointer" target="" alt="" title="" coords="215,87,21" shape="circle"
+			@click="
+			isTooltip1Visible = true;
+			isTooltip2Visible = false;
+			isTooltip3Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="147,207,20" shape="circle"
+			@click="
+			isTooltip2Visible = true;
+			isTooltip1Visible = false;
+			isTooltip3Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="78,87,22" shape="circle"
+			@click="
+			isTooltip3Visible = true;
+			isTooltip2Visible = false;
+			isTooltip1Visible = false;
+			">
+		</map>
+		
+		<div v-show="isTooltip1Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1">
+
+		  <i @click="isTooltip1Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip1" aria-hidden="false" ></i>
+
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					Responsável pela Auditoria Interna, cujo objetivo é revisar a eficácia e eficiência dos controles associados aos processos críticos da SBIBAE.
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltip2Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-2">
+
+		  <i @click="isTooltip2Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip2" aria-hidden="false" ></i>
+
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					Responsável por gerir os riscos, assegurando a atualização permanente do Mapa de Riscos alinhada ao Plano Estratégico da Sociedade.
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltip3Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-3">
+
+		  <i @click="isTooltip3Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip3" aria-hidden="false" ></i>
+
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					Responsável pelo planejamento, gestão e controle do Programa de Ética e Compliance, conforme legislação vigente, melhores práticas de mercado e em linha com o planejamento estratégico da Sociedade. 
+				</span>
+			</div>
+		  </div>
+	  </div>
+
 		
 		</v-container>
 
@@ -894,7 +987,7 @@
 			<v-col cols="12" md="6" align="right"  class="reveal fade-left">
 				<v-img class="mx-auto mt-4" src="./img/tela_etica/cont7_img.png" />
 			</v-col>
-			<v-col cols="12" md="6" class="reveal fade-left mt-6">
+			<v-col cols="12" md="6" class="reveal fade-left mt-0" align-self="center">
 				<h1 style="color:#2B7080; line-height:1.3em;" class="mt-6 font-weight-bold my-6 reveal fade-left">
 					Política Institucional de combate ao Assédio Moral e Sexual, Importunação Sexual e Discriminação
 				</h1>
@@ -904,17 +997,11 @@
 				<p class="mt-3 reveal fade-left">
 					O objetivo dessa Política é prevenir, enfrentar e intervir em casos de condutas de assédio moral e sexual e discriminação em seu ambiente, buscando eliminar esse tipo de conduta e definindo as boas práticas de convivência.
 				</p>
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class="mt-4"
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				href="https://docinst.einstein.br/Search" target="_blank"
-				> 
-					CLIQUE AQUI PARA ACESSAR A POLITICA
-				</v-btn>
+				
+				<p class="mt-3 reveal fade-left">
+					<a style="text-decoration:none;" class="texto_azul" href="https://docinst.einstein.br/Search" target="_blank"><strong>CLIQUE AQUI</strong></a> PARA ACESSAR A POLITICA
+				</p>
+				
 			</v-col><strong></strong>
 		</v-row>
 		
@@ -1059,7 +1146,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
-	style="z-index:1; margin-bottom:130px;"  
+	style="z-index:1; margin-bottom:30px;"  
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_etica/grade_header_branco.png" />
 		<v-row class="mx-auto mt-6">
@@ -1132,6 +1219,10 @@
 	const isContent07Visible = ref(false)
 	const isContent08Visible = ref(false)
 	const isContent09Visible = ref(false)
+	const isTooltip1Visible = ref(false)
+	const isTooltip2Visible = ref(false)
+	const isTooltip3Visible = ref(false)
+	
 	
 	//Controle dos cards do conteúdo 01
 	const isCard01Visible = ref(false)
@@ -1293,15 +1384,109 @@ height: 250px;
 .v-card_video{
 border: solid white 1px;
 }
-.ico_video{
-
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.9rem;
+	}
+.tool-tip-1 {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 52%;
+    left: 60.5%;
+    transform: translate(-50%, -50%);
+    width: 281px;
+    line-height: normal;
 }
+.triangulo-tool-tip1 {
+    position: absolute !important;
+    top: -10%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-120deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-2 {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 48%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    width: 281px;
+    line-height: normal;
+}
+.triangulo-tool-tip2 {
+    position: absolute !important;
+    top: 89%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-300deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-3 {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 57%;
+    left: 39.5%;
+    transform: translate(-50%, -50%);
+    width: 281px;
+    line-height: normal;
+}
+.triangulo-tool-tip3 {
+    position: absolute !important;
+    top: -10%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-120deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.fechar_tooltip {
+	position: absolute!important;
+    top: 0px;
+    right: 0px;
+	z-index: 6009 !important;
+	cursor: pointer;
+	width:50px;
+	}
 @media screen and (max-width: 1277px){
 .v-cards_cont6{
 height: 300px;
 }
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.9rem;
+	}
+.tool-tip-1 {
+    top: 56%;
+    left: 65%;
+    width: 281px;
+}
+.triangulo-tool-tip1 {
+    top: -10%;
+    left: 41%;
+}
+.tool-tip-2 {
+    top: 51%;
+    left: 51%;
+    width: 281px;
+}
+.triangulo-tool-tip2 {
+    top: 89%;
+    left: 41%;
+}
+.tool-tip-3 {
+    top: 60%;
+    left: 35.5%;
+    width: 281px;
+}
+.triangulo-tool-tip3 {
+    top: -10%;
+    left: 41%;
+}
 }
 @media screen and (max-width: 768px){
+h2{
+font-size:1.5em!important;
+}
 .cards_icones{
 height: auto;
 }
@@ -1310,6 +1495,79 @@ height: auto;
 }
 .ico_video{
 width: 20%
+}
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
+.tool-tip-1 {
+    top: 58%;
+    left: 64%;
+    width: 281px;
+}
+.triangulo-tool-tip1 {
+    top: -10%;
+    left: 41%;
+}
+.tool-tip-2 {
+    top: 45%;
+    left: 51%;
+    width: 281px;
+}
+.triangulo-tool-tip2 {
+    top: 89%;
+    left: 43%;
+}
+.tool-tip-3 {
+    top: 64%;
+    left: 35.5%;
+    width: 281px;
+}
+.triangulo-tool-tip3 {
+    top: -10%;
+    left: 43%;
+}
+}
+@media screen and (max-width: 500px){
+.cards_icones{
+height: auto;
+}
+.v-cards_cont6{
+height: auto;
+}
+.ico_video{
+width: 20%
+}
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
+.tool-tip-1 {
+    top: 62%;
+    left: 50%;
+    width: 90%;
+}
+.triangulo-tool-tip1 {
+    top: -10%;
+    left: 65%;
+}
+.tool-tip-2 {
+    top: 49%;
+    left: 50%;
+    width: 90%;
+}
+.triangulo-tool-tip2 {
+    top: 89%;
+    left: 50%;
+}
+.tool-tip-3 {
+    top: 64%;
+    left: 50%;
+    width: 90%;
+}
+.triangulo-tool-tip3 {
+    top: -10%;
+    left: 24%;
 }
 }
 </style>

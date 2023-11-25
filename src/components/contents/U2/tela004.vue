@@ -6,6 +6,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_oportunidades/header.png" />
+		<v-img class="show_1277" src="./img/tela_oportunidades/header.png" />
 		<v-img class="show_mobile" src="./img/tela_oportunidades/header_mob.png" />
 		<v-img src="./img/tela_oportunidades/header_text.svg" class="header_text"
 			title="Oportunidade de Carreira" />
@@ -438,7 +439,7 @@
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<p>
-				As vagas são disponibilizadas através de uma plataforma digital chamada TAQE, e os colaboradores do Einstein têm a possibilidade de indicar amigos a se inscreverem através do link da própria plataforma. ​
+				As vagas são disponibilizadas através de uma plataforma digital chamada TAQE, e os colaboradores do Einstein têm a possibilidade de indicar amigos a se inscreverem através do link da própria plataforma.
 				</p>
 				<p class="mt-4">
 				Todas as indicações são avaliadas e, caso o perfil do amigo indicado não esteja dentro dos critérios da vaga, ele pode ser direcionado para outra posição.
@@ -748,7 +749,6 @@
 	
 	<v-card 
 	width="100%" 
-	height="720"
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0  v-card-conteudos_cont5" 
 	style="z-index:4; "
@@ -834,7 +834,7 @@
 		</v-card-text>
 		
 		
-		<v-row justify="center" class="mt-n0">
+				<v-row justify="center" class="mt-n0">
 					<v-col class="mt-4" cols="12" md="6">
 						<p>
 							A recompensa pelo trabalho que o Colaborador do Einstein realiza é demonstrada pelo DRA – Demonstrativo de Remuneração Anual. 
@@ -848,44 +848,91 @@
 					</v-col>
 				</v-row>
 				
-				<v-card elevation="0" class="d-flex justify-center mb-4 mt-10 bg-transparent">
-					<v-img class="cont6_tabela" src="./img/tela_oportunidades/cont6_tabela.svg" />
+				<v-card elevation="0" class="mb-4 mt-10 bg-transparent" align="center">
 					
-					<a class="btn_tool-tip1" @click="tooltip1=!tooltip1"> <img class="btn_img" src='./img/tela_oportunidades/cont6_btn.png'/></a>
-					<a class="btn_tool-tip2" @click="tooltip2=!tooltip2"> <img class="btn_img" src='./img/tela_oportunidades/cont6_btn.png'/></a>
+					<img width="800" class="show_desktop" src="./img/tela_oportunidades/cont6_tabela.png" usemap="#image-map_cont6">
+					
+					<img width="600" class="show_1277" src="./img/tela_oportunidades/cont6_tabela_1277.png" usemap="#image-map_cont6_1277">
+					
+					<img width="400" class="show_mobile" src="./img/tela_oportunidades/cont6_tabela_mobile.png" usemap="#image-map_cont6_mobile">
 					
 					
-					<v-expand-transition>
-						  <div v-show="tooltip1" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1" style="width: 250px;">
+					
+					<map name="image-map_cont6">
+						<area style="cursor:pointer" target="" alt="" title="" coords="61,137,43" shape="circle"
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="61,300,46" shape="circle"
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						">
+					</map>
+					
+					<map name="image-map_cont6_1277">
+						<area style="cursor:pointer" target="" alt="" title="" coords="47,103,36" shape="circle"
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="46,225,34" shape="circle"
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						">
+					</map>
+					
+					<map name="image-map_cont6_mobile">
+						<area style="cursor:pointer" target="" alt="" title="" coords="30,67,22" shape="circle"
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="31,150,20" shape="circle"
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						">
+					</map>
+					
+						  <div v-show="isTooltip1Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1">
 
+							  <i @click="isTooltip1Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+						  
 							  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip1" aria-hidden="false" ></i>
 
 							  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
 
 								<div class="pt-2 pb-2 pl-2 pr-2">
 									<span class="tooltip_text">
-										<p>São itens intangíveis, ou seja, oferecidos pelo Einstein visando o bem-estar dos colaboradores e seus dependentes, não sendo possível revertê-los em valor monetário.</p>
+										São itens intangíveis, ou seja, oferecidos pelo Einstein visando o bem-estar dos colaboradores e seus dependentes, não sendo possível revertê-los em valor monetário.
 									</span>
 								</div>
 							  </div>
 						  </div>
-					  </v-expand-transition>
 
-					  <v-expand-transition>
-						  <div v-show="tooltip2" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-2" style="width: 260px;">
+						  <div v-show="isTooltip2Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-2">
 
+							  <i @click="isTooltip2Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+							  
 							  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip2" aria-hidden="false" ></i>
 
 							  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
 
 								<div class="pt-2 pb-2 pl-2 pr-2">
 									<span class="tooltip_text">
-										<p>São itens tangíveis, ou seja, que podem ser medidos em dinheiro.</p>
+										São itens tangíveis, ou seja, que podem ser medidos em dinheiro.
 									</span>
 								</div>
 							  </div>
 						  </div>
-					  </v-expand-transition>	
+					  
 				</v-card>
 		
 		
@@ -902,7 +949,7 @@
 				width="40"
 				height="60"
 				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
+				class=" mt-0 mb-4 mx-auto"
 				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
 				/>
 
@@ -935,36 +982,219 @@
 		
 		
 		
-		<v-container class="mx-auto mt-14" align="center">
+		<v-card elevation="0" class="d-flex justify-center py-10 mb-4 mt-10 bg-transparent">
 		
-		<img  height="500" src="./img/tela_oportunidades/cont6_info2.png" usemap="#image-map">
+		<img class="show_desktop"  height="500" src="./img/tela_oportunidades/cont6_info2.png" usemap="#image-map">
+		<img class="show_1277"  height="400" src="./img/tela_oportunidades/cont6_info2_1277.png" usemap="#image-map_1277">
+		<img class="show_mobile"  height="300" src="./img/tela_oportunidades/cont6_info2_mobile.png" usemap="#image-map_mobile">
 
 		<map name="image-map">
-			<area target="" alt="Salario nominaç + adicionais" title="Salario nominaç + adicionais" href="#" coords="126,39,42" shape="circle">
-			<area target="" alt="" title="" href="#" coords="424,39,39" shape="circle">
-			<area target="" alt="" title="" href="#" coords="502,300,44" shape="circle">
-			<area target="" alt="" title="" href="#" coords="273,460,40" shape="circle">
-			<area target="" alt="" title="" href="#" coords="40,302,40" shape="circle">
+			<area style="cursor:pointer" target="" alt="" title="" coords="126,39,42" shape="circle"
+			@click="
+			isTooltip3Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="424,39,39" shape="circle" 
+			@click="
+			isTooltip4Visible = true;
+			isTooltip3Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="502,300,44" shape="circle" 
+			@click="
+			isTooltip5Visible = true;
+			isTooltip4Visible = false;
+			isTooltip3Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="273,460,40" shape="circle" 
+			@click="
+			isTooltip6Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip3Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="40,302,40" shape="circle" 
+			@click="
+			isTooltip7Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip3Visible = false;
+			">
 		</map>
-		</v-container>
-
-				<v-expand-transition>
-					  <div v-show="tooltip3" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-3" style="width: 260px;">
-
-						  <i style="text-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);" class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip3" aria-hidden="false"></i>
-
-						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
-
-							<div class="pt-2 pb-2 pl-2 pr-2">
-								<span class="tooltip_text">
-									<p>Incentivo Educacional concedido para pós-doutorado, doutorado, MBA, mestrado, pós-graduação, graduação, curso técnico e formação interna.</p>
-								</span>
-							</div>
-						  </div>
-					  </div>
-				  </v-expand-transition>	
 		
+		<map name="image-map_1277">
+			<area style="cursor:pointer" target="" alt="" title=""  coords="101,32,32" shape="circle"
+			@click="
+			isTooltip3Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="337,32,32" shape="circle"
+			@click="
+			isTooltip4Visible = true;
+			isTooltip3Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="401,239,35" shape="circle"
+			@click="
+			isTooltip5Visible = true;
+			isTooltip4Visible = false;
+			isTooltip3Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="218,371,35" shape="circle"
+			@click="
+			isTooltip6Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip3Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="31,238,36" shape="circle"
+			@click="
+			isTooltip7Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip3Visible = false;
+			">
+		</map>
 		
+		<map name="image-map_mobile">
+			<area style="cursor:pointer" target="" alt="" title="" coords="75,22,22" shape="circle"
+			@click="
+			isTooltip3Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="254,22,28" shape="circle"
+			@click="
+			isTooltip4Visible = true;
+			isTooltip3Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="303,181,23" shape="circle"
+			@click="
+			isTooltip5Visible = true;
+			isTooltip4Visible = false;
+			isTooltip3Visible = false;
+			isTooltip6Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="163,275,29" shape="circle"
+			@click="
+			isTooltip6Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip3Visible = false;
+			isTooltip7Visible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="23,181,25" shape="circle"
+			@click="
+			isTooltip7Visible = true;
+			isTooltip4Visible = false;
+			isTooltip5Visible = false;
+			isTooltip6Visible = false;
+			isTooltip3Visible = false;
+			">
+		</map>
+		
+			  <div v-show="isTooltip3Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-3">
+				  
+				   <i @click="isTooltip3Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip3" aria-hidden="false" ></i>
+				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+					<div class="pt-2 pb-2 pl-2 pr-2">
+						<span class="tooltip_text">
+							Todos os valores financeiros apresentados são relacionados aos valores brutos pagos e, portanto, sem a demonstração dos devidos impostos e acréscimo de 8% de FGTS.
+						</span>
+					</div>
+				  </div>
+			  </div>
+
+			  <div v-show="isTooltip4Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-4">
+				  
+				   <i @click="isTooltip4Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip4" aria-hidden="false" ></i>
+				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+					<div class="pt-2 pb-2 pl-2 pr-2">
+						<span class="tooltip_text">
+							Incentivo educacional concedido para pós-doutorado, doutorado, MBA, mestrado, pós-graduação, graduação, curso técnico e formação interna.
+						</span>
+					</div>
+				  </div>
+			  </div>
+
+			  <div v-show="isTooltip5Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-5">
+				   <i @click="isTooltip5Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+				  
+				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip5" aria-hidden="false" ></i>
+				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+					<div class="pt-2 pb-2 pl-2 pr-2">
+						<span class="tooltip_text">
+							Subsídio concedido para eventos científicos e cursos de qualificação nacionais e internacionais. Estas ações são iniciativas de valorização e reconhecimento dos melhores desempenhos, que têm o propósito de estimular os colaboradores a aprimorarem sua formação e qualificação.
+						</span>
+					</div>
+				  </div>
+			  </div>
+
+			  <div v-show="isTooltip6Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-6">
+				   <i @click="isTooltip6Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+				  
+				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip6" aria-hidden="false" ></i>
+				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+					<div class="pt-2 pb-2 pl-2 pr-2">
+						<span class="tooltip_text">
+							Todos os benefícios são calculados de forma proporcional aos meses trabalhados. O valor dimensionado para o seguro saúde e odontológico considera sua exata quantidade de dependentes elegíveis a cada um dos benefícios.
+						</span>
+					</div>
+				  </div>
+			  </div>
+
+			  <div v-show="isTooltip7Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-7">
+				  
+				   <i @click="isTooltip7Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_oportunidades/btn_close.png"/>
+						  </i>
+						  
+				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip7" aria-hidden="false" ></i>
+				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+					<div class="pt-2 pb-2 pl-2 pr-2">
+						<span class="tooltip_text">
+							Bonificação anual de recompensa/incentivo que complementa o salário fixo do colaborador, diretamente relacionada ao desempenho profissional individual e da equipe.
+						</span>
+					</div>
+				  </div>
+			  </div>
+
+		</v-card>
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
 			<v-sheet 
@@ -1183,17 +1413,59 @@
 					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nas abas abaixo para saber mais.  
 				</v-card-text>
 			</v-card>
-		<v-card>
-			<v-tabs
-		  v-model="tab"
-		  color="white"
-		  bg-color="none"
-		  grow
-		  
+		
+		<v-card class="show_desktop">
+		<v-tabs
+		 v-model="tab"
+		 color="white"
+		 bg-color="none"
+		 grow
 		>
 			  <v-tab value="one"><span style="color:#202428;">O programa</span></v-tab>
 			  <v-tab value="two"><span style="color:#202428;">Premissas e Regras</span></v-tab>
 			  <v-tab style="margin:0" value="three"><span style="color:#202428;">Descrição de Cargo</span></v-tab>
+			</v-tabs>
+
+			<v-card-text style="background-color:white">
+		  <v-window v-model="tab" bg-color="white">
+				<v-window-item value="one">
+				<p>
+					O Programa de Reconhecimento integra a política do Einstein de incentivo aos seus colaboradores com base no desempenho e desenvolvimento individual. Esse reconhecimento se dá pelo crescimento horizontal na faixa salarial, ou seja, aumento na remuneração sem mudança de cargo.
+				</p>
+				</v-window-item>
+
+				<v-window-item value="two">
+				  <ul style="margin:40px">
+					<li style="margin-bottom:10px"><strong>Todos os colaboradores SBIBAE são elegíveis para esta política</strong>, exceto diretores, estagiários, aprendizes e profissionais da Carreira Analytics (Analista de Dados, Consultor Analytics, Engenheiro Dados, Cientista Dados e Arquiteto Dados);</li>
+					<li style="margin-bottom:10px">Colaboradores com conceito <strong>mínimo AT</strong> na última Avaliação de Desempenho;</li>
+					<li style="margin-bottom:10px">O colaborador poderá ser contemplado após seis meses (com elegibilidade a avaliação de desempenho) <strong>do último programa, promoção com aumento e admissão</strong>;</li>
+					<li style="margin-bottom:10px"><strong>Limitado a 30% do total de colaboradores elegíveis</strong> por gestor;</li>
+					<li style="margin-bottom:10px">Limite de aumento concedido de até <strong>15% sobre o salário</strong>;</li>
+					<li style="margin-bottom:10px">Colaboradores com salário base posicionado acima do <strong>ponto máximo da faixa salarial (120%)</strong> não serão elegíveis ao programa.</li>
+					<li style="margin-bottom:10px"><strong>Verba orçada:</strong> 1% da massa salarial da área e, se aprovada, o programa será aplicado anualmente.</li>
+				</ul>
+				</v-window-item>
+
+				<v-window-item value="three">
+				 <p>
+				 	Descrição de cargo é um instrumento que permite obter as características mais importantes de um cargo, incluindo: a natureza geral do trabalho executado, responsabilidades específicas, o nível de autoridade delegado, resultados gerais esperados e os requisitos mínimos esperados de conhecimento e escolaridade do ocupante do cargo. 
+				 </p>
+				</v-window-item>
+			  </v-window>
+			</v-card-text>
+		  </v-card>
+		
+		
+		<v-card class="show_mobile">
+			<v-tabs
+			v-model="tab"
+			direction="vertical"
+			color="white"
+			bg-color="none"
+		>
+			  <v-tab value="one"><span style="color:#202428;">O programa</span></v-tab>
+			  <v-tab value="two"><span style="color:#202428;">Premissas e Regras</span></v-tab>
+			  <v-tab value="three"><span style="color:#202428;">Descrição de Cargo</span></v-tab>
 			</v-tabs>
 
 			<v-card-text style="background-color:white">
@@ -1388,6 +1660,15 @@
 	const isContent08Visible = ref(false)
 	const isContent09Visible = ref(false)
 	const isContent10Visible = ref(false)
+	const isTooltip1Visible = ref(false)
+	const isTooltip2Visible = ref(false)
+	const isTooltip3Visible = ref(false)
+	const isTooltip4Visible = ref(false)
+	const isTooltip5Visible = ref(false)
+	const isTooltip6Visible = ref(false)
+	const isTooltip7Visible = ref(false)
+
+	
 
 
 //Informa se a tela já foi concluida
@@ -1544,7 +1825,6 @@ text-transform: uppercase;
 	padding: 0 !Important;
 	border-radius: 18px 18px 0px 0px !important;
 	z-index: 10;
-	background-color: #2B7080;
 }
 .header_text {
 	position: absolute;
@@ -1596,7 +1876,7 @@ background-color:#81C300;
 	background-repeat: no-repeat;
 	padding-left: 6% !important;
 	padding-right: 6% !important;
-	margin-bottom: 130px;
+	margin-bottom: 30px;
 }
 .footericons {
 	font-size: 3rem;
@@ -1621,16 +1901,6 @@ font-weight:300;
 	font-weight:500;
 	font-family: 'montserrat' !important;
 }
-.btn_tool-tip1{
-position:absolute;
-top: 28%;
-left:4%;
-}
-.btn_tool-tip2{
-position:absolute;
-top: 65%;
-left:4%;
-}
 .btn_img{
 height:70px;
 }
@@ -1640,14 +1910,15 @@ width:60%
 .tool-tip-1 {
 position: absolute !important;
     z-index: 6002 !important;
-    top: 34%;
-    left: 25%;
+    top: 30%;
+    left: 38%;
     transform: translate(-50%, -50%);
+	width:300px;
 }
 .triangulo-tool-tip1 {
     position: absolute !important;
     top: 43%;
-    left:-8%;
+    left:-7%;
     z-index: 6005 !important;
     transform: rotate(30deg) !important;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -1655,9 +1926,10 @@ position: absolute !important;
 .tool-tip-2 {
 position: absolute !important;
     z-index: 6002 !important;
-    top: 72%;
-    left: 25%;
+    top: 70%;
+    left: 38%;
     transform: translate(-50%, -50%);
+	width:300px;
 }
 .triangulo-tool-tip2 {
     position: absolute !important;
@@ -1675,37 +1947,87 @@ left: 32%;
 .tool-tip-3 {
 position: absolute !important;
     z-index: 6002 !important;
-    top: 57%;
-    left: 66%;
+    top: 59%;
+    left: 39%;
     transform: translate(-50%, -50%);
+    width: 300px;
+	line-height: normal;
 }
 .triangulo-tool-tip3 {
     position: absolute !important;
-    top: 92%;
-    left: 41%;
+    top: -11%;
+    left: 43%;
+    z-index: 6005 !important;
+    transform: rotate(-120deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-4 {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 49%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+	line-height: normal;
+}
+.triangulo-tool-tip4 {
+    position: absolute !important;
+    top: -11%;
+    left: 43%;
+    z-index: 6005 !important;
+    transform: rotate(-120deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-5 {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+	line-height: normal;
+}
+.triangulo-tool-tip5 {
+    position: absolute !important;
+    top: 94%;
+    left: 60%;
     z-index: 6005 !important;
     transform: rotate(60deg) !important;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.btn_tool-tip4{
-position:absolute;
-top: 62%;
-left:62%;
+.tool-tip-6 {
+position: absolute !important;
+    z-index: 6002 !important;
+    top: 44%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+	width: 300px;
+	line-height: normal;
 }
-.btn_tool-tip5{
-position:absolute;
-top: 77%;
-left:72%;
+.triangulo-tool-tip6 {
+    position: absolute !important;
+    top: 94%;
+    left: 48%;
+    z-index: 6005 !important;
+    transform: rotate(60deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.btn_tool-tip6{
-position:absolute;
-top: 87%;
-left:47%;
+.tool-tip-7 {
+position: absolute !important;
+    z-index: 6002 !important;
+    top: 31%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+	width: 300px;
+	line-height: normal;
 }
-.btn_tool-tip7{
-position:absolute;
-top: 77%;
-left:22%;
+.triangulo-tool-tip7 {
+    position: absolute !important;
+    top: 94%;
+    left: 42%;
+    z-index: 6005 !important;
+    transform: rotate(60deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .v-slide-group-item--active{
 background-color:#fff!important;
@@ -1719,55 +2041,31 @@ background-color:#fff!important;
 	margin-right: 5px;
 }
 
+	.fechar_tooltip {
+	position: absolute!important;
+    top: 0px;
+    right: 0px;
+	z-index: 6009 !important;
+	cursor: pointer;
+	width:50px;
+	}
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.9em;
+	}
 @media screen and (max-width: 1277px){
-.btn_tool-tip1{
-top: 26%;
-left:4%;
-}
-.btn_tool-tip2{
-top: 65%;
-left:4%;
-}
 .btn_img{
 height:50px;
 }
 .tool-tip-1 {
 top: 32%;
-left: 30%;
+left: 44%;
 }
 .tool-tip-2 {
 top: 72%;
-left: 30%;
+left: 43%;
 }
-.btn_tool-tip3{
-position:absolute;
-top: 66%;
-left: 32%;
-}
-.tool-tip-3 {
-top: 57%;
-left: 66%;
-}
-.btn_tool-tip4{
-position:absolute;
-top: 66%;
-left:62%;
-}
-.btn_tool-tip5{
-position:absolute;
-top: 79%;
-left:72%;
-}
-.btn_tool-tip6{
-position:absolute;
-top: 86%;
-left:47%;
-}
-.btn_tool-tip7{
-position:absolute;
-top: 77%;
-left:22%;
-}
+
 
 }
 @media screen and (max-width: 768px){
@@ -1805,33 +2103,26 @@ color:#00A4E1;
 font-size:1.5em;
 font-weight:300;
 }
-.btn_tool-tip1{
-top: 24%;
-left:3%;
-}
-.btn_tool-tip2{
-top: 68%;
-left:3%;
-}
 .btn_img{
 height:40px;
 }
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8em;
+	}
 .tool-tip-1 {
-    top: 33%;
-    left: 44%;
+    top: 34%;
+    left: 55%;
 }
 .triangulo-tool-tip1 {
     top: 36%;
-    left:-8%;
+    left:-7%;
 }
 .tool-tip-2 {
-    top: 80%;
-    left: 44%;
+    top: 75%;
+    left: 55%;
 }
-.tool-tip-3 {
-top: 65%;
-left: 68%;
-}
+
 .triangulo-tool-tip2 {
     top: 25%;
     left: -21px;
@@ -1839,31 +2130,108 @@ left: 68%;
 .box_dicas_cont6 {
 	width: 100%;
 }
-.btn_tool-tip3{
-position:absolute;
-top: 70%;
-left: 32%;
+
+.tool-tip-3 {
+    top: 59%;
+    left: 50%;
+    width: 90%;
 }
-.btn_tool-tip4{
-position:absolute;
-top: 70%;
-left:62%;
+.triangulo-tool-tip3 {
+    top: -11%;
+    left: 30%;
 }
-.btn_tool-tip5{
-position:absolute;
-top: 80%;
-left:72%;
+.tool-tip-4 {
+    top: 53%;
+    left: 50%;
+    width: 90%;
 }
-.btn_tool-tip6{
-position:absolute;
-top: 86%;
-left:47%;
+.triangulo-tool-tip4 {
+    top: -11%;
+    left: 55%;
 }
-.btn_tool-tip7{
-position:absolute;
-top: 80%;
-left:22%;
+.tool-tip-5 {
+    top: 20%;
+    left: 50%;;
+    width: 98%;
+}
+.triangulo-tool-tip5 {
+    top: 94%;
+    left: 70%;
+}
+.tool-tip-6 {
+    top: 40%;
+    left: 50%;
+	width: 90%;
+}
+.triangulo-tool-tip6 {
+    top: 94%;
+    left: 48%;
+}
+.tool-tip-7 {
+    top: 25%;
+    left: 50%;
+	width: 90%;
+}
+.triangulo-tool-tip7 {
+    top: 90%;
+    left: 25%;
 }
 
 }
+
+@media screen and (max-width: 500px){
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
+.tool-tip-3 {
+    top: 63%;
+    left: 50%;
+    width: 98%;
+}
+.triangulo-tool-tip3 {
+    top: -11%;
+    left: 22%;
+}
+.tool-tip-4 {
+    top: 53%;
+    left: 50%;
+     width: 98%;
+}
+.triangulo-tool-tip4 {
+    top: -11%;
+    left: 55%;
+}
+.tool-tip-5 {
+    top: 47%;
+    left: 31%;
+    width: 59%;
+}
+.triangulo-tool-tip5 {
+    top: 51%;
+    left: 92%;
+    transform: rotate(-30deg) !important;
+}
+.tool-tip-6 {
+    top: 40%;
+    left: 50%;
+	 width: 98%;
+}
+.triangulo-tool-tip6 {
+    top: 94%;
+    left: 48%;
+}
+.tool-tip-7 {
+    top: 25%;
+    left: 50%;
+	 width: 98%;
+}
+.triangulo-tool-tip7 {
+    top: 90%;
+    left: 25%;
+}
+
+}
+
+
 </style>

@@ -32,16 +32,43 @@
 <script setup>
 
 	//Imports
+  import { useRouter } from 'vue-router'
 	import { useAppStore } from '../../../store/app'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
+  //Inicia o controle de rotas
+	const router = useRouter()
 
 	//Finaliza o conteúdo e atualiza progresso
 	const finishedContent = () => {
-		appStore.finishedContent(true)
+		//appStore.finishedContent(true)
 		useStartProgress()
+
+
+    //libera o "Começando Bem" 
+    appStore.appData.start.status = 1
+		//atualiza o componente "Começando Bem"
+    appStore.startCardKey += 1
+		//Atualiza o localStorage
+
+
+    //libera o "Começando Bem" 
+    appStore.appData.workplace.status = 1
+		//atualiza o componente "Começando Bem"
+    appStore.workPlaceCardKey += 1
+		//Atualiza o localStorage
+	
+
+		//libera o "galeria de imagen" 
+		appStore.appData.galeria.status = 1
+		//atualiza o componente "galeria de image na home"
+		appStore.galleryCardKey += 1
+		//Atualiza o localStorage
+		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+	  router.push('/home')
 	}
 
     
@@ -77,8 +104,6 @@
       console.log('Loaded Vimeo Player API');
     }
   );
-    
-    
 
 </script> 
 

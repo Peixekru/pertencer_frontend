@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 95">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #192b31;
+        opacity: 0;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="bg">
+    <rect class="cls-1" width="63" height="95"/>
+  </g>
+  <g id="progresso">
+    <path class="cls-2" d="m51.61,36.12c-3.57-5.08-7.68-10.94-11.38-18.33-7-1.39-11.64,1.64-19.08,3.09-3.2,5.87-6.6,10.76-9.59,15.08l-.1.15C5.08,45.19.06,52.36.06,62.86c0,17.55,14.11,31.82,31.44,31.82s31.44-14.28,31.44-31.82c0-10.49-4.96-17.6-11.24-26.61l-.09-.13Z"/>
+  </g>
+</svg>

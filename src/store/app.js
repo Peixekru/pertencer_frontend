@@ -62,6 +62,10 @@ export const useAppStore = defineStore('app', {
 		selectedGallery: null,
 		selectedImg: null,
 
+		///
+		debugModal: false,
+		///
+
 
 		selectedItem: 0,
 		

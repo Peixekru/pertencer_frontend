@@ -1,8 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 61 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(1,0,0,1,-608.542,-428.143)">
-        <path id="_3" serif:id="3" d="M608.542,430.272C619.586,438.802 626.782,435.538 642.089,430.272C656.829,425.201 664.59,430.397 669.392,433.363C667.416,439.037 655.827,450.474 640,450.474C625.081,450.474 612.668,440.397 608.542,430.272Z" 
-        style="fill:rgb(0,0,0);"/>
-    </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 95">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #192b31;
+        opacity: 0;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <g id="bg">
+    <rect class="cls-1" width="63" height="95"/>
+  </g>
+  <g id="progresso">
+    <path class="cls-2" d="m46.21,87.01c-10.43-.81-15.37-5.55-23.96-3.59-4.71,1.07-5.27,2.96-10.07,3.59-.34.05-.68.08-1.01.1,5.49,4.72,12.58,7.57,20.32,7.57s14.93-2.89,20.43-7.66c-2.2.16-4.12.11-5.72-.01Z"/>
+  </g>
 </svg>

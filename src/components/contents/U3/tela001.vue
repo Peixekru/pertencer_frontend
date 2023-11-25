@@ -7,6 +7,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_qualidade/header.png" />
+		<v-img class="show_1277" src="./img/tela_qualidade/header.png" />
 		<v-img class="show_mobile" src="./img/tela_qualidade/header_mob.png" />
 		<v-img src="./img/tela_qualidade/header_text.svg" class="header_text"
 			title="QUALIDADE E SEGURANÇA" />
@@ -114,12 +115,13 @@
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_qualidade/grade_header_azul2.png" />
 		
-		<h1 style="color:#2B7080" class="mt-n4 font-weight-bold my-6 reveal fade-left">
-			Princípios SEQS
-		</h1>
+		
 		
 		<v-row no-gutters class="mx-auto mt-10">
-			<v-col cols="12" md="6">
+			<v-col cols="12" sm="12" md="6">
+				<h1 style="color:#2B7080" class="mt-n4 font-weight-bold my-6 reveal fade-left">
+					Princípios SEQS
+				</h1>
 				<v-card 
 				elevation="2"
 				width="100%"
@@ -146,18 +148,134 @@
 				</p>
 				</v-card>
 			</v-col>
-			<v-col cols="12" md="6" align-self="start" align="right">
+			<v-col cols="12" sm="12" md="6" align-self="start" align="center">
 				
-				<v-container class="mt-n16 pa-6">
+				<v-card class="bg-transparent py-6" elevation="0">
 					
-					<img height="400" src="./img/tela_qualidade/cont2_info.png" usemap="#image-map">
+					<img height="400" class="show_desktop" src="./img/tela_qualidade/cont2_info.png" usemap="#image-map">
+					<img height="340" class="show_1277" src="./img/tela_qualidade/cont2_info_1277.png" usemap="#image-map_1277">
+					<img height="300" class="show_mobile" src="./img/tela_qualidade/cont2_info_mobile.png" usemap="#image-map_1277">
 
 					<map name="image-map">
-						<area target="" alt="" title="" href="#" coords="222,33,41" shape="circle">
-						<area target="" alt="" title="" href="#" coords="303,291,41" shape="circle">
-						<area target="" alt="" title="" href="#" coords="123,289,39" shape="circle">
+						<area style="cursor:pointer" target="" alt="" title="" coords="222,33,41" shape="circle" 
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="303,291,41" shape="circle" 
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="123,289,39" shape="circle" 
+						@click="
+						isTooltip3Visible = true;
+						isTooltip2Visible = false;
+						isTooltip1Visible = false;
+						">
 					</map>
-				</v-container>
+					
+					<map name="image-map_1277">
+						<area style="cursor:pointer" target="" alt="" title="" coords="187,27,30" shape="circle" 
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="258,247,29" shape="circle" 
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="105,247,33" shape="circle"
+						@click="
+						isTooltip3Visible = true;
+						isTooltip2Visible = false;
+						isTooltip1Visible = false;
+						">
+					</map>
+					
+					<map name="image-map_mobile">
+						<area style="cursor:pointer" target="" alt="" title="" coords="165,25,29" shape="circle" 
+						@click="
+						isTooltip1Visible = true;
+						isTooltip2Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="226,217,30" shape="circle" 
+						@click="
+						isTooltip2Visible = true;
+						isTooltip1Visible = false;
+						isTooltip3Visible = false;
+						">
+						<area style="cursor:pointer" target="" alt="" title="" coords="92,217,29" shape="circle"
+						@click="
+						isTooltip3Visible = true;
+						isTooltip2Visible = false;
+						isTooltip1Visible = false;
+						">
+					</map>
+					
+					
+						  <div v-show="isTooltip1Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1">
+
+							  <i @click="isTooltip1Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+							  <v-img src="./img/tela_qualidade/btn_close.png"/>
+							  </i>
+							  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip1" aria-hidden="false" ></i>
+
+							  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+								<div class="pt-2 pb-2 pl-2 pr-2">
+									<span class="tooltip_text">
+										1) Fornecer assistência segura, eficaz e confiável para cada paciente, em todas as oportunidades.
+									</span>
+								</div>
+							  </div>
+						  </div>
+					  
+						  <div v-show="isTooltip2Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-2">
+
+							  <i @click="isTooltip2Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+							  <v-img src="./img/tela_qualidade/btn_close.png"/>
+							  </i>
+							  
+							  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip2" aria-hidden="false" ></i>
+
+							  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+								<div class="pt-2 pb-2 pl-2 pr-2">
+									<span class="tooltip_text">
+										2) Manter o foco na prevenção e no bem-estar.
+									</span>
+								</div>
+							  </div>
+						  </div>
+					  
+						  <div v-show="isTooltip3Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-3">
+
+							  <i @click="isTooltip3Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+							  <v-img src="./img/tela_qualidade/btn_close.png"/>
+							  </i>
+							  
+							  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip3" aria-hidden="false" ></i>
+
+							  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+
+								<div class="pt-2 pb-2 pl-2 pr-2">
+									<span class="tooltip_text">
+										3) Buscar melhoria contínua e aplicação do conhecimento científico para eliminar desperdícios e/ou futilidades.
+									</span>
+								</div>
+							  </div>
+						  </div>
+					  
+					
+					
+				</v-card>
 				
 				<v-card class="box_dicas pa-0 reveal fade-right mt-n8" style="width: 60%">
 					<v-card-text>
@@ -522,8 +640,212 @@
 			</v-col>
 		</v-row>
 		
-		<v-img class="mx-auto show_desktop" src="./img/tela_qualidade/cont5_info.png" />
-		<v-img width="50%!important" class="my-8 show_mobile" src="./img/tela_qualidade/cont5_info_mob.png" />
+		<v-card elevation="0" style=""	class="bg-transparent v-card_info_cont5">
+		
+		<img style="margin-left: 10%!important;" width="800" class="mx-auto show_desktop mt-8" src="./img/tela_qualidade/cont5_info.png" usemap="#image-map_cont5">
+		
+		<img width="650" class="mx-auto show_1277 mt-8" src="./img/tela_qualidade/cont5_info_1277.png" usemap="#image-map_cont5_1277">
+		
+		<img width="200" class="show_mobile mt-16" src="./img/tela_qualidade/cont5_info_mob.png" usemap="#image-map_cont5_mobile">
+		
+		<map name="image-map_cont5">
+			<area style="cursor:pointer" target="" alt="" title="" coords="238,39,36" shape="circle"
+			@click="
+			isTooltipCont5aVisible = true;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="318,39,36" shape="circle"
+			@click="
+			isTooltipCont5bVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="399,37,33" shape="circle"
+			@click="
+			isTooltipCont5cVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="480,37,34" shape="circle"
+			@click="
+			isTooltipCont5dVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="563,38,35" shape="circle"
+			@click="
+			isTooltipCont5eVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			">
+		</map>
+		
+		<map name="image-map_cont5_1277">
+			<area style="cursor:pointer" target="" alt="" title="" coords="193,32,31" shape="circle"
+			@click="
+			isTooltipCont5aVisible = true;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="259,30,29" shape="circle"
+			@click="
+			isTooltipCont5bVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="324,30,30" shape="circle"
+			@click="
+			isTooltipCont5cVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="391,30,30" shape="circle"
+			@click="
+			isTooltipCont5dVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="458,30,29" shape="circle"
+			@click="
+			isTooltipCont5eVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			">
+		</map>
+		
+		<map name="image-map_cont5_mobile">
+			<area style="cursor:pointer" target="" alt="" title="" coords="41,47,38" shape="circle"
+			@click="
+			isTooltipCont5aVisible = true;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="42,154,34" shape="circle"
+			@click="
+			isTooltipCont5bVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="41,256,35" shape="circle"
+			@click="
+			isTooltipCont5cVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5dVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="42,362,37" shape="circle"
+			@click="
+			isTooltipCont5dVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5eVisible = false;
+			">
+			<area style="cursor:pointer" target="" alt="" title="" coords="41,466,38" shape="circle"
+			@click="
+			isTooltipCont5eVisible = true;
+			isTooltipCont5aVisible = false;
+			isTooltipCont5bVisible = false;
+			isTooltipCont5cVisible = false;
+			isTooltipCont5dVisible = false;
+			">
+		</map>
+
+		<div v-show="isTooltipCont5aVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltipCont5a">
+		  <i @click="isTooltipCont5aVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					<strong>Intolerância às falhas</strong><br> Pensar ativamente sobre o que pode dar errado e estar alerta aos sinais de problemas potenciais. 
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltipCont5bVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltipCont5b">
+		  <i @click="isTooltipCont5bVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					<strong>Relutância em <br>simplificar</strong><br> Buscar explicações mais profundas do que superficiais para as falhas nos processos.
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltipCont5cVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltipCont5c">
+		  <i @click="isTooltipCont5cVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					<strong>Consciência situacional</strong><br> Entender o contexto das suas atividades dentro da organização e como podem reforçar ou ameaçar a segurança. 
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltipCont5dVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltipCont5d">
+		  <i @click="isTooltipCont5dVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					<strong>Valorização do conhecimento dos profissionais da operação</strong><br> Escutar aqueles que realizam e, portanto, conhecem a atividade no detalhe.. 
+				</span>
+			</div>
+		  </div>
+	  </div>
+	  
+	  <div v-show="isTooltipCont5eVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltipCont5e">
+		  <i @click="isTooltipCont5eVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+		  <v-img src="./img/tela_qualidade/btn_close.png"/>
+		  </i>
+		  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+			<div class="pt-2 pb-2 pl-2 pr-2">
+				<span class="tooltip_text">
+					<strong>Compromisso com a resiliência</strong><br> Assumir que os sistemas não são confiáveis e identificar ameaças rapidamente, respondendo antes que os problemas causem dano.
+				</span>
+			</div>
+		  </div>
+	  </div>
+		
+	
+	
+	
+	</v-card>
 	
 	<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
@@ -890,7 +1212,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
-	style="z-index:1; margin-bottom:130px;"  
+	style="z-index:1; margin-bottom:30px;"  
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_qualidade/grade_header_branco.png" />
 		<v-row class="mx-auto mt-6">
@@ -941,6 +1263,14 @@
 	const isContent08Visible = ref(false)
 	const isContent09Visible = ref(false)
 	const isContent10Visible = ref(false)
+	const isTooltip1Visible = ref(false)
+	const isTooltip2Visible = ref(false)
+	const isTooltip3Visible = ref(false)
+	const isTooltipCont5aVisible = ref(false)
+	const isTooltipCont5bVisible = ref(false)
+	const isTooltipCont5cVisible = ref(false)
+	const isTooltipCont5dVisible = ref(false)
+	const isTooltipCont5eVisible = ref(false)
 
 
 //Informa se a tela já foi concluida
@@ -985,6 +1315,7 @@ onMounted(() => {
 
 
 </script> 
+
 
 
 <style lang="scss" scoped>
@@ -1080,6 +1411,117 @@ onMounted(() => {
 .col_exposicao{
 height:550px;
 }
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.9rem;
+	}
+.tool-tip-1 {
+position: absolute !important;
+    z-index: 6002 !important;
+    top: 65%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 190px;
+	line-height: normal;
+}
+.triangulo-tool-tip1 {
+    position: absolute !important;
+    top: -10%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-120deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-2 {
+position: absolute !important;
+    z-index: 6002 !important;
+    top: 23%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 190px;
+	line-height: normal;
+}
+.triangulo-tool-tip2 {
+    position: absolute !important;
+    top: 89%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-300deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.tool-tip-3 {
+position: absolute !important;
+    z-index: 6002 !important;
+    top: 18%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+	line-height: normal;
+}
+.triangulo-tool-tip3 {
+    position: absolute !important;
+    top: 89%;
+    left: 41%;
+    z-index: 6005 !important;
+    transform: rotate(-300deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.v-card_info_cont5{
+height:450px;
+}
+.tooltipCont5a {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 76%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+    width: 237px;
+    line-height: normal;
+	}
+	.tooltipCont5b {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 76%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    width: 237px;
+    line-height: normal;
+	}
+	.tooltipCont5c {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 76%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    width: 237px;
+    line-height: normal;
+	}
+	.tooltipCont5d {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 78%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    line-height: normal;
+	}
+	.tooltipCont5e {
+    position: absolute !important;
+    z-index: 6002 !important;
+    top: 78%;
+    left: 78%;
+    transform: translate(-50%, -50%);
+    width: 266px;
+    line-height: normal;
+	}
+	.fechar_tooltip {
+	position: absolute!important;
+    top: 0px;
+    right: 0px;
+	z-index: 6009 !important;
+	cursor: pointer;
+	width:50px;
+	}
 @media screen and (max-width: 1277px){
 .v-card_subs{
 width:100%!important;
@@ -1087,8 +1529,53 @@ width:100%!important;
 .logo_cont1{
 padding:10%;
 }
+.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
+.tool-tip-3 {
+    top: 18%;
+    left: 47%;
+    width: 300px;
+}
+.triangulo-tool-tip3 {
+    top: 89%;
+    left: 15%;
+}
+.v-card_info_cont5{
+height:400px;
+}
+.tooltipCont5a {
+    top: 74%;
+    left: 19%;
+    width: 218px;
+	}
+	.tooltipCont5b {
+    top: 76%;
+    left: 32%;
+    width: 207px;
+	}
+	.tooltipCont5c {
+    top: 76%;
+    left: 50%;
+    width: 237px;
+	}
+	.tooltipCont5d {
+    top: 76%;
+    left: 67%;
+    width: 237px;
+	}
+	.tooltipCont5e {
+    top: 74%;
+    left: 76%;
+    width: 270px;
+	}
 }
 @media screen and (max-width: 768px){
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
 .cont2_info{
 margin-top: 50px!important;
 }
@@ -1113,5 +1600,33 @@ height:80px;
 padding-top:300px;
 margin-bottom:40px;
 }
+.v-card_info_cont5{
+height:650px;
+}
+.tooltipCont5a {
+    top: 17%;
+    left: 74%;
+     width: 50%;
+	}
+	.tooltipCont5b {
+    top: 33%;
+    left: 74%;
+     width: 50%;
+	}
+	.tooltipCont5c {
+    top: 50%;
+    left: 74%;
+     width: 50%;
+	}
+	.tooltipCont5d {
+    top: 67%;
+    left: 74%;
+     width: 50%;
+	}
+	.tooltipCont5e {
+    top: 82%;
+    left: 74%;
+    width: 50%;
+	}
 }
 </style>

@@ -276,7 +276,7 @@
         > 
             <template v-slot:text>
                 Queremos proporcionar a melhor experiência
-                possível para todos, por isso, oferecem os alguns
+                possível para todos, por isso, oferecemos alguns
                 recursos de acessibilidade para te auxiliar.
             </template>
         </WelcomeTooltip>

@@ -103,7 +103,7 @@
             <template v-slot:text>
                 Estas são as unidades do nosso programa. Elas devem
                 ser acessadas seguindo uma ordem. Por isso, serão
-                liberadas conform e o seu progresso. A unidade que você
+                liberadas conforme o seu progresso. A unidade que você
                 está cursando estará em	destaque.
             </template>
         </WelcomeTooltip>

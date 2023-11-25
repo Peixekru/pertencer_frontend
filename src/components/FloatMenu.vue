@@ -169,7 +169,7 @@
 
     // Text Primeiro acesso -> 3
     const toolTipText = ref(
-        "Aqui nesse painel são registradas suas conquistas ao longo da sua jornada de conhecim ento. Realize todas as atividades para preencher o painel!"
+        "Aqui nesse painel são registradas suas conquistas ao longo da sua jornada de conhecimento. Realize todas as atividades para preencher o painel!"
     )
 
     // Text Primeiro acesso -> 10
@@ -198,9 +198,9 @@
     }        
     const blockBtn = (i) => {
         if (i == 1 && appStore.appData.capsula.status == 1) { return false }
-        else if (i == 2 && appStore.appData.start.status == 1) { return false }
-        else if (i == 3 && appStore.appData.workplace.status == 1) { return false }
-        else if (i == 4 && appStore.appData.galeria.status == 1) { return false }
+        else if (i == 2 && appStore.appData.badges.clock == 1) { return false }
+        else if (i == 3 && appStore.appData.badges.heart == 1) { return false }
+        else if (i == 4 && appStore.appData.badges.picture == 1) { return false }
         else { return true }
     }
 </script>

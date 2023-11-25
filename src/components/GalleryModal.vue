@@ -59,9 +59,12 @@
             :class="appStore.isMobile ? 'py-6 px-10' : 'py-10 px-16'"
             >  
                 <!--Title--> 
-                <p>
-                    Lorem ipsum dolor sit am et, consetetur sadipscing elitr, sed diam nonumy eirm od tempor invidunt ut labore et dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et.
+                <p class="mb-12">
+                    Agora, queremos celebrar esse momento especial com você. Siga os passos abaixo para ganhar sua última recompensa:
+                    1) Envie uma foto ou use sua câmera para tirar uma foto de si mesmo. 
+                    2) Escolha a moldura que melhor representa esse momento. 
+                    3) Salve a foto na galeria e compartilhe sua conquista! 
+                    Ao fazer isso, você não apenas ganhará sua última recompensa, mas também se tornará parte do álbum de conquistas compartilhadas por toda a comunidade. Mal podemos esperar para ver seu sorriso brilhando em nossa galeria!
                 </p>
 
                 <v-row

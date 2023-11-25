@@ -6,6 +6,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_missao/header.png"/>
+		<v-img class="show_1277" src="./img/tela_missao/header.png"/>
 		<v-img class="show_mobile" src="./img/tela_missao/header_mobile.png"/>
 	
 		<v-img src="./img/tela_missao/header_text.svg" class="header_text" title="Missão, visão e valores. A cultura da excelência é um atributo do Einstein e uma diretriz estratégica que permeia todas as nossas atividades. É por meio dela que aprimoramos os nossos serviços, melhoramos continuamente os processos e nos posicionamos diante dos públicos e da sociedade."/>
@@ -33,7 +34,7 @@
             </h1>
 			
 			<v-container fill-height class="">
-				<v-row justify="center" class="mt-10">
+				<v-row no-gutters justify="center" class="mt-10">
 					<v-col cols="12" md="4" align="right">
 						<div class="cont1_esquerda reveal fade-left">
 							<p class="cont1_bold">Propósito</p>
@@ -41,7 +42,7 @@
 						</div>
 					</v-col>
 					<v-col cols="12" md="3" align="center" class="reveal fade-bottom">
-						<img style="height:200px" class="gota_footer reveal fade-in" src="./img/tela_missao/img_cont1.svg">
+						<img style="height:150px" class="gota_footer reveal fade-in" src="./img/tela_missao/img_cont1.svg">
 					</v-col>
 					<v-col cols="12" md="4" align="left">
 						<div class="cont1_direita mt-n3 reveal fade-right">
@@ -127,39 +128,133 @@
 					</p>
 					</v-col>
 					<v-col cols="12" md="7" align="center">
-						<img height="600" src="./img/tela_missao/cont2_info.png" usemap="#image-map">
+						<img class="show_desktop" height="600" src="./img/tela_missao/cont2_info.png" usemap="#image-map_desk">
+						<img class="show_1277" height="430" src="./img/tela_missao/cont2_info_1277.png" usemap="#image-map_1277">
+						<img class="show_mobile" height="330" src="./img/tela_missao/cont2_info_mob.png" usemap="#image-map_mob">
+						
 
-					<map name="image-map">
-						<area target="" alt="Chinuch - Educação" title="Chinuch - Educação" coords="356,244,40" shape="circle" @click="tooltip1a=!tooltip1a" >
-						<area target="" alt="Refuá - Saúde" title="Refuá - Saúde" coords="354,356,44" shape="circle" @click="tooltip1b=!tooltip1b">
-						<area target="" alt="Tsedaká - Justiça Social" title="Tsedaká - Justiça Social" coords="243,352,41" shape="circle" @click="tooltip1c=!tooltip1c">
-						<area target="" alt="Mitzvá - Boas Ações" title="Mitzvá - Boas Ações" coords="244,245,38" shape="circle" @click="tooltip1d=!tooltip1d">
+					<map name="image-map_desk">
+						<area style="cursor:pointer" target="" alt="Chinuch - Educação" title="Chinuch - Educação" coords="356,244,40" shape="circle" 
+						@click="
+						isTooltip1aVisible = true;
+						isTooltip1bVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Refuá - Saúde" title="Refuá - Saúde" coords="354,356,44" shape="circle"
+						@click="
+						isTooltip1bVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Tsedaká - Justiça Social" title="Tsedaká - Justiça Social" coords="243,352,41" shape="circle" 
+						@click="
+						isTooltip1cVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1dVisible = false;
+						isTooltip1bVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Mitzvá - Boas Ações" title="Mitzvá - Boas Ações" coords="244,245,38" shape="circle" 
+						@click="
+						isTooltip1dVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1bVisible = false;
+						">
 					</map>
+					
+					<map name="image-map_1277">
+						<area style="cursor:pointer" target="" alt="Chinuch - Educação" title="Chinuch - Educação" coords="254,177,28" shape="circle" 
+						@click="
+						isTooltip1aVisible = true;
+						isTooltip1bVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Refuá - Saúde" title="Refuá - Saúde" coords="254,256,28" shape="circle" 
+						@click="
+						isTooltip1bVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Tsedaká - Justiça Social" title="Tsedaká - Justiça Social" coords="174,253,26" shape="circle" @click="
+						isTooltip1cVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1dVisible = false;
+						isTooltip1bVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Mitzvá - Boas Ações" title="Mitzvá - Boas Ações" coords="174,176,27" shape="circle" 
+						@click="
+						isTooltip1dVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1bVisible = false;
+						">
+					</map>
+					
+					<map name="image-map_mob">
+						<area style="cursor:pointer" target="" alt="Chinuch - Educação" title="Chinuch - Educação" coords="207,144,23" shape="circle" 
+						@click="
+						isTooltip1aVisible = true;
+						isTooltip1bVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Refuá - Saúde" title="Refuá - Saúde" coords="206,207,21" shape="circle" 
+						@click="
+						isTooltip1bVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1dVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Tsedaká - Justiça Social" title="Tsedaká - Justiça Social" coords="141,206,21" shape="circle" @click="
+						isTooltip1cVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1dVisible = false;
+						isTooltip1bVisible = false;
+						">
+						<area style="cursor:pointer" target="" alt="Mitzvá - Boas Ações" title="Mitzvá - Boas Ações" coords="143,143,23" shape="circle" 
+						@click="
+						isTooltip1dVisible = true;
+						isTooltip1aVisible = false;
+						isTooltip1cVisible = false;
+						isTooltip1bVisible = false;
+						">
+					</map>
+					
 					</v-col>
 				</v-row>
 				
-				  <v-expand-transition>
-					  <div v-show="tooltip1a" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1a" style="width: 250px;">
+					  <div v-show="isTooltip1aVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1a">
 
-						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip-cont2-info2" aria-hidden="false" ></i>
+						  <i @click="isTooltip1aVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_missao/btn_close.png"/>
+						  </i>
+						  
+						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tooltip1a" aria-hidden="false" ></i>
 
-						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-6 rounded-xl" style="z-index:6005;">
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
+							
 								<span class="tooltip_text">
 									A palavra <em>chinuch</em> tem origem no hebraico e significa educação. O Ensino, a Pesquisa e a Inovação sempre estiveram no DNA do Hospital Israelita Albert Einstein, como parte do propósito de seus fundadores. Pautados no caminhar do saber científico lado a lado com a assistência médica, o Ensino, Pesquisa e Inovação se fixam nas atividades do Instituto Israelita de Ensino e Pesquisa e do Centro de Educação em Saúde Abram Szajman. 
 								</span>
 							</div>
 						  </div>
+						  
 					  </div>
-				  </v-expand-transition>
-				  
-				  <v-expand-transition>
-					  <div v-show="tooltip1b" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1b" style="width: 250px;">
 
-						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip-cont2-info2" aria-hidden="false" ></i>
+					  <div v-show="isTooltip1bVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1b">
 
-						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+						  <i @click="isTooltip1bVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_missao/btn_close.png"/>
+						  </i>
+						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tooltip1b" aria-hidden="false" ></i>
+
+						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-6 rounded-xl" style="z-index:6005;">
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
@@ -168,15 +263,15 @@
 							</div>
 						  </div>
 					  </div>
-				  </v-expand-transition>
-				  
-				  
-				  <v-expand-transition>
-					  <div v-show="tooltip1c" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1c" style="width: 260px;">
 
+					  <div v-show="isTooltip1cVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1c">
+
+						  <i @click="isTooltip1cVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_missao/btn_close.png"/>
+						  </i>
 						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tooltip1c" aria-hidden="false" ></i>
 
-						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-6 rounded-xl" style="z-index:6005;">
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
@@ -196,26 +291,27 @@
 							</div>
 						  </div>
 					  </div>
-				  </v-expand-transition>
-				  
-				  <v-expand-transition>
-					  <div v-show="tooltip1d" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1d" style="width: 260px;">
 
+					  <div v-show="isTooltip1dVisible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tooltip1d">
+
+						  <i @click="isTooltip1dVisible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
+						  <v-img src="./img/tela_missao/btn_close.png"/>
+						  </i>
 						  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tooltip1d" aria-hidden="false" ></i>
 
-						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
+						  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-6 rounded-xl" style="z-index:6005;">
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
-									A palavra <em>mitzvá’</em> tem origem no hebraico e, no uso comum, significa boas ações. Já a palavra <em>tsedaká</em> vem da mesma raiz do vocábulo hebraico <em>tsedek</em>, que significa justiça, conferindo ao termo o conceito de justiça social. A união desses dois pilares deu origem ao compromisso do Einstein com a Responsabilidade Social, Voluntariado e Filantropia. 									
+									A palavra <em>mitzvá’</em> tem origem no hebraico e, no uso comum, significa boas ações. Já a palavra <em>tsedaká</em> vem da mesma raiz do vocábulo hebraico <em>tsedek</em>, que significa justiça, conferindo ao termo o conceito de justiça social. A união desses dois pilares deu origem ao compromisso do Einstein com a Responsabilidade Social, Voluntariado e Filantropia.									
 								</span>
 							</div>
 						  </div>
 					  </div>
-				  </v-expand-transition>
+
 				  
 			</v-card>
-			<v-card class="box_dicas pl-0 pr-0 mt-n8 reveal fade-bottom mx-auto" style="width: 30%">
+			<v-card class="box_dicas pl-0 pr-0 mt-8 reveal fade-bottom mx-auto" style="width: 30%">
 				<v-card-text>
 					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
 				</v-card-text>
@@ -269,43 +365,37 @@
 		
 		<v-container fill-height class="">
 				<v-row justify="center" class="mt-0">
-					<v-col cols="12" md="6" align="left">
+					<v-col cols="12" sm="12" md="6" align="left" align-self="center">
 						
-							<h1 class="texto_branco" style="margin-top: 30%">OBJETIVO ESTRATÉGICO</h1>
+							<h1 class="texto_branco">OBJETIVO ESTRATÉGICO</h1>
 							<p class="texto_branco">Ser reconhecida globalmente como uma das organizações líderes em termos de excelência de qualidade, segurança, inovação e sustentabilidade no âmbito da saúde.</p>
 						
 					</v-col>
 					<v-col cols="12" md="6" align="center" class="reveal fade-bottom">
-						<v-row justify="center" class="mt-0">
-							<v-col cols="12" md="5" align="center">
+						<v-row justify="center" class="mt-0 pa-5">
+							<v-col cols="12" sm="12" md="6" align="center">
 								<v-img
-								class=""
+								class="obj_est_icons"
 								src="./img/tela_missao/cont3_ICON_01.svg"
 								/>
 							</v-col>
-							<v-col cols="12" md="5" align="center">
+							<v-col cols="12" md="6" align="center">
 								<v-img
-								class=""
+								class="obj_est_icons"
 								src="./img/tela_missao/cont3_ICON_02.svg"
 								/>
 							</v-col>
-							<v-col cols="12" md="2" align="center">
-								
-							</v-col>
-							<v-col cols="12" md="5" align="center">
+							<v-col cols="12" md="6" align="center">
 								<v-img
-								class=""
+								class="obj_est_icons"
 								src="./img/tela_missao/cont3_ICON_03.svg"
 								/>
 							</v-col>
-							<v-col cols="12" md="5" align="center">
+							<v-col cols="12" md="6" align="center">
 								<v-img
-								class=""
+								class="obj_est_icons"
 								src="./img/tela_missao/cont3_ICON_04.svg"
 								/>
-							</v-col>
-							<v-col cols="12" md="2" align="center">
-								
 							</v-col>
 						</v-row>
 					</v-col>
@@ -405,7 +495,16 @@
 									src="./img/tela_missao/cont4_ico_01.svg"
 									/>
 									
-									<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+									<v-dialog width="80%">
+										<template v-slot:activator="{ props }">
+
+										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
+										  </template>
+										  <template v-slot:default="{ isActive }">
+											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695070?h=dfd8816b50&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.1 - Assistência"></iframe></div>
+										  </template>
+										</v-dialog>
 									  
 									<v-img style="width:60%"
 									class="mt-n10" 
@@ -418,10 +517,12 @@
 								</v-col>
 								<v-col cols="12" md="4" align="center">
 									<v-img  style="width:25%"
-									class="" 
+									class="mb-15" 
 									src="./img/tela_missao/cont4_ico_02.svg"
 									/>
-									<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+									
+									
+									
 									<v-img style="width:60%"
 									class="mt-n10" 
 									src="./img/tela_missao/Retangulo-2.svg"
@@ -437,7 +538,20 @@
 									class="" 
 									src="./img/tela_missao/cont4_ico_03.svg"
 									/>
-									<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+									<v-dialog width="80%">
+										<template v-slot:activator="{ props }">
+
+										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
+										  </template>
+										  <template v-slot:default="{ isActive }">
+											  
+											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695123?h=9fc2ea4b4a&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.2 - Ensino e Educação"></iframe></div>
+											  
+										  </template>
+										</v-dialog>
+										
+										
 									<v-img style="width:60%"
 									class="mt-n10"
 									src="./img/tela_missao/Retangulo-3.svg"
@@ -464,7 +578,19 @@
 											class="" 
 											src="./img/tela_missao/cont4_ico_04.svg"
 											/>
-											<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+											<v-dialog width="80%">
+										<template v-slot:activator="{ props }">
+
+										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
+										  </template>
+										  <template v-slot:default="{ isActive }">
+											  
+											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695181?h=97fe1d80b6&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.3 - Pesquisa"></iframe></div>
+											  
+										  </template>
+										</v-dialog>
+										
 											<v-img style="width:60%"
 											class="mt-n10"
 											src="./img/tela_missao/Retangulo-6.svg"
@@ -482,7 +608,22 @@
 											class="" 
 											src="./img/tela_missao/cont4_ico_05.svg"
 											/>
-											<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+											
+											
+											<v-dialog width="80%">
+										<template v-slot:activator="{ props }">
+
+										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
+										  </template>
+										  <template v-slot:default="{ isActive }">
+											  
+											 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695210?h=5dbf8c7325&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.4 - Inovação"></iframe></div>
+											  
+										  </template>
+										</v-dialog>
+											
+											
 											<v-img style="width:60%"
 											class="mt-n10"
 											src="./img/tela_missao/Retangulo-7.svg"
@@ -504,7 +645,22 @@
 									class="" 
 									src="./img/tela_missao/cont4_ico_06.svg"
 									/>
-									<a class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+									
+									
+									<v-dialog width="80%">
+										<template v-slot:activator="{ props }">
+
+										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
+										  </template>
+										  <template v-slot:default="{ isActive }">
+											  
+											 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695343?h=7609b34bb8&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.5 - Responsabilidade Social"></iframe></div>
+											  
+										  </template>
+										</v-dialog>
+									
+									
 									<v-img style="width:60%"
 									class="mt-n10"
 									src="./img/tela_missao/Retangulo-5.svg"
@@ -516,10 +672,7 @@ Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prest
 										</p>
 
 								</v-col>
-								
-								
-								
-								
+
 							</v-row>
 
 						</v-container>
@@ -530,28 +683,82 @@ Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prest
 				</v-card-text>
 			</v-card>
 	
-	<!-- conteúdo 05 ultimo conteudo gambi -->
-	
-	<v-card 
-	id="content05"
-	width="100%"
-	class="mt-n4 mx-auto rounded-lg pt-0"
-	style="z-index:0;"  
-	>
-	&nbsp;
-	</v-card>
-	<!-- conteúdo 05 ultimo conteudo gambi -->
+
 	
 	</v-card>
 
 	<!-- conteúdo 04 -->
 
+<v-container v-show="isContent04Visible">
 
-	<v-sheet
-	v-if="appStore.isFinished"
-	height="100"
-	color="transparent"
-	/>
+<v-container fluid align="center" class="show_desktop py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
+		<v-btn 
+		size="large"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
+		rounded
+		min-width="150px"
+		style="letter-spacing:normal"
+		color="#2cfece"
+		@click="finishedContent"
+		>
+			<a>APÓS CLICAR EM TODOS OS SINAIS DE +, CLIQUE AQUI PARA AVANÇAR</a>
+		</v-btn>
+	</v-container>
+	
+	<v-container fluid align="center" class="show_1277 py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
+		<v-btn 
+		size="small"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
+		rounded
+		min-width="50px"
+		style="letter-spacing:normal"
+		color="#2cfece"
+		@click="finishedContent"
+		>
+			<a>APÓS CLICAR EM TODOS OS SINAIS DE +, CLIQUE AQUI PARA AVANÇAR</a>
+		</v-btn>
+	</v-container>
+	
+	<v-container fluid align="center" class="show_mobile py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
+		<v-btn 
+		size="medium"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
+		rounded
+		min-width="100px"
+		style="letter-spacing:-1"
+		color="#2cfece"
+		@click="finishedContent"
+		>
+			<a class="pa-2"> APÓS CLICAR EM TODOS OS SINAIS DE +,<br>CLIQUE AQUI PARA AVANÇAR </a>
+		</v-btn>
+	</v-container>
+	
+	</v-container>
+
+	
+
+
 	
 
 </template>
@@ -568,13 +775,17 @@ Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prest
 	const appStore = useAppStore();
 
 	//!!! --> Defina o id do último bloco de conteúdo ou elemento da tela Ex: ref('#ultimoId')
-	const lastElementIdOnScreen = ref('#content04')
+	const lastElementIdOnScreen = ref('#content')
 
 	//Controle da visibilidade dos conteúdos
 	const isContent01Visible = ref(true) // <-- Primeiro conteúdo inicia visível
 	const isContent02Visible = ref(false)
 	const isContent03Visible = ref(false)
 	const isContent04Visible = ref(false)
+	const isTooltip1aVisible = ref(false)
+	const isTooltip1bVisible = ref(false)
+	const isTooltip1cVisible = ref(false)
+	const isTooltip1dVisible = ref(false)
 
 //Informa se a tela já foi concluida
 const isAllContentFinished = ref(false)
@@ -716,11 +927,28 @@ line-height: 1.2rem;
 	.tooltip1a {
     position: absolute!important;
     z-index: 6002 !important;
-    top: 61%;
+    top: 59%;
     left: 75%;
     transform: translate(-50%, -50%);
+	width: 250px;
+	line-height: normal;
 	}
-	.triangulo-tool-tip-cont2-info2 {
+	.triangulo-tooltip1a {
+	position: absolute!important;
+    top: 37%;
+    left: -20px;
+	z-index: 6001 !important;
+	transform: rotate(30deg)!important;
+	}
+	.fechar_tooltip {
+	position: absolute!important;
+    top: 0px;
+    right: 0px;
+	z-index: 6009 !important;
+	cursor: pointer;
+	width:50px;
+	}
+	.triangulo-tooltip1b {
 	position: absolute!important;
     top: 37%;
     left: -20px;
@@ -730,9 +958,11 @@ line-height: 1.2rem;
 	.tooltip1b {
     position: absolute!important;
     z-index: 6002 !important;
-    top: 72%;
+    top: 71%;
     left: 75%;
     transform: translate(-50%, -50%);
+	width: 250px;
+	line-height: normal;
 	}
 	.tooltip1c {
     position: absolute!important;
@@ -740,6 +970,8 @@ line-height: 1.2rem;
     top: 69%;
     left: 27%;
     transform: translate(-50%, -50%);
+	width: 260px;
+	line-height: normal;
 	}
 	.tooltip1d {
     position: absolute!important;
@@ -747,6 +979,8 @@ line-height: 1.2rem;
     top: 55%;
     left: 27%;
     transform: translate(-50%, -50%);
+	width: 260px;
+	line-height: normal;
 	}
 	.triangulo-tooltip1c {
 	position: absolute!important;
@@ -808,7 +1042,7 @@ line-height: 1.2rem;
 	padding: 0 !Important;
 	border-radius: 18px 18px 0px 0px !important;
 	z-index: 10;
-	background-color: #DC7689;
+	background-color: #246496!important;
 }
 
 .header_text {
@@ -863,7 +1097,7 @@ line-height: 1.2rem;
 .footer {
 	padding-left: 6% !important;
 	padding-right: 6% !important;
-	margin-bottom: 130px;
+	margin-bottom: 20px;
 }
 
 .footericons {
@@ -887,4 +1121,226 @@ line-height: 1.2rem;
 	/* background: rgb(var(--v-theme-on-surface)); */
 	border: 2px solid #62C9CE !important;
 }
+
+	@media screen and (max-width: 1277px){
+	.tooltip1a {
+    top: 32%;
+    left: 57%;
+	width: 500px;
+	}
+	.triangulo-tooltip1a {
+	top: 96%;
+    left: 224px;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1b {
+    top: 52%;
+    left: 57%;
+	width: 500px;
+	}
+	.triangulo-tooltip1b {
+    top: 93%;
+    left: 224px;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1c {
+    top: 39%;
+    left: 48%;
+    width: 405px;
+	}
+	.triangulo-tooltip1c {
+    top: 96%;
+    left: 164px;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1d {
+    top: 36%;
+    left: 46%;
+	width: 500px;
+	}
+	.triangulo-tooltip1d {
+    top: 93%;
+    left: 224px;
+    transform: rotate(-60deg) !important;
+	}
+	.titulo_missao{
+	line-height: 1.2em;
+	font-size: 1.6em!important;
+	text-align: center;
+	color:white!important;
+	}
+	.cont1_esquerda{
+	width: 80%;
+	padding-top: 10px;
+	padding-right: 10px;
+	}
+	.cont1_direita{
+	width: 100%;
+	padding-top: 0px;
+	padding-left: 10px;
+	}
+	.cont1_inferior{
+	width: 40%;
+	padding: 10px 10px 10px 10px;
+	}
+	.cont1_inferiorp{
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	}
+	.cont1_bold{
+	color: #62C9CE;
+	font-weight:900;
+	font-size: 1rem!important;
+	line-height: 2rem;
+	}
+	.cont1_regular{
+	color: #ffffff;
+	font-weight:600;
+	font-size: 0.8rem!important;
+	line-height: 1.1rem;
+	}
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	}
+	}
+	@media screen and (max-width: 768px){
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.9rem;
+	}
+	.tooltip1a {
+     top: 31%;
+    left: 50%;
+    width: 90%;
+	}
+	.triangulo-tooltip1a {
+	top: 95%;
+    left: 52%;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1b {
+    top: 50%;
+    left: 52%;
+	width: 90%;
+	}
+	.triangulo-tooltip1b {
+    top: 92%;
+    left: 223px;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1c {
+    top: 36%;
+    left: 48%;
+    width: 90%;
+	}
+	.triangulo-tooltip1c {
+    top: 96%;
+    left: 165px;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1d {
+    top: 34%;
+    left: 46%;
+	width: 90%;
+	}
+	.triangulo-tooltip1d {
+    top: 93%;
+    left: 42%;
+    transform: rotate(-60deg) !important;
+	}
+	.titulo_missao{
+	line-height: 1.2em;
+	font-size: 1.6em!important;
+	text-align: center;
+	color:white!important;
+	margin-top:10px!important;
+	}
+	.cont1_esquerda{
+	width: 100%;
+	margin-top: -50px;
+	padding-top: 0px;
+	padding-bottom: 50px;
+	padding-right: 10px;
+	text-align: center;
+	}
+	.cont1_direita{
+	width: 100%;
+	margin-top: 20px!important;
+	padding-top: 0px;
+	padding-bottom: 50px;
+	padding-right: 10px;
+	text-align: center;
+	}
+	.cont1_inferior{
+	width: 40%;
+	padding: 10px 10px 10px 10px;
+	margin-top: -30px;
+	}
+	.cont1_inferiorp{
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+	}
+	.cont1_bold{
+	color: #62C9CE;
+	font-weight:900;
+	font-size: 1rem!important;
+	line-height: 2rem;
+	}
+	.cont1_regular{
+	color: #ffffff;
+	font-weight:600;
+	font-size: 0.8rem!important;
+	line-height: 1.1rem;
+	}
+	.obj_est_icons{
+	width:40%;
+	}
+	}
+	@media screen and (max-width: 600px){
+	.tooltip_text{
+	font-family: 'montserrat'!important;
+	font-size:0.8rem;
+	}
+	.tooltip1a {
+    top: 35%;
+    left: 50%;
+    width: 100%;
+	}
+	.triangulo-tooltip1a {
+	top: 95%;
+    left: 53%;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1b {
+    top: 52%;
+    left: 50%;
+	width: 100%;
+	}
+	.triangulo-tooltip1b {
+    top: 93%;
+    left: 53%;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1c {
+    top: 42%;
+    left: 49%;
+    width: 100%;
+	}
+	.triangulo-tooltip1c {
+    top: 96%;
+    left: 38%;
+    transform: rotate(-60deg) !important;
+	}
+	.tooltip1d {
+    top: 36%;
+    left: 50%;
+	width: 100%;
+	
+	}
+	.triangulo-tooltip1d {
+    top: 93%;
+    left: 40%;
+    transform: rotate(-60deg) !important;
+	}
+	}
 </style>

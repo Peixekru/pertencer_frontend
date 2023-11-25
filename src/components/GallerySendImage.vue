@@ -613,6 +613,9 @@
         appStore.appData.galeria.content.userImgs.unshift(newImage);
         appStore.galleryCardKey += 1
         appStore.gallerySendImageKey += 1
+
+        //Libera badge da galeria 
+        appStore.appData.badges.picture = 1
         
 
         //Atualiza o localStorage
@@ -622,6 +625,7 @@
         const userId = JSON.parse(localStorage.getItem('userId'));
         //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
     }
 
 </script>

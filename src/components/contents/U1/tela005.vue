@@ -6,6 +6,7 @@
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_presenca/header.png" />
+		<v-img class="show_1277" src="./img/tela_presenca/header.png"/>
 		<v-img class="show_mobile" src="./img/tela_presenca/header_mobile.png" />
 		<v-img src="./img/tela_presenca/header_text.svg" class="header_text"
 			title="presença Einstein" />
@@ -41,9 +42,8 @@
 	class="mt-4 mx-auto rounded-lg pt-4 v-card-conteudos_map1"
 	>
 		<v-img class="mx-auto mt-n4 grade_header" src="./img/tela_presenca/grade_header_azul2.png" />
-		<v-img class="mx-auto mt-16 show_mobile" src="./img/tela_presenca/mapa_01.png" />
-			
-	<v-row class="mb-8" no-gutters>
+
+<v-row class="mb-8" no-gutters>
 			<v-col cols="12" md="5">
 				<v-card elevation="6" class="box_mapas_btns pl-0 pr-0 mt-n8 reveal fade-left mx-auto" style="width:100%">
 					<v-card-text>
@@ -120,7 +120,7 @@
 					<v-card-text class="mt-n4">
 					<ul class="ml-6">
 						<li>
-							<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 1 Espaço Einstein</strong> | Reabilitação e Esporte em São Paulo. 
+							<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 4 Espaços Einstein</strong> | Reabilitação e Esporte em São Paulo. 
 						</li>
 					</ul>
 						
@@ -164,14 +164,28 @@
 					</v-card-text>
 				</v-card>
 			</v-col>
-			<v-col cols="12"  md="7" align="right" align-self="end">
+			<v-col cols="12"  md="7" align-self="end" align="center">
 								
-				<img width="600" src="./img/tela_presenca/mapa_01.png" usemap="#image-map">
+				<img width="600" class="show_desktop" src="./img/tela_presenca/mapa_01.png" usemap="#image-map">
+				<img width="450" class="show_1277" src="./img/tela_presenca/mapa_01_1277.png" usemap="#image-map_1277">
+				<img width="300" class="mt-6 show_mobile" src="./img/tela_presenca/mapa_01_mobile.png" usemap="#image-map_mobile">
 
 				<map name="image-map">
-					<area @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" href="#" coords="296,104,29" shape="circle">
-					<area @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" href="#" coords="571,302,27" shape="circle">
-					<area @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" href="#" coords="571,104,26" shape="circle">
+					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="296,104,29" shape="circle">
+					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="571,302,27" shape="circle">
+					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="571,104,26" shape="circle">
+				</map>
+				
+				<map name="image-map_1277">
+					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="222,78,19" shape="circle">
+					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="428,228,19" shape="circle">
+					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="431,77,19" shape="circle">
+				</map>
+				
+				<map name="image-map_mobile">
+					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="148,50,17" shape="circle">
+					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="285,151,12" shape="circle">
+					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="286,52,16" shape="circle">
 				</map>
 				
 				
@@ -297,18 +311,51 @@
 			width = "auto"
 			>
 
+			
+				
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class="text-secondary"
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_1_mapa_1Visible = false; prosseguir('mapa01')"
-				> 
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+				
+				
 			</v-sheet>
 		</v-container>
 
@@ -457,18 +504,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_2_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -555,7 +630,7 @@
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end">
 						<v-row justify="center" align="center">
 							<v-col cols="12" md="12">
-								<v-img src="./img/tela_presenca/link3_mapa1_slide3.png" />
+								<v-img src="./img/tela_presenca/link3_mapa1_slide4.png" />
 							</v-col>
 						</v-row>
 					</v-sheet>
@@ -565,7 +640,7 @@
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end">
 						<v-row justify="center" align="center">
 							<v-col cols="12" md="12">
-								<v-img src="./img/tela_presenca/link3_mapa1_slide4.png" />
+								<v-img src="./img/tela_presenca/link3_mapa1_slide3.png" />
 							</v-col>
 						</v-row>
 					</v-sheet>
@@ -610,18 +685,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_3_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -782,18 +885,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_4_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1122,18 +1253,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_5_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1200,15 +1359,9 @@
 						</li>
 					</ul>
 					
-					<v-card class="mt-6 pa-2 reveal fade-bottom mx-auto" style="width: 100%; background-color:#81C300">
-						<v-row>	
-							<v-col cols="12" md="2" class="d-flex flex-column justify-center align-center cursor-pointer">
+					<v-card class="mt-6 pa-3 reveal fade-bottom mx-auto d-flex justify-center align-center cursor-pointer" style="width: 100%; background-color:#81C300">
 								<span style="font-size:2em;" class="texto_branco mdi mdi-map"></span>
-							</v-col>
-							<v-col cols="12" md="10" class="texto_branco d-flex flex-column justify-center align-left cursor-pointer">
-								 <p>Clique nos botões para saber mais.</p>
-							</v-col>
-						</v-row>
+								 <p class="texto_branco ml-4">A unidade de Goiânia é o primeiro hospital do Einstein fora de São Paulo.</p>
 					</v-card>
 
 			</v-col>
@@ -1233,35 +1386,50 @@
 		<v-container class="d-flex justify-center mb-4">
 		
 			<v-row no-gutters>
-				<v-col cols="12" md="1" align-self="center">
-					<v-img width="80%" class="" src="./img/tela_presenca/ico_tour.png" />
-				</v-col>
-				<v-col cols="12" md="4" align-self="center">
+				<v-col cols="12" md="12" align-self="center" class="ml-4" align="center">
+					
 					<v-btn 
 					type="button"
-								style="letter-spacing: normal;"
-								density="comfortable"
+					style="letter-spacing: -1px;"
+					density="comfortable"
 					size="large"
 					rounded="pill"
-					class="text-secondary"
+					class="text-secondary show_desktop"
 					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-					> 
-						FAÇA UM TOUR VIRTUAL PELA UNIDADE!	
+					@click="isLink_6_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
 					</v-btn>
-				</v-col>
-				<v-col cols="12" md="6" align-self="center" class="ml-4">
+					
 					<v-btn 
 					type="button"
-								style="letter-spacing: normal;"
-								density="comfortable"
+					style="letter-spacing: -1px;"
+					density="comfortable"
 					size="large"
 					rounded="pill"
-					class="text-secondary"
+					class="text-secondary show_1277"
 					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-					@click="isLink_6_mapa_1Visible = false; prosseguir('mapa01')"
-					> 
-						RETORNAR AO MAPA	
+					@click="isLink_6_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
 					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_6_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
 				</v-col>
 			</v-row>
 
@@ -1340,18 +1508,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_7_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1426,18 +1622,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_8_mapa_1Visible = false; prosseguir('mapa01')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_8_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_8_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_8_mapa_1Visible = false; prosseguir('mapa01')">
+					
+					RETORNAR AO MAPA DE SETOR PRIVADO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1455,12 +1679,24 @@
 	class="mt-4 mx-auto rounded-lg pt-4 v-card-conteudos_map2"
 	>
 		<v-img class="mx-auto mt-n4 grade_header" src="./img/tela_presenca/grade_header_azul2.png" />
-		<v-img class="mx-auto mt-6 mb-6 show_mobile" src="./img/tela_presenca/mapa_02.png" />
 		
+		<v-row class="mb-8">
+			<v-col cols="12" md="12" align-self="center" align="center">
+				<img class="mt-8 show_mobile" width="300" src="./img/tela_presenca/mapa_02_mobile.png" usemap="#image-map2_mobile">
+
+				<map name="image-map2_mobile">
+					<area style="cursor:pointer" target="" alt="" title="" coords="6,130,118,168" shape="rect" @click="expand = !expand;">
+					<area style="cursor:pointer" target="" alt="" title="" coords="154,129,271,166" shape="rect" @click="expand2 = !expand2;">
+				</map>
+			</v-col>
+		</v-row>
 		
 		<v-row class="mb-8">
 			<v-col cols="12" md="6" sm="6">
-				<v-card elevation="6" class="box_map2_go pl-0 pr-0 mt-n8 reveal fade-left mx-auto">
+				
+				<v-expand-transition>
+				
+				<v-card v-show="expand" elevation="6" class="box_map2_go pl-0 pr-0 mt-n8 mx-auto">
 					<v-card-text>
 						<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 1 Hospital Municipal</strong>
 					</v-card-text>
@@ -1481,14 +1717,21 @@
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
 							@click="isLink_1_mapa_2Visible = true; prosseguir('link_1_mapa_2')"
+							
 							> 
 							SAIBA MAIS	
 						</v-btn>
 					</v-card-text>
 				</v-card>
+				
+				</v-expand-transition>
+				
 			</v-col>
 			<v-col cols="12"  md="6" sm="6">
-				<v-card elevation="6" class="box_map2_sp pl-0 pr-0 mt-n8 reveal fade-left mx-auto">
+				
+				<v-expand-transition>
+				
+				<v-card v-show="expand2" elevation="6" class="box_map2_sp pl-0 pr-0 mt-n8 mx-auto">
 				<v-card-text>
 					<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 2 Hospitais Municipais</strong>
 				</v-card-text>
@@ -1502,7 +1745,7 @@
 				<v-card-text>
 					<v-btn 
 						type="button"
-							style="letter-spacing: normal;"
+							style="letter-spacing: normal;" 
 							density="comfortable"
 						size="large"
 						rounded="pill"
@@ -1515,6 +1758,7 @@
 				</v-card-text>
 
 				<v-card-text class="mt-n4">
+				
 				<ul class="ml-6">
 					<li>
 						M’Boi Mirim I Dr. Moysés Deutsch (São Paulo).
@@ -1537,6 +1781,7 @@
 				</v-card-text>
 			</v-card>	
 			
+			</v-expand-transition>
 
 			</v-col>
 		</v-row>
@@ -1569,8 +1814,19 @@
 				</v-card>
 				
 			</v-col>
-			<v-col cols="12" md="7">
-				<v-img class="mx-auto mapa_02" src="./img/tela_presenca/mapa_02.png" />
+			<v-col cols="12" md="7" align="center">
+					<img class="mt-n16 show_desktop" width="600" src="./img/tela_presenca/mapa_02.png" usemap="#image-map2">
+					<img class="mt-16 show_1277" width="450" src="./img/tela_presenca/mapa_02_1277.png" usemap="#image-map2_1277">
+		<map name="image-map2">
+			<area style="cursor:pointer" target="" alt="" title="" coords="236,347,21,262" shape="rect"  @click="expand = !expand;">
+			<area style="cursor:pointer" target="" alt="" title="" coords="303,261,549,347" shape="rect"  @click="expand2 = !expand2;">
+		</map>
+		
+
+		<map name="image-map2_1277">
+			<area style="cursor:pointer" target="" alt="" title="" coords="11,199,175,250" shape="rect"  @click="expand = !expand;">
+			<area style="cursor:pointer" target="" alt="" title="" coords="224,199,413,251" shape="rect"  @click="expand2 = !expand2;">
+		</map>
 
 			</v-col>
 		</v-row>
@@ -1581,6 +1837,7 @@
 		</v-card>
 		
 		<img class="map1_unidades" src="./img/tela_presenca/map2_unidades.png" />
+		
 		
 		
 
@@ -1652,18 +1909,47 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_1_mapa_2Visible = false; prosseguir('mapa02')"
-				>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 				
-					RETORNAR AO MAPA	
-				</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1743,18 +2029,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_2_mapa_2Visible = false; prosseguir('mapa02')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1846,18 +2160,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_3_mapa_2Visible = false; prosseguir('mapa02')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_2Visible = false; prosseguir('mapa02')">
+					
+					RETORNAR AO MAPA DE SISTEMA PÚBLICO DE ASSISTÊNCIA À SAÚDE
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -1875,6 +2217,7 @@
 	>
 		<v-img class="mx-auto mt-n4 grade_header" src="./img/tela_presenca/grade_header_azul2.png" />
 		<v-img class="mx-auto mt-6 show_mobile" src="./img/tela_presenca/map3_mobile.png" />
+		<v-img class="mx-auto mt-6 show_1277" src="./img/tela_presenca/map3_mobile.png" />
 			
 	<v-row class="mb-4">
 		<v-col cols="12" md="5" align="right" align-self="end">
@@ -1889,7 +2232,7 @@
 				
 		</v-col>
 		
-		<v-col cols="12" md="6" class="mt-16">
+		<v-col cols="12" md="6" class="my-4">
 			<v-card elevation="6" class="box_mapas_btns pl-0 pr-0 mt-n8 reveal fade-left mx-auto" style="width:100%">
 				
 				<v-card-text>
@@ -1985,7 +2328,7 @@
 						<v-card-text class="mt-n4">
 							<ul class="ml-6">
 								<li>
-									14 Unidades Básicas de Saúde (UBS) 
+									13 Unidades Básicas de Saúde (UBS) 
 								</li>
 							</ul>
 						</v-card-text>
@@ -2174,19 +2517,52 @@
 			width = "auto"
 			>
 
-				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_1_mapa_3Visible = false; prosseguir('mapa03')"
-				>
+			
 				
-					RETORNAR AO MAPA	
-				</v-btn>
+				<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_1_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+				
+				
+				
 			</v-sheet>
 		</v-container>
 
@@ -2271,18 +2647,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_2_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_2_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2349,18 +2753,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_3_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_3_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2561,18 +2993,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_4_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_4_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2652,18 +3112,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_5_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_5_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2740,18 +3228,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_6_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_6_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_6_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_6_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2821,18 +3337,46 @@
 			>
 
 				<v-btn 
-				type="button"
-							style="letter-spacing: normal;"
-							density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isLink_7_mapa_3Visible = false; prosseguir('mapa03')"
-				>
-				
-					RETORNAR AO MAPA	
-				</v-btn>
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_desktop"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="large"
+					rounded="pill"
+					class="text-secondary show_1277"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
+					
+					<v-btn 
+					type="button"
+					style="letter-spacing: -1px;"
+					density="comfortable"
+					size="small"
+					rounded="pill"
+					class="text-secondary show_mobile"
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isLink_7_mapa_3Visible = false; prosseguir('mapa03')">
+					
+					RETORNAR AO MAPA DE ECOSSISTEMA EINSTEIN EM SP
+						
+					</v-btn>
 			</v-sheet>
 		</v-container>
 
@@ -2840,18 +3384,69 @@
 <!-- link_7_mapa_3 -->
 
 
-<v-container fluid align="center" class="py-16 mt- mb-16">
+<v-container fluid align="center" class="show_desktop py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
 		<v-btn 
 		size="large"
-		class="mx-2 text-primary animate__animated animate__fadeInDown"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
 		rounded
-		min-width="180px"
+		min-width="150px"
+		style="letter-spacing:normal"
 		color="#2cfece"
 		@click="finishedContent"
 		>
 			<a>APÓS CONHECER AS UNIDADES, CLIQUE AQUI PARA PROSSEGUIR</a>
 		</v-btn>
 	</v-container>
+	
+	<v-container fluid align="center" class="show_1277 py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
+		<v-btn 
+		size="small"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
+		rounded
+		min-width="50px"
+		style="letter-spacing:normal"
+		color="#2cfece"
+		@click="finishedContent"
+		>
+			<a>APÓS CONHECER AS UNIDADES, CLIQUE AQUI PARA PROSSEGUIR</a>
+		</v-btn>
+	</v-container>
+	
+	<v-container fluid align="center" class="show_mobile py-16 mb-16">
+		<v-img
+		width="40"
+		height="60"
+		src="../GlobalStyles/img/gota-icon.svg"
+		class=" mt-n8 mb-6 mx-auto"
+		:class="appStore.isDarkMode ? 'verde-svg' : 'verde-svg'" 
+		/>
+		<v-btn 
+		size="medium"
+		class=" mx-2 text-primary animate__animated animate__fadeInDown"
+		rounded
+		min-width="50px"
+		style="letter-spacing:-1px"
+		color="#2cfece"
+		@click="finishedContent"
+		>
+			<a class="pa-4"> APÓS CONHECER AS UNIDADES,<br>CLIQUE AQUI PARA PROSSEGUIR</a>
+		</v-btn>
+	</v-container>
+	
 
 </template>
 
@@ -2892,6 +3487,8 @@
 	const isLink_5_mapa_3Visible = ref(false)
 	const isLink_6_mapa_3Visible = ref(false)
 	const isLink_7_mapa_3Visible = ref(false)
+	const isMapa2BoxgoVisible = ref(true)
+	const isMapa2BoxspVisible = ref(false)
 
 	//Finaliza o conteúdo
 	const finishedContent = () => {
@@ -2937,6 +3534,9 @@
 	  tooltip5: false,
 	  tooltip6: false,
 	  tooltip7: false,
+	  
+	  expand: false,
+      expand2: false,
     }),
   }
 </script>
@@ -3043,7 +3643,7 @@ margin-top:-80px
     text-align: left;
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
     position: absolute;
-    top: 58%;
+    top: 62%;
     left: 45%;
     width: 255px;
 }
@@ -3052,7 +3652,7 @@ margin-top:-80px
     text-align: left;
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
     position: absolute;
-    top: 58%;
+    top: 62%;
     left: 69%;
     width: 255px;
 }
@@ -3109,8 +3709,15 @@ height:60px;
 	font-size: 1rem !important;
 	font-family: 'montserrat' !important;
 }
-
+.box_mapas_btns{
+width:100%!important;
+}
 @media screen and (max-width: 1277px){
+.v-card-conteudos_map3 {
+	padding-left: 6% !important;
+	padding-right: 6% !important;
+	background-image: none;
+}
 ul li {
 font-size:0.9em!important;
 }
@@ -3160,7 +3767,73 @@ margin-top:80px
     top: 48%;
     left: 60%;
 }
+.map1_unidades{
+    height: 10%!important;
+}
+.box_mapas_btns{
+width:100%!important;
+}
+}
 
+@media screen and (max-width: 950px){
+ul li {
+font-size:0.9em!important;
+}
+.box_map2_go {
+    top: 63%;
+    left: 8%;
+    width: 250px;
+}
+.box_map2_sp {
+    top: 63%;
+    left: 41%;
+    width: 404px;
+}
+.map1_unidades{
+    height: 7%!important;
+}
+.map3_unidades{
+    height: 7%!important;
+}
+.btn_map1_sp{
+	position: absolute;
+    top: 45%;
+    left: 40%;
+}
+.btn_map1_go{
+	position: absolute;
+    top: 32%;
+    left: 50%;
+}
+.btn_map1_bh{
+	position: absolute;
+    top: 32%;
+    left: 70%;
+}
+.btn_map1_rj{
+	position: absolute;
+    top: 58%;
+    left: 70%;
+}
+.btn_img{
+height:50px;
+}
+.mapa_02{
+margin-top:80px
+}
+.btn_map2_sp{
+	position: absolute;
+    top: 48%;
+    left: 76%;
+}
+.btn_map2_go{
+	position: absolute;
+    top: 48%;
+    left: 60%;
+}
+.box_mapas_btns{
+width:80%!important;
+}
 }
 @media screen and (max-width: 768px){
 .v-card-conteudos {
@@ -3230,6 +3903,9 @@ height:50px;
 .map1_unidades{
     height: 7%;
 }
+.map2_unidades{
+    height: 7%;
+}
 .map3_unidades{
     height: 7%;
 }
@@ -3242,6 +3918,9 @@ height:50px;
 	position: absolute;
     top: 24%;
     left: 27%;
+}
+.box_mapas_btns{
+width:80%!important;
 }
 }
 @media screen and (max-width: 599px){
@@ -3296,6 +3975,9 @@ height:50px;
 	position: absolute;
     top: 18%;
     left: 27%;
+}
+.box_mapas_btns{
+width:80%!important;
 }
 }
 </style>

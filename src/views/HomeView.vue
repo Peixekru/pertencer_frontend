@@ -3,7 +3,8 @@
     <v-container fluid 
     class="fill-height px-0 pt-0 pb-0"
     :class="appStore.isDarkMode ? 'container-dark' : 'container-light' "
-    > 
+    >
+
         <!--Vídeo de background-->
         <div 
         :class="appStore.isDarkMode ? 
@@ -23,7 +24,7 @@
         :class="appStore.isDarkMode ? 
         'bg-home-img-dark' : 'bg-home-img-light' "
         > -->
-        
+
             <v-container
             class="fill-height"
             :class="appStore.appData.firstAccess == 3  ? 'animate__animated animate__fadeIn' : 'animate__animated animate__fadeIn'"
@@ -31,7 +32,7 @@
                 <!--Primeiro acesso -> Overlay perdura até welcomeStep 6 -->
                 <WelcomeModalFx 
                 v-if="appStore.welcomeStepCounter > 0  && 
-                appStore.welcomeStepCounter <= 6 "
+                appStore.welcomeStepCounter <= 6 || appStore.allFinished == true"
                 />
 
                 <v-container
@@ -108,6 +109,11 @@
 
     </v-container>
 
+
+    <!--Final course msg-->
+    <FinishAllMsg  v-if="appStore.allFinished == true"/>
+
+
 </template>
 
 
@@ -121,6 +127,8 @@
     import UnidadeCard from '@/components/UnidadeCard.vue'
     import HomeSpecialCards from '@/components/HomeSpecialCards.vue'
 	import WelcomeModalFx from '@/components/WelcomeModalFx.vue'
+
+    import FinishAllMsg from '@/components/FinishAllMsg'
 
     //Sons dos botões
     import { useBeepSound }  from '@/components/composables/useSounds'
@@ -221,4 +229,4 @@
         animation: pulse; 
         animation-duration: 1s;
     }
-</style>
+</style>    

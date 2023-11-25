@@ -1,6 +1,7 @@
 // Plugins
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+//import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -17,6 +18,7 @@ export default defineConfig({
       autoImport: true,
       //styles: { configFile: "src/styles/settings.scss" }
     }),
+    //basicSsl(),
   ],
   define: { 
     'process.env': {} 

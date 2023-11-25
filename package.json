@@ -11,6 +11,7 @@
     "@fortawesome/fontawesome-free": "^6.4.2",
     "@mdi/font": "7.0.96",
     "@pdanpdan/vue-keyboard-trap": "^1.0.19",
+    "@vitejs/plugin-basic-ssl": "^1.0.2",
     "@vueuse/sound": "^2.0.1",
     "animate.css": "^4.1.1",
     "axios": "^1.4.0",
