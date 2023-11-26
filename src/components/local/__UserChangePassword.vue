@@ -122,11 +122,11 @@
 
     import { ref } from 'vue'
     import { useAppStore } from '@/store/app'
-    import { useAuthStore } from '../store/userAuth'
+    import { useApiStore } from '@/store/api'
 
     //Inicia a store
     const appStore = useAppStore()
-    const authStore = useAuthStore()
+    const apiStore = useApiStore();
 
     //Exibe / esconde a senha
     const isVisible = ref(false)
@@ -145,16 +145,13 @@
 
     //Altera senha do usuário
     const submmitUser = () => { 
-
+        //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'))
-        //console.log({ "userId": userId, "password": password.value })
-        authStore.useLogin(
-            // path / { userID, password }
-            '/chgpsw', {"userId": userId, "password": password.value }
-        )
+        const token = JSON.parse(sessionStorage.getItem('token'))
+        apiStore.usePost('/login', {"userId": userId,"token": token, "newPassword": password.value})
 
         //User Feedback
-        //appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
+        appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
 
         isFinishBtn.value = true
     }

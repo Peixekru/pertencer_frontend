@@ -1,5 +1,7 @@
 <template>
     <v-dialog v-model="appStore.debugModal" max-width="1100px">
+
+        
         
         <v-card
         color="transparent"
@@ -7,14 +9,32 @@
         class="mx-auto px-6"
         >
             <v-card
-            class="mx-auto my-8 text-center"
+            class="mx-auto my-4 text-center"
             rounded = "lg"
-            max-width="344"
+            min-width="280"
             title="APAGAR"
             subtitle="Apagar todos os dados do curso."
             @click="cleanData"
             >
                 <v-icon color="error" icon="mdi-alert-circle-outline" size="x-large" class="mb-4"/>
+            </v-card>
+        </v-card>
+
+        <v-card
+        v-if="appStore.currentRoute == '/conteudo'"
+        color="transparent"
+        elevation="0"
+        class="mx-auto px-6"
+        >
+            <v-card
+            class="mx-auto my-4 text-center"
+            rounded = "lg"
+            min-width="280"
+            title="AVANÇAR"
+            subtitle="Completar esta tela."
+            @click="goNext"
+            >
+                <v-icon color="success" icon="mdi-check-circle-outline" size="x-large" class="mb-4"/>
             </v-card>
         </v-card>
 
@@ -26,6 +46,7 @@
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
     import { useRouter } from 'vue-router'
+    import { useStartProgress } from './composables/useProgress'
 
     const appStore = useAppStore()
     const apiStore = useApiStore()
@@ -600,7 +621,7 @@
 
     const cleanData = () => {
 
-        console.log('foi')
+        console.log('Tudo limpo')
 
         //Fecha modal debug
         appStore.debugModal = false
@@ -615,6 +636,19 @@
         //Volta para página de login
         router.push('/')
 
+    }
+
+    const goNext = () => {
+        console.log('Footer liberado')
+
+        //Fecha modal debug
+        appStore.debugModal = false
+
+        //Exibe o footer
+        appStore.finishedContent(true)
+        useStartProgress();
+
+        //router.push('/home')
     }
 
 </script>

@@ -296,7 +296,7 @@
 		</v-card>
 		
 		<v-card elevation="3" width="100%" class="mx-auto rounded-lg reveal fade-bottom">
-			<!--<v-timeline class="timeline_carroussel" direction="horizontal">
+			<v-timeline class="timeline_carroussel" direction="horizontal">
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -314,7 +314,7 @@
 					<template v-slot:icon>
 						<span style="color:white;font-size:0.8em">1969</span>
 					</template>
-				</v-timeline-item>
+				</v-timeline-item> 
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -382,7 +382,7 @@
 					</template>
 				</v-timeline-item>
 
-			</v-timeline>-->
+			</v-timeline>
 			<v-carousel show-arrows="hover" hide-delimiters color="primary" :continuous="false">
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">

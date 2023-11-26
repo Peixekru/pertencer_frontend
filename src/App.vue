@@ -130,7 +130,7 @@
 	import CustomCursor from '@/components/CustomCursor'
 
 	//*!Retirar para produção!!
-	import DebugModal from '@/components/DebugModal'
+	//import DebugModal from '@/components/DebugModal'
 
 	const appStore = useAppStore()
 	const router = useRouter()

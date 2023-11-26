@@ -101,7 +101,7 @@
                 </v-btn>
 
                 <v-btn
-                v-if="isFinishBtn "
+                v-if="appStore.isChangedPassword"
                 :disabled ="password != passwordConfirm || password.length < 6"
                 block
                 class="mb-6 mt-4 animate__animated animate__fadeInUp"
@@ -122,11 +122,11 @@
 
     import { ref } from 'vue'
     import { useAppStore } from '@/store/app'
-    import { useApiStore } from '@/store/api'
+    import { useAuthStore } from '../store/userAuth'
 
     //Inicia a store
     const appStore = useAppStore()
-    const apiStore = useApiStore();
+    const authStore = useAuthStore()
 
     //Exibe / esconde a senha
     const isVisible = ref(false)
@@ -145,15 +145,21 @@
 
     //Altera senha do usuário
     const submmitUser = () => { 
-        //Atualiza backend
+
         const userId = JSON.parse(localStorage.getItem('userId'))
-        const token = JSON.parse(sessionStorage.getItem('token'))
-        apiStore.usePost('/login', {"userId": userId,"token": token, "newPassword": password.value})
+        //console.log({ "userId": userId, "password": password.value })
+
+
+        authStore.useLogin(
+            // path / { userID, password }
+            '/chgpsw', {"userId": userId, "password": password.value }
+        )
+
 
         //User Feedback
-        appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
+        //appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
 
-        isFinishBtn.value = true
+        //isFinishBtn.value = true
     }
 
 </script>
