@@ -45,7 +45,7 @@
 
         <v-btn
         block
-        class="my-3 text-secondary"
+        class="my-3 mb-12 text-secondary"
         color="primary"
         size="large"
         rounded
@@ -55,18 +55,18 @@
         Entrar
         </v-btn>
 
-        <v-card-text class="text-center mb-4">
+        <!--<v-card-text class="text-center mb-4">
             <a
             class="text-decoration-none text-primary"
             @click="teste('Criar fuxo de recuperação de senha.')"
             >
                 Esqueci minha senha <v-icon icon="mdi-chevron-right"></v-icon>
             </a>
-        </v-card-text>
+        </v-card-text>-->
 
 
         <v-img
-            class="mx-auto my-2 animate__animated animate__flipInX animate__delay-1s"
+            class="mx-auto my-4  animate__animated animate__flipInX animate__delay-1s"
             :class="appStore.isDarkMode ? 'white-svg' : '' "
             max-width="250"
             src="../assets/img/login-footer-logo.svg"

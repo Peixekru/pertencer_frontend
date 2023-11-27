@@ -142,15 +142,13 @@
 	import ConteudoCardV2 from "@/components/ConteudoCardV2.vue";
 	import WelcomeTooltip from '@/components/WelcomeTooltip'
 
-	//import { useApiStore } from '@/store/api'
+	import { useApiStore } from '@/store/api'
 
 	import { useLoadCurrentObject } from "../components/composables/useLoadObject"
 
-
-
-
 	const appStore = useAppStore();
 	const router = useRouter();
+	const apiStore = useApiStore();
 
 	//Texto do tooltip
 	const toolTipText = ref('Acesse os conteúdos anteriores para desbloquear esse módulo.')
@@ -205,7 +203,7 @@
             //port / path / data
             apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
             //User Feedback
-            appStore.globalMsg('Você já sabe tudo sobre a plataforma. Aproveite os conteúdos! ', 'success')
+            //appStore.globalMsg('Você já sabe tudo sobre a plataforma. Aproveite os conteúdos! ', 'success')
 		}
 
 	}

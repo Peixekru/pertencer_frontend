@@ -125,7 +125,7 @@
                                 min-width="200"
                                 rounded
                                 class="bg-primary letter-normal px-0 text-secondary"
-                                @click="goLink('https://sbibae.workplace.com/groups/172225893488576')"
+                                @click="goLink('https://sbibae.workplace.com/groups/206612450124381/?ref=share​')"
                                 >
                                     Acessar!
                                 </v-btn>

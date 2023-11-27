@@ -430,6 +430,25 @@
 
     //Grava alterações no localstorage e no backend
     const saveData = () => {
+
+        //Armazena data atual do sistema
+        let currentDate = new Date()
+
+
+        //Modifica a data de gravação para a data atual
+        appStore.appData.capsula.content.startDate = currentDate.toLocaleDateString()
+
+
+        //Acrescenta + 90 dias à data do envio da mensagem
+        var sendDate = new Date().setDate(currentDate.getDate() + 90)
+        //Converte data de envio para string local
+        var sendDateStr = new Date(sendDate).toLocaleDateString()
+        //Modifica a data de envio da mensagem
+        appStore.appData.capsula.content.sendDate = sendDateStr
+
+        //Atualiza o card da cápsula na home
+        appStore.capsulaCardKey += 1
+
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
         //Atualiza backend

@@ -296,7 +296,58 @@
 		</v-card>
 		
 		<v-card elevation="3" width="100%" class="mx-auto rounded-lg reveal fade-bottom">
+
+			<!--Timeline-->
+
+			
+				<v-sheet
+				color = "transparent"
+				class="mt-4 mx-auto my-0"
+				:max-width="
+				appStore.screenWidth < 600 ? 300 :
+				appStore.screenWidth > 600 && appStore.screenWidth < 700  ? 400 : 
+				appStore.screenWidth > 700 && appStore.screenWidth < 800  ? 500 : 
+				appStore.screenWidth > 800 && appStore.screenWidth < 960  ? 600 : 
+				appStore.screenWidth > 960 && appStore.screenWidth < 1280 ? 660 : 
+				1100"
+				>
+			
+					<v-slide-group
+					center-active
+					v-model="timelineSelect"
+					show-arrows = "always"
+					>
+
+					<v-sheet
+						height = "1"
+						width = "1250"
+						color = "info"
+						class = 'line-pos'
+					/>
+
+						<v-slide-group-item
+						v-for="i in timeLineNum.length"
+						:key="i"
+						v-slot="{ isSelected }"
+						>
+							<v-btn
+							class="ma-2"
+							elevation = 0
+							rounded
+							:color="isSelected ? 'primary' : 'info'"
+							:class = "!isSelected ? 'text-primary' : ''"
+							@click="timelineSelect = i - 1"
+							>
+							{{ timeLineNum[i - 1]}}
+							</v-btn>
+						</v-slide-group-item>
+					</v-slide-group>
+				</v-sheet>
+
+
+<!--
 			<v-timeline class="timeline_carroussel" direction="horizontal">
+
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -314,7 +365,7 @@
 					<template v-slot:icon>
 						<span style="color:white;font-size:0.8em">1969</span>
 					</template>
-				</v-timeline-item> 
+				</v-timeline-item> 		
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -338,7 +389,7 @@
 					<template v-slot:icon>
 						<span style="color:white;font-size:0.8em">1999</span>
 					</template>
-				</v-timeline-item>
+				</v-timeline-item>			
 
 				<v-timeline-item fill-dot class="mb-12" dot-color="#62C9CE" size="large">
 					<template v-slot:icon>
@@ -383,7 +434,16 @@
 				</v-timeline-item>
 
 			</v-timeline>
-			<v-carousel show-arrows="hover" hide-delimiters color="primary" :continuous="false">
+-->
+
+
+			<!--Carousel-->
+			<v-carousel 
+			v-model="timelineSelect"
+			:show-arrows="false"
+			hide-delimiters color="primary" 
+			:continuous="false"
+			>
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -398,6 +458,8 @@
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
+
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -1395,10 +1457,20 @@
 	const isCard03Visible = ref(false)
 	const isCard04Visible = ref(false)
 
+	//Linha do tempo
+	const timeLineNum = ref([
+		1959, 1967, 1969, 1971, 1997, 1998, 1999, 2001, 2000, 2004, 2010, 2013, 2015, 2022, 2023
+	])
+	//Controla a seleção da linha do tempo e do carrossel
+	const timelineSelect = ref(0)
+
+
+	const teste = () => {
+		console.log(timelineSelect)
+	}
+
 
 	const isAllContentFinished = ref(false)
-
-
 
 	//Finaliza o conteúdo
 	const finishedContent = () => {
@@ -1418,7 +1490,7 @@
 
 		if(`#${contentId}`  == lastElementIdOnScreen.value){	
 			document.addEventListener('scroll', () => {
-				const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight
+				const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight - 100
 				if (window.scrollY >= scrollableHeight && isAllContentFinished.value == false) { 
 					finishedContent() 
 					isAllContentFinished.value = true 
@@ -1640,6 +1712,11 @@
 
 .col_card_3_img_ult {
 	margin: 0px 0px 0px 0px;
+}
+
+.line-pos{
+	position: absolute;
+	top: 25px
 }
 
 .footer {

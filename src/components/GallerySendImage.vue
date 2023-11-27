@@ -378,8 +378,8 @@
                                     <v-img
                                     v-if="finalImage == null"
                                     cover
-                                    lazy-src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
-                                    src="https://placehold.co/200x200/eaeaea/ffffff?text=img&font=montserra"
+                                    lazy-src="../assets/img/profile_pic.png"
+                                    src="../assets/img/profile_pic.png"
                                     :aspect-ratio="1"
                                     />
                                 

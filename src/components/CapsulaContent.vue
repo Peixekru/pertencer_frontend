@@ -323,13 +323,26 @@
 
     // Inicia a cápsula do tempo
     const startCapsula = () => {
+
+        let currentDate = new Date()
+
         //Inicia a cápsula 
         appStore.appData.capsula.status = 1
 
         //Modifica a mensagem
         appStore.appData.capsula.content.sendMessage = msg.value
+        
         //Modifica a data de gravação para a data atual
-        appStore.appData.capsula.content.startDate = new Date().toLocaleDateString()
+        appStore.appData.capsula.content.startDate = currentDate.toLocaleDateString()
+
+
+        //Acrescenta + 90 dias à data do envio da mensagem
+        var sendDate = new Date().setDate(currentDate.getDate() + 90)
+        //Converte data de envio para string local
+        var sendDateStr = new Date(sendDate).toLocaleDateString()
+        //Modifica a data de envio da mensagem
+        appStore.appData.capsula.content.sendDate = sendDateStr
+    
 
         //Modifica o estilo
         appStore.appData.capsula.content.style = msgStyle.value
