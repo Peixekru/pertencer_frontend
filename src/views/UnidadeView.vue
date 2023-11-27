@@ -220,7 +220,7 @@
 			} else if (appStore.currentUnidadeNumber == 2) {
 				return  new URL(`../assets/img/img-${index + 10}.jpg`, import.meta.url).href
 			} else if (appStore.currentUnidadeNumber == 3) {
-				return  new URL(`../assets/img/img-${index + 16}.jpg`, import.meta.url).href
+				return  new URL(`../assets/img/img-${index + 17}.jpg`, import.meta.url).href
 			}
 	} 
 

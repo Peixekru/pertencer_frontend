@@ -33,8 +33,46 @@
 
 
 
-		<v-card elevation="3" width="100%" class="mx-auto rounded-lg mt-6 reveal fade-bottom">
-			<v-carousel show-arrows="hover" hide-delimiters color="primary" :continuous="false">
+		<!-- Btn prev -->
+			<v-btn
+			icon="mdi-chevron-left"
+			class="btn-left"
+			:color="carousel01 == 0 ? 'white' : 'primary'"
+			:variant="carousel01 == 0 ? 'text' : 'flat'"
+			:disabled="carousel01 == 0"
+			@click="carousel01 --"
+			/>
+
+			<!-- Btn next (3 slides) -->
+			<v-btn
+			icon="mdi-chevron-right"
+			class="btn-right"
+			:color="carousel01 == 2 ? 'white' : 'primary'"
+			:variant=" carousel01 == 2 ? 'text' : 'flat'" 
+			:disabled="carousel01 == 2"
+			@click="carousel01 ++"
+			/>
+
+			<!-- Carousel container -->
+			<v-card 
+			elevation="3" 
+			width="100%" 
+			class="mx-auto my-8 reveal fade-bottom"
+			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
+			>
+			
+			
+			<!-- Carousel -->
+				<v-carousel 
+				v-model="carousel01"
+				:show-arrows="false"
+				hide-delimiter-background 
+				:hide-delimiters="appStore.isMobile"
+				color="primary" 
+				:continuous="false"
+				:progress=" appStore.isMobile ? 'primary' : false"
+				>
+				
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -574,7 +612,8 @@ const isCard04Visible = ref(false)
 const isCard05Visible = ref(false)
 const isCard06Visible = ref(false)
 
-
+//Controla os slides do carousel01
+const carousel01 = ref(0)
 
 //Informa se a tela já foi concluida
 const isAllContentFinished = ref(false)
@@ -909,6 +948,22 @@ onMounted(() => {
 .card-bg-img {
 	background-image: url("./img/tela_amigoh/card_fundo.png");
 	background-size: cover;
+}
+
+.btn-left {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	left: 1%;
+	transform: translate(0, -50%);
+}
+
+.btn-right {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	right: 1%;
+	transform: translate(0, -50%);
 }
 @media screen and (max-width: 1277px) {
 .text_cont2 {

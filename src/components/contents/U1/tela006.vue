@@ -260,23 +260,23 @@
 
 		<v-img class="mx-auto grade_header" src="./img/tela_estrutura/grade_04.png" />
 
-		<v-container fill-height class="mt-n10">
+		<v-container fill-height class="mt-0">
 
 			<v-row justify="center" class="mt-n10">
 
 				<v-col cols="12" md="8" align="left">
-					<h2 class="texto_branco font-weight-bold text-primary mt-6 reveal fade-left">
+					<h2 class="texto_branco font-weight-bold text-primary mt-0 reveal fade-left">
 						Certificações, acreditações e reconhecimentos
 					</h2>
 					<p class="mt-4 texto_branco reveal fade-left">
 						Os serviços e processos de controle do Einstein são certificados, acreditados ou designados com
 						relação a padrões e normas externas de referência.
 					</p>
-					<p class="my-4 texto_branco reveal fade-left">
+					<p class="mt-4 texto_branco reveal fade-left">
 						Destacamos os principais para você conhecer.
 					</p>
 				</v-col>
-				<v-col cols="12" md="4" align="left">
+				<v-col cols="12" md="4" align="left" class="mt-0" align-self="end">
 					<v-card class="box_dicas_tela_estrutura pl-0 pr-0 reveal fade-right">
 						<v-card-text>
 							<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Navegue pelas setas abaixo.
@@ -284,7 +284,7 @@
 					</v-card>
 				</v-col>
 			</v-row>
-
+			
 
 			<!-- Btn prev -->
 			<v-btn
@@ -518,7 +518,7 @@
 										Certificar os padrões de qualidade e segurança do Departamento de Voluntários. Área
 										e escopo: Unidades Morumbi, Perdizes, Alphaville, Ibirapuera, Vila Mariana,
 										Paraisópolis, Hospital Municipal Vila Santa Catarina - Dr. Gilson de Cássia Marques
-										de Carvalho e Hospital Municipal M’Boi Mirim.​
+										de Carvalho e Hospital Municipal M’Boi Mirim.
 									</p>
 								</v-col>
 							</v-row>
@@ -559,7 +559,7 @@
 									</h2>
 									<p class="mt-4">
 										Garantir padrões definidos pela norma dos Sistemas de Gestão Energética. Área e
-										escopo: Unidade Morumbi.​
+										escopo: Unidade Morumbi.
 									</p>
 								</v-col>
 							</v-row>
@@ -888,11 +888,9 @@ onMounted(() => {
 
 .box_dicas_tela_estrutura {
 	border-radius: 20px;
-	position: relative;
-	top: 170px;
 	text-align: center;
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
-	width: 100%;
+	width: 100%!important;
 }
 
 .cont1_col1 {
@@ -907,7 +905,7 @@ onMounted(() => {
 .footer {
 	padding-left: 6% !important;
 	padding-right: 6% !important;
-	margin-bottom: 130px;
+	margin-bottom: 30px;
 }
 
 .btn-left {
@@ -936,6 +934,8 @@ onMounted(() => {
 	.cont1_col2 {
 		padding-left: 0px;
 	}
+	
+
 }
 
 @media screen and (max-width: 768px) {

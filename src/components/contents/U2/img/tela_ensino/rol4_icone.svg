@@ -1,24 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="104" height="104" viewBox="0 0 104 104">
-  <defs>
-    <filter id="_4">
-      <feOffset dy="3" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feFlood flood-opacity="0.161" result="color"/>
-      <feComposite operator="out" in="SourceGraphic" in2="blur"/>
-      <feComposite operator="in" in="color"/>
-      <feComposite operator="in" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Grupo_5691" data-name="Grupo 5691" transform="translate(-914 -16238)">
-    <g id="Elipse_178" data-name="Elipse 178" transform="translate(920 16244)" fill="#fff" stroke="#e17000" stroke-width="6">
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104">
+  <g id="Grupo_5649" data-name="Grupo 5649" transform="translate(-914 -7843)">
+    <g id="Elipse_178" data-name="Elipse 178" transform="translate(920 7849)" fill="#fff" stroke="#62c9ce" stroke-width="6">
       <circle cx="46" cy="46" r="46" stroke="none"/>
       <circle cx="46" cy="46" r="49" fill="none"/>
     </g>
-    <g data-type="innerShadowGroup">
-      <text id="_4-2" data-name="4" transform="translate(966 16317)" fill="#e17000" font-size="75" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="-26.25" y="0">4</tspan></text>
-      <g transform="matrix(1, 0, 0, 1, 914, 16238)" filter="url(#_4)">
-        <text id="_4-3" data-name="4" transform="translate(52 79)" fill="#fff" font-size="75" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800"><tspan x="-26.25" y="0">4</tspan></text>
-      </g>
-    </g>
+    <text id="_60_" data-name="60%" transform="translate(965 7906)" fill="#004f81" font-size="36" font-family="Montserrat-Regular, Montserrat"><tspan x="-37.8" y="0">60%</tspan></text>
   </g>
 </svg>

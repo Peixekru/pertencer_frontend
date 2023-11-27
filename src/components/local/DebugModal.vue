@@ -226,6 +226,16 @@
                                 "block": 0
                             },
                             {
+                                "title": "Ensino Corporativo",
+                                "icon": "tree",
+                                "time": 5,
+                                "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
+                                "objectRating": 0,
+                                "userRating": 0,
+                                "status": 0,
+                                "block": 0
+                            },
+                            {
                                 "title": "Ações de Desenvolvimento",
                                 "icon": "tree",
                                 "time": 5,
