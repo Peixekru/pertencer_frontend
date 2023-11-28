@@ -32,7 +32,9 @@
 		useStartProgress()
 
 		//libera o Relógio no menu lateral
-		appStore.appData.badges.clock = 1
+		if(appStore.appData.badges.clock == 0){
+			appStore.appData.badges.clock = 1
+		}
 
 		//Atualiza o localStorage
 		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))

@@ -124,6 +124,9 @@
 			:hideToolTipButton = true
 			:toolTipW = "280"
 			> 
+				<template v-slot:btnText>
+					PROSSEGUIR
+				</template>
 				<template v-slot:text>
 					<span class="font-weight-bold">{{ ToolTipText }}</span>
 				</template>

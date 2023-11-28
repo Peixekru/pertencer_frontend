@@ -100,6 +100,9 @@
         :toolTipAdjust="appStore.isMobile ? [0, 0, -84, 0] : [0, 0, -44, -75]" 
         @my-click-event="appStore.welcomeStepCounter = 3"
         > 
+            <template v-slot:btnText>
+				PROSSEGUIR
+			</template>
             <template v-slot:text>
                 Estas são as unidades do nosso programa. Elas devem
                 ser acessadas seguindo uma ordem. Por isso, serão
@@ -122,7 +125,7 @@
         :toolTipAdjust="appStore.isMobile ? [-42, 0, 0, 0] : [-46, 0, 0, 0]" 
         :hideToolTipButton = true
         :toolTipW = "280"
-        > 
+        >
             <template v-slot:text>
                 Clique aqui e acesse
                 a Unidade 01

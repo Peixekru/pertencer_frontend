@@ -28,7 +28,9 @@
 		useStartProgress()
 
 		//libera o Coração no menu lateral
-		appStore.appData.badges.heart = 1
+		if(appStore.appData.badges.heart == 0){
+			appStore.appData.badges.heart = 1
+		}
 
 		//Atualiza o localStorage
 		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))

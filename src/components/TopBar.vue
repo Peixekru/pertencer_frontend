@@ -158,7 +158,7 @@
                                                 min-width="84"
                                                 elevation="2" 
                                                 class="pa-2 mx-1 d-flex flex-column align-center"
-                                                style="opacity: .5;"
+                                                
                                                 >
                                                     <v-img
                                                     :class="appStore.isDarkMode ? 'white-svg' : '' "
@@ -254,6 +254,9 @@
         :toolTipAdjust="[12, 0, 0, 120]" 
         @my-click-event="appStore.welcomeStepCounter = 5"
         > 
+            <template v-slot:btnText>
+				PROSSEGUIR
+			</template>
             <template v-slot:text>
                 <p>Quer rever o vídeo</p>
                 <p>introdutório? Acesse por aqui.</p>
@@ -273,7 +276,10 @@
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [-28, 0, 0, -123] : [-8, 0, 0, -22]" 
         @my-click-event="appStore.welcomeStepCounter = 6"
-        > 
+        >
+            <template v-slot:btnText>
+				PROSSEGUIR
+			</template>
             <template v-slot:text>
                 Queremos proporcionar a melhor experiência
                 possível para todos, por isso, oferecemos alguns
@@ -294,7 +300,10 @@
         :toolTipPos="0" 
         :toolTipAdjust="appStore.isMobile ?  [12, 0, 0, -110] : [12, 0, 0, 26]" 
         @my-click-event="appStore.welcomeStepCounter = 7"
-        > 
+        >
+            <template v-slot:btnText>
+                PROSSEGUIR
+            </template>
             <template v-slot:text>
                 Quando quiser rever essas dicas,<br/>
                 clique aqui.

@@ -180,7 +180,7 @@
                                                 <v-text-field
                                                 v-model="mail"
                                                 hide-details
-                                                label= 'digite seu e-mail'
+                                                disabled                                              
                                                 color="primary"
                                                 />
                                             </v-col>
@@ -215,15 +215,15 @@
                                             md="6"
                                             >
                                                 <v-btn
-                                                :disabled="!isUnlocked"
+                                                :disabled="mail != confirmMail"
                                                 width="100%"        
-                                                type="button"   
+                                                type="button"
                                                 density="comfortable"
                                                 rounded
                                                 class="bg-primary text-secondary letter-normal animate__animated animate__fadeInDown"
                                                 @click="startCapsula"
                                                 >
-                                                    Confirmar
+                                                    Enterrar capsúla
                                                 </v-btn>
                                             </v-col>
                                         </v-row>
@@ -264,7 +264,9 @@
 
     const msgStyle = ref(appStore.appData.capsula.content.style)
 
-    const mail = ref(appStore.appData.capsula.content.email)
+    const mail = ref(sessionStorage.getItem('userMail'))
+
+
     const confirmMail = ref('')
 
     const isUnlocked = ref(false)
@@ -378,6 +380,13 @@
         //Feedback usuário
         //appStore.globalMsg('Oba! Sua mensagem foi salva!', 'success')
     }
+
+
+    //Se não estiver logado Volta para LoginView
+    if (sessionStorage.getItem('userMail')){
+            console.log(sessionStorage.getItem('userMail'))
+    }
+
 
 
 </script>

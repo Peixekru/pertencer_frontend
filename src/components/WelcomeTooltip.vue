@@ -36,7 +36,7 @@
             width="60"
             /> 
 
-            <v-container class="pa-0">
+            <v-container class="pa-0">  
                 <v-card-text class="pt-4 pb-8">
                     <slot name="text"/>
                 </v-card-text>
@@ -51,7 +51,8 @@
                     rounded
                     @click="$emit('my-click-event')"
                     >
-                        PROSSEGUIR
+                        <slot name="btnText"/>
+                        {{ customText }}
                     </v-btn>
                 </v-container>
             </v-container>
@@ -82,6 +83,10 @@
 
     const bubbleSize = ref([500, 500])
 
+    const bubbleText = ref('')
+
+
+
 
     const props = defineProps({
         toolTipShow: Boolean,
@@ -91,6 +96,7 @@
         toolTipW: Number,
         toolTipH: Number,
         toolTipR: Number,
+        customText: ''
     })
 
     const emit = defineEmits(['start-event', 'my-click-event'])

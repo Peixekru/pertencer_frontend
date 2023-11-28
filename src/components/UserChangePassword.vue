@@ -101,7 +101,7 @@
                 </v-btn>
 
                 <v-btn
-                v-if="appStore.isChangedPassword"
+                v-if="appStore.isChangedPassword && isFinishBtn"
                 :disabled ="password != passwordConfirm || password.length < 6"
                 block
                 class="mb-6 mt-4 animate__animated animate__fadeInUp"
@@ -146,20 +146,15 @@
     //Altera senha do usuário
     const submmitUser = () => { 
 
-        const userId = JSON.parse(localStorage.getItem('userId'))
-        //console.log({ "userId": userId, "password": password.value })
+        isFinishBtn.value = true
 
+        const userId = JSON.parse(localStorage.getItem('userId'))
 
         authStore.useLogin(
             // path / { userID, password }
             '/chgpsw', {"userId": userId, "password": password.value }
         )
 
-
-        //User Feedback
-        //appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
-
-        //isFinishBtn.value = true
     }
 
 </script>

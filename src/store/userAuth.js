@@ -28,29 +28,32 @@ export const useAuthStore = defineStore('userAuth', {
                 //Login
                 if (path == '/login') {
 
+                    //console.log(response.data)
                     //console.log(response.data.id)
                     //console.log(response.data.info)
+                    //console.log(response.data.email)
 
                     const data = JSON.parse(response.data.info) // Converte para objeto
                     appStore.appData = data; // Salva dados no pinia
                     localStorage.setItem('localAppData', JSON.stringify(data)); // Persistente dados no localSorage
                     localStorage.setItem('userId', JSON.stringify(response.data.id)); // Persistente id do usuário no localSorage
                     sessionStorage.setItem('loginState', true); // Persiste o estado de login no SessionStorage
+                    sessionStorage.setItem('userMail', response.data.email); // Persiste o e-mail no SessionStorage
 
                     //Encaminha para home ou primeiro acesso     
                     if (data.firstAccess < 5) { self.$router.push('/welcome') }
                     else { self.$router.push('home') }
 
                 }
-
                 //Mudar senha
                 else if (path == '/chgpsw') {
                     console.log(response.data.result)
                     if (response.data.result == 'OK') {
-                        console.log('foi!')
+                        //console.log('OK - OK')
                         appStore.isChangedPassword = true;
+                        //User Feedback
+                        appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
                     }
-
                 }
 
             }).catch(function (error) {

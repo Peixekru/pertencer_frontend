@@ -2,7 +2,7 @@
 	<template v-if="appStore.appData != 'undefined'">
 		<v-app class="cursor-preview">
 
-			<!--<DebugModal />-->
+			<DebugModal />
 			
 			<!--Marcador de mouse-->
 			<CustomCursor
@@ -71,6 +71,9 @@
 				:toolTipAdjust="[0, 0, 0, 0]" 
 				@my-click-event="appStore.welcomeStepCounter = 2"
 				> 
+					<template v-slot:btnText>
+						PROSSEGUIR
+					</template>
 					<template v-slot:text>
 						Esta é a tela principal da sua jornada. Aqui você vai
                     	acompanhar seu progresso e suas conquistas.
@@ -89,13 +92,15 @@
 				:toolTipAdjust="appStore.isMobile ? [0, 0, 0, 0] : [0, 0, 0, 0]" 
 				@my-click-event="appStore.welcomeStepCounter = 9"
 				> 
+					<template v-slot:btnText>
+						PROSSEGUIR
+					</template>
 					<template v-slot:text>
-						Esta é a tela de conteúdos da unidade. Eu vou tentar
-						fazer com que você veja todos os conteúdos em
-						sequência. Mas sempre que quiser rever algum
-						material, poderá acessar por aqui.
-						E, para acessar o menu de unidades, clique no botão
-						<span><v-icon color="primary" icon="mdi mdi-grid-large"></v-icon></span> no canto superior da tela.
+						Está é  tela de conteúdos da unidade. 
+						Sempre que entrar em uma unidade você poderá revê-los. 
+						Caso queira acessar o menu principal clique no botão
+						<span><v-icon color="primary" icon="mdi mdi-grid-large"></v-icon></span>
+						no canto superior direito da tela.​
 					</template>
 				</WelcomeTooltip>
 
@@ -130,7 +135,7 @@
 	import CustomCursor from '@/components/CustomCursor'
 
 	//*!Retirar para produção!!
-	//import DebugModal from '@/components/DebugModal'
+	import DebugModal from '@/components/DebugModal'
 
 	const appStore = useAppStore()
 	const router = useRouter()

@@ -100,15 +100,15 @@
                                 "block": 1
                             },
                             {
-                                "title": "Cápsula do tempo",
-                                "icon": "capsula",
+                                "title": "Vídeo manifesto",
+                                "icon": "video",
                                 "time": 5,
                                 "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
-                                "objectRating": 2,
+                                "objectRating": 0,
                                 "userRating": 0,
                                 "status": 0,
                                 "block": 0
-                            }
+                            },
                         ]
                     }
                 ]
@@ -133,11 +133,11 @@
                                 "block": 0
                             },
                             {
-                                "title": "Vídeo manifesto",
-                                "icon": "video",
+                                "title": "Cápsula do tempo",
+                                "icon": "capsula",
                                 "time": 5,
                                 "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
-                                "objectRating": 0,
+                                "objectRating": 2,
                                 "userRating": 0,
                                 "status": 0,
                                 "block": 0

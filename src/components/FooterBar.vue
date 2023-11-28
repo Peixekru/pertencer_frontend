@@ -10,11 +10,13 @@
         class="d-flex align-center pa-0"
         :class="appStore.isMobile ? 'flex-column' : 'justify-space-between'"
         >
-            <div fluid class="d-flex justify-start align-center pa-0">
-                <!--Componente Rating-->
-                <RatingStars />
 
-                <div v-if="!appStore.isMobile" class="ms-8">
+            <!--Componente Rating-->
+            <RatingStars />
+
+
+            <div class="d-flex justify-start align-center pa-0">
+                <div v-if="!appStore.isMobile" class="pb-1 text-end">
                     <p :class="appStore.isDarkMode ? '' : 'text-accent'">Próximo conteúdo:</p>
 
                     <h5
@@ -24,22 +26,21 @@
                         {{ appStore.nextContent.title }}
                     </h5>
                 </div>
+            
+            <!--:disabled="appStore.currentSelectedObject.userRating == 0 &&  appStore.appData.firstAccess < 6"-->
+                <v-btn
+                density="comfortable"
+                class="bg-primary mx-8 text-secondary"
+                rounded
+                min-width="180px"
+                height="28px"
+                @click = "nextObject"
+                >
+                    <span v-if="appStore.allFinished == false"> Prosseguir </span>
+                    <span v-else> Concluir </span>
+                </v-btn>
             </div>
 
-            <v-btn
-            :disabled="appStore.currentSelectedObject.userRating == 0 &&  appStore.appData.firstAccess < 6"
-            density="comfortable"
-            class="bg-primary mx-8 text-secondary"
-            rounded
-            min-width="180px"
-            height="28px"
-            @click = "nextObject"
-            >
-
-            <span v-if="appStore.allFinished == false"> Prosseguir </span>
-            <span v-else> Concluir </span>
-
-            </v-btn>
         </v-container>
     </v-bottom-navigation>        
 
@@ -54,13 +55,13 @@
         :class="appStore.isMobile ? 'custom-tooltip-pos-mobile' : 'custom-tooltip-pos'"
         :toolTipShow="true" 
         :toolTipPos="2" 
-        :toolTipAdjust="appStore.isMobile ? [-10, 0, 0, 0] : [-10, 0, 0, -86]" 
+        :toolTipAdjust="appStore.isMobile ? [-5, 0, 0, -1] : [0, 0, 0, -86]" 
         :toolTipR="0"
         :hideToolTipButton = true
         :toolTipW = "280"
         >
             <template v-slot:text>
-                Antes de prosseguir, ajude-nos a evoluir dando sua opinião sobre este conteúdo.
+                O que achou do conteúdo? Antes de continuar, avalie com estrelas. Sua opinião é valiosa para nós.
             </template>
         </WelcomeTooltip>
     </v-container>
@@ -144,7 +145,7 @@
         position: fixed;
         z-index: 5000;
         left: 0;
-        bottom: 182px;
+        bottom: 190px;
     }
     .custom-tooltip-pos{
         position: absolute !important;

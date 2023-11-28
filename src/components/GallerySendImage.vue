@@ -615,7 +615,9 @@
         appStore.gallerySendImageKey += 1
 
         //Libera badge da galeria 
-        appStore.appData.badges.picture = 1
+        if (appStore.appData.badges.picture == 0){
+            appStore.appData.badges.picture = 1
+        }
         
 
         //Atualiza o localStorage

@@ -121,7 +121,7 @@
 
                             </v-container>
 
-                            <!--btn-->
+                            <!--btn
                             <v-container
                             class="d-flex justify-center py-4"
                             >
@@ -136,7 +136,7 @@
                                 >
                                     Gravar
                                 </v-btn>
-                            </v-container>
+                            </v-container>-->
                         </v-sheet>
 
 
@@ -212,7 +212,7 @@
                             
                             </v-container>
 
-                            <!--btn-->
+                            <!--btn
                             <v-container
                             class="d-flex justify-center py-6"
                             >
@@ -227,7 +227,7 @@
                                 >
                                     Escolher
                                 </v-btn>
-                            </v-container>
+                            </v-container>-->
                         </v-sheet>
                     
                     </v-col>
@@ -269,13 +269,14 @@
 
                                         <v-text-field
                                         v-model="mail"
+                                        disabled
                                         label= 'e-mail'
                                         color="primary"
-                                        :messages="!mailIsModified ?'e-mail salvo!' : '' "
-                                        />
+                                        
+                                        /> 
+                                        <!--:messages="!mailIsModified ?'e-mail salvo!' : '' "-->
 
                                         <v-text-field
-                                        v-if="mailIsModified"
                                         v-model="confirmMail"
                                         label="confirme seu e-mail"
                                         color="primary"
@@ -302,7 +303,6 @@
                             class="d-flex justify-center py-0"
                             >
                                 <v-btn
-                                v-if="mailIsModified"
                                 :disabled="mail != confirmMail"
                                 block 
                                 type="submit"
@@ -311,7 +311,7 @@
                                 class="bg-primary letter-normal animate__animated animate__fadeInDown"
                                 @click="updateMail"
                                 >
-                                    Confirmar
+                                    Enterrar capsúla
                                 </v-btn>
                             </v-container>
                         </v-sheet>
@@ -363,8 +363,6 @@
         //Armazena dados no localstorage e backend
         saveData()
 
-        
-
         appStore.globalMsg('Mensagem alterada com sucesso!', 'success')
     }
 
@@ -402,7 +400,7 @@
     //MAIL
 
     //1. Recupera email gravado
-    const mail = ref(appStore.appData.capsula.content.email)
+    const mail = ref(sessionStorage.getItem('userMail'))
     const confirmMail = ref('')
 
     //2. Observa se o e-mail foi modificado
