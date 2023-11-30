@@ -18,13 +18,25 @@
             />
         </v-container>-->
 
+        <!--<v-sheet
+        class="close-btn-1 rounded-pill d-flex justify-end"
+        width="48px"
+        >
+            <v-icon 
+            class="close-btn-inner"
+            icon="mdi-close-circle-outline" 
+            size="48px" 
+            :color="appStore.isDarkMode ? 'white' : 'primary'"
+            @click="appStore.videoModal = false" 
+            />
+        </v-sheet>-->
+            
+
         <!--Vimeo-->
         <v-container 
         fluid
         class="animate__animated animate__fadeInUp"
         >
-
-        
             <v-sheet 
             color="transparent"
             :height="
@@ -225,5 +237,15 @@
         transform: translate(-50%, -50%) !important;
         font-size: 1.5em;
     }
+
+    .close-btn-1{
+        position: absolute;
+        z-index: 1000;
+        right: 50%;
+        top: 2%;
+        transform: translate(50%, 0);
+    }
+
+
 
 </style>

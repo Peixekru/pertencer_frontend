@@ -62,6 +62,7 @@ export const useAppStore = defineStore('app', {
 		isZoomImg: false,
 		selectedGallery: null,
 		selectedImg: null,
+		imgObject: {},
 
 		///
 		debugModal: false,

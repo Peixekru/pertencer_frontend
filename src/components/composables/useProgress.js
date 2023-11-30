@@ -63,6 +63,9 @@ export function useStartProgress(){
         appStore.appData.glogalProgress = totalProgress
     }
 
+    let audio = new Audio('./assets/progressAlert.mp3');
+    audio.play();
+
 
     //Controla animação do progresso global
     const progressEl = document.querySelector('.GlobalProgress');

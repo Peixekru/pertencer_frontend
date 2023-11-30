@@ -77,7 +77,9 @@
 
                 </v-row>
 
-                <v-row>
+                <v-row
+                    v-if="appStore.appData.galeria.content.userImgs.length > 0"
+                >
 
                     <v-col class="mt-6 mb-3">
                         <h6 class="text-subtitle-1 text-secondary font-weight-bold">
@@ -89,13 +91,13 @@
                     </v-col>
 
                     <!-- Componente de exibição de imagens do usuário-->
-                    <GalleryUserImages 
-                    v-if="appStore.appData.galeria.content.userImgs.length > 0" 
-                    />
+                    <GalleryUserImages />
 
                 </v-row>
 
-                <v-row>
+                <v-row
+                    v-if="appStore.appData.galeria.content.globalImgs.length > 0"
+                >
 
                     <v-col class="mt-8 mb-3">
                         <h6 class="text-subtitle-1 text-secondary font-weight-bold">
@@ -104,9 +106,7 @@
                     </v-col>
 
                     <!-- Componente de exibição de imagens do sistema-->
-                    <GalleryGlobalImages
-                    v-if="appStore.appData.galeria.content.globalImgs.length > 0" 
-                    />
+                    <GalleryGlobalImages/>
 
                     </v-row>
 

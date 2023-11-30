@@ -271,7 +271,7 @@
                 </v-container>
 
                 <!--btn-->
-                <v-sheet
+                <!--<v-sheet
                 color = "transparent"
                 class="d-flex justify-center py-6"
                 v-if="galleryStyle != null && finalImage != null"
@@ -289,7 +289,7 @@
                         <span v-if="!isStyleSelected">Escolher</span>
                         <span v-else>Trocar</span>
                     </v-btn>
-                </v-sheet>
+                </v-sheet>-->
                 
             </v-sheet>
         
@@ -389,7 +389,6 @@
 
                             <!--btn-->
                             <v-container
-                            v-if="finalImage != null && isStyleSelected "
                             class="d-flex justify-center py-6 px-0"
                             :class="finalImage != null ? 'animate__animated animate__fadeInUp' : ''"
                             >
@@ -611,6 +610,9 @@
         }
 
         appStore.appData.galeria.content.userImgs.unshift(newImage);
+
+        appStore.imgObject = newImage
+
         appStore.galleryCardKey += 1
         appStore.gallerySendImageKey += 1
 
@@ -618,7 +620,9 @@
         if (appStore.appData.badges.picture == 0){
             appStore.appData.badges.picture = 1
         }
-        
+
+
+        //console.log(appStore.appData.galeria.content.userImgs)
 
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));

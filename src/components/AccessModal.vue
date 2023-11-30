@@ -87,7 +87,7 @@
                                     class="px-2 py-0">
 
                                         <!--Switchs Session-->
-                                        <v-container 
+                                       <!-- <v-container 
                                         class="d-flex justify-start align-start border-list">
 
                                             <v-switch
@@ -127,7 +127,7 @@
                                                 <h6 class="text-h6"> {{ perfisTitles[1] }} </h6>
                                                 <p class="text-caption"> {{ perfisSubTitles[1] }} </p>
                                             </v-sheet>
-                                        </v-container>
+                                        </v-container> -->
 
                                         <v-container 
                                         class="d-flex justify-start align-start border-list">
@@ -170,7 +170,7 @@
                                         </v-container>
 
                                         <v-container 
-                                        class="d-flex justify-start align-start border-list">
+                                        class="d-flex justify-start align-start">
 
                                             <v-switch
                                                 v-model="switchBtn4"
@@ -189,7 +189,7 @@
                                             </v-sheet>
                                         </v-container>
 
-                                        <v-container 
+                                       <!-- <v-container 
                                         class="d-flex justify-start align-start">
 
                                             <v-switch
@@ -208,7 +208,7 @@
                                                 <h6 class="text-h6"> {{ perfisTitles[5] }} </h6>
                                                 <p class="text-caption"> {{ perfisSubTitles[5] }} </p>
                                             </v-sheet>
-                                        </v-container>
+                                        </v-container> -->
                                         
                                     </v-col>
                                 </v-row>
@@ -235,7 +235,7 @@
                                     <!--Block 1 -->
                                     <v-row class="px-4 pt-0 pb-4">
                                         <!--Line Left 1 -->
-                                        <v-col cols="12" lg="5" md="12" sm="5" xs="12" >
+                                        <!--<v-col cols="12" lg="5" md="12" sm="5" xs="12" >
                                             <v-row>
                                                 <h6 class="text-subtitle-1 font-weight-bold"> Tamanho de fonte </h6>
                                             </v-row>
@@ -291,10 +291,10 @@
         
                                             </v-row>
         
-                                        </v-col>
+                                        </v-col>-->
         
-                                        <!--Line Right 1 -->
-                                        <v-col cols="12" lg="7" md="12" sm="7" xs="12" class="pa-0">
+                                        <!--Line Right 1 -> cols="12" lg="7" md="12" sm="7" xs="12" -->
+                                        <v-col cols="12">
         
                                             <v-sheet 
                                                 width="100%" 
@@ -348,7 +348,7 @@
                                     <!--Block 2 -->
                                     <v-row class="px-4 pt-0 pb-4">
                                         <!--Line Left 2 -->
-                                        <v-col cols="12" lg="5" md="12" sm="5" xs="12">
+                                        <!--<v-col cols="12" lg="5" md="12" sm="5" xs="12">
                                             <v-row>
                                                 <h6 class="text-subtitle-1 font-weight-bold"> Espaçamento de linha </h6>
                                             </v-row>
@@ -404,10 +404,10 @@
         
                                             </v-row>
         
-                                        </v-col>
+                                        </v-col>-->
         
-                                        <!--Line Right 2 -->
-                                        <v-col cols="12" lg="7" md="12" sm="7" xs="12" class="pa-0">
+                                        <!--Line Right 2 -> cols="12" lg="7" md="12" sm="7" xs="12" -->
+                                        <v-col cols="12">
         
                                             <v-sheet 
                                                 width="100%" 
@@ -461,7 +461,7 @@
                                     <!--Block 3 -->
                                     <v-row class="px-4 pt-0 pb-4">
                                         <!--Line Left 3 -->
-                                        <v-col cols="12" lg="5" md="12" sm="5" xs="12">
+                                        <!--<v-col cols="12" lg="5" md="12" sm="5" xs="12">
                                             <v-row>
                                                 <h6 class="text-subtitle-1 font-weight-bold"> Zoom </h6>
                                             </v-row>
@@ -517,10 +517,10 @@
         
                                             </v-row>
         
-                                        </v-col>
+                                        </v-col>-->
         
-                                        <!--Line Right 3 -->
-                                        <v-col cols="12" lg="7" md="12" sm="7" xs="12" class="pa-0">
+                                        <!--Line Right 3 -> cols="12" lg="7" md="12" sm="7" xs="12" -->
+                                        <v-col cols="12">
         
                                             <v-sheet 
                                                 width="100%" 
@@ -582,7 +582,7 @@
 
 
             <!--Col 03-->
-            <v-row class="px-4 py-0">
+             <!--<v-row class="px-4 py-0">
 
                 <v-col cols="12" class="pt-0">
                     <v-container fluid class="pt-0">
@@ -594,9 +594,9 @@
                         <v-sheet class="pa-4 rounded-lg inner-shadow">
 
 
-                        <v-row>
+                        <v-row>-->
 
-                            <!--Btn 01-->
+                            <!--Btn 01
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -620,9 +620,9 @@
                                     </p>
                                 </v-btn>
 
-                            </v-col>
+                            </v-col> -->
 
-                            <!--Btn 02-->
+                            <!--Btn 02
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -645,9 +645,9 @@
                                     </p>
                                 </v-btn>
 
-                            </v-col>
+                            </v-col> -->
 
-                            <!--Btn 03-->
+                            <!--Btn 03
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -669,9 +669,9 @@
                                         sublinhar links
                                     </p>
                                 </v-btn>    
-                            </v-col>
+                            </v-col> -->
 
-                            <!--Btn 04-->
+                            <!--Btn 04
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -692,9 +692,9 @@
                                         bloquear animações
                                     </p>
                                 </v-btn>
-                            </v-col>
+                            </v-col>-->
 
-                            <!--Btn 05-->
+                            <!--Btn 05
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -716,10 +716,10 @@
                                         foco na leitura
                                     </p>
                                 </v-btn>
-                            </v-col>
+                            </v-col>-->
                             
 
-                            <!--Btn 06-->
+                            <!--Btn 06
                             <v-col
                                 cols="6" lg="2"  md="2" sm="4"
                             >
@@ -747,11 +747,11 @@
 
                         </v-row>
 
-                        </v-sheet>  
+                        </v-sheet> 
                     </v-container>
                 </v-col>
 
-            </v-row>
+            </v-row>-->
 
 
 

@@ -80,7 +80,10 @@
 <script setup>
     import { useAppStore } from '../store/app'
     import GalleryZoomImage from './GalleryZoomImage'
+    import { useApiStore } from '../store/api'
+
     const appStore = useAppStore()
+    const apiStore = useApiStore()
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
@@ -96,11 +99,25 @@
     const hideImage = (index) => {
         appStore.appData.galeria.content.userImgs[index].visible =
         !appStore.appData.galeria.content.userImgs[index].visible
+
+        if(appStore.appData.galeria.content.userImgs[index].visible){
+            appStore.appData.galeria.content.globalImgs.unshift(appStore.imgObject);
+        }else{
+            appStore.appData.galeria.content.globalImgs.shift();
+        }
     }
 
     const  deletImage = (index) => {
 
         appStore.appData.galeria.content.userImgs.splice(index, 1); 
+
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
     }
 

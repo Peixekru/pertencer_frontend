@@ -40,14 +40,14 @@
                 <v-sheet 
                 width="100%"
                 height="60"
-                color="white"
+                color="surface"
                 v-if="appStore.appData.firstAccess == 'finished' && selected == 1 && staus == 0"
                 class="d-flex justify-start align-center pa-3 rounded-lg rounded-bs-0 rounded-be-0 elevation-2"
                 style="position: absolute; 0; left:0"
                 >
                     <v-img 
                     class="me-2"
-                    :class="appStore.isDarkMode ? 'white-svg' : 'white-svg' "
+                    :class="appStore.isDarkMode ? 'white-svg' : '' "
                     src="@/assets/img/quest-menu-img.svg"
                     max-width="60"
                     /> 

@@ -22,7 +22,15 @@
                             color="info"
                             icon="mdi-lock-outline"
                             size="x-large"
-                            ></v-icon>
+                            />
+
+                            <v-icon
+                            v-if="appStore.appData.start.status > 0"
+                            color="info"
+                            icon="mdi-check-circle"
+                            size="x-large"
+                            class="ms-2"
+                            />
 
                         </v-sheet>
                     </v-container>

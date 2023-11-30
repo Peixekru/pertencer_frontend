@@ -26,9 +26,9 @@
                         {{ appStore.nextContent.title }}
                     </h5>
                 </div>
-            
-            <!--:disabled="appStore.currentSelectedObject.userRating == 0 &&  appStore.appData.firstAccess < 6"-->
+        
                 <v-btn
+                :disabled="appStore.currentSelectedObject.userRating == 0"
                 density="comfortable"
                 class="bg-primary mx-8 text-secondary"
                 rounded
@@ -44,11 +44,11 @@
         </v-container>
     </v-bottom-navigation>        
 
-    <!--Primeiro acesso -> 12 -->
+    <!--Rating bubble-->
     <v-container 
-    class="pa-0 desabled-card" 
+    class="pa-0 desabled-card"
+    v-if="appStore.currentSelectedObject.userRating == 0 &&  appStore.isFinished == true"
     :class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
-    v-if="appStore.welcomeStepCounter == 12"
     >
         <WelcomeTooltip 
         class="custom-tooltip-pos"
@@ -66,11 +66,11 @@
         </WelcomeTooltip>
     </v-container>
 
-    <!--Primeiro acesso -> 13 -->
+    <!--Prosseguir btn-->
     <v-container 
     class="pa-0 desabled-card" 
     :class="appStore.isMobile ? 'custom-container-mobile-02' : 'custom-container-02'"
-    v-if="appStore.welcomeStepCounter == 13"
+    v-if="appStore.currentSelectedObject.userRating != 0 && appStore.isFinished == true"
     >
         <WelcomeTooltip 
         :class="appStore.isMobile ? 'custom-tooltip-pos-mobile-02' : 'custom-tooltip-pos-02'"

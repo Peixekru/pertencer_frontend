@@ -9,15 +9,18 @@
 	//Imports
 	import { onMounted } from "vue";
 	import { useAppStore } from '../../../store/app'
+	import { useApiStore } from '../../../store/api'
 	import { useRouter } from 'vue-router'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 
 	//Inicia o Pinia com a store global do App (appStore)
-	const appStore = useAppStore();
+	const appStore = useAppStore()
 
 	//Inicia o controle de rotas
 	const router = useRouter()
 	router.push('/home')
+
+	const apiStore = useApiStore()
 	
 	appStore.galleryModal = true
 
@@ -35,7 +38,7 @@
 
 
 	onMounted(() => {
-		//libera o "Start / Relógio" 
+		//libera o "Start" 
         appStore.appData.start.status = 1
 		//atualiza o componente "Workplace na home"
         appStore.startCardKey += 1
@@ -48,6 +51,12 @@
 		appStore.galleryCardKey += 1
 		//Atualiza o localStorage
 		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+		//Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
 	})
 
 </script> 
