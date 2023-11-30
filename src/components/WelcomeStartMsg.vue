@@ -61,8 +61,11 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
     import { useAppStore } from '../store/app'
+
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
     
     const appStore = useAppStore() 
 
@@ -89,6 +92,11 @@
         appStore.appData.firstAccess = 2
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
     }
+
+    onMounted(() => {
+        //inicia som nos botões
+        useBeepSound()
+    })
 
 </script>
 

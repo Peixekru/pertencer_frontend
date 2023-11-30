@@ -65,6 +65,11 @@
 
     import { ref, onMounted } from 'vue';
 	import { useAppStore } from '@/store/app'
+
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
+
+    
 	const appStore = useAppStore()
 
     const tooTipSelect = ref([
@@ -103,6 +108,9 @@
 
     onMounted(() => {
         emit('start-event')
+        
+        //inicia som nos botões
+        useBeepSound()
     })
 </script>
 

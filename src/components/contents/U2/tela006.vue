@@ -17,13 +17,26 @@
 	//Imports
 	import { onMounted } from "vue"
 	import { useAppStore } from '../../../store/app'
+	import { useApiStore } from '../../../store/api'
 	import { useStartProgress } from '../../../components/composables/useProgress'
+	import { useRouter } from 'vue-router'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
 
+	//Inicia api de comunicação com db
+	const apiStore = useApiStore();
+
+	//Inicia o controle de rotas
+	const router = useRouter()
+
 	//Finaliza o conteúdo e atualiza progresso
 	const finishedContent = () => {
+
+		//Informa fim de unidade
+    	appStore.isUnidadeFinished = true;
+
+		
 		appStore.finishedContent(true)
 		useStartProgress()
 

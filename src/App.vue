@@ -90,17 +90,17 @@
 				:toolTipShow="false" 
 				:toolTipPos="2" 
 				:toolTipAdjust="appStore.isMobile ? [0, 0, 0, 0] : [0, 0, 0, 0]" 
-				@my-click-event="appStore.welcomeStepCounter = 9"
+				@my-click-event="finishFirstAccess()"
 				> 
 					<template v-slot:btnText>
 						PROSSEGUIR
 					</template>
 					<template v-slot:text>
-						Está é  tela de conteúdos da unidade. 
+						Está é tela de conteúdos da unidade. 
 						Sempre que entrar em uma unidade você poderá revê-los. 
 						Caso queira acessar o menu principal clique no botão
 						<span><v-icon color="primary" icon="mdi mdi-grid-large"></v-icon></span>
-						no canto superior direito da tela.​
+						no canto superior direito da tela.
 					</template>
 				</WelcomeTooltip>
 
@@ -118,6 +118,7 @@
 	import { onMounted } from 'vue'
 	import { RouterView, useRouter } from 'vue-router'
 	import { useAppStore } from '@/store/app'
+	import { useApiStore } from '@/store/api'
 	import { useTheme } from "vuetify"
     import { useContrastSelect, useColorSelect } from "@/components/composables/useSystemStyle"
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'	
@@ -138,6 +139,7 @@
 	import DebugModal from '@/components/DebugModal'
 
 	const appStore = useAppStore()
+	const apiStore = useApiStore()
 	const router = useRouter()
     const theme = useTheme()
 
@@ -146,6 +148,21 @@
 	if (!JSON.parse(sessionStorage.getItem('loginState'))){
             router.push('/')
         }
+
+
+	const finishFirstAccess = () => {
+		appStore.welcomeStepCounter = 'finished'
+		appStore.appData.firstAccess = 'finished'
+
+		//Atualiza o localStorage
+		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+		//Atualiza backend
+		const userId = JSON.parse(localStorage.getItem('userId'));
+		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+		console.log('primeiro acesso ->' + appStore.appData.firstAccess)
+	}
 
 		
 	

@@ -19,7 +19,7 @@
 	id="content01" 
 	width="100%" 
 	elevation="6"
-	style="z-index:9;background-color:#fff!important;"
+	style="z-index:14;background-color:#fff!important;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
@@ -90,7 +90,7 @@
 	id="content02" 
 	width="100%"
 	elevation="6"
-	style="z-index:8;background-color:#C4E8E1!important;"
+	style="z-index:13;background-color:#C4E8E1!important;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header_branco.png" />
@@ -242,7 +242,7 @@
 	id="content03" 
 	width="100%" 
 	elevation="6"
-	style="z-index:7;"
+	style="z-index:12;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos_cont3" 
 	>
 	<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header_branco.png" />
@@ -313,7 +313,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:6; "
+	style="z-index:11; "
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header.png" />
 
@@ -724,6 +724,7 @@
 	</v-card>
 
 <!-- conteúdo 04 -->
+
 <!-- conteúdo 05 -->
 	<v-card
 	id="content05" 
@@ -731,7 +732,7 @@
 	width="100%" 
 	elevation="0"
 	class="mt-n4 mx-auto mt-2  bg-transparent" 
-	style="z-index:5; "
+	style="z-index:10; "
 	>
 		
 	
@@ -742,7 +743,7 @@
 		<v-card-text align="left">
 			<span class="texto_azul"><strong>Como acessar?</strong></span>
 			<v-img class="mx-auto my-2 qr-code" src="./img/tela_oportunidades/qr-code.png" />
-			<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> <a href="#">Clique aqui</a> e entre em nossa página.
+			<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> <a style="text-decoration:none" href="https://sbibae.workplace.com/work/landing/input/?next=https%3A%2F%2Fsbibae.workplace.com%2Fgroups%2F206612450124381%2F%3Fref%3Dshare" target="_blank"><strong>Clique aqui</strong></a> e entre em nossa página.
 		</v-card-text>
 	</v-card>
 	
@@ -751,7 +752,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0  v-card-conteudos_cont5" 
-	style="z-index:4; "
+	style="z-index:9; "
 	>
 
 
@@ -822,7 +823,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:4; "
+	style="z-index:8; "
 	>
 	
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_cont6.png" />
@@ -1236,7 +1237,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont7" 
-	style="z-index:3; "
+	style="z-index:7; "
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header_branco.png" />
 
@@ -1399,7 +1400,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; "
+	style="z-index:6; "
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
 
@@ -1535,7 +1536,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_video" 
-	style="z-index:1; "
+	style="z-index:5; "
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header_azul.png" />
 		
@@ -1588,10 +1589,236 @@
 
 	<!-- conteúdo 09 -->
 	
-	<!-- conteúdo 10 footer -->
+	<!-- conteúdo 10 -->
 	<v-card 
 	v-show="isContent10Visible"
 	id="content10" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
+	style="z-index:4; "
+	>
+		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
+
+		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
+			<h1 class="mt-4 texto_azul">
+				Programa Reconhecimento por Tempo de Casa
+			</h1>
+		</v-card-text>
+		
+		<v-row justify="center" class="mt-n0">
+					<v-col class="mt-4" cols="12" md="6">
+						<p>
+							Valorizamos as competências, habilidades e talentos de nossos colaboradores e, por isso, incentivamos uma Cultura de Reconhecimento. Queremos deixar claro para o colaborador o quanto ele é importante para nossa Instituição. 
+						</p>
+						<p class="mt-4">
+							Como forma de agradecimento, homenageamos, de forma especial,  as pessoas que completam 10, 20, 30, 40 e 50 anos de Einstein, dando sua contribuição e deixando a sua marca na nossa história de excelência em saúde e atendimento ao paciente.
+						</p>
+						<p class="mt-4">
+							Os colaboradores recebem medalhas de bronze, prata ou ouro, acompanhadas de carta de agradecimento do presidente pelo tempo de contribuição, além de livro ou vídeo com histórias dos homenageados.
+						</p>
+					</v-col>
+					<v-col cols="12" md="6">
+						<v-img class="" src="./img/tela_oportunidades/cont10_img.png" />
+					</v-col>
+				</v-row>
+
+		<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent11Visible = true; prosseguir('content11')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+	<!-- conteúdo 10 -->
+	
+	<!-- conteúdo 11 -->
+	<v-card 
+	v-show="isContent11Visible"
+	id="content11" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont11" 
+	style="z-index:3; "
+	>
+		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
+
+		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
+			<h1 class="mt-4 texto_azul">
+				Programa Elogie seu Colega
+			</h1>
+		</v-card-text>
+
+
+<v-row justify="center" class="mt-n0">
+					<v-col style="color:#1B1F45" class="mt-4" cols="12" md="6">
+						<p>
+							Uma Cultura de Reconhecimento fortalece o nosso jeito de cuidar e nos motiva a ser ainda melhores. Manter ela viva é responsabilidade de todos nós!
+						</p>
+						<p class="mt-4">
+							Seu colega fez um bom trabalho? Divulgue, elogie! Quando a gente faz um elogio, todos ficam mais fortes: quem faz e quem recebe!
+						</p>
+						<p class="mt-4">
+							Para elogiar um(a) colega pela atuação conforme os pilares Segurança, Paixão por Servir e Atenção aos Detalhes, acesse:
+						</p>
+						<p class="mt-4">
+							<strong>Sou Einstein > Menu  Para Você > Faça um elogio aqui</strong>
+						</p>
+					</v-col>
+					<v-col cols="12" md="6">
+					</v-col>
+				</v-row>
+
+		<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent12Visible = true; prosseguir('content12')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+	<!-- conteúdo 11 -->
+	
+	<!-- conteúdo 12 -->
+	<v-card
+	id="content12" 
+	v-show="isContent12Visible"
+	width="100%" 
+	elevation="0"
+	class="mt-n4 mx-auto mt-2  bg-transparent" 
+	style="z-index:2; "
+	>
+		
+	
+	<v-img class="mx-auto mb-4 mt-16" src="./img/tela_oportunidades/cont10_grade.png" />
+	<v-img class="notebook mx-auto mb-4 mt-16" src="./img/tela_oportunidades/laptop.png" />
+	
+<v-card class="box_dicas_cont5 pl-0 pr-0 mt-n8 reveal fade-bottom mx-auto" style="z-index:20;">
+		<v-card-text align="left">
+			<span class="texto_azul"><strong>Como acessar?</strong></span>
+			<v-img class="mx-auto my-2 qr-code" src="./img/tela_oportunidades/qr-code.png" />
+			<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> <a style="text-decoration:none" href="https://sbibae.workplace.com/work/landing/input/?next=https%3A%2F%2Fsbibae.workplace.com%2Fgroups%2F206612450124381%2F%3Fref%3Dshare" target="_blank"><strong>Clique aqui</strong></a> e entre em nossa página.
+		</v-card-text>
+	</v-card>
+	
+	<v-card 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0  v-card-conteudos_cont5" 
+	style="z-index:1; "
+	>
+
+
+		<v-row class="mt-12 texto_cont5">
+
+			<v-col cols="12" md="5">
+				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
+					<p class="mt-8 texto_branco">
+						Para você interagir com outros colaboradores e a Instituição, o Einstein disponibiliza o Workplace, um canal de comunicação ideal para todo tipo de interação.
+					</p>
+					<p class="mt-4 texto_branco">
+						 Por meio do Workplace você pode conferir a principais notícias institucionais, além de compartilhar as informações que considera relevantes.
+					</p>
+					<p class="mt-4 texto_branco">
+						 Pode acompanhar, às quintas-feiras, as publicações do grupo Carreiras Einstein, administrado pela área de Recrutamento e Seleção e ter informações quanto às oportunidades da Instituição, dicas sobre processo seletivo e carreira, vídeos e enquetes.
+					</p>
+					<p class="mt-4 texto_branco">
+						 Pode acessar o grupo “Campanha de Reconhecimento”, e conferir, mensalmente, quem foi elogiado por atuar em sua rotina dentro dos pilares SPA. E fique atento: seu nome pode ser o próximo!
+					</p>
+					<p class="mt-4 texto_branco">
+						 Tudo isso e muito mais! Além disso o Workplace pode ser visto e compartilhado de qualquer lugar!
+					</p>
+				</v-card-text>
+			</v-col>
+			<v-col cols="12" md="6">
+				
+			</v-col>
+		</v-row>
+		
+		
+		<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				@click="isContent13Visible = true; prosseguir('content13')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+
+
+	</v-card>
+	</v-card>
+
+	<!-- conteúdo 12 -->
+	
+	
+	<!-- conteúdo 13 footer -->
+	<v-card 
+	v-show="isContent13Visible"
+	id="content13" 
 	width="100%"
 	class="mt-n4 mx-auto rounded-lg pt-0 footer pb-16"
 	style="z-index:0; background-color: #dc7689;"  
@@ -1623,7 +1850,7 @@
 
 	</v-card>
 
-	<!-- conteúdo 10 -->
+	<!-- conteúdo 13 -->
 
 
 	<v-sheet
@@ -1646,7 +1873,7 @@
 	const appStore = useAppStore();
 
 	//!!! --> Defina o id do último bloco de conteúdo ou elemento da tela Ex: ref('#ultimoId')
-	const lastElementIdOnScreen = ref('#content10')
+	const lastElementIdOnScreen = ref('#content13')
 
 	//Controle da visibilidade dos conteúdos
 	const isContent01Visible = ref(true) // <-- Primeiro conteúdo inicia visível
@@ -1660,6 +1887,9 @@
 	const isContent08Visible = ref(false)
 	const isContent09Visible = ref(false)
 	const isContent10Visible = ref(false)
+	const isContent11Visible = ref(false)
+	const isContent12Visible = ref(false)
+	const isContent13Visible = ref(false)
 	const isTooltip1Visible = ref(false)
 	const isTooltip2Visible = ref(false)
 	const isTooltip3Visible = ref(false)
@@ -1785,6 +2015,13 @@ onMounted(() => {
 	padding-right: 6% !important;
 	background-image: url("./img/tela_oportunidades/cont5_fundo.svg");
 	background-size: cover;
+}
+.v-card-conteudos_cont11 {
+	padding-left: 6% !important;
+	padding-right: 6% !important;
+	background-image: url("./img/tela_oportunidades/cont11_fundo.jpg");
+	background-size: cover;
+	
 }
 .notebook{
     position: absolute;
@@ -2075,7 +2312,7 @@ width:40%;
 .notebook{
     position: absolute;
     top: 56px;
-    left: 18%;
+    left: 8%;
     z-index: 20;
 }
 .texto_cont5{
@@ -2085,10 +2322,10 @@ margin-top: 290px!important;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
-    width: 30%;
+    width: 40%;
     position: absolute;
-    top: 20%;
-    left: 65%;
+    top: 10%;
+    left: 54%;
 }
 .qr-code{
 width:100%;

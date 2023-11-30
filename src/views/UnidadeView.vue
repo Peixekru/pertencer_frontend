@@ -77,6 +77,8 @@
 								:icon="i.icon"
 								:cardImg="getImg(index + 1)"
 								:time="i.time"
+								:content="i"
+								:index="index"
 								:staus="i.status"
 								:block="i.block"
 								:selected="i.selected"	
@@ -187,6 +189,8 @@
 	//Carrega página de conteúdo
 	const loadObject = ( unidade, contentIndex, index, content ) => {
 
+		content.selected = 1
+		console.log(content.selected)
 
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')

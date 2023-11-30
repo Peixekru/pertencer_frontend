@@ -21,6 +21,7 @@ export const useAppStore = defineStore('app', {
 		currentUnidadeTitle: '',
 		nextUnidadeTitle: '',
 		totalItems: [],
+		isUnidadeFinished: false,
 
 		//Slider
 		currentSliderNumber: 0,

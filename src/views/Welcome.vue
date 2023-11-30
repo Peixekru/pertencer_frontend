@@ -73,11 +73,18 @@
     import UserChangePassword from '@/components/UserChangePassword'
     import WelcomeStartMsg from '@/components/WelcomeStartMsg.vue'
     import WelcomeStartVideo from '@/components/WelcomeStartVideo.vue'
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
     
     const appStore = useAppStore() 
     
     //Armazena a URI atual
     appStore.currentRoute = "/"
+
+    onMounted(() => {
+        //inicia som nos botões
+        useBeepSound()
+    })
 
 </script>
 

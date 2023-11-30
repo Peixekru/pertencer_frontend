@@ -32,7 +32,7 @@
                 <!--Primeiro acesso -> Overlay perdura até welcomeStep 6 -->
                 <WelcomeModalFx 
                 v-if="appStore.welcomeStepCounter > 0  && 
-                appStore.welcomeStepCounter <= 6 || appStore.allFinished == true"
+                appStore.welcomeStepCounter <= 6 || appStore.isUnidadeFinished == true || appStore.allFinished == true"
                 />
 
                 <v-container
@@ -113,6 +113,9 @@
     <!--Final course msg-->
     <FinishAllMsg  v-if="appStore.allFinished == true"/>
 
+    <!--Final das unidades msg-->
+    <FinishUnidadeMsg  v-if="appStore.isUnidadeFinished == true"/>
+
 
 </template>
 
@@ -129,6 +132,7 @@
 	import WelcomeModalFx from '@/components/WelcomeModalFx.vue'
 
     import FinishAllMsg from '@/components/FinishAllMsg'
+    import FinishUnidadeMsg from '@/components/FinishUnidadeMsg'
 
     //Sons dos botões
     import { useBeepSound }  from '@/components/composables/useSounds'
@@ -151,6 +155,8 @@
         //Inicializa os primeiros itens
         appStore.appData.unidades[0].status = 1
         appStore.appData.unidades[0].content[0].lessons[0].block = 1
+        appStore.appData.unidades[0].content[0].lessons[0].selected = 1
+
 
         //Aplica o thema 
         theme.global.name.value = useContrastSelect(appStore.appData.access.contrast, appStore.appData.access.color == 0)
@@ -175,7 +181,7 @@
         
         console.log('welcomeSteps = ' + appStore.welcomeStepCounter)
 
-
+        //inicia som nos botões
         useBeepSound()
 
     })

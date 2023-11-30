@@ -457,7 +457,7 @@
 						src="./img/tela_missao/grade_04.png"
 						/>
 						
-						<v-container fill-height class="">
+						<v-container fill-height class="mb-8">
 							<v-row align="start" justify="center" class="mt-0">
 								
 								<v-col cols="12" md="4" align="left">
@@ -488,6 +488,13 @@
 										/>
 								</v-col>
 								
+								<v-col cols="12" md="12" align="left">
+									<v-card class="box_dicas pl-0 pr-0 mt-2 mb-8 reveal fade-bottom mx-auto">
+										<v-card-text>
+											<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
+										</v-card-text>
+									</v-card>
+								</v-col>
 
 								<v-col cols="12" md="4" align="center">
 									<v-img  style="width:25%"
@@ -667,8 +674,7 @@
 									/>
 										<p class="texto_preto mt-4" style="font-size:1.5em; line-height:1.2em"><strong>RESPONSABILIDADE<br>SOCIAL</strong></p>
 										<p>
-											
-Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prestação de serviços de assistência à saúde, ensino, geração de empregos e ações filantrópicas.
+											Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prestação de serviços de assistência à saúde, ensino, geração de empregos e ações filantrópicas.
 										</p>
 
 								</v-col>
@@ -676,15 +682,7 @@ Atua para mitigar as vulnerabilidades de comunidades próximas por meio da prest
 							</v-row>
 
 						</v-container>
-						
-			 <v-card class="box_dicas pl-0 pr-0 mt-2 mb-8 reveal fade-bottom mx-auto">
-				<v-card-text>
-					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
-				</v-card-text>
-			</v-card>
-	
 
-	
 	</v-card>
 
 	<!-- conteúdo 04 -->

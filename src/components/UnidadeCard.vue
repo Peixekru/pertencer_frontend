@@ -134,22 +134,22 @@
     </v-container>
 
 
-    <!--Primeiro acesso 15 -->
+    <!--Marcador Unidade-->
     <v-container 
-    class="pa-0" 
-    v-if="appStore.welcomeStepCounter == 15 && numCard == 0"
+    class="pa-0 pos-test noClick" 
+    v-if="appStore.appData.firstAccess == 'finished' && isVisibleCard && numCard == numUnidade"
     >
         <WelcomeTooltip 
-        :class="appStore.isMobile ? 'custom-tooltip-03-pos-mobile' : 'custom-tooltip-03-pos'"
+        :class="appStore.isMobile ? 'pos-test-inner-mobile' : 'pos-test-inner'"
         :toolTipShow="true" 
         :toolTipPos="2" 
         :toolTipAdjust="appStore.isMobile ? [-42, 0, 0, 0] : [-46, 0, 0, 0]" 
         :hideToolTipButton = true
-        :toolTipW = "280"
+        :toolTipW = "220"
         > 
             <template v-slot:text>
-                Agora acesse a
-                <span class="font-weight-bold">Unidade 02</span>
+                Você está na <br />
+                <span class="font-weight-bold">Unidade {{ numCard + 1 }}</span>
             </template>
         </WelcomeTooltip>
     </v-container>
@@ -157,13 +157,37 @@
 </template>
 
 <script setup>
+    import { ref } from 'vue';
     import { useAppStore } from '../store/app'
     import { useRouter } from 'vue-router'
+    import { useProgressCalc } from '../components/composables/useProgress'
 
     import WelcomeTooltip from './WelcomeTooltip'
 
     const appStore = useAppStore()
     const route = useRouter()
+
+    //Retorna o número da unidade
+
+    const numUnidade = ref(1)
+    const isVisibleCard = ref(true)
+
+
+    if (useProgressCalc('progressBar', 0) < 100){
+        numUnidade.value = 0
+    } 
+    else if(useProgressCalc('progressBar', 1) < 100){
+        numUnidade.value = 1
+    }
+    else if(useProgressCalc('progressBar', 2) < 100){
+        numUnidade.value = 2
+    }
+    else if(useProgressCalc('progressBar', 3) < 100){
+        numUnidade.value = 3
+    }
+    else { isVisibleCard.value = false }
+
+
     
     //Seleção do card
     const selectCard = (numCard, title) => {
@@ -264,4 +288,28 @@
     .progress-custom-padding{
         padding: 2px 2px 2px 2px;
     }
+    .pos-test{
+        position: relative;
+        left: -50%;
+        z-index: 2000;
+        
+    }
+    .pos-test-inner{
+        position: absolute;
+        z-index: 5000;
+        top: -85px;
+        left: 0;
+    }
+
+    .pos-test-inner-mobile{
+        position: absolute;
+        z-index: 5000;
+        top: -85px;
+        left: 0;
+    }
+
+    .noClick{
+		pointer-events: none; 
+	}
+
 </style>

@@ -34,7 +34,7 @@
 				Durante toda sua trajetória, você é acompanhado pelo seu gestor direto e, também, pela equipe de RH do Einstein.
 			</p>
 			<p class="texto_branco mt-4">
-				Eles fazem a gestão do seu desempenho por meio de avaliações sistemáticas, conversam com você para sugerir caminhos, escutar suas reivindicações e ajudar a estabelecer metas de carreira para o seu crescimento profissional.​
+				Eles fazem a gestão do seu desempenho por meio de avaliações sistemáticas, conversam com você para sugerir caminhos, escutar suas reivindicações e ajudar a estabelecer metas de carreira para o seu crescimento profissional.
 			</p>
 			<p class="texto_branco mt-4">
 				Tudo isso é realizado por meio de metodologias de avaliação, estratégias de acompanhamento, análises de dados e de indicadores e planos de desenvolvimento individuais e organizacionais. E, principalmente, por meio de diálogos contínuos, que acontecem no dia a dia, até mesmo durante o cafezinho. Esse é o jeito de ser do Einstein!

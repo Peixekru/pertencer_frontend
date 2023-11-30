@@ -36,8 +36,8 @@
                 height="28px"
                 @click = "nextObject"
                 >
-                    <span v-if="appStore.allFinished == false"> Prosseguir </span>
-                    <span v-else> Concluir </span>
+                    <span v-if="appStore.isUnidadeFinished == false"> Prosseguir </span>
+                    <span v-else> PÁGINA INICIAL </span>
                 </v-btn>
             </div>
 
@@ -108,7 +108,7 @@
 
     const nextObject = () => {
 
-        if (appStore.allFinished == false) {
+        if (appStore.allFinished == false && appStore.isUnidadeFinished == false) {
             useLoadNextObject(appStore.nextContent)
         } else {
             router.push('/home')

@@ -12,23 +12,6 @@
             />
         </div>
     </v-container>
-
-	<!--// *! Executa método para finalizar conteúdo -->
-	<v-container
-	class="d-flex justify-center my-10"
-	>
-  
-    <!--
-		<v-btn variant="outlined"
-		color="white"
-		@click="finishedContent"
-		>
-			finalizar conteúdo
-		</v-btn>
-    -->
-    
-	</v-container>
-
 </template>
 
 <script setup>
@@ -36,12 +19,19 @@
 	//Imports
 	import { useAppStore } from '../../../store/app'
 	import { useStartProgress } from '../../../components/composables/useProgress'
+  import { useRouter } from 'vue-router'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
 
+  //Inicia o controle de rotas
+	const router = useRouter()
+
 	//Finaliza o conteúdo e atualiza progresso
 	const finishedContent = () => {
+    //Informa fim de unidade
+    appStore.isUnidadeFinished = true;
+    
 		appStore.finishedContent(true)
 		useStartProgress()
 	}

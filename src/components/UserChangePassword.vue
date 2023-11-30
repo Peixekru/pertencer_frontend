@@ -101,7 +101,7 @@
                 </v-btn>
 
                 <v-btn
-                v-if="appStore.isChangedPassword && isFinishBtn"
+                v-show="appStore.isChangedPassword && isFinishBtn"
                 :disabled ="password != passwordConfirm || password.length < 6"
                 block
                 class="mb-6 mt-4 animate__animated animate__fadeInUp"

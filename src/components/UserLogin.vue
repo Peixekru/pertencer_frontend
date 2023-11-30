@@ -84,6 +84,9 @@
     import { useAppStore } from '../store/app'
     import { useAuthStore } from '../store/userAuth'
 
+    //Sons dos botões
+    import { useBeepSound }  from '@/components/composables/useSounds'
+
     //Inicia a store
     const appStore = useAppStore()
     const authStore = useAuthStore()
@@ -109,6 +112,8 @@
     }
     onMounted(() => {
         appStore.logginStatus = false
+        //inicia som nos botões
+        useBeepSound()
     })
 
 </script>

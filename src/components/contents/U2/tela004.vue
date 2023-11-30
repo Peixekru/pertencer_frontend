@@ -1,5 +1,5 @@
 <template>
-	<!-- header ensino-->
+	<!-- header colaborador -->
 	<v-card 
 	width="100%" 
 	elevation="6"
@@ -492,8 +492,7 @@
 				class="mt-4"
 				style="letter-spacing:normal;"
 				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				href="./img/tela_colaborador/gestao_de_clima_engajamento_experiencia_colaborador.pdf" 
-				target="_blank"
+				href="./tela_colaborador/gestao_de_clima_engajamento_experiencia_colaborador.pdf" target="_blank"
 				> 
 					CLIQUE AQUI PARA ACESSAR O TEXTO
 				</v-btn>
@@ -633,7 +632,7 @@
 	import { ref, onMounted } from "vue";
 	import { useAppStore } from '../../../store/app'
 	import { useStartProgress } from '../../../components/composables/useProgress'
-	import { useAnim, useScrollMonitor } from '../GlobalJs/useContentGlobalJs'
+	import { useAnim } from '../GlobalJs/useContentGlobalJs'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
@@ -652,11 +651,10 @@
 	const isTooltip3Visible = ref(false)
 	const isTooltip4Visible = ref(false)
 	
-		//Controle dos cards do conteúdo 01
+	//Controle dos cards do conteúdo 01
 	const isCard01Visible = ref(false)
 	const isCard02Visible = ref(false)
 	const isCard03Visible = ref(false)
-
 
 //Informa se a tela já foi concluida
 const isAllContentFinished = ref(false)

@@ -79,11 +79,20 @@
                             <v-container fluid 
                             class="pa-0"
                             >
+                                <h5 class="text-h5"><strong>Você finalizou sua jornada!</strong></h5>
 
-                                <h6 class="text-h5 mt-6">
-                                    O <strong>Workplace</strong> é uma ferramenta que possibilita fácil acesso à comunicação com os colaboradores da 
-                                    instituição, alcança todas as gerações X, Y e Z, e pode ser visto e compartilhado de qualquer lugar.                                    
-                                </h6>
+                                <p class="mt-1">
+                                    Agora oficialmente é uma gota de excelência Einstein.   
+                                </p>
+                                <p class="mt-6">
+                                    Entre na nossa comunidade e realize uma postagem para que as pessoas te conheçam.
+                                </p>
+                                <p class="mt-6">
+                                    Você pode postar uma frase se apresentando, uma foto sua, da sua família ou do seus pets. Fique a vontade! Queremos te conhecer.
+                                </p>
+                                <p class="mt-6">
+                                    Aproveite e comente em no mínimo dois posts de colegas, dê as boas-vindas e crie conexão com pessoas que assim como você ficarão felizes com uma mensagem de apoio nesse inicio do Einstein.
+                                </p>                        
 
                             </v-container>
 
@@ -106,7 +115,6 @@
                             >
                                 <v-img
                                 v-if="!appStore.isMobile"
-                                class="me-4"
 
                                 :class="appStore.isDarkMode ? 'white-svg' : 
                                 appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "

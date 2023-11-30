@@ -21,14 +21,14 @@
         :height="!appStore.isMobile ? 72 : 62"  
         class="d-flex align-end justify-center my-1 progress-bg-percent"
         :class="!appStore.isMobile ? '' : 'progress-bg-right-adjust-mobile' "
-        v-for=" (i, index) in 20" 
+        v-for=" (i, index) in 22" 
         :key="i"
         >
             <v-img  
             v-if="
-            appStore.appData.glogalProgress >= index * 5
+            appStore.appData.glogalProgress >= (index * 100) / 22
             "
-            max-width="46"
+            max-width="44"
             :src="getImg(index)"
             style="margin-bottom: 4px;"
             class="animate__animated animate__fadeIn"
@@ -66,8 +66,14 @@
 
     const getImg = (index) => {
 
-        // Carrega imagens do progresso global
-        return  new URL(`../assets/img/global-prog${index}.svg`, import.meta.url).href
+        console.log(appStore.appData.glogalProgress)
+
+        if (appStore.appData.glogalProgress > 0 ){
+            // Carrega imagens do progresso global
+            return  new URL(`../assets/img/global-prog${index + 1}.svg`, import.meta.url).href
+        }
+
+        
     } 
 </script>
 

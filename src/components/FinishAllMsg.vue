@@ -38,7 +38,7 @@
         >
 
 
-            <p class="my-4">Parabéns você concluiu o Programa de Integração Einstein Pertencer. 
+            <p class="my-4">Parabéns! Você concluiu o Programa de Integração Einstein Pertencer. 
             Estamos ansiosos para ver todos os feitos incríveis que o futuro reserva para você!
             </p>
 
@@ -52,7 +52,7 @@
                 rounded
                 @click="finishedAll"
                 >
-                    Começar
+                    Ir para os próximos passos
                 </v-btn>
             
             </v-container>

@@ -916,25 +916,29 @@
 	class="mt-0 mx-auto rounded-lg pt-0 bg-transparent grafismos_cont7" 
 	style="z-index:3;"  
 	>
+	
 	<v-container class="d-flex justify-center mt-16">
 		<v-row class="mx-auto mt-0">
-			<v-col cols="12" md="8" align="right" class="reveal fade-left">
+			<v-col cols="12" md="8" class="reveal fade-left" align-self="center"  align="center">
 				<p style="font-size:1.3em" class="mt-6 font-weight-bold reveal fade-left texto_branco">
 					É importante que você conheça bem o que diz o nosso Manual: 
 				</p>
 			</v-col>
-			<v-col cols="12" md="4" class="reveal fade-left">
+			<v-col cols="12" md="4" class="reveal fade-left" align-self="center" align="center">
+				
 				<v-btn 
 				type="button"
 				density="comfortable"
 				size="large"
 				rounded="pill"
-				class=""
+				class="mt-6"
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-primary bg_escuro'"
+				href="https://medicalsuite.einstein.br/pratica-medica/GuiaPraticaMedica/manual_conduta_etica.pdf" target="_blank"
 				> 
 					CLIQUE AQUI PARA ACESSAR
 				</v-btn>
-			</v-col><strong></strong>
+				
+			</v-col>
 		</v-row>
 	</v-container>
 	
