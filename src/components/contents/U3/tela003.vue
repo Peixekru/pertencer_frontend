@@ -1,5 +1,9 @@
 <template>
 
+	<StoryLineLoading 
+		v-if="appStore.isStoryLineLoading"
+	/>
+
 	<!--Exemplo iFrame aplicado-->
 	<div class="container-iframe-w-footer">
 		<iframe 
@@ -21,6 +25,8 @@
 	import { useAppStore } from '../../../store/app'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 
+	import StoryLineLoading from '../../../components/StoryLineLoading'
+
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
 
@@ -30,9 +36,20 @@
 		useStartProgress()
 	}
 
+	//Esconde Loader para StoryLine
+	const hideLoader = () => {
+		appStore.isStoryLineLoading = false
+	}
+
 	onMounted(() => {
 		//Finaliza o conteúdo pelo Storylyne
 		document.getElementById ("iframeId1").addEventListener ("click", finishedContent, false)
+
+		//Monitora carregamento do StoryLine
+		document.getElementById ("iframeId1").addEventListener ("load", hideLoader, false)
+
+		//Exibe loader do StoryLine
+		appStore.isStoryLineLoading = true
     })
 
 </script> 

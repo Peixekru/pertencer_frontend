@@ -1,5 +1,5 @@
 <template>
-	<!-- header ensino-->
+	<!-- header ações de desenvolvimento-->
 	<v-card 
 	width="100%" 
 	elevation="6"
@@ -10,7 +10,7 @@
 		<v-img class="show_1277" src="./img/tela_ensino/header.png" />
 		<v-img class="show_mobile" src="./img/tela_ensino/header_mob.png" />
 		<v-img src="./img/tela_ensino/header_text.svg" class="header_text"
-			title="ENSINO CORPORATIVO E DESENVOLVIMENTO" />
+			title="AÇÕES DE DESENVOLVIMENTO" />
 	</v-card>
 	<!-- header -->
 	
@@ -131,7 +131,7 @@
 							São encontros com a Diretoria, o Presidente, ou algum convidado de fora para falar sobre determinado tema, voltados para todos os líderes.
 						</p>
 						<p class="mt-4">
-							Geralmente são presenciais, mas podem ocorrer de forma online.
+							Geralmente são presenciais, mas podem ocorrer de forma <em>online</em>.
 						</p>
 						<p class="mt-4">
 							A periodicidade é variável, alguns são mensais, outros bimestrais, trimestrais e até anuais.
@@ -139,7 +139,7 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							Se você quiser conhecer alguns exemplos, acesse o texto
+							Se você quiser conhecer alguns exemplos, acesse o tópico
 						</p>
 						<p class="mt-4">
 							<a class="texto_azul" style="text-decoration:none;" href=""><strong>Encontros e Eventos para Líderes</strong></a>
@@ -155,12 +155,12 @@
 							São Trilhas de Aprendizagem realizadas com especialistas para treinar lideranças.
 						</p>
 						<p>
-							Podem ocorrer presencialmente, de forma híbrida, online na modalidade síncrona e assíncrona, por meio de Workshops, Simulações, ou Webinar.
+							Podem ocorrer presencialmente, de forma híbrida, <em>online</em> na modalidade síncrona e assíncrona, por meio de <em>workshops</em>, simulações, ou <em>webinar</em>.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							Há Programas específicos oferecidos para lideranças de diferentes áreas.
+							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
 						<p class="mt-4">
 							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
@@ -173,7 +173,7 @@
 			  	<v-row class="pa-10">
 			 		<v-col cols="12" md="12">
 						<p>
-							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de Congressos sobre temas de interesse.
+							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de congressos sobre temas de interesse.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -189,7 +189,7 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							O Einstein prevê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador é que após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
+							O Einstein provê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador, é que, após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
 						</p>
 					</v-col>
 				</v-row>
@@ -221,10 +221,10 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							<strong>Programa de Assessment</strong>
+							<strong>Programa de <em>Assessment</em></strong>
 						</p>
 						<p class="mt-4">
-							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de Assessment para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
+							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de <em>assessment</em> para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
 						</p>
 					</v-col>
 				</v-row>
@@ -259,19 +259,26 @@
 							São encontros com a Diretoria, o Presidente, ou algum convidado de fora para falar sobre determinado tema, voltados para todos os líderes.
 						</p>
 						<p class="mt-4">
-							Geralmente são presenciais, mas podem ocorrer de forma online.
+							Geralmente são presenciais, mas podem ocorrer de forma <em>online</em>.
 						</p>
 						<p class="mt-4">
 							A periodicidade é variável, alguns são mensais, outros bimestrais, trimestrais e até anuais.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
-						<p class="mt-4">
-							Se você quiser conhecer alguns exemplos, acesse o texto
+						<p>
+							Se você quiser conhecer alguns exemplos, acesse o tópico
 						</p>
-						<p class="mt-4">
-							<a class="texto_azul" style="text-decoration:none;" href=""><strong>Encontros e Eventos para Líderes</strong></a>
-						</p>
+						<a 
+						class="texto_azul" 
+						style="text-decoration:none;" 
+						href="./tela_ensino/encontros_e_eventos.pdf" 
+						target="_blank"
+						>
+							<p class="mt-4">
+								<strong>Encontros e Eventos para Líderes</strong>
+							</p>
+						</a>
 					</v-col>
 				</v-row>
 			</v-window-item>
@@ -283,15 +290,25 @@
 							São Trilhas de Aprendizagem realizadas com especialistas para treinar lideranças.
 						</p>
 						<p>
-							Podem ocorrer presencialmente, de forma híbrida, online na modalidade síncrona e assíncrona, por meio de Workshops, Simulações, ou Webinar.
+							Podem ocorrer presencialmente, de forma híbrida, <em>online</em> na modalidade síncrona e assíncrona, por meio de <em>workshops</em>, simulações, ou <em>webinar</em>.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
-						<p class="mt-4">
-							Há Programas específicos oferecidos para lideranças de diferentes áreas.
+						<p>
+							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
-						<p class="mt-4">
-							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
+						<p>
+							Para obter mais informações, acesse: 
+						<a 
+						class="texto_azul" 
+						style="text-decoration:none;" 
+						href="./tela_ensino/encontros_e_eventos.pdf" 
+						target="_blank"
+						>
+							<p class="mt-4">
+								<strong>Encontros e Eventos para Líderes</strong>
+							</p>
+						</a>
 						</p>
 					</v-col>
 				</v-row>
@@ -301,7 +318,7 @@
 			  	<v-row class="pa-10">
 			 		<v-col cols="12" md="12">
 						<p>
-							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de Congressos sobre temas de interesse.
+							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de congressos sobre temas de interesse.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -317,7 +334,7 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							O Einstein prevê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador é que após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
+							O Einstein provê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador, é que, após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
 						</p>
 					</v-col>
 				</v-row>
@@ -349,10 +366,10 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							<strong>Programa de Assessment</strong>
+							<strong>Programa de <em>Assessment</em></strong>
 						</p>
 						<p class="mt-4">
-							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de Assessment para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
+							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de <em>assessment</em> para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
 						</p>
 					</v-col>
 				</v-row>
@@ -387,7 +404,7 @@
 							São encontros com a Diretoria, o Presidente, ou algum convidado de fora para falar sobre determinado tema, voltados para todos os líderes.
 						</p>
 						<p class="mt-4">
-							Geralmente são presenciais, mas podem ocorrer de forma online.
+							Geralmente são presenciais, mas podem ocorrer de forma <em>online</em>.
 						</p>
 						<p class="mt-4">
 							A periodicidade é variável, alguns são mensais, outros bimestrais, trimestrais e até anuais.
@@ -395,7 +412,7 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							Se você quiser conhecer alguns exemplos, acesse o texto
+							Se você quiser conhecer alguns exemplos, acesse o tópico
 						</p>
 						<p class="mt-4">
 							<a class="texto_azul" style="text-decoration:none;" href=""><strong>Encontros e Eventos para Líderes</strong></a>
@@ -411,12 +428,12 @@
 							São Trilhas de Aprendizagem realizadas com especialistas para treinar lideranças.
 						</p>
 						<p>
-							Podem ocorrer presencialmente, de forma híbrida, online na modalidade síncrona e assíncrona, por meio de Workshops, Simulações, ou Webinar.
+							Podem ocorrer presencialmente, de forma híbrida, <em>online</em> na modalidade síncrona e assíncrona, por meio de <em>workshops</em>, simulações, ou <em>webinar</em>.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							Há Programas específicos oferecidos para lideranças de diferentes áreas.
+							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
 						<p class="mt-4">
 							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
@@ -429,7 +446,7 @@
 			  	<v-row class="pa-10">
 			 		<v-col cols="12" md="12">
 						<p>
-							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de Congressos sobre temas de interesse.
+							O Einstein tem uma Política de Incentivo Educacional para atender ao desejo da liderança de fazer uma formação ou participar de congressos sobre temas de interesse.
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -445,7 +462,7 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							O Einstein prevê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador é que após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
+							O Einstein provê valores e auxilia a liderança a viabilizar esse aprendizado. O objetivo, além do crescimento profissional do colaborador, é que, após o retorno, o conhecimento adquirido seja replicado para o time de trabalho.
 						</p>
 					</v-col>
 				</v-row>
@@ -477,10 +494,10 @@
 					</v-col>
 					<v-col cols="12" md="6">
 						<p class="mt-4">
-							<strong>Programa de Assessment</strong>
+							<strong>Programa de <em>Assessment</em></strong>
 						</p>
 						<p class="mt-4">
-							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de Assessment para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
+							<strong>Objetivo e foco:</strong> Visa aprimorar o plano de formação de sucessores para posições críticas e alta liderança por meio de um programa estruturado de <em>assessment</em> para mapeamento de potencialidades e construção do PDI (Plano de Desenvolvimento Individual).
 						</p>
 					</v-col>
 				</v-row>
@@ -542,7 +559,7 @@
 				Essa é uma iniciativa Einstein para estimular os colaboradores a aprimorarem a sua formação profissional.
 			</p>
 			<p class="texto_branco mt-4">
-				O Einstein oferece bolsas para os cursos Técnicos, de Graduação, de Pós-graduação e de Mestrado.
+				O Einstein oferece bolsas para os cursos técnicos, de graduação, de pós-graduação e de mestrado.
 			</p>
 		</v-col>
 	</v-row>
@@ -752,7 +769,7 @@
 								<p  style="font-size:0.8em;">
 								<strong>Informações:</strong><br><br>
 								
-								Para saber mais sobre o Programa, fale com TINA, nossa Assistente Virtual, no Teams ou no Sou Einstein, ou envie um e-mail para a caixa do Programa:
+								Para saber mais sobre o Programa, fale com TINA nossa Assistente Virtual, no Teams ou no Sou Einstein, ou envie um <em>e-mail</em> para a caixa do Programa:
 								<br><br><a class="texto_azul" style="text-decoration:none" href="mailto:progincentivoeducacionalo@einstein.br"><strong>progincentivoeducacionalo@einstein.br</strong></a>
 								</p>
 			
@@ -821,9 +838,9 @@
 				<strong>São objetivos do Programa:</strong>
 			</p>
 			<ul class="ml-8 mt-4">
-				<li>Oferecer oportunidades de crescimento aos profissionais, gerando mão de obra qualificada;</li>
-				<li>Capacitar e desenvolver os colaboradores, possibilitando maior aproveitamento interno;</li>
-				<li>Suprir as demandas de contratação de mão de obra da Sociedade;</li>
+				<li>Oferecer oportunidades de crescimento aos profissionais, gerando mão de obra qualificada.</li>
+				<li>Capacitar e desenvolver os colaboradores, possibilitando maior aproveitamento interno.</li>
+				<li>Suprir as demandas de contratação de mão de obra da Sociedade.</li>
 				<li>Diminuir a rotatividade, permitindo a retenção, a satisfação e o engajamento dos funcionários.</li>
 			</ul>
 
@@ -902,7 +919,7 @@
 			<v-expansion-panels >
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">Atendimento/Administrativo</span>
+				  <p><span style="text-transform:uppercase">Atendimento/Administrativo</span></p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<ul class="ml-8">
@@ -917,7 +934,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">Assistencial</span>
+				  <p><span style="text-transform:uppercase">Assistencial</span></p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<ul class="ml-8">
@@ -934,7 +951,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">Apoio operacional</span>
+				  <p><span style="text-transform:uppercase">Apoio operacional</span></p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<ul class="ml-8">
@@ -942,14 +959,14 @@
 					<li>Camareiro</li>
 					<li>Auxiliar Serviços Gerais</li>
 					<li>Auxiliar de Farmácia</li>
-					<li>Auxiliar de sala</li>
+					<li>Auxiliar de Sala</li>
 				</ul>
 				</v-expansion-panel-text>
 			  </v-expansion-panel>
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">outros</span>
+				  <p><span style="text-transform:uppercase">outros</span></p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<ul class="ml-8">
@@ -1179,16 +1196,16 @@
 		<v-col cols="12" md="5">
 
 			<p class="mt-4 reveal fade-left texto_branco">
-				<strong>Recursos Humanos</strong> – faz o levantamento das necessidades de formação, mapeia o público-alvo, faz o acompanhamento dos alunos e do aproveitamento interno.
+				<strong>Recursos Humanos</strong> – Faz o levantamento das necessidades de formação, mapeia o público-alvo, faz o acompanhamento dos alunos e do aproveitamento interno.
 			</p>
 			<p class="mt-4 reveal fade-left texto_branco">
-				<strong>Comunicação</strong> – é responsável pelo plano de comunicação.
+				<strong>Comunicação</strong> – É responsável pelo plano de comunicação.
 			</p>
 			<p class="mt-4 reveal fade-left texto_branco">
-				<strong>Ensino</strong> – dá apoio ao desenvolvimento da proposta de ensino e ao fornecimento da estrutura física, e faz o acompanhamento dos alunos em relação ao desempenho.
+				<strong>Ensino</strong> – Dá apoio ao desenvolvimento da proposta de ensino e ao fornecimento da estrutura física, e faz o acompanhamento dos alunos em relação ao desempenho.
 			</p>
 			<p class="mt-4 reveal fade-left texto_branco">
-				<strong>Área Técnica</strong> – dá apoio na construção do curso com informações técnicas, necessidades e principais conhecimentos/competências a serem desenvolvidos. 
+				<strong>Área Técnica</strong> – Dá apoio na construção do curso com informações técnicas, necessidades e principais conhecimentos/competências a serem desenvolvidos. 
 			</p>
 		</v-col>
 		<v-col cols="12" md="7">
@@ -1229,7 +1246,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-primary bg_escuro'"
-				@click="isContent13Visible = true; prosseguir('content13')"
+				@click="isContent12aVisible = true; prosseguir('content12a')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1239,35 +1256,234 @@
 
 <!-- conteúdo 12 -->
 
+<!-- conteúdo 12a -->
+	<v-card 
+	v-show="isContent12aVisible"
+	id="content12a" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
+	style="z-index:2;"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_ensino/grade_header_branco.png" />
+		
+		
+		<v-row class="mt-10">
+
+			<v-col cols="12" md="8">
+				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
+					<h2 style="text-transform: uppercase;" class="mt-4 texto_branco">
+						CAEX
+					</h2>
+				</v-card-text>
+			</v-col>
+			<v-col cols="12" md="4" align-self="center">
+				<v-card class="box_dicas pl-0 pr-0 mt-n8 reveal fade-right mx-auto" style="width: 100%">
+				<v-card-text>
+					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos itens abaixo.  
+				</v-card-text>
+			</v-card>
+			</v-col>
+		</v-row>
+		<v-container class="pl-0 pr-0 reveal fade-in">
+		
+			<v-expansion-panels >
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Objetivo</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<p>
+					O Programa de Capacitação Externa, é uma iniciativa para ações de valorização e reconhecimento dos melhores desempenhos, para concessão de apoio financeiro para capacitações nas modalidades de curta duração, de acordo com a aplicabilidade e estratégia da área.
+				</p>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Modalidades</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>Eventos Internos – Ensino Einstein;</li>
+					<li>Eventos Externos;</li>
+					<li>Qualificação Profissional;</li>
+					<li>Simpósios;</li>
+					<li>Workshops;</li>
+					<li>Palestras, etc.</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Abrangência</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>Eventos Internos (Ensino Einstein), Eventos Nacionais e Internacionais, nas modalidades Online, Presencial e Híbrido</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Subsídios contemplados</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>A verba orçada tem como foco os subsídios de <strong>inscrição, hospedagem, transporte aéreo e seguro viagem</strong>.</li>
+					<li><strong>% de subsídio:</strong> as concessões são analisadas pelos gestores e podem ser de 50% a 100% </li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Critérios de Elegibilidade</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>Funcionário (CLT)</li>
+					<li>Ter obtido como consenso na última avaliação de competências institucional o resultado mínimo AT;</li>
+					<li>Ter no mínimo 3 meses na organização;</li>
+					<li>O evento deve ter o tema diferente dos cursos relacionados no planejamento interno da organização (Trilhas).</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Premissas do Programa</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>Recomendação que o evento esteja no Plano de Desenvolvimento Individual (PDI);</li>
+					<li>A concessão do CAEX é uma das ações de valorização e reconhecimento dos melhores desempenhos;</li>
+					<li>Aplicabilidade do curso na área e cargo/função atual;</li>
+					<li>Priorizar cursos de qualificação que atendam as necessidades atuais e futuras de demandas de estratégia da SBIBAE</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <p><span style="text-transform:uppercase">Recomendações</span></p>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<ul class="ml-8">
+					<li>Priorizar a concessão do subsídio em apenas 1 programa por profissional no ciclo;</li>
+					<li>1 evento internacional por ano;</li>
+					<li>Ter domínio no idioma inglês, nos casos de eventos internacionais.</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  
+			</v-expansion-panels>
+			
+			<v-card class="box_dicas_verde mt-4 pa-0 reveal fade-bottom mx-auto" style="width: 100%">
+				<v-card-text>
+					<v-row class="mt-0">
+						<v-col cols="12" md="1" align-self="center">
+							<span class="ml-5 mdi mdi-alert box_verde_icon"></span> 
+						</v-col>
+						<v-col  align-self="center" align="left">
+							<span style="color:white">
+								Os profissionais são indicados anualmente pelos gestores para contemplação no Programa. Aos interessados que não foram indicados, devem procurar o gestor. Em caso de dúvidas, acionar o time de CAEX através do e-mail: <a class="texto_azul" style="text-decoration:none;" href="mailto:IIEPapoiofin@einstein.br"><strong>IIEPapoiofin@einstein.br </strong></a>
+							</span>
+						</v-col>
+					</v-row>
+					  
+				</v-card-text>
+			</v-card>
+			
+			
+			
+			
+			
+			
+
+		</v-container>
+			
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				@click="isContent13Visible = true; prosseguir('content13')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+<!-- conteúdo 16 -->
+
+
 <!-- conteúdo 13 -->
 	<v-card 
 	v-show="isContent13Visible"
 	id="content13" 
 	width="100%" 
 	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont13" 
-	style="z-index:2;"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
+	style="z-index:1;"
 	>
-			<v-sheet style="margin-left:6%;margin-right:6%;" class="mb-16">
+			
 			<v-img class="mx-auto mt-4 grade_header" src="./img/tela_ensino/grade_header.png" />
 		
-			<h2 class="mt-n4 font-weight-bold text-primary reveal fade-left">
-				Programa de Idiomas
-			</h2>
+			<v-row class="mt-2">
+				<v-col cols="12" md="5">
+					<v-img height="480" width="100%" class="mx-auto mt-4 show_desktop" src="./img/tela_ensino/cont13_img.png" />
+					<v-img height="320" width="100%" class="mx-auto mt-4 show_1277" src="./img/tela_ensino/cont13_img.png" />
+					<v-img width="100%" class="mx-auto mt-4 show_mobile" src="./img/tela_ensino/cont13_img.png" />
+				</v-col>
+				<v-col cols="12" md="1">
 
-			<p class="mt-4 reveal fade-left">
-				É uma ação que proporciona aos colaboradores possibilidades de desenvolvimento pessoal e profissional, alinhadas à estratégia da Sociedade e resultando no impacto da experiência do paciente. 
-			</p>
-			<p class="mt-4 reveal fade-left">
-				Através das plataformas do Clube de Benefícios New Value e do Instituto IFEPAF, você tem acesso a descontos em diversas escolas.
-			</p>
-			<p class="mt-4 reveal fade-left">
-				Se desejar, entre em contato pelo e-mail <a class="texto_azul" style="text-decoration:none;" href="mailto:programadeidiomas@einstein.br"><strong>programadeidiomas@einstein.br</strong></a>
-			</p>
+				</v-col>
+				<v-col cols="12" md="6" align-self="center">
+					<h2 class="mt-n4 font-weight-bold text-primary reveal fade-left">
+						Bolsas para Idiomas
+					</h2>
+
+					<p class="mt-4 reveal fade-left">
+						Os colaboradores Einstein interessados em desenvolver um novo idioma podem obter descontos de duas maneiras:
+					</p>
+					
+					<ul class="ml-8 mt-4 reveal fade-left">
+						<li>Clube de Benefícios: Através das plataformas <a class="texto_azul" style="text-decoration:none;" href="https://www.newvalue.com.br/" target="_blank"><strong>New Value</strong></a> e <a class="texto_azul" style="text-decoration:none;" href="https://www.ifepaf.com.br/bem-vindo" target="_blank"><strong>IFEPAF</strong></a>, o colaborador tem acesso a descontos em diversas escolas com percentuais de desconto variados;</li>
+						<li>Programa de Idiomas: Este programa é destinado para demandas/necessidades identificadas como necessárias para atuação profissional e/ou para as expansões de novas unidades fora do Brasil.</li>
+					</ul>
+
+					<p class="mt-4 reveal fade-left">
+						<strong>As demandas são avaliadas e validadas pela diretoria.</strong>
+					</p>
+					<p class="mt-4 reveal fade-left">
+						Em caso de novas demandas, entre em contato: <a class="texto_azul" style="text-decoration:none;" href="mailto:programadeidiomas@einstein.br"><strong>programadeidiomas@einstein.br</strong></a>
+					</p>
+				</v-col>
+			</v-row>
 			
-			</v-sheet>
-			<v-img height="480" width="100%" class="mx-auto mt-4" src="./img/tela_ensino/cont13_img.png" />
-
 	<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
 			<v-sheet 
@@ -1308,7 +1524,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
-	style="z-index:1; margin-bottom:30px;"
+	style="z-index:0; margin-bottom:30px;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_ensino/grade_header_branco.png" />
 
@@ -1370,6 +1586,7 @@
 	const isContent10Visible = ref(false)
 	const isContent11Visible = ref(false)
 	const isContent12Visible = ref(false)
+	const isContent12aVisible = ref(false)
 	const isContent13Visible = ref(false)
 	const isContent14Visible = ref(false)
 	const isContent15Visible = ref(false)
@@ -1604,6 +1821,17 @@ background-color:#fff!important;
 .text_footer{
 font-size:1.5em;
 
+}
+.box_dicas_verde{
+text-align:center;
+background-color:#81C300;
+}
+.box_verde_icon {
+	font-size: 3rem;
+	color:white;
+	position: relative;
+	top:5px;
+	left:-10px
 }
 @media screen and (max-width: 1277px){
 .box_acima_trilhas{

@@ -2,6 +2,7 @@
 import vue from '@vitejs/plugin-vue'
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 //import basicSsl from '@vitejs/plugin-basic-ssl'
+import mkcert from 'vite-plugin-mkcert'
 
 // Utilities
 import { defineConfig } from 'vite'
@@ -19,6 +20,7 @@ export default defineConfig({
       //styles: { configFile: "src/styles/settings.scss" }
     }),
     //basicSsl(),
+    mkcert(),
   ],
   define: { 
     'process.env': {} 

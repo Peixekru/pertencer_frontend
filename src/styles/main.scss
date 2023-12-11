@@ -112,6 +112,10 @@ a {
 }
 
 
+.icon-dark-blue-svg{
+    filter: invert(12%) sepia(44%) saturate(1002%) hue-rotate(197deg) brightness(94%) contrast(97%);
+}
+
 .secondary-svg {
     filter: invert(56%) sepia(45%) saturate(3115%) hue-rotate(160deg) brightness(90%) contrast(101%);
 }

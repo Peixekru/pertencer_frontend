@@ -46,7 +46,7 @@
                         icon="mdi-close-circle-outline" 
                         size="48px"
                         :color=" appStore.isDarkMode ? 'white' : 'text-primary'"
-                        @click="appStore.galleryModal = false"
+                        @click="closeModal()"
                         />
                     </template>
 
@@ -72,12 +72,13 @@
                 >
                     <!--Component de captura de foto-->
                     <GallerySendImage 
+                    ref="gallerySendImage"
                     :key="appStore.gallerySendImageKey"
                     />
 
                 </v-row>
 
-                <v-row
+                <!--<v-row
                     v-if="appStore.appData.galeria.content.userImgs.length > 0"
                 >
 
@@ -90,12 +91,12 @@
                         </p>
                     </v-col>
 
-                    <!-- Componente de exibição de imagens do usuário-->
+                    //Componente de exibição de imagens do usuário
                     <GalleryUserImages />
 
-                </v-row>
+                </v-row>-->
 
-                <v-row
+                <!--<v-row
                     v-if="appStore.appData.galeria.content.globalImgs.length > 0"
                 >
 
@@ -105,10 +106,10 @@
                         </h6>
                     </v-col>
 
-                    <!-- Componente de exibição de imagens do sistema-->
+                    //Componente de exibição de imagens do sistema
                     <GalleryGlobalImages/>
 
-                    </v-row>
+                    </v-row>-->
 
             </v-container>
 
@@ -118,11 +119,26 @@
 
 
 <script setup>
+    import { ref } from 'vue'
     import { useAppStore } from '../store/app'
     import GalleryUserImages from './GalleryUserImages'
     import GallerySendImage from './GallerySendImage'
     import GalleryGlobalImages from './GalleryGlobalImages'
     const appStore = useAppStore()
+
+    //Captura a referência do gallerySendImage Component
+    const gallerySendImage = ref(null)
+
+    const closeModal = () => {
+        appStore.galleryModal = false
+
+        //Caso ligada, desliga a câmera usando método do child Componet (gallerySendImage)
+        if (gallerySendImage.value.isCamOpen) {
+            gallerySendImage.value.stopVideo()
+        }
+    }
+
+
 </script>
 
 

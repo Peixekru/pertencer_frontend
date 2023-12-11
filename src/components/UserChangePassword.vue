@@ -60,8 +60,9 @@
                 v-model="password"
                 :append-inner-icon=" isVisible ? 'mdi-eye-off' : 'mdi-eye' "
                 :type=" isVisible? 'text' : 'password' "
-                :counter="6"
-                :class="password.length >= 6 ? 'text-success' : '' "
+                :counter="12"
+                maxlength="12"
+                :class="password.length >= 6  ? 'text-success' : '' "
                 minlength="6"
                 prepend-inner-icon="mdi-lock-outline"
                 placeholder="- - -"
@@ -74,15 +75,16 @@
 
                 <v-text-field
                 :disabled ="password.length < 6"
+                maxlength="12"
                 v-model="passwordConfirm"
-                :append-inner-icon=" isVisible ? 'mdi-eye-off' : 'mdi-eye' "
-                :type=" isVisible? 'text' : 'password' "
-                :class="password == passwordConfirm && password.length >= 6 ? 'text-success' :  passwordConfirm != '' &&  password.length >= 6?  'text-error' : '' "
+                :append-inner-icon=" isVisibleConfirm ? 'mdi-eye-off' : 'mdi-eye' "
+                :type=" isVisibleConfirm ? 'text' : 'password' "
+                :class="password == passwordConfirm && password.length >= 6 ? 'text-success' :  passwordConfirm != '' &&  password.length >= 6 ? 'text-error' : '' "
                 prepend-inner-icon="mdi mdi-lock-check-outline"
                 placeholder="- - -"
                 required
                 color="secondary"
-                @click:append-inner="isVisible= !isVisible"
+                @click:append-inner="isVisibleConfirm = !isVisibleConfirm"
                 />
 
                 <v-btn
@@ -130,6 +132,7 @@
 
     //Exibe / esconde a senha
     const isVisible = ref(false)
+    const isVisibleConfirm = ref(false)
 
     //Armezena user e password
     const password = ref('')

@@ -75,9 +75,10 @@
                     />  
                     
                     <p>
-                        Utilize a Cápsula do Tempo para enviar uma mensagem para seu "eu" do futuro. 
-                        Compartilhe suas expectativas, metas e sonhos aqui dentro do Einstein. Insira seu e-mail, e daqui a um ano, 
-                        reviva suas palavras. Não se preocupe. Só você receberá a mensagem. O futuro começa agora.
+                        Assim como os fundadores do Einstein fizeram uma capsula do tempo com bons desejos para o Hospital e seus colaboradores, 
+                        você agora também terá a oportunidade de construir sua própria capsula para o seu eu do futuro.
+                        Compartilhe suas expectativas, metas e sonhos aqui dentro do Einstein. Insira seu e-mail para enterrar sua cápsula de bons desejos. 
+                        Daqui a um tempo você terá uma surpresa! O futuro começa agora!
                     </p>
                 </v-container>
 
@@ -428,6 +429,11 @@
 
     //Grava alterações no localstorage e no backend
     const saveData = () => {
+
+        //Libera badge da Cápsula do tempo
+        if (appStore.appData.badges.capsula == 0){
+            appStore.appData.badges.capsula = 1
+        }
 
         //Armazena data atual do sistema
         let currentDate = new Date()

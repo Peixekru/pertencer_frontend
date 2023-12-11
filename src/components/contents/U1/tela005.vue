@@ -97,7 +97,7 @@
 					<v-card-text class="mt-n4">
 					<ul class="ml-6">
 						<li>
-							<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 4 Clínicas Einstein</strong> | Atenção primária em São Paulo. 
+							<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 5 Clínicas Einstein</strong> | Atenção primária em São Paulo. 
 						</li>
 					</ul>
 						
@@ -199,7 +199,7 @@
 		
 		<v-card elevation="0" class="box_mapas_btns pl-0 pr-0 mt-n8 mb-4 mx-auto bg-transparent" style="width:100%">
 			<v-card-text>
-					<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> - Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> - Unidades de ensino
+					<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> — Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> — Unidades de ensino
 			</v-card-text>
 		</v-card>
 		
@@ -473,7 +473,7 @@
 			<v-row class="my-4 reveal fade-bottom">
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
-					Maiores em área do que as Clínicas Einstein, as unidades avançadas contam com instalações modernas, excelente localização e os serviços médico assistenciais do Einstein. 
+					Maiores em área do que as Clínicas Einstein, as unidades avançadas contam com instalações modernas, excelente localização e os serviços médicos assistenciais do Einstein. 
 				</p>
 				<p class="mt-4 texto_preto fadeInLeft">
 					<strong>As cinco unidades, somadas, atendem cerca de <span style="font-size:1.2em;color:#62C9CE">2.300</span> pessoas por dia.</strong> 
@@ -654,23 +654,14 @@
 			<v-row class="my-4 reveal fade-bottom">
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
-					Maiores em área do que as Clínicas Einstein, as unidades avançadas contam com instalações modernas, excelente localização e os serviços médico assistenciais do Einstein. 
+					O atendimento é realizado por médicos de família, enfermeiros, equipe multidisciplinar e coordenadores do cuidado, que oferecem um cuidado abrangente, longitudinal e coordenado.
 				</p>
-				<p class="mt-4 texto_preto fadeInLeft">
-					<strong>As cinco unidades, somadas, atendem cerca de <span style="font-size:1.2em;color:#62C9CE">2.300</span> pessoas por dia.</strong> 
-				</p>
+				
 			</v-col>
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
-					Todas as unidades avançadas contam com:
+					<strong>São cinco unidades próprias e outras oito localizadas em empresas.</strong> 
 				</p>
-				<ul class="ml-8">
-					<li>Pronto atendimento.</li>
-					<li>Consultórios.</li>
-					<li>Exames de imagem e laboratoriais. </li>
-					<li>Fisioterapia.</li>
-					<li>Vacinação, entre outros serviços.</li>
-				</ul>
 			</v-col>
 			
 		</v-row>
@@ -851,33 +842,11 @@
 		
 			
 			
-			<v-row class="my-4 reveal fade-bottom">
-			<v-col cols="12" md="6">
-				<p class="mt-4 texto_preto fadeInLeft">
-					Maiores em área do que as Clínicas Einstein, as unidades avançadas contam com instalações modernas, excelente localização e os serviços médico assistenciais do Einstein. 
-				</p>
-				<p class="mt-4 texto_preto fadeInLeft">
-					<strong>As cinco unidades, somadas, atendem cerca de <span style="font-size:1.2em;color:#62C9CE">2.300</span> pessoas por dia.</strong> 
-				</p>
-			</v-col>
-			<v-col cols="12" md="6">
-				<p class="mt-4 texto_preto fadeInLeft">
-					Todas as unidades avançadas contam com:
-				</p>
-				<ul class="ml-8">
-					<li>Pronto atendimento.</li>
-					<li>Consultórios.</li>
-					<li>Exames de imagem e laboratoriais. </li>
-					<li>Fisioterapia.</li>
-					<li>Vacinação, entre outros serviços.</li>
-				</ul>
-			</v-col>
 			
-		</v-row>
 
 
 		<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
+		<v-container class="d-flex justify-center mt-8 mb-4">
 			<v-sheet 
 			color="transparent"
 			class="mb-4"
@@ -987,14 +956,12 @@
 							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
-				
-				
-				
+
 			</v-col>
 			
 			<v-col cols="12" md="12">
 			<p class="mt-0 texto_preto fadeInLeft">
-					O novo Centro de Ensino e Pesquisa da Sociedade Beneficente Israelita Brasileira Albert Einstein, inaugurado em 2022,  ocupa uma área construída de mais de 44 mil m², adjacente ao hospital, integrando o paisagismo interno e externo. Com capacidade para cerca de 6 mil pessoas, o prédio acomoda alunos das graduações de medicina e enfermagem, docentes e pesquisadores, e além dos diversos pontos de área verde e ambientes de convivência, conta com todos os requisitos e tecnologias para se tornar uma das instituições mais avançadas da América Latina em estudos e pesquisas médicas.
+					O novo Centro de Ensino e Pesquisa da Sociedade Beneficente Israelita Brasileira Albert Einstein, inaugurado em 2022, ocupa uma área construída de mais de 44 mil m², adjacente ao hospital, integrando o paisagismo interno e externo. Com capacidade para cerca de 6 mil pessoas, o prédio acomoda alunos das graduações de medicina e enfermagem, docentes e pesquisadores, e além dos diversos pontos de área verde e ambientes de convivência, conta com todos os requisitos e tecnologias para se tornar uma das instituições mais avançadas da América Latina em estudos e pesquisas médicas.
 				</p>
 			</v-col>
 			<v-col cols="12" md="5">
@@ -1018,7 +985,7 @@
 					<li>Centro de Pesquisa Clínica</li>
 					<li>Jardim Interno</li>
 					<li>Praça de alimentação com 220 assentos</li>
-					<li>Passarela com ligação direta com Albert Einstein</li>
+					<li>Passarela com ligação direta com o Hospital Albert Einstein</li>
 				</ul>
 			</v-col>
 			<v-col cols="12" md="7" align-self="center">
@@ -1045,7 +1012,7 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					Inaugurada em março de 2014, a Unidade Faria Lima Tem capacidade para 330 alunos por ano, em 15 turmas sim​ultâneas e são oferecidos Cursos de pós-graduação​.
+					Inaugurada em março de 2014, a Unidade Faria Lima tem capacidade para 330 alunos por ano, em 15 turmas simultâneas e são oferecidos cursos de pós-graduação.
 
 				</p>
 			</v-col>
@@ -1101,7 +1068,7 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					Inaugurada em 2012, a Unidade Paulista de Ensino tem localização privilegiada, em um dos cartões-postais da cidade de São Paulo. Em 2017 inaugurou seu novo espaço, com expansão e alteração de endereço. Atualmente possui a capacidade para 860 alunos simultaneamente), oferece salas de aula modernas e confortáveis. O destaque é a sala de Imagem, que dispõe de workstations individuais (com 02 monitores de 24 polegadas), computadores de alta performance e sistema PACS integrado. Nesta Unidades são oferecidos: Pós graduação, Cursos técnicos, Cursos de atualização e Cursos do Centro de Simulação Realística.
+					Inaugurada em 2012, a Unidade Paulista de Ensino tem localização privilegiada, em um dos cartões-postais da cidade de São Paulo. Em 2017 inaugurou seu novo espaço, com expansão e alteração de endereço. Atualmente possui a capacidade para 860 alunos simultaneamente, oferece salas de aula modernas e confortáveis. O destaque é a sala de Imagem, que dispõe de <em>workstations</em> individuais (com 2 monitores de 24 polegadas), computadores de alta performance e sistema PACS integrado. Nesta Unidade são oferecidos: Pós-graduação, Cursos técnicos, Cursos de atualização e Cursos do Centro de Simulação Realística.
 				</p>
 			</v-col>
 		</v-row>
@@ -1127,7 +1094,7 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					Inaugurada em 2020, a Unidade de Ensino Paulista II tem capacidade de receber 430 alunos simultaneamente e possui salas de aula modernas, com uma disposição de mesas diferenciada, permitindo ao aluno melhor aproveitamento e interação. Também possui um belo projeto de arquitetura, com ambientes silenciosos, tranquilos e repletos de plantas, tornando o espaço ainda mais agradável, acolhedor e propício para estudo e leitura. A Unidade oferece cursos de Pós-graduação, o MBA Executivo, o Programa de Gestão em Saúde e o Centro de Simulação Realística.
+					Inaugurada em 2020, a Unidade de Ensino Paulista II tem capacidade de receber 430 alunos simultaneamente e possui salas de aula modernas, com uma disposição de mesas diferenciada, permitindo ao aluno melhor aproveitamento e interação. Também possui um belo projeto de arquitetura, com ambientes silenciosos, tranquilos e repletos de plantas, tornando o espaço ainda mais agradável, acolhedor e propício para estudo e leitura. A unidade oferece cursos de Pós-graduação, o MBA Executivo, o Programa de Gestão em Saúde e o Centro de Simulação Realística.
 				</p>
 			</v-col>
 		</v-row>
@@ -1155,10 +1122,10 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					Administrada pelo Einstein desde 2003, a Unidade Vila Mariana integra diversas áreas e serviços, sendo eles o Residencial Israelita Albert Einstein com mais de 120 moradores e os seguintes ambulatórios: Geriatria/PECJ (Programa Einstein para a Comunidade Judaica), Residência Médica, Saúde do Trabalho, Projeto Coluna e Programa de Transplantes. Também estão alocadas na Unidade Vila Mariana algumas áreas administrativas como a Eretz Bio, Laboratório de Inovação e Incubadora de Startups e Escritório Proadi.
+					Administrada pelo Einstein desde 2003, a Unidade Vila Mariana integra diversas áreas e serviços, sendo eles o Residencial Israelita Albert Einstein, com mais de 120 moradores e os seguintes ambulatórios: Geriatria/PECJ (Programa Einstein para a Comunidade Judaica), Residência Médica, Saúde do Trabalho, Projeto Coluna e Programa de Transplantes. Também estão alocadas na Unidade Vila Mariana algumas áreas administrativas como a Eretz Bio, Laboratório de Inovação e Incubadora de Startups e Escritório Proadi.
 				</p>
 				<p class="mt-0 texto_preto fadeInLeft">
-					No ensino em saúde, se destaca como campo de estágio assistencial para cursos de Pós-graduação, Residência Médica e Multiprofissional e graduação em Enfermagem, além de receber alguns cursos de atualização do Einstein.
+					No ensino em saúde, se destaca como campo de estágio assistencial para cursos de Pós-graduação, Residência Médica e Multiprofissional e Graduação em Enfermagem, além de receber alguns cursos de atualização do Einstein.
 				</p>
 			</v-col>
 		</v-row>
@@ -1183,7 +1150,7 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					Inaugurado em 2015, o Hospital Municipal Vila Santa Catarina (HMVSC) é administrado pelo Einstein em parceria inédita com o SUS e oferece assistência de alta complexidade. Atende também como hospital escola aos nossos programas de ensino formal, como a Residência Médica e graduação em Medicina e em Enfermagem. Na assistência, destaca-se o Programa de Transplante de Órgãos Sólidos e as áreas de Oncologia, Maternidade, Pediatria, Terapia Intensiva e Clínica Cirúrgica.
+					Inaugurado em 2015, o Hospital Municipal Vila Santa Catarina (HMVSC) é administrado pelo Einstein em parceria inédita com o SUS e oferece assistência de alta complexidade. Atende também como hospital escola aos nossos programas de ensino formal, como a Residência Médica e Graduação em Medicina e em Enfermagem. Na assistência, destaca-se o Programa de Transplante de Órgãos Sólidos e as áreas de Oncologia, Maternidade, Pediatria, Terapia Intensiva e Clínica Cirúrgica.
 				</p>
 			</v-col>
 		</v-row>
@@ -1209,7 +1176,7 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					No ensino em saúde, o HMVSC se destaca como campo de estágio hospitalar para cursos de graduação em Medicina e em Enfermagem, Residências Médicas e Multiprofissionais e estágios para Cursos Técnicos e outros estágios supervisionados na área hospitalar. Conta também, com profissionais capacitados para as atividades de ensino desenvolvidas, além de um setor destinado às atividades de ensino, com salas de aulas, anfiteatro, biblioteca e espaço de convívio para estudantes.
+					No ensino em saúde, o HMVSC se destaca como campo de estágio hospitalar para cursos de Graduação em Medicina e em Enfermagem, Residências Médicas e Multiprofissionais e estágios para Cursos Técnicos e outros estágios supervisionados na área hospitalar. Conta também com profissionais capacitados para as atividades de ensino desenvolvidas, além de um setor destinado às atividades de ensino, com salas de aulas, anfiteatro, biblioteca e espaço de convívio para estudantes.
 				</p>
 			</v-col>
 		</v-row>
@@ -1234,10 +1201,10 @@
 			
 			<v-col cols="12" md="12">
 				<p class="mt-0 texto_preto fadeInLeft">
-					O Centro Einstein de Esporte e Bem-estar (CEEBE) foi criado para promover a qualidade de vida dos alunos da Graduação e da Residência, com atividades que estimulam a saúde física e mental e proporcionam momentos de lazer e convívio social entre calouros, veteranos, residentes e professores. A unidade conta com diversos espaços e equipamentos para a prática esportiva, inclusive com o suporte de educadores físicos, e para confraternizações, como uma churrasqueira e um rooftop.
+					O Centro Einstein de Esporte e Bem-estar (CEEBE) foi criado para promover a qualidade de vida dos alunos da Graduação e da Residência, com atividades que estimulam a saúde física e mental e proporcionam momentos de lazer e convívio social entre calouros, veteranos, residentes e professores. A unidade conta com diversos espaços e equipamentos para a prática esportiva, inclusive com o suporte de educadores físicos, e para confraternizações, como uma churrasqueira e um <em>rooftop</em>.
 				</p> 
 				<p class="mt-0 texto_preto fadeInLeft">
-					Inaugurado em 2017, o CEEBE já provou ser um recurso eficiente para prevenir o burnout e outros sinais de esgotamento comuns em estudantes da área da saúde, e ainda incentivar a adoção de hábitos para uma vida mais saudável.
+					Inaugurado em 2017, o CEEBE já provou ser um recurso eficiente para prevenir o <em>burnout</em> e outros sinais de esgotamento comuns em estudantes da área da saúde, e ainda incentivar a adoção de hábitos para uma vida mais saudável.
 				</p>
 			</v-col>
 		</v-row>
@@ -1339,7 +1306,7 @@
 					UNIDADE GOIÂNIA
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					Com 18 mil metros quadrados de área total, a unidade conta com:
+					Com 18 mil m<sup>2</sup> de área total, a unidade conta com:
 				</p>
 				<ul class="ml-6">
 						<li>
@@ -1479,7 +1446,7 @@
 					UNIDADE RIO DE JANEIRO
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					A primeira unidade de Ensino do Einstein fora de São Paulo foi inaugurada em março de 2015 em localização privilegiada, no Centro da cidade do Rio de Janeiro. Com 10 salas de aula, um laboratório e uma biblioteca, comporta 320 alunos simultaneamente. O corpo docente é composto por profissionais que integram o corpo clínico do Einstein e os alunos podem realizar os estágios no próprio hospital, em São Paulo. 
+					A primeira unidade de Ensino do Einstein fora de São Paulo foi inaugurada em março de 2015 em localização privilegiada, no Centro da cidade do Rio de Janeiro. Com 10 salas de aula, um laboratório e uma biblioteca, comporta 320 alunos simultaneamente. O corpo docente é composto por profissionais que integram o corpo clínico do Einstein e os alunos podem realizar os estágios no próprio hospital em São Paulo. 
 
 				</p>
 				
@@ -1595,7 +1562,7 @@
 					UNIDADE BELO HORIZONTE
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					Inaugurada em 2016, Unidade de Ensino do Einstein em Belo Horizonte tem capacidade para 120 alunos e oferece, principalmente, cursos de pós-graduação. Com estrutura moderna e confortável, oferece aos profissionais de saúde de Minas Gerais a oportunidade de aperfeiçoarem seus conhecimentos com base na expertise do Hospital Israelita Albert Einstein e de seu corpo clínico.
+					Inaugurada em 2016, Unidade de Ensino do Einstein em Belo Horizonte tem capacidade para 120 alunos e oferece, principalmente, cursos de pós-graduação. Com estrutura moderna e confortável, oferece aos profissionais de saúde de Minas Gerais a oportunidade de aperfeiçoarem seus conhecimentos com base na <em>expertise</em> do Hospital Israelita Albert Einstein e de seu corpo clínico.
 				</p>
 				
 				<v-sheet class="bg-transparent">
@@ -1793,11 +1760,11 @@
 					Um dos destaques da atuação do Einstein no cuidado público é a gestão de uma estrutura que inclui a atenção primária através de:
 				</p>
 				<ul class="ml-8 mt-4">
-					<li>Rede de unidades básicas de saúde (UBS).</li>
-					<li>Assistências médicas ambulatoriais (AMAs).</li>
-					<li>Centros de apoio psicossocial (CAPS).</li>
-					<li>Unidades de pronto atendimento (UPAs).</li>
-					<li>Serviços de residências terapêuticas (SRTs).</li>
+					<li>Rede de Unidades Básicas de Saúde (UBS).</li>
+					<li>Assistências Médicas Ambulatoriais (AMAs).</li>
+					<li>Centros de Apoio Psicossocial (CAPS).</li>
+					<li>Unidades de Pronto Atendimento (UPAs).</li>
+					<li>Serviços de Residências Terapêuticas (SRTs).</li>
 				</ul>
 				<p class="mt-4">
 					Essas unidades realizam desde a saúde da família até procedimentos mais especializados, beneficiando mais de 2 milhões de usuários do sistema público. A operação dessas unidades se dá por meio de convênios que o Einstein mantém com a Prefeitura de São Paulo. 
@@ -1832,7 +1799,7 @@
 		</v-row>
 		<v-card elevation="0" class="box_mapas_btns pl-0 pr-0 mt-n8 mb-4 mx-auto bg-transparent" style="width:100%">
 			<v-card-text>
-					<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> - Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> - Unidades de ensino
+					<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> — Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> — Unidades de ensino
 			</v-card-text>
 		</v-card>
 		
@@ -1883,10 +1850,10 @@
 
 			<v-col cols="12" md="5">
 				<h3 style="text-transform:uppercase" class="texto_azul_claro">
-					GOIÂNIA - Hospital Municipal de Aparecida l Iris Rezende de Machado (HMAP)
+					GOIÂNIA — Hospital Municipal de Aparecida | Iris Rezende de Machado (HMAP)
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					Em 2022, o Einstein assumiu a gestão do Hospital Municipal de Aparecida de Goiânia - Iris Rezende Machado no município do mesmo nome, em Goiás. Trata-se da primeira operação de hospital público feita pelo Einstein fora da cidade de São Paulo. Com 235 leitos, o hospital é voltado para o atendimento de alta complexidade, incluindo hemodinâmica, cirurgia bariátrica e, futuramente, cirurgia cardíaca, além de várias especialidades cirúrgicas e diagnósticas.
+					Em 2022, o Einstein assumiu a gestão do Hospital Municipal de Aparecida de Goiânia — Iris Rezende Machado no município do mesmo nome, em Goiás. Trata-se da primeira operação de hospital público feita pelo Einstein fora da cidade de São Paulo. Com 235 leitos, o hospital é voltado para o atendimento de alta complexidade, incluindo hemodinâmica, cirurgia bariátrica e, futuramente, cirurgia cardíaca, além de várias especialidades cirúrgicas e diagnósticas.
 				</p>
 				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
 			
@@ -1994,7 +1961,7 @@
 		<v-row class="mt-n0 reveal fade-bottom">
 			<v-col cols="12" md="12">
 				<h3 style="text-transform:uppercase" class="texto_azul_claro">
-					SÃO PAULO - Vila Santa Catarina I Dr. Gilson de C. Marques de Carvalho 
+					SÃO PAULO — Vila Santa Catarina I Dr. Gilson de C. Marques de Carvalho 
 				</h3>			
 			</v-col>
 
@@ -2006,13 +1973,13 @@
 			</v-col>
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
-					O Hospital Municipal Vila Santa Catarina - Dr. Gilson de Cássia Marques de Carvalho é um hospital de alta complexidade. Realiza cirurgias bariátrica, urológica e vascular, e oferece atendimento especializado em oncologia, em maternidade de alto risco e em pediatria, além de disponibilizar serviços de diagnostico, como laboratório clinico e de imagem.
+					O Hospital Municipal Vila Santa Catarina — Dr. Gilson de Cássia Marques de Carvalho é um hospital de alta complexidade. Realiza cirurgias bariátrica, urológica e vascular, e oferece atendimento especializado em oncologia, em maternidade de alto risco e em pediatria, além de disponibilizar serviços de diagnóstico, como laboratório clinico e de imagem.
 				</p>
 				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
 			</v-col>
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
-					Em 2022 foi inaugurado o novo Centro de Diagnóstico e Tratamento Avançado em Oncologia, Bruno Covas, com o intuito de dar mais agilidade à rede municipal de saúde no diagnóstico precoce de pacientes com câncer, permitindo tratamento mais rápido, especializado e atualizado, incluindo atendimento clinico, quimioterapia, radioterapia e cirurgia, inclusive robótica.
+					Em 2022, foi inaugurado o novo Centro de Diagnóstico e Tratamento Avançado em Oncologia, Bruno Covas, com o intuito de dar mais agilidade à rede municipal de saúde no diagnóstico precoce de pacientes com câncer, permitindo tratamento mais rápido, especializado e atualizado, incluindo atendimento clínico, quimioterapia, radioterapia e cirurgia, inclusive robótica.
 				</p>
 				<p class="mt-4 texto_preto fadeInLeft">
 					Com o novo espaço, houve a ampliação da área de quimioterapia, abertura de novas salas de atendimento ambulatorial e aumento do número de leitos de internação oncológica, que passou de 98 para 111, além de 30 leitos de oncologia cirúrgica.
@@ -2114,10 +2081,10 @@
 
 			<v-col cols="12" md="6">
 				<h3 style="text-transform:uppercase" class="texto_azul_claro">
-					São Paulo - Hospital Municipal M’Boi Mirim - Dr. Moysés Deutsch 
+					São Paulo — Hospital Municipal M’Boi Mirim — Dr. Moysés Deutsch 
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					O Hospital Municipal M’Boi Mirim - Dr. Moysés Deutsch é gerido e operado pelo Einstein, em associação com o Centro de Estudos e Pesquisas Dr. João Amorim (CEJAM). A unidade funciona desde 2008 atendendo urgências, emergências, cirurgias eletivas e assistência ao parto, com destaque para o atendimento nas especialidades de Clínica Médica, Cirurgia Geral, Pediatria, Ortopedia, Ginecologia, Obstetrícia e Psiquiatria.
+					O Hospital Municipal M’Boi Mirim — Dr. Moysés Deutsch é gerido e operado pelo Einstein, em associação com o Centro de Estudos e Pesquisas Dr. João Amorim (CEJAM). A unidade funciona desde 2008 atendendo urgências, emergências, cirurgias eletivas e assistência ao parto, com destaque para o atendimento nas especialidades de Clínica Médica, Cirurgia Geral, Pediatria, Ortopedia, Ginecologia, Obstetrícia e Psiquiatria.
 				</p>
 				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
 			
@@ -2442,7 +2409,7 @@
 	
 	<v-card elevation="0" class="box_mapas_btns pl-0 pr-0 mt-n8 mb-4 mx-auto bg-transparent" style="width:100%">
 		<v-card-text>
-				<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> - Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> - Unidades de ensino
+				<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span></strong> — Unidades de saúde | <strong><span class="mdi mdi-google-classroom box_dicas_icon"></span></strong> — Unidades de ensino
 		</v-card-text>
 	</v-card>
 	<img class="map3_unidades" src="./img/tela_presenca/map3_unidades.png" />
@@ -2493,10 +2460,10 @@
 					Laboratório Municipal de Exames Diagnósticos em Mogi das Cruzes (SP)
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					Localizado no Parque Monte Líbano, o Laboratório Municipal de Exames Diagnósticos conta com capacidade para realizar 100 mil procedimentos por mês e é resultado de uma parceria firmada pela Administração Municipal com o Cejam - Centro de Estudos e Pesquisas Dr. João Amorim e o Albert Einstein Medicina Diagnóstica.
+					Localizado no Parque Monte Líbano, o Laboratório Municipal de Exames Diagnósticos conta com capacidade para realizar 100 mil procedimentos por mês e é resultado de uma parceria firmada pela Administração Municipal com o Cejam — Centro de Estudos e Pesquisas Dr. João Amorim e o Albert Einstein Medicina Diagnóstica.
 				</p>
 				<p class="mt-4 texto_preto fadeInLeft">
-					O Laboratório Municipal funciona 24 horas por dia, inclusive aos sábados, domingos e feriados, para atender a demanda proveniente das 50 unidades municipais de saúde. Com a alta tecnologia trazida pela equipe do Albert Einstein, os mogianos contam com recursos que garantem mais qualidade e resolutividade.
+					O Laboratório Municipal funciona 24 horas por dia, inclusive aos sábados, domingos e feriados, para atender à demanda proveniente das 50 unidades municipais de saúde. Com a alta tecnologia trazida pela equipe do Albert Einstein, os mogianos contam com recursos que garantem mais qualidade e resolutividade.
 				</p>
 			
 			</v-col>
@@ -2615,11 +2582,11 @@
 				</p>
 				
 				<p class="mt-4 texto_preto fadeInLeft">
-					A Unidade de Pronto Atendimento (UPA) 24 horas do Campo Limpo, tem gestão compartilhada com a Sociedade Beneficente Israelita Brasileira Albert Einstein, e realiza, em média, 18.000 atendimentos por mês incluindo casos de baixa e média complexidade.
+					A Unidade de Pronto Atendimento (UPA) 24 horas do Campo Limpo tem gestão compartilhada com a Sociedade Beneficente Israelita Brasileira Albert Einstein e realiza, em média, 18.000 atendimentos por mês incluindo casos de baixa e média complexidade.
 				</p>
 				
 				<p class="mt-4 texto_preto fadeInLeft">
-					A equipe médica da UPA Campo Limpo é composta por Clínico, Pediatra, Emergencista, Ortopedista e Cirurgião. 
+					A equipe médica da UPA Campo Limpo é composta por clínico, pediatra, emergencista, ortopedista e cirurgião. 
 				</p>
 			</v-col>
 			<v-col cols="12" md="6" align-self="start">
@@ -2629,11 +2596,11 @@
 				</p>
 				
 				<p class="mt-4 texto_preto fadeInLeft">
-					A UPA Vila Santa Catarina presta atendimento a pacientes com quadro agudo de natureza clínica e o primeiro atendimento em casos cirúrgicos e traumáticos, estabiliza o paciente e realiza o diagnóstico inicial e verifica a necessidade ou não de encaminhamento a unidade hospitalar de maior complexidade. 
+					A UPA Vila Santa Catarina presta atendimento a pacientes com quadro agudo de natureza clínica e o primeiro atendimento em casos cirúrgicos e traumáticos, estabiliza o paciente, realiza o diagnóstico inicial e verifica a necessidade ou não de encaminhamento à unidade hospitalar de maior complexidade. 
 				</p>
 				
 				<p class="mt-4 texto_preto fadeInLeft">
-					A UPA se tornou  a primeira do Brasil a receber  a acreditação de Excelência  (nível 3) pela Organização Nacional de Acreditação (ONA), modelo brasileiro que certifica a qualidade de hospitais e serviços de saúde. A certificação nível 3 atesta o alto grau de maturidade da cultura  de melhoria contínua.
+					A UPA se tornou  a primeira do Brasil a receber  a acreditação de Excelência (nível 3) pela Organização Nacional de Acreditação (ONA), modelo brasileiro que certifica a qualidade de hospitais e serviços de saúde. A certificação nível 3 atesta o alto grau de maturidade da cultura  de melhoria contínua.
 				</p>
 			</v-col>
 		</v-row>
@@ -3310,7 +3277,7 @@
 					Serviços de Residência Terapêutica (SRT) 
 				</h3>
 				<p class="mt-4 texto_preto fadeInLeft">
-					Os Serviços Residenciais Terapêuticos (SRT) são moradias inseridas, preferencialmente, na comunidade, destinadas a cuidar dos portadores de transtornos mentais, egressos de internações psiquiátricas de longa permanência, que não possuam suporte social e laços familiares. A implantação de um SRT é o início de longo processo de reabilitação que deverá buscar a progressiva inclusão social do morador e sua reinserção na rede de serviços, organizações e relações sociais da comunidade.
+					Os Serviços Residenciais Terapêuticos (SRT) são moradias inseridas, preferencialmente, na comunidade, destinadas a cuidar dos portadores de transtornos mentais, egressos de internações psiquiátricas de longa permanência, que não possuam suporte social e laços familiares. A implantação de um SRT é o início de um longo processo de reabilitação que deverá buscar a progressiva inclusão social do morador e sua reinserção na rede de serviços, organizações e relações sociais da comunidade.
 				</p>
 
 		<v-row class="mt-6 reveal fade-bottom" justify="center">

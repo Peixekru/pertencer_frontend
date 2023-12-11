@@ -34,7 +34,7 @@
 				Para nós, cada vivência que você, nosso colaborador, tem aqui dentro é importante em todos os momentos, desde a sua contratação até hoje. Por isso, nós trabalhamos para que sua jornada aqui no Einstein seja especial!
 			</p>
 			<p class="mt-4 reveal fade-left texto_preto">
-				Temos um conjunto de iniciativas para entregar a você a melhor experiência aqui na instituição. Podemos resumir essa experiência em três eixos integrados: 
+				Temos um conjunto de iniciativas para entregar a você a melhor experiência aqui na Instituição. Podemos resumir essa experiência em três eixos integrados: 
 			</p>
 
 			<v-card class="box_dicas pl-0 pr-0 my-8 reveal fade-bottom">
@@ -118,7 +118,7 @@
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
-								Diz respeito a suas expectativas, suas percepções, o que você valoriza no cenário atual e o caminho que escolhe trilhar.			
+								Diz respeito a suas expectativas, percepções e necessidades, o que você valoriza no cenário atual e o caminho que escolhe trilhar.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -242,67 +242,46 @@
 			<img height="235" class="mx-auto show_mobile my-16" src="./img/tela_colaborador/cont2_info_mobile.png" usemap="#image-map_mobile">
 
 			<map name="image-map">
-				<area style="cursor:pointer" target="" alt="" title=""  coords="503,162,36" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="66,231,33" shape="circle" 
 				@click="
 				isTooltip1Visible = true;
 				isTooltip2Visible = false;
 				isTooltip3Visible = false;
-				isTooltip4Visible = false;
 				">
-				<area style="cursor:pointer" target="" alt="" title=""  coords="504,363,35" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="460,230,33" shape="circle"
 				@click="
 				isTooltip2Visible = true;
 				isTooltip1Visible = false;
 				isTooltip3Visible = false;
-				isTooltip4Visible = false;
 				">
-				<area style="cursor:pointer" target="" alt="" title=""  coords="88,363,38" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="264,369,32" shape="circle"
 				@click="
 				isTooltip3Visible = true;
 				isTooltip2Visible = false;
-				isTooltip1Visible = false;
-				isTooltip4Visible = false;
-				">
-				<area style="cursor:pointer" target="" alt="" title=""  coords="86,162,35" shape="circle"
-				@click="
-				isTooltip4Visible = true;
-				isTooltip2Visible = false;
-				isTooltip3Visible = false;
 				isTooltip1Visible = false;
 				">
 			</map>
 			
 			<map name="image-map_mobile">
-				<area style="cursor:pointer" target="" alt="" title="" coords="296,94,22" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="39,138,21" shape="circle"
 				@click="
 				isTooltip1Visible = true;
 				isTooltip2Visible = false;
 				isTooltip3Visible = false;
-				isTooltip4Visible = false;
 				">
-				<area style="cursor:pointer" target="" alt="" title="" coords="298,214,19" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="271,136,20" shape="circle"
 				@click="
 				isTooltip2Visible = true;
 				isTooltip1Visible = false;
 				isTooltip3Visible = false;
-				isTooltip4Visible = false;
 				">
-				<area style="cursor:pointer" target="" alt="" title="" coords="51,214,21" shape="circle"
+				<area style="cursor:pointer" target="" alt="" title="" coords="156,218,20" shape="circle"
 				@click="
 				isTooltip3Visible = true;
 				isTooltip2Visible = false;
 				isTooltip1Visible = false;
-				isTooltip4Visible = false;
-				">
-				<area style="cursor:pointer" target="" alt="" title="" coords="50,95,22" shape="circle"
-				@click="
-				isTooltip4Visible = true;
-				isTooltip2Visible = false;
-				isTooltip3Visible = false;
-				isTooltip1Visible = false;
 				">
 			</map>
-			
 					
 			  <div v-show="isTooltip1Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1">
 
@@ -316,14 +295,11 @@
 
 					<div class="pt-2 pb-2 pl-2 pr-2">
 						<span class="tooltip_text">
-							<p>Realizada anualmente, contempla diversos temas que impactam a Experiência do Colaborador, por exemplo, segurança no ambiente,  remuneração e benefícios, estrutura e processos, satisfação com a liderança entre outros.</p>
-							
-							<p>Após a aplicação da pesquisa, tem início o Ciclo de Gestão de Clima e Engajamento na área, conduzido pelas Lideranças e que envolve as etapas:</p>
 							<ul class="ml-8" style="text-align:left">
-								<li>Conhecer – Leitura e análise dos resultados do Portal de Clima.</li>
-								<li>Comunicar – Compartilhar os resultados com a equipe.</li>
-								<li>Atuar – Revisão do Plano de Ação.</li>
-								<li>Acompanhar – Implementação e acompanhamento do Plano de Ação.</li>
+								<li>Workplace (rede social interna)</li>
+								<li>Lives com a Liderança e Lives institucionais</li>
+								<li>Redes Sociais Externas</li>
+								<li>Liderança</li>
 							</ul>
 						</span>
 					</div>
@@ -343,11 +319,14 @@
 					<div class="pt-2 pb-2 pl-2 pr-2">
 						<span class="tooltip_text">
 							<ul class="ml-8" style="text-align:left">
-								<li>Pesquisa Anual de Clima e Engajamento (dados quantitativos/<em>focus group</em>)</li>
-								<li>Pesquisas Pulses</li>
-								<li>Questionário da Saúde</li>
-								<li>Pesquisa de Cultura de Segurança</li>
-								<li>Pesquisa GPTW (<em>Great Place To Work</em> - Melhores Lugares Para Trabalhar)</li>
+								<li>SAC RH/Assistente Virtual TINA</li>
+								<li>Entrevista de desligamento</li>
+								<li>Comitê Experiência do colaborador</li>
+								<li>Café com o Diretor</li>
+								<li>Comissão de Combate ao Assédio Moral e Sexual</li>
+								<li>Canal de Denúncias </li>
+								<li>Ouvidoria Ensino</li>
+								<li>Grupo de afinidades do Programa de Diversidade e Inclusão Einstein </li>
 							</ul>
 						</span>
 					</div>
@@ -367,40 +346,17 @@
 					<div class="pt-2 pb-2 pl-2 pr-2">
 						<span class="tooltip_text">
 							<ul class="ml-8" style="text-align:left">
-								<li>SAC RH/Assistente Virtual TINA</li>
-								<li>Entrevista de desligamento</li>
-								<li>Comissão de Combate ao Assédio Moral e Sexual</li>
-								<li>Canal de Denúncias</li>
-								<li>Ouvidoria Ensino</li>
+								<li>Pesquisa Anual de Clima e Engajamento (dados quantitativos/focus group)</li>
+								<li>Pesquisas Pulses</li>
+								<li>Questionário da Saúde</li>
+								<li>Pesquisa de Cultura de Segurança</li>
+								<li>Pesquisa GPTW</li>
 							</ul>
 						</span>
 					</div>
 				  </div>
 			  </div>
-			  
-			  <div v-show="isTooltip4Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-4">
-
-				  <i @click="isTooltip4Visible = false" class="animate__animated animate__fadeInUp fechar_tooltip" aria-hidden="false" >
-				  	<v-img src="./img/tela_oportunidades/btn_close.png"/>
-				  </i>
-
-				  <i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo-tool-tip4" aria-hidden="false" ></i>
-
-				  <div class="v-card v-theme--light v-card--density-default elevation-4 v-card--variant-elevated mx-auto d-flex rounded-lg pa-4 rounded-xl" style="z-index:6005;">
-
-					<div class="pt-2 pb-2 pl-2 pr-2">
-						<span class="tooltip_text">
-							<ul class="ml-8" style="text-align:left">
-								<li><em>Workplace</em> (nossa rede social interna)</li>
-								<li><em>Lives</em> com a Liderança e <em>Lives</em> institucionais</li>
-								<li>Redes Sociais Externas</li>
-								<li>Liderança</li>
-							</ul>
-						</span>
-					</div>
-				  </div>
-			  </div>
-			
+	
 
 			
 		</v-card>
@@ -481,7 +437,7 @@
 				Nesse texto, damos exemplos de iniciativas que realizamos em 2022, a partir das oportunidades de melhorias apontadas por nossos colaboradores na Pesquisa de Clima e Engajamento do ano anterior. Apresentamos, também, alguns dos programas e ações que desenvolvemos para tornar mais positiva a sua experiência aqui no Einstein.
 			</p>
 			<p style="" class="mt-4">	
-				Quer ler o texto para conhecer mais? Então, clique no botão abaixo.
+				Quer ler o EBook para conhecer mais? Então, clique no botão abaixo.
 			</p>
 			
 			<v-btn 
@@ -489,13 +445,40 @@
 				density="comfortable"
 				size="large"
 				rounded="pill"
-				class="mt-4"
+				class="mt-4 show_desktop"
 				style="letter-spacing:normal;"
 				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
 				href="./tela_colaborador/gestao_de_clima_engajamento_experiencia_colaborador.pdf" target="_blank"
 				> 
 					CLIQUE AQUI PARA ACESSAR O TEXTO
 				</v-btn>
+				
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class="pa-2 mt-4 show_1277"
+				style="letter-spacing:normal;"
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				href="./tela_colaborador/gestao_de_clima_engajamento_experiencia_colaborador.pdf" target="_blank"
+				> 
+					CLIQUE AQUI PARA ACESSAR O TEXTO
+				</v-btn>
+				
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="medium"
+				rounded="pill"
+				class="pa-2 mt-4 show_mobile"
+				style="letter-spacing:-1px;"
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				href="./tela_colaborador/gestao_de_clima_engajamento_experiencia_colaborador.pdf" target="_blank"
+				> 
+					CLIQUE AQUI PARA ACESSAR O TEXTO
+				</v-btn>
+				
 			
 		</v-card>
 
@@ -894,26 +877,26 @@ font-size:1.5em;
 }
 
 .tool-tip-1 {
-position: absolute !important;
+       position: absolute !important;
     z-index: 6002 !important;
-    top: 40%;
-    left: 36%;
+    top: 42%;
+    left: 55%;
     transform: translate(-50%, -50%);
-	width:500px;
+    width: 329px;
 }
 .triangulo-tool-tip1 {
     position: absolute !important;
-    top: 22%;
-    left:97%;
+    top: 40%;
+    left:-5%;
     z-index: 6005 !important;
-    transform: rotate(-150deg) !important;
+    transform: rotate(30deg) !important;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 .tool-tip-2 {
 position: absolute !important;
     z-index: 6002 !important;
-    top: 75%;
-    left: 41%;
+    top: 46%;
+    left: 42%;
     transform: translate(-50%, -50%);
 	width:406px;
 }
@@ -928,35 +911,20 @@ position: absolute !important;
 .tool-tip-3 {
 position: absolute !important;
     z-index: 6002 !important;
-    top: 70%;
-    left: 58%;
+    top: 42%;
+    left: 50%;
     transform: translate(-50%, -50%);
 	width:406px;
 }
 .triangulo-tool-tip3 {
-    position: absolute !important;
-    top: 40%;
-    left:-5%;
+   position: absolute !important;
+    top: 94%;
+    left: 47%;
     z-index: 6005 !important;
-    transform: rotate(30deg) !important;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transform: rotate(60deg) !important;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
-.tool-tip-4 {
-position: absolute !important;
-    z-index: 6002 !important;
-    top: 25%;
-    left: 59%;
-    transform: translate(-50%, -50%);
-	width:406px;
-}
-.triangulo-tool-tip4 {
-    position: absolute !important;
-    top: 40%;
-    left:-5%;
-    z-index: 6005 !important;
-    transform: rotate(30deg) !important;
-	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-}
+
 .fechar_tooltip {
 	position: absolute!important;
     top: 0px;
@@ -993,17 +961,17 @@ top:170px
 margin-top:50px;
 }
 .tool-tip-1 {
-    top: 50%;
-    left: 34%;
-	width:500px;
+    top: 42%;
+    left: 57%;
+    width: 329px;
 }
 .triangulo-tool-tip1 {
-    top: 22%;
-    left:97%;
+    top: 40%;
+    left:-5%;
 }
 .tool-tip-2 {
-    top: 75%;
-    left: 39%;
+    top: 46%;
+    left: 38%;
 	width:406px;
 }
 .triangulo-tool-tip2 {
@@ -1011,22 +979,14 @@ margin-top:50px;
     left:97%;
 }
 .tool-tip-3 {
-    top: 70%;
-    left: 62%;
+    top: 42%;
+    left: 50%;
 	width:406px;
 }
 .triangulo-tool-tip3 {
-    top: 40%;
-    left:-5%;
-}
-.tool-tip-4 {
-    top: 25%;
-    left: 62%;
-	width:406px;
-}
-.triangulo-tool-tip4 {
-    top: 40%;
-    left:-5%;
+
+    top: 94%;
+    left: 47%;
 }
 	.tooltip_text{
 	font-family: 'montserrat'!important;
@@ -1058,16 +1018,16 @@ margin-top:50px;
 
 .tool-tip-1 {
     top: 42%;
-    left: 37%;
-	width:400px;
+    left: 57%;
+    width: 329px;
 }
 .triangulo-tool-tip1 {
-    top: 22%;
-    left:97%;
+    top: 40%;
+    left:-5%;
 }
 .tool-tip-2 {
-    top: 75%;
-    left: 39%;
+    top: 46%;
+    left: 38%;
 	width:406px;
 }
 .triangulo-tool-tip2 {
@@ -1075,22 +1035,14 @@ margin-top:50px;
     left:97%;
 }
 .tool-tip-3 {
-    top: 70%;
-    left: 62%;
+    top: 42%;
+    left: 50%;
 	width:406px;
 }
 .triangulo-tool-tip3 {
-    top: 40%;
-    left:-5%;
-}
-.tool-tip-4 {
-    top: 25%;
-    left: 62%;
-	width:406px;
-}
-.triangulo-tool-tip4 {
-    top: 40%;
-    left:-5%;
+
+    top: 94%;
+    left: 47%;
 }
 	.tooltip_text{
 	font-family: 'montserrat'!important;

@@ -45,7 +45,7 @@
 
         <v-btn
         block
-        class="my-3 mb-12 text-secondary"
+        class="my-3 text-secondary"
         color="primary"
         size="large"
         rounded
@@ -63,6 +63,15 @@
                 Esqueci minha senha <v-icon icon="mdi-chevron-right"></v-icon>
             </a>
         </v-card-text>-->
+
+        <v-card-text class="text-center font-weight-bold mb-4">
+            <a
+            class="text-decoration-none text-primary"
+            @click="sendMail"
+            >
+                PRECISA DE AJUDA?
+            </a>
+        </v-card-text>
 
 
         <v-img
@@ -101,6 +110,11 @@
     //Limpa informações do usuário persistentes
     localStorage.removeItem("userInfos");
 
+
+    //Envia email
+    const sendMail = () => {
+        window.open('mailto:Pertencer<ensinocorporativo@einstein.br>?subject=Contato - Pertencer&body=Olá, Einstein Pertencer!')
+    }
 
 
     //Envia os dados para validação de login

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00000000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" captionFontScale="100" kbshortcuts="false" skip_nav_enabled="false" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x62C9CE">
+<bwFrame xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default_layout="npnxnanbnsnfns00000000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" captionFontScale="100" kbshortcuts="false" skip_nav_enabled="false" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x62C9CE">
   <layouts>
     <layout name="npnxnanbsnfns00000000101" font="Montserrat" controllayout="npnxnanbsnfns00000000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
     <layout name="pxabnsnfns00000000101" font="Montserrat" controllayout="pxabnsnfns00000000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
@@ -1444,8 +1444,6 @@
       <string id="three_image_count_of_total_visited">%count% de %total% visitados</string>
       <string id="accessible_text">Texto acessível</string>
       <string id="background_audio">Áudio em segundo plano</string>
-      <string id="acc_enter_fullscreen">Entrar no modo de tela cheia</string>
-      <string id="acc_exit_fullscreen">Sair do modo de tela cheia</string>
       <string id="keyboardshortcuts_lower">Atalhos do teclado</string>
       <string id="zoom_to_fit">Aumentar para caber</string>
       <string id="modern_video_settings_close">fechar configurações do vídeo</string>
@@ -1469,13 +1467,10 @@
       <string id="check_include">Marque para incluir</string>
       <string id="clear">Limpar e voltar ao menu</string>
       <string id="close">Fechar</string>
-      <string id="acc_closed_captions">Legendas. Pressione a barra de espaço para ativar e desativar legendas.</string>
-      <string id="closed_captions_tip">Ativar/desativar legendas</string>
       <string id="continue">Continuar</string>
       <string id="continueresponsive">Continuar</string>
       <string id="playback_speed_title">Velocidade de reprodução</string>
       <string id="playback_speed_normal">Normal</string>
-      <string id="acc_playback_speed">velocidade de reprodução</string>
       <string id="ctrl_key">Ctrl</string>
       <string id="enable_keyboardshortcuts">Ativar atalhos de teclado</string>
       <string id="enter_key">Enter</string>
@@ -1493,48 +1488,38 @@
       <string id="keyboardshortcuts">Atalhos do teclado</string>
       <string id="shortcuthelp">Lista de atalhos do teclado</string>
       <string id="mute_shortcut">Sem som/Com som</string>
-      <string id="next_shortcut">Próximo Slide</string>
+      <string id="next_shortcut">Próximo</string>
       <string id="playpause_shortcut">Executar/Pausar</string>
-      <string id="previous_shortcut">Slide Anterior</string>
-      <string id="replay_shortcut">Repetir Slide</string>
+      <string id="previous_shortcut">Anterior</string>
+      <string id="replay_shortcut">Repetir</string>
       <string id="shortcut">Atalho</string>
-      <string id="submit_shortcut">Enviar Slide</string>
+      <string id="submit_shortcut">Enviar</string>
       <string id="acctext_shortcut">Alternar para texto acessível</string>
       <string id="background_audio_shortcut">Ativar/desativar áudio em segundo plano</string>
-      <string id="closedcaptions_shortcut">Alternar legendas ocultas</string>
-      <string id="fullscreen_shortcut">Alternar para o modo de tela cheia</string>
+      <string id="closedcaptions_shortcut">Ativar/desativar legendas</string>
+      <string id="fullscreen_shortcut">Alternar para tela cheia</string>
       <string id="togglezoom">Alterne o zoom para caber</string>
       <string id="outline">Menu</string>
       <string id="disabled_orientation">Gire seu dispositivo</string>
       <string id="progress_minute">minuto</string>
       <string id="progress_minutes">minutos</string>
-      <string id="mute_tip">Sem som</string>
       <string id="next">PRÓXIMA</string>
-      <string id="acc_next">próxima</string>
-      <string id="next_slide_tip">Próximo Slide</string>
+      <string id="acc_next">Próximo (Ctrl+Alt+Ponto-final)</string>
       <string id="transcript_chk">Notas</string>
       <string id="transcript">Notas</string>
       <string id="bio">Biografia</string>
       <string id="more_info">Mais informações</string>
       <string id="closed_captions">Legendas</string>
-      <string id="acc_pause">pausa</string>
-      <string id="pause_tip">Pausar</string>
-      <string id="acc_play">jogar</string>
-      <string id="play_tip">Executar</string>
       <string id="send_an_email">Envie um e-mail</string>
       <string id="prev">ANTERIOR</string>
-      <string id="acc_previous">anterior</string>
-      <string id="previous_slide_tip">Slide Anterior</string>
+      <string id="acc_previous">Anterior (Ctrl+Alt+Vírgula)</string>
       <string id="question_list">Lista de perguntas</string>
-      <string id="replay_tip">Repetir</string>
-      <string id="acc_replay">repetir</string>
       <string id="resources">Recursos</string>
       <string id="acc_resources">recursos</string>
       <string id="restart">Reiniciar</string>
       <string id="resume">Continuar</string>
       <string id="acc_locked">travado</string>
       <string id="acc_search_input">pesquisa</string>
-      <string id="search_toggle">Pesquisa</string>
       <string id="sidebar_toggle">Alternar barra lateral</string>
       <string id="acc_slide_progress">Progresso do slide</string>
       <string id="desktop_start">Iniciar curso</string>
@@ -1545,7 +1530,6 @@
       <string id="search_results">Resultados da Pesquisa</string>
       <string id="progress_second">segundo</string>
       <string id="progress_seconds">segundos</string>
-      <string id="settings_tip">Configurações</string>
       <string id="shift_key">Shift</string>
       <string id="acc_skipnavigation">Voltar ao início</string>
       <string id="slide_text_chk">Texto Slide</string>
@@ -1556,9 +1540,21 @@
       <string id="submitall">ENVIAR TUDO</string>
       <string id="acc_submitall">enviar tudo</string>
       <string id="submit">ENVIAR</string>
-      <string id="acc_submit">enviar</string>
-      <string id="submit_tip">Enviar</string>
-      <string id="unmute_tip">Com som</string>
+      <string id="acc_cc_hide">Ocultar legendas (Ctrl+Alt+C)</string>
+      <string id="acc_cc_show">Mostrar legendas (Ctrl+Alt+C)</string>
+      <string id="acc_enter_fullscreen">Tela cheia (Ctrl+Alt+F)</string>
+      <string id="acc_exit_fullscreen">Sair da tela cheia (Ctrl+Alt+F)</string>
+      <string id="acc_mute">Desligar som (Ctrl+Alt+M)</string>
+      <string id="acc_next_visual">Próximo (Ctrl+Alt+.)</string>
+      <string id="acc_pause">Pausar (Ctrl+Alt+P)</string>
+      <string id="acc_play">Reproduzir (Ctrl+Alt+P)</string>
+      <string id="acc_playback_speed">Velocidade de reprodução</string>
+      <string id="acc_previous_visual">Anterior (Ctrl+Alt+,)</string>
+      <string id="acc_replay">Repetir (Ctrl+Alt+R)</string>
+      <string id="search_toggle">Pesquisa</string>
+      <string id="acc_settings">Configurações</string>
+      <string id="acc_submit">Enviar (Ctrl+Alt+S)</string>
+      <string id="acc_unmute">Ligar som (Ctrl+Alt+M)</string>
       <string id="transcript_auto_scroll">Rolagem automática</string>
       <string id="acc_window_close">Fechar</string>
       <string id="acc_video_transcript_list">Transcrição</string>
@@ -1570,7 +1566,6 @@
       <string id="transcript_show_timestamp">Exibir marcação de tempo</string>
       <string id="video_transcript_title">Transcrições</string>
       <string id="acc_window_options">Opções</string>
-      <string id="acc_volume">volume</string>
     </string_table>
   </string_tables>
   <fonts>

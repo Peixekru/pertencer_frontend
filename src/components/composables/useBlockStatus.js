@@ -114,7 +114,9 @@ export function useBlockStatus(obj) {
             }
             //Finaliza o curso
             else{
-                appStore.allFinished = true;
+                if (appStore.appData.glogalProgress != 100){
+                    appStore.allFinished = true;
+                }
             }
         }
     };

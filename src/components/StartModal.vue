@@ -89,20 +89,35 @@
                             <v-container fluid 
                             class="pa-0"
                             >
-                                <p class="mb-4 mt-2">
+                                <p class="mb-4">
                                     <strong>Canais de Comunicação</strong>
                                 </p>
                                 <p class="mb-4">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptatum, obcaecati.
+                                    A Comunicação Interna é responsável por manter todos os colaboradores, 
+                                    parceiros e médicos informados sobre as atividades da instituição, 
+                                    desde novos serviços para atendimento ao cliente até processos, fluxos administrativos e assistenciais. 
                                 </p>
                                 <p class="mb-4">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptatum, obcaecati, 
-                                    totam dolorum suscipit molestiae labore quam nesciunt odio, dolores impedit inventore.                                
+                                    Dessa maneira, garantimos que todos os colaboradores estejam constantemente atualizados, 
+                                    apoiando na divulgação das informações relacionadas ao nosso modelo de atendimento.                               
                                 </p>
-                                <p class="mb-4">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium voluptatum, obcaecati, 
-                                    totam dolorum suscipit molestiae labore quam nesciunt odio, dolores impedit inventore.                           
+                                <p class="mb-4 text-subtitle-2">
+                                    Conheça mais sobre a área de Comunicação interna do Einstein no vídeo.                           
                                 </p>
+
+                                <!--btn-->
+                                <v-container
+                                class="d-flex justify-start py-2 px-0"
+                                >
+                                    <v-btn 
+                                    min-width="140"
+                                    rounded
+                                    class="bg-primary letter-normal px-0 text-secondary"
+                                    @click="startVideo"
+                                    >
+                                        vamos lá
+                                    </v-btn>
+                            </v-container>
 
                             </v-container>
 
@@ -124,7 +139,7 @@
                         class=" animate__animated animate__fadeInUp">
 
                             <iframe
-                            src="https://player.vimeo.com/video/885695798?h=92a9070d27&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479&autoplay=1"
+                            src="https://player.vimeo.com/video/885695798?h=92a9070d27&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479&autoplay=0"
                             frameborder="0" 
                             allow="autoplay; fullscreen; picture-in-picture" 
                             class="vimeo-player rounded-0" 
@@ -145,7 +160,6 @@
 </template>
 
 <script setup>
-    import { ref, watch } from 'vue'
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
 
@@ -157,6 +171,48 @@
     const goLink = (goLink) => {
         window.open(goLink);
     }
+
+    const startVideo = () => {        
+        const vimeoIframes = document.querySelectorAll('iframe[src*="player.vimeo.com"]');        
+        vimeoIframes.forEach(iframe => {
+            const player = new Vimeo.Player(iframe);
+            player.play()
+        });
+
+    }
+
+    function initVimeoEventListeners() {
+        const vimeoIframes = document.querySelectorAll('iframe[src*="player.vimeo.com"]');
+
+        vimeoIframes.forEach(iframe => {
+            const player = new Vimeo.Player(iframe);
+            
+            player.on('ended', function() {
+                console.log('Video Ended!');
+                goNext();
+            });
+        });
+    }
+
+    function loadScript(url, callback) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+
+        if (callback) {
+            script.onload = callback;
+        }
+
+        document.head.appendChild(script);
+    }
+
+    loadScript(
+        'https://player.vimeo.com/api/player.js',
+        function() {
+            initVimeoEventListeners();
+            console.log('Loaded Vimeo Player API');
+        }
+    );
 
 
 </script>

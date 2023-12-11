@@ -71,34 +71,34 @@
         </v-container>
     </v-container>
 
-
-    <!--Video Alert-->
-    <v-container 
-        v-if="isStartMsg"
-        class="pa-0 desabled-card center-position animate__animated animate__fadeIn animate__delay-2s" 
-        >
-            <WelcomeTooltip 
-            :toolTipShow="false" 
-            :toolTipPos="1" 
-            :toolTipAdjust="[0, 0, 0, -50]"  
-            :toolTipR="0"
-            :hideToolTipButton = false
-            :toolTipW = "280"
-            @my-click-event="startVideo"
-            >
-                <template v-slot:btnText>
-                    OK
-                </template>
-                <template v-slot:text>
-                    Sua jornada começa agora! Para uma experiência aprimorada, todos os vídeos incluem linguagem de sinais (Libras) e legendas. 
-                    Caso seja possível, recomendamos o uso de fones de ouvido ou a ativação do áudio do computador.
-                </template>
-
-            </WelcomeTooltip>
-        </v-container>
-
         <!--Primeiro acesso -> Overlay perdura até welcomeStep 6 -->
         <WelcomeModalFx v-if="isStartMsg== true"/>
+
+
+        <!--Video Alert-->
+
+        <WelcomeTooltip 
+        v-if="isStartMsg"
+        class="center-position"
+        :toolTipShow="false" 
+        :toolTipPos="1" 
+        :toolTipAdjust="[0, 0, 0, -50]"  
+        :toolTipR="0"
+        :hideToolTipButton = false
+        :toolTipW = "360"
+        @my-click-event="startVideo"
+        >
+            <template v-slot:btnText>
+                OK
+            </template>
+            <template v-slot:text>
+                <p><span class="font-weight-bold">Sua jornada começa agora!</span></p>
+                <p class="mt-4">Para uma experiência aprimorada, todos os vídeos incluem linguagem de sinais (Libras) e legendas.</p>
+                <p class="mt-4 font-weight-bold">Caso seja possível, recomendamos o uso de fones de ouvido ou a ativação do áudio do computador.</p>
+
+            </template>
+
+        </WelcomeTooltip>
 
 </template>
 
@@ -107,12 +107,14 @@
 <script setup>
     import { ref } from 'vue';
     import { useAppStore } from '@/store/app'
+    import { useApiStore } from '@/store/api'
     import { useRouter } from "vue-router"
     import { onMounted } from 'vue'
     import WelcomeTooltip from './WelcomeTooltip'
     import WelcomeModalFx from './WelcomeModalFx.vue'
     
     const appStore = useAppStore() 
+    const apiStore = useApiStore()
     const router = useRouter()
 
     const isStartMsg = ref(true)
@@ -135,6 +137,10 @@
 
         const videoEl = document.getElementById("bg-video");
         videoEl.pause();
+
+        //Exibe o botão de logout
+        appStore.isFloatLogoutBtn = true
+
     })
 
     /*const startVideo = () => {
@@ -146,44 +152,50 @@
 
     //Finaliza etapa
     const goNext = () => {
+
         //Atualiza o localStorage
         appStore.appData.firstAccess = 3
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
         
+        //Direciona para home
         router.push('/home')
     }
     
     function initVimeoEventListeners() {
-      const vimeoIframes = document.querySelectorAll('iframe[src*="player.vimeo.com"]');
-      
-      vimeoIframes.forEach(iframe => {
-        const player = new Vimeo.Player(iframe);
-        
-        player.on('ended', function() {
-          console.log('Video Ended!');
-          goNext();
+        const vimeoIframes = document.querySelectorAll('iframe[src*="player.vimeo.com"]');
+
+        vimeoIframes.forEach(iframe => {
+            const player = new Vimeo.Player(iframe);
+            
+            player.on('ended', function() {
+                console.log('Video Ended!');
+                goNext();
+            });
         });
-      });
     }
 
     function loadScript(url, callback) {
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = url;
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
 
-      if (callback) {
-        script.onload = callback;
-      }
+        if (callback) {
+            script.onload = callback;
+        }
 
-      document.head.appendChild(script);
+        document.head.appendChild(script);
     }
 
     loadScript(
-      'https://player.vimeo.com/api/player.js',
-      function() {
-        initVimeoEventListeners();
-        console.log('Loaded Vimeo Player API');
-      }
+        'https://player.vimeo.com/api/player.js',
+        function() {
+            initVimeoEventListeners();
+            console.log('Loaded Vimeo Player API');
+        }
     );
     
 </script>
@@ -216,6 +228,7 @@
 
     .custom-container-pos{
         position: relative;
+        z-index: 10000;
     }
     .anim-container{
         position: relative;
@@ -246,6 +259,8 @@
         transform: translate(50%, 0);
     }
 
-
+    .custom-opacity{
+        opacity: .8;
+    }
 
 </style>

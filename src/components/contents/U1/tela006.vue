@@ -25,7 +25,7 @@
 				<v-row>
 					<v-col class="cont1_col1" cols="12" md="6" align="left">
 						<div class="reveal fade-left texto_preto">
-							<p>Somos um Hospital de grande porte, reconhecido como uma instituição de referência tanto na
+							<p>Somos um hospital de grande porte, reconhecido como uma instituição de referência tanto na
 								área de saúde, como no ensino, pesquisa, inovação e responsabilidade social.
 							</p>
 						</div>
@@ -33,7 +33,7 @@
 					<v-col class="cont1_col2" cols="12" md="6" align="left">
 						<div class="reveal fade-right texto_preto">
 							<p>Somos pessoas atuando em prol de pessoas. Gente que cuida de gente, trabalhando
-								colaborativamente, com transparência, dedicação fazendo a diferença e garantindo sempre a
+								colaborativamente, com transparência, dedicação, fazendo a diferença e garantindo sempre a
 								excelência.
 							</p>
 						</div>
@@ -71,12 +71,12 @@
 				<v-col cols="12" md="5" align="left">
 					<div class="reveal fade-left texto_preto">
 						<p>
-							<strong>Para orquestrar a complexidade do Einstein, é preciso ter uma Estrutura de Governança
+							<strong>Para orquestrar a complexidade do Einstein, é preciso ter uma estrutura de governança
 								que mantenha o foco e busque garantir a excelência da assistência em todos os
 								níveis.</strong>
 						</p>
 						<p class="mt-4">
-							<strong>Todas seguem as mesmas diretrizes estratégicas que fazem do Einstein uma das
+							<strong>Todas as estruturas seguem as mesmas diretrizes estratégicas que fazem do Einstein uma das
 								organizações líderes em termos de excelência de qualidade, segurança, inovação e
 								sustentabilidade no âmbito da saúde, reconhecidas globalmente.</strong>
 						</p>
@@ -147,11 +147,25 @@
 
 	<!-- conteúdo 03 -->
 
+
+
+
+<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0"
+		class="mx-auto bg-transparent" style="z-index:2;">
+
+		<v-img class="mx-auto grade_header" src="./img/tela_estrutura/grade_cont6.png" />
+
+	</v-card>
+
+
+
+
+
 	<!-- conteúdo 04 -->
-	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="6"
+	<v-card v-show="isContent04Visible" width="100%" elevation="6"
 		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont3" style="z-index:2;">
 
-		<v-img class="mx-auto grade_header" src="./img/tela_estrutura/grade_04.png" />
+
 		<v-img src="./img/tela_estrutura/cont3_text.svg" class="header_text"
 			title="O EINSTEIN. NOSSA ESTRUTURA E CONQUISTAS." />
 	</v-card>
@@ -194,7 +208,7 @@
 		</v-container>
 
 
-		<v-container fill-height class="float-right">
+		<v-container fill-height class="float-right mb-8">
 
 			<v-row justify="center" class="">
 
@@ -209,6 +223,29 @@
 					</v-card>
 				</v-col>
 			</v-row>
+
+</v-container>
+
+	</v-card>
+	
+	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0"
+		class="mx-auto bg-transparent" style="z-index:1000!important;">
+
+		<!--Grafisrmos "Triangulo" do conteúdo 10-->
+	<v-container 
+	
+	class="d-flex justify-center mt-n12 mb-4"
+	>
+		<i style="color:#f5f5f5; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
+			aria-hidden="true"></i>
+	</v-container>
+
+	</v-card>
+
+	<v-card style="z-index:1;" v-show="isContent04Visible" class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
+		width="100%" elevation="6">
+
+		<v-container fill-height class="float-right">
 
 			<v-row justify="center" class="">
 
@@ -231,6 +268,8 @@
 			</v-row>
 
 		</v-container>
+		
+		
 
 
 
@@ -349,7 +388,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider02.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -357,7 +396,7 @@
 									</h2>
 									<p class="mt-4">
 										Garantir padrões nacionais hospitalares de excelência, qualidade e de segurança.
-										Área e escopo: Hospital Municipal M’Boi Mirim – Dr. Moysés Deutsch e ao Hospital
+										Área e escopo: Hospital Municipal M’Boi Mirim – Dr. Moysés Deutsch e Hospital
 										Municipal Vila Santa Catarina – Dr. Gilson de Cássia Marques de Carvalho.
 									</p>
 								</v-col>
@@ -369,7 +408,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider03.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -388,7 +427,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider04.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -397,7 +436,7 @@
 									<p class="mt-4">
 										Garantir a qualidade do serviço de imagem. O Einstein é a única organização de saúde
 										do Brasil com acreditação em todas as modalidades diagnósticas. Área e escopo:
-										Imagem - mamografia, ultrassonografia, tomografia, ressonância e medicina nuclear.​
+										Imagem — mamografia, ultrassonografia, tomografia, ressonância e medicina nuclear.
 									</p>
 								</v-col>
 							</v-row>
@@ -408,7 +447,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider05.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -416,7 +455,7 @@
 									</h2>
 									<p class="mt-4">
 										Garantir o processo histocompatibilidade e imunogenética do Laboratório de Patologia
-										Clínica. Área e escopo: Laboratório - setor de histocompatibilidade.
+										Clínica. Área e escopo: Laboratório — setor de histocompatibilidade.
 									</p>
 								</v-col>
 							</v-row>
@@ -427,7 +466,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider06.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -446,7 +485,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider07.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -467,7 +506,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider08.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -487,7 +526,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider09.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -508,7 +547,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider10.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -517,7 +556,7 @@
 									<p class="mt-4">
 										Certificar os padrões de qualidade e segurança do Departamento de Voluntários. Área
 										e escopo: Unidades Morumbi, Perdizes, Alphaville, Ibirapuera, Vila Mariana,
-										Paraisópolis, Hospital Municipal Vila Santa Catarina - Dr. Gilson de Cássia Marques
+										Paraisópolis, Hospital Municipal Vila Santa Catarina — Dr. Gilson de Cássia Marques
 										de Carvalho e Hospital Municipal M’Boi Mirim.
 									</p>
 								</v-col>
@@ -529,7 +568,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider11.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -551,7 +590,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider12.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -570,15 +609,15 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider13.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
-										<em>Magnet</em>
+										Magnet
 									</h2>
 									<p class="mt-4">
 										Garantir padrões de qualidade e práticas assistenciais que evidenciam a excelência
-										da enfermagem. Área e escopo: Unidade Morumbi.​
+										da enfermagem. Área e escopo: Unidade Morumbi.
 									</p>
 								</v-col>
 							</v-row>
@@ -589,11 +628,11 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider14.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
-										<em>Planetree</em>
+										Planetree
 									</h2>
 									<p class="mt-4">
 										Garantir a experiência e o cuidado centrado na pessoa (paciente, familiar,
@@ -608,11 +647,11 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider15.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
-										Programa de Acreditação de Laboratórios Clínicos (Palc)
+										Programa de Acreditação de Laboratórios Clínicos (PALC)
 									</h2>
 									<p class="mt-4">
 										Promover a qualidade dos serviços laboratoriais prestados a pacientes e usuários.
@@ -628,7 +667,7 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider16.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -637,7 +676,7 @@
 									<p class="mt-4">
 										Garantir as iniciativas de adequação da infraestrutura, capacitação de profissionais
 										e familiares, engajamento comunitário e estímulo à prevenção em saúde do idoso. Área
-										e escopo: Unidade Morumbi e Hospital Municipal Vila Santa Catarina - Dr. Gilson de
+										e escopo: Unidade Morumbi e Hospital Municipal Vila Santa Catarina — Dr. Gilson de
 										Cássia Marques de Carvalho.
 									</p>
 								</v-col>
@@ -649,13 +688,13 @@
 						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
-									<v-img src="./img/tela_estrutura/slider01.png" />
+									<v-img src="./img/tela_estrutura/slider17.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
 										Society for Simulation in Healthcare (SSH)
 									</h2>
-									<p class="mt-4">
+									<p id="content06" class="mt-4">
 										Garantir as boas práticas do Centro de Simulação Realística no treinamento e
 										capacitação de equipes. Área e escopo: Unidade Morumbi.
 									</p>
@@ -670,25 +709,23 @@
 			<v-row justify="center" class="mt-4">
 				<v-col cols="12" md="12" align="left">
 					<h2 class="texto_branco text-primary mt-6 reveal fade-left">
-						As certificações e acreditações são evidências, reconhecimentos de como o Einstein é reconhecido
-						como uma instituição de referência. É importante destacar, porém, que tudo isso não seria possível
-						sem as pessoas.
+						As certificações e acreditações são evidências de como o Einstein é reconhecido como uma instituição de referência. É importante destacar, porém, que tudo isso não seria possível sem as pessoas.
 					</h2>
 				</v-col>
 			</v-row>
 			<v-row justify="center" class="mt-n4 mb-10">
 				<v-col cols="12" md="8" align="center">
 					<h2 class="texto_branco font-weight-bold text-primary mt-6 reveal fade-left">
-						E a partir de agora, VOCÊ faz parte disso!
+						E, a partir de agora, VOCÊ faz parte disso!
 					</h2>
 				</v-col>
 			</v-row>
 		</v-container>
 
-		<!-- conteúdo ultimo conteudo gambi -->
+		<!-- conteúdo ultimo conteudo gambi 
 		<v-card id="content06" width="100%" class="mt-n4 mx-auto rounded-lg pt-0" style="z-index:1;">
 		</v-card>
-		<!-- conteúdo ultimo conteudo gambi -->
+		conteúdo ultimo conteudo gambi -->
 
 	</v-card>
 	<!-- conteúdo 05 -->

@@ -3,6 +3,9 @@
 		<v-app class="cursor-preview">
 
 			<!--<DebugModal />-->
+
+			<!--Modal logout-->
+			<LogoutModal />
 			
 			<!--Marcador de mouse-->
 			<CustomCursor
@@ -15,10 +18,23 @@
 			:hoverSize="4"
 			/>
 
+			<v-btn 
+				v-if="appStore.currentRoute != '/unidade' && 
+				appStore.currentRoute != '/conteudo' && 
+				appStore.currentRoute != '/' && 
+				appStore.isFloatLogoutBtn"
+
+				icon="mdi-logout" 
+				color="white"
+				size="small"
+				class="mx-1 bg-primary logoutStartBtnPos animate__animated animate__fadeIn"
+				@click="logOut"
+			/>
+
 			<!--Envio de mensagens do sistema (feedback user)-->
 			<GlobalMsg />
 
-			<template v-if="appStore.currentRoute != '/'">
+			<template v-if="appStore.currentRoute != '/' && appStore.currentRoute != '/welcome'">
 
 				<!--Modal da cápsula do tempo-->
 				<CapsulaModal :key="appStore.capsulaModalKey"/>
@@ -68,15 +84,16 @@
 				<WelcomeTooltip 
 				:toolTipShow="false" 
 				:toolTipPos="1" 
-				:toolTipAdjust="[0, 0, 0, 0]" 
+				:toolTipAdjust="[0, 0, 0, 0]"
+				:toolTipW = "appStore.isMobile ? 360 : 380 "
 				@my-click-event="appStore.welcomeStepCounter = 2"
 				> 
 					<template v-slot:btnText>
 						PROSSEGUIR
 					</template>
 					<template v-slot:text>
-						Esta é a tela principal da sua jornada. Aqui você vai
-                    	acompanhar seu progresso e suas conquistas.
+						<p>Esta é a <span class="font-weight-bold">tela principal da sua jornada.</span></p>
+						<p class="mt-4">Aqui você vai acompanhar seu<br />progresso e suas conquistas.</p>
 					</template>
 				</WelcomeTooltip>
 			</v-container>
@@ -96,11 +113,11 @@
 						PROSSEGUIR
 					</template>
 					<template v-slot:text>
-						Está é tela de conteúdos da unidade. 
-						Sempre que entrar em uma unidade você poderá revê-los. 
-						Caso queira acessar o menu principal clique no botão
-						<span><v-icon color="primary" icon="mdi mdi-grid-large"></v-icon></span>
-						no canto superior direito da tela.
+						<p>Está é a tela de conteúdos da unidade.</p>
+						<p class="mt-4">Sempre que entrar em uma unidade você poderá revê-los.</p> 
+						<p class="mt-4">Caso queira acessar o menu principal clique no botão <br v-if="appStore.isMobile" />
+						<span class="font-weight-bold">"<v-icon icon="mdi mdi-grid-large" size="x-small"></v-icon> PÁGINA INICIAL"</span>
+						no canto superior direito da tela.</p>
 					</template>
 				</WelcomeTooltip>
 
@@ -127,6 +144,7 @@
 	import FooterBar from '@/components/FooterBar'
 	import CapsulaModal from '@/components/CapsulaModal'
 	import GalleryModal from '@/components/GalleryModal'
+	import LogoutModal from '@/components/LogoutModal'
 	import StartModal from '@/components/StartModal'
 	import WorkplaceModal from '@/components/WorkplaceModal'
 	import WelcomeVideoModal from '@/components/WelcomeVideoModal'
@@ -162,6 +180,21 @@
 		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
 		console.log('primeiro acesso ->' + appStore.appData.firstAccess)
+	}
+
+	//Sair do sistema
+    const logOut = () =>{
+
+		//Atualiza o localStorage
+		localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+		//Atualiza backend
+		const userId = JSON.parse(localStorage.getItem('userId'));
+		//port / path / data
+		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+		//Abre modal de confirmação
+		appStore.logoutModal = true;
 	}
 
 		
@@ -221,7 +254,15 @@
 	//font-size: 1em !important;
 	//}
 	
-
+	.logoutStartBtnPos{
+		position: fixed;
+		z-index: 5000;
+		top: 14px;
+		left: 50%;
+		transform: translateX(-50%) rotateY(180deg) !important;
+		font-size: 16px; 
+		color:#C5EAF3 !important;
+	}
 
 
 </style>

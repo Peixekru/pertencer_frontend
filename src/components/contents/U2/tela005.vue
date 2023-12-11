@@ -3,6 +3,7 @@
 	<v-card 
 	width="100%" 
 	elevation="6"
+	style="z-index:15;"
 	class="card_header mx-auto rounded-lg pa-6"
 	>
 		<v-img class="show_desktop" src="./img/tela_oportunidades/header.png" />
@@ -108,7 +109,7 @@
 				<v-col cols="12" md="4">
 					<v-card-text class="pl-0 pr-0 reveal fade-left texto_preto">
 						<p style="text-align:right">
-							No Einstein, tudo começa quando a <strong>Área de Atração, Seleção & Diversidade</strong> divulga as oportunidades internas ou a busca de recursos externos para atender às necessidades de contratação da Sociedade.
+							No Einstein, tudo começa quando a <strong>Área de Atração, Seleção & Diversidade</strong> divulga as oportunidades internas ou a busca de talentos externos para atender às necessidades de contratação da Sociedade.
 						</p>
 						<v-img height="30px" class="mx-auto" src="./img/tela_oportunidades/rol1_barra.svg" />
 					</v-card-text>
@@ -312,7 +313,7 @@
 	id="content04" 
 	width="100%" 
 	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
 	style="z-index:11; "
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header.png" />
@@ -408,7 +409,7 @@
 			<v-col cols="12" md="8">
 				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
 					<p class="mt-4 titulo_acima_accordion">
-						<strong>2. Projeto “Quem indica, Amigo é!”</strong>
+						<strong>2. Programa “Quem indica, Amigo é!”</strong>
 					</p>
 				</v-card-text>
 			</v-col>
@@ -626,7 +627,7 @@
 			<v-col cols="12" md="8">
 				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
 					<p class="mt-4 titulo_acima_accordion">
-						<strong>5. PCD – Auxiliar Administrativo para pessoa com deficiência</strong>
+						<strong>5. Auxiliar Administrativo para pessoa com deficiência</strong>
 					</p>
 				</v-card-text>
 			</v-col>
@@ -816,14 +817,44 @@
 
 	<!-- conteúdo 05 -->
 	
+	
+	<v-card 
+	v-show="isContent06Visible"
+	id="content06"
+	width="100%" 
+	elevation="0"
+	style="z-index:15;"
+	class="bg-transparent mt-10"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_rec_rec.png" />
+		
+	</v-card>
+	
+	
+	<!-- header rec rec-->
+	<v-card 
+	v-show="isContent06Visible"
+	width="100%" 
+	elevation="6"
+	style="z-index:15;"
+	class="card_header mx-auto rounded-lg pa-6"
+	>
+		<v-img class="show_desktop" src="./img/tela_oportunidades/header_rec_rec.png" />
+		<v-img class="show_1277" src="./img/tela_oportunidades/header_rec_rec.png" />
+		<v-img class="show_mobile" src="./img/tela_oportunidades/header_rec_rec_mob.png" />
+		<v-img src="./img/tela_oportunidades/texto_header_rec_rec.svg" class="header_text"
+			title="Reconhecimento e Recompensa" />
+	</v-card>
+	<!-- header -->
+	
+		
 	<!-- conteúdo 06 -->
 	<v-card 
 	v-show="isContent06Visible"
-	id="content06" 
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:8; "
+	style="z-index:9; "
 	>
 	
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_cont6.png" />
@@ -847,6 +878,13 @@
 					<v-col cols="12" md="6">
 						<v-img class="" src="./img/tela_oportunidades/cont6_esteto.png" />
 					</v-col>
+						<v-col cols="12" md="6">
+							<v-card class="box_dicas pl-0 pr-0 mt-8 reveal fade-right mx-auto" style="width: 100%">
+								<v-card-text>
+									<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
+								</v-card-text>
+							</v-card>
+					</v-col>
 				</v-row>
 				
 				<v-card elevation="0" class="mb-4 mt-10 bg-transparent" align="center">
@@ -855,7 +893,7 @@
 					
 					<img width="600" class="show_1277" src="./img/tela_oportunidades/cont6_tabela_1277.png" usemap="#image-map_cont6_1277">
 					
-					<img width="400" class="show_mobile" src="./img/tela_oportunidades/cont6_tabela_mobile.png" usemap="#image-map_cont6_mobile">
+					<img width="350" class="show_mobile" src="./img/tela_oportunidades/cont6_tabela_mobile.png" usemap="#image-map_cont6_mobile">
 					
 					
 					
@@ -886,17 +924,18 @@
 					</map>
 					
 					<map name="image-map_cont6_mobile">
-						<area style="cursor:pointer" target="" alt="" title="" coords="30,67,22" shape="circle"
+						<area style="cursor:pointer" target="" alt="" title="" coords="31,74,24" shape="circle"
 						@click="
 						isTooltip1Visible = true;
 						isTooltip2Visible = false;
 						">
-						<area style="cursor:pointer" target="" alt="" title="" coords="31,150,20" shape="circle"
+						<area style="cursor:pointer" target="" alt="" title="" coords="33,172,22" shape="circle"
 						@click="
 						isTooltip2Visible = true;
 						isTooltip1Visible = false;
 						">
 					</map>
+					
 					
 						  <div v-show="isTooltip1Visible" aria-hidden="false" class="v-sheet v-theme--light bg-transparent tool-tip-1">
 
@@ -975,7 +1014,7 @@
 		<h2 class="cont5_title mt-10">
 			O DRA contempla os seguintes dados:
 		</h2>
-		<v-card class="box_dicas_cont6 pl-0 pr-0 mt-4 reveal fade-bottom">
+		<v-card class="mx-auto box_dicas_cont6 pl-0 pr-0 mt-8 reveal fade-bottom">
 				<v-card-text>
 					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
 				</v-card-text>
@@ -1218,7 +1257,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent07Visible = true; prosseguir('content07')"
+				@click="isContent09Visible = true; prosseguir('content09')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1230,20 +1269,24 @@
 
 	<!-- conteúdo 06 -->
 	
-	<!-- conteúdo 07 -->
+	
+	
+	
+	
+	<!-- conteúdo 07 ocultado -->
 	<v-card 
 	v-show="isContent07Visible"
 	id="content07" 
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont7" 
-	style="z-index:7; "
+	style="z-index:8; "
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
 			<h1 class="mt-4 texto_branco">
-				Vamos conhecer algumas dessas iniciativas?
+				Quanto os colaboradores do Einstein recebem de Remuneração Variável Anual?
 			</h1>
 		</v-card-text>
 		
@@ -1287,7 +1330,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus" >
-				  <strong>O que:</strong>&nbsp;metas institucionais
+				  <p><strong>O que:</strong>&nbsp;metas institucionais</p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				  <p>
@@ -1308,7 +1351,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <strong>Quando:</strong>&nbsp; data do pagamento
+				  <p><strong>Quando:</strong>&nbsp; data do pagamento</p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<p>A Remuneração Variável Anual é paga aos colaboradores elegíveis no último dia útil do mês de março, em folha de pagamento, com todos os descontos legais (INSS e Imposto de Renda), conforme lei vigente.
@@ -1319,7 +1362,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <strong>Quem:</strong>&nbsp; profissionais, técnicos e auxiliares
+				  <p><strong>Quem:</strong>&nbsp;profissionais, técnicos e auxiliares</p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<p>
@@ -1331,7 +1374,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <strong>Quem: </strong>&nbsp;cargos médicos
+				  <p><strong>Quem: </strong>&nbsp;cargos médicos</p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<p>
@@ -1343,7 +1386,7 @@
 			  
 			  <v-expansion-panel class="mb-2">
 				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <strong>Quem: </strong>&nbsp;cargos de liderança
+				  <p><strong>Quem: </strong>&nbsp;cargos de liderança</p>
 				</v-expansion-panel-title>
 				<v-expansion-panel-text>
 				<p>
@@ -1382,7 +1425,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent08Visible = true; prosseguir('content08')"
+				@click="isContent09Visible = true; prosseguir('content09')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1393,13 +1436,77 @@
 
 	<!-- conteúdo 07 -->
 	
+	
+	
+	
+	
+	<!-- conteúdo 09 -->
+	<v-card 
+	v-show="isContent09Visible"
+	id="content09" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_video" 
+	style="z-index:7; "
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header_azul.png" />
+		
+		<v-card-text class="reveal fade-left mb-10">
+					<p class="mt-6 texto_branco">
+						Assista ao vídeo para conhecer a composição das metas, o peso atribuído a cada uma delas, e como é calculada a Remuneração Variável Anual para cada categoria profissional.
+					</p>
+				</v-card-text>
+		
+
+		<!--Vimeo-->
+            <v-container 
+            class="mt-n5 mb-10 pa-0 reveal fade-bottom"
+            >
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695528?h=509bbc8764&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 10px" title="3.5.1 - Oportunidades e carreira"></iframe></div>
+				
+            </v-container>
+		
+		
+		<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'white-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-primary bg_escuro'"
+				@click="isContent08Visible = true; prosseguir('content08')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+
+	</v-card>
+
+	<!-- conteúdo 09 -->
+	
 	<!-- conteúdo 08 -->
 	<v-card 
 	v-show="isContent08Visible"
 	id="content08" 
 	width="100%" 
 	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
 	style="z-index:6; "
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
@@ -1408,6 +1515,12 @@
 			<h1 class="mt-4 texto_azul">
 				Programa de Reconhecimento
 			</h1>
+			<p class="my-4">
+				Outra forma que utilizamos para agradecer e recompensar nossos colaboradores, é por meio de programas específicos de reconhecimento. Afinal, quem não gosta de ser reconhecido, não é mesmo?
+			</p>
+			<p class="my-4">
+				<strong>Vamos conhecer esses programas. Acompanhe!</strong>
+			</p>
 		</v-card-text>
 		<v-card class="box_dicas pl-0 pr-0 mb-8 reveal fade-bottom" style="width: 40%">
 				<v-card-text>
@@ -1521,7 +1634,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent09Visible = true; prosseguir('content09')"
+				@click="isContent10Visible = true; prosseguir('content10')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1529,65 +1642,8 @@
 		</v-container>
 	</v-card>
 	<!-- conteúdo 08 -->
-	<!-- conteúdo 09 -->
-	<v-card 
-	v-show="isContent09Visible"
-	id="content09" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_video" 
-	style="z-index:5; "
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_oportunidades/grade_header_azul.png" />
-		
-		<v-card-text class="reveal fade-left mb-10">
-					<p class="mt-6 texto_branco">
-						Assista ao vídeo para conhecer a composição das metas, o peso atribuído a cada uma delas, e como é calculada a Remuneração Variável Anual para cada categoria profissional.
-					</p>
-				</v-card-text>
-		
-
-		<!--Vimeo-->
-            <v-container 
-            class="mt-n5 mb-10 pa-0 reveal fade-bottom"
-            >
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695528?h=509bbc8764&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 10px" title="3.5.1 - Oportunidades e carreira"></iframe></div>
-				
-            </v-container>
-		
-		
-		<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'white-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-primary bg_escuro'"
-				@click="isContent10Visible = true; prosseguir('content10')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-
-	</v-card>
-
-	<!-- conteúdo 09 -->
+	
+	
 	
 	<!-- conteúdo 10 -->
 	<v-card 
@@ -1595,7 +1651,7 @@
 	id="content10" 
 	width="100%" 
 	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
 	style="z-index:4; "
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_oportunidades/grade_header.png" />
@@ -1739,8 +1795,8 @@
 <v-card class="box_dicas_cont5 pl-0 pr-0 mt-n8 reveal fade-bottom mx-auto" style="z-index:20;">
 		<v-card-text align="left">
 			<span class="texto_azul"><strong>Como acessar?</strong></span>
-			<v-img class="mx-auto my-2 qr-code" src="./img/tela_oportunidades/qr-code.png" />
-			<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> <a style="text-decoration:none" href="https://sbibae.workplace.com/work/landing/input/?next=https%3A%2F%2Fsbibae.workplace.com%2Fgroups%2F206612450124381%2F%3Fref%3Dshare" target="_blank"><strong>Clique aqui</strong></a> e entre em nossa página.
+			<v-img class="mx-auto my-2 qr-code" src="./img/tela_oportunidades/qr-code2.png" />
+			<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> <a style="text-decoration:none" href="https://sbibae.sharepoint.com.mcas.ms/sites/sou.einstein-institucional/SitePages/Reconhecimento-e-recompensa.aspx" target="_blank"><strong>Clique aqui</strong></a> e entre em nossa página.
 		</v-card-text>
 	</v-card>
 	
@@ -1754,22 +1810,10 @@
 
 		<v-row class="mt-12 texto_cont5">
 
-			<v-col cols="12" md="5">
-				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
-					<p class="mt-8 texto_branco">
-						Para você interagir com outros colaboradores e a Instituição, o Einstein disponibiliza o Workplace, um canal de comunicação ideal para todo tipo de interação.
-					</p>
-					<p class="mt-4 texto_branco">
-						 Por meio do Workplace você pode conferir a principais notícias institucionais, além de compartilhar as informações que considera relevantes.
-					</p>
-					<p class="mt-4 texto_branco">
-						 Pode acompanhar, às quintas-feiras, as publicações do grupo Carreiras Einstein, administrado pela área de Recrutamento e Seleção e ter informações quanto às oportunidades da Instituição, dicas sobre processo seletivo e carreira, vídeos e enquetes.
-					</p>
-					<p class="mt-4 texto_branco">
-						 Pode acessar o grupo “Campanha de Reconhecimento”, e conferir, mensalmente, quem foi elogiado por atuar em sua rotina dentro dos pilares SPA. E fique atento: seu nome pode ser o próximo!
-					</p>
-					<p class="mt-4 texto_branco">
-						 Tudo isso e muito mais! Além disso o Workplace pode ser visto e compartilhado de qualquer lugar!
+			<v-col cols="12" sm="6" md="5" align-self="center">
+				<v-card-text class="pl-0 pr-0 reveal fade-left">
+					<p style="text-transform:uppercase;font-size:1.5em; line-height:1.5em" class="mt-8 texto_branco texto_notebook">
+						Acesse nossa página e encontre todas as informações que você precisa!
 					</p>
 				</v-card-text>
 			</v-col>
@@ -1790,7 +1834,7 @@
 				width="40"
 				height="60"
 				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
+				class=" mt-16 mb-4 mx-auto "
 				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
 				/>
 
@@ -2129,6 +2173,7 @@ background-color:#81C300;
 color:#00A4E1;
 font-size:1.5em;
 font-weight:300;
+line-height:1.5em;
 }
 .v-expansion-panel-title {
     font-size: 1.3rem;
@@ -2290,6 +2335,13 @@ background-color:#fff!important;
 	font-family: 'montserrat'!important;
 	font-size:0.9em;
 	}
+	.texto_notebook{
+	margin-top:180px!important;
+	}
+	
+	.v-expansion-panel-title{
+	color:#1B1F45;
+	}
 @media screen and (max-width: 1277px){
 .btn_img{
 height:50px;
@@ -2306,6 +2358,9 @@ left: 43%;
 
 }
 @media screen and (max-width: 768px){
+	.texto_notebook{
+	margin-top:50px!important;
+	}
 .icone_cont2{
 width:40%;
 }
@@ -2348,21 +2403,23 @@ height:40px;
 	font-size:0.8em;
 	}
 .tool-tip-1 {
-    top: 34%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
+	width:90%;
 }
 .triangulo-tool-tip1 {
     top: 36%;
-    left:-7%;
+    left:30%;
 }
 .tool-tip-2 {
-    top: 75%;
-    left: 55%;
+    top: 50%;
+    left: 50%;
+	width:90%;
 }
 
 .triangulo-tool-tip2 {
     top: 25%;
-    left: -21px;
+    left: 30px;
 }
 .box_dicas_cont6 {
 	width: 100%;
@@ -2417,6 +2474,9 @@ height:40px;
 }
 
 @media screen and (max-width: 500px){
+		.texto_notebook{
+	margin-top:0px!important;
+	}
 	.tooltip_text{
 	font-family: 'montserrat'!important;
 	font-size:0.8rem;

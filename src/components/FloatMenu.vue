@@ -46,14 +46,16 @@
             class="custom-tooltip-pos"
             :toolTipShow="true" 
             :toolTipPos="1" 
-            :toolTipAdjust="[0, 0, 0, 20]" 
-            @my-click-event="appStore.welcomeStepCounter = 4"
+            :toolTipAdjust="[0, 0, 0, -32]" 
+            :toolTipW = "appStore.isMobile ? 360 : 320 "
+            @my-click-event="goStep4()"
             >
                 <template v-slot:btnText>
 					PROSSEGUIR
 				</template>
                 <template v-slot:text>
-                    {{ toolTipText }}
+                    <p>Aqui nesse painel são registradas suas <span class="font-weight-bold">conquistas</span> ao longo da sua jornada de conhecimento.</p>
+                    <p class="mt-4 font-weight-bold">Realize todas as atividades para preencher o painel!</p>
                 </template>
             </WelcomeTooltip>
         </v-container>
@@ -79,31 +81,37 @@
             </WelcomeTooltip>
         </v-container>
 
-        <!--Primeiro acesso -> 14 -->
+
+
+
+        <!--badge-01-->
         <v-container 
-        class="pa-0 desabled-card custom-tooltip-pos-03" 
-        v-if="appStore.welcomeStepCounter == 14 && 
-        !appStore.isMobile && appStore.appData.capsula.status == 1"
+        class="pa-0 custom-tooltip-pos-badge-01" 
+        v-show="!appStore.isMobile && appStore.appData.badges.capsula == 1"
         >
             <WelcomeTooltip 
-            class="custom-tooltip-pos-02"
+            class="custom-tooltip-inner-pos-badge-01"
             :toolTipShow="true" 
             :toolTipPos="1" 
             :toolTipAdjust="[0, 0, 0, -50]"  
             :toolTipR="0"
-            :hideToolTipButton = true
+            :hideToolTipButton = false
             :toolTipW = "280"
-            :start-event = "nextStep()"
+            @my-click-event="hideBubbleBadge01"
             >
-                <template v-slot:text>
-                    {{ toolTipText03 }}
+                <template v-slot:btnText>
+                    OK
                 </template>
+                <template v-slot:text>
+                    {{ toolTipTextCapsula }}
+                </template>
+
             </WelcomeTooltip>
         </v-container>
 
         <!--badge-02-->
         <v-container 
-        class="pa-0 desabled-card custom-tooltip-pos-badge-02" 
+        class="pa-0 custom-tooltip-pos-badge-02" 
         v-if="!appStore.isMobile && appStore.appData.badges.clock == 1"
         >
             <WelcomeTooltip 
@@ -120,7 +128,7 @@
                     OK
                 </template>
                 <template v-slot:text>
-                    {{ toolTipTextDefault }}
+                    {{ toolTipTextClock }}
                 </template>
 
             </WelcomeTooltip>
@@ -129,7 +137,7 @@
 
         <!--badge-03-->
         <v-container 
-        class="pa-0 desabled-card custom-tooltip-pos-badge-03" 
+        class="pa-0 custom-tooltip-pos-badge-03" 
         v-if="!appStore.isMobile && appStore.appData.badges.heart == 1"
         >
             <WelcomeTooltip 
@@ -154,7 +162,7 @@
 
         <!--badge-04-->
         <v-container 
-        class="pa-0 desabled-card custom-tooltip-pos-badge-04" 
+        class="pa-0 custom-tooltip-pos-badge-04" 
         v-if="!appStore.isMobile && appStore.appData.badges.picture == 1"
         >
             <WelcomeTooltip 
@@ -189,14 +197,15 @@
         class="custom-tooltip-pos-mobile"
         :toolTipShow="true" 
         :toolTipPos="0" 
-        :toolTipAdjust="[-32, 0, 0, 68]" 
-        @my-click-event="appStore.welcomeStepCounter = 4"
+        :toolTipAdjust="[-50, 0, 0, 68]" 
+        @my-click-event="goStep4()"
         >
             <template v-slot:btnText>
                 PROSSEGUIR
             </template>
             <template v-slot:text>
-                {{ toolTipText }}
+                <p>Aqui nesse painel são registradas suas <span class="font-weight-bold">conquistas</span> ao longo da sua jornada de conhecimento.</p>
+                <p class="mt-4 font-weight-bold">Realize todas as atividades para preencher o painel!</p>
             </template>
         </WelcomeTooltip>
     </v-container>
@@ -223,43 +232,20 @@
         </WelcomeTooltip>
     </v-container>
 
-    <!--Primeiro acesso -> 14 (mobile) -->
+    <!--badge-01 (mobile)-->
     <v-container 
-    class="pa-0 desabled-card custom-tooltip-pos-03-mobile" 
-    v-if="appStore.welcomeStepCounter == 14 && 
-    appStore.isMobile && appStore.appData.capsula.status == 1"
+    class="pa-0 custom-tooltip-pos-badge-01-mobile" 
+    v-if="appStore.isMobile && appStore.appData.badges.capsula == 1"
     >
         <WelcomeTooltip 
-        class="custom-tooltip-pos-mobile-03"
+        class="custom-tooltip-inner-pos-badge-01-mobile"
         :toolTipShow="true" 
         :toolTipPos="0" 
-        :toolTipAdjust="[-105, 0, 0, 13]"  
-        :toolTipR="0"
-        :hideToolTipButton = true
-        :toolTipW = "280"
-        :start-event = "nextStep()"
-        >
-            <template v-slot:text>
-                {{ toolTipText03 }}
-            </template>
-        </WelcomeTooltip>
-    </v-container>
-
-
-    <!--badge-02 (mobile)-->
-    <v-container 
-    class="pa-0 desabled-card custom-tooltip-pos-badge-02-mobile" 
-    v-if="appStore.isMobile && appStore.appData.badges.clock == 1"
-    >
-        <WelcomeTooltip 
-        class="custom-tooltip-inner-pos-badge-02-mobile"
-        :toolTipShow="true" 
-        :toolTipPos="0" 
-        :toolTipAdjust="[8, -50, 0, 55]"  
+        :toolTipAdjust="[8, -50, 0, 0]"  
         :toolTipR="0"
         :hideToolTipButton = false
         :toolTipW = "280"
-        @my-click-event="hideBubbleBadge02"
+        @my-click-event="hideBubbleBadge01"
             >
             <template v-slot:btnText>
                 OK
@@ -270,9 +256,34 @@
         </WelcomeTooltip>
     </v-container>
 
+
+    <!--badge-02 (mobile)-->
+    <v-container 
+    class="pa-0 custom-tooltip-pos-badge-02-mobile" 
+    v-if="appStore.isMobile && appStore.appData.badges.clock == 1"
+    >
+        <WelcomeTooltip 
+        class="custom-tooltip-inner-pos-badge-02-mobile"
+        :toolTipShow="true" 
+        :toolTipPos="0" 
+        :toolTipAdjust="[-92, -50, 0, 42]"  
+        :toolTipR="0"
+        :hideToolTipButton = false
+        :toolTipW = "280"
+        @my-click-event="hideBubbleBadge02"
+            >
+            <template v-slot:btnText>
+                OK
+            </template>
+            <template v-slot:text>
+                {{ toolTipTextClock }}
+            </template>
+        </WelcomeTooltip>
+    </v-container>
+
     <!--badge-03 (mobile)-->
     <v-container 
-    class="pa-0 desabled-card custom-tooltip-pos-badge-03-mobile" 
+    class="pa-0 custom-tooltip-pos-badge-03-mobile" 
     v-if="appStore.isMobile && appStore.appData.badges.heart == 1"
     >
         <WelcomeTooltip 
@@ -296,7 +307,7 @@
 
     <!--badge-04 (mobile)-->
     <v-container 
-    class="pa-0 desabled-card custom-tooltip-pos-badge-04-mobile" 
+    class="pa-0 custom-tooltip-pos-badge-04-mobile" 
     v-if="appStore.isMobile && appStore.appData.badges.picture == 1"
     >
         <WelcomeTooltip 
@@ -342,9 +353,13 @@
         "Legal! Cada vez que você concluir um conteúdo, adquire uma parte da gotinha, simbolizando seu avanço na Jornada."
     )
 
-    //Primeiro acesso -> 14
-    const toolTipText03 = ref(
-        "Parabéns! Ao enterrar sua capsula, você completou sua primeira missão! Ela está sendo preparada, fique de olho em seu e-mail corporativo e marque na agenda, em 90 dias pode ser que você tenha uma surpresa!​"
+    //Antigo (Primeiro acesso -> 14) - Texto badge Capsula 
+    const toolTipTextCapsula = ref(
+        "Parabéns! Ao enterrar sua cápsula, você completou sua primeira missão! Ela está sendo preparada, fique de olho em seu e-mail corporativo e marque na agenda, em 90 dias pode ser que você tenha uma surpresa!​"
+    )
+
+    const toolTipTextClock = ref(
+        "Assim como o Hospital foi presenteado por Hans Einstein com um relógio de seu pai, você também conquistou sua segunda recompensa. Parabéns!"
     )
 
     const toolTipTextDefault = ref(
@@ -357,6 +372,17 @@
         appStore.appData.firstAccess = 7
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
     }
+
+    //Esconde o balão do badge 01
+    const hideBubbleBadge01 = () => {
+        appStore.appData.badges.capsula = 2
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+        //Atualiza backend
+		const userId = JSON.parse(localStorage.getItem('userId'));
+		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+    }
+
 
     //Esconde o balão do badge 02
     const hideBubbleBadge02 = () => {
@@ -389,6 +415,12 @@
 		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
     }
 
+    const goStep4 = () => {
+        appStore.welcomeStepCounter = 4
+        //Esconde o botão de logout inicial
+        appStore.isFloatLogoutBtn = false
+    }
+
 
     // Carrega icones dos btns
     const getImg = (index) => {
@@ -398,7 +430,7 @@
     return  new URL(`../assets/img/side-icon-${index}-dark.svg`, import.meta.url).href
     }        
     const blockBtn = (i) => {
-        if (i == 1 && appStore.appData.capsula.status == 1) { return false }
+        if (i == 1 && appStore.appData.badges.capsula > 0) { return false }
         else if (i == 2 && appStore.appData.badges.clock > 0) { return false }
         else if (i == 3 && appStore.appData.badges.heart > 0) { return false }
         else if (i == 4 && appStore.appData.badges.picture > 0 ) { return false }
@@ -443,11 +475,11 @@
     }
     .custom-tooltip-pos{
         position: absolute !important;
-        left: -240px !important;
+        left: -184px !important;
     }
     .custom-tooltip-pos-mobile{
         position: fixed !important;
-        top: 184px;
+        top: 198px;
     }
     .custom-tooltip-pos-02{
         position: absolute !important;
@@ -491,6 +523,27 @@
         right: -200px;
     }
 
+    .custom-tooltip-pos-badge-01{
+        position: absolute !important;
+        right: -71px !important;
+        top: -78%;
+    }
+    .custom-tooltip-inner-pos-badge-01{
+        position: absolute !important;
+        left: -240px !important;
+        top: 278px
+    }
+    .custom-tooltip-pos-badge-01-mobile{
+        position: fixed;
+        z-index: 5000;
+    }
+    .custom-tooltip-inner-pos-badge-01-mobile{
+        position: absolute !important;
+        z-index: 5000;
+        top: 152px;
+        right: -200px;
+    }
+
     .custom-tooltip-pos-badge-02{
         position: absolute !important;
         right: -71px !important;
@@ -508,7 +561,7 @@
     .custom-tooltip-inner-pos-badge-02-mobile{
         position: absolute !important;
         z-index: 5000;
-        top: 152px;
+        top: 210px;
         right: -200px;
     }
 

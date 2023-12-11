@@ -19,11 +19,12 @@ export const useAuthStore = defineStore('userAuth', {
 
             const appStore = useAppStore()
 
-            //Nova instância para utilizar this no escopo do axios
+            //Nova instância para utilizar "this" no escopo do axios
             let self = this;
 
             axios.post(this.serverUrl + path, data).then(function (response) {
-                console.log(' - Info recebida ', response);
+
+                console.log(' -> Resposta do servido: ', response);
 
                 //Login
                 if (path == '/login') {
@@ -32,6 +33,7 @@ export const useAuthStore = defineStore('userAuth', {
                     //console.log(response.data.id)
                     //console.log(response.data.info)
                     //console.log(response.data.email)
+                    //console.log(response.data.autocomplete)
 
                     const data = JSON.parse(response.data.info) // Converte para objeto
                     appStore.appData = data; // Salva dados no pinia
@@ -41,13 +43,13 @@ export const useAuthStore = defineStore('userAuth', {
                     sessionStorage.setItem('userMail', response.data.email); // Persiste o e-mail no SessionStorage
 
                     //Encaminha para home ou primeiro acesso     
-                    if (data.firstAccess < 5) { self.$router.push('/welcome') }
+                    if (data.firstAccess < 5 || data.firstAccess != 'finished') { self.$router.push('/welcome') }
                     else { self.$router.push('home') }
 
                 }
                 //Mudar senha
                 else if (path == '/chgpsw') {
-                    console.log(response.data.result)
+                    //console.log(response.data.result)
                     if (response.data.result == 'OK') {
                         //console.log('OK - OK')
                         appStore.isChangedPassword = true;

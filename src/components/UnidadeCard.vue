@@ -97,17 +97,17 @@
         :class="appStore.isMobile ? 'custom-tooltip-pos-mobile' : 'custom-tooltip-pos'"
         :toolTipShow="true" 
         :toolTipPos="2" 
-        :toolTipAdjust="appStore.isMobile ? [0, 0, -84, 0] : [0, 0, -44, -75]" 
+        :toolTipAdjust="appStore.isMobile ? [65, 0, 0, 0] : [55, 0, 0, -75]" 
+        :toolTipW = "appStore.isMobile ? 360 : 400 "
         @my-click-event="appStore.welcomeStepCounter = 3"
         > 
             <template v-slot:btnText>
 				PROSSEGUIR
 			</template>
             <template v-slot:text>
-                Estas são as unidades do nosso programa. Elas devem
-                ser acessadas seguindo uma ordem. Por isso, serão
-                liberadas conforme o seu progresso. A unidade que você
-                está cursando estará em	destaque.
+                <p>Estas são as <span class="font-weight-bold">unidades do nosso programa.</span></p>
+                <p class="mt-4">Elas devem ser acessadas seguindo uma ordem. Por isso, <span class="font-weight-bold">serão liberadas conforme o seu progresso.</span></p>
+                <p class="mt-4">A unidade que você está cursando estará em destaque.</p>
             </template>
         </WelcomeTooltip>
     </v-container>
@@ -127,8 +127,8 @@
         :toolTipW = "280"
         >
             <template v-slot:text>
-                Clique aqui e acesse
-                a Unidade 01
+                <p>Clique aqui e acesse a</p> 
+                <p class="font-weight-bold">Unidade 01</p>
             </template>
         </WelcomeTooltip>
     </v-container>
@@ -242,13 +242,13 @@
     .custom-tooltip-pos{
         position: absolute !important;
         z-index: 5000;
-        top: -130px !important;
-        left: 212px !important;
+        top: -165px !important;
+        left: 192px !important;
     }
     .custom-tooltip-pos-mobile{
         position: absolute !important;
         z-index: 5000;
-        top: -150px !important;
+        top: -175px !important;
     }
     .custom-tooltip-02-pos-mobile{
         position: absolute !important;
@@ -291,12 +291,11 @@
     .pos-test{
         position: relative;
         left: -50%;
-        z-index: 2000;
+        z-index: 0;
         
     }
     .pos-test-inner{
         position: absolute;
-        z-index: 5000;
         top: -85px;
         left: 0;
     }

@@ -19,7 +19,7 @@
 	id="content01" 
 	width="100%" 
 	elevation="6"
-	style="z-index:5;background-color:#0065BD" 
+	style="z-index:6;background-color:#0065BD" 
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
 	>
 		
@@ -30,7 +30,7 @@
 		<v-card-text class="pt-10 pl-0 pr-0 mt-n5">
             
 			<h1 class="mt-n10 text-h1 font-weight-bold text-primary my-6 reveal fade-in titulo_missao" >
-                DIRETRIZES<br>estratégicas
+                DIRETRIZES<br>ESTRATÉGICAS
             </h1>
 			
 			<v-container fill-height class="">
@@ -61,7 +61,7 @@
 				<v-row justify="center" class="mt-n12">
 					<v-col cols="12" md="5" align="center">
 						<div class="cont1_inferiorp reveal fade-bottom">
-							<p class="cont1_regular">Ser líder e inovadora na assistência à saúde, referência na gestão de conhecimento e pelo comprometimento com a responsabilidade social e sustentabilidade.</p>
+							<p class="cont1_regular">Ser líder e inovadora na assistência à saúde, referência na gestão de conhecimento e ter comprometimento com a responsabilidade social e sustentabilidade.</p>
 						</div>
 					</v-col>
 				</v-row>
@@ -109,7 +109,7 @@
 	id="content02" 
 	width="100%"
 	elevation="6"
-	style="z-index:4; background-color:#62C9CE"
+	style="z-index:5; background-color:#62C9CE"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
 	>
 		<v-img
@@ -258,7 +258,7 @@
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
-									 A palavra <em>refuá</em> tem origem no hebraico e significa saúde. Este pilar tem como base a prevenção, diagnóstico, tratamento e reabilitação e foco no desenvolvimento da Instituição, com aquisição de tecnologias, equipamentos e novos serviços. 
+									 A palavra <em>refuá</em> tem origem no hebraico e significa saúde. Este pilar tem como base a prevenção, diagnóstico, tratamento, reabilitação e foco no desenvolvimento da Instituição, com aquisição de tecnologias, equipamentos e novos serviços. 
 								</span>
 							</div>
 						  </div>
@@ -275,18 +275,7 @@
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
-									Os princípios judaicos, somados aos <strong>valores organizacionais</strong>, norteiam as atividades e os colaboradores da sociedade:
-									<ul style="list-style-type: none; color:#0065BD; font-weight: 600">
-										<li>Honestidade</li>
-										<li>Verdade</li>
-										<li>Integridade</li>
-										<li>Diligência</li>
-										<li>Justiça</li>
-										<li>Altruísmo</li>
-										<li>Autonomia</li>
-										<li>Profissionalismo</li>
-										<li>Trabalho em Equipe</li>
-									</ul>
+									<em>Tsedaká</em>, deriva da raiz hebraica <em>"tsedek"</em>, que significa justiça, carrega consigo o conceito de justiça social. Esse princípio fundamental, alinhado ao compromisso do Einstein, influenciou sua dedicação à Responsabilidade Social, Voluntariado e Filantropia, como uma busca ativa pela justiça na sociedade.
 								</span>
 							</div>
 						  </div>
@@ -303,7 +292,7 @@
 
 							<div class="pt-2 pb-2 pl-2 pr-2">
 								<span class="tooltip_text">
-									A palavra <em>mitzvá’</em> tem origem no hebraico e, no uso comum, significa boas ações. Já a palavra <em>tsedaká</em> vem da mesma raiz do vocábulo hebraico <em>tsedek</em>, que significa justiça, conferindo ao termo o conceito de justiça social. A união desses dois pilares deu origem ao compromisso do Einstein com a Responsabilidade Social, Voluntariado e Filantropia.									
+									A palavra <em>mitzvá</em> tem origem no hebraico e, no uso comum, significa boas ações. Essa prática, ao longo do tempo, inspirou o compromisso do Einstein com a Responsabilidade Social, Voluntariado e Filantropia, refletindo seu comprometimento com o bem-estar da comunidade.				
 								</span>
 							</div>
 						  </div>
@@ -339,6 +328,97 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				@click="isContent02aVisible = true; prosseguir('content02a')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+
+	</v-card>
+	<!-- conteúdo 02 -->
+	
+	<!-- conteúdo 02a -->
+	<v-card 
+	v-show="isContent02aVisible"
+	id="content02a" 
+	width="100%" 
+	elevation="6"
+	style="z-index:4;background-color:#C4E8E1"
+	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos" 
+	>
+
+		<v-img
+		class="mx-auto grade_header"
+		src="./img/tela_missao/grade_03.png"
+		/>
+		
+		
+		<v-container fill-height class="">
+				<v-row justify="center" class="mt-0">
+					<v-col cols="12" md="5" align="left" align-self="center" class="reveal fade-left">
+							<p style="color:#02A180; font-size:1.2em" class="texto2a"><strong>Os princípios judaicos, somados aos <span style="color:#004F81">valores organizacionais</span>, norteiam as atividades e os colaboradores da sociedade.</strong></p>
+					</v-col>
+					<v-col cols="12" md="1" align="left" class="reveal fade-bottom" align-self="center">
+						<v-img width="50px"
+						class="show_desktop mx-auto"
+						src="./img/tela_missao/seta_cont2ah.png"
+						/>
+						<v-img width="50px"
+						class="show_1277 mx-auto"
+						src="./img/tela_missao/seta_cont2ah.png"
+						/>
+						<v-img width="50px"
+						class="show_mobile mx-auto"
+						src="./img/tela_missao/seta_cont2av.png"
+						/>
+					</v-col>
+					<v-col cols="12" md="1" align="left" class="reveal fade-bottom">
+						
+					</v-col>
+					<v-col cols="12" md="4" align="left" align-self="center">
+							<ul class="lista_cont2a reveal fade-right" style="color:#004F81; font-size:1.2em; font-weight:800" >
+								<li>Honestidade</li>
+								<li>Verdade</li>
+								<li>Integridade</li>
+								<li>Diligência</li>
+								<li>Justiça</li>
+								<li>Altruísmo</li>
+								<li>Autonomia</li>
+								<li>Profissionalismo</li>
+								<li>Trabalho em Equipe</li>
+							</ul>
+					</v-col>
+				</v-row>
+				
+				
+				
+			</v-container>
+		
+		
+		
+<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
 				@click="isContent03Visible = true; prosseguir('content03')"
 				> 
 					Prosseguir	
@@ -347,6 +427,10 @@
 		</v-container>
 
 	</v-card>
+	
+<!-- conteúdo 03 -->
+
+	
 	<!-- conteúdo 02 -->
 	<v-card 
 	v-show="isContent03Visible"
@@ -458,32 +542,35 @@
 						/>
 						
 						<v-container fill-height class="mb-8">
-							<v-row align="start" justify="center" class="mt-0">
+							<v-row align="start" justify="left" class="mt-0">
 								
-								<v-col cols="12" md="4" align="left">
-										<v-row justify="center" class="mt-0">
-											<v-col cols="12" md="12" align="left">
-													<h1 class="texto_azul_claro" style="margin-top: 5%">CÍRCULO VIRTUOSO...</h1>
-													<p>
-														O Einstein é uma plataforma de assistência, ensino e educação, pesquisa e inovação e responsabilidade social que integra centenas de atividades e trabalha para a melhoria de acesso e qualidade da saúde no País.
-													</p>
-
-											</v-col>
-											<v-col cols="12" md="12" align="left">
-													<v-img
-														class="" height="400px"
-														src="./img/tela_missao/cont4_linha.svg"
-														/>
-											</v-col>
-											<v-col cols="12" md="12" align="left">
-
-													<h1 class="texto_azul_claro" style="margin-top: 0%">...E CONECTADO.</h1>
-											</v-col>
-										</v-row>
+								<p class="">
+									Em 60 anos de existência do Hospital Israelita Albert Einstein, inúmeras descobertas vêm transformando a realidade da medicina, gerando um círculo virtuoso de inovação e qualidade de vida, que beneficia cada indivíduo e a sociedade.
+								</p>
+								<p class="mt-4">
+									Esse círculo virtuoso é um ecossistema de saúde integrado, com quatro amplos campos de atuação: Assistência, Ensino e Educação, Pesquisa e Inovação e Responsabilidade Social.
+								</p>
+								<p class="mt-4">
+									<strong>Vamos conhecer melhor cada campo de atuação? </strong>
+								</p>
+	
+								<v-col cols="12" md="12" align="left">
+										
 								</v-col>
-								<v-col cols="12" md="8" align="left">
+								<v-col cols="12" md="12" align="left">
 										<v-img
-										class="mb-10" 
+										height="1100"
+										class="mb-10 show_desktop" 
+										src="./img/tela_missao/cont4_circulo.png"
+										/>
+										<v-img
+										height="900"
+										class="mb-10 show_1277" 
+										src="./img/tela_missao/cont4_circulo.png"
+										/>
+										<v-img
+										height="auto"
+										class="mb-10 show_mobile" 
 										src="./img/tela_missao/cont4_circulo.png"
 										/>
 								</v-col>
@@ -502,17 +589,10 @@
 									src="./img/tela_missao/cont4_ico_01.svg"
 									/>
 									
-									<v-dialog width="80%">
-										<template v-slot:activator="{ props }">
 
-										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+										<a class="btn_cont2_info4" @click="modal_assistencia = true"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
 
-										  </template>
-										  <template v-slot:default="{ isActive }">
-											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695070?h=dfd8816b50&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.1 - Assistência"></iframe></div>
-										  </template>
-										</v-dialog>
-									  
+
 									<v-img style="width:60%"
 									class="mt-n10" 
 									src="./img/tela_missao/Retangulo-1.svg"
@@ -545,18 +625,12 @@
 									class="" 
 									src="./img/tela_missao/cont4_ico_03.svg"
 									/>
-									<v-dialog width="80%">
-										<template v-slot:activator="{ props }">
 
-										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
 
-										  </template>
-										  <template v-slot:default="{ isActive }">
+										<a class="btn_cont2_info4"  @click="modal_ensino = true"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+
 											  
-											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695123?h=9fc2ea4b4a&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.2 - Ensino e Educação"></iframe></div>
 											  
-										  </template>
-										</v-dialog>
 										
 										
 									<v-img style="width:60%"
@@ -585,19 +659,10 @@
 											class="" 
 											src="./img/tela_missao/cont4_ico_04.svg"
 											/>
-											<v-dialog width="80%">
-										<template v-slot:activator="{ props }">
 
-										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+										<a class="btn_cont2_info4" @click="modal_pesquisa = true"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
 
-										  </template>
-										  <template v-slot:default="{ isActive }">
-											  
-											  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695181?h=97fe1d80b6&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.3 - Pesquisa"></iframe></div>
-											  
-										  </template>
-										</v-dialog>
-										
+
 											<v-img style="width:60%"
 											class="mt-n10"
 											src="./img/tela_missao/Retangulo-6.svg"
@@ -615,21 +680,10 @@
 											class="" 
 											src="./img/tela_missao/cont4_ico_05.svg"
 											/>
-											
-											
-											<v-dialog width="80%">
-										<template v-slot:activator="{ props }">
 
-										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
+										<a class="btn_cont2_info4" @click="modal_inovacao = true"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
 
-										  </template>
-										  <template v-slot:default="{ isActive }">
-											  
-											 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695210?h=5dbf8c7325&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.4 - Inovação"></iframe></div>
-											  
-										  </template>
-										</v-dialog>
-											
+												
 											
 											<v-img style="width:60%"
 											class="mt-n10"
@@ -653,19 +707,8 @@
 									src="./img/tela_missao/cont4_ico_06.svg"
 									/>
 									
-									
-									<v-dialog width="80%">
-										<template v-slot:activator="{ props }">
 
-										<a v-bind="props" class="btn_cont2_info4"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
-
-										  </template>
-										  <template v-slot:default="{ isActive }">
-											  
-											 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695343?h=7609b34bb8&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="2.2.5 - Responsabilidade Social"></iframe></div>
-											  
-										  </template>
-										</v-dialog>
+										<a class="btn_cont2_info4"  @click="modal_social = true"> <img style="height:50px" src='./img/tela_missao/btn_cont4.png'/></a>
 									
 									
 									<v-img style="width:60%"
@@ -682,6 +725,183 @@
 							</v-row>
 
 						</v-container>
+						
+						
+						
+						<template>
+									<v-dialog v-model="modal_assistencia" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_assistencia = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe 
+													src="https://player.vimeo.com/video/885695070?h=dfd8816b50&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.1 - Assistência"
+													class="vimeo-player" 
+													/>
+													
+													
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+									
+									<template>
+									<v-dialog v-model="modal_ensino" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_ensino = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe 
+													src="https://player.vimeo.com/video/885695123?h=9fc2ea4b4a&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.2 - Ensino e Educação"
+													class="vimeo-player" 
+													/>
+													
+													
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+									
+									
+									<template>
+									<v-dialog v-model="modal_pesquisa" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_pesquisa = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe 
+													src="https://player.vimeo.com/video/885695181?h=97fe1d80b6&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.3 - Pesquisa"
+													class="vimeo-player" 
+													/>
+													
+												
+													
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+									
+									
+									
+									<template>
+									<v-dialog v-model="modal_inovacao" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_inovacao = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://player.vimeo.com/video/885695210?h=5dbf8c7325&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.4 - Inovação"
+													class="vimeo-player" 
+													/>
+												
+													
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+									
+									
+									
+									<template>
+									<v-dialog v-model="modal_social" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_social = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://player.vimeo.com/video/885695343?h=7609b34bb8&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.5 - Responsabilidade Social"
+													class="vimeo-player" 
+													/>
+														
+													
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+						
 
 	</v-card>
 
@@ -744,7 +964,7 @@
 		class=" mx-2 text-primary animate__animated animate__fadeInDown"
 		rounded
 		min-width="100px"
-		style="letter-spacing:-1"
+		style="letter-spacing:normal"
 		color="#2cfece"
 		@click="finishedContent"
 		>
@@ -777,6 +997,7 @@
 
 	//Controle da visibilidade dos conteúdos
 	const isContent01Visible = ref(true) // <-- Primeiro conteúdo inicia visível
+	const isContent02aVisible = ref(false)
 	const isContent02Visible = ref(false)
 	const isContent03Visible = ref(false)
 	const isContent04Visible = ref(false)
@@ -784,6 +1005,14 @@
 	const isTooltip1bVisible = ref(false)
 	const isTooltip1cVisible = ref(false)
 	const isTooltip1dVisible = ref(false)
+	
+	const modal_assistencia = ref(false)
+	const modal_ensino = ref(false)
+	const modal_pesquisa = ref(false)
+	const modal_inovacao = ref(false)
+	const modal_social = ref(false)
+	
+	
 
 //Informa se a tela já foi concluida
 const isAllContentFinished = ref(false)
@@ -965,7 +1194,7 @@ line-height: 1.2rem;
 	.tooltip1c {
     position: absolute!important;
     z-index: 6002 !important;
-    top: 69%;
+    top: 68.5%;
     left: 27%;
     transform: translate(-50%, -50%);
 	width: 260px;
@@ -1142,7 +1371,7 @@ line-height: 1.2rem;
     transform: rotate(-60deg) !important;
 	}
 	.tooltip1c {
-    top: 39%;
+    top: 48%;
     left: 48%;
     width: 405px;
 	}
@@ -1152,7 +1381,7 @@ line-height: 1.2rem;
     transform: rotate(-60deg) !important;
 	}
 	.tooltip1d {
-    top: 36%;
+    top: 41%;
     left: 46%;
 	width: 500px;
 	}
@@ -1295,48 +1524,54 @@ line-height: 1.2rem;
 	}
 	}
 	@media screen and (max-width: 600px){
+	.lista_cont2a{
+	margin-left:100px;
+	}
+	.texto2a{
+	text-align:center;
+	}
 	.tooltip_text{
 	font-family: 'montserrat'!important;
 	font-size:0.8rem;
 	}
 	.tooltip1a {
-    top: 35%;
+    top: 68%;
     left: 50%;
-    width: 100%;
+    width: 95%;
 	}
 	.triangulo-tooltip1a {
-	top: 95%;
+	top: 80%;
     left: 53%;
     transform: rotate(-60deg) !important;
 	}
 	.tooltip1b {
-    top: 52%;
+    top: 65%;
     left: 50%;
-	width: 100%;
+	width: 95%;
 	}
 	.triangulo-tooltip1b {
-    top: 93%;
+    top: 80%;
     left: 53%;
     transform: rotate(-60deg) !important;
 	}
 	.tooltip1c {
-    top: 42%;
+    top: 70%;
     left: 49%;
-    width: 100%;
+    width: 95%;
 	}
 	.triangulo-tooltip1c {
-    top: 96%;
+    top: 76%;
     left: 38%;
     transform: rotate(-60deg) !important;
 	}
 	.tooltip1d {
-    top: 36%;
+    top: 70%;
     left: 50%;
-	width: 100%;
+	width: 95%;
 	
 	}
 	.triangulo-tooltip1d {
-    top: 93%;
+    top: 83%;
     left: 40%;
     transform: rotate(-60deg) !important;
 	}

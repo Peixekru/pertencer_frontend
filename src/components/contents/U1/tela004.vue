@@ -63,7 +63,7 @@
 							/>
 							<h5 
 							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'text-primary'"
+							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
 							>
 								Quem somos
 							</h5>
@@ -109,7 +109,7 @@
 							/>
 							<h5 
 							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'text-primary'"
+							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
 							>
 								Nosso propósito
 							</h5>
@@ -154,7 +154,7 @@
 							class="animate__animated animate__fadeInDown"
 							/>
 							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'text-primary'"
+							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
 							>
 								Alguns números
 							</h5>
@@ -198,7 +198,7 @@
 							/>
 							<h5 
 							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'text-primary'"
+							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
 							>
 								Onde atuamos
 							</h5>
@@ -211,10 +211,7 @@
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
-								Estamos presente em 72 setores e atuamos efetivamente em cinco frentes: Unidade Morumbi,
-								Unidades Externas, Programa Einstein na Comunidade de Paraisópolis (PECP), Residencial
-								Israelita Albert Einstein (RIAE) e Hospitais Municipais M’Boi Mirim e Vila Santa
-								Catarina. 		
+								Estamos presente em 72 setores e atuamos efetivamente em 09 unidades de atuação: Hospital Morumbi, Programa Einstein na Comunidade, Residencial Israelita Albert Einstein, Unidade Externas Alphaville, lbirapuera, Perdizes, Hospital Municipal M Boi Mirim, Hospital Municipal Vila Santa Catarina, Hospital Municipal Aparecida de Goiânia. 		
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -537,32 +534,50 @@
 									Assista ao vídeo para saber mais sobre o PECP.
 								</p>
 								
-								<v-dialog width="80%">
-								  <template v-slot:activator="{ props }">
 								
 								<v-btn 
-								v-bind="props"
 								type="button"
 								density="comfortable"
 								size="large"
 								rounded="pill"
 								class=""
 								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+								@click="modal_voluntariado = true"
 								> 
 									<span class="mdi mdi-video-outline"></span> Assistir Vídeo
 								</v-btn>
 								
-								  </template>
+								<template>
+									<v-dialog v-model="modal_voluntariado" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_voluntariado = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://player.vimeo.com/video/885695414?h=5f1b696fef&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.4.1 - Voluntariado"
+													class="vimeo-player" 
+													/>
 
-								  <template v-slot:default="{ isActive }">
-									
-									  
-									  <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695414?h=5f1b696fef&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 10px" title="2.4.1 - Voluntariado"></iframe></div>
-
-
-									
-								  </template>
-								</v-dialog>
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
 								
 							</v-col>
 						</v-row>
@@ -673,7 +688,7 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2015, o diretor do Hospital Municipal Vila Santa Catarina, antes mesmo de sua inauguração, entrou em contato com a diretoria do Voluntariado para solicitar que os voluntários atuassem no hospital. Logo após a inauguração, o Voluntariado iniciou seu trabalho no setor de Transplantes, seguido de Visitação aos pacientes e acompanhantes, promovendo a humanização por meio de ações sociais.
+									Em 2015, o diretor do Hospital Municipal Vila Santa Catarina, antes mesmo de sua inauguração, entrou em contato com a diretoria do Voluntariado para solicitar que os voluntários atuassem no hospital. Logo após a inauguração, o Voluntariado iniciou seu trabalho no setor de Transplantes, seguido de visitação aos pacientes e acompanhantes, promovendo a humanização por meio de ações sociais.
 
 								</p>
 							</v-col>
@@ -1091,7 +1106,7 @@
 				Com mais de 80 anos de existência, o RIAE está localizado na Vila Mariana e acolhe cerca de 100 idosos da comunidade judaica, com o objetivo de cuidar e preservar sua história e preceitos.
 			</p>
 			<p class="mt-4 texto_preto">
-				Os voluntários auxiliam na promoção da socialização, bem-estar e entretenimento dos idosos, oferecendoqualidade de vida e acolhimento aos residentes.
+				Os voluntários auxiliam na promoção da socialização, bem-estar e entretenimento dos idosos, oferecendo qualidade de vida e acolhimento aos residentes.
 			</p>
 		</v-card-text>
 		
@@ -1152,7 +1167,7 @@
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
 			<p class="mt-4">
-				<strong>Hospitais Municipais M’Boi Mirim</strong>
+				<strong>Hospital Municipal M’Boi Mirim</strong>
 			</p>
 		</v-card-text>
 		<v-row class="mt-n0 reveal fade-bottom">
@@ -1389,7 +1404,7 @@
 					<v-row >
 						<v-col cols="12" md="12">
 							<v-img class=" reveal fade-right" src="./img/tela_voluntariado/texto_footer.svg"
-								title="O Voluntariado continua seu trabalho, levando uma gota Einstein a cada pessoa e, com isso, é capaz de transformar sonhos em realidade e contribuir para a busca de uma sociedade mais justa e igualitária para todos os indivíduos." />
+								title="O Voluntariado continua seu trabalho, levando uma gota de Einstein a cada pessoa e, com isso, é capaz de transformar sonhos em realidade e contribuir para a busca de uma sociedade mais justa e igualitária para todos os indivíduos." />
 						</v-col>
 					</v-row>
 					<v-row style="text-align:center" class=" reveal fade-bottom">
@@ -1450,6 +1465,7 @@
 	const isContent09Visible = ref(false)
 	const isContent10Visible = ref(false)
 	const isContent11Visible = ref(false)
+	const modal_voluntariado = ref(false)
 
 	//Controle dos cards do conteúdo 01
 	const isCard01Visible = ref(false)
@@ -1459,7 +1475,7 @@
 
 	//Linha do tempo
 	const timeLineNum = ref([
-		1959, 1967, 1969, 1971, 1997, 1998, 1999, 2001, 2000, 2004, 2010, 2013, 2015, 2022, 2023
+		1959, 1967, 1969, 1971, 1997, 1998, 1999, 2001, 2002, 2004, 2010, 2013, 2015, 2022, 2023
 	])
 	//Controla a seleção da linha do tempo e do carrossel
 	const timelineSelect = ref(0)

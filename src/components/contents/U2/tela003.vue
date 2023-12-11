@@ -31,7 +31,7 @@
 				O Einstein está sempre perto de você!
 			</p>
 			<p class="texto_branco mt-4">
-				Durante toda sua trajetória, você é acompanhado pelo seu gestor direto e, também, pela equipe de RH do Einstein.
+				Durante toda sua trajetória, você é acompanhado pelo seu gestor direto e/ou referência técnica e, também, pela equipe de RH do Einstein.
 			</p>
 			<p class="texto_branco mt-4">
 				Eles fazem a gestão do seu desempenho por meio de avaliações sistemáticas, conversam com você para sugerir caminhos, escutar suas reivindicações e ajudar a estabelecer metas de carreira para o seu crescimento profissional.
@@ -105,13 +105,13 @@
 		</v-col>
 		<v-col cols="12" md="7" class="pl-8 d-flex flex-column justify-center align-center">
 			<p class="texto_branco">
-				O <strong>Ciclo de Desempenho</strong> define, acompanha, desenvolve e reconhece os profissionais e sua trajetória dentro da instituição, possibilitando transparência no relacionamento líder e liderado, em um ambiente saudável de confiança e troca.  
+				O <strong>Ciclo de Desempenho</strong> define, acompanha, desenvolve e reconhece os profissionais e sua trajetória dentro da instituição, possibilitando transparência no relacionamento líder e liderado, em um ambiente saudável de confiança e troca. 
+			</p>  
 			<p class="texto_branco mt-4">
-				As ações acontecem ao longo do ano e buscam alinhar o que é esperado do colaborador com a avaliação de competências, a análise de pontos fortes e oportunidades de melhoria, além de estabelecer planos de ação para o próximo ciclo.
+				As ações acontecem ao longo do ano e buscam alinhar o que é esperado do colaborador com a avaliação de competências, a análise de pontos fortes e oportunidades de melhoria, além de estabelecer planos de ação para o próximo ciclo. 
 			</p>
 			<p class="texto_branco mt-4">
-				Com isso, o colaborador tem clareza do que deve fazer, e quais competências são esperadas e serão analisadas ao final do ciclo. Os resultados servem para recrutamento interno, ações de reconhecimento e recompensa, política de formação e desenvolvimento, e capacitação externa.
-			</p>
+				Com isso, o colaborador tem clareza do que deve fazer, e quais competências são esperadas e serão analisadas ao final do ciclo. Os resultados são utilizados em diferentes programas e iniciativas internas que compõem a jornada de desenvolvimento dos colaboradores, como: recrutamento interno, ações de reconhecimento e recompensa, programas de formação e desenvolvimento e capacitações externas. 
 			</p>
 		</v-col>
 	</v-row>
@@ -186,7 +186,7 @@
 			
 		</v-col>
 		<v-col cols="12" md="5" class="img_competencias">
-		<v-img height="650" class="mx-auto mt-4" src="./img/tela_desempenho/img_competencias.png" />
+		<v-img height="650" class="mx-auto mt-10" src="./img/tela_desempenho/img_competencias.png" />
 		</v-col>
 	</v-row>
 
@@ -239,13 +239,25 @@
 
 	<v-row class="mt-6">
 		<v-col cols="12" md="12" align="center">
-			<h2 class="mt-n4 font-weight-bold text-secondary reveal fade-left">
+			<h2 style="color:#2B7080" class="mt-n4 font-weight-bold reveal fade-left">
 				Avaliação Formal de Competências
 			</h2>
 
 		</v-col>
-		<v-col cols="12" md="4">
-			<v-img class="" src="./img/tela_desempenho/avaliacao_img1.png" />
+		<v-col cols="12" md="7">
+			<v-card 
+			width="100%" 
+			elevation="3"
+			class="pa-4 mt-4" 
+			style="border-radius:15px;background-color:#00A4E1"
+			align="center"
+			>
+					<p class="texto_branco" style="font-size:1.5em">
+						<strong>Autoavaliação</strong>
+					</p>
+			</v-card>	
+			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
+
 			<p class="mt-4">
 				 Na autoavaliação, você preenche um formulário que lhe dá a oportunidade de refletir sobre suas entregas e seu desempenho, analisar suas competências e ampliar seu autoconhecimento e autodesenvolvimento. Nessa fase, você se atribuirá notas de acordo com a escala:
 			</p>
@@ -266,20 +278,60 @@
 			</p>
 
 		</v-col>
-		<v-col cols="12" md="4">
-			<v-img class="" src="./img/tela_desempenho/avaliacao_img2.png" />
-			<p class="mt-4">
-				 Na avaliação parcial, você avalia e é avaliado por outros colaboradores. A avaliação pode ser feita por  um profissional de cargo acima do seu, ou por um profissional de mesmo cargo ou nível hierárquico. Esta avaliação feita pelos pares é obrigatória para toda a equipe de enfermagem. A obrigatoriedade desta etapa deve-se, em partes, ao selo Magnet de certificação.
-			</p>
-			<v-img width="70%" class="mx-auto mt-8" src="./img/tela_desempenho/logo_magnet.png" />
-
-		</v-col>
-		<v-col cols="12" md="4">
-			<v-img class="" src="./img/tela_desempenho/avaliacao_img3.png" />
+		
+		<v-col cols="12" md="5">
+			<v-card 
+			width="100%" 
+			elevation="3"
+			class="pa-4 mt-4" 
+			style="border-radius:15px;background-color:#00A4E1"
+			align="center"
+			>
+					<p class="texto_branco" style="font-size:1.5em">
+						<strong>Avaliação Final</strong>
+					</p>
+			</v-card>	
+			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
 			<p class="mt-4">
 				 Na avaliação final, feita pelo gestor ou a referência técnica da área, é realizada uma conversa sobre as avaliações feitas, visando chegar a um consenso sobre os resultados apresentados. Neste momento, são estabelecidas as metas de carreira, sugeridas ações para seu desenvolvimento e aprimoramento para o próximo ciclo, e feitos os planos de desenvolvimento individual e  organizacional (PDI e PDO).
 			</p>
 
+		</v-col>
+		<v-col cols="12" md="12">
+			<v-card 
+			width="100%" 
+			elevation="3"
+			class="pa-4 mt-4" 
+			style="border-radius:15px;background-color:#00A4E1"
+			align="center"
+			>
+					<p class="texto_branco" style="font-size:1.5em">
+						<strong>Avaliação Parcial</strong>
+					</p>
+			</v-card>	
+			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
+			
+			<v-row class="mt-0">
+				<v-col cols="12" md="9" align="left">
+					<p class="mt-0">
+						 Na avaliação parcial, você avalia e é avaliado por outros colaboradores. A avaliação pode ser feita por  um profissional de cargo acima do seu, ou por um profissional de mesmo cargo ou nível hierárquico. Esta avaliação feita pelos pares é obrigatória para toda a equipe de enfermagem. A obrigatoriedade desta etapa deve-se, em partes, ao selo Magnet de certificação.
+					</p>
+
+					<p class="mt-4">
+						 A avaliação parcial é uma opcional a todos os colaboradores da SBIBAE. 
+						O avaliador principal pode indicar outro profissional para contribuir com comentários na avaliação do colaborador, considerando sobretudo aqueles que tiveram trocas ao longo do último ano – desde que seja de um cargo acima do avaliado. 
+					</p>
+
+					<p class="mt-4">
+						Já a avaliação Par Magnet é obrigatória para o público da enfermagem. 
+						O avaliador principal deve indicar um profissional par para realizar essa etapa – e o par precisa necessariamente ter o mesmo cargo que o avaliado. 
+						Por exemplo: Se o avaliado for um técnico de enfermagem, o profissional indicado como par precisa ser também atuar como técnico de enfermagem. No caso dos coordenadores, poderá ser um consultor, um coordenador ou outro especialista.  
+					</p>
+				</v-col>
+				<v-col cols="12" md="3" align-self="center">
+					<v-img class="mx-auto" src="./img/tela_desempenho/logo_magnet.png" />
+				</v-col>
+			</v-row>
 		</v-col>
 	</v-row>
 	
@@ -299,7 +351,6 @@
 		>
 		  <v-tab value="one"><span style="color:#202428;">Metas de Carreira</span></v-tab>
 		  <v-tab value="two"><span style="color:#202428;">Plano de Desenvolvimento Individual – PDI</span></v-tab>
-		  <v-tab style="margin:0" value="three"><span style="color:#202428;">Plano de Desenvolvimento Organizacional – PDO</span></v-tab>
 		</v-tabs>
 
 		<v-card-text style="background-color:white">
@@ -374,7 +425,6 @@
 		>
 		  <v-tab value="one"><span style="color:#202428;">Metas de Carreira</span></v-tab>
 		  <v-tab value="two"><span style="color:#202428;">Plano de Desenvolvimento Individual – PDI</span></v-tab>
-		  <v-tab style="margin:0" value="three"><span style="color:#202428;">Plano de Desenvolvimento Organizacional – PDO</span></v-tab>
 		</v-tabs>
 
 		<v-card-text style="background-color:white">
@@ -438,8 +488,7 @@
 		  </v-window>
 		</v-card-text>
 	  </v-card>
-	  
-			
+
 			<v-card class="mt-10 show_mobile">
 		<v-tabs
 		  v-model="tab"
@@ -451,7 +500,6 @@
 		>
 		  <v-tab value="one"><span style="color:#202428;">Metas de Carreira</span></v-tab>
 		  <v-tab value="two"><span style="color:#202428;">Plano de Desenvolvimento Individual – PDI</span></v-tab>
-		  <v-tab style="margin:0" value="three"><span style="color:#202428;">Plano de Desenvolvimento Organizacional – PDO</span></v-tab>
 		</v-tabs>
 
 		<v-card-text style="background-color:white">
@@ -565,9 +613,6 @@
 			<h3 style="color:#5BC6E8;font-family:montserrat" class="mt-n4 font-weight-bold reveal fade-left">
 				AVALIAÇÃO INFORMAL DE COMPETÊNCIAS
 			</h3>
-		<v-row class="mt-2">
-		<v-col cols="12" md="5">
-			
 			<p class="mt-4 reveal fade-left texto_branco">
 				A avaliação informal é feita diariamente, durante todo o ano, por meio de diálogos contínuos.
 			</p>
@@ -577,7 +622,20 @@
 			<p style="color:#5BC6E8;" class="mt-4 reveal fade-left">	
 				<strong>Se tiver dúvidas, busque informações! Entre em contato conosco.</strong>
 			</p>
-			
+		
+		<v-row class="mt-2">
+
+		<v-col cols="12" md="12">
+			<!--Vimeo-->
+            <v-container 
+            class="mt-5 pa-0 reveal fade-bottom"
+            >
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/886970067?h=8a814ce610&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="movie"></iframe></div>
+
+            </v-container>
+		</v-col>
+		
+		<v-col cols="12" md="6" align-self="center">
 			<v-row class="mt-1 row_ico_avaliacao">
 				<v-col cols="12" md="2" align-self="center">
 					<v-img class="mx-auto mt-4 ico_avaliacao" src="./img/tela_desempenho/avaliacao_ico_1.png" />
@@ -603,6 +661,12 @@
 						<a  style="color:#5BC6E8;font-family:montserrat;text-decoration:none" href="mailto:gestaodedesempenho@einstein.br"><strong>gestaodedesempenho@einstein.br</strong></a>
 					</p>
 				</v-col>
+			</v-row>
+		</v-col>
+		
+		<v-col cols="12" md="6" align-self="center">
+			<v-row class="mt-1 row_ico_avaliacao">
+				
 				<v-col cols="12" md="2" align-self="center">
 					<v-img class="mx-auto mt-4 ico_avaliacao" src="./img/tela_desempenho/avaliacao_ico_3.png" />
 				</v-col>
@@ -612,22 +676,33 @@
 						Help Desk<br><span style="font-size:0.8em">(para dificuldade de acesso no PGP relacionado ao login, senha ou primeiro acesso)</span>
 					</p>
 					<p class="mt-0 texto_branco">
-						<a  style="color:#5BC6E8;font-family:montserrat;text-decoration:none" href="mailto:https://spreadup.spread.com.br/portal/login.asp"><strong>Clique aqui</strong></a>
+						<a  style="color:#5BC6E8;font-family:montserrat;text-decoration:none" href="https://spreadup.spread.com.br/portal/login.asp" target="_blank"><strong>Clique aqui</strong></a>
 					</p>
+				</v-col>
+				<v-col cols="12" md="2" align-self="center">
+					<v-img class="mx-auto mt-4 ico_avaliacao" src="./img/tela_desempenho/avaliacao_ico_2.png" />
+				</v-col>
+
+				<v-col cols="12" md="10" align-self="center">
+					<p class="mt-4 texto_branco">
+						Sou Einstein – Aplicar para PDI e programa de competências
+					</p>
+					<p class="mt-0 texto_branco">
+						<a  style="color:#5BC6E8;font-family:montserrat;text-decoration:none" href="https://sbibae.sharepoint.com/sites/Desenvolvimento2/SitePages/Gest%C3%A3o-de-Desempenho(2).aspx" target="_blank"><strong>Clique aqui</strong></a>
+					</p>
+					
+					 
+
+					
+					
 				</v-col>
 			</v-row>
 		</v-col>
 		
-		<v-col cols="12" md="7">
-			<!--Vimeo-->
-            <v-container 
-            class="mt-5 pa-0 reveal fade-bottom"
-            >
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695472?h=8b68fe7a17&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius: 10px" title="3.2.1 - Ensino Corporativo e Desenvolvimento"></iframe></div>
-
-            </v-container>
-		</v-col>
+		
 	</v-row>
+	
+	
 
 
 	<!--Btn final-->

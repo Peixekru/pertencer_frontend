@@ -66,7 +66,6 @@
 <script setup>
     import{ ref } from 'vue'
     import { useAppStore } from '../store/app'
-    import WelcomeModalFx from './WelcomeModalFx.vue'
 
     const appStore = useAppStore() 
 

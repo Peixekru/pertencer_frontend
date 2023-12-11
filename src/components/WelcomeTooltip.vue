@@ -25,15 +25,15 @@
 
         <v-card
         :width="toolTipW > 0 ? toolTipW : appStore.isMobile ? '360' : '420'"
-        class="mx-auto d-flex fustify-start rounded-lg pa-4 custom-card rounded-xl"
+        class="mx-auto d-flex justify-center align-start rounded-lg pa-5 custom-card rounded-xl"
         elevation="4"
         >
 
             <v-img 
-            class="mx-1 animate__animated animate__fadeIn"
+            class="mx-1 mt-4 animate__animated animate__fadeIn"
             :class="appStore.isDarkMode ? 'white-svg' : '' "
             src="@/assets/img/quest-menu-img.svg"
-            width="60"
+            width="50"
             /> 
 
             <v-container class="pa-0">  

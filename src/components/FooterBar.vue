@@ -47,7 +47,7 @@
     <!--Rating bubble-->
     <v-container 
     class="pa-0 desabled-card"
-    v-if="appStore.currentSelectedObject.userRating == 0 &&  appStore.isFinished == true"
+    v-if="appStore.currentSelectedObject.userRating == 0 &&  appStore.isFinished == true && appStore.appData.badges.capsula != 1"
     :class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
     >
         <WelcomeTooltip 

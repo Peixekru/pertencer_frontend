@@ -50,7 +50,7 @@
 
             <!--Welcome Video-->
             <WelcomeStartVideo 
-            v-if="appStore.appData.firstAccess == 2"
+            v-if="appStore.appData.firstAccess >= 2"
             />
             
         </v-responsive>
@@ -70,6 +70,7 @@
 <script setup>
     import { onMounted } from 'vue';
     import { useAppStore } from '@/store/app'
+    import { useRouter } from 'vue-router'
     import UserChangePassword from '@/components/UserChangePassword'
     import WelcomeStartMsg from '@/components/WelcomeStartMsg.vue'
     import WelcomeStartVideo from '@/components/WelcomeStartVideo.vue'
@@ -77,13 +78,18 @@
     import { useBeepSound }  from '@/components/composables/useSounds'
     
     const appStore = useAppStore() 
+    const router = useRouter()
     
+    appStore.currentRoute = router.currentRoute.value.fullPath
+        
     //Armazena a URI atual
-    appStore.currentRoute = "/"
+    //appStore.currentRoute = "/"
 
     onMounted(() => {
         //inicia som nos botões
         useBeepSound()
+        console.log(appStore.appData)
+
     })
 
 </script>

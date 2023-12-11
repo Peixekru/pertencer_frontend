@@ -358,17 +358,48 @@
 			</v-col>
 		</v-row>
 		
-		<v-card
-        elevation="3"
-        width="100%"
-        class="mx-auto rounded-lg mt-6 reveal fade-bottom"
-        >
-		<v-carousel 
-            show-arrows="hover"
-			hide-delimiters
-            color="primary"
-            :continuous="false"
-            >
+		
+		
+		
+		<!-- Btn prev -->
+			<v-btn
+			icon="mdi-chevron-left"
+			class="btn-left"
+			:color="carousel01 == 0 ? 'white' : 'primary'"
+			:variant="carousel01 == 0 ? 'text' : 'flat'"
+			:disabled="carousel01 == 0"
+			@click="carousel01 --"
+			/>
+
+			<!-- Btn next (6 slides) -->
+			<v-btn
+			icon="mdi-chevron-right"
+			class="btn-right"
+			:color="carousel01 == 5 ? 'white' : 'primary'"
+			:variant=" carousel01 == 5 ? 'text' : 'flat'" 
+			:disabled="carousel01 == 5"
+			@click="carousel01 ++"
+			/>
+
+			<!-- Carousel container -->
+			<v-card 
+			elevation="3" 
+			width="100%" 
+			class="mx-auto my-8 reveal fade-bottom"
+			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
+			>
+			
+			<!-- Carousel -->
+				<v-carousel 
+				v-model="carousel01"
+				:show-arrows="false"
+				hide-delimiter-background 
+				:hide-delimiters="appStore.isMobile"
+				color="primary" 
+				:continuous="false"
+				:progress=" appStore.isMobile ? 'primary' : false"
+				>
+
                 <v-carousel-item>
 					<v-sheet 
 						color="transparent"
@@ -906,7 +937,7 @@
 		<v-row no-gutters class="mx-auto mt-6">
 			<v-col cols="12" md="5">
 				<p class="mt-0">
-					É o conjunto de padrões e práticas que representam direcionadores e barreiras de segurança fundamentais para o controle de sistemas complexos e de processos críticos para a segurança do paciente, dos profissionais e do ambiente.
+					É o conjunto de padrões e práticas que representam direcionadores e barreiras de segurança fundamentais no controle de sistemas complexos e de processos críticos para a segurança do paciente, dos profissionais e do ambiente.
 				</p>
 				<p class="mt-4">
 					Desde 1999, o Einstein vem recebendo acreditação em qualidade no atendimento contemplada pela Joint Commission International Hospitalar, além de diversas certificações específicas.
@@ -968,7 +999,7 @@
 			</v-col>
 			<v-col cols="12" md="5" align-self="start">
 				<h1 style="color:#2B7080" class="mt-6 font-weight-bold my-6 reveal fade-left">
-			O significado de SEQS
+			Princípios SEQS
 		</h1>
 		<v-card 
 				elevation="2"
@@ -977,7 +1008,7 @@
 				class="mt-n4 pa-2"
 				align="center"
 				>
-				<p style="font-size:1.5em;" class="texto_branco">Acreditações e Certificações</p>
+				<p style="font-size:1.5em;" class="texto_branco">Experiência do Paciente</p>
 				</v-card>
 				<p class="mt-4">
 					Seguimos a definição do Beryl Institute que diz que a experiência do paciente é o somatório de todas as interações, moldadas pela cultura da organização e que influenciam a percepção do paciente por meio da continuidade do cuidado. 
@@ -1048,18 +1079,18 @@
 		<v-row class="mx-auto mt-6">
 			<v-col cols="12" md="4">
 				<p style="font-size:1.5em; text-transform:uppercase" class="mt-8 texto_branco my-6  reveal fade-left">
-					Gestão de Melhoria contínua da qualidade hospitalar: esse é o nosso compromisso!
+					Melhoria contínua da qualidade hospitalar: esse é o nosso compromisso!
 				</p>
 			</v-col>
 			<v-col cols="12" md="8">
 				<p class="mt-8 texto_branco reveal fade-left">
-					Visando reforçar o compromisso das lideranças e de todos os colaboradores da SBIBAE com a Melhoria Contínua da Qualidade e a Segurança de nossos processos, a Equipe Nuclear de Implantação do modelo Joint Commission na Instituição idealizou, em 1999, o programa de Exposição da Qualidade.
+					Visando reforçar o compromisso das lideranças e de todos os colaboradores da SBIBAE com a Melhoria Contínua da Qualidade e a Segurança de nossos processos, a Equipe Nuclear de Implantação do modelo Joint Commission na Instituição idealizou, em 1999, o programa de <strong>Exposição da Qualidade</strong>.
 				</p>
 				<p class="mt-4 texto_branco reveal fade-left">
 					O programa está fundamentado em dois princípios básicos da qualidade:
 				</p>
 				<ul class="ml-8 texto_branco mt-4 reveal fade-left">
-					<li>Um programa de melhoria contínua da qualidade hospitalar deve representar a soma das iniciativas geradas nas ou pelas equipes da organização;</li>
+					<li>Um programa de melhoria contínua da qualidade hospitalar deve representar a soma das iniciativas geradas nas ou pelas equipes da organização.</li>
 					<li>A filosofia de melhoria contínua da qualidade deve estar presente em todos os aspectos da organização, criando a cultura do uso sistemático de metodologias e ferramentas da qualidade na solução de problemas, na revisão dos processos e no registro de melhorias.</li>
 				</ul>
 			</v-col>
@@ -1137,7 +1168,7 @@
 				class="mt-0 mx-auto rounded-lg px-6 py-8" 
 				style="background-color:#F3D4C6;"
 				>
-				Registrar os projetos de melhoria desenvolvidos na instituição.
+				Registrar os projetos de melhoria desenvolvidos na Instituição.
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="3">
@@ -1221,7 +1252,7 @@
 			</v-col>
 			<v-col cols="12" md="5">
 				<p style="font-size:1.5em;margin-bottom:130px;" class="texto_branco">
-					Esse é o nosso desafio: oferecer atendimento de qualidade, utilizando os mais avançados recursos e sempre garantindo a segurança dos nossos pacientes e colaboradores!
+					Este é o nosso desafio: oferecer atendimento de qualidade, utilizando os mais avançados recursos e sempre garantindo a segurança dos nossos pacientes e colaboradores!
 				</p>
 			</v-col>
 		</v-row>
@@ -1271,7 +1302,9 @@
 	const isTooltipCont5cVisible = ref(false)
 	const isTooltipCont5dVisible = ref(false)
 	const isTooltipCont5eVisible = ref(false)
-
+	
+//Controla os slides do carousel01
+const carousel01 = ref(0)
 
 //Informa se a tela já foi concluida
 const isAllContentFinished = ref(false)
@@ -1522,6 +1555,21 @@ height:450px;
 	cursor: pointer;
 	width:50px;
 	}
+		.btn-left {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	left: 1%;
+	transform: translate(0, -50%);
+}
+
+.btn-right {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	right: 1%;
+	transform: translate(0, -50%);
+}
 @media screen and (max-width: 1277px){
 .v-card_subs{
 width:100%!important;

@@ -12,21 +12,6 @@
             />
         </div>
     </v-container>
-
-	<!--// *! Executa método para finalizar conteúdo -->
-  <!--
-	<v-container
-	class="d-flex justify-center my-10"
-	>
-		<v-btn variant="outlined"
-		color="white"
-		@click="finishedContent"
-		>
-			finalizar conteúdo
-		</v-btn>
-	</v-container>
-  -->
-
 </template>
 
 <script setup>
@@ -34,14 +19,17 @@
 	//Imports
   import { useRouter } from 'vue-router'
 	import { useAppStore } from '../../../store/app'
+  import { useApiStore } from '../../../store/api'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 
 	//Inicia o Pinia com a store global do App (appStore)
 	const appStore = useAppStore();
   //Inicia o controle de rotas
 	const router = useRouter()
+  //Inicia comunicação com API
+  const apiStore = useApiStore()
 
-	//Finaliza o conteúdo e atualiza progresso
+	//Finaliza o conteúdo, atualiza progresso e libera funcionalidades na home
 	const finishedContent = () => {
 		//appStore.finishedContent(true)
 		useStartProgress()
@@ -54,19 +42,26 @@
 		//Atualiza o localStorage
 
 
-    //libera o "Começando Bem" 
+    //libera o "Workplace" 
     appStore.appData.workplace.status = 1
-		//atualiza o componente "Começando Bem"
+		//atualiza o componente "Workplace"
     appStore.workPlaceCardKey += 1
 		//Atualiza o localStorage
 	
 
-		//libera o "galeria de imagen" 
+		//libera o "galeria de imagens" 
 		appStore.appData.galeria.status = 1
 		//atualiza o componente "galeria de image na home"
 		appStore.galleryCardKey += 1
+
+
 		//Atualiza o localStorage
 		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
+
+
+    //Atualiza backend
+    const userId = JSON.parse(localStorage.getItem('userId'));
+    apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
 	  router.push('/home')
 	}

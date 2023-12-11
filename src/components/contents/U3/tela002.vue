@@ -178,17 +178,49 @@
 					</v-card-text>
 				</v-card>
 				
-				<v-card
-				elevation="3"
-				width="100%"
-				class="mx-auto rounded-lg mt-6"
-				>
+				
+				
+				
+				<!-- Btn prev -->
+			<v-btn
+			icon="mdi-chevron-left"
+			class="btn-left"
+			:color="carousel01 == 0 ? 'white' : 'primary'"
+			:variant="carousel01 == 0 ? 'text' : 'flat'"
+			:disabled="carousel01 == 0"
+			@click="carousel01 --"
+			/>
+
+			<!-- Btn next (7 slides) -->
+			<v-btn
+			icon="mdi-chevron-right"
+			class="btn-right"
+			:color="carousel01 == 6 ? 'white' : 'primary'"
+			:variant=" carousel01 == 6 ? 'text' : 'flat'" 
+			:disabled="carousel01 == 6"
+			@click="carousel01 ++"
+			/>
+
+			<!-- Carousel container -->
+			<v-card 
+			elevation="3" 
+			width="100%" 
+			class="mx-auto my-8 reveal fade-bottom"
+			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
+			>
+			
+			
+			<!-- Carousel -->
 				<v-carousel 
-					show-arrows="hover"
-					color="primary"
-					:continuous="false"
-					hide-delimiter-background
-					>
+				v-model="carousel01"
+				:show-arrows="false"
+				hide-delimiter-background 
+				:hide-delimiters="appStore.isMobile"
+				color="primary" 
+				:continuous="false"
+				:progress=" appStore.isMobile ? 'primary' : false"
+				>
+				
 						<v-carousel-item>
 					<v-sheet 
 						color="transparent"
@@ -197,7 +229,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_01.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_00.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -219,7 +251,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_02.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_06.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -241,7 +273,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_03.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_02.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -263,7 +295,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_04.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_03.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -285,7 +317,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_05.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_04.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -307,7 +339,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_06.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_07.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -329,7 +361,7 @@
 						class="d-flex justify-end px-8 py-8 mb-16">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6" align="center">
-									<v-img width="90%" src="./img/tela_etica/mand_07.png"/>
+									<v-img width="90%" src="./img/tela_etica/mand_01.png"/>
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
@@ -587,6 +619,13 @@
 				<p style="" class="reveal fade-right texto_branco">
 					A gestão do Programa de Ética e Compliance faz parte das atribuições da Diretoria de Auditoria, Gestão de Riscos e Compliance. Essa Diretoria é composta por três Gerências, que atuam de forma integrada.
 				</p>
+			</v-col>
+			<v-col cols="12" md="4" class="mx-auto">
+				<v-card class="box_dicas pl-0 pr-0 mt-8 reveal fade-right mx-auto" style="width: 100%">
+				<v-card-text>
+					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos sinais de "+".  
+				</v-card-text>
+			</v-card>
 			</v-col>
 		</v-row>
 		
@@ -1006,6 +1045,10 @@
 					<a style="text-decoration:none;" class="texto_azul" href="https://docinst.einstein.br/Search" target="_blank"><strong>CLIQUE AQUI</strong></a> PARA ACESSAR A POLITICA
 				</p>
 				
+				<p class="mt-3 reveal fade-left">
+					Para acessar a política no sistema DM Docs, esteja em um ambiente Einstein ou ative a VPN.
+				</p>
+
 			</v-col><strong></strong>
 		</v-row>
 		
@@ -1148,27 +1191,28 @@
 	v-show="isContent09Visible"
 	id="content09" 
 	width="100%" 
+	min-height="550px"
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
 	style="z-index:1; margin-bottom:30px;"  
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_etica/grade_header_branco.png" />
-		<v-row class="mx-auto mt-6">
+		<v-row class="mx-auto mt-0">
 			<v-col cols="12" md="7">
 				
 			</v-col>
-			<v-col cols="12" md="5">
-				<p style="font-size:1.5em;" class="texto_branco">
+			<v-col cols="12" md="5" align-self="center">
+				<p style="font-size:1.5em;" class="texto_azul">
 					O Einstein não se faz sozinho. Estar em Compliance é responsabilidade de todos!
 				</p>
-				<p class="texto_branco mt-4">
+				<p class="texto_azul mt-4">
 					Tudo o que fazemos é feito pensando em você e seu papel é muito importante para nos ajudar a continuar sendo uma organização que promove relações éticas!
 				</p>
 
 				<v-card 
 				elevation="2"
 				width="100%"
-				style="z-index:8;background-color:#1B1F45;border-radius:25px;margin-bottom:130px;"
+				style="z-index:8;background-color:#1B1F45;border-radius:25px;"
 				class="mt-4 pa-2 v-card_subs"
 				align="center"
 				>
@@ -1181,6 +1225,7 @@
 						</a> 
 					</p>
 				</v-card>
+				<p class="mt-4" style="font-size:1.6em;color:#1B1F45;text-align:center"><span class="mdi mdi-phone"></span> <strong>0800-741-0004</strong></p>
 			</v-col>
 		</v-row>
 		
@@ -1226,7 +1271,8 @@
 	const isTooltip1Visible = ref(false)
 	const isTooltip2Visible = ref(false)
 	const isTooltip3Visible = ref(false)
-	
+	//Controla os slides do carousel01
+	const carousel01 = ref(0)
 	
 	//Controle dos cards do conteúdo 01
 	const isCard01Visible = ref(false)
@@ -1395,7 +1441,7 @@ border: solid white 1px;
 .tool-tip-1 {
     position: absolute !important;
     z-index: 6002 !important;
-    top: 52%;
+    top: 57%;
     left: 60.5%;
     transform: translate(-50%, -50%);
     width: 281px;
@@ -1412,8 +1458,8 @@ border: solid white 1px;
 .tool-tip-2 {
     position: absolute !important;
     z-index: 6002 !important;
-    top: 48%;
-    left: 50.5%;
+    top: 54%;
+    left: 51%;
     transform: translate(-50%, -50%);
     width: 281px;
     line-height: normal;
@@ -1429,7 +1475,7 @@ border: solid white 1px;
 .tool-tip-3 {
     position: absolute !important;
     z-index: 6002 !important;
-    top: 57%;
+    top: 60%;
     left: 39.5%;
     transform: translate(-50%, -50%);
     width: 281px;
@@ -1451,6 +1497,21 @@ border: solid white 1px;
 	cursor: pointer;
 	width:50px;
 	}
+	.btn-left {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	left: 1%;
+	transform: translate(0, -50%);
+}
+
+.btn-right {
+	position: absolute;
+	z-index: 2000;
+	top: 50%;
+	right: 1%;
+	transform: translate(0, -50%);
+}
 @media screen and (max-width: 1277px){
 .v-cards_cont6{
 height: 300px;
@@ -1460,8 +1521,8 @@ height: 300px;
 	font-size:0.9rem;
 	}
 .tool-tip-1 {
-    top: 56%;
-    left: 65%;
+    top: 59%;
+    left: 64%;
     width: 281px;
 }
 .triangulo-tool-tip1 {
@@ -1469,7 +1530,7 @@ height: 300px;
     left: 41%;
 }
 .tool-tip-2 {
-    top: 51%;
+    top: 56%;
     left: 51%;
     width: 281px;
 }
@@ -1478,7 +1539,7 @@ height: 300px;
     left: 41%;
 }
 .tool-tip-3 {
-    top: 60%;
+    top: 62%;
     left: 35.5%;
     width: 281px;
 }
@@ -1505,7 +1566,7 @@ width: 20%
 	font-size:0.8rem;
 	}
 .tool-tip-1 {
-    top: 58%;
+    top: 63%;
     left: 64%;
     width: 281px;
 }
@@ -1514,7 +1575,7 @@ width: 20%
     left: 41%;
 }
 .tool-tip-2 {
-    top: 45%;
+    top: 55%;
     left: 51%;
     width: 281px;
 }
@@ -1523,7 +1584,7 @@ width: 20%
     left: 43%;
 }
 .tool-tip-3 {
-    top: 64%;
+    top: 67%;
     left: 35.5%;
     width: 281px;
 }
@@ -1552,16 +1613,16 @@ width: 20%
     width: 90%;
 }
 .triangulo-tool-tip1 {
-    top: -10%;
+    top: 30%;
     left: 65%;
 }
 .tool-tip-2 {
-    top: 49%;
+    top: 58%;
     left: 50%;
     width: 90%;
 }
 .triangulo-tool-tip2 {
-    top: 89%;
+    top: 60%;
     left: 50%;
 }
 .tool-tip-3 {
@@ -1570,7 +1631,7 @@ width: 20%
     width: 90%;
 }
 .triangulo-tool-tip3 {
-    top: -10%;
+    top: 30%;
     left: 24%;
 }
 }

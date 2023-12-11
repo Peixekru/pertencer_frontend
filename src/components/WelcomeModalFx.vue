@@ -9,7 +9,7 @@
 <style scoped>
     .overlay-home-fx{
         position: absolute;
-		z-index: 3000;
+		z-index: 1000;
         top: 0;
         left: 0;
         width: 100%;

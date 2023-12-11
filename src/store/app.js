@@ -151,14 +151,18 @@ export const useAppStore = defineStore('app', {
 
 		//Systema
 		globalOverlay: false,
+		logoutModal: false,
+		isFloatLogoutBtn: false,
 
 		//Global Msgs
 		msgVisibilty: false,
 		msgText: '',
 		msgColor: '',
 
+		isFinished: false,
 
-		isFinished: false
+
+		isStoryLineLoading: true
 	}),
 
 	actions: {

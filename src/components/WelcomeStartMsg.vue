@@ -3,7 +3,7 @@
     color="transparent"
     class="custom-container-pos"
     > 
-        <v-sheet
+        <!--<v-sheet
         color="transparent"
         class="anim-container"
         :class=" animIcon ? 'animate__animated animate__tada ' : ''"
@@ -29,33 +29,42 @@
             
                 </v-img> 
             </v-sheet>
-        </v-sheet>
+        </v-sheet>-->
 
         <v-card
         width="360"
-        class="mx-auto rounded-lg px-4 py-8"
+        class="d-flex justify-center align-start mx-auto rounded-xl pa-5"
         elevation="8"
         >
-            <v-card-text>
-                Olá! Serei o seu guia nesta plataforma. Estou aqui para informar, facilitar e garantir uma experiência incrível para você.
-                Pronto para começar? Clique em “Iniciar Jornada" e aproveite ao máximo tudo o que preparamos para seu primeiro momento 
-                de aprendizado conosco.
-            </v-card-text>
 
-            <v-container
-            class="d-flex justify-center pa-0 pt-3"
-            >
-                <v-btn
-                class="animate__animated animate__fadeInUp text-secondary"
-                color="primary"
-                size="large"
-                rounded
-                @click="goNext"
+            <v-img 
+            class="mx-1 mt-4 animate__animated animate__fadeIn"
+            :class="appStore.isDarkMode ? 'white-svg' : '' "
+            src="@/assets/img/quest-menu-img.svg"
+            width="50"
+            /> 
+
+            <v-sheet>
+                <v-card-text>
+                    <p class="text-h6 font-weight-bold">Olá! Serei o seu guia nesta plataforma</p>
+                    <p class="mt-4">Estou aqui para informar, facilitar e garantir uma experiência incrível para você. <span class="font-weight-bold">Pronto para começar?</span></p>
+                    <p class="mt-4">Clique em <span class="font-weight-bold">“INICIAR JORNADA"</span> e aproveite ao máximo tudo o que preparamos para seu primeiro momento de aprendizado conosco.</p>
+                </v-card-text>
+
+                <v-container
+                class="d-flex justify-start pt-3"
                 >
-                    Iniciar Jornada
-                </v-btn>
-            
-            </v-container>
+                    <v-btn
+                    class="animate__animated animate__fadeInUp text-secondary"
+                    color="primary"
+                    density="comfortable"
+                    rounded
+                    @click="goNext"
+                    >
+                        Iniciar Jornada
+                    </v-btn>
+                </v-container>
+            </v-sheet>
         </v-card>
     </v-sheet>
 </template>
@@ -63,11 +72,15 @@
 <script setup>
     import { ref, onMounted } from 'vue';
     import { useAppStore } from '../store/app'
+    import { useApiStore } from '@/store/api'
 
     //Sons dos botões
     import { useBeepSound }  from '@/components/composables/useSounds'
     
+    //Inicia conexão com dados globais do app
     const appStore = useAppStore() 
+    //Inicia conexão com Api
+    const apiStore = useApiStore()
 
     //Animação do personagem
     const blinkEye = ref(false);
@@ -84,13 +97,40 @@
 
     //Finaliza etapa
     const goNext = () => {
-        //Para Animação do personagem
-        clearInterval(eyeInterval)
-        clearInterval(iconInterval)
+        
+
+        /*
+        //libera o badge Relógio
+		appStore.appData.badges.clock = 2
+        //libera o badge Coração
+		appStore.appData.badges.heart = 2
+        //libera o badge da galeria
+        appStore.appData.badges.picture = 2
+		
+
+
+        //libera o "galeria de imagens" 
+		appStore.appData.galeria.status = 1
+        //libera o "Começando bem" 
+        appStore.appData.start.status = 1
+        //libera o "Workplace" 
+        appStore.appData.workplace.status = 1
+
+        console.log('Liberou na home: Galeria - Começando Bem - Workplace')
+        console.log('liberou badges: Relógio - Coração - Galeria')
+        */
 
         //Atualiza o localStorage
         appStore.appData.firstAccess = 2
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+        //Para Animação do personagem
+        clearInterval(eyeInterval)
+        clearInterval(iconInterval)
     }
 
     onMounted(() => {
@@ -122,6 +162,6 @@
         top:  50%;
         left: 50%;
         transform: translate(-50%, -50%) !important;
-        font-size: 1.5em;
+        font-size: .88em;
     }
 </style>

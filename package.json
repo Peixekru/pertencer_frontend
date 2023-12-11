@@ -15,6 +15,7 @@
     "@vueuse/sound": "^2.0.1",
     "animate.css": "^4.1.1",
     "axios": "^1.4.0",
+    "html2canvas": "^1.4.1",
     "pinia": "^2.0.23",
     "roboto-fontface": "*",
     "sf-vue-animated-cursor": "^1.0.0",
@@ -23,6 +24,7 @@
     "vue-confetti-explosion": "^1.0.2",
     "vue-iframes": "^0.0.20",
     "vue-router": "^4.0.0",
+    "vue-social-sharing": "^4.0.0-alpha4",
     "vuetify": "^3.0.0",
     "webfontloader": "^1.0.0"
   },
@@ -32,6 +34,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "sass": "^1.66.1",
     "vite": "^4.2.0",
+    "vite-plugin-mkcert": "^1.17.1",
     "vite-plugin-vuetify": "^1.0.0",
     "vue-friendly-iframe": "^0.20.0"
   }

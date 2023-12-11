@@ -20,7 +20,7 @@
 	id="content01" 
 	width="100%" 
 	elevation="6"
-	style="z-index:26;background-color:#fff!important;"
+	style="z-index:18;background-color:#fff!important;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos_cont1"
 	>
 		<v-img class="mx-auto mt-n4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
@@ -28,10 +28,10 @@
 		<v-row class="mt-2">
 			<v-col cols="12" md="5" align-self="center">
 				<p style="font-size:1.5em" class="mt-4 reveal fade-left texto_branco">
-					Desde a nossa fundação o Einstein tem como missão gerar e disseminar conhecimento.
+					Desde a nossa fundação, o Einstein tem como missão gerar e disseminar conhecimento.
 				</p>
 				<p style="font-size:1.5em" class="mt-0 reveal fade-left texto_branco">
-					A Cultura de aprendizagem e desenvolvimento na Instituição é priorizada e incentivada. Todas as nossas ações são realizadas colocando as pessoas no centro.
+					A cultura de aprendizagem e desenvolvimento na Instituição é priorizada e incentivada. Todas as nossas ações são realizadas colocando as pessoas no centro.
 				</p>
 				<p style="font-size:1.3em" class="mt-4 reveal fade-left texto_branco">
 					Vamos conhecer essa importante missão.
@@ -81,7 +81,7 @@
 	id="content02" 
 	width="100%" 
 	elevation="6"
-	style="z-index:25;"
+	style="z-index:17;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos" 
 	>
 	<v-img class="mx-auto grade_header" src="./img/tela_corporativo/grade_cont4.png" />
@@ -139,16 +139,20 @@
 	id="content03" 
 	width="100%"
 	elevation="6"
-	style="z-index:24;"
+	style="z-index:16;"
 	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos_cont3"
 	>
 		<v-img class="mx-auto mt-0 grade_header" src="./img/tela_corporativo/grade_header.png" />
 			<h1 class="mt-n4 font-weight-bold texto_branco reveal fade-left">
-				Área de Ensino Corporativo
+				Pessoas e Aprendizagem
 			</h1>
-			
-		
-			
+			<p style="" class="texto_branco mt-4 reveal fade-left">
+				O Ensino Corporativo se empenha em entender as necessidades de aprendizagem da Instituição.
+			</p>
+			<p style="" class="texto_branco mt-4 reveal fade-left">
+				Seu ponto de partida é saber que <strong>o processo de aprendizagem diz respeito a pessoas</strong>, e que cada uma tem seu jeito próprio de aprender. Por isso, é fundamental <strong>conhecer o público</strong> e <strong>utilizar diferentes métodos e estratégias</strong> para que todos possam se beneficiar.
+			</p>
+
 	<v-row class="mt-2" align="right">
 		<v-col cols="12" md="8">
 			
@@ -212,7 +216,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent04Visible = true; prosseguir('content04')"
+				@click="isContent05Visible = true; prosseguir('content05')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -224,103 +228,6 @@
 	
 	
 
-	<!-- conteúdo 04 -->
-	<v-card 
-	v-show="isContent04Visible"
-	id="content04" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:23;background-color:White;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
-		
-		<v-row no-gutters class="mt-n4" align="center">
-			<v-col class="mb-4" cols="12" md="12">
-				<h1 class="font-weight-bold text-primary reveal fade-left">
-					Ensino e Educação
-				</h1>
-			</v-col>
-			<v-col class="my-4 pr-4" cols="12" md="6">
-				<p style="" class="mt-n4 reveal fade-left">
-					<strong>Ensino e Educação</strong> são um dos pilares estratégicos do Einstein, portanto, são os elementos fundamentais que sustentam e guiam a Instituição, proporcionando uma base sólida para o crescimento e desenvolvimento dos colaboradores.
-				</p>
-			</v-col>
-			<v-col class="my-4 pr-4" cols="12" md="6">
-				<p style="" class="mt-n4 reveal fade-left">
-					Você já conheceu nosso Propósito, nossa Missão e nossa Visão. Já conheceu também nossa Responsabilidade Social, nossos Valores e nosso Objetivo Estratégico. Vamos recordá-los? Aproveite e observe que, na imagem, o pilar Ensino e Educação aparece em destaque. 
-				</p>
-			</v-col>
-		</v-row>
-		
-		<v-card class="box_dicas pl-0 pr-0 my-4 reveal fade-right mx-auto" style="width: 40%">
-				<v-card-text>
-					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique na imagem para ampliá-la.
-				</v-card-text>
-			</v-card>
-		<v-dialog width="100%">
-		  
-		  <template v-slot:activator="{ props }">	
-			
-			<a v-bind="props">
-			<v-img height="650" class="mx-auto mt-10 show_desktop" src="./img/tela_corporativo/cont4_img.jpg" />
-			<v-img height="450" class="mx-auto mt-10 show_1277" src="./img/tela_corporativo/cont4_img.jpg" />
-			<v-img height="300" class="mx-auto mt-10 show_mobile" src="./img/tela_corporativo/cont4_img.jpg" />
-			</a>
-		
-		  </template>
-
-		  <template v-slot:default="{ isActive }">
-			<v-card style="background-color:white; border-radius:25px;">
-			  <v-card-text>
-				<v-img width="80%" class="mx-auto mt-10" src="./img/tela_corporativo/cont4_img.jpg" />
-			  </v-card-text>
-
-			  <v-card-actions>
-				<v-spacer></v-spacer>
-
-				<v-btn density="default" size="x-large"  icon="mdi mdi-close-circle"
-				  
-				  @click="isActive.value = false"
-				></v-btn>
-			  </v-card-actions>
-			</v-card>
-		  </template>
-		</v-dialog>
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent05Visible = true; prosseguir('content05')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 04 -->
-
 	<!-- conteúdo 05 -->
 	<v-card 
 	v-show="isContent05Visible"
@@ -328,14 +235,14 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:22;"
+	style="z-index:15;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header.png" />
 		
 		<v-card-text class="pt-10 pl-0 pr-0">
 
 			<h1 class="mt-n10 font-weight-bold text-primary reveal fade-left">
-				Programa de Desenvolvimento de Lideranças Einstein - PDLE
+				Nossa Estratégia de Gestão de Pessoas
 			</h1>
 			
 			<p class="mt-8">
@@ -347,53 +254,76 @@
 			
 		</v-card-text>
 		
-		<v-row class="mt-2">
+		<v-row class="mt-n4">
 			<v-col cols="12" md="4">
-				<v-card min-height="170" style="background-color:#CBE8A1;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Garantir a disponibilidade de profissionais qualificados para as necessidades atuais e futuras do Einstein.
+
+				<div class="ico_1">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_verde.png" />
+				</div>
+				
+				<v-card min-height="180" style="background-color:#68c7cd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Garantir a disponibilidade de profissionais qualificados para as necessidades atuais e futuras do Einstein.</strong>
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="4">
-				<v-card min-height="170" style="background-color:#CCBDDF;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Assegurar que os profissionais são efetiva e eficazmente treinados técnica e comportamentalmente para o exercício de suas atividades.
+			<div class="ico_2">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_azul.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#2aa0dd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Assegurar que os profissionais são efetiva e eficazmente treinados técnica e comportamentalmente para o exercício de suas atividades.</strong>
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="4">
-				<v-card min-height="170" style="background-color:#CBE8A1;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Estimular o desenvolvimento das competências para a carreira técnica  e  reforçar a integração entre aquisição de conhecimento e prática profissional.
+			<div class="ico_3">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_verde.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#68c7cd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Estimular o desenvolvimento das competências para a carreira técnica  e  reforçar a integração entre aquisição de conhecimento e prática profissional.</strong>
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="4">
-				<v-card min-height="170" style="background-color:#CBE8A1;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Realizar ações de formação com foco em Inclusão, Posicionamento Social e Empregabilidade.
+			<div class="ico_4">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_azul.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#2aa0dd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Realizar ações de formação com foco em Inclusão, Posicionamento Social e Empregabilidade.</strong>
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="2">
-				<v-card min-height="170" style="background-color:#CCBDDF;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Atuar no desenvolvimento de líderes.
+			<div class="ico_5">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_verde.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#68c7cd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Atuar no desenvolvimento de líderes.</strong>
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="4">
-				<v-card min-height="170" style="background-color:#CBE8A1;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Estimular e implementar programas que suportem o desenvolvimento de carreira dos profissionais (aproveitamento interno e atuação multi carreira). 
+			<div class="ico_6">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_azul.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#2aa0dd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Estimular e implementar programas que suportem o desenvolvimento de carreira dos profissionais (aproveitamento interno e atuação multi carreira).</strong> 
 					</p>
 				</v-card>
 			</v-col>
 			<v-col cols="12" md="2">
-				<v-card min-height="170" style="background-color:#CCBDDF;" class="pa-4 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="">
-						Promover ações de preservação da cultura, valores e princípios.
+			<div class="ico_7">
+					<v-img width="50" class="" src="./img/tela_corporativo/ico_verde.png" />
+				</div>
+				<v-card min-height="180" style="background-color:#68c7cd;" class="pa-6 d-flex flex-column justify-center align-center">
+					<p style="font-size:0.9em;text-align:center" class="texto_branco">
+						<strong>Promover ações de preservação da cultura, valores e princípios.</strong>
 					</p>
 				</v-card>
 			</v-col>
@@ -403,7 +333,7 @@
 		
 
 	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
+		<v-container class="d-flex justify-center mt-8 mb-4">
 			<v-sheet 
 			color="transparent"
 			class="mb-4"
@@ -440,7 +370,7 @@
 	width="100%" 
 	elevation="0"
 	class="bg-transparent mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16" 
-	style="z-index:21;"
+	style="z-index:14;"
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_corporativo/grade_cont6.png" />
 		
@@ -468,35 +398,9 @@
 			<v-img height="600" class="mx-auto show_1277" src="./img/tela_corporativo/cont6_info.png" />
 			<v-img height="400" class="mx-auto show_mobile" src="./img/tela_corporativo/cont6_info.png" />
 			
-			<p class="mt-4 texto_branco reveal fade-left">
-				Utilizamos  métodos diversificados para facilitar o aprendizado de nossos colaboradores, por exemplo, Ensino Híbrido, Sala de Aula Invertida, Gamificação, Aprendizagem Baseada em Projetos, Aprendizagem Entre Times. Se você quiser obter mais informações, acesse a qualquer momento o Workplace.  
-			</p>
-			
-			
-			
 		</v-card-text>
 		
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				href="https://sbibae.workplace.com/groups/206612450124381/?ref=share" target="_blank"
-				> 
-					<span style="font-size:1.2em" class="mr-1 mdi mdi-monitor-dashboard"></span> ACESSAR WOKPLACE
-				</v-btn>
-			</v-sheet>
-		</v-container>
-		
-		
+				
 
 	<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
@@ -537,9 +441,9 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont7" 
-	style="z-index:20;"
+	style="z-index:13;"
 	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
 		
 		<v-card-text class="pt-10 pl-0 pr-0">
 
@@ -551,7 +455,7 @@
 						E VOCÊ, como gosta de aprender?
 					</p>
 					<p class="mt-4 texto_branco reveal fade-left">
-						Aproveite esse momento para fazer uma pausa e refletir sobre algumas situações de aprendizagem que marcaram sua trajetória de vida. 
+						Aproveite este momento para fazer uma pausa e refletir sobre algumas situações de aprendizagem que marcaram sua trajetória de vida. 
 					</p>
 					<p class="mt-4 texto_branco reveal fade-left">
 						Procure se dar conta da forma de ensino que mais contribuiu para facilitar o seu aprendizado.
@@ -603,7 +507,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:19;"
+	style="z-index:12;"
 	align="center"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
@@ -618,13 +522,64 @@
 				Transformar a forma de aprender e ensinar.
 			</h2>
 			
-			<v-img height="350" class="show_desktop mx-auto my-8" src="./img/tela_corporativo/cont8_img1.png" />
-			<v-img height="350" class="show_1277 mx-auto my-8" src="./img/tela_corporativo/cont8_img1.png" />
-			<v-img height="150" class="show_mobile mx-auto my-8" src="./img/tela_corporativo/cont8_img1.png" />
-			
 			<h2 style="color:#81C300" class="mt-4 font-weight-bold reveal fade-left">
 				Entender nosso público para criar as melhores experiências.
 			</h2>
+		
+			<v-row class="my-10">
+				<v-col cols="12" md="3">
+					<v-card min-height="340px" class="pa-6" align="center" style="border:solid 3px #68c7cd;border-radius:30px">
+						<p style="font-size:1.5em; color:#68c7cd;" class="mt-4">
+							<strong>Baby Boomers</strong>
+						</p>
+						<p style="font-size:1.3em; color:#68c7cd" class="mt-4">
+							<strong>1945 - 1964</strong>
+						</p>
+						<v-img width="80%" class="mx-auto mt-4" src="./img/tela_corporativo/geracoes_1.png" />
+					</v-card>
+				</v-col>
+				
+				<v-col cols="12" md="3">
+				<v-card min-height="340px" class="pa-6" align="center" style="border:solid 3px #2aa0dd;border-radius:30px">
+						<p style="font-size:1.5em; color:#2aa0dd;" class="mt-4">
+							<strong>Geração X</strong>
+						</p>
+						<p style="font-size:1.3em; color:#2aa0dd" class="mt-4">
+							<strong>1965 - 1984</strong>
+						</p>
+						<v-img width="80%" class="mx-auto mt-4" src="./img/tela_corporativo/geracoes_2.png" />
+					</v-card>
+				</v-col>
+				
+				<v-col cols="12" md="3">
+					<v-card min-height="340px" class="pa-6" align="center" style="border:solid 3px #68c7cd;border-radius:30px">
+						<p style="font-size:1.5em; color:#68c7cd;" class="mt-4">
+							<strong>Geração Y</strong>
+						</p>
+						<p style="font-size:1.3em; color:#68c7cd" class="mt-4">
+							<strong>1985 - 1999</strong>
+						</p>
+						<v-img width="80%" class="mx-auto mt-4" src="./img/tela_corporativo/geracoes_3.png" />
+					</v-card>
+				</v-col>
+				
+				<v-col cols="12" md="3">
+				<v-card min-height="340px" class="pa-6" align="center" style="border:solid 3px #2aa0dd;border-radius:30px">
+						<p style="font-size:1.5em; color:#2aa0dd;" class="mt-4">
+							<strong>Geração Z</strong>
+						</p>
+						<p style="font-size:1.3em; color:#2aa0dd" class="mt-4">
+							<strong>2000 - 2010</strong>
+						</p>
+						<v-img width="80%" class="mx-auto mt-4" src="./img/tela_corporativo/geracoes_4.png" />
+					</v-card>
+				</v-col>
+				
+			</v-row>
+			
+			<p>
+				Na nossa instituição, coexistem diversas gerações, interagindo de maneira sinérgica. As pessoas representam a motivação fundamental por trás do nosso propósito, sendo referidas como "personas", nosso público-alvo. Realizamos estudos aprofundados sobre essas personas para desenvolver experiências que se alinhem às suas necessidades. Todas as atividades executadas são concebidas por profissionais, visando atender às expectativas e demandas das pessoas.
+			</p>
 			
 			
 			
@@ -641,7 +596,7 @@
 				<v-col cols="12" md="6">
 					<v-card min-height="270px" class="px-16 py-8" align="center">
 						<p style="font-size:1.1em; color:#20819E" class="mt-4">
-							Essas gerações ao qual chamamos de "personas" que são nosso publico-alvo, são estudadas para desenvolvermos experiencias que irão ao encontro das necessidades.
+							Essas gerações, as quais chamamos de "personas" que são nosso publico-alvo, são estudadas para desenvolvermos experiências que irão ao encontro das necessidades.
 						</p>
 						<p style="font-size:1.1em; color:#20819E" class="mt-4">
 							Tudo que é realizado, é feito por pessoas para pessoas!
@@ -698,7 +653,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont9" 
-	style="z-index:18;"
+	style="z-index:11;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
 		
@@ -711,619 +666,12 @@
 					Benjamin Franklin 
 				</p>
 				<p style="font-size:1.3em;line-height:1.3em;text-align:left" class="mt-10 texto_branco  reveal fade-left">
-					E aí, esta citação fez sentido para você?
+					E aí, essa citação fez sentido para você?
 				</p>
 			</v-col>
 		</v-row>
 		
 		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent10Visible = true; prosseguir('content10')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 09 -->
-
-	<!-- conteúdo 10 -->
-	<v-card 
-	v-show="isContent10Visible"
-	id="content10" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
-	style="z-index:17;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
-		
-		<v-card-text class="pt-10 pl-0 pr-0" align="center">
-
-			<h1 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
-				Competências desenvolvidas nas Trilhas de Aprendizagem 
-			</h1>
-			<p class="reveal fade-left texto_branco">>
-				Além das competências relativas a cada conteúdo, as Trilhas de Aprendizagem têm como objetivo desenvolver competências específicas para o aprimoramento pessoal e profissional dos colaboradores.
-			</p>
-
-		</v-card-text>
-		
-		<v-row class="mt-0">
-			<v-col cols="12" md="4">
-				<v-card min-height="180px" class="ma-2 pa-6" align="center">
-					<p style="font-size:4em;color:#00A4E1" class="mt-4">
-						<strong>01</strong>
-					</p>
-					<p style="font-size:0.9em" class="mt-4">
-						Promover o desenvolvimento das competências profissionais.
-					</p>
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="4">
-				<v-card min-height="180px" class="ma-2 pa-6" align="center">
-					<p style="font-size:4em;color:#00A4E1" class="mt-4">
-						<strong>02</strong>
-					</p>
-					<p style="font-size:0.9em" class="mt-4">
-						Apoiar a prática da assistência com qualidade e segurança.
-					</p>
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="4">
-				<v-card min-height="180px" class="ma-2 pa-6" align="center">
-					<p style="font-size:4em;color:#00A4E1" class="mt-4">
-						<strong>03</strong>
-					</p>
-					<p style="font-size:0.9em" class="mt-4">
-						Evitar possíveis riscos no exercício das funções.
-					</p>
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="2">
-				
-			</v-col>
-			<v-col cols="12" md="4">
-				<v-card min-height="180px" class="ma-2 pa-6" align="center">
-					<p style="font-size:4em;color:#00A4E1" class="mt-4">
-						<strong>04</strong>
-					</p>
-					<p style="font-size:0.9em" class="mt-4">
-						Evidenciar ações exigidas em auditorias e certificações.
-					</p>
-				</v-card>
-			</v-col>
-			<v-col cols="12" md="4">
-				<v-card min-height="180px" class="ma-2 py-6 px-4" align="center">
-					<p style="font-size:4em;color:#00A4E1" class="mt-4">
-						<strong>05</strong>
-					</p>
-					<p style="font-size:0.9em" class="mt-4">
-						Contribuir com os resultados dos indicadores estratégicos.
-					</p>
-				</v-card>
-			</v-col>
-		</v-row>
-		
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent11Visible = true; prosseguir('content11')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-	<!-- conteúdo 10 -->
-
-	<!-- conteúdo 11 -->
-	<v-card 
-	v-show="isContent11Visible"
-	id="content11" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont5" 
-	style="z-index:16;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header.png" />
-		<h2 class="mt-n4 font-weight-bold texto_azul reveal fade-left">
-			Como treinamos?
-		</h2>
-		<p class="mt-4 reveal fade-left">
-				Veja exemplos de algumas das estratégias e recursos que utilizamos atualmente para realizar nossos treinamentos. 
-			</p>
-		
-		<v-row class="mt-4">
-			<v-col cols="12" md="7">
-			</v-col>
-		<v-col cols="12" md="5">
-		<v-card width="100%" class="box_dicas pl-0 pr-0 reveal fade-left">
-				<v-card-text>
-					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Navegue pelas setas abaixo.
-				</v-card-text>
-			</v-card>
-		</v-col>
-	</v-row>
-	
-	<!-- Btn prev -->
-			<v-btn
-			icon="mdi-chevron-left"
-			class="btn-left"
-			:color="carousel01 == 0 ? 'white' : 'primary'"
-			:variant="carousel01 == 0 ? 'text' : 'flat'"
-			:disabled="carousel01 == 0"
-			@click="carousel01 --"
-			/>
-
-			<!-- Btn next (4 slides) -->
-			<v-btn
-			icon="mdi-chevron-right"
-			class="btn-right"
-			:color="carousel01 == 3 ? 'white' : 'primary'"
-			:variant=" carousel01 == 3 ? 'text' : 'flat'" 
-			:disabled="carousel01 == 3"
-			@click="carousel01 ++"
-			/>
-
-			<!-- Carousel container -->
-			<v-card 
-			elevation="3" 
-			width="100%" 
-			class="mx-auto my-8 reveal fade-bottom"
-			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
-			>
-			
-			
-			<!-- Carousel -->
-				<v-carousel 
-				v-model="carousel01"
-				:show-arrows="false"
-				hide-delimiter-background 
-				:hide-delimiters="appStore.isMobile"
-				color="primary" 
-				:continuous="false"
-				:progress=" appStore.isMobile ? 'primary' : false"
-				>
-				
-				<v-carousel-item>
-					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="4">
-								<v-img src="./img/tela_corporativo/cont11_slide1.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="8">
-								<h2 class="texto_azul">
-									Mentimeter
-								</h2>
-								<p class="mt-4">
-									Plataforma para criação de interações em tempo real, como enquetes, nuvens de palavras ou coleta de perguntas.
-								</p>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="6">
-								<v-img src="./img/tela_corporativo/cont11_slide2.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="6">
-								<h2 class="texto_azul">
-									KAHOOT
-								</h2>
-								<p class="mt-4">
-									Plataforma de criação de questionário, pesquisa e quizes, com perguntas de múltipla escolha com formato de jogo. 
-								</p>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="6">
-								<v-img src="./img/tela_corporativo/cont11_slide3.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="6">
-								<h2 class="texto_azul">
-									ZOOM e Breakout Rooms
-								</h2>
-								<p class="mt-4">
-									Plataforma de fácil manejo, destinada a conferências de vídeo, áudio, compartilhamento de conteúdo e bate-papo.
-								</p>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="6">
-								<v-img src="./img/tela_corporativo/cont11_slide4.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="6">
-								<h2 class="texto_azul">
-									Microlearnings
-								</h2>
-								<p class="mt-4">
-									Estratégia de apresentar conteúdos segmentados.
-								</p>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-
-			</v-carousel>
-		</v-card>
-
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center my-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent12Visible = true; prosseguir('content12')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 11 -->
-
-
-
-<!-- conteúdo 12 -->
-	<v-card 
-	v-show="isContent12Visible"
-	id="content12" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:15;"
-	>
-			<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header.png" />
-		<h2 class="mt-n4 font-weight-bold texto_azul reveal fade-left">
-			Nossas Capacitações Institucionais
-		</h2>
-		<p class="mt-4 reveal fade-left">
-				Essas são algumas fotos de nossas capacitações.
-			</p>
-		
-		<v-row class="mt-4">
-			<v-col cols="12" md="7">
-			</v-col>
-		<v-col cols="12" md="5">
-		<v-card width="100%" class="box_dicas pl-0 pr-0 reveal fade-left">
-				<v-card-text>
-					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Navegue pelas setas abaixo.
-				</v-card-text>
-			</v-card>
-		</v-col>
-	</v-row>
-	
-	<!-- Btn prev -->
-			<v-btn
-			icon="mdi-chevron-left"
-			class="btn-left"
-			:color="carousel02 == 0 ? 'white' : 'primary'"
-			:variant="carousel02 == 0 ? 'text' : 'flat'"
-			:disabled="carousel02 == 0"
-			@click="carousel02 --"
-			/>
-
-			<!-- Btn next (14 slides) -->
-			<v-btn
-			icon="mdi-chevron-right"
-			class="btn-right"
-			:color="carousel02 == 13 ? 'white' : 'primary'"
-			:variant=" carousel02 == 13 ? 'text' : 'flat'" 
-			:disabled="carousel02 == 13"
-			@click="carousel02 ++"
-			/>
-
-			<!-- Carousel container -->
-			<v-card 
-			elevation="3" 
-			width="100%" 
-			class="mx-auto my-8 reveal fade-bottom"
-			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
-			>
-			
-			
-			<!-- Carousel -->
-				<v-carousel 
-				v-model="carousel02"
-				:show-arrows="false"
-				hide-delimiter-background 
-				:hide-delimiters="appStore.isMobile"
-				color="primary" 
-				:continuous="false"
-				:progress=" appStore.isMobile ? 'primary' : false"
-				>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide1.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Treinamento Admissional de Atendimento
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide2.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Trilha Institucional de Ciência de Dados
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide3.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Trilha de Atendimento – Autoconhecimento e Empatia
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide4.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Trilha de Atendimento – Comunicação e Gestão de Conflitos 
-
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide5.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Treinamento de Habilidades Práticas - HeartSaver
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide6.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Programa Multiplicador Einstein
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide7.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Programa Gestão de Continuidade de Atividades (Foco Líderes e Substitutos)
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide8.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Segurança do Colaborador - Brigada de Incêndio – Formação de Brigadista
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide9.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Brigada de Incêndio – Requalificação de Brigadista
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide10.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									NR33 – Segurança e Saúde nos espaços confinados Vigias e Supervisores - Reciclagem
-
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide11.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Trilha de Aprendizagem Institucional – Encontro com Especialistas Einstein
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide12.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Trilha Institucional – Novos Colaboradores
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide13.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Treinamento Assistencial - Prática Monitorada – Sondagem Nasoentérica
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-				
-				<v-carousel-item>
-					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
-						<v-row justify="center" align="center">
-							<v-col cols="12" md="5">
-								<v-img src="./img/tela_corporativo/cont12_slide14.jpg" />
-							</v-col>
-							<v-col class="pa-8" cols="12" md="7">
-								<h2 class="texto_azul">
-									Workshop Capacitações Ágil – ATO Liga Ágil
-								</h2>
-							</v-col>
-						</v-row>
-					</v-sheet>
-				</v-carousel-item>
-
-			</v-carousel>
-		</v-card>
 
 	<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
@@ -1355,7 +703,7 @@
 		</v-container>
 	</v-card>
 
-<!-- conteúdo 12 -->
+<!-- conteúdo 09 -->
 
 <!-- conteúdo 13 -->
 	<v-card 
@@ -1364,7 +712,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont13" 
-	style="z-index:14;"
+	style="z-index:10;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
 		
@@ -1401,7 +749,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent14Visible = true; prosseguir('content14')"
+				@click="isContent15Visible = true; prosseguir('content15')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1411,6 +759,69 @@
 
 <!-- conteúdo 13 -->
 
+
+
+
+<!-- conteúdo 15 -->
+	<v-card 
+	v-show="isContent15Visible"
+	id="content15" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont15" 
+	style="z-index:9;"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
+		
+			
+			<v-row class="mt-8">
+			<v-col cols="12" md="6">
+				<h2 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
+					Objetivo das Trilhas de Aprendizagem Einstein
+				</h2>
+				<p style="font-size:1.3em;line-height:1.3em" class="mt-4 texto_branco reveal fade-left">
+					O objetivo das trilhas é apoiar o compromisso da Sociedade com a geração do conhecimento e o desenvolvimento de habilidades de seus colaboradores, alinhados ao propósito, visão, missão, valores e objetivos estratégicos. 
+				</p>
+				<p style="font-size:1.3em;line-height:1.3em" class="mt-4 texto_branco reveal fade-left">
+					Vamos conhecê-las?
+				</p>
+			</v-col>
+		</v-row>
+
+		
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent14Visible = true; prosseguir('content14')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+<!-- conteúdo 15 -->
+
 <!-- conteúdo 14 -->
 	<v-card 
 	v-show="isContent14Visible"
@@ -1418,7 +829,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:13;"
+	style="z-index:8;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
 		
@@ -1471,7 +882,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent15Visible = true; prosseguir('content15')"
+				@click="isContent21Visible = true; prosseguir('content21')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -1481,558 +892,6 @@
 
 <!-- conteúdo 14 -->
 
-<!-- conteúdo 15 -->
-	<v-card 
-	v-show="isContent15Visible"
-	id="content15" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont15" 
-	style="z-index:12;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
-		
-			
-			<v-row class="mt-8">
-			<v-col cols="12" md="6">
-				<h2 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
-					Objetivo das Trilhas de Aprendizagem Einstein
-				</h2>
-				<p style="font-size:1.3em;line-height:1.3em" class="mt-4 texto_branco">
-					O objetivo das trilhas é apoiar o compromisso da Sociedade com a geração do conhecimento e o desenvolvimento de habilidades de seus colaboradores, alinhados ao propósito, visão, missão, valores e objetivos estratégicos. 
-				</p>
-				<p style="font-size:1.3em;line-height:1.3em" class="mt-4 texto_branco">
-					Todas as trilhas são digitais, ou seja, utilizam metodologia de Educação a Distância, e estão disponibilizadas no nosso Portal Gestão de Pessoas (PGP).
-				</p>
-				<p style="font-size:1.3em;line-height:1.3em" class="mt-4 texto_branco">
-					Vamos conhecê-las?
-				</p>
-			</v-col>
-		</v-row>
-
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent16Visible = true; prosseguir('content16')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 15 -->
-
-<!-- conteúdo 16 -->
-	<v-card 
-	v-show="isContent16Visible"
-	id="content16" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
-	style="z-index:11;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
-		
-		
-		<v-row class="mt-10">
-
-			<v-col cols="12" md="8">
-				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
-					<p style="font-size:1.3em;text-transform: uppercase;" class="mt-4 texto_branco">
-						<strong>Trilha Institucional</strong>
-					</p>
-				
-
-				</v-card-text>
-			</v-col>
-			<v-col cols="12" md="4" align-self="center">
-				<v-card class="box_dicas pl-0 pr-0 mt-n8 reveal fade-right mx-auto" style="width: 100%">
-				<v-card-text>
-					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos itens abaixo.  
-				</v-card-text>
-			</v-card>
-			</v-col>
-		</v-row>
-		<v-container class="pl-0 pr-0 reveal fade-in">
-		
-			<v-expansion-panels >
-			  <v-expansion-panel class="mb-2">
-				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">OBJETIVOS</span>
-				</v-expansion-panel-title>
-				<v-expansion-panel-text>
-				
-				<p>
-					Propagar a cultura e os saberes fundamentais da Sociedade, de forma a proporcionar aos colaboradores conhecimentos sobre aspectos da organização alinhados aos objetivos estratégicos além de fomentar a aprendizagem na instituição. A trilha é disponibilizada anualmente a todos os colaboradores.
-				</p>
-				<p class="mt-4">
-					Eixos abordados:
-				</p>
-				<ul class="ml-8 mt-4">
-					<li>Princípios e Valores.</li>
-					<li>Cultura de Segurança.</li>
-					<li>Experiência do Paciente e do Colaborador.</li>
-				</ul>
-				</v-expansion-panel-text>
-			  </v-expansion-panel>
-			  
-			  <v-expansion-panel class="mb-2">
-				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">PARA QUAL PÚBLICO SE DESTINA</span>
-				</v-expansion-panel-title>
-				<v-expansion-panel-text>
-				<p class="mt-4">
-					<strong>INSTITUCIONAL – NOVO COLABORADOR</strong>
-				</p>
-				<p class="mt-4">
-					<strong>Público:</strong> novos colaboradores.
-				</p>
-				<p class="mt-0">
-					<strong>Conteúdo:</strong> a trilha deve ser formatada com conteúdos que abordem aspectos culturais fundamentais para a Sociedade, nivelando conhecimentos e orientando a conduta.
-				</p>
-				<p class="mt-0">
-					<strong>Periodicidade:</strong> é realizada uma única vez, no início da jornada do colaborador no Einstein.
-				</p>
-				<p class="mt-4">
-					<strong>INSTITUCIONAL – NÍVEL TÉCNICO (n1) E SUPERIOR (n2)</strong>
-				</p>
-				<p class="mt-4">
-					<strong>Público:</strong> colaboradores que atuam na Sociedade há mais de 1 ano.
-				</p>
-				<p class="mt-0">
-					<strong>Conteúdo:</strong> os conteúdos e objetos apresentados serão de acordo com o perfil de aprendizagem do colaborador, dividindo-se em colaboradores de nível técnico e colaboradores de nível superior. O ciclo de atualização da Trilha Institucional é anual.
-				</p>
-				</v-expansion-panel-text>
-			  </v-expansion-panel>
-			  
-			  <v-expansion-panel class="mb-2">
-				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">ACESSIBILIDADE</span>
-				</v-expansion-panel-title>
-				<v-expansion-panel-text>
-				<p>
-					Todos os conteúdos da Trilha Institucional são 100% acessíveis para pessoas com deficiência visual e auditiva.
-				</p>
-				</v-expansion-panel-text>
-			  </v-expansion-panel>
-			  
-			  <v-expansion-panel class="mb-2">
-				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
-				  <span style="text-transform:uppercase">REMUNERAÇÃO VARIÁVEL – META DE TREINAMENTO</span>
-				</v-expansion-panel-title>
-				<v-expansion-panel-text>
-				<p>
-					Como forma de reconhecimento aos colaboradores que buscam o seu desenvolvimento e capacitação, a conclusão e aprovação nas Trilhas de Aprendizagem Institucional compõem uma das metas referentes ao Programa de Remuneração Variável.
-				</p>
-				
-				</v-expansion-panel-text>
-			  </v-expansion-panel>
-			  
-			</v-expansion-panels>
-
-		</v-container>
-			
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent17Visible = true; prosseguir('content17')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 16 -->
-
-<!-- conteúdo 17 -->
-	<v-card 
-	v-show="isContent17Visible"
-	id="content17" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont17" 
-	style="z-index:10;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
-		
-			
-			<v-row class="mt-8">
-			<v-col cols="12" md="5">
-				<h2 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
-					“Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja apenas outra alma humana.”
-				</h2>
-				<p style="font-size:1.3em;line-height:1.3em;text-align:right" class="mt-4 texto_branco">
-					Carl G. Jung 
-				</p>
-			</v-col>
-		</v-row>
-
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent18Visible = true; prosseguir('content18')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 17 -->
-
-<!-- conteúdo 18 -->
-	<v-card 
-	v-show="isContent18Visible"
-	id="content18" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:9;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
-
-			<h1 style="color:#2B7080" class="mt-n4 font-weight-bold text-primary reveal fade-left texto_azul">
-				Trilha Institucional
-			</h1>
-			<p class="mt-4">
-				O objetivo dessas trilhas é atualizar e fornecer conhecimento aos profissionais de ENFERMAGEM e EQUIPE MULTIPROFISSIONAL (Nutricionistas, Fisioterapeutas etc.) sobre protocolos, políticas e procedimentos, para garantir o desempenho das competências e atuação de excelência no atendimento do paciente.
-			</p>
-			<p class="mt-4">
-				Os conteúdos são desenvolvidos conforme as competências do cargo: Aux., Téc., Jr., Pl., Sr.
-			</p>
-		
-		<v-row class="mt-8">
-			<v-col class="" cols="12" md="7">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont18_info1.png" />
-			</v-col>
-			<v-col cols="12" md="5" >
-				<v-img class="mx-auto mt-n12" src="./img/tela_corporativo/cont18_info2.png" />
-			</v-col>
-		</v-row>
-		
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent19Visible = true; prosseguir('content19')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 19 -->
-
-<!-- conteúdo 19 -->
-	<v-card 
-	v-show="isContent19Visible"
-	id="content19" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont19" 
-	style="z-index:8;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
-
-			<h1 class="mt-n8 font-weight-bold text-primary reveal fade-left texto_branco">
-				Trilhas Profissionais – Metodologias e temas
-			</h1>
-			
-			<p style="" class="texto_branco">
-				As Trilhas de Aprendizagem propostas para os profissionais de Enfermagem e Equipe Multiprofissional utilizam metodologias e temas diferenciados.
-			</p>
-		
-		<v-row class="mt-8">
-			<v-col cols="12" md="6" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont19_img1.svg" />
-				
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Avaliação de Aprendizagem
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pré-teste
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Conteúdo 
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pré-aula
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Práticas de Habilidades – Presencial
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						<em>Workshop</em> de enfermagem
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Conteúdo Interativo
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Material Complementar
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Avaliação de Aprendizagem
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pós-teste
-					</p>
-				</v-card>
-				
-			</v-col>
-			<v-col cols="12" md="6" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont19_img2.svg" />
-				
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Avaliação de Aprendizagem
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pré-teste
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Conteúdo 
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pré-aula
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Encontro <em>Online</em>
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Síncrono
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Conteúdo Interativo
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Material Complementar
-					</p>
-				</v-card>
-				<v-card elevation="4" width="98%" style="background-color:#7D0049;border-radius:30px;" class="mx-auto mt-4 pa-6 d-flex flex-column justify-center align-center">
-					<p style="font-size:0.9em" class="texto_branco">
-						Avaliação de Aprendizagem
-					</p>
-					<p style="font-size:0.9em" class="texto_branco">
-						Pós-teste
-					</p>
-				</v-card>
-			</v-col>
-		</v-row>
-		
-		
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent20Visible = true; prosseguir('content20')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-<!-- conteúdo 19 -->
-<!-- conteúdo 20 -->
-
-<v-card 
-	v-show="isContent20Visible"
-	id="content20" 
-	width="100%" 
-	elevation="0"
-	class="bg-transparent mt-n4 mx-auto rounded-lg pt-0" 
-	style="z-index:8;"
-	>
-		<v-img width="100%" class="mx-auto" src="./img/tela_corporativo/cont20_grade.png" />
-
-	<div class="notebook">
-		<img class="notebook_img" src="./img/tela_corporativo/notebook.png" />	
-	</div>
-
-<v-card 
-	v-show="isContent20Visible"
-	width="100%" 
-	elevation="6"
-	class="rounded-lg pl-16 pr-16 v-card-conteudos_cont20" 
-	style="z-index:7;"
-	>
-		
-		<v-row class="mt-0">
-			<v-col cols="12" md="5">
-				<p style="text-transform:uppercase;font-size:1.5em" class="texto_branco">
-					Os temas das trilhas são essenciais para o atendimento com qualidade e segurança.
-				</p>
-				<p style="" class="mt-4 texto_branco">
-					Você pode conhecer os temas de cada trilha e obter mais informações acessando, a qualquer momento, o Workplace.   
- 				</p>
-			</v-col>
-			<v-col cols="12" md="8" align-self="center">
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				href="https://sbibae.workplace.com/groups/206612450124381/?ref=share" target="_blank"
-				> 
-					<span style="font-size:1.2em" class="mr-1 mdi mdi-monitor-dashboard"></span> ACESSAR WOKPLACE
-				</v-btn>
-			</v-col>
-		</v-row>
-
-	<!--Btn final-->
-		<v-container class="d-flex justify-center mb-4 mt-16">
-			<v-sheet 
-			color="transparent"
-			class="mb-4 mt-16"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
-
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent21Visible = true; prosseguir('content21')"
-				> 
-					Prosseguir	
-				</v-btn>
-			</v-sheet>
-		</v-container>
-	</v-card>
-
-</v-card>
-<!-- conteúdo 20 -->
-
 <!-- conteúdo 21 -->
 	<v-card 
 	v-show="isContent21Visible"
@@ -2040,7 +899,7 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
-	style="z-index:6;"
+	style="z-index:7;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
 		
@@ -2124,7 +983,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent22Visible = true; prosseguir('content22')"
+				@click="isContent16Visible = true; prosseguir('content16')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -2134,39 +993,287 @@
 
 <!-- conteúdo 21 -->
 
-<!-- conteúdo 22 -->
+
+
+<!-- conteúdo 16 -->
 	<v-card 
-	v-show="isContent22Visible"
-	id="content22" 
+	v-show="isContent16Visible"
+	id="content16" 
 	width="100%" 
 	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:5;background-color:#202224"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
+	style="z-index:6;"
 	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
 		
-		<v-card-text class="pt-10 pl-0 pr-0" align="center">
-
-			<h1 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
-				Veja algumas fotos ilustrando a utilização de nossas estratégias de aprendizagem ativas e colaborativas.  
-			</h1>
-
-		</v-card-text>
 		
-		<v-row class="mt-0">
-			<v-col cols="12" md="3" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont22_img1.png" />
+		<v-row class="mt-10">
+
+			<v-col cols="12" md="8">
+				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
+					<p style="font-size:1.3em;text-transform: uppercase;" class="mt-4 texto_branco">
+						<strong>Trilha Institucional</strong>
+					</p>
+				
+
+				</v-card-text>
 			</v-col>
-			<v-col cols="12" md="3" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont22_img2.png" />
-			</v-col>
-			<v-col cols="12" md="3" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont22_img3.png" />
-			</v-col>
-			<v-col cols="12" md="3" align-self="center">
-				<v-img class="mx-auto" src="./img/tela_corporativo/cont22_img4.png" />
+			<v-col cols="12" md="4" align-self="center">
+				<v-card class="box_dicas pl-0 pr-0 mt-n8 reveal fade-right mx-auto" style="width: 100%">
+				<v-card-text>
+					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos itens abaixo.  
+				</v-card-text>
+			</v-card>
 			</v-col>
 		</v-row>
+		<v-container class="pl-0 pr-0 reveal fade-in">
+		
+			<v-expansion-panels >
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">OBJETIVOS</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				
+				<p>
+					Propagar a cultura e os saberes fundamentais da Sociedade, de forma a proporcionar aos colaboradores conhecimentos sobre aspectos da organização alinhados aos objetivos estratégicos, além de fomentar a aprendizagem na instituição. A trilha é disponibilizada anualmente a todos os colaboradores.
+				</p>
+				<p class="mt-4">
+					Eixos abordados:
+				</p>
+				<ul class="ml-8 mt-4">
+					<li>Princípios e Valores.</li>
+					<li>Cultura de Segurança.</li>
+					<li>Experiência do Paciente e do Colaborador.</li>
+				</ul>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">PARA QUAL PÚBLICO SE DESTINA</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<p class="mt-4">
+					<strong>INSTITUCIONAL – NOVO COLABORADOR</strong>
+				</p>
+				<p class="mt-4">
+					<strong>Público:</strong> Novos colaboradores.
+				</p>
+				<p class="mt-0">
+					<strong>Conteúdo:</strong> A trilha deve ser formatada com conteúdos que abordem aspectos culturais fundamentais para a Sociedade, nivelando conhecimentos e orientando a conduta.
+				</p>
+				<p class="mt-0">
+					<strong>Periodicidade:</strong> É realizada uma única vez, no início da jornada do colaborador no Einstein.
+				</p>
+				<p class="mt-4">
+					<strong>INSTITUCIONAL – NÍVEL TÉCNICO (n1) E SUPERIOR (n2)</strong>
+				</p>
+				<p class="mt-4">
+					<strong>Público:</strong> Colaboradores que atuam na Sociedade há mais de 1 ano.
+				</p>
+				<p class="mt-0">
+					<strong>Conteúdo:</strong> Os conteúdos e objetos apresentados serão de acordo com o perfil de aprendizagem do colaborador, dividindo-se em colaboradores de nível técnico e colaboradores de nível superior.
+				</p>
+				<p class="mt-0">
+					<strong>Periodicidade:</strong> É realizada anualmente por todos os colaboradores efetivos da Instituição.
+				</p>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">ACESSIBILIDADE</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<p>
+					Todos os conteúdos da Trilha Institucional são 100% acessíveis para pessoas com deficiência visual e auditiva.
+				</p>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">REMUNERAÇÃO VARIÁVEL – META DE TREINAMENTO</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<p>
+					Como forma de reconhecimento aos colaboradores que buscam o seu desenvolvimento e capacitação, a conclusão e aprovação nas Trilhas de Aprendizagem Institucional compõem uma das metas referentes ao Programa de Remuneração Variável.
+				</p>
+				
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			</v-expansion-panels>
+
+		</v-container>
+			
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				@click="isContent17Visible = true; prosseguir('content17')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+<!-- conteúdo 16 -->
+
+
+
+
+<!-- conteúdo 17 -->
+	<v-card 
+	v-show="isContent17Visible"
+	id="content17" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont17" 
+	style="z-index:5;"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
+		
+			
+			<v-row class="mt-8">
+			<v-col cols="12" md="5">
+				<h2 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_branco">
+					“Conheça todas as teorias, domine todas as técnicas, mas, ao tocar uma alma humana, seja apenas outra alma humana.”
+				</h2>
+				<p style="font-size:1.3em;line-height:1.3em;text-align:right" class="mt-4 texto_branco">
+					Carl G. Jung 
+				</p>
+			</v-col>
+		</v-row>
+
+		
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent18Visible = true; prosseguir('content18')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+<!-- conteúdo 17 -->
+
+
+<!-- conteúdo 18 -->
+	<v-card 
+	v-show="isContent18Visible"
+	id="content18" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_cont16" 
+	style="z-index:4;"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_cont4.png" />
+
+		<v-row class="mt-10">
+
+			<v-col cols="12" md="8">
+				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
+					<p style="font-size:1.3em;text-transform: uppercase;" class="mt-4 texto_branco">
+						<strong>Trilhas Profissionais</strong>
+					</p>
+				
+
+				</v-card-text>
+			</v-col>
+			<v-col cols="12" md="4" align-self="center">
+				<v-card class="box_dicas pl-0 pr-0 mt-n8 reveal fade-right mx-auto" style="width: 100%">
+				<v-card-text>
+					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique nos itens abaixo.  
+				</v-card-text>
+			</v-card>
+			</v-col>
+		</v-row>
+		<v-container class="pl-0 pr-0 reveal fade-in">
+		
+			<v-expansion-panels >
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">OBJETIVOS</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				
+				<p>
+					O <strong>objetivo</strong> dessas trilhas é atualizar e fornecer conhecimento aos profissionais de <strong>ENFERMAGEM e EQUIPE MULTIPROFISSIONAL</strong> (nutricionistas, fisioterapeutas etc.) sobre protocolos, políticas e procedimentos, para garantir o desempenho das competências e atuação de excelência no atendimento do paciente.
+				</p>
+				
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			  <v-expansion-panel class="mb-2">
+				<v-expansion-panel-title expand-icon="mdi-plus" collapse-icon="mdi-minus">
+				  <span style="text-transform:uppercase">conteúdos</span>
+				</v-expansion-panel-title>
+				<v-expansion-panel-text>
+				<p class="mt-4">
+					Os conteúdos são desenvolvidos conforme as competências do cargo: Aux., Téc., Jr., Pl., Sr.
+				</p>
+				<v-row class="mt-8">
+			<v-col class="" cols="12" md="7">
+				<v-img class="mx-auto" src="./img/tela_corporativo/cont18_info1.svg" />
+			</v-col>
+			<v-col cols="12" md="5" >
+				<v-img class="mx-auto mt-0" src="./img/tela_corporativo/cont18_info2.svg" />
+			</v-col>
+		</v-row>
+				</v-expansion-panel-text>
+			  </v-expansion-panel>
+			  
+			</v-expansion-panels>
+
+		</v-container>
+		
+		
+		
+		
 		
 		
 
@@ -2182,7 +1289,7 @@
 				height="60"
 				src="../GlobalStyles/img/gota-icon.svg"
 				class=" mt-0 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'white-svg'" 
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
 				/>
 
 				<v-btn 
@@ -2191,7 +1298,7 @@
 				size="large"
 				rounded="pill"
 				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-primary bg_escuro'"
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
 				@click="isContent23Visible = true; prosseguir('content23')"
 				> 
 					Prosseguir	
@@ -2200,7 +1307,9 @@
 		</v-container>
 	</v-card>
 
-<!-- conteúdo 22 -->
+<!-- conteúdo 19 -->
+
+
 
 <!-- conteúdo 23 -->
 	<v-card 
@@ -2209,14 +1318,14 @@
 	width="100%" 
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
-	style="z-index:4;"
+	style="z-index:2;"
 	>
 		<v-img class="mx-auto grade_header" src="./img/tela_corporativo/grade_cont4.png" />
 		
 		<v-card-text class="pt-10 pl-0 pr-0" align="center">
 
-			<h2 class="mt-n10 font-weight-bold text-primary reveal fade-left texto_azul">
-				A área de Ensino Corporativo oferece aos colaboradores outros treinamentos e capacitações, além  das Trilhas de Aprendizagem. Acompanhe.
+			<h2 style= "font-size:1.5em!important" class="mt-n10 font-weight-bold text-primary reveal fade-left texto_azul">
+				A área de Ensino Corporativo oferece aos colaboradores outros treinamentos e capacitações, além  das Trilhas de Aprendizagem. Acompanhe:
 			</h2>
 
 		</v-card-text>
@@ -2262,13 +1371,13 @@
 
 			<v-window-item value="two" class="pa-8">
 					<p>
-							Programa de Atendimento destinado ao público de Atendimento e apoio assistencial, sendo dividido em dois momentos:
+							Programa de Atendimento destinado ao público de atendimento e apoio assistencial, sendo dividido em dois momentos:
 						</p>
 						<p class="mt-4">
-							<strong>1) Admissional de atendimento:</strong> Realizado no primeiro dia de admissão do colaborador, com carga horária de 3hs.
+							<strong>1) Admissional de atendimento:</strong> Realizado no primeiro dia de admissão do colaborador, com carga horária de 3 horas.
 						</p>
 						<p class="mt-4">
-							<strong>2) Trilha de Atendimento:</strong> Realizado após o colaborador participar do Admissional. Possui conteúdo interativo, realizado via PGP, com duração de 40 minutos. Ao finalizar, o colaborador poderá se inscrever nos encontros ao vivo-online, com duração de 2 horas.
+							<strong>2) Trilha de Atendimento:</strong> Realizada após o colaborador participar do Admissional. Possui conteúdo interativo, realizado via PGP, com duração de 40 minutos. Ao finalizar, o colaborador poderá se inscrever nos encontros ao vivo <em>online</em>, com duração de 2 horas.
 						</p>
 						<p class="mt-4">
 							<strong>Objetivo:</strong> Apresentar e fortalecer o Modelo de Atendimento Einstein, desenvolvendo as competências comportamentais e promovendo a troca de experiências entre os colaboradores.
@@ -2277,25 +1386,25 @@
 							<strong>Informações importantes:</strong> Treinamento realizado via Zoom. Atende a certificação Planetree, além de fortalecer o Modelo de Atendimento e reforçar os pilares da alta confiabilidade.
 						</p>
 						<p class="mt-4">
-							<strong>Onde encontrar:</strong> O colaborador público-alvo do Admissional de Atendimento receberá um e-mail  e WhatsApp de convocação, contendo data, horário e link do Zoom para participação. Para a trilha de Atendimento, o treinamento será liberado via PGP.
+							<strong>Onde encontrar:</strong> O colaborador público-alvo do Admissional de Atendimento receberá um <em>e-mail</em>  e WhatsApp de convocação, contendo data, horário e <em>link</em> do Zoom para participação. Para a Trilha de Atendimento, o treinamento será liberado via PGP.
 						</p>	
 
 			</v-window-item>
 
 			<v-window-item value="three" class="pa-8">
 						<p>
-							A Formação e Requalificação de brigadistas são indicadas aos colaboradores que atuam em unidades elegíveis, determinadas previamente pela equipe de PCI bombeiros.
+							A Formação e a Requalificação de brigadistas são indicadas aos colaboradores que atuam em unidades elegíveis, determinadas previamente pela equipe de PCI bombeiros.
 						</p>
 						<p class="mt-4">
 							<strong>Informações importantes:</strong> O treinamento ocorre em parceria com consultoria externa em formato presencial em duas modalidades:
 						</p>
 						<p class="mt-4">
-							Objetivo: Promover a capacitação dos colaboradores para atuar em situações de emergência como, por exemplo, prevenção e combate de incêndios, prestação de primeiros socorros e evacuação de ambientes.
+							<strong>Objetivo:</strong> Promover a capacitação dos colaboradores para atuar em situações de emergência como, por exemplo, prevenção e combate de incêndios, prestação de primeiros socorros e evacuação de ambientes.
 						</p>
 						
 						<ul class="ml-8 mt-4">
-							<li><strong>Formação:</strong> realizada apenas uma vez na jornada do colaborador na Instituição, em campo externo, com duração de 8h;</li>
-							<li><strong>Requalificação:</strong> realizada anualmente após a conclusão da formação, tem duração de 4h, ocorre nas unidades Einstein.</li>
+							<li><strong>Formação:</strong> realizada apenas uma vez na jornada do colaborador na Instituição, em campo externo, com duração de 8 horas;</li>
+							<li><strong>Requalificação:</strong> realizada anualmente após a conclusão da formação, tem duração de 4 horas, ocorre nas unidades Einstein.</li>
 						</ul>
 						<p class="mt-4">
 							<strong>Onde encontrar:</strong> As turmas são disponibilizadas no PGP.
@@ -2304,13 +1413,13 @@
 			<v-window-item value="four">
 			
 				<p>
-					Treinamento para profissionais não assistenciais  para agir de forma adequada em situações de emergência.		
+					Treinamento para profissionais não assistenciais para agir de forma adequada em situações de emergência.		
 				</p>
 				<p class="mt-4">
 					<strong>Objetivo:</strong> Fornecer conhecimentos básicos e habilidades práticas para que os participantes possam reconhecer e responder de forma eficaz a uma variedade de situações de emergência e realizar os primeiros socorros.
 				</p>
 				<p class="mt-4">
-					<strong>Informações importantes:</strong> O treinamento é destinado aos colaboradores que atuam em determinados cargos /áreas de acordo com a politica da Instituição. Possui 8 horas de duração e deve ser realizado a cada 2 anos.
+					<strong>Informações importantes:</strong> O treinamento é destinado aos colaboradores que atuam em determinados cargos/áreas de acordo com a política da Instituição. Possui 8 horas de duração e deve ser realizado a cada 2 anos.
 				</p>
 				<p class="mt-4">
 					<strong>Onde encontrar:</strong> As turmas são disponibilizadas no PGP.
@@ -2524,7 +1633,7 @@
 				rounded="pill"
 				class=""
 				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent26Visible = true; prosseguir('content26')"
+				@click="isContent12Visible = true; prosseguir('content12')"
 				> 
 					Prosseguir	
 				</v-btn>
@@ -2532,6 +1641,445 @@
 		</v-container>
 
 </v-card>
+
+<!-- conteúdo 23 -->
+
+<!-- conteúdo 12 -->
+	<v-card 
+	v-show="isContent12Visible"
+	id="content12" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos" 
+	style="z-index:1;"
+	>
+			<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header.png" />
+		<h2 class="mt-n4 font-weight-bold texto_azul reveal fade-left">
+			Nossas Capacitações Institucionais
+		</h2>
+		<p class="mt-4 reveal fade-left">
+				Essas são algumas fotos de nossas capacitações.
+			</p>
+		
+		<v-row class="mt-4">
+			<v-col cols="12" md="7">
+			</v-col>
+		<v-col cols="12" md="5">
+		<v-card width="100%" class="box_dicas pl-0 pr-0 reveal fade-left">
+				<v-card-text>
+					<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Navegue pelas setas abaixo.
+				</v-card-text>
+			</v-card>
+		</v-col>
+	</v-row>
+	
+	<!-- Btn prev -->
+			<v-btn
+			icon="mdi-chevron-left"
+			class="btn-left"
+			:color="carousel02 == 0 ? 'white' : 'primary'"
+			:variant="carousel02 == 0 ? 'text' : 'flat'"
+			:disabled="carousel02 == 0"
+			@click="carousel02 --"
+			/>
+
+			<!-- Btn next (14 slides) -->
+			<v-btn
+			icon="mdi-chevron-right"
+			class="btn-right"
+			:color="carousel02 == 13 ? 'white' : 'primary'"
+			:variant=" carousel02 == 13 ? 'text' : 'flat'" 
+			:disabled="carousel02 == 13"
+			@click="carousel02 ++"
+			/>
+
+			<!-- Carousel container -->
+			<v-card 
+			elevation="3" 
+			width="100%" 
+			class="mx-auto my-8 reveal fade-bottom"
+			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
+			>
+			
+			
+			<!-- Carousel -->
+				<v-carousel 
+				v-model="carousel02"
+				:show-arrows="false"
+				hide-delimiter-background 
+				:hide-delimiters="appStore.isMobile"
+				color="primary" 
+				:continuous="false"
+				:progress=" appStore.isMobile ? 'primary' : false"
+				>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide1.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Treinamento Admissional de Atendimento
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide2.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Trilha de Ciência de Dados
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide3.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Trilha de Atendimento – Autoconhecimento e Empatia
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide4.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Trilha de Atendimento – Comunicação e Gestão de Conflitos 
+
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide5.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Treinamento de Habilidades Práticas - HeartSaver
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide6.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Programa Multiplicador Einstein
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide7.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Programa Gestão de Continuidade de Atividades
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide8.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Segurança do Colaborador - Brigada de Incêndio – Formação de Brigadista
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide9.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Brigada de Incêndio – Requalificação de Brigadista
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide10.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									NR33 – Segurança e Saúde nos espaços confinados Vigias e Supervisores - Reciclagem
+
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide11.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Trilha de Aprendizagem Institucional – Encontro com Especialistas Einstein
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide12.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Trilha Institucional – Novos Colaboradores
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide13.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Treinamento Assistencial - Prática Monitorada – Sondagem Nasoentérica
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="white" width="100%" height="100%" class="d-flex justify-end px-8 py-16">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="5">
+								<v-img src="./img/tela_corporativo/cont12_slide14.jpg" />
+							</v-col>
+							<v-col class="pa-8" cols="12" md="7">
+								<h2 class="texto_azul">
+									Workshop Capacitações Ágil – ATO Liga Ágil
+								</h2>
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+
+			</v-carousel>
+		</v-card>
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent26Visible = true; prosseguir('content26')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+<!-- conteúdo 12 -->
+
+<!-- conteúdo 26 -->
+	<v-card 
+	v-show="isContent26Visible"
+	id="content26" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
+	style="z-index:0; margin-bottom:30px;"
+	>
+		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
+
+			<v-row align="center" class="mx-auto mb-16">
+				<v-col cols="12" md="7">
+
+				</v-col>
+				<v-col cols="12" md="5">
+					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
+						Seja aprendendo individualmente, em duplas, em pequenos ou grandes grupos, presencialmente ou a distância, o que realmente importa para nós do Einstein é o seu crescimento pessoal e profissional.
+					</p>
+					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
+						A área de Ensino Corporativo está pronta para lhe dar todo apoio que for necessário, porque VOCÊ, NOSSO COLABORADOR, FAZ DIFERENÇA PARA NÓS!
+					</p>
+				</v-col>
+			</v-row>
+
+	</v-card>
+
+<!-- conteúdo 26 -->
+
+
+
+
+
+
+<!-- conteúdo 20 OCULTA PELA ALTERA~ÇÃO -->
+
+<v-card 
+	v-show="isContent20Visible"
+	id="content20" 
+	width="100%" 
+	elevation="0"
+	class="bg-transparent mt-n4 mx-auto rounded-lg pt-0" 
+	style="z-index:8;"
+	>
+		<v-img width="100%" class="mx-auto" src="./img/tela_corporativo/cont20_grade.png" />
+
+	<div class="notebook">
+		<img class="notebook_img" src="./img/tela_corporativo/notebook.png" />	
+	</div>
+
+<v-card 
+	v-show="isContent20Visible"
+	width="100%" 
+	elevation="6"
+	class="rounded-lg pl-16 pr-16 v-card-conteudos_cont20" 
+	style="z-index:7;"
+	>
+		
+		<v-row class="mt-0">
+			<v-col cols="12" md="5">
+				<p style="text-transform:uppercase;font-size:1.5em" class="texto_branco">
+					Os temas das trilhas são essenciais para o atendimento com qualidade e segurança.
+				</p>
+				<p style="" class="mt-4 texto_branco">
+					Você pode conhecer os temas de cada trilha e obter mais informações acessando, a qualquer momento, o Workplace.   
+ 				</p>
+			</v-col>
+			<v-col cols="12" md="8" align-self="center">
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				href="https://sbibae.workplace.com/groups/206612450124381/?ref=share" target="_blank"
+				> 
+					<span style="font-size:1.2em" class="mr-1 mdi mdi-monitor-dashboard"></span> ACESSAR WOKPLACE
+				</v-btn>
+			</v-col>
+		</v-row>
+
+	<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4 mt-16">
+			<v-sheet 
+			color="transparent"
+			class="mb-4 mt-16"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-0 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+				@click="isContent23Visible = true; prosseguir('content23')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+	</v-card>
+
+</v-card>
+<!-- conteúdo 20 -->
+
+
+
+
+
 
 <!-- conteúdo 23 
 
@@ -2633,34 +2181,7 @@
 
 
 
-<!-- conteúdo 26 -->
-	<v-card 
-	v-show="isContent26Visible"
-	id="content26" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 footer" 
-	style="z-index:1; margin-bottom:30px;"
-	>
-		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header_branco.png" />
 
-			<v-row align="center" class="mx-auto mb-16">
-				<v-col cols="12" md="7">
-
-				</v-col>
-				<v-col cols="12" md="5">
-					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
-						Seja aprendendo individualmente, em duplas, em pequenos ou grandes grupos, presencialmente ou a distância, o que realmente importa para nós do Einstein é o seu crescimento pessoal e profissional.
-					</p>
-					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
-						A área de Ensino Corporativo está pronta para lhe dar todo apoio que for necessário, porque VOCÊ, NOSSO COLABORADOR, FAZ DIFERENÇA PARA NÓS!
-					</p>
-				</v-col>
-			</v-row>
-
-	</v-card>
-
-<!-- conteúdo 26 -->
 
 	<v-sheet
 	v-if="appStore.isFinished"
@@ -2711,6 +2232,7 @@
 	const isContent24Visible = ref(false)
 	const isContent25Visible = ref(false)
 	const isContent26Visible = ref(false)
+	const modal_corporativo = ref(false)
 	
 		//Controle dos cards do conteúdo 01
 	const isCard01Visible = ref(false)
@@ -2844,6 +2366,7 @@ onMounted(() => {
 	padding-right: 6% !important;
 	background-image: url("./img/tela_corporativo/cont7_fundo.jpg");
 	background-size: cover;
+	background-position: right;
 }
 .v-card-conteudos_cont9 {
 	padding-left: 6% !important;
@@ -2992,6 +2515,49 @@ font-size:1.5em;
 .notebook_img{
 width:800px;
 }
+.ico_1{
+z-index:100;
+position:relative;
+top:26px;
+left:43%;
+}
+.ico_2{
+z-index:100;
+position:relative;
+top:26px;
+left:43%;
+}
+.ico_3{
+z-index:100;
+position:relative;
+top:26px;
+left:43%;
+}
+.ico_4{
+z-index:100;
+position:relative;
+top:26px;
+left:43%;
+}
+.ico_5{
+z-index:100;
+position:relative;
+top:26px;
+left:33%;
+}
+.ico_6{
+z-index:100;
+position:relative;
+top:26px;
+left:43%;
+}
+.ico_7{
+z-index:100;
+position:relative;
+top:26px;
+left:33%;
+}
+
 @media screen and (max-width: 1277px){
 .notebook{
     position: absolute;
@@ -3002,10 +2568,64 @@ width:800px;
 .notebook_img{
 width:600px;
 }
-
+.ico_1{
+top:26px;
+left:40%;
+}
+.ico_2{
+top:26px;
+left:40%;
+}
+.ico_3{
+top:26px;
+left:40%;
+}
+.ico_4{
+top:26px;
+left:40%;
+}
+.ico_5{
+top:26px;
+left:28%;
+}
+.ico_6{
+top:26px;
+left:40%;
+}
+.ico_7{
+top:26px;
+left:28%;
+}
 }
 @media screen and (max-width: 950px){
-
+.ico_1{
+top:26px;
+left:48%;
+}
+.ico_2{
+top:26px;
+left:48%;
+}
+.ico_3{
+top:26px;
+left:48%;
+}
+.ico_4{
+top:26px;
+left:48%;
+}
+.ico_5{
+top:26px;
+left:48%;
+}
+.ico_6{
+top:26px;
+left:48%;
+}
+.ico_7{
+top:26px;
+left:48%;
+}
 .icone_cont2{
 width:40%;
 }
@@ -3037,6 +2657,34 @@ width:300px;
 }
 .icone_cont2{
 width:50%;
+}
+.ico_1{
+top:26px;
+left:45%;
+}
+.ico_2{
+top:26px;
+left:45%;
+}
+.ico_3{
+top:26px;
+left:45%;
+}
+.ico_4{
+top:26px;
+left:45%;
+}
+.ico_5{
+top:26px;
+left:45%;
+}
+.ico_6{
+top:26px;
+left:45%;
+}
+.ico_7{
+top:26px;
+left:45%;
 }
 }
 </style>

@@ -315,7 +315,7 @@
 
 							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
 								:class="appStore.isDarkMode ? 'text-secondary' : 'text-primary'">
-								Quem somos
+								Receitas dos Chefs
 							</h5>
 							<v-icon color="white" icon="mdi-gesture-double-tap" size="50"
 								class="animate__animated animate__fadeInDown animate__delay-0.7s" />
@@ -472,7 +472,7 @@
 
 		<v-card class="reveal fade-bottom box_cont2_cards mt-8">
 			<p>
-			<a style="color:white;text-decoration:none" href="https://amigoh.com.br/portfolio-de-projetos/"><strong>Clique aqui</strong></a> e veja mais detalhes sobre esses e outros projetos.
+			<a style="color:white;text-decoration:none" href="https://amigoh.com.br/portfolio-de-projetos/" target="_blank"><strong>Clique aqui</strong></a> e veja mais detalhes sobre esses e outros projetos.
 			</p>
 		</v-card>
 
@@ -548,17 +548,17 @@
 			<v-row justify="center" align="center" class="mt-n16">
 				<v-col cols="12" md="5">
 					<p style="font-size:1.5em" class="texto_branco reveal fade-left">
-						Visite nosso site para conhecer mais sobre o <strong>AmigoH</strong>:
+						Visite nosso <em>site</em> para conhecer mais sobre o <strong>AmigoH</strong>:
 					</p>
 					<p style="font-size:1.5em" class="texto_branco mt-2 reveal fade-left">
-						<a class="texto_branco" href="https://amigoh.com.br/"
+						<a style="text-decoration:none" class="texto_branco" href="https://amigoh.com.br/"
 							target="_blank"><strong>https://amigoh.com.br/</strong></a>
 					</p>
 					<p style="font-size:1.5em" class="texto_branco mt-6 reveal fade-left">
 						Dúvidas? Acesse nossa FAQ:
 					</p>
 					<p style="font-size:1.5em" class="texto_branco mt-2 reveal fade-left">
-						<a class="texto_branco" href="https://amigoh.com.br/faq/"
+						<a style="text-decoration:none" class="texto_branco" href="https://amigoh.com.br/faq/"
 							target="_blank"><strong>https://amigoh.com.br/faq/</strong></a>
 					</p>
 				</v-col>
@@ -566,9 +566,7 @@
 					<v-img class="mx-auto notebook reveal fade-right" src="./img/tela_amigoh/laptop.png" />
 				</v-col>
 			</v-row>
-
 		</v-container>
-
 	</v-card>
 
 	<!-- conteúdo 06 -->

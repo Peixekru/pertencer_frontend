@@ -150,7 +150,7 @@
         title: String,
         icon: String,
         cardImg: String,
-        time: Number,
+        time: String,
         content: {},
         index: Number,
         staus: Number,

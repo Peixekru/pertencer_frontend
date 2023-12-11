@@ -51,7 +51,7 @@
                 rounded
                 @click="appStore.isUnidadeFinished = false"
                 >
-                    Prossegir
+                    Prosseguir
                 </v-btn>
             
             </v-container>

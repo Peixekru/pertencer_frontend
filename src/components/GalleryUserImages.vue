@@ -39,6 +39,7 @@
                     indeterminate
                     ></v-progress-circular>
                 </div>
+
                 </template>    
             </v-img>
 
@@ -59,7 +60,12 @@
                 @click="hideImage(index)"
                 />
                 
-                <v-icon class="mx-1 text-medium-emphasis" size="x-small" icon="mdi-share-variant-outline" />
+                <v-icon 
+                class="mx-1 text-medium-emphasis" 
+                size="x-small" 
+                icon="mdi-loupe" 
+                @click="zoomImage(index)"
+                />
 
                 <v-icon 
                 class="me-1 text-medium-emphasis" 
@@ -79,15 +85,15 @@
 
 <script setup>
     import { useAppStore } from '../store/app'
-    import GalleryZoomImage from './GalleryZoomImage'
     import { useApiStore } from '../store/api'
+    import GalleryZoomImage from './GalleryZoomImage'
 
     const appStore = useAppStore()
     const apiStore = useApiStore()
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
-        return  new URL(`../assets/img/galleryFrame-${index}.svg`, import.meta.url).href
+        return  new URL(`../assets/img/galleryFrame-${index}.png`, import.meta.url).href
     }
 
     const zoomImage = (selectedImg) => {
@@ -100,11 +106,13 @@
         appStore.appData.galeria.content.userImgs[index].visible =
         !appStore.appData.galeria.content.userImgs[index].visible
 
+        /*
         if(appStore.appData.galeria.content.userImgs[index].visible){
             appStore.appData.galeria.content.globalImgs.unshift(appStore.imgObject);
         }else{
             appStore.appData.galeria.content.globalImgs.shift();
         }
+        */
     }
 
     const  deletImage = (index) => {
