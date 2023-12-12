@@ -187,8 +187,8 @@
                             "img": "https://placehold.co/600x400/fff/eaeaea?text=content++image++02&font=montserrat",
                             "objectRating": 0,
                             "userRating": 0,
-                            "status": 1,
-                            "block": 1
+                            "status": 0,
+                            "block": 0
                         },
                         {
                             "title": "Gestão de Desempenho",

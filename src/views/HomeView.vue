@@ -38,14 +38,20 @@
                 <v-container
                 class="mt-16 px-0 pa-0"
                 >
-                    <div class="mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s">
+                    <div 
+                    class="mx-4 mt-16 mb-10 animate__animated animate__fadeIn animate__delay-1s"
+                    style="position: relative; z-index: 500;"
+                    >
 
                             <v-img
                             max-width="380"
                             src="../assets/img/logo-home-type.svg"
                             /> 
                             
-                            <p style="color:white !important;" class="text-h6 font-weight-light text-medium-emphasis pt-6">
+                            <p  
+                            class="text-h6 font-weight-light text-medium-emphasis pt-6"
+                            style="color:white !important;"
+                            >
                                 PROGRAMA DE INTEGRAÇÃO E SOCIALIZAÇÃO DA PESSOA COLABORADORA
                             </p>
 
@@ -64,6 +70,7 @@
                             :class = "appStore.welcomeStepCounter == 2 || appStore.welcomeStepCounter == 7 ? 
                                 index == 0 ? 'card-level' : '' : 
                                 appStore.welcomeStepCounter == 15 ? 'card-level' : '' "
+                                
                             >
                             
                                 <div 
@@ -89,6 +96,7 @@
                         <!--cards especiais-->
                         <HomeSpecialCards
                         class="mt-16"
+                        style="position: relative; z-index: 500;"
                         />
 
 

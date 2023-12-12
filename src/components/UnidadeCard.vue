@@ -291,7 +291,7 @@
     .pos-test{
         position: relative;
         left: -50%;
-        z-index: 0;
+        z-index: 600;
         
     }
     .pos-test-inner{

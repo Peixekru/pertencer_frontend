@@ -81,17 +81,17 @@
                             >
                                 <h5 class="text-h5"><strong>Você finalizou sua jornada!</strong></h5>
 
-                                <p class="mt-1">
-                                    Agora oficialmente é uma gota de excelência Einstein.   
+                                <p class="mt-6">
+                                    Que tal conhecer outras gotas Einstein e ficar por dentro das novidades?   
                                 </p>
                                 <p class="mt-6">
-                                    Entre na nossa comunidade e realize uma postagem para que as pessoas te conheçam.
+                                    Chegou a hora de conhecer o Workplace, a rede social do Einstein!
                                 </p>
                                 <p class="mt-6">
-                                    Você pode postar uma frase se apresentando, uma foto sua, da sua família ou do seus pets. Fique a vontade! Queremos te conhecer.
+                                    Entre, preencha o seu perfil, atualize sua foto e participe dos grupos.
                                 </p>
-                                <p class="mt-6">
-                                    Aproveite e comente em no mínimo dois posts de colegas, dê as boas-vindas e crie conexão com pessoas que assim como você ficarão felizes com uma mensagem de apoio nesse inicio do Einstein.
+                                <p class="my-6">
+                                    Aqui, você fica por dentro das principais novidades da organização.
                                 </p>                        
 
                             </v-container>
@@ -133,7 +133,7 @@
                                 min-width="200"
                                 rounded
                                 class="bg-primary letter-normal px-0 text-secondary"
-                                @click="goLink('https://sbibae.workplace.com/groups/206612450124381/?ref=share​')"
+                                @click="goLink('https://sbibae.workplace.com/​')"
                                 >
                                     Acessar!
                                 </v-btn>

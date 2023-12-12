@@ -76,10 +76,10 @@
 
     onMounted(() => {
         //Armazena a data de envio
-        appStore.sendDate = appStore.appData.capsula.content.sendDate
+        //appStore.sendDate = appStore.appData.capsula.content.sendDate
 
         let startDate = new Date(appStore.appData.capsula.content.startDate)
-        let sendDate = new Date(appStore.sendDate)
+        let sendDate = new Date(appStore.appData.capsula.content.sendDate)
         let currentDate = new Date()
 
         //Calcula a quantidade de dias restantes para envio

@@ -372,17 +372,17 @@
         //Lebera conteúdo seguinte e modifica o status do corrente para concluido
         useStartProgress();
 
-        //Atualiza o card da cápsula na home
-        appStore.capsulaCardKey += 1
-        //Atualiza o modal da cápsula
-        appStore.capsulaModalKey += 1
-
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
         //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'));
         //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+        //Atualiza o card da cápsula na home
+        appStore.capsulaCardKey += 1
+        //Atualiza o modal da cápsula
+        appStore.capsulaModalKey += 1
 
         //Feedback usuário
         //appStore.globalMsg('Oba! Sua mensagem foi salva!', 'success')

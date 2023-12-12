@@ -90,19 +90,20 @@
                             class="pa-0"
                             >
                                 <p class="mb-4">
-                                    <strong>Canais de Comunicação</strong>
+                                    <strong>Comunicação Interna</strong>
                                 </p>
                                 <p class="mb-4">
-                                    A Comunicação Interna é responsável por manter todos os colaboradores, 
-                                    parceiros e médicos informados sobre as atividades da instituição, 
-                                    desde novos serviços para atendimento ao cliente até processos, fluxos administrativos e assistenciais. 
+                                    A comunicação interna tem como objetivo principal informar a pessoa colaboradora sobre os assuntos do Einstein, 
+                                    seu posicionamento institucional e planejamento estratégico, independente do canal de comunicação, 
+                                    assegurando que as informações sejam transparentes, equânimes, assertivas e fidedignas. 
                                 </p>
                                 <p class="mb-4">
-                                    Dessa maneira, garantimos que todos os colaboradores estejam constantemente atualizados, 
-                                    apoiando na divulgação das informações relacionadas ao nosso modelo de atendimento.                               
+                                    Dessa maneira, garantimos que todos os colaboradores estejam constantemente atualizados, de forma inclusiva, 
+                                    apoiando, estimulando e direcionando conversas, promovendo o debate e incentivando que as pessoas colaboradoras 
+                                    produzam conhecimento e conversas alinhadas com o propósito, estratégia e cultura do Einstein.                               
                                 </p>
                                 <p class="mb-4 text-subtitle-2">
-                                    Conheça mais sobre a área de Comunicação interna do Einstein no vídeo.                           
+                                    Conheça mais sobre a área de Comunicação Interna do Einstein no vídeo.                           
                                 </p>
 
                                 <!--btn-->
@@ -130,6 +131,7 @@
                     cols="12"
                     md="6"
                     class="py-0 px6"
+                    :class="appStore.isMobile ? '' : 'pt-11'"
                     >
                         <v-sheet 
                         :height="
