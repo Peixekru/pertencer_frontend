@@ -114,8 +114,14 @@ export function useBlockStatus(obj) {
             }
             //Finaliza o curso
             else{
-                if (appStore.appData.glogalProgress != 100){
+                if (appStore.appData.glogalProgress == 100 && appStore.appData.galeria.status == 0){
                     appStore.allFinished = true;
+
+                    //libera o "galeria de imagens" 
+                    appStore.appData.galeria.status = 1
+                    //atualiza o componente "galeria de image na home"
+                    appStore.galleryCardKey += 1
+                    
                 }
             }
         }

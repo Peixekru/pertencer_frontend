@@ -190,7 +190,7 @@
             const player = new Vimeo.Player(iframe);
             
             player.on('ended', function() {
-                console.log('Video Ended!');
+                console.log('Vídeo chedou ao fim');
                 goNext();
             });
         });
@@ -212,7 +212,7 @@
         'https://player.vimeo.com/api/player.js',
         function() {
             initVimeoEventListeners();
-            console.log('Loaded Vimeo Player API');
+            console.log('API do Vimeo foi carregada');
         }
     );
 

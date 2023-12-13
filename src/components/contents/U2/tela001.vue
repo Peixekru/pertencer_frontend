@@ -1356,7 +1356,7 @@
 			
 			<v-window-item value="one" class="pa-8">
 			 <p>
-							A área de Ensino Corporativo oferece aos colaboradores outros treinamentos e capacitações, além  das Trilhas de Aprendizagem. Acompanhe.
+							Treinamento de Normas Regulamentadoras para atender à legislação.
 						</p>
 						<p class="mt-4">
 							<strong>Objetivo:</strong> Capacitar ou reciclar os colaboradores que atuam em determinados cargos ou atividades sobre os procedimentos de trabalho relacionados à saúde e segurança do colaborador.
@@ -1447,7 +1447,7 @@
 			
 			<v-window-item value="one" class="pa-8">
 			 <p>
-							A área de Ensino Corporativo oferece aos colaboradores outros treinamentos e capacitações, além  das Trilhas de Aprendizagem. Acompanhe.
+							Treinamento de Normas Regulamentadoras para atender à legislação.
 						</p>
 						<p class="mt-4">
 							<strong>Objetivo:</strong> Capacitar ou reciclar os colaboradores que atuam em determinados cargos ou atividades sobre os procedimentos de trabalho relacionados à saúde e segurança do colaborador.
@@ -1538,7 +1538,7 @@
 			
 			<v-window-item value="one" class="pa-8">
 			 <p>
-							A área de Ensino Corporativo oferece aos colaboradores outros treinamentos e capacitações, além  das Trilhas de Aprendizagem. Acompanhe.
+							Treinamento de Normas Regulamentadoras para atender à legislação.
 						</p>
 						<p class="mt-4">
 							<strong>Objetivo:</strong> Capacitar ou reciclar os colaboradores que atuam em determinados cargos ou atividades sobre os procedimentos de trabalho relacionados à saúde e segurança do colaborador.

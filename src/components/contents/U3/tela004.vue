@@ -17,6 +17,7 @@
 <script setup>
 
 	//Imports
+  import { onMounted } from 'vue'
   import { useRouter } from 'vue-router'
 	import { useAppStore } from '../../../store/app'
   import { useApiStore } from '../../../store/api'
@@ -31,9 +32,6 @@
 
 	//Finaliza o conteúdo, atualiza progresso e libera funcionalidades na home
 	const finishedContent = () => {
-		//appStore.finishedContent(true)
-		useStartProgress()
-
 
     //libera o "Começando Bem" 
     appStore.appData.start.status = 1
@@ -47,21 +45,23 @@
 		//atualiza o componente "Workplace"
     appStore.workPlaceCardKey += 1
 		//Atualiza o localStorage
-	
-
-		//libera o "galeria de imagens" 
-		appStore.appData.galeria.status = 1
-		//atualiza o componente "galeria de image na home"
-		appStore.galleryCardKey += 1
 
 
 		//Atualiza o localStorage
 		localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
 
 
+    /*
     //Atualiza backend
     const userId = JSON.parse(localStorage.getItem('userId'));
     apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+    //console.log(JSON.parse(localStorage.getItem('localAppData')))
+
+    */
+    //appStore.finishedContent(true)
+		useStartProgress('finalContent')
+
 
 	  router.push('/home')
 	}
@@ -74,8 +74,8 @@
       const player = new Vimeo.Player(iframe);
 
       player.on('ended', function() {
-        console.log('Video Ended!');
         finishedContent();
+        console.log('Vídeo chedou ao fim');
       });
     });
   }
@@ -96,9 +96,13 @@
     'https://player.vimeo.com/api/player.js',
     function() {
       initVimeoEventListeners();
-      console.log('Loaded Vimeo Player API');
+      console.log('API do Vimeo foi carregada');
     }
   );
+
+  onMounted(() => {
+    console.log('entrou na última tela')
+  })
 
 </script> 
 

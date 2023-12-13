@@ -88,7 +88,7 @@
     onMounted(() => {
         //inicia som nos botões
         useBeepSound()
-        console.log(appStore.appData)
+        console.log(' -> Entrada do objeto em Welcome:', appStore.appData)
 
     })
 

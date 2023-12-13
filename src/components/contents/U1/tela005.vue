@@ -45,9 +45,21 @@
 
 <v-row class="mb-8" no-gutters>
 			<v-col cols="12" md="5">
-				<v-card elevation="6" class="box_mapas_btns pl-0 pr-0 mt-n8 reveal fade-left mx-auto" style="width:100%">
+				
+				<v-card elevation="6" class="box_mapas_btns_1 pl-0 pr-0 mt-n8 reveal fade-left mx-auto" style="width:100%">
 					<v-card-text>
-						<strong>São Paulo</strong>
+						<strong>Região Norte - Amazonas</strong>
+					</v-card-text>
+					<v-card-text class="mt-n4">
+					<ul class="ml-6">
+						<li>
+							<strong><span class="mdi mdi-microscope box_dicas_icon"></span> 1  Unidade de pesquisa</strong>
+						</li>
+					</ul>
+					</v-card-text>
+					
+					<v-card-text>
+						<strong>Região Norte - Pará</strong>
 					</v-card-text>
 					<v-card-text class="mt-n4">
 					<ul class="ml-6">
@@ -56,7 +68,21 @@
 						</li>
 					</ul>
 					</v-card-text>
+				</v-card>
+				
+				<v-card elevation="6" class="box_mapas_btns pl-0 pr-0 mt-4 reveal fade-left mx-auto" style="width:100%">
 					<v-card-text>
+						<strong>São Paulo</strong>
+					</v-card-text>
+					<v-card-text class="mt-n4">
+					<ul class="ml-6">
+						<li>
+							<strong><span class="mdi mdi-heart-pulse box_dicas_icon"></span> 1 Unidade Avançada</strong>
+						</li>
+					</ul>
+					</v-card-text>
+					<v-card-text>
+						
 						<v-btn 
 							type="button"
 							style="letter-spacing: normal;"
@@ -65,10 +91,30 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_1_mapa_1Visible = true; prosseguir('link_1_mapa_1')"
+							@click="
+							isLink_1_mapa_1Visible = true; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_1_mapa_1')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
+						
 					</v-card-text>
 					
 					<v-card-text class="mt-n4">
@@ -80,6 +126,8 @@
 						
 					</v-card-text>
 					<v-card-text>
+						
+				
 						<v-btn 
 							type="button"
 							style="letter-spacing: normal;"
@@ -88,10 +136,30 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_2_mapa_1Visible = true; prosseguir('link_2_mapa_1')"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = true; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_2_mapa_1')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
+						
 					</v-card-text>
 					
 					<v-card-text class="mt-n4">
@@ -111,7 +179,26 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_3_mapa_1Visible = true; prosseguir('link_3_mapa_1')"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = true;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_3_mapa_1')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
@@ -134,7 +221,26 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_4_mapa_1Visible = true; prosseguir('link_4_mapa_1')"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = true;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_4_mapa_1')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
@@ -143,7 +249,7 @@
 					<v-card-text class="mt-n4">
 					<ul class="ml-6">
 						<li>
-							<strong><span class="mdi mdi-google-classroom box_dicas_icon"></span> 9 unidades de ensino.</strong>
+							<strong><span class="mdi mdi-google-classroom box_dicas_icon"></span> <span class="mdi mdi-microscope box_dicas_icon"></span> 11 unidades de ensino e pesquisa.</strong>
 						</li>
 					</ul>
 						
@@ -157,14 +263,33 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_5_mapa_1Visible = true; prosseguir('link_5_mapa_1')"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = true;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_5_mapa_1')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
 					</v-card-text>
 				</v-card>
 			</v-col>
-			<v-col cols="12"  md="7" align-self="end" align="center">
+			<v-col cols="12"  md="7" align-self="center" align="center">
 								
 				<img width="600" class="show_desktop" src="./img/tela_presenca/mapa_01.png" usemap="#image-map">
 				<img width="450" class="show_1277" src="./img/tela_presenca/mapa_01_1277.png" usemap="#image-map_1277">
@@ -630,6 +755,16 @@
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end">
 						<v-row justify="center" align="center">
 							<v-col cols="12" md="12">
+								<v-img src="./img/tela_presenca/link3_mapa1_slide3.png" />
+							</v-col>
+						</v-row>
+					</v-sheet>
+				</v-carousel-item>
+				
+				<v-carousel-item>
+					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end">
+						<v-row justify="center" align="center">
+							<v-col cols="12" md="12">
 								<v-img src="./img/tela_presenca/link3_mapa1_slide4.png" />
 							</v-col>
 						</v-row>
@@ -640,7 +775,7 @@
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end">
 						<v-row justify="center" align="center">
 							<v-col cols="12" md="12">
-								<v-img src="./img/tela_presenca/link3_mapa1_slide3.png" />
+								<v-img src="./img/tela_presenca/link3_mapa1_slide5.png" />
 							</v-col>
 						</v-row>
 					</v-sheet>
@@ -758,8 +893,8 @@
 
 		<v-row class="mt-n0 reveal fade-bottom">
 			<v-col cols="12" md="8">
-				<h3 class="texto_azul_claro">
-					ESPAÇO EINSTEIN
+				<h3 style="text-transform:uppercase" class="texto_azul_claro">
+					Espaço Esporte e Reabilitação
 				</h3>
 				
 			</v-col>
@@ -956,6 +1091,10 @@
 							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+					
+					
+					
 
 			</v-col>
 			
@@ -1675,6 +1814,7 @@
 					</ul>
 					</v-card-text>
 					<v-card-text>
+
 						<v-btn 
 							type="button"
 							style="letter-spacing: normal;"
@@ -1683,11 +1823,30 @@
 							rounded="pill"
 							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-							@click="isLink_1_mapa_2Visible = true; prosseguir('link_1_mapa_2')"
-							
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = true;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_1_mapa_2')"
 							> 
 							SAIBA MAIS	
 						</v-btn>
+						
 					</v-card-text>
 				</v-card>
 				
@@ -1711,17 +1870,36 @@
 				</v-card-text>
 				<v-card-text>
 					<v-btn 
-						type="button"
-							style="letter-spacing: normal;" 
+							type="button"
+							style="letter-spacing: normal;"
 							density="comfortable"
-						size="large"
-						rounded="pill"
-						class="mt-n8 ml-6"
+							size="large"
+							rounded="pill"
+							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-						@click="isLink_2_mapa_2Visible = true; prosseguir('link_2_mapa_2')"
-						> 
-						SAIBA MAIS	
-					</v-btn>
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = true;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_2_mapa_2')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 				</v-card-text>
 
 				<v-card-text class="mt-n4">
@@ -1734,17 +1912,36 @@
 				</v-card-text>
 				<v-card-text>
 					<v-btn 
-						type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-						size="large"
-						rounded="pill"
-						class="mt-n8 ml-6"
+							size="large"
+							rounded="pill"
+							class="mt-n8 ml-6"
 							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-						@click="isLink_3_mapa_2Visible = true; prosseguir('link_3_mapa_2')"
-						> 
-						SAIBA MAIS	
-					</v-btn>
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = true;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_3_mapa_2')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 				</v-card-text>
 			</v-card>	
 			
@@ -2218,18 +2415,38 @@
 					</v-col>
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
+							
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_1_mapa_3Visible = true; prosseguir('link_1_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = true;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_1_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2247,17 +2464,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_2_mapa_3Visible = true; prosseguir('link_2_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = true;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_2_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2275,17 +2511,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_3_mapa_3Visible = true; prosseguir('link_3_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = true;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_3_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2303,17 +2558,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_4_mapa_3Visible = true; prosseguir('link_4_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = true;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_4_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2331,17 +2605,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_5_mapa_3Visible = true; prosseguir('link_5_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = true;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_5_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2359,17 +2652,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_6_mapa_3Visible = true; prosseguir('link_6_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = true;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_6_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -2387,17 +2699,36 @@
 					<v-col cols="12" md="5" align="center">
 						<v-card-text>
 							<v-btn 
-								type="button"
+							type="button"
 							style="letter-spacing: normal;"
 							density="comfortable"
-								size="large"
-								rounded="pill"
-								class="text-secondary mt-n8 mr-4"
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="isLink_7_mapa_3Visible = true; prosseguir('link_7_mapa_3')"
-								> 
-								SAIBA MAIS	
-							</v-btn>
+							size="large"
+							rounded="pill"
+							class="mt-n8 mr-4"
+							:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+							@click="
+							isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = true;
+							prosseguir('link_7_mapa_3')"
+							> 
+							SAIBA MAIS	
+						</v-btn>
 						</v-card-text>
 					</v-col>
 				</v-row>
@@ -3455,7 +3786,9 @@
 	const isLink_6_mapa_3Visible = ref(false)
 	const isLink_7_mapa_3Visible = ref(false)
 	const isMapa2BoxgoVisible = ref(true)
-	const isMapa2BoxspVisible = ref(false)
+	const isMapa2BoxspVisible = ref(true)
+	
+	
 
 	//Finaliza o conteúdo
 	const finishedContent = () => {
@@ -3507,7 +3840,6 @@
     }),
   }
 </script>
-
 
 <style lang="scss" scoped>
 @import '../GlobalStyles/contentGlobalStyles.css';
@@ -3601,6 +3933,11 @@ margin-top:-80px
 	width: 45%;
 }
 .box_mapas_btns {
+	border-radius: 20px;
+	text-align: left;
+	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
+}
+.box_mapas_btns_1 {
 	border-radius: 20px;
 	text-align: left;
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
@@ -3740,6 +4077,9 @@ margin-top:80px
 .box_mapas_btns{
 width:100%!important;
 }
+.box_mapas_btns_1{
+width:100%!important;
+}
 }
 
 @media screen and (max-width: 950px){
@@ -3801,6 +4141,9 @@ margin-top:80px
 .box_mapas_btns{
 width:80%!important;
 }
+.box_mapas_btns_1{
+width:80%!important;
+}
 }
 @media screen and (max-width: 768px){
 .v-card-conteudos {
@@ -3824,6 +4167,12 @@ width:80%!important;
 	background-image: none;
 }
 .box_mapas_btns {
+	border-radius: 20px;
+	text-align: left;
+	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
+	margin-top: 20px!important;
+}
+.box_mapas_btns_1 {
 	border-radius: 20px;
 	text-align: left;
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
@@ -3889,6 +4238,9 @@ height:50px;
 .box_mapas_btns{
 width:80%!important;
 }
+.box_mapas_btns_1{
+width:80%!important;
+}
 }
 @media screen and (max-width: 599px){
 
@@ -3945,6 +4297,10 @@ height:50px;
 }
 .box_mapas_btns{
 width:80%!important;
+}
+.box_mapas_btns_1{
+width:80%!important;
+margin-top: 100px!important;
 }
 }
 </style>

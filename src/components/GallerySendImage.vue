@@ -701,8 +701,7 @@
         //console.log(finalImage.value)
 
         //Envia objeto para galeria do usuário
-        appStore.appData.galeria.content.userImgs.push(newImage);
-        zoomImage()
+        //appStore.appData.galeria.content.userImgs.push(newImage);
 
         //Envia objeto para galeria do usuário
         //appStore.appData.galeria.content.userImgs.unshift(newImage);
@@ -713,17 +712,18 @@
         appStore.galleryCardKey += 1
         appStore.gallerySendImageKey += 1
 
-        /*
+        
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 
         //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'));
-        //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
         console.log('Atualizaou galeria')
-        */
+        
+        
+        zoomImage()
     }
 
     //Expõe método e constante que controlam a câmera para o parent component (GalleryModal)

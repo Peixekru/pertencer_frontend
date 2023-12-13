@@ -66,8 +66,6 @@
 
     const getImg = (index) => {
 
-        console.log(appStore.appData.glogalProgress)
-
         if (appStore.appData.glogalProgress > 0 ){
             // Carrega imagens do progresso global
             return  new URL(`../assets/img/global-prog${index + 1}.svg`, import.meta.url).href

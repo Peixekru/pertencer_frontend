@@ -948,9 +948,7 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Os voluntários têm como objetivo amenizar os efeitos do tratamento com uma palavra de conforto e
-				esperança, oferecendo suporte aos pacientes e acompanhantes, além de contribuir com o trabalho da equipe
-				multiprofissional.
+				Os voluntários têm como objetivo contribuir com o processo de humanização hospitalar por meio do contato cordial e acolhedor com pacientes e acompanhantes.
 			</p>
 		</v-card-text>
 		
@@ -1183,7 +1181,7 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein contribuindo com à equipe multiprofissional e pacientes do Hospital M’Boi Mirim. 
+				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein contribuindo com a humanização hospitalar, oferecendo acolhimento a pacientes e acompanhantes.
 			</p>
 		</v-card-text>
 		

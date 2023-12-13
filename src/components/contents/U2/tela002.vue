@@ -266,19 +266,12 @@
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
-						<p>
+						<p class="mt-4">
 							Se você quiser conhecer alguns exemplos, acesse o tópico
 						</p>
-						<a 
-						class="texto_azul" 
-						style="text-decoration:none;" 
-						href="./tela_ensino/encontros_e_eventos.pdf" 
-						target="_blank"
-						>
-							<p class="mt-4">
-								<strong>Encontros e Eventos para Líderes</strong>
-							</p>
-						</a>
+						<p class="mt-4">
+							<a class="texto_azul" style="text-decoration:none;" href="./tela_desenvolvimento/encontros_e_eventos.pdf" target="_blank"><strong>Encontros e Eventos para Líderes</strong></a>
+						</p>
 					</v-col>
 				</v-row>
 			</v-window-item>
@@ -294,21 +287,11 @@
 						</p>
 					</v-col>
 					<v-col cols="12" md="6">
-						<p>
+						<p class="mt-4">
 							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
-						<p>
-							Para obter mais informações, acesse: 
-						<a 
-						class="texto_azul" 
-						style="text-decoration:none;" 
-						href="./tela_ensino/encontros_e_eventos.pdf" 
-						target="_blank"
-						>
-							<p class="mt-4">
-								<strong>Encontros e Eventos para Líderes</strong>
-							</p>
-						</a>
+						<p class="mt-4">
+							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
 						</p>
 					</v-col>
 				</v-row>

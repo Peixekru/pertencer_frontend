@@ -24,7 +24,7 @@ export const useAuthStore = defineStore('userAuth', {
 
             axios.post(this.serverUrl + path, data).then(function (response) {
 
-                console.log(' -> Resposta do servido: ', response);
+                console.log(' -> Resposta do servidor: ', response)
 
                 //Login
                 if (path == '/login') {
@@ -42,6 +42,8 @@ export const useAuthStore = defineStore('userAuth', {
                     sessionStorage.setItem('loginState', true); // Persiste o estado de login no SessionStorage
                     sessionStorage.setItem('userMail', response.data.email); // Persiste o e-mail no SessionStorage
 
+                    console.log(' -> Objeto recebido do servidor no Login: ', data)
+
                     //Encaminha para home ou primeiro acesso     
                     if (data.firstAccess < 5 || data.firstAccess != 'finished') { self.$router.push('/welcome') }
                     else { self.$router.push('home') }
@@ -51,7 +53,9 @@ export const useAuthStore = defineStore('userAuth', {
                 else if (path == '/chgpsw') {
                     //console.log(response.data.result)
                     if (response.data.result == 'OK') {
-                        //console.log('OK - OK')
+                        
+                        console.log(' -> Status da alteração de senha: ', response.data.result)
+
                         appStore.isChangedPassword = true;
                         //User Feedback
                         appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')

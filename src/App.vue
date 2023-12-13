@@ -179,7 +179,7 @@
 		const userId = JSON.parse(localStorage.getItem('userId'));
 		apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
-		console.log('primeiro acesso ->' + appStore.appData.firstAccess)
+		console.log('Status do primeiro acesso -> ' + appStore.appData.firstAccess)
 	}
 
 	//Sair do sistema

@@ -13,7 +13,8 @@ export const useApiStore = defineStore('api', {
         async usePost(path, data) {
             axios.post(this.serverUrl, {"userid": path, info: JSON.stringify(data)} 
             ).then(function (response) {
-                console.log(' - Tudo certo com o envio de: ', response);
+                //console.log(response);
+                console.log('-> Objeto atualizado e enviado', data);
             })
             .catch(function (error) {
                 console.error(error);

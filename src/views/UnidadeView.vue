@@ -190,7 +190,6 @@
 	const loadObject = ( unidade, contentIndex, index, content ) => {
 
 		content.selected = 1
-		console.log(content.selected)
 
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')

@@ -154,36 +154,64 @@
 	v-show="isContent11Visible"
 	id="content11" 
 	width="100%" 
+	min-height="650"
 	elevation="6"
 	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 v-card-conteudos_competencias" 
 	style="z-index:10;"
 	>
 		<v-img class="mx-auto mt-4 grade_header" src="./img/tela_desempenho/grade_header_branco.png" />
 		
-		<v-row class="mt-2">
-		<v-col cols="12" md="7">
+		<v-row class="mt-16 mb-16" >
+		<v-col cols="12" md="7" align-self="center">
 			<h2 class="mt-n4 font-weight-bold texto_azul reveal fade-left">
-				O que são competências e como elas são avaliadas
+				O que são competências?
 			</h2>
 			<p class="mt-4 reveal fade-left">
-				Suas competências são as características que você precisa ter para realizar determinada atividade. O Einstein tem um Programa de Competências para todos os cargos, com competências definidas de acordo com os grupos profissionais e níveis de complexidade. 
+				As competências abrangem Conhecimentos, Habilidades e Atitudes orientando a maneira como os profissionais realizam suas funções e contribuem para os objetivos estratégicos das organizações.
 			</p>
 			<p class="mt-4 reveal fade-left">
-				Há duas formas de avaliar as competências: uma formal e outra informal. 
+				A combinação de Conhecimentos, Habilidades e Atitudes impulsiona o desenvolvimento das Competências.
 			</p>
 			
-			<p class="mt-4 reveal fade-left">
-				A avaliação formal inclui: autoavaliação, avaliação parcial e avaliação final. É o momento de formalizar o desempenho.
-			</p>
-			
-			<p class="mt-4 reveal fade-left">
-				A avaliação informal é realizada continuamente, nos diálogos que você tem com seu gestor no dia a dia, ao longo do ano. 
-			</p>
-			
-			<p class="mt-4 reveal fade-left">
-				Vamos explicar, em linhas gerais, como são feitas essas avaliações.
-			</p>
-			
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class="mt-4 show_desktop"
+				style="letter-spacing:normal;"
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				href="./tela_desempenho/o_que_sao_competencias.pdf" target="_blank"
+				> 
+					Clique aqui e saiba mais
+				</v-btn>
+				
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class="pa-2 mt-4 show_1277"
+				style="letter-spacing:normal;"
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				href="./tela_desempenho/o_que_sao_competencias.pdf" target="_blank"
+				> 
+					Clique aqui e saiba mais
+				</v-btn>
+				
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="medium"
+				rounded="pill"
+				class="pa-2 mt-4 show_mobile"
+				style="letter-spacing:-1px;"
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				href="./tela_desempenho/o_que_sao_competencias.pdf" target="_blank"
+				> 
+					Clique aqui e saiba mais
+				</v-btn>
+	
 		</v-col>
 		<v-col cols="12" md="5" class="img_competencias">
 		<v-img height="650" class="mx-auto mt-10" src="./img/tela_desempenho/img_competencias.png" />

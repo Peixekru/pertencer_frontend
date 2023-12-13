@@ -545,10 +545,7 @@
 							<v-row align="start" justify="left" class="mt-0">
 								
 								<p class="">
-									Em 60 anos de existência do Hospital Israelita Albert Einstein, inúmeras descobertas vêm transformando a realidade da medicina, gerando um círculo virtuoso de inovação e qualidade de vida, que beneficia cada indivíduo e a sociedade.
-								</p>
-								<p class="mt-4">
-									Esse círculo virtuoso é um ecossistema de saúde integrado, com quatro amplos campos de atuação: Assistência, Ensino e Educação, Pesquisa e Inovação e Responsabilidade Social.
+									O Einstein é uma plataforma de assistência, ensino e educação, pesquisa e inovação e responsabilidade social que integra centenas de atividades e trabalha para a melhoria de acesso e qualidade da saúde no País.
 								</p>
 								<p class="mt-4">
 									<strong>Vamos conhecer melhor cada campo de atuação? </strong>

@@ -41,44 +41,73 @@ export function useProgressCalc(select, i) {
 
 }
 
-export function useStartProgress(){
+export function useStartProgress(finalContent){
 
     const appStore = useAppStore() 
 
-    let total = 0
-    let progressNum = 0
+    if (finalContent === undefined){
+    
+        let total = 0
+        let progressNum = 0
+    
+        for (
+            let a = 0 ; 
+            a < appStore.appData.unidades.length; 
+            a++) {
+                total += useProgressCalc('total', a)
+                progressNum += useProgressCalc('progressNum', a)
+        }
+    
+        // calculo progresso do curso (Gota) 
+        const totalProgress = (progressNum * 100) / total
+    
+        if (totalProgress == 0 ) {appStore.appData.glogalProgress = 0.1} else{
+            appStore.appData.glogalProgress = totalProgress
+        }
+    
+        let audio = new Audio('./assets/progressAlert.mp3');
+        audio.play();
+    
+    
+        //Controla animação do progresso global
+        const progressEl = document.querySelector('.GlobalProgress');
+        progressEl.classList.add('animate__animated', 'animate__swing');
+    
+        progressEl.addEventListener('animationend', () => {
+            progressEl.classList.remove('animate__animated', 'animate__swing');
+        }); 
+    
+        //Atualiza o status do objeto atual
+        appStore.currentSelectedObject.status = 1
+    
+        //Marca o conteúdo atual como concluído e libera o seguinte
+        useBlockStatus(appStore.currentObjectIndex)
 
-    for (
-        let a = 0 ; 
-        a < appStore.appData.unidades.length; 
-        a++) {
-            total += useProgressCalc('total', a)
-            progressNum += useProgressCalc('progressNum', a)
+    } else {
+
+        console.log('É a última tela')
+
+        appStore.appData.glogalProgress = 100
+        
+
+        let audio = new Audio('./assets/progressAlert.mp3');
+        audio.play();
+
+        //Controla animação do progresso global
+        const progressEl = document.querySelector('.GlobalProgress');
+        progressEl.classList.add('animate__animated', 'animate__swing');
+    
+        progressEl.addEventListener('animationend', () => {
+            progressEl.classList.remove('animate__animated', 'animate__swing');
+        }); 
+    
+        //Atualiza o status do objeto atual
+        appStore.currentSelectedObject.status = 1
+    
+        //Marca o conteúdo atual como concluído e libera o seguinte
+        useBlockStatus(appStore.currentObjectIndex)
     }
 
-    // calculo progresso do curso (Gota) 
-    const totalProgress = (progressNum * 100) / total
-
-    if (totalProgress == 0 ) {appStore.appData.glogalProgress = 0.1} else{
-        appStore.appData.glogalProgress = totalProgress
-    }
-
-    let audio = new Audio('./assets/progressAlert.mp3');
-    audio.play();
-
-
-    //Controla animação do progresso global
-    const progressEl = document.querySelector('.GlobalProgress');
-    progressEl.classList.add('animate__animated', 'animate__swing');
-
-    progressEl.addEventListener('animationend', () => {
-        progressEl.classList.remove('animate__animated', 'animate__swing');
-    }); 
-
-    //Atualiza o status do objeto atual
-    appStore.currentSelectedObject.status = 1
-
-    //Marca o conteúdo atual como concluído e libera o seguinte
-    useBlockStatus(appStore.currentObjectIndex)
+    console.log(appStore.appData.glogalProgress)
 
 }
