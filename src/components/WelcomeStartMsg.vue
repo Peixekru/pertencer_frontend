@@ -46,7 +46,7 @@
 
             <v-sheet>
                 <v-card-text>
-                    <p class="text-h6 font-weight-bold">Olá! Serei o seu guia nesta plataforma</p>
+                    <p class="text-h6 font-weight-bold">Olá, eu sou a gota de excelência Einstein. Serei sua guia nesta plataforma.</p>
                     <p class="mt-4">Estou aqui para informar, facilitar e garantir uma experiência incrível para você. <span class="font-weight-bold">Pronto para começar?</span></p>
                     <p class="mt-4">Clique em <span class="font-weight-bold">“INICIAR JORNADA"</span> e aproveite ao máximo tudo o que preparamos para seu primeiro momento de aprendizado conosco.</p>
                 </v-card-text>

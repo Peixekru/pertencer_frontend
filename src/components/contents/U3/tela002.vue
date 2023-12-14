@@ -8,8 +8,22 @@
 		<v-img class="show_desktop" src="./img/tela_etica/header.png" />
 		<v-img class="show_1277" src="./img/tela_etica/header.png" />
 		<v-img class="show_mobile" src="./img/tela_etica/header_mob.png" />
-		<v-img src="./img/tela_etica/header_text.svg" class="header_text"
-			title="ÉTICA E COMPLIANCE. Esse lema traduz o jeito Einstein de ser e reforça o compromisso que está presente desde a sua fundação:SEMPRE VALORIZAR E PRIORIZAR A CONDUTA ÉTICA EM TODAS AS SUAS ATIVIDADES." />
+		
+			
+	<v-row class="mx-auto mt-n10 header_text" align="center">
+		<v-col cols="12" md="7" class="" align-self="center">
+			<v-img width="100%" src="./img/tela_etica/header_text.svg" class="" title="ÉTICA E COMPLIANCE. O Einstein possui princípios, valores e os mais altos padrões éticos que direcionam a conduta esperada dos colaboradores em todas as suas atividades. Os Valores Judaicos, Visão, Missão e Propósito do Einstein, são premissas que sustentam sua base, ou seja, é no que o Einstein acredita e traduz o jeito Einstein de ser e reforça o compromisso que está presente desde a sua fundação: VALORIZAR E PRIORIZAR A CONDUTA ÉTICA EM TODAS AS SUAS ATIVIDADES." />
+		</v-col>
+
+		<v-col cols="12" md="2" class="mx-auto">
+			<v-img width="100%" src="./img/tela_etica/img_header.png" class="mx-auto show_desktop" title="Sou Einstein. Sou ético" />
+			<v-img width="100%" src="./img/tela_etica/img_header.png" class="mx-auto show_1277" title="Sou Einstein. Sou ético" />
+			
+		</v-col>
+	</v-row>
+			
+			<v-img src="./img/tela_etica/img_header.png" class="mx-auto show_mobile selo_mobile" title="Sou Einstein. Sou ético" />
+
 	</v-card>
 	<!-- header -->
 	
@@ -55,7 +69,7 @@
 						<template v-if="!isCard01Visible">
 							<v-img 
 							src="./img/tela_etica/card_1_nome.png" 
-							width="250"
+							width="240"
 							max-height="250"
 							class="animate__animated animate__fadeInDown"
 							/>
@@ -69,7 +83,16 @@
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp pa-8">
-								Compliance existe para garantir a conformidade com as leis, normas e com a boa conduta. Estar em Compliance é fazer o que é certo e agir conforme as regras, atendendo ao que determinam políticas internas, leis e regulamentos aplicáveis.<br><br>A Diretoria de Compliance foi criada para nos dar a segurança de que os aspectos éticos e morais estejam descritos e cumpridos dentro da atividade normal do nosso dia a dia.		
+								<ul style="text-align:left" class="ml-4">
+									<li class="ml-n4 mb-4" style="list-style-type: none">Estar em Compliance é fazer o que é certo!</li>
+									
+									<li class="mt-2">Significa estar de acordo com as normas legais e regulamentares, políticas e diretrizes para a instituição.</li>
+									
+									<li class="mt-2">É a criação de um ambiente e uma cultura baseada em princípios e valores voltados para a ética.</li>
+									
+									<li class="ml-n4 mb-4 mt-2" style="list-style-type: none">O Einstein tem uma Diretoria de Auditoria, Gestão de Riscos e Compliance que foi criada para dar segurança a instituição por meio de um bom ambiente de controles internos, gerenciamento de riscos e suporte a dilemas éticos que ocorrem nas atividades do dia a dia.</li>
+									
+								</ul>
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -94,7 +117,7 @@
 						<template v-if="!isCard02Visible">
 							<v-img 
 							src="./img/tela_etica/card_2_nome.png" 
-							width="210"
+							width="250"
 							max-height="250"
 							class="animate__animated animate__fadeInDown"
 							/>
@@ -108,7 +131,7 @@
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp pa-8">
-								Nossa atuação é voltada para ser um ponto de apoio às diversas áreas da SBIBAE em relação aos dilemas éticos.<br><br>Buscamos criar um ambiente de trabalho mais íntegro e ético por meio da prevenção de atitudes antiéticas, transformação da cultura e disseminação de temas relacionados à ética.
+								A Diretoria de Auditoria, Gestão de Riscos e Compliance atua para criar um ambiente de trabalho mais íntegro e ético por meio do fortalecimento da cultura de ética e disseminação de temas relacionados à ética para contribuir para a excelência do Einstein.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -167,7 +190,7 @@
 			Como é a estrutura do Programa de Ética e Compliance?  
 		</h1>
 		<p class="mt-4 reveal fade-left">
-			O Programa de Ética e Compliance do Einstein é composto por uma estrutura baseada em sete pilares, presentes na mandala que contém os princípios norteadores do Programa.
+			O Einstein se preocupa com a ética, por isso tem um Programa de Ética e Compliance que está dividido em 7 pilares presentes na mandala, contendo os princípios norteadores do Programa. Conheça os 7 pilares:
 		</p>
 		<v-row class="mx-auto mt-4">
 			<v-col cols="12" md="12"  class=" reveal fade-right">
@@ -236,7 +259,7 @@
 												1º Estrutura de Compliance:
 											</h2>
 											<p class="mt-4">
-												Temos uma estrutura independente que tem o total apoio da Alta Administração. O principal objetivo deste pilar é estimular um bom ambiente de controle interno, e fortalecer e estimular a conduta ética por parte de todos os públicos que se relacionam com o Einstein.
+												Possui estrutura independente que tem o total apoio da Alta Administração. O principal objetivo deste pilar é estimular um bom ambiente de controle interno, fortalecer e estimular a conduta ética por parte de todos os públicos que se relacionam com o Einstein.
 											</p>
 								</v-col>
 							</v-row>
@@ -346,7 +369,7 @@
 										6º Canal de Denúncias:
 									</h2>
 									<p class="mt-4">
-										 Permite que qualquer pessoa (interna ou externa) relate eventuais violações ao Manual de Conduta Ética.
+										 É uma ferramenta disponível a qualquer pessoa (interna e externa) para reportar possíveis irregularidades, desvios de comportamento e violações ao <strong>Manual de Conduta Ética</strong>.
 									</p>
 								</v-col>
 							</v-row>
@@ -867,38 +890,62 @@
 					</p>
 				</v-card>
 			</v-col>
-			<v-col cols="12" md="3" class="">
+			<v-col cols="12" md="12" class="">
+				<i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo_cards" aria-hidden="false" ></i>
 				<v-card 
 				elevation="2"
 				style="z-index:8;border-radius:15px;"
-				class="mt-4 pa-8 d-flex flex-column justify-center align-center cursor-pointer v-cards_cont6"
+				class="mt-n4 pa-8 d-flex flex-column justify-center align-center cursor-pointer"
 				align="left"
 				>
 					<p>
-						É um importante documento que norteia a conduta de colaboradores, profissionais e todos que atuam em nome da Sociedade. 
+						O <strong>Manual Institucional Diretrizes de Conduta Ética</strong> é um importante documento que tem o objetivo de nortear o comportamento dos colaboradores, profissionais e todos que atuam em nome do Einstein.
 
 					</p>
 				</v-card>
 
 			</v-col>
-			<v-col cols="12" md="3"  class="">
+			<v-col cols="12" md="12"  class="">
+				<i class="mdi-triangle mdi v-icon v-theme--light v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo_cards" aria-hidden="false" ></i>
 				<v-card 
 				elevation="2"
 				style="z-index:8;border-radius:15px;"
-				class="mt-4 pa-7 d-flex flex-column justify-center align-center cursor-pointer v-cards_cont6"
+				class="mt-n4 pa-7 d-flex flex-column justify-center align-left cursor-pointer"
 				align="left"
-				
 				>
+				<v-row class="mx-auto mt-0">
+					<v-col cols="12" md="6">
+						<p>
+							Ele aborda os compromissos éticos do Einstein, as responsabilidades e como devemos agir diante das mais diversas situações do dia a dia.
+						</p>
+						<p class="mt-4">
+							O Manual de Ética apresenta como o <strong>Einstein se preocupa com a ética</strong> em suas atividades e estabelece <strong>qual o comportamento esperado de</strong> cada colaborador.
+						</p>
+					</v-col>
+					<v-col cols="12" md="6">
 					<p>
-						Ele aborda os compromissos éticos do Einstein, as responsabilidades e como devemos agir no diante das mais diversas situações do dia a dia.
+						Nele são abordados temas como:
 					</p>
+					<ul class="ml-8 mt-4">
+						<li>Ambiente de trabalho</li>
+						<li>Relacionamento com a Sociedade e o Meio Ambiente</li>
+						<li>Uso e Proteção de Ativos</li>
+						<li>Informações Confidenciais</li>
+						<li>Conflito de Interesses</li>
+						<li>Internet e Mídias Sociais</li>
+						<li>Fraude e Corrupção</li>
+						<li>Brindes e Gratificações</li>
+					</ul>
+					</v-col>
+				</v-row>
 				</v-card>
 
-			</v-col><v-col cols="12" md="6" class="">
+			</v-col><v-col cols="12" md="12" class="">
+				<i style="color:#62C9CE!important" class="mdi-triangle mdi v-icon v-icon--size-x-large text-surface animate__animated animate__fadeInUp triangulo_cards" aria-hidden="false" ></i>
 				<v-card 
 				elevation="2"
 				style="z-index:8;border-radius:15px;background-color:#62C9CE"
-				class="mt-4 pa-10 d-flex flex-column justify-center align-center cursor-pointer v-cards_cont6"
+				class="mt-n4 pa-10 d-flex flex-column justify-center align-center cursor-pointer"
 				align="left"
 				
 				>
@@ -1042,11 +1089,11 @@
 				</p>
 				
 				<p class="mt-3 reveal fade-left">
-					<a style="text-decoration:none;" class="texto_azul" href="https://docinst.einstein.br/Search" target="_blank"><strong>CLIQUE AQUI</strong></a> PARA ACESSAR A POLITICA
+					<a style="text-decoration:none;" class="texto_azul" href="https://docinst.einstein.br/Search" target="_blank"><strong>CLIQUE AQUI</strong></a> PARA ACESSAR A POLÍTICA.
 				</p>
 				
 				<p class="mt-3 reveal fade-left">
-					Para acessar a política no sistema DM Docs, esteja em um ambiente Einstein ou ative a VPN.
+					Para acessar os normativos contidos no sistema DMDocs é necessário estar logado na rede Einstein, ou ativar a VPN.
 				</p>
 
 			</v-col><strong></strong>
@@ -1116,28 +1163,7 @@
 					Assista ao vídeo para saber como utilizar o <a class="texto_branco" href="https://www.canaldedenuncias.com.br/einstein/" target="_blank"><strong>Canal de Denúncias</strong></a>.
 				</p>
 				
-				<v-card 
-				elevation="0"
-				style="z-index:8;border-radius:15px;"
-				class="mt-4 pa-2 d-flex flex-column justify-center align-center cursor-pointer bg-transparent v-card_video"
-				align="left"
-				>	
 				
-				<v-row class="mx-auto">
-					<v-col cols="12" md="2" align="left">
-						<v-img class="mx-auto ico_video" src="./img/tela_etica/cont8_ico.png" />
-					</v-col>
-					<v-col cols="12" md="10" align="left">
-						<p style="font-size:1.1em;text-transform:uppercase" class="font-weight-bold texto_branco">
-							E lembre-se:
-						</p>
-						<p style="font-size:1.1em;text-transform:uppercase;color:#5BC6E8" class="font-weight-bold">
-							Se alguma coisa não for bem... use o 0800-741-0004.	
-						</p>
-					</v-col>
-				</v-row>
-					
-				</v-card>
 
 			</v-col>
 			<v-col cols="12" md="7" align="right" class="reveal fade-right">
@@ -1147,6 +1173,37 @@
 				>
 					<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/885695686?h=03eecda7cc&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px" title="4.3.1 - Ética e Compliance"></iframe></div>
 				</v-container>
+			</v-col>
+			<v-col cols="12" md="2" align="right" class="reveal fade-right">
+			</v-col>
+			<v-col cols="12" md="8" align="right" class="reveal fade-right">
+				<v-card 
+				elevation="0"
+				style="z-index:8;border-radius:15px;"
+				class="mt-4 pa-8 d-flex flex-column justify-center align-center cursor-pointer bg-transparent v-card_video"
+				align="left"
+				>	
+				
+				<v-row class="mx-auto">
+					<v-col cols="12" md="2" align="left">
+						<v-img class="mx-auto ico_video" src="./img/tela_etica/cont8_ico.png" />
+					</v-col>
+					<v-col cols="12" md="10" align="left">
+						<p style="font-size:1.1em;text-transform:uppercase" class="font-weight-bold texto_branco">
+							IMPORTANTE:
+						</p>
+						<p style="font-size:1em;text-transform:uppercase;color:#5BC6E8" class="font-weight-bold">
+							Saiba que ao reportar qualquer irregularidade o denunciante: 
+						</p>
+						<ul style="font-size:1em;text-transform:uppercase;color:#5BC6E8" class="ml-8" >
+							<li class="mt-2">Não sofrerá retaliação</li>
+							<li class="mt-2">É possível denunciar de forma anônima</li>
+							<li class="mt-2">As informações serão tratadas com confidencialidade e imparcialidade na apuração</li>
+						</ul>
+					</v-col>
+				</v-row>
+					
+				</v-card>
 			</v-col>
 		</v-row>
 		
@@ -1403,9 +1460,9 @@ margin-top:200px!important;
 }
 .header_text {
 	position: absolute;
-	top: 15%;
+	top: 18%;
 	left: 6%;
-	width: 42%;
+	width: 100%;
 }
 .grade_header {
 	max-width: 70%;
@@ -1512,6 +1569,11 @@ border: solid white 1px;
 	right: 1%;
 	transform: translate(0, -50%);
 }
+.triangulo_cards{
+position:relative;
+left:50%;
+top:-8px
+}
 @media screen and (max-width: 1277px){
 .v-cards_cont6{
 height: 300px;
@@ -1546,6 +1608,41 @@ height: 300px;
 .triangulo-tool-tip3 {
     top: -10%;
     left: 41%;
+}
+.header_text {
+	position: absolute;
+	top: 18%;
+	left: 6%;
+	width: 100%;
+}
+.cards_icones{
+height: 140px;
+}
+}
+@media screen and (max-width: 950px){
+.header_text {
+	position: absolute;
+	top: 18%;
+	left: 6%;
+	width: 80%;
+}
+.show_desktop{
+display:none
+}
+.show_1277{
+display:none
+}
+.show_mobile{
+display:block
+}
+.selo_mobile{
+    width: 15%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.cards_icones{
+height: auto;
 }
 }
 @media screen and (max-width: 768px){
@@ -1592,6 +1689,12 @@ width: 20%
     top: -10%;
     left: 43%;
 }
+.header_text {
+	position: absolute;
+	top: 18%;
+	left: 6%;
+	width: 85%;
+}
 }
 @media screen and (max-width: 500px){
 .cards_icones{
@@ -1633,6 +1736,12 @@ width: 20%
 .triangulo-tool-tip3 {
     top: 30%;
     left: 24%;
+}
+.header_text {
+	position: absolute;
+	top: 18%;
+	left: 6%;
+	width: 90%;
 }
 }
 </style>

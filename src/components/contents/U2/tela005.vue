@@ -137,7 +137,7 @@
 				<v-col cols="12" md="4">
 					<v-card-text class="pl-0 pr-0 reveal fade-right texto_preto">
 						<p style="text-align:left">
-							Para isso, são utilizadas metodologias e ferramentas de captação de candidatos com o objetivo de identificar profissionais com qualificações compatíveis com os requisitos <strong>técnicos</strong> e <strong>comportamentais</strong> que contribuam com a constante busca da Sociedade em <strong>ser líder no segmento da Saúde</strong>.
+							Para isso, são utilizados filtros e ferramentas que apoiam na triagem e identificam profissionais com qualificações compatíveis com os requisitos <strong>técnicos</strong> e <strong>comportamentais</strong> que contribuam com a constante busca da Sociedade em <strong>ser líder no segmento da Saúde</strong>.
 						</p>
 						<v-img height="30px" class="mx-auto" src="./img/tela_oportunidades/rol2_barra.svg" />
 					</v-card-text>
@@ -181,7 +181,7 @@
 				<v-col cols="12" md="4">
 					<v-card-text class="pl-0 pr-0 reveal fade-right texto_preto">
 						<p style="text-align:left">
-							Sempre, porém, buscando manter em seu quadro de profissionais a pluralidade de gênero, deficiência, origem, religião, cor da pele, etnia, orientação sexual, identidade de gênero, estado civil, idade, condição de saúde ou reprodutiva.
+							Sempre, porém, buscando manter em seu quadro de profissionais a pluralidade.
 
 						</p>
 						<v-img height="30px" class="mx-auto" src="./img/tela_oportunidades/rol4_barra.svg" />
@@ -193,7 +193,7 @@
 			</v-row>
 		</v-container>
 		
-		<v-card-text class="mt-n10 reveal fade-bottom" style="text-align:center">
+		<v-card-text class="mt-n8reveal fade-bottom" style="text-align:center">
 			<h3 class="font-weight-bold my-6 texto_preto">
 				O cuidado e o respeito às pessoas e à diversidade estão no DNA do Einstein.
 			</h3>
@@ -201,7 +201,7 @@
 		</v-card-text>
 		<v-card class="box_dicas pl-0 pr-0 mt-n16 reveal fade-bottom" style="width: 40%">
 				<v-card-text>
-					<span class="mdi mdi-link-variant box_dicas_icon"></span> Acesse a plataforma <a href="https://sou.einstein.br/documentos/rh-administrativo/" target="_blank"><strong>Sou Einstein</strong></a> para conhecer a nossa política completa.  
+					<span class="mdi mdi-link-variant box_dicas_icon"></span> Acesse a plataforma <a class="texto_azul" style="text-decoration:none;" href="https://sou.einstein.br/documentos/rh-administrativo/" target="_blank"><strong>Sou Einstein</strong></a> para conhecer a nossa política completa.  
 				</v-card-text>
 			</v-card>
 

@@ -872,7 +872,7 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				A Unidade Morumbi ampliou o atendimento em medicina preventiva e reabilitação, com a criação de infraestrutura ambulatorial e atendimento integrado e multiprofissional. E lá os Voluntários estão sempre a postos para dar todo o apoio que os pacientes necessitam. 
+				A Unidade Morumbi ampliou o atendimento em medicina preventiva e reabilitação, com a criação de infraestrutura ambulatorial e atendimento integrado e multiprofissional. Os voluntários têm como objetivo contribuir com o processo de humanização hospitalar por meio do contato cordial e acolhedor com pacientes e acompanhantes. 
 
 			</p>
 		</v-card-text>
@@ -948,7 +948,7 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Os voluntários têm como objetivo contribuir com o processo de humanização hospitalar por meio do contato cordial e acolhedor com pacientes e acompanhantes.
+				Os voluntários têm como objetivo amenizar os efeitos do tratamento com uma palavra de conforto e esperança, oferecendo suporte aos pacientes e acompanhantes, além de contribuir com o trabalho da equipe Multiprofissional.
 			</p>
 		</v-card-text>
 		
@@ -1145,7 +1145,7 @@
 	
 	<!--Grafisrmos "Triangulo" do conteúdo 6-->
 	<v-container 
-	v-if="isContent07Visible" 
+	v-if="isContent08Visible" 
 	class="d-flex justify-center mt-n12 mb-4"
 	>
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
@@ -1177,6 +1177,83 @@
 			</v-col>
 			<v-col cols="12" md="4">
 				<v-img class="fadeInDown" src="./img/tela_voluntariado/onde_atuamos15.png" />
+			</v-col>
+		</v-row>
+		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
+			<p class="mt-4 texto_preto">
+				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein contribuindo com à equipe multiprofissional e pacientes do Hospital M’Boi Mirim. 
+			</p>
+		</v-card-text>
+		
+		<!--Btn final-->
+		<v-container class="d-flex justify-center mb-4">
+			<v-sheet 
+			color="transparent"
+			class="mb-4"
+			width = "auto"
+			>
+				<v-img
+				width="40"
+				height="60"
+				src="../GlobalStyles/img/gota-icon.svg"
+				class=" mt-8 mb-4 mx-auto"
+				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
+				/>
+
+				<v-btn 
+				type="button"
+				density="comfortable"
+				size="large"
+				rounded="pill"
+				class=""
+				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+				@click="isContent08aVisible = true; prosseguir('content08a')"
+				> 
+					Prosseguir	
+				</v-btn>
+			</v-sheet>
+		</v-container>
+
+	</v-card>
+
+	<!-- conteúdo 08 -->
+	
+		<!-- conteúdo 08a -->
+	
+	<!--Grafisrmos "Triangulo" do conteúdo 8a-->
+	<v-container 
+	v-if="isContent08aVisible" 
+	class="d-flex justify-center mt-n12 mb-4"
+	>
+		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
+			aria-hidden="true"></i>
+	</v-container>
+
+	
+	<v-card 
+	v-show="isContent08aVisible"
+	id="content08a" 
+	width="100%" 
+	elevation="6"
+	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
+	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
+	>
+		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
+
+		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
+			<p class="mt-4">
+				<strong>Hospital Municipal Aparecida de Goiânia</strong>
+			</p>
+		</v-card-text>
+		<v-row class="mt-n0 reveal fade-bottom">
+			<v-col cols="12" md="4">
+				<v-img class="fadeInDown" src="./img/tela_voluntariado/onde_atuamos19.png" />
+			</v-col>
+			<v-col cols="12" md="4">
+				<v-img class="fadeInDown" src="./img/tela_voluntariado/onde_atuamos20.png" />
+			</v-col>
+			<v-col cols="12" md="4">
+				<v-img class="fadeInDown" src="./img/tela_voluntariado/onde_atuamos21.png" />
 			</v-col>
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
@@ -1460,6 +1537,7 @@
 	const isContent06Visible = ref(false)
 	const isContent07Visible = ref(false)
 	const isContent08Visible = ref(false)
+	const isContent08aVisible = ref(false)
 	const isContent09Visible = ref(false)
 	const isContent10Visible = ref(false)
 	const isContent11Visible = ref(false)

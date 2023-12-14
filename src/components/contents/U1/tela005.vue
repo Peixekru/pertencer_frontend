@@ -296,21 +296,221 @@
 				<img width="300" class="mt-6 show_mobile" src="./img/tela_presenca/mapa_01_mobile.png" usemap="#image-map_mobile">
 
 				<map name="image-map">
-					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="296,104,29" shape="circle">
-					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="571,302,27" shape="circle">
-					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="571,104,26" shape="circle">
+					<area style="cursor:pointer"
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = true;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_6_mapa_1')"
+					
+					target="" alt="goiania" title="goiania" coords="296,104,29" shape="circle">
+					
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = true;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_7_mapa_1')" 
+					
+					target="" alt="rio de janeiro" title="rio de janeiro" coords="571,302,27" shape="circle">
+					
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = true;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_8_mapa_1')"
+					
+					target="" alt="belo horizonte" title="belo horizonte" coords="571,104,26" shape="circle">
 				</map>
 				
 				<map name="image-map_1277">
-					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="222,78,19" shape="circle">
-					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="428,228,19" shape="circle">
-					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="431,77,19" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = true;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_6_mapa_1')"
+					
+					target="" alt="goiania" title="goiania" coords="222,78,19" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = true;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_7_mapa_1')"
+					
+					target="" alt="rio de janeiro" title="rio de janeiro" coords="428,228,19" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = true;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_8_mapa_1')"
+					
+					target="" alt="belo horizonte" title="belo horizonte" coords="431,77,19" shape="circle">
 				</map>
 				
 				<map name="image-map_mobile">
-					<area style="cursor:pointer" @click="isLink_6_mapa_1Visible = true; prosseguir('link_6_mapa_1')" target="" alt="goiania" title="goiania" coords="148,50,17" shape="circle">
-					<area style="cursor:pointer" @click="isLink_7_mapa_1Visible = true; prosseguir('link_7_mapa_1')" target="" alt="rio de janeiro" title="rio de janeiro" coords="285,151,12" shape="circle">
-					<area style="cursor:pointer" @click="isLink_8_mapa_1Visible = true; prosseguir('link_8_mapa_1')" target="" alt="belo horizonte" title="belo horizonte" coords="286,52,16" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = true;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_6_mapa_1')"
+					
+					target="" alt="goiania" title="goiania" coords="148,50,17" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = true;
+							isLink_8_mapa_1Visible = false;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_7_mapa_1')"
+					
+					target="" alt="rio de janeiro" title="rio de janeiro" coords="285,151,12" shape="circle">
+					<area style="cursor:pointer" 
+					
+					@click="isLink_1_mapa_1Visible = false; 
+							isLink_2_mapa_1Visible = false; 
+							isLink_3_mapa_1Visible = false;
+							isLink_4_mapa_1Visible = false;
+							isLink_5_mapa_1Visible = false;
+							isLink_6_mapa_1Visible = false;
+							isLink_7_mapa_1Visible = false;
+							isLink_8_mapa_1Visible = true;
+							isLink_1_mapa_2Visible = false;
+							isLink_2_mapa_2Visible = false;
+							isLink_3_mapa_2Visible = false;
+							isLink_1_mapa_3Visible = false;
+							isLink_2_mapa_3Visible = false;
+							isLink_3_mapa_3Visible = false;
+							isLink_4_mapa_3Visible = false;
+							isLink_5_mapa_3Visible = false;
+							isLink_6_mapa_3Visible = false;
+							isLink_7_mapa_3Visible = false;
+							prosseguir('link_8_mapa_1')" 
+					
+					target="" alt="belo horizonte" title="belo horizonte" coords="286,52,16" shape="circle">
 				</map>
 				
 				
@@ -412,10 +612,51 @@
 						</li>
 					</ul>
 					<v-sheet class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/morumbicsr/index.html" target="_bank"> 
-							<v-img width="60%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+						<a @click="modal_morumbi = true"> 
+							<v-img  width="60%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="60%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_morumbi" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_morumbi = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/morumbicsr/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.5 - Responsabilidade Social"
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+
+	
+					
+					
+					
+					
+					
 			</v-col>
 			<v-col cols="12" md="5">
 				<v-img class="mx-auto" src="./img/tela_presenca/map1_link1_img.png" />
@@ -424,6 +665,7 @@
 		
 		<v-sheet class="bg-transparent">
 			<v-img width="100%" class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_timeline.png" title="acontecimentos recentes. 2022. 50 novos leitos foram criados, ampliando a capacidade de operação e número de pacientes atendidos na unidade. Em julho, a unidade Morumbi recebeu o reconhecimento Magnet pela excelência de práticas e estratégias de enfermagem do mundo. O Einstein é a primeira organização da América Latina a conquistar a condição de hospital Magnet. Apenas 14 centros de saúde fora dos Estados Unidos têm essa designação. A unidade Morumbi do Einstein foi eleita, pelo terceiro ano consecutivo, um dos melhores hospitais do mundo no ranking publicado pela revista americana Newsweek. Em pesquisa feita em 27 países, o Einstein foi o único hospital brasileiro entre os 50 melhores do mundo, ocupando o 34º lugar na lista, duas posições acima da de 2021."/>
+			<v-img width="100%" class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_timeline.png" title="acontecimentos recentes. 2022. 50 novos leitos foram criados, ampliando a capacidade de operação e número de pacientes atendidos na unidade. Em julho, a unidade Morumbi recebeu o reconhecimento Magnet pela excelência de práticas e estratégias de enfermagem do mundo. O Einstein é a primeira organização da América Latina a conquistar a condição de hospital Magnet. Apenas 14 centros de saúde fora dos Estados Unidos têm essa designação. A unidade Morumbi do Einstein foi eleita, pelo terceiro ano consecutivo, um dos melhores hospitais do mundo no ranking publicado pela revista americana Newsweek. Em pesquisa feita em 27 países, o Einstein foi o único hospital brasileiro entre os 50 melhores do mundo, ocupando o 34º lugar na lista, duas posições acima da de 2021."/>
 			<v-img width="100%" class="mt-4 show_mobile" src="./img/tela_presenca/map1_link1_timeline_mobile.png" title="acontecimentos recentes. 2022. 50 novos leitos foram criados, ampliando a capacidade de operação e número de pacientes atendidos na unidade. Em julho, a unidade Morumbi recebeu o reconhecimento Magnet pela excelência de práticas e estratégias de enfermagem do mundo. O Einstein é a primeira organização da América Latina a conquistar a condição de hospital Magnet. Apenas 14 centros de saúde fora dos Estados Unidos têm essa designação. A unidade Morumbi do Einstein foi eleita, pelo terceiro ano consecutivo, um dos melhores hospitais do mundo no ranking publicado pela revista americana Newsweek. Em pesquisa feita em 27 países, o Einstein foi o único hospital brasileiro entre os 50 melhores do mundo, ocupando o 34º lugar na lista, duas posições acima da de 2021."/>
 		</v-sheet>
 
@@ -1086,20 +1328,52 @@
 			</v-col>
 			<v-col cols="12" md="5">
 				
-				<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/faculdade_cep/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+		
+					
+					<v-sheet class="bg-transparent mt-n10">
+						<a @click="modal_faculdade_cep = true"> 
+							<v-img  width="100%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="100%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
 					
-					
-					
-					
+				
+								<template>
+									<v-dialog v-model="modal_faculdade_cep" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_faculdade_cep = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/faculdade_cep/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
 
 			</v-col>
 			
 			<v-col cols="12" md="12">
-			<p class="mt-0 texto_preto fadeInLeft">
+			<p class="mt-8 texto_preto fadeInLeft">
 					O novo Centro de Ensino e Pesquisa da Sociedade Beneficente Israelita Brasileira Albert Einstein, inaugurado em 2022, ocupa uma área construída de mais de 44 mil m², adjacente ao hospital, integrando o paisagismo interno e externo. Com capacidade para cerca de 6 mil pessoas, o prédio acomoda alunos das graduações de medicina e enfermagem, docentes e pesquisadores, e além dos diversos pontos de área verde e ambientes de convivência, conta com todos os requisitos e tecnologias para se tornar uma das instituições mais avançadas da América Latina em estudos e pesquisas médicas.
 				</p>
 			</v-col>
@@ -1143,10 +1417,53 @@
 			</v-col>
 			<v-col cols="12" md="5">
 				<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/farialima/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+						<a @click="modal_farialima = true"> 
+							<v-img  width="100%" class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="100%" class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+				
+								<template>
+									<v-dialog v-model="modal_farialima" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_farialima = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/farialima/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+					
+					
+					
+					
+					
+					
+					
+					
 			</v-col>
 			
 			<v-col cols="12" md="12">
@@ -1169,12 +1486,6 @@
 			
 			<v-col cols="12" md="5">
 				 <img style="position:relative;top:-50px" class="btn_img" src='./img/tela_presenca/map1_link1_btn_tour_fake.png'/>
-				 
-				 <!--<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/ensino_paulista_1/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
-						</a>
-					</v-sheet>-->
 			</v-col>
 			
 			<v-col cols="12" md="12">
@@ -1195,12 +1506,51 @@
 			<v-col cols="12" md="7">
 			</v-col>
 			<v-col cols="12" md="5">
-			
-			<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/ensino_paulista_1/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+
+					<v-sheet style="position:relative;top:-50px" class="bg-transparent">
+						<a @click="modal_ensino_paulista_1 = true"> 
+							<v-img  width="100%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="100%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_ensino_paulista_1" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_ensino_paulista_1 = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/ensino_paulista_1/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+					
+					
+					
+					
+					
 			
 				
 			</v-col>
@@ -1250,12 +1600,6 @@
 			<v-col cols="12" md="5">
 				<v-sheet style="position:relative;top:-50px" class="bg-transparent">
 						<img style="position:relative;top:-50px" class="btn_img" src='./img/tela_presenca/map1_link1_btn_tour_fake.png'/>
-				 
-				 <!--<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/ensino_paulista_1/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
-						</a>
-					</v-sheet>-->
 					</v-sheet>
 			</v-col>
 			
@@ -1279,12 +1623,54 @@
 			<v-col cols="12" md="7">
 			</v-col>
 			<v-col cols="12" md="5">
-				
-				<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/hospsantacatarina/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+
+					<v-sheet style="position:relative;top:-50px" class="bg-transparent">
+						<a @click="modal_hospsantacatarina = true"> 
+							<v-img  width="100%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="100%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_hospsantacatarina" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_hospsantacatarina = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/hospsantacatarina/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+					
+					
+					
+					
+					
+					
+					
+					
 			</v-col>
 			
 			<v-col cols="12" md="12">
@@ -1305,12 +1691,7 @@
 			</v-col>
 			<v-col cols="12" md="5">
 				<img style="position:relative;top:-50px" class="btn_img" src='./img/tela_presenca/map1_link1_btn_tour_fake.png'/>
-				 
-				 <!--<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/ensino_paulista_1/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
-						</a>
-					</v-sheet>-->
+
 			</v-col>
 			
 			<v-col cols="12" md="12">
@@ -1331,11 +1712,62 @@
 			</v-col>
 			<v-col cols="12" md="5">
 				
-				<v-sheet style="position:relative;top:-50px" class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/ceebe/index.html" target="_bank"> 
-							<v-img width="100%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+					
+					<v-sheet style="position:relative;top:-50px" class="bg-transparent">
+						<a @click="modal_ceebe = true"> 
+							<v-img  width="100%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="100%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_ceebe" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_ceebe = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/ceebe/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
 			</v-col>
 			
 			<v-col cols="12" md="12">
@@ -1589,11 +2021,48 @@
 
 				</p>
 				
-				<v-sheet class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/riodejaneiro/index.html" target="_bank"> 
-							<v-img width="90%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+				
+					<v-sheet class="bg-transparent">
+						<a @click="modal_riodejaneiro = true"> 
+							<v-img  width="90%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="90%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_riodejaneiro" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_riodejaneiro = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/riodejaneiro/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.5 - Responsabilidade Social"
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+					
+					
 		
 			</v-col>
 			<v-col cols="12" md="7" align-self="start">
@@ -1703,12 +2172,53 @@
 				<p class="mt-4 texto_preto fadeInLeft">
 					Inaugurada em 2016, Unidade de Ensino do Einstein em Belo Horizonte tem capacidade para 120 alunos e oferece, principalmente, cursos de pós-graduação. Com estrutura moderna e confortável, oferece aos profissionais de saúde de Minas Gerais a oportunidade de aperfeiçoarem seus conhecimentos com base na <em>expertise</em> do Hospital Israelita Albert Einstein e de seu corpo clínico.
 				</p>
-				
-				<v-sheet class="bg-transparent">
-						<a href="https://gridcriacaodigital.com/demo/einstein/tour/belohorizonte/index.html" target="_bank"> 
-							<v-img width="90%"  class="mt-4" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+			
+					
+					
+					<v-sheet class="bg-transparent">
+						<a @click="modal_belohorizonte = true"> 
+							<v-img  width="90%"  class="mt-4 show_desktop" src="./img/tela_presenca/map1_link1_btn_tour.png" />
+							<v-img  width="90%"  class="mt-4 show_1277" src="./img/tela_presenca/map1_link1_btn_tour.png" />
 						</a>
 					</v-sheet>
+					
+				
+								<template>
+									<v-dialog v-model="modal_belohorizonte" max-width="1200px">
+										<v-sheet
+										class="close-btn rounded-pill"
+										>
+											<v-icon 
+											icon="mdi-close-circle-outline" 
+											size="48px" 
+											:color="appStore.isDarkMode ? 'white' : 'primary'"
+											@click="modal_belohorizonte = false" 
+											/>
+										</v-sheet>
+										<v-card max-width="1200" class="rounded-xl me-6">
+											<!--Vimeo-->
+											<v-container fluid class="animate__animated animate__fadeInUp">
+												<div 
+												class="vimeo-container"
+												>
+													
+													<iframe src="https://gridcriacaodigital.com/demo/einstein/tour/belohorizonte/index.html" 
+													frameborder="0" 
+													allow="autoplay; fullscreen; picture-in-picture" 
+													title="2.2.5 - Responsabilidade Social"
+													class="vimeo-player" 
+													/>
+
+												</div>
+											</v-container>
+										</v-card>
+									</v-dialog>
+									</template>
+
+					
+					
+					
+					
 			</v-col>
 			<v-col cols="12" md="7" align-self="start">
 				<v-img class="mx-auto" src="./img/tela_presenca/map1_link8_img.png" />
@@ -2052,7 +2562,7 @@
 				<p class="mt-4 texto_preto fadeInLeft">
 					Em 2022, o Einstein assumiu a gestão do Hospital Municipal de Aparecida de Goiânia — Iris Rezende Machado no município do mesmo nome, em Goiás. Trata-se da primeira operação de hospital público feita pelo Einstein fora da cidade de São Paulo. Com 235 leitos, o hospital é voltado para o atendimento de alta complexidade, incluindo hemodinâmica, cirurgia bariátrica e, futuramente, cirurgia cardíaca, além de várias especialidades cirúrgicas e diagnósticas.
 				</p>
-				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
+				
 			
 			</v-col>
 			<v-col cols="12" md="7" align-self="start">
@@ -2172,7 +2682,7 @@
 				<p class="mt-4 texto_preto fadeInLeft">
 					O Hospital Municipal Vila Santa Catarina — Dr. Gilson de Cássia Marques de Carvalho é um hospital de alta complexidade. Realiza cirurgias bariátrica, urológica e vascular, e oferece atendimento especializado em oncologia, em maternidade de alto risco e em pediatria, além de disponibilizar serviços de diagnóstico, como laboratório clinico e de imagem.
 				</p>
-				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
+				
 			</v-col>
 			<v-col cols="12" md="6">
 				<p class="mt-4 texto_preto fadeInLeft">
@@ -2283,7 +2793,7 @@
 				<p class="mt-4 texto_preto fadeInLeft">
 					O Hospital Municipal M’Boi Mirim — Dr. Moysés Deutsch é gerido e operado pelo Einstein, em associação com o Centro de Estudos e Pesquisas Dr. João Amorim (CEJAM). A unidade funciona desde 2008 atendendo urgências, emergências, cirurgias eletivas e assistência ao parto, com destaque para o atendimento nas especialidades de Clínica Médica, Cirurgia Geral, Pediatria, Ortopedia, Ginecologia, Obstetrícia e Psiquiatria.
 				</p>
-				<!--<a> <img class="mt-4 btn_img" src='./img/tela_presenca/map1_link1_btn_tour.png'/></a>-->
+				
 			
 			</v-col>
 			<v-col cols="12" md="6" align-self="start">
@@ -3787,6 +4297,15 @@
 	const isLink_7_mapa_3Visible = ref(false)
 	const isMapa2BoxgoVisible = ref(true)
 	const isMapa2BoxspVisible = ref(true)
+	
+	const modal_morumbi = ref(false)
+	const modal_faculdade_cep = ref(false)
+	const modal_ensino_paulista_1 = ref(false)
+	const modal_hospsantacatarina = ref(false)
+	const modal_ceebe = ref(false)
+	const modal_riodejaneiro = ref(false)
+	const modal_belohorizonte = ref(false)
+	const modal_farialima = ref(false)
 	
 	
 

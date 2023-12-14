@@ -284,7 +284,7 @@
 						<strong>Autoavaliação</strong>
 					</p>
 			</v-card>	
-			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
+			<v-img width="80px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
 
 			<p class="mt-4">
 				 Na autoavaliação, você preenche um formulário que lhe dá a oportunidade de refletir sobre suas entregas e seu desempenho, analisar suas competências e ampliar seu autoconhecimento e autodesenvolvimento. Nessa fase, você se atribuirá notas de acordo com a escala:
@@ -319,7 +319,7 @@
 						<strong>Avaliação Final</strong>
 					</p>
 			</v-card>	
-			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
+			<v-img width="80px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
 			<p class="mt-4">
 				 Na avaliação final, feita pelo gestor ou a referência técnica da área, é realizada uma conversa sobre as avaliações feitas, visando chegar a um consenso sobre os resultados apresentados. Neste momento, são estabelecidas as metas de carreira, sugeridas ações para seu desenvolvimento e aprimoramento para o próximo ciclo, e feitos os planos de desenvolvimento individual e  organizacional (PDI e PDO).
 			</p>
@@ -337,7 +337,7 @@
 						<strong>Avaliação Parcial</strong>
 					</p>
 			</v-card>	
-			<v-img width="150px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
+			<v-img width="80px" class="mx-auto mt-4" src="./img/tela_desempenho/seta_baixo.png" />
 			
 			<v-row class="mt-0">
 				<v-col cols="12" md="9" align="left">

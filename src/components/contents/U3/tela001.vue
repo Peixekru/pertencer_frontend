@@ -11,6 +11,9 @@
 		<v-img class="show_mobile" src="./img/tela_qualidade/header_mob.png" />
 		<v-img src="./img/tela_qualidade/header_text.svg" class="header_text"
 			title="QUALIDADE E SEGURANÇA" />
+		
+
+		
 	</v-card>
 	<!-- header -->
 	

@@ -273,7 +273,7 @@
 				</div>
 				<v-card min-height="180" style="background-color:#2aa0dd;" class="pa-6 d-flex flex-column justify-center align-center">
 					<p style="font-size:0.9em;text-align:center" class="texto_branco">
-						<strong>Assegurar que os profissionais são efetiva e eficazmente treinados técnica e comportamentalmente para o exercício de suas atividades.</strong>
+						<strong>Certificar-se de que os profissionais sejam eficazes e eficazmente treinados técnica e comportamentalmente para o exercício de suas atividades.</strong>
 					</p>
 				</v-card>
 			</v-col>
@@ -1655,7 +1655,7 @@
 	>
 			<v-img class="mx-auto mt-4 grade_header" src="./img/tela_corporativo/grade_header.png" />
 		<h2 class="mt-n4 font-weight-bold texto_azul reveal fade-left">
-			Nossas Capacitações Institucionais
+			Alguns eventos e capacitações institucionais
 		</h2>
 		<p class="mt-4 reveal fade-left">
 				Essas são algumas fotos de nossas capacitações.
@@ -1874,7 +1874,7 @@
 							</v-col>
 							<v-col class="pa-8" cols="12" md="7">
 								<h2 class="texto_azul">
-									Trilha de Aprendizagem Institucional – Encontro com Especialistas Einstein
+									Encontro com Especialistas Einstein
 								</h2>
 							</v-col>
 						</v-row>
@@ -1978,10 +1978,7 @@
 				</v-col>
 				<v-col cols="12" md="5">
 					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
-						Seja aprendendo individualmente, em duplas, em pequenos ou grandes grupos, presencialmente ou a distância, o que realmente importa para nós do Einstein é o seu crescimento pessoal e profissional.
-					</p>
-					<p style="font-size:1.2em;font-weight:500" class="mt-4 mb-4 reveal fade-left texto_branco">
-						A área de Ensino Corporativo está pronta para lhe dar todo apoio que for necessário, porque VOCÊ, NOSSO COLABORADOR, FAZ DIFERENÇA PARA NÓS!
+						A Educação Corporativa dedica-se à ampliação das habilidades individuais dos colaboradores, visando capacitá-los para desempenhar suas funções de maneira eficaz e para contribuir ativamente para o sucesso da instituição. Nosso objetivo é capacitar os colaboradores para que se tornem os principais protagonistas de sua própria jornada de aprendizagem e do desenvolvimento de suas carreiras.
 					</p>
 				</v-col>
 			</v-row>
@@ -1995,7 +1992,7 @@
 
 
 
-<!-- conteúdo 20 OCULTA PELA ALTERA~ÇÃO -->
+<!-- conteúdo 20 OCULTA PELA ALTERAÇÃO -->
 
 <v-card 
 	v-show="isContent20Visible"
