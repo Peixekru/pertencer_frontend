@@ -14,15 +14,24 @@
                         <v-sheet color="transparent" class="d-flex justify-start align-center">
 
                             <v-img 
+                            v-if="appStore.countdown > 0"
                             class="me-4"
                             :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
                             src="../assets/img/capsula-icon.svg"
                             width="70" 
                             />
+
+                            <v-img 
+                            v-if="appStore.countdown == 0"
+                            class="animate__animated animate__fadeInLeft"
+                            :class="appStore.appData.capsula.status <= 0 ? 'opacity-control' : '' "
+                            src="../assets/img/capsula-icon-open.svg"
+                            width="88" 
+                            />
                             
 
                             <div 
-                            v-if="appStore.appData.capsula.status == 1"
+                            v-if="appStore.appData.capsula.status == 1 && appStore.countdown > 0"
                             class="text-h5 font-weight-bold text-info text-start animate__animated animate__fadeInRight line-small"
                             >
                                 <p class="text-caption text-white">Faltam</p> 
