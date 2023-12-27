@@ -162,9 +162,9 @@
 						<p class="mt-4">
 							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
-						<p class="mt-4">
+						<!--<p class="mt-4">
 							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
-						</p>
+						</p>-->
 					</v-col>
 				</v-row>
 			</v-window-item>
