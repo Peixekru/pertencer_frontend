@@ -14,7 +14,7 @@
                         <v-sheet color="transparent" class="d-flex justify-start align-center">
 
                             <v-img 
-                            v-if="appStore.countdown > 0"
+                            v-if="appStore.countdown != 0"
                             class="me-4"
                             :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
                             src="../assets/img/capsula-icon.svg"
@@ -109,6 +109,8 @@
         if(progressBar >= 100){ appStore.progress = 100 } 
         else { appStore.progress = progressBar }
     })
+
+    console.log(appStore.countdown)
 
 </script>
 
