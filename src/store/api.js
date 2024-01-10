@@ -6,7 +6,8 @@ import axios from 'axios';
 export const useApiStore = defineStore('api', {
     state: () => ({
         //fakeServer: import.meta.env.VITE_FAKESERVER,
-        serverUrl: 'https://www.fideliadmin.com/pertencer/save'
+        //serverUrl: 'https://www.fideliadmin.com/pertencer/save'
+        serverUrl: 'https://www.einsteinpertencer.com.br/pertencer/save'
     }),
 
     actions: {

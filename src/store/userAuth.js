@@ -7,7 +7,8 @@ export const useAuthStore = defineStore('userAuth', {
     state: () => ({
         //fakeServer: import.meta.env.VITE_FAKESERVER,
         //serverUrl: 'http://www.einsteinpertencer.com.br:3000/login'
-        serverUrl: 'https://www.fideliadmin.com/pertencer'
+        //serverUrl: 'https://www.fideliadmin.com/pertencer'
+        serverUrl: 'https://www.einsteinpertencer.com.br/pertencer'
     }),
 
     getters: {
