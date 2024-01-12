@@ -1,9 +1,9 @@
 <template>
     <v-container fluid
-    class="d-flex flex-wrap  pa-2 rounded-lg custom-container">
+    class="d-flex flex-wrap  pa-2 rounded-lg custom-container-user-galery">
 
         <v-card
-        v-for="(i, index) in appStore.appData.galeria.content.userImgs.length" :key="index"
+        v-for="(item, i) in appStore.imgRes" :key="i"
         :width="appStore.isMobile ? 82 : 124"
         class="ma-2 rounded-0"
         elevation="0"
@@ -11,79 +11,64 @@
         >
             <v-img
             width="300"
-            :lazy-src="appStore.appData.galeria.content.userImgs[index].path"
-            :src="appStore.appData.galeria.content.userImgs[index].path"
+            :lazy-src="appStore.imgRes[i].thumb"
+            :src="appStore.imgRes[i].thumb"
             :aspect-ratio="1"
             class="elevation-2"
-            :class=" !appStore.appData.galeria.content.userImgs[index].visible ? 
-            appStore.appData.access.color == 1 ? 'hide-image grayscale-filter' : 'hide-image' :
-            appStore.appData.access.color == 1 ? 'show-image grayscale-filter' : 'show-image' "
+            :class=" appStore.imgRes[i].visible ? 'show-image' : 'hide-image' "
             cover
-            :id="'userImage' + index"
-            @click="zoomImage(index)"
             >
-                <!--Moldura da imagem-->
-                <v-img
-                cover
-                :src="aplyFrames(appStore.appData.galeria.content.userImgs[index].style)"
-                :aspect-ratio="1"
-                class="border-image-pos"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                />
-
-                <!--Load Image-->
                 <template v-slot:placeholder>
-                <div class="d-flex align-center justify-center fill-height">
-                    <v-progress-circular
-                    color="primary"
-                    indeterminate
-                    ></v-progress-circular>
-                </div>
+                    <div class="d-flex align-center justify-center fill-height">
+                        <v-progress-circular indeterminate color="primary" />
+                    </div> 
+                </template>
 
-                </template>    
             </v-img>
 
             <div class="d-flex justify-space-around mt-2">
-                <!--mdi mdi-eye-outline-->
+
                 <v-icon 
-                v-if="appStore.appData.galeria.content.userImgs[index].visible"
+                v-if="appStore.imgRes[i].visible"
                 class="ms-1 text-medium-emphasis" 
                 size="x-small" 
-                icon="mdi mdi-eye-outline"
-                @click="hideImage(index)"
+                icon="mdi-eye-outline"
+                @click="hideImage(i)"
                 />
                 <v-icon 
                 v-else
                 class="ms-1 text-medium-emphasis" 
                 size="x-small" 
                 icon="mdi-eye-off-outline"
-                @click="hideImage(index)"
+                @click="hideImage(i)"
                 />
                 
                 <v-icon 
                 class="mx-1 text-medium-emphasis" 
                 size="x-small" 
                 icon="mdi-loupe" 
-                @click="zoomImage(index)"
+                @click="zoomImage(i)"
                 />
 
                 <v-icon 
                 class="me-1 text-medium-emphasis" 
                 size="x-small" 
                 icon="mdi-trash-can-outline" 
-                @click="deletImage(index)"
+                @click="deletImage(i)"
                 />
+
             </div>
 
         </v-card>
 
         <!--Zoom image component-->
-        <GalleryZoomImage :aplyFrames="aplyFrames" />
+        <GalleryZoomImage :img="zoomImg" />
 
     </v-container>
 </template>
 
 <script setup>
+    import { ref } from 'vue'
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
     import GalleryZoomImage from './GalleryZoomImage'
@@ -91,20 +76,27 @@
     const appStore = useAppStore()
     const apiStore = useApiStore()
 
+    //appStore.imgRes.reverse()
+
+    const zoomImg = ref('')
+
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
         return  new URL(`../assets/img/galleryFrame-${index}.png`, import.meta.url).href
     }
 
-    const zoomImage = (selectedImg) => {
+    const zoomImage = (index) => {
         appStore.isZoomImg = true
-        appStore.selectedImg = selectedImg
-        appStore.selectedGallery = 'userImages'
+        //appStore.selectedImg = selectedImg
+        //appStore.selectedGallery = 'userImages'
+
+        console.log(appStore.imgRes[index])
+        zoomImg.value = appStore.imgRes[index].img
     }
 
     const hideImage = (index) => {
-        appStore.appData.galeria.content.userImgs[index].visible =
-        !appStore.appData.galeria.content.userImgs[index].visible
+        appStore.imgRes[index].visible =
+        !appStore.imgRes[index].visible
 
         /*
         if(appStore.appData.galeria.content.userImgs[index].visible){
@@ -115,25 +107,25 @@
         */
     }
 
-    const  deletImage = (index) => {
-
-        appStore.appData.galeria.content.userImgs.splice(index, 1); 
+    const deletImage = (index) => {
+        appStore.imgRes.splice(index, 1); 
+        
 
         //Atualiza o localStorage
-        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        //localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 
         //Atualiza backend
-        const userId = JSON.parse(localStorage.getItem('userId'));
+        //const userId = JSON.parse(localStorage.getItem('userId'));
         //port / path / data
-        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+        //apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
     }
 
 
 </script>
 
-<style>
-    .custom-container{
+<style scoped>
+    .custom-container-user-galery{
         background-color: rgba(100, 100, 100, .1);
         box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, .1);
     }

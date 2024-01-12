@@ -2,7 +2,7 @@
 	<template v-if="appStore.appData != 'undefined'">
 		<v-app class="cursor-preview">
 
-			<!--<DebugModal />-->
+			<DebugModal />
 
 			<!--Modal logout-->
 			<LogoutModal />
@@ -154,7 +154,7 @@
 	import CustomCursor from '@/components/CustomCursor'
 
 	//*!Retirar para produção!!
-	//import DebugModal from '@/components/DebugModal'
+	import DebugModal from '@/components/DebugModal'
 
 	const appStore = useAppStore()
 	const apiStore = useApiStore()

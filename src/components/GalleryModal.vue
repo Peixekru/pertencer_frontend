@@ -77,36 +77,35 @@
                     />
 
                 </v-row>
+                
 
-                <!--<v-row
-                    v-if="appStore.appData.galeria.content.userImgs.length > 0"
+                <v-row
+                    v-if="appStore.imgRes.length > 0"
                 >
-
-                    <v-col class="mt-6 mb-3">
+                    <v-col class="mt-6 mb-3 animate__animated animate__fadeInUp">
                         <h6 class="text-subtitle-1 text-secondary font-weight-bold">
                             Minhas imagens
                         </h6>
-                        <p class="font-weight-light">
+                        <p class="font-weight-light mb-2">
                             Marque as imagens que serão exibidas para todos.
                         </p>
+
+                        <GalleryUserImages :key="appStore.userImagesKey"/>
+
                     </v-col>
 
-                    //Componente de exibição de imagens do usuário
-                    <GalleryUserImages />
-
-                </v-row>-->
+                </v-row>
 
                 <!--<v-row
                     v-if="appStore.appData.galeria.content.globalImgs.length > 0"
                 >
+                        <v-col class="mt-8 mb-3">
+                            <h6 class="text-subtitle-1 text-secondary font-weight-bold">
+                                Galeria Pertencer
+                            </h6>
+                        </v-col>
 
-                    <v-col class="mt-8 mb-3">
-                        <h6 class="text-subtitle-1 text-secondary font-weight-bold">
-                            Galeria Pertencer
-                        </h6>
-                    </v-col>
-
-                    //Componente de exibição de imagens do sistema
+                    
                     <GalleryGlobalImages/>
 
                     </v-row>-->

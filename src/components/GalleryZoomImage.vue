@@ -24,83 +24,34 @@
                     @click="appStore.isZoomImg = false"
                     />   
 
-                <!--<v-img
-                v-if="appStore.selectedGallery == 'globalImages'"
-                width="100%"
-                :lazy-src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
-                :src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
-                :aspect-ratio="1"
-                class="show-image"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                cover
-                >
-                    //Moldura da imagem
-                    <v-img
-                    cover
-                    :src="aplyFrames(appStore.appData.galeria.content.globalImgs[appStore.selectedImg].style)"
-                    :aspect-ratio="1"
-                    />
-                </v-img>-->
-
-                <!--<v-sheet
-                v-else
-                id="flatImg"
-                width="100%"
-                color="white"
-                class="bg-final-image"
-                :style="{ backgroundImage: `url(${appStore.appData.galeria.content.userImgs[appStore.selectedImg].path})`}"
-                >
-                    //Moldura da imagem
-                    <v-img
-                    :src="aplyFrames(appStore.appData.galeria.content.userImgs[appStore.selectedImg].style)"
-                    />
-
-                </v-sheet>-->
-
-                <!--<v-img
-                v-else
-                id="flatImg"
-                width="100%"
-                :lazy-src="appStore.appData.galeria.content.userImgs[appStore.selectedImg].path"
-                :src="appStore.appData.galeria.content.userImgs[appStore.selectedImg].path"
-                :aspect-ratio="1"
-                class=" show-image "
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                cover
-                >
-        
-                    <v-img
-                    cover
-                    :src="aplyFrames(appStore.appData.galeria.content.userImgs[appStore.selectedImg].style)"
-                    :aspect-ratio="1"
-                    />
-                </v-img>-->
-
-
                 <v-sheet
                 id="flatImg"
                 width="100%"
                 color="white"
-                class="bg-final-image"
-                :style="{ backgroundImage: `url(${appStore.imgObject.path})`}"
                 >
-                    <!--Moldura da imagem-->
-                    <v-img
-                    :src="aplyFrames(appStore.imgObject.style)"
-                    />
-
+                    <v-img 
+                    :lazy-src="img"
+                    :src="img"
+                    >
+                        <template v-slot:placeholder>
+                            <div class="d-flex align-center justify-center fill-height">
+                                <v-progress-circular indeterminate color="primary" />
+                            </div> 
+                        </template>
+                    </v-img>
                 </v-sheet>
 
             </v-card>
+            
 
             <v-sheet 
             class="pa-0 img-info-pos"
             color="transparent"
             align="center"
-            width="200"
+            min-width="200"
             >
 
-                <v-card
+                <!-- <v-card
                 v-if="appStore.selectedGallery == 'globalImages'"
                 width="100"
                 class="d-flex justify-start align-center pe-6 rounded-pill custom-pa animate__animated animate__bounce"
@@ -121,52 +72,95 @@
                     <p v-else>
                         Você
                     </p>
-
-                    <!--Teste compartilhamento -->
-                    <!--<ShareNetwork
-                    network="facebook"
-                    :url="createImg()"
-                    title="Einstein Pertencer"
-                    description="Programa de Integração e Socialização da Pessoa Colaboradora"
-                    quote="Agora eu também sou uma gota"
-                    hashtags="#EinsteinPertencer"
-                    >
-                        <v-btn 
-                        icon="mdi-share-variant" 
-                        variant="tonal"
-                        size="small"
-                        color="white"
-                        @click="shareImage"
-                        />
-                    </ShareNetwork>-->
                     
-                </v-card>
+                </v-card>-->
 
-                <v-btn 
-                rounded
-                prepend-icon="mdi-tray-arrow-down"
-                color="primary"
-                min-width="100px"
-                class="my-2"
-                @click="downloadImage"
-                >
-                    SALVAR
-                </v-btn>
+                <ShareNetwork
+                    network="linkedin"
+                    :url="img"
+                    title="Einstein Pertencer"
+                    description="Agora eu também faço parte deste projeto incível!"
+                    hashtags="EinsteinPertencer">
+                        <v-btn
+                            rounded
+                            prepend-icon="mdi-tray-arrow-down"
+                            color="primary"
+                            min-width="100px"
+                            class="ma-1"
+                            >
+                            linkedin
+                        </v-btn>
+                    </ShareNetwork>
 
-                <!--<v-btn 
-                icon="mdi-share-variant" 
-                variant="tonal"
-                size="small"
-                color="white"
-                @click="shareImage"
-                />-->
+                    <ShareNetwork
+                    network="facebook"
+                    :url="img"
+                    title="Einstein Pertencer"
+                    description="Agora eu também faço parte deste projeto incível!"
+                    hashtags="EinsteinPertencer">
+                        <v-btn
+                            rounded
+                            prepend-icon="mdi-tray-arrow-down"
+                            color="primary"
+                            min-width="100px"
+                            class="ma-1"
+                            >
+                            facebook
+                        </v-btn>
+                    </ShareNetwork>
+
+                    <ShareNetwork
+                    network="Twitter"
+                    :url="img"
+                    title="Einstein Pertencer"
+                    description="Agora eu também faço parte deste projeto incível!"
+                    hashtags="EinsteinPertencer">
+                        <v-btn
+                            rounded
+                            prepend-icon="mdi-tray-arrow-down"
+                            color="primary"
+                            min-width="100px"
+                            class="ma-1"
+                            >
+                            Twitter
+                        </v-btn>
+                    </ShareNetwork>
+
+                    <ShareNetwork
+                    network="WhatsApp"
+                    :url="img"
+                    title="Einstein Pertencer"
+                    description="Agora eu também faço parte deste projeto incível!"
+                    hashtags="EinsteinPertencer">
+                        <v-btn
+                            rounded
+                            prepend-icon="mdi-tray-arrow-down"
+                            color="primary"
+                            min-width="100px"
+                            class="ma-1"
+                            >
+                            WhatsApp
+                        </v-btn>
+                    </ShareNetwork>
+
+                    
+                    <v-btn 
+                    rounded
+                    prepend-icon="mdi-tray-arrow-down"
+                    color="primary"
+                    min-width="100px"
+                    class="ma-1"
+                    @click="downloadImage(img)"
+                    >
+                        SALVAR
+                    </v-btn>
             
             </v-sheet>
 
         
         </v-container>
 
-        <!--Isntrução download-->
+        <!--Isntrução download
         <v-container 
         class="pa-0 desabled-card"
         :class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
@@ -185,7 +179,7 @@
                     Salve e compartilhe este momento!
                 </template>
             </WelcomeTooltip>
-        </v-container>
+        </v-container>-->
     
     </v-dialog>
 </template>
@@ -198,53 +192,24 @@
 
     const appStore = useAppStore()
 
-    // Opções da captura de imagem
-    const options = {
-        allowTaint: true,
-        useCORS: true,
-        scale: .9,
-    }
-
-    const createImg = () => {
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            return image
-        });
+    
+    
+    const downloadImage = (url) => {
+        fetch(url, { mode : 'no-cors' }).then(response => response.blob()).then(blob => {
+            let blobUrl = window.URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.download = url.replace(/^.*[\\\/]/, '');
+            a.href = blobUrl;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        })
     }
     
-    const downloadImage = () => {
-
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            let link = document.createElement('a');
-            link.download = "my-image.png";
-            link.href = image;
-            link.click();
-
-            //Fecha modal da galeria
-            appStore.galleryModal = false
-        });
-    }
-
-    const shareImage = () => {
-
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            console.log(image)
-        });
-
-
-    }
 
 
     defineProps({
-        aplyFrames: Function,
+        img: String,
     })
 
 </script>
@@ -262,7 +227,7 @@
         position: absolute;
         z-index: 3000;
         left: 50%;
-        bottom: 0;
+        bottom: -25px;
         transform: translate(-50%, 0);
     }
 

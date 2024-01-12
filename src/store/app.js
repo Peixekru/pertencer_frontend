@@ -4,7 +4,25 @@ import { defineStore } from 'pinia'
 
 export const useAppStore = defineStore('app', {
 	state: () => ({
-		
+
+		//ImgGaleriaFake
+		imgRes: [
+			{ 
+				"img": "https://i.ibb.co/SNP6rV7/img-Res-800.png",
+				"thumb": "https://i.ibb.co/KGNmfH9/img-Res-200.png",
+				"visible": false
+			},
+			{ 
+				"img": "https://i.ibb.co/SNP6rV7/img-Res-800.png",
+				"thumb": "https://i.ibb.co/KGNmfH9/img-Res-200.png",
+				"visible": false
+			},
+			{ 
+				"img": "https://i.ibb.co/SNP6rV7/img-Res-800.png",
+				"thumb": "https://i.ibb.co/KGNmfH9/img-Res-200.png",
+				"visible": false
+			}
+		],
 
 		//Rotas
 		currentRoute: '/',
@@ -17,7 +35,7 @@ export const useAppStore = defineStore('app', {
 		welcomeStepCounter: 0,
 
 		//Unidades
-		currentUnidadeNumber: 0,
+		currentUnidadeNumber: 0,	
 		currentUnidadeTitle: '',
 		nextUnidadeTitle: '',
 		totalItems: [],
@@ -142,6 +160,7 @@ export const useAppStore = defineStore('app', {
 		totalGlobalImgs: 0,
 		galleryCardKey: 0,
 		gallerySendImageKey: 0,
+		userImagesKey:0,
 
 
 		//SpecialHomeComponents

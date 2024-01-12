@@ -1,6 +1,6 @@
 <template>
     <v-container fluid
-    class="d-flex flex-wrap  pa-2 rounded-lg custom-container">
+    class="d-flex flex-wrap  pa-2 rounded-lg custom-containe-global-images">
         <!--Images from system-->
         <v-card
         v-for="(i, index) in appStore.appData.galeria.content.globalImgs.length" :key="index"
@@ -68,7 +68,7 @@
 </script>
 
 <style>
-    .custom-container{
+    .custom-containe-global-images{
         background-color: rgba(100, 100, 100, .1);
         box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, .1);
     }
@@ -83,6 +83,5 @@
     .anim-delet-image{
         animation: fadeOutDown; 
         animation-duration: 2s
-
     }
 </style>
