@@ -2,7 +2,7 @@
   "name": "vuetify",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
@@ -12,6 +12,7 @@
     "@mdi/font": "7.0.96",
     "@pdanpdan/vue-keyboard-trap": "^1.0.19",
     "@vitejs/plugin-basic-ssl": "^1.0.2",
+    "@vueuse/core": "^10.7.2",
     "@vueuse/sound": "^2.0.1",
     "animate.css": "^4.1.1",
     "axios": "^1.4.0",

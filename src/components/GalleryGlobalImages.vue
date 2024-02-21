@@ -1,9 +1,9 @@
 <template>
     <v-container fluid
-    class="d-flex flex-wrap  pa-2 rounded-lg custom-container">
+    class="d-flex flex-wrap  pa-2 rounded-lg custom-container-gallery">
         <!--Images from system-->
         <v-card
-        v-for="(i, index) in appStore.appData.galeria.content.globalImgs.length" :key="index"
+        v-for="(i, index) in appStore.appData.galeria.content.globalImgs" :key="index"
         :width="appStore.isMobile ? 82 : 124"
         class="ma-2 rounded-0"
         elevation="2"
@@ -11,23 +11,14 @@
         >
             <v-img
             width="300"
-            :lazy-src="appStore.appData.galeria.content.globalImgs[index].path"
-            :src="appStore.appData.galeria.content.globalImgs[index].path"
+            :lazy-src="i.thumb"
+            :src="i.thumb"
             :aspect-ratio="1"
             class="show-image"
             :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
             cover
             @click="zoomImage(index)"
             >
-                <!--Moldura da imagem-->
-                <v-img
-                cover
-                :src="aplyFrames(appStore.appData.galeria.content.globalImgs[index].style)"
-                :aspect-ratio="1"
-                class="border-image-pos"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                />
-
                 <!--Load Image-->
                 <template v-slot:placeholder>
                 <div class="d-flex align-center justify-center fill-height">
@@ -50,8 +41,11 @@
 
 <script setup>
     import { useAppStore } from '../store/app'
+    import { useApiStore } from '../store/api'
     import GalleryZoomImage from './GalleryZoomImage'
+
     const appStore = useAppStore()
+    const apiStore = useApiStore()
 
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
@@ -65,10 +59,16 @@
     }
 
 
+    apiStore.getGlobalImgs('/getgallery/', '40')
+
+
+    
+
+
 </script>
 
 <style>
-    .custom-container{
+    .custom-container-gallery{
         background-color: rgba(100, 100, 100, .1);
         box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, .1);
     }

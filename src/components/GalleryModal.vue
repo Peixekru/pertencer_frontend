@@ -78,7 +78,7 @@
 
                 </v-row>
 
-                <!--<v-row
+                <v-row
                     v-if="appStore.appData.galeria.content.userImgs.length > 0"
                 >
 
@@ -91,13 +91,15 @@
                         </p>
                     </v-col>
 
-                    //Componente de exibição de imagens do usuário
-                    <GalleryUserImages />
+                    <!--Componente de exibição de imagens do usuário-->
+                    <GalleryUserImages :key="appStore.galleryUserImgKey" />
 
-                </v-row>-->
+                </v-row>
 
-                <!--<v-row
-                    v-if="appStore.appData.galeria.content.globalImgs.length > 0"
+                <!---
+
+                <v-row
+                
                 >
 
                     <v-col class="mt-8 mb-3">
@@ -137,6 +139,9 @@
             gallerySendImage.value.stopVideo()
         }
     }
+
+
+
 
 
 </script>

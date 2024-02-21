@@ -23,7 +23,7 @@
 
             <!--Left-->
             <v-col 
-            class="d-flex align-center ms-4 pa-0"
+            class="d-flex align-center ms-4 pa-0 mt-1"
             cols="3" v-if=" !appStore.isMobile ">
                 <v-img
                 v-if="appStore.screenWidth > 740 && appStore.currentRoute != '/home' && appStore.navigationStart ||
@@ -31,7 +31,7 @@
                 class="ms-4 pa-0 animate__animated animate__fadeIn"
                 :class="appStore.isDarkMode ? 'white-svg' : appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
                 src="../assets/img/top-logo.svg"
-                max-width="200"
+                max-width="180"
                 />
             </v-col>
             
@@ -131,7 +131,7 @@
                                             <v-sheet 
                                             class="d-flex justify-space-between px-1 py-2 my-3 rounded-lg custom-menu-shadow"
                                             >
-                                                <v-card 
+                                                <!--<v-card 
                                                 min-width="84"
                                                 elevation="2" 
                                                 class="pa-2 mx-1 d-flex flex-column align-center"
@@ -146,7 +146,7 @@
                                                     <p class="text-center text-caption text-medium-emphasis btn-txt-line">
                                                         O que fazer <br/> nessa tela?
                                                     </p>
-                                                </v-card>
+                                                </v-card>-->
 
                                                 <v-card 
                                                 min-width="84"

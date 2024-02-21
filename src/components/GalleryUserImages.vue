@@ -1,50 +1,50 @@
 <template>
     <v-container fluid
-    class="d-flex flex-wrap  pa-2 rounded-lg custom-container">
+    class="pa-2 rounded-lg custom-container-gallery"
+    :class="appStore.isMobile ? 'd-flex align-center justify-center' : 'd-flex flex-wrap '"
+    >
 
         <v-card
         v-for="(i, index) in appStore.appData.galeria.content.userImgs.length" :key="index"
-        :width="appStore.isMobile ? 82 : 124"
+        :width="appStore.isMobile ? 200 : 124"
         class="ma-2 rounded-0"
         elevation="0"
         color="transparent"
         >
             <v-img
             width="300"
-            :lazy-src="appStore.appData.galeria.content.userImgs[index].path"
-            :src="appStore.appData.galeria.content.userImgs[index].path"
+            :lazy-src="appStore.appData.galeria.content.userImgs[0].thumb"
+            :src="appStore.appData.galeria.content.userImgs[0].thumb"
             :aspect-ratio="1"
             class="elevation-2"
             :class=" !appStore.appData.galeria.content.userImgs[index].visible ? 
-            appStore.appData.access.color == 1 ? 'hide-image grayscale-filter' : 'hide-image' :
+            appStore.appData.access.color == 1 ? 'show-image grayscale-filter' : 'show-image' :
             appStore.appData.access.color == 1 ? 'show-image grayscale-filter' : 'show-image' "
             cover
             :id="'userImage' + index"
-            @click="zoomImage(index)"
+            @click="imgIndex = index "
             >
-                <!--Moldura da imagem-->
-                <v-img
+                <!--<v-img
                 cover
-                :src="aplyFrames(appStore.appData.galeria.content.userImgs[index].style)"
+                :src="aplyFrames(appStore.imgObject.style)"
                 :aspect-ratio="1"
                 class="border-image-pos"
                 :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                />
+                />-->
 
                 <!--Load Image-->
                 <template v-slot:placeholder>
-                <div class="d-flex align-center justify-center fill-height">
-                    <v-progress-circular
-                    color="primary"
-                    indeterminate
-                    ></v-progress-circular>
-                </div>
-
+                    <div class="d-flex align-center justify-center fill-height">
+                        <v-progress-circular
+                        color="primary"
+                        indeterminate
+                        ></v-progress-circular>
+                    </div>
                 </template>    
             </v-img>
 
             <div class="d-flex justify-space-around mt-2">
-                <!--mdi mdi-eye-outline-->
+                <!--mdi mdi-eye-outline
                 <v-icon 
                 v-if="appStore.appData.galeria.content.userImgs[index].visible"
                 class="ms-1 text-medium-emphasis" 
@@ -72,18 +72,30 @@
                 size="x-small" 
                 icon="mdi-trash-can-outline" 
                 @click="deletImage(index)"
-                />
+                />-->
+                <v-btn 
+                block 
+                rounded
+                density="comfortable"
+                elevation="0"
+                class="bg-primary text-secondary letter-normal"
+                @click="zoomImage(index)"
+                >
+                    Ações
+                </v-btn>
             </div>
 
         </v-card>
 
         <!--Zoom image component-->
-        <GalleryZoomImage :aplyFrames="aplyFrames" />
+        <!--<GalleryZoomImage :aplyFrames="aplyFrames" />-->
+        <GalleryZoomImage :hideImage="hideImage" :deleteImg="deletImage" :showIndex="imgIndex"/>
 
     </v-container>
 </template>
 
 <script setup>
+    import { ref } from 'vue';
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
     import GalleryZoomImage from './GalleryZoomImage'
@@ -91,18 +103,26 @@
     const appStore = useAppStore()
     const apiStore = useApiStore()
 
+    const imgIndex = ref(0)
+
+
+    console.log(appStore.appData.galeria.content.userImgs[0].thumb)
+
     //Adiciona as molduras na imagem final
     const aplyFrames = (index) => {
         return  new URL(`../assets/img/galleryFrame-${index}.png`, import.meta.url).href
     }
 
-    const zoomImage = (selectedImg) => {
+    const zoomImage = (index) => {
+
+        console.log(appStore.appData.galeria.content.userImgs[index].thumb)
+
         appStore.isZoomImg = true
-        appStore.selectedImg = selectedImg
+        appStore.selectedImg = appStore.appData.galeria.content.userImgs[index].img
         appStore.selectedGallery = 'userImages'
     }
 
-    const hideImage = (index) => {
+    const hideImage = () => {
         appStore.appData.galeria.content.userImgs[index].visible =
         !appStore.appData.galeria.content.userImgs[index].visible
 
@@ -115,9 +135,15 @@
         */
     }
 
-    const  deletImage = (index) => {
+    const deletImage = (index) => {
 
-        appStore.appData.galeria.content.userImgs.splice(index, 1); 
+        //appStore.appData.galeria.content.userImgs.splice(index, 1); 
+
+        appStore.isZoomImg = false
+        setTimeout(function() { 
+            appStore.appData.galeria.content.userImgs = [] 
+            appStore.gallerySendImageKey += 1
+        }, 3000);
 
         //Atualiza o localStorage
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
@@ -132,8 +158,8 @@
 
 </script>
 
-<style>
-    .custom-container{
+<style scoped>
+    .custom-container-gallery{
         background-color: rgba(100, 100, 100, .1);
         box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, .1);
     }

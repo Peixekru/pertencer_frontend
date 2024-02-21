@@ -33,18 +33,23 @@
 	//Finaliza o conteúdo, atualiza progresso e libera funcionalidades na home
 	const finishedContent = () => {
 
-    //libera o "Começando Bem" 
-    appStore.appData.start.status = 1
-		//atualiza o componente "Começando Bem"
-    appStore.startCardKey += 1
-		//Atualiza o localStorage
+    if (appStore.appData.start.status == 0) {
+      //libera o "Começando Bem" 
+      appStore.appData.start.status = 1
+      //atualiza o componente "Começando Bem"
+      appStore.startCardKey += 1
+    }
 
 
-    //libera o "Workplace" 
-    appStore.appData.workplace.status = 1
-		//atualiza o componente "Workplace"
-    appStore.workPlaceCardKey += 1
-		//Atualiza o localStorage
+    if(appStore.appData.workplace.status == 0){
+      //libera o "Workplace" 
+      appStore.appData.workplace.status = 1
+      //atualiza o componente "Workplace"
+      appStore.workPlaceCardKey += 1
+    }
+
+
+	
 
 
 		//Atualiza o localStorage

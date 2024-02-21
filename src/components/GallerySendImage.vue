@@ -1,51 +1,5 @@
 <template>
 
-    <!-- CRIADOR DE IMAGENS (não visível em tela) -->
-    <template>
-        <!--Renderiza a imagem da câmera-->
-        <canvas id="videoCanvas"
-        width =1280 height=720
-        style="display: none"
-        /> 
-        <!--Centraliza a imagem que vem da câmera ou do upload e corta em 720 x 720px-->
-        <v-sheet id="squareImage"
-        width="720"
-        height="720"
-        class="bg-final-image"
-        style="display: none"
-        :style="{ backgroundImage: `url(${finalImage})`}"
-        />
-        <!--Sobrepõe moldura na imagem-->
-        <div id="squareImageWithFrame"
-        class="pa-0 ma-0"
-        style="display: none"
-        >
-            <v-sheet
-            width="720"
-            height="720"
-            class="bg-final-image"
-            :style="{ backgroundImage: `url(${finalImage})`}"
-            >
-                <v-img
-                id="selectedFrame"
-                width="720"
-                height="720"
-                :src="aplyFrames(galleryStyle)" 
-                class="source-border-image-pos"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                />
-            </v-sheet>
-        </div>
-
-        <!--Imagem Renderizada (usada para log e validação visual)-->
-        <v-img :src="imageToServer" 
-        width="720"
-        height="720"
-        style="display: none"
-        />
-    </template>
-
-
     <!--Col 1-->
     <v-col 
     cols="12"
@@ -109,26 +63,47 @@
 
                         </v-sheet>
                     </v-sheet>
+
+
+
+
+                    <!--<input type="button" value="Select File" @click="selectFile()">-->
+
+                    <input type="file" id="fileInput" @change="handleFile()" style="display: none;">
+
                 
-                    <!--btn-->
-                    <label>
-                        <input type="file" @change="onFileSelected"/>
-                        <v-container
-                        class="d-flex justify-center py-4 px-0"
+                    <template v-if="appStore.changeImage || appStore.appData.galeria.content.userImgs.length == 0">
+                        <v-btn 
+                        value="Select File"
+                        block
+                        rounded
+                        type="button"
+                        density="comfortable"
+                        class="bg-primary text-secondary letter-normal mt-4"
+                        @click="selectFile()"
                         >
-                            <v-sheet
-                            width="100%" 
-                            rounded
-                            density="comfortable"
-                            class="bg-primary text-secondary letter-normal rounded-pill text-center text-button my-0 v-sheet-Btn"
-                            >
-                                <span v-if="selectedFile == null">Enviar</span>
-                                <span v-else>Trocar</span>
-                            </v-sheet>
-                        </v-container>
-                    </label>
+                            <span v-if="selectedFile == null">Enviar</span>
+                            <span v-else>Trocar</span>
+                        </v-btn>
+                    </template>
+
+                    <template v-else>
+                        <v-btn 
+                        block 
+                        rounded
+                        type="button"
+                        density="comfortable"
+                        class="bg-primary text-secondary letter-normal mt-4"
+                        @click="appStore.isImageGalleryConfirm = true"
+                        >
+                            <span>Trocar</span>
+                        </v-btn>
+
+                    </template>
 
                 </v-col>
+
+                <template v-if="!appStore.isMobile">
 
                 <!--Start Cam-->
                 <v-col
@@ -165,6 +140,7 @@
                                     />
                                 </v-row>
 
+                            
                                 <!--Video-->
                                 <video 
                                 id="camera"
@@ -228,7 +204,9 @@
                         />
                     </v-sheet>
 
+
                 </v-col>
+                </template>
 
             </v-row>
                 
@@ -264,7 +242,7 @@
                     max-width="20"
                     /> 
                     
-                    <h5 class="text-subtitle-1 font-weight-medium"> 
+                    <h5 class="text-subtitle-1 font-weight-medium" :class="appStore.isMobile ? 'mt-6' : ''"> 
                         2) Escolha o estilo 
                     </h5>
                 </v-sheet>
@@ -337,7 +315,7 @@
                     max-width="20"
                     /> 
                     
-                    <h5 class="text-subtitle-1 font-weight-medium"> 
+                    <h5 class="text-subtitle-1 font-weight-medium" :class="appStore.isMobile ? 'mt-6' : ''"> 
                         3) Confirmar e enviar
                     </h5>
                 </v-sheet>
@@ -377,7 +355,9 @@
                                 :style="{ backgroundImage: `url(${finalImage})`}"
                                 >
                                     <!--Exibição da imagem-->
-                                    <v-img :src="finalImage"
+                                    <v-img 
+                                    :lazy-src="finalImage"
+                                    :src="finalImage"
                                     aspect-ratio="1"
                                     cover
                                     />
@@ -405,7 +385,7 @@
                             rounded
                             density="comfortable"
                             class="bg-primary letter-normal"
-                            @click="confirmImage()"
+                            @click="confirmImageFinal()"
                             >
                                 Confirmar
                             </v-btn>
@@ -421,6 +401,87 @@
     <!--Zoom image component-->
     <GalleryZoomImage :aplyFrames="aplyFrames" />
 
+    <GalleryModalConfirm :openImg="selectFile" />
+
+
+    <v-snackbar
+    v-model="isMsg"
+    timeout=-1
+    location='bottom'
+    color="success"
+    >
+        <v-progress-circular
+        indeterminate
+        size="16"
+        width="2"
+        color="white"
+        class="me-4"
+        />
+
+        Sua foto está quase pronta!
+        <template #actions>
+            <v-btn
+            icon="mdi-close"
+            variant="plain"
+            @click="isMsg  = false"
+            />
+        </template>
+    </v-snackbar>
+
+
+
+    <!-- CRIADOR DE IMAGENS (não visível em tela) -->
+
+    <div class="create-img">
+
+        <!--Renderiza a imagem da câmera-->
+        <canvas id="videoCanvas"
+        width =1280 height=720
+        style="display: block"
+        /> 
+        <!--Centraliza a imagem que vem da câmera ou do upload e corta em 720 x 720px-->
+        <v-sheet id="squareImage"
+        width="720"
+        height="720"
+        class="bg-final-image"
+        style="display: block"
+        :style="{ backgroundImage: `url(${finalImage})`}"
+        />
+    
+        <!--Sobrepõe moldura na imagem-->
+        <div id="squareImageWithFrame"
+        class="pa-0 ma-0"
+        style="display: block"
+        >
+            <v-sheet
+            width="720"
+            height="720"
+            class="bg-final-image"
+            :style="{ backgroundImage: `url(${finalImage})`}"
+            >
+                <!--<v-img
+                width="720"
+                height="720"
+                :src="aplyFrames(galleryStyle)" 
+    
+                class="source-border-image-pos"
+                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
+                />-->
+    
+                <v-sheet
+                width="720"
+                height="720"
+                color="transparent"
+                class="bg-final-image"
+                :style="{ backgroundImage: `url(${galleryImage})`}"
+                />
+    
+            </v-sheet>
+        </div>
+
+    </div>
+
+
 </template>
 
 
@@ -429,12 +490,16 @@
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
     import GalleryZoomImage from './GalleryZoomImage'
+    import GalleryModalConfirm from './GalleryModalConfirm'
 
     //Conversor de html
     import html2canvas from 'html2canvas'
 
+    const isMsg = ref(false)
+
     const appStore = useAppStore()
     const apiStore = useApiStore()
+
 
     //Imagem final
     let finalImage = ref(null)
@@ -448,7 +513,7 @@
 
     //Moldura da imagem
     let galleryStyle = ref(1)
-    let isStyleSelected = ref(1)
+    let galleryImage = ref('')
 
     //Uso da caâmera
     const stream = ref(null)
@@ -466,6 +531,7 @@
             changeSelectedFile.value = true
             finalImage.value = selectedFile.value
         }
+
     }
 
     //Adiciona o arquivo da captura de vídeo na imagem final
@@ -483,16 +549,39 @@
         let base64Img;
         const file = document.querySelector('input[type=file]').files[0];
         const reader = new FileReader();
-
+        
         reader.onloadend = () => {
             base64Img = reader.result;
             selectedFile.value = base64Img
             finalImage.value = base64Img
             changeSelectedFile.value = true;
+        }
+        reader.readAsDataURL(file);
+    }
 
-            //Converte composição em imagem 
-            setTimeout(() => { renderImg() }, "1000");
 
+
+
+
+    const selectFile = () => {
+        const fileInput = document.getElementById('fileInput');
+        fileInput.click(); // Trigger click event on file input
+    }
+
+
+    const handleFile = () => {
+        const fileInput = document.getElementById('fileInput');
+        const file = fileInput.files[0];
+
+        const reader = new FileReader();
+
+        let base64Img;
+        
+        reader.onloadend = () => {
+            base64Img = reader.result;
+            selectedFile.value = base64Img
+            finalImage.value = base64Img
+            changeSelectedFile.value = true;
         }
         reader.readAsDataURL(file);
     }
@@ -544,8 +633,8 @@
     }
 
     //Captura imagem da camera
-    const shootingCam = () => {
-        
+    const shootingCam = () => { 
+
         changeSelectedFile.value = false;
 
         if(!isShootingCam.value) {
@@ -570,14 +659,17 @@
             } else {
                 finalImage.value = selectedFile.value   
             }
-
-            //Converte composição em imagem 
-            setTimeout(() => { renderImg() }, "1000");
         }
     }
 
+
+
+
     //Converte composição em imagem
-    const renderImg = () => {
+    const renderImg = async () => {
+        //appStore.globalMsg('Se você tem um usuário no EisnteinPertencer, receberá um email com o link para Resetar sua Senha.', 'success')
+
+        
         const toRenderImg = document.getElementById("squareImageWithFrame") 
 
         // Opções da Captura
@@ -591,61 +683,53 @@
         }
         
         html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/jpg");
-            imageToServer.value = image
+            imageToServer.value = canvas.toDataURL("image/jpg");
+
+            // Imagem que será enviada
+            const userGalleyImg = imageToServer.value;
+
+            console.log(userGalleyImg)
+
+
+            let n = appStore.appData.galeria.content.userImgs.length
+            if ( n == 0 ) { n = 1 }
+
+            // Create a timestamp
+            let timestamp = new Date().getTime();
+
+            //Comunicação com a API 
+            const userId = JSON.parse(localStorage.getItem('userId'));
+            const num = Math.floor(Math.random() * 7)
+            let newImg = { "userId": userId + timestamp, "type":"gallery", "n": num, "image": userGalleyImg } 
+
+            apiStore.useSaveImg('/uploadimage' , newImg )
+            console.log(appStore.appData.galeria.content.userImgs)
+
+
+
+            //appStore.gallerySendImageKey += 1
+            appStore.galleryUserImgKey += 1
+
+
+            //Reinicia o envio de imgs
+            resetImgSender()
+
+            // Abre imagem em zoom
+            setTimeout(function() { 
+                zoomImage() 
+                isMsg.value = false 
+            }, 3000);
+
         });
-    
     }
 
-
-    //Download image (não está em uso)
-    /*const downloadImage = () => {
-        const toRenderImg = document.getElementById("squareImageWithFrame") 
-
-        // Opções da Captura
-        const options = {
-            allowTaint: true,
-            useCORS: true,
-            width: 720,
-            height: 720,
-            scale: 1.1,
-            imageTimeout:0,
-        } 
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/jpg");
-            let link = document.createElement('a');
-            link.download = "my-image.png";
-            link.href = image;
-            link.click();
-        });
-    }*/
-
-
-    //Finaliza ou recomeça a seleção das molduras (não está sendo usado)
-    /*const updateStyle = () => {
-        isStyleSelected.value = !isStyleSelected.value
-
-        if (!isStyleSelected.value){
-            //Finaliza escolha
-            for (var i = 1; i <= 6; i++){
-                document.getElementById("style" + i)
-                .style.cssText = "opacity: 1; transition: opacity 1s"
-            }
-            document.getElementById("finalImage").classList.remove("anim-final-img");
-        } else {
-            //Recomeça escolha
-            for (var i = 1; i <= 6; i++){
-                if (i != galleryStyle.value){
-                    document.getElementById("style" + i)
-                    .style.cssText = "opacity: .3; transition: opacity 1s"
-                }
-            }
-            //Adiciona animação
-            document.getElementById("finalImage").classList.add("anim-final-img");
-        }
-    }*/
-
+    const resetImgSender = () => {
+        finalImage.value = null
+        imageToServer.value = null
+        selectedFile.value = null
+        changeSelectedFile.value = false
+        galleryStyle.value = 1
+    }
 
 
     //Retorna as imagens das molduras em svg
@@ -659,27 +743,44 @@
         }*/
     } 
 
+
     //Retorna as imagens das molduras molduras em png
-    const aplyFrames = (index) => {//Converte composição em imagem 
-        return  new URL(`../assets/img/galleryFrame-${index}.png`, import.meta.url).href
+    const aplyFrames = (index) => { 
+
+        //Envia moldura selecionada para renderização da imagem final
+        galleryImage.value = new URL(`../assets/img/galleryFrame-${index}.png`, import.meta.url).href
+
+        //Retorna as imagens das molduras molduras em svg (preview)
+        return  new URL(`../assets/img/galleryFrame-${index}.svg`, import.meta.url).href
     }
 
     //Seleciona a moldura 
     const setGalleryStyle = (i) => {
+
         galleryStyle.value = i
-        document.getElementById("finalImage").classList.add("anim-final-img");
+
+        /*document.getElementById("finalImage").classList.add("anim-final-img");
+
         setTimeout(() => { 
             document.getElementById("finalImage").classList.remove("anim-final-img") 
-        }, "500");
+        }, "1000");*/
+
     }
+
+
 
     const zoomImage = () => {
             appStore.isZoomImg = true
-            appStore.selectedImg = finalImage.value
         }
 
-    //Salva a imagem final
-    const confirmImage = async () => {
+
+
+
+
+    //Enviar imagem
+    const confirmImageFinal = async () => {
+
+        isMsg.value = true
 
         //Se for o momento, libera badge da galeria 
         if (appStore.appData.badges.picture == 0){
@@ -690,43 +791,22 @@
         if (isCamOpen.value){
             stopVideo()
         }
-        
-        //Cria objeto com informações da imagem
-        const newImage = {
-            "path": finalImage.value,
-            "style": galleryStyle.value,
-            "visible": false
-        }
 
-        //console.log(finalImage.value)
-
-        //Envia objeto para galeria do usuário
-        //appStore.appData.galeria.content.userImgs.push(newImage);
-
-        //Envia objeto para galeria do usuário
-        //appStore.appData.galeria.content.userImgs.unshift(newImage);
-
-        appStore.imgObject = newImage
-
-        //Atualiza os componentes da galeria
-        appStore.galleryCardKey += 1
-        appStore.gallerySendImageKey += 1
+        //renderiza a imagem com a moldura
+        await renderImg()
 
         
-        //Atualiza o localStorage
-        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
 
-        //Atualiza backend
-        const userId = JSON.parse(localStorage.getItem('userId'));
-        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
-
-        console.log('Atualizaou galeria')
-        
-        
-        zoomImage()
     }
 
-    //Expõe método e constante que controlam a câmera para o parent component (GalleryModal)
+
+    console.log(appStore.appData.galeria.content.userImgs.length)
+
+
+
+
+
+    //Expõe método e constante, que controlam a câmera para o parent component (GalleryModal)
     defineExpose({
         isCamOpen,
         stopVideo,
@@ -805,5 +885,13 @@
     .bg-final-image{
         background-size: cover;
         background-position: center
+    }
+
+    .create-img{  
+        
+        position:absolute;
+        left:-10000px;
+        top:auto;
+        
     }
 </style>

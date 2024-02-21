@@ -29,13 +29,17 @@ export function useProgressCalc(select, i) {
     }
     
     // calculo bara de progresso unidade [Hanna]
-    let progressPercent = (totalTrueItems.length * 100) / totalItems.length
+    //let progressPercent = progressPercent = ((totalTrueItems.length) * 100) / totalItems.length
+    
+    let progressPercent = 0
+    if (i == 3 && totalTrueItems.length > 0 ) { progressPercent = ( (totalTrueItems.length + 1 ) * 100 ) / totalItems.length} 
+    else { progressPercent = ((totalTrueItems.length) * 100) / totalItems.length }
 
-    if (select == 'total') { return totalItems.length }
+    if (select == 'total') {if(i == 3){ return totalItems.length - 1 } else { return totalItems.length } }
     if (select == 'progressNum') { return totalTrueItems.length }
     if (select == 'progressBar') { 
         //Caso a barra de progresso não esteja visível, compensa em 5%
-      /*  if (progressPercent < 5){progressPercent = 5} */
+        if (progressPercent < 5){progressPercent = 5} 
         return progressPercent 
     }
 
@@ -59,9 +63,9 @@ export function useStartProgress(finalContent){
         }
     
         // calculo progresso do curso (Gota) 
-        const totalProgress = (progressNum * 100) / total
+        const totalProgress = Math.ceil((progressNum * 100) / total) 
     
-        if (totalProgress == 0 ) {appStore.appData.glogalProgress = 0.1} else{
+        if (totalProgress == 0 ) {appStore.appData.glogalProgress = 2} else{
             appStore.appData.glogalProgress = totalProgress
         }
     

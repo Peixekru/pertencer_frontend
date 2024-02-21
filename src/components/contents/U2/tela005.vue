@@ -762,16 +762,19 @@
 			<v-col cols="12" md="5">
 				<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
 					<p class="mt-4 texto_branco cont5_title">
-						Além das iniciativas que você já conheceu, o Einstein disponibiliza também o Workplace. 
+						ALÉM DAS INICIATIVAS QUE VOCÊ JÁ CONHECEU, O EINSTEIN DISPONIBILIZA TAMBÉM O WORKPLACE.
 					</p>
 					<p style="font-weight:700" class="mt-4 texto_branco cont5_title">
-						Você sabe o que é?
+						VOCÊ SABE O QUE É?
 					</p>
 					<p class="mt-4 texto_branco">
-						O Workplace é uma ferramenta que possibilita fácil acesso à comunicação com os colaboradores da instituição, alcança todas as gerações X, Y e Z, e pode ser visto e compartilhado de qualquer lugar.
+						O Workplace é a rede social interna do Einstein, uma importante ferramenta que possibilita comunicação e interação com as pessoas colaboradoras da Instituição, além de ser acessível tanto pelo computador quanto pelo celular.
 					</p>
 					<p class="mt-4 texto_branco">
-						O grupo Carreiras Einstein é administrado pela área de Recrutamento e Seleção com o objetivo de trocar informações em relação às oportunidades da instituição, dicas sobre processo seletivo e carreira, vídeos e enquetes. As publicações acontecem semanalmente as quintas-feiras. 
+						Se você tem interesse em saber mais sobre as oportunidades internas, o grupo Carreiras Einstein é o seu lugar! Ele é administrado pela área de Recrutamento e Seleção, com o objetivo de trocar informações em relação às oportunidades da Instituição, dicas sobre processo seletivo e carreira, além de vídeos e enquetes. As publicações acontecem semanalmente as quintas-feiras.
+					</p>
+					<p class="mt-4 texto_branco">
+						<strong>Escaneie o QR Code e participe agora mesmo!</strong>
 					</p>
 				</v-card-text>
 			</v-col>
@@ -1813,7 +1816,7 @@
 			<v-col cols="12" sm="6" md="5" align-self="center">
 				<v-card-text class="pl-0 pr-0 reveal fade-left">
 					<p style="text-transform:uppercase;font-size:1.5em; line-height:1.5em" class="mt-8 texto_branco texto_notebook">
-						Acesse nossa página e encontre todas as informações que você precisa!
+						ACESSE A PÁGINA DE RECONHECIMENTO E RECOMPENSA NO SOU EINSTEIN E ENCONTRE TODAS AS INFORMAÇÕES QUE VOCÊ PRECISA!
 					</p>
 				</v-card-text>
 			</v-col>

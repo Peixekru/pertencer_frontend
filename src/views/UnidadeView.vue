@@ -174,13 +174,19 @@
 	//Armazena todos os objetos 
 	const contents = ref([])
 
+	console.log(appStore.currentUnidadeNumber)
+
 	//Percorre todas todos os objetos
 	for(let i = 0; i < appStore.appData.unidades[appStore.currentUnidadeNumber].content.length; i++) {	
 		for (let j = 0; j < appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons.length; j++){
 
 			//console.log(appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons.length)
-			carrossel.value.push(i)	
-			contents.value.push(appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons[j])	
+			if(appStore.currentUnidadeNumber == 3 && j == 2) {
+				console.log('não usar')
+			} else {
+				carrossel.value.push(i)	
+				contents.value.push(appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons[j])	
+			}
 		}
 	}
 
@@ -190,6 +196,8 @@
 	const loadObject = ( unidade, contentIndex, index, content ) => {
 
 		content.selected = 1
+
+		if(unidade == 3 && index >= 2) { index++ } 
 
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')
@@ -226,6 +234,8 @@
 			} else if (appStore.currentUnidadeNumber == 2) {
 				return  new URL(`../assets/img/img-${index + 10}.jpg`, import.meta.url).href
 			} else if (appStore.currentUnidadeNumber == 3) {
+
+				if(index >= 3) { index ++ }
 				return  new URL(`../assets/img/img-${index + 17}.jpg`, import.meta.url).href
 			}
 	} 

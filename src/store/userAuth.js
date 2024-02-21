@@ -7,7 +7,8 @@ export const useAuthStore = defineStore('userAuth', {
     state: () => ({
         //fakeServer: import.meta.env.VITE_FAKESERVER,
         //serverUrl: 'http://www.einsteinpertencer.com.br:3000/login'
-        serverUrl: 'https://www.fideliadmin.com/pertencer'
+        //serverUrl: 'https://www.fideliadmin.com/pertencer'
+        serverUrl: 'https://www.einsteinpertencer.com.br/pertencer'
     }),
 
     getters: {
@@ -21,6 +22,8 @@ export const useAuthStore = defineStore('userAuth', {
 
             //Nova instância para utilizar "this" no escopo do axios
             let self = this;
+
+            console.log(`-> Rota procuradar: ${path}`, `-> Dados enviados:`, data)
 
             axios.post(this.serverUrl + path, data).then(function (response) {
 
@@ -60,6 +63,12 @@ export const useAuthStore = defineStore('userAuth', {
                         //User Feedback
                         appStore.globalMsg('Sua senha foi alterada com sucesso! ', 'success')
                     }
+                }
+
+                //Esqueceu a senha
+                else if (path == '/resetpassword') {
+                    console.log(' -> Status da recuperaçãi da senha: ', response.data.result)
+                    appStore.globalMsg('Se você tem um usuário no EisnteinPertencer, receberá um email com o link para Resetar sua Senha.', 'success')
                 }
 
             }).catch(function (error) {

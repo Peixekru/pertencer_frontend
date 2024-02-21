@@ -1,5 +1,6 @@
 <template>
-	<template v-if="appStore.appData != 'undefined'">
+
+	<template v-if="appStore.appData != 'undefined' && isScreenBlock == false">
 		<v-app class="cursor-preview">
 
 			<!--<DebugModal />-->
@@ -18,6 +19,10 @@
 			:hoverSize="4"
 			/>
 
+			<!--Barra de progresso global do topo da aplicação-->
+				<ProgressGlobalFull v-if="appStore.currentRoute != '/'"/>
+
+			<!--Btn logout-->
 			<v-btn 
 				v-if="appStore.currentRoute != '/unidade' && 
 				appStore.currentRoute != '/conteudo' && 
@@ -35,6 +40,7 @@
 			<GlobalMsg />
 
 			<template v-if="appStore.currentRoute != '/' && appStore.currentRoute != '/welcome'">
+				
 
 				<!--Modal da cápsula do tempo-->
 				<CapsulaModal :key="appStore.capsulaModalKey"/>
@@ -128,11 +134,17 @@
 
 		</v-app>
 	</template>
+
+
+	<BlockScreenModal 
+		v-if="appStore.blockScreenModal"
+	/>
+
 </template>
 
 
 <script setup>
-	import { onMounted } from 'vue'
+	import { ref, onMounted, watch } from 'vue'
 	import { RouterView, useRouter } from 'vue-router'
 	import { useAppStore } from '@/store/app'
 	import { useApiStore } from '@/store/api'
@@ -153,8 +165,35 @@
 	import WelcomeModalFx from '@/components/WelcomeModalFx.vue'
 	import CustomCursor from '@/components/CustomCursor'
 
+	import ProgressGlobalFull from './components/ProgressGlobalFull.vue'
+
+	import BlockScreenModal from '@/components/BlockScreenModal'
+
+
 	//*!Retirar para produção!!
 	//import DebugModal from '@/components/DebugModal'
+
+
+	import { useScreenOrientation } from '@vueuse/core'
+
+	const {
+		isSupported,
+		orientation,
+		angle,
+		lockOrientation,
+		unlockOrientation,
+	} = useScreenOrientation()
+
+	const isScreenBlock = ref(false)
+
+	watch(angle, () => {
+		if (angle.value == 90 || angle.value == 270) {
+			//alert(angle.value)
+			appStore.blockScreenModal = true;
+		} else {
+			appStore.blockScreenModal = false;
+		}
+	})
 
 	const appStore = useAppStore()
 	const apiStore = useApiStore()
@@ -239,6 +278,7 @@
 		}
     });
 
+
 </script>
 
 
@@ -263,6 +303,13 @@
 		font-size: 16px; 
 		color:#C5EAF3 !important;
 	}
+
+
+
+	
+	
+
+	
 
 
 </style>

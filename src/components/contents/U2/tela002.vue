@@ -291,7 +291,7 @@
 							Há programas específicos oferecidos para lideranças de diferentes áreas.
 						</p>
 						<p class="mt-4">
-							Para obter mais informações, acesse: <a class="texto_azul" style="text-decoration:none;" href=""><strong>link ?</strong></a>
+							Para obter mais informações, <a class="texto_azul" style="text-decoration:none;" href="./tela_desenvolvimento/relatorio_de_desempenho_2023_lideranca.pdf" target="_blank"><strong>clique aqui</strong></a>.
 						</p>
 					</v-col>
 				</v-row>

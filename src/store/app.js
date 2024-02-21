@@ -48,6 +48,8 @@ export const useAppStore = defineStore('app', {
 		allFinished: false,
 
 		//Modais
+		blockScreenModal: false,
+		///
 		videoModal: false,
 		///
 		accessModal: false,
@@ -59,7 +61,11 @@ export const useAppStore = defineStore('app', {
 		workplaceModal: false,
 		///
 		galleryModal: false,
+		///
 		isZoomImg: false,
+		///
+		isImageGalleryConfirm : false,
+		///
 		selectedGallery: null,
 		selectedImg: null,
 		imgObject: {},
@@ -142,6 +148,8 @@ export const useAppStore = defineStore('app', {
 		totalGlobalImgs: 0,
 		galleryCardKey: 0,
 		gallerySendImageKey: 0,
+		galleryUserImgKey: 0,
+		changeImage: false,
 
 
 		//SpecialHomeComponents

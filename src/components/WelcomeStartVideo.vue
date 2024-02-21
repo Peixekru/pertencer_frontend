@@ -92,7 +92,7 @@
                 OK
             </template>
             <template v-slot:text>
-                <p><span class="font-weight-bold">Sua jornada começa agora!</span></p>
+                <p>Você sabia que o Programa Einstein Pertencer é obrigatório para todos os novos colaboradores? A partir da data do seu início na instituição, você terá 7 dias corridos para finalizar sua jornada! Contamos com você!</p>
                 <p class="mt-4">Para uma experiência aprimorada, todos os vídeos incluem linguagem de sinais (Libras) e legendas.</p>
                 <p class="mt-4 font-weight-bold">Caso seja possível, recomendamos o uso de fones de ouvido ou a ativação do áudio do computador.</p>
 

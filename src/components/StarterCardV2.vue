@@ -5,7 +5,7 @@
             <div class="text-center">
                 <v-container class="d-flex flex-column align-center mt-2">
                     <h5 class="text-h5 text-info font-weight-bold pt-2 pb-0">
-                        Começando bem
+                        Conhecendo bem​
                     </h5>
 
                     <v-container class="d-flex justify-center">
@@ -43,20 +43,61 @@
                     density="comfortable"
                     rounded
                     class="bg-info letter-normal animate__animated animate__fadeInDown"
-                    @click="appStore.startModal = true"
+                    @click="closeToolTip(); appStore.startModal = true"
                     >
-                        CONHECER
+                        Acessar
                     </v-btn>
                 
                 </v-container>
 
             </div>
+
+        <!--Box info-->
+        <WelcomeTooltip 
+        v-if="appStore.appData.start.status == 1"
+        :toolTipShow="true" 
+        class="toolTip"
+        :toolTipPos="2" 
+        :toolTipAdjust="[22, 0, 0, 0]" 
+        :toolTipW = "340"
+        :toolTipH = "1"
+        @my-click-event="closeToolTip"
+        >
+            <template v-slot:btnText>
+                OK
+            </template>
+            <template v-slot:text>
+                <p>Para você começar bem, preparamos um guia sobre nossos canais de comunicação. Assim você sempre estará por dentro das novidades!</p>
+            </template>
+        </WelcomeTooltip>
+
+    
     </v-col>
+
 </template>
 
 <script setup>
     import { useAppStore } from '../store/app'
+    import WelcomeTooltip from './WelcomeTooltip'
+    import { useApiStore } from '../store/api'
+
+    const apiStore = useApiStore();
+
     const appStore = useAppStore()
+
+    const closeToolTip = () => {
+        appStore.appData.start.status = 2
+
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+    }
+
 </script>
 
 <style scoped>
@@ -68,5 +109,11 @@
     }
     .opacity-control{
         opacity: .3 !important;
+    }
+
+    /*--Box info */
+    .toolTip{
+        position: relative;
+        top: -350px;
     }
 </style>

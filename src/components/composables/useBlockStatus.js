@@ -9,7 +9,7 @@ export function useBlockStatus(obj) {
 
     const unidadeNum = parseInt(obj[0]);
     const conteudoNum = parseInt(obj[1]);
-    const objetoNum = parseInt(obj[2]);
+    let objetoNum = parseInt(obj[2]);
 
 
     //Desmarca todos os selecionados
@@ -26,6 +26,10 @@ export function useBlockStatus(obj) {
     if (appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons.length > objetoNum + 1){
 
         appStore.allFinished = false;
+
+        console.log(objetoNum + 1)
+
+        if (unidadeNum == 3 && objetoNum + 1 == 2){ objetoNum ++}
         
         //Desbloqueia o objeto seguinte
         appStore.appData.unidades[unidadeNum].content[conteudoNum].lessons[objetoNum + 1].block = 1;

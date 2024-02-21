@@ -2,7 +2,7 @@
     <!--ToolTip-->
     <v-sheet
         :width = 500
-        :height = 500
+        :height = "toolTipH ? toolTipH : 500"
         color="transparent"
         class="custom-card"
     >

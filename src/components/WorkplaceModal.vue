@@ -82,17 +82,14 @@
                                 <h5 class="text-h5"><strong>Você finalizou sua jornada!</strong></h5>
 
                                 <p class="mt-6">
-                                    Que tal conhecer outras gotas Einstein e ficar por dentro das novidades?   
+                                    Que tal conhecer outras gotas Einstein e ficar por dentro das novidades?  
+                                    Chegou a hora de conhecer o Workplace, a rede social do Einstein! 
                                 </p>
-                                <p class="mt-6">
-                                    Chegou a hora de conhecer o Workplace, a rede social do Einstein!
-                                </p>
+
                                 <p class="mt-6">
                                     Entre, preencha o seu perfil, atualize sua foto e participe dos grupos.
-                                </p>
-                                <p class="my-6">
                                     Aqui, você fica por dentro das principais novidades da organização.
-                                </p>                        
+                                </p>
 
                             </v-container>
 

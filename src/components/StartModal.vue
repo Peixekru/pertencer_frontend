@@ -40,7 +40,7 @@
                             class="text-h5 w-auto "
                             :class=" appStore.isDarkMode ? 'text-white' : 'primary' "
                             > 
-                                Começando bem
+                                Conhecendo bem
                             </h5>
                         </v-container>
 
@@ -93,17 +93,13 @@
                                     <strong>Comunicação Interna</strong>
                                 </p>
                                 <p class="mb-4">
-                                    A comunicação interna tem como objetivo principal informar a pessoa colaboradora sobre os assuntos do Einstein, 
-                                    seu posicionamento institucional e planejamento estratégico, independente do canal de comunicação, 
-                                    assegurando que as informações sejam transparentes, equânimes, assertivas e fidedignas. 
+                                    A comunicação interna tem como objetivo principal informar a pessoa colaboradora sobre os assuntos do Einstein, seu posicionamento institucional e planejamento estratégico, independente do canal de comunicação, assegurando que as informações sejam transparentes, equânimes, assertivas e fidedignas.
                                 </p>
                                 <p class="mb-4">
-                                    Dessa maneira, garantimos que todos os colaboradores estejam constantemente atualizados, de forma inclusiva, 
-                                    apoiando, estimulando e direcionando conversas, promovendo o debate e incentivando que as pessoas colaboradoras 
-                                    produzam conhecimento e conversas alinhadas com o propósito, estratégia e cultura do Einstein.                               
+                                    Dessa maneira, garantimos que todos os colaboradores estejam constantemente atualizados, de forma inclusiva, apoiando, estimulando e direcionando conversas, promovendo o debate e incentivando que as pessoas colaboradoras produzam conhecimento e conversas alinhadas com o propósito, estratégia e cultura do Einstein.                              
                                 </p>
                                 <p class="mb-4 text-subtitle-2">
-                                    Conheça mais sobre a área de Comunicação Interna do Einstein no vídeo.                           
+                                    Conheça mais sobre a área de Comunicação Interna do Einstein no vídeo.                          
                                 </p>
 
                                 <!--btn-->

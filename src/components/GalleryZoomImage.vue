@@ -4,8 +4,8 @@
     max-width="1100px"
     @click="appStore.isZoomImg = false"
     >
-
         <v-container
+        v-if="appStore.appData.galeria.content.userImgs != null"
         class="d-flex justify-center"
         >
             <v-card
@@ -21,86 +21,49 @@
                     size="48px"
                     :color=" appStore.isDarkMode ? 'white' : 'primary'"
                     style="background-color: white; border-radius: 0  0  0 30px;"
-                    @click="appStore.isZoomImg = false"
+                    @click="appStore.isZoomImg = false; appStore.changeImage = false"
                     />   
 
-                <!--<v-img
-                v-if="appStore.selectedGallery == 'globalImages'"
-                width="100%"
-                :lazy-src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
-                :src="appStore.appData.galeria.content.globalImgs[appStore.selectedImg].path"
-                :aspect-ratio="1"
-                class="show-image"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                cover
-                >
-                    //Moldura da imagem
+                <!--Img-->
                     <v-img
-                    cover
-                    :src="aplyFrames(appStore.appData.galeria.content.globalImgs[appStore.selectedImg].style)"
+                    width="100%"
+                    :lazy-src="appStore.appData.galeria.content.userImgs[0].img"
+                    :src="appStore.appData.galeria.content.userImgs[0].img"
                     :aspect-ratio="1"
-                    />
-                </v-img>-->
-
-                <!--<v-sheet
-                v-else
-                id="flatImg"
-                width="100%"
-                color="white"
-                class="bg-final-image"
-                :style="{ backgroundImage: `url(${appStore.appData.galeria.content.userImgs[appStore.selectedImg].path})`}"
-                >
-                    //Moldura da imagem
-                    <v-img
-                    :src="aplyFrames(appStore.appData.galeria.content.userImgs[appStore.selectedImg].style)"
-                    />
-
-                </v-sheet>-->
-
-                <!--<v-img
-                v-else
-                id="flatImg"
-                width="100%"
-                :lazy-src="appStore.appData.galeria.content.userImgs[appStore.selectedImg].path"
-                :src="appStore.appData.galeria.content.userImgs[appStore.selectedImg].path"
-                :aspect-ratio="1"
-                class=" show-image "
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
-                cover
-                >
-        
-                    <v-img
+                    class="show-image"
+                    :class="appStore.appData.access.color == 1 ? 'grayscale-filter' :  ''"
                     cover
-                    :src="aplyFrames(appStore.appData.galeria.content.userImgs[appStore.selectedImg].style)"
-                    :aspect-ratio="1"
-                    />
-                </v-img>-->
+                    >
 
+                    <template v-slot:placeholder>
+                        <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                        >
+                            <v-progress-circular
+                            indeterminate
+                            size="100"
+                            width="10"
+                            color="primary"
+                            />
+                        </v-row>
+                    </template>
 
-                <v-sheet
-                id="flatImg"
-                width="100%"
-                color="white"
-                class="bg-final-image"
-                :style="{ backgroundImage: `url(${appStore.imgObject.path})`}"
-                >
-                    <!--Moldura da imagem-->
-                    <v-img
-                    :src="aplyFrames(appStore.imgObject.style)"
-                    />
+                    </v-img>
 
-                </v-sheet>
 
             </v-card>
 
             <v-sheet 
             class="pa-0 img-info-pos"
+            :class="appStore.isMobile ? 'img-info-pos-mobile' : 'img-info-pos'"
             color="transparent"
             align="center"
-            width="200"
+            width="90%"
             >
 
-                <v-card
+                <!--<v-card
                 v-if="appStore.selectedGallery == 'globalImages'"
                 width="100"
                 class="d-flex justify-start align-center pe-6 rounded-pill custom-pa animate__animated animate__bounce"
@@ -121,52 +84,90 @@
                     <p v-else>
                         Você
                     </p>
+                    
+                </v-card>-->
 
-                    <!--Teste compartilhamento -->
-                    <!--<ShareNetwork
-                    network="facebook"
-                    :url="createImg()"
+                <!--Teste compartilhamento -->
+                <ShareNetwork
+                    network="linkedin"
+                    :url="appStore.appData.galeria.content.userImgs[0].img"
                     title="Einstein Pertencer"
-                    description="Programa de Integração e Socialização da Pessoa Colaboradora"
-                    quote="Agora eu também sou uma gota"
-                    hashtags="#EinsteinPertencer"
+                    description="Feliz em compartilhar que estou começando um novo cargo no Hospital Albert Einstein."
+                    hashtags="#AgoraEuFaçoParte #OrgulhoEmPertencer #EinsteinPertencer"
                     >
                         <v-btn 
-                        icon="mdi-share-variant" 
-                        variant="tonal"
-                        size="small"
-                        color="white"
-                        @click="shareImage"
+                        icon="mdi-linkedin"
+                        color="primary"
+                        class="my-2 mx-1"
                         />
-                    </ShareNetwork>-->
-                    
-                </v-card>
+            
+                </ShareNetwork>
+
+                <!--Teste compartilhamento -->
+                <ShareNetwork
+                    network="facebook"
+                    :url="appStore.appData.galeria.content.userImgs[0].img"
+                    title="Einstein Pertencer"
+                    description="Feliz em compartilhar que estou começando um novo cargo no Hospital Albert Einstein."
+                    hashtags="#AgoraEuFaçoParte #OrgulhoEmPertencer #EinsteinPertencer"
+                    >
+                        <v-btn 
+                            rounded
+                            icon="mdi-facebook"
+                            color="primary"
+                            class="my-2 mx-1"
+                            />
+            
+                </ShareNetwork>
+
+                <!--Teste compartilhamento -->
+                <ShareNetwork
+                    network="twitter"
+                    :url="appStore.appData.galeria.content.userImgs[0].img"
+                    title="Einstein Pertencer"
+                    description="Feliz em compartilhar que estou começando um novo cargo no Hospital Albert Einstein."
+                    hashtags="#AgoraEuFaçoParte #OrgulhoEmPertencer #EinsteinPertencer"
+                    >
+                        <v-btn 
+                            rounded
+                            icon="mdi-twitter"
+                            color="primary"
+                            class="my-2 mx-1"
+                            />
+            
+                </ShareNetwork>
+                
 
                 <v-btn 
                 rounded
-                prepend-icon="mdi-tray-arrow-down"
+                icon="mdi-download-multiple"
                 color="primary"
-                min-width="100px"
-                class="my-2"
-                @click="downloadImage"
-                >
-                    SALVAR
-                </v-btn>
+                class="my-2 mx-1"
+                @click="downloadImage(appStore.appData.galeria.content.userImgs[0].img)"
+                />
 
                 <!--<v-btn 
-                icon="mdi-share-variant" 
-                variant="tonal"
-                size="small"
-                color="white"
-                @click="shareImage"
+                rounded
+                icon="mdi-eye-check"
+                color="primary"
+                class="my-2 mx-1"
+                @click="hideImage(showIndex)"
                 />-->
+
+                <v-btn 
+                rounded
+                icon="mdi-trash-can"
+                color="primary"
+                class="my-2 mx-1"
+                @click="deleteImg(showIndex)"
+                />
             
             </v-sheet>
 
         
         </v-container>
 
-        <!--Isntrução download-->
+        <!--Isntrução download
         <v-container 
         class="pa-0 desabled-card"
         :class="appStore.isMobile ? 'custom-container-mobile' : 'custom-container'"
@@ -185,7 +186,7 @@
                     Salve e compartilhe este momento!
                 </template>
             </WelcomeTooltip>
-        </v-container>
+        </v-container>-->
     
     </v-dialog>
 </template>
@@ -193,58 +194,46 @@
 
 <script setup>
     import { useAppStore } from '../store/app'
-    import WelcomeTooltip from './WelcomeTooltip'
-    import html2canvas from 'html2canvas'
+    import axios from 'axios';
+    //import WelcomeTooltip from './WelcomeTooltip'
+
 
     const appStore = useAppStore()
-
-    // Opções da captura de imagem
-    const options = {
-        allowTaint: true,
-        useCORS: true,
-        scale: .9,
-    }
-
-    const createImg = () => {
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            return image
-        });
-    }
     
-    const downloadImage = () => {
-
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            let link = document.createElement('a');
-            link.download = "my-image.png";
-            link.href = image;
+    const downloadImage = (img) => {
+        // URL da imagem a ser baixada
+        const imageUrl = img;
+        // solicitação GET usando Axios
+        axios( { url: imageUrl, method: 'GET', responseType: 'blob' } ) // tipo de resposta como Blob
+        .then(response => {
+            // Criarar um objeto Blob com os dados retornados
+            const blob = new Blob([response.data]);
+            // URL para o Blob
+            const blobUrl = window.URL.createObjectURL(blob);
+            // link de download
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            // Atributo de download para forçar o download
+            link.setAttribute('download', 'image.png');
+            // Link ao documento
+            document.body.appendChild(link);
+            // Link para iniciar o download
             link.click();
-
-            //Fecha modal da galeria
-            appStore.galleryModal = false
+            // Remove o link do documento após o download
+            document.body.removeChild(link);
+        })
+        .catch(error => {
+            console.error('Erro ao baixar a imagem:', error);
         });
     }
 
-    const shareImage = () => {
-
-        const toRenderImg = document.getElementById("flatImg")
-
-        html2canvas(toRenderImg, options).then(function(canvas) {
-            let image = canvas.toDataURL("image/png");
-            console.log(image)
-        });
-
-
-    }
 
 
     defineProps({
         aplyFrames: Function,
+        hideImage: Function,
+        deleteImg: Function,
+        showIndex: Number,
     })
 
 </script>
@@ -264,6 +253,14 @@
         left: 50%;
         bottom: 0;
         transform: translate(-50%, 0);
+    }
+
+    .img-info-pos-mobile{
+        position: absolute;
+        z-index: 3000;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 55%);
     }
 
     .boder-user-image{
