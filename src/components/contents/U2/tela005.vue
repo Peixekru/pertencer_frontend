@@ -1793,7 +1793,7 @@
 		
 	
 	<v-img class="mx-auto mb-4 mt-16" src="./img/tela_oportunidades/cont10_grade.png" />
-	<v-img class="notebook mx-auto mb-4 mt-16" src="./img/tela_oportunidades/laptop.png" />
+	<v-img class="notebook mx-auto mb-4 mt-16" src="./img/tela_oportunidades/laptop-2.png" />
 	
 <v-card class="box_dicas_cont5 pl-0 pr-0 mt-n8 reveal fade-bottom mx-auto" style="z-index:20;">
 		<v-card-text align="left">

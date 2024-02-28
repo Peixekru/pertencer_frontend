@@ -367,6 +367,7 @@
         if (appStore.appData.badges.capsula == 0){
             appStore.appData.badges.capsula = 1
         }
+        
 
         //Finaliza conteúdo
         appStore.finishedContent(true)
