@@ -14,7 +14,11 @@
             max-width="54"
             src="../assets/img/side-progress-outline.svg"
             />
+
+            
+
         </v-sheet>
+
 
         <v-sheet 
         width="52"
@@ -28,14 +32,15 @@
             v-if="
             appStore.appData.glogalProgress >= (index * 100) / 22
             "
-            max-width="44"
+            max-width="42"
             :src="getImg(index)"
-            style="margin-bottom: 4px;"
-            class="animate__animated animate__fadeIn"
+            class="animate__animated animate__fadeIn mb-1"
             :class="appStore.appData.access.color == 0 ? 'secondary-svg' : 'secondary-svg-mono' " 
             />
 
-<!--
+            <p class="progress-global-text mt-1">{{ appStore.appData.glogalProgress }}%</p>
+
+            <!--
             <v-img  
             v-else
             max-width="44"
@@ -53,7 +58,7 @@
             'drop' : 'drop-top' " 
             />
         </div>
-
+    
     </v-sheet>
 </template>
 
@@ -80,13 +85,13 @@
         background-color:rgba( 0, 0, 0, .0);
         position: absolute;
         bottom: 0;
-        z-index: 20000;    
+        z-index: 2000;    
     }
     .progress-bg-percent{
         background-color:rgba( 0, 0, 0, .0);
         position: absolute;
         bottom: 0;
-        z-index: 10000;    
+        z-index: 1000;    
     }
     .progress-bg-right-adjust{
         right:0;
@@ -116,6 +121,21 @@
         border-radius:0% 100% 100% 100%;
         transform: rotate(45deg);
         margin: 26px 0 11px 0;
+    }
+    .progress-global-text{
+        font-size: 11px;
+        color: white !important;
+        letter-spacing: 0.08px;
+
+
+
+        position: absolute !important;
+        top: 50%;
+        left: 50%;
+        z-index: 20000 !important;
+        font-weight: 400;
+        transform: translate(-50%, -50%);
+        
     }
 
 </style>

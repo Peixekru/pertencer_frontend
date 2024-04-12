@@ -16,7 +16,7 @@
                             <v-img 
                             v-if="appStore.countdown != 0"
                             class="me-4"
-                            :class="appStore.appData.capsula.status == 0 ? 'opacity-control' : '' "
+                            :class="appStore.capsulaInfo.status == 0 ? 'opacity-control' : '' "
                             src="../assets/img/capsula-icon.svg"
                             width="70" 
                             />
@@ -24,14 +24,14 @@
                             <v-img 
                             v-if="appStore.countdown == 0"
                             class="animate__animated animate__fadeInLeft"
-                            :class="appStore.appData.capsula.status <= 0 ? 'opacity-control' : '' "
+                            :class="appStore.capsulaInfo.status <= 0 ? 'opacity-control' : '' "
                             src="../assets/img/capsula-icon-open.svg"
                             width="88" 
                             />
                             
 
                             <div 
-                            v-if="appStore.appData.capsula.status == 1 && appStore.countdown > 0"
+                            v-if="appStore.capsulaInfo.status == 1 && appStore.countdown > 0"
                             class="text-h5 font-weight-bold text-info text-start animate__animated animate__fadeInRight line-small"
                             >
                                 <p class="text-caption text-white">Faltam</p> 
@@ -40,14 +40,14 @@
                             </div>
 
                             <v-icon
-                            v-if="appStore.appData.capsula.status == 0"
+                            v-if="appStore.capsulaInfo.status == 0"
                             color="info"
                             icon="mdi-lock-outline"
                             size="x-large"
                             />
 
                             <v-icon
-                            v-if="appStore.appData.capsula.status > 0"
+                            v-if="appStore.capsulaInfo.status > 0"
                             color="info"
                             icon="mdi-check-circle"
                             size="x-large"
@@ -59,8 +59,8 @@
 
                     <v-btn
                     block 
-                    :class="appStore.appData.capsula.status == 0 ? appStore.isDarkMode ? 'opacity-control text-white' : 'opacity-control text-primary' : appStore.isDarkMode ? 'text-white' : 'text-primary' "
-                    :disabled="appStore.appData.capsula.status == 0"
+                    :class="appStore.capsulaInfo.status == 0 ? appStore.isDarkMode ? 'opacity-control text-white' : 'opacity-control text-primary' : appStore.isDarkMode ? 'text-white' : 'text-primary' "
+                    :disabled="appStore.capsulaInfo.status == 0"
                     type="button"
                     density="comfortable"
                     rounded
@@ -87,8 +87,8 @@
         //Armazena a data de envio
         //appStore.sendDate = appStore.appData.capsula.content.sendDate
 
-        let startDate = new Date(appStore.appData.capsula.content.startDate)
-        let sendDate = new Date(appStore.appData.capsula.content.sendDate)
+        let startDate = new Date(appStore.capsulaInfo.content.startDate)
+        let sendDate = new Date(appStore.capsulaInfo.content.sendDate)
         let currentDate = new Date()
 
         //Calcula a quantidade de dias restantes para envio

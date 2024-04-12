@@ -24,6 +24,18 @@ export const useApiStore = defineStore('api', {
             });
         },
 
+        //Save Cápsula
+        async useSaveCapsule(path, data) {
+            axios.post(this.serverUrl + path, data 
+            ).then(function (response) {
+                console.log('-> Objeto enviado para a cápsula', data);
+                //console.log(response)
+            })
+            .catch(function (error) {
+                console.error(error);
+            });
+        },
+
         //Save img
         async useSaveImg(path, data) { 
             

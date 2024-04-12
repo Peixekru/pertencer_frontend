@@ -2,8 +2,7 @@
 
     <v-progress-linear 
         v-model="appStore.appData.glogalProgress"
-        color="#00a5e8" 
-        bg-opacity=".3"
+        color="#80c600" 
         height="8"
         class="bar-pos"
     />
@@ -21,5 +20,6 @@
     top: 0;
     z-index: 10000;
     border-bottom: solid 1px rgba(255,255,255,.3);
+    background-color: #181542;
 }
 </style>

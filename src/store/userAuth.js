@@ -1,5 +1,7 @@
 import { defineStore } from 'pinia';
-import { useAppStore } from './app'
+import { useAppStore } from './app';
+
+import CryptoJS from 'crypto-js';
 
 import axios from 'axios';
 
@@ -16,14 +18,39 @@ export const useAuthStore = defineStore('userAuth', {
     },
 
     actions: {
+
+
+        encrypt(data) {
+            const encrypt = CryptoJS.AES.encrypt(data, '19041981').toString()
+            return encrypt;
+        },
+
+        decrypt(data){
+            const decrypt = CryptoJS.AES.decrypt(data, '19041981').toString(CryptoJS.enc.Utf8)
+            return decrypt;
+        },
+
+
+
         async useLogin(path, data) {
 
             const appStore = useAppStore()
 
+            if (data.username){
+                console.log('cpf criptografado', this.encrypt(data.username))
+                localStorage.setItem('userName', JSON.stringify(this.encrypt(data.username))); // Persistente userName do usuário no localSorage
+            }
+
+            if (data.password){
+                console.log('psw criptografado', this.encrypt(data.password))
+                localStorage.setItem('psw', JSON.stringify(this.encrypt(data.password))); // Persistente psw do usuário no localSorage
+            }
+            
+
             //Nova instância para utilizar "this" no escopo do axios
             let self = this;
 
-            console.log(`-> Rota procuradar: ${path}`, `-> Dados enviados:`, data)
+            //console.log(`-> Rota procuradar: ${path}`, `-> Dados enviados:`, data)
 
             axios.post(this.serverUrl + path, data).then(function (response) {
 
@@ -38,12 +65,12 @@ export const useAuthStore = defineStore('userAuth', {
                     //console.log(response.data.email)
                     //console.log(response.data.autocomplete)
 
+
                     const data = JSON.parse(response.data.info) // Converte para objeto
                     appStore.appData = data; // Salva dados no pinia
                     localStorage.setItem('localAppData', JSON.stringify(data)); // Persistente dados no localSorage
                     localStorage.setItem('userId', JSON.stringify(response.data.id)); // Persistente id do usuário no localSorage
                     sessionStorage.setItem('loginState', true); // Persiste o estado de login no SessionStorage
-                    sessionStorage.setItem('userMail', response.data.email); // Persiste o e-mail no SessionStorage
 
                     console.log(' -> Objeto recebido do servidor no Login: ', data)
 
@@ -76,6 +103,31 @@ export const useAuthStore = defineStore('userAuth', {
                 console.error(error);
                 appStore.globalMsg('Oops! Um erro inesperado aconteceu.', 'error')
             });
+
+
+            if (path != '/chgpsw'){
+
+                //Cápsula do tempo
+                axios.post(this.serverUrl + '/loadcapsule', { "username" : data.username} ).then(async function (response) {
+                    console.log('-> Cápsula info: ', response.data.info)
+    
+                    appStore.capsulaInfo = JSON.parse(response.data.info);
+    
+                    console.log('-> Cápsula info: ', appStore.capsulaInfo)
+    
+                    sessionStorage.setItem('userMail', response.data.email); // Persiste o e-mail no SessionStorage
+                    localStorage.setItem('capsulaInfo', response.data.info); // Persiste infos da cápsula do tempo localStorage
+    
+                }).catch(function (error) {
+                    //erro no envio
+                    console.error(error);
+                    appStore.globalMsg('Oops! As informações sa cápsula do tempo não foram carregadas.', 'error')
+                });
+
+            }
+
+
+
         }
 
     }

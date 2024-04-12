@@ -143,6 +143,10 @@ export const useAppStore = defineStore('app', {
 		capsulaCardKey: 0,
 		capsulaModalKey: 0,
 
+		//
+		capsulaInfo: {},
+		//
+
 		//Galeria de fotos
 		totalUsers: 0,
 		totalGlobalImgs: 0,
@@ -168,7 +172,6 @@ export const useAppStore = defineStore('app', {
 		msgColor: '',
 
 		isFinished: false,
-
 
 		isStoryLineLoading: true
 	}),

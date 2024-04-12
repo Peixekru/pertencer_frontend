@@ -310,7 +310,7 @@
                                 density="comfortable"
                                 rounded
                                 class="bg-primary letter-normal animate__animated animate__fadeInDown"
-                                @click="updateMail"
+                                @click="saveData()"
                                 >
                                     Enterrar capsúla
                                 </v-btn>
@@ -332,70 +332,49 @@
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
 
+    import CryptoJS from 'crypto-js'
+
     const appStore = useAppStore()
     const apiStore = useApiStore();
 
+
+    //Recupera informações da cápsula do tempo
+    const capsulaInfo = appStore.capsulaInfo
 
 
     //MSG//
 
     //1. Recupera e armazena mensagem
-    const savedMsg = appStore.appData.capsula.content.sendMessage
+    const savedMsg = capsulaInfo.content.sendMessage
     var msg = ref(savedMsg) 
 
     //2. Observa se houve mudança na mensagem
     var msgIsModified = ref(false)
     watch(msg, () => { 
-        if (msg.value != appStore.appData.capsula.content.sendMessage){
+        if (msg.value != capsulaInfo.content.sendMessage){
             msgIsModified.value = true
         }else{
             msgIsModified.value = false
         }
     })
 
-    //3. Grava alterações
-    const updateMsg = () => {
-        //Modifica a mensagem
-        appStore.appData.capsula.content.sendMessage = msg.value
-        //Modifica a data de gravação para a data atual
-        appStore.appData.capsula.content.startDate = new Date().toLocaleDateString()
-        //Desabilita o botão gravar
-        msgIsModified.value = false
-        //Armazena dados no localstorage e backend
-        saveData()
-
-        appStore.globalMsg('Mensagem alterada com sucesso!', 'success')
-    }
-
+ 
 
     //STYLE
 
     //1. Recupera estilo selecionado
-    const msgStyle = ref(appStore.appData.capsula.content.style)
+    const msgStyle = ref(capsulaInfo.content.style)
 
     //2. Observa se outro estilo foi escolhindo
     var styleIsModified = ref(false)
     watch(msgStyle, () => { 
-        if (msgStyle.value != appStore.appData.capsula.content.style){
+        if (msgStyle.value != capsulaInfo.content.style){
             styleIsModified.value = true
         }else{
             styleIsModified.value = false
         }
     })
 
-    //3. Grava alterações
-    const updateStyle = () => {
-        //Atualiza o card da cápsula na home
-        appStore.capsulaCardKey += 1
-        //Modifica o estilo
-        appStore.appData.capsula.content.style = msgStyle.value
-        //Desabilita o botão escolher
-        styleIsModified.value = false
-        //Armazena dados no localstorage e backend
-        saveData()
-
-        appStore.globalMsg('Estilo alterado com sucesso!', 'success')
-    }
 
 
     //MAIL
@@ -407,24 +386,14 @@
     //2. Observa se o e-mail foi modificado
     var mailIsModified = ref(false)
     watch(mail, () => { 
-        if (mail.value != appStore.appData.capsula.content.email){
+        if (mail.value != capsulaInfo.content.email){
             mailIsModified.value = true
         }else{
             mailIsModified.value = false
         }
     })
 
-    //3. Grava alterações
-    const updateMail = () => {
-        //Modifica o e-mail para envio
-        appStore.appData.capsula.content.email = mail.value
-        //Desabilita o botão confirmal
-        mailIsModified.value = false
-        //Armazena dados no localstorage e backend
-        saveData()
 
-        appStore.globalMsg('E-mail alterado com sucesso!', 'success')
-    }
 
 
     //Grava alterações no localstorage e no backend
@@ -435,13 +404,33 @@
             appStore.appData.badges.capsula = 1
         }
 
+        //Desabilita o botão confirmal
+        mailIsModified.value = false
+        
+
+        //Modifica a mensagem
+        //appStore.appData.capsula.content.sendMessage = msg.value
+
+        //appStore.capsulaInfo.content.sendMessage = msg.value
+        capsulaInfo.content.sendMessage = msg.value
+
+
+        //Modifica o estilo
+        //appStore.appData.capsula.content.style = msgStyle.value
+
+        //appStore.capsulaInfo.content.style = msgStyle.value
+        capsulaInfo.content.style = msgStyle.value
+
         //Armazena data atual do sistema
         let currentDate = new Date()
 
 
         //Modifica a data de gravação para a data atual
         //appStore.appData.capsula.content.startDate = currentDate.toLocaleDateString()
-        appStore.appData.capsula.content.startDate = currentDate
+        //appStore.appData.capsula.content.startDate = currentDate
+
+        //appStore.capsulaInfo.content.startDate = currentDate
+        capsulaInfo.content.startDate = currentDate
 
 
         //Acrescenta + 90 dias à data do envio da mensagem
@@ -449,19 +438,42 @@
         //Converte data de envio para string local
         //var sendDateStr = new Date(sendDate).toLocaleDateString()
         //Modifica a data de envio da mensagem
-        appStore.appData.capsula.content.sendDate = sendDate
+        //appStore.appData.capsula.content.sendDate = sendDate
+        
+        //appStore.capsulaInfo.content.sendDate = sendDate
+        capsulaInfo.content.sendDate = sendDate
 
 
 
         //Atualiza o localStorage
-        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData))
         //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'));
         //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
 
+
+        //Atualiza o localStorage - Cápsula
+        localStorage.setItem('capsulaInfo', JSON.stringify(capsulaInfo))
+        //Atualiza backend - Cápsula
+        const userName = JSON.parse(localStorage.getItem('userName'))
+        //descriptografia
+        const decrypt = CryptoJS.AES.decrypt(userName, '19041981').toString(CryptoJS.enc.Utf8)
+        //port / path / data - Cáosula
+        apiStore.useSaveCapsule('/savecapsule', {"username": decrypt, "info": JSON.stringify(capsulaInfo)})
+
+
+
         //Atualiza o card da cápsula na home
         appStore.capsulaCardKey += 1
+
+        //Limpa o campo de email
+        confirmMail.value = ''
+
+        //Feedback
+        appStore.globalMsg('Mensagem alterada com sucesso!', 'success')
+
+        console.log(appStore.capsulaInfo)
     }
 
 

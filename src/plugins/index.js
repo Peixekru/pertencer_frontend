@@ -12,6 +12,9 @@ import pinia from '../store'
 import router from '../router'
 import VueSocialSharing from 'vue-social-sharing'
 
+import VueCryptojs from 'vue-cryptojs'
+
+
 
 // Inclui o router no pinia
 pinia.use(({ store }) => {
@@ -27,4 +30,5 @@ export function registerPlugins (app) {
 	.use(VueSocialSharing)
 	.use(pinia)
 	.use(router)
+	.use(VueCryptojs)
 }

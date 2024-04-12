@@ -149,6 +149,8 @@
 	import { useAppStore } from '@/store/app'
 	import { useApiStore } from '@/store/api'
 	import { useTheme } from "vuetify"
+	import axios from 'axios'
+	import CryptoJS from 'crypto-js'
     import { useContrastSelect, useColorSelect } from "@/components/composables/useSystemStyle"
 	import { useScreenMonitor } from '@/components/composables/useScreenMonitor'	
 	import TopBar from '@/components/TopBar'
@@ -253,7 +255,9 @@
 
 		//Verifica o localStorage
 		if (localStorage.getItem('localAppData')) {
+
 			appStore.appData = JSON.parse(localStorage.getItem('localAppData'))
+			appStore.capsulaInfo = JSON.parse(localStorage.getItem('capsulaInfo'))
 
 			//Aplica o thema 
 			theme.global.name.value = useContrastSelect(appStore.appData.access.contrast, appStore.appData.access.color == 0)
@@ -271,6 +275,47 @@
 		}
 		window.addEventListener('load', clearStorage);
 	})
+
+	/* Verifica se o usuário está logado no sistema
+	const loginVerify = () => {
+
+		if (appStore.currentRoute != '/'){
+			
+			//descriptografia
+			const userName = JSON.parse(localStorage.getItem('userName'));
+			const psw = JSON.parse(localStorage.getItem('psw'));
+	
+			const decryptUserName = CryptoJS.AES.decrypt(userName, '19041981').toString(CryptoJS.enc.Utf8)
+			const decryptPsw = CryptoJS.AES.decrypt(psw, '19041981').toString(CryptoJS.enc.Utf8)
+	
+			//console.log("Nome: ", decryptUserName , "Psw: ", decryptPsw);
+	
+			axios.post('https://www.einsteinpertencer.com.br/pertencer/login', {
+			"username": decryptUserName, "password": decryptPsw
+			})
+			.then(function (response) {
+				
+				if ( localStorage.getItem('localAppData') != response.data.info) {
+	
+					//Apaga dados locais 
+					sessionStorage.clear();
+					localStorage.clear();
+					router.push('/')
+				} 
+				
+			})
+			.catch(function (error) {
+				console.error(error);
+			});
+
+		}
+		
+	}
+
+	/* Define o intervalo de verificação do login no sistema
+	setInterval(loginVerify, 10 * 1000);
+	*/
+
 
 	window.addEventListener('keydown', (e) => {
 		if (e.key == 'Escape') {

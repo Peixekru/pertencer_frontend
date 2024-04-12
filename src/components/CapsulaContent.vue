@@ -256,14 +256,22 @@
 
     import { useStartProgress } from './composables/useProgress'
 
+    import CryptoJS from 'crypto-js'
+
     const appStore = useAppStore()
     const apiStore = useApiStore();
 
 
-    const savedMsg = appStore.appData.capsula.content.sendMessage
+    //Recupera informações da cápsula do tempo
+    const capsulaInfo = appStore.capsulaInfo
+
+
+    //const savedMsg = appStore.appData.capsula.content.sendMessage
+    const savedMsg = capsulaInfo.content.sendMessage
     var msg = ref(savedMsg) 
 
-    const msgStyle = ref(appStore.appData.capsula.content.style)
+    //const msgStyle = ref(appStore.appData.capsula.content.style)
+    const msgStyle = ref(capsulaInfo.content.style)
 
     const mail = ref(sessionStorage.getItem('userMail'))
 
@@ -277,7 +285,7 @@
     //return  new URL(`https://placehold.co/80x80/eaeaea/ffffff?text=img${index}&font=montserrat`).href
     } 
 
-    if ( appStore.appData.capsula.status != 1) {
+    if ( /*appStore.appData.capsula.status*/ capsulaInfo.status  != 1) {
 
         let unlockBtn = ref([ false, false, false ])
 
@@ -288,7 +296,7 @@
 
         //MSG
         watch(msg, () => { 
-            if (msg.value != appStore.appData.capsula.content.sendMessage){
+            if (msg.value != /*appStore.appData.capsula.content.sendMessage*/ capsulaInfo.content.sendMessage ){
                 unlockBtn.value[0] = true
             }else{
                 unlockBtn.value[0] = false
@@ -297,7 +305,7 @@
         })
         //MAIL
         watch(mail, () => { 
-            if (mail.value != appStore.appData.capsula.content.email){
+            if (mail.value != /*appStore.appData.capsula.content.email*/ capsulaInfo.content.email){
                 unlockBtn.value[1] = true
             }else{
                 unlockBtn.value[1] = false
@@ -330,14 +338,20 @@
         let currentDate = new Date()
 
         //Inicia a cápsula 
-        appStore.appData.capsula.status = 1
+        //appStore.appData.capsula.status = 1
+
+        capsulaInfo.status = 1
+
 
         //Modifica a mensagem
-        appStore.appData.capsula.content.sendMessage = msg.value
+        //appStore.appData.capsula.content.sendMessage = msg.value
+        capsulaInfo.content.sendMessage = msg.value
+        
         
         //Modifica a data de gravação para a data atual
         //appStore.appData.capsula.content.startDate = currentDate.toLocaleDateString()
-        appStore.appData.capsula.content.startDate = currentDate
+        //appStore.appData.capsula.content.startDate = currentDate
+        capsulaInfo.content.startDate = currentDate
 
 
         //Acrescenta + 90 dias à data do envio da mensagem
@@ -345,14 +359,18 @@
         //Converte data de envio para string local
         //var sendDateStr = new Date(sendDate).toLocaleDateString()
         //Modifica a data de envio da mensagem
-        appStore.appData.capsula.content.sendDate = sendDate
+        //appStore.appData.capsula.content.sendDate = sendDate
+        capsulaInfo.content.sendDate = sendDate
     
 
         //Modifica o estilo
-        appStore.appData.capsula.content.style = msgStyle.value
+        //appStore.appData.capsula.content.style = msgStyle.value
+        capsulaInfo.content.style = msgStyle.value
 
         //Modifica o e-mail para envio
-        appStore.appData.capsula.content.email = mail.value
+        //appStore.appData.capsula.content.email = mail.value
+        capsulaInfo.content.email = mail.value
+
         //Desabilita o botão confirmal
 
         //Armazena dados no localstorage e backend
@@ -380,6 +398,19 @@
         const userId = JSON.parse(localStorage.getItem('userId'));
         //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+
+
+        //Atualiza o localStorage - Cápsula
+        localStorage.setItem('capsulaInfo', JSON.stringify(capsulaInfo));
+        //Atualiza backend - Cápsula
+        const userName = JSON.parse(localStorage.getItem('userName'));
+        //descriptografia
+        const decrypt = CryptoJS.AES.decrypt(userName, '19041981').toString(CryptoJS.enc.Utf8)
+        //port / path / data - Cáosula
+        apiStore.useSaveCapsule('/savecapsule', {"username": decrypt, "info": JSON.stringify(capsulaInfo)})
+
+
 
         //Atualiza o card da cápsula na home
         appStore.capsulaCardKey += 1

@@ -21,7 +21,7 @@
 
             <v-img
                 class="rounded elevation-2"
-                :class="appStore.appData.access.color == 1 ? 'grayscale-filter' : '' "
+                :class="appStore.appData.access.color == 1 || cardStatus == 0 ? 'grayscale-filter' : '' "
                 aspect-ratio="16/9"
                 cover
                 :lazy-src="`${cardImg}`"
@@ -33,7 +33,7 @@
                         <v-progress-circular
                         color="primary"
                         indeterminate
-                        ></v-progress-circular>
+                        />
                     </div>
                 </template>
             </v-img>
