@@ -5,20 +5,24 @@
         <div class="text-center">
             <v-container class="d-flex flex-column align-center mt-2">
                 <h5 class="text-h5 text-info font-weight-bold pt-2 pb-0">
-                    Workplace
+                    Próximos passos
                 </h5>
 
-                <v-container 
-                class="py-6 d-flex justify-center"
-                :class="appStore.screenWidth > 1280 || appStore.screenWidth < 960 ? 'py-6' : 'py-10'"
-                >
+                <v-container class="d-flex justify-center">
                     <v-sheet color="transparent" class="d-flex justify-start align-center">
+
 
                         <v-img 
                         :class="appStore.appData.workplace.status == 0 ? 'opacity-control me-4' : '' "
-                        src="../assets/img/workplace-icon.svg"
+                        src="../assets/img/trilhas_home.svg"
                         width="80" 
                         />
+
+                        <!--<v-img 
+                        :class="appStore.appData.workplace.status == 0 ? 'opacity-control me-4' : '' "
+                        src="../assets/img/workplace-icon.svg"
+                        width="80" 
+                        />-->
                         
                         <v-icon
                         v-if="appStore.appData.workplace.status == 0"
@@ -39,7 +43,7 @@
                 </v-container>
 
                 <v-btn
-                block 
+                width="300"
                 :class="appStore.appData.workplace.status == 0 ? appStore.isDarkMode ? 'opacity-control text-white' : 'opacity-control text-primary' : appStore.isDarkMode ? 'text-white' : 'text-primary' "
                 :disabled="appStore.appData.workplace.status == 0"
                 type="button"

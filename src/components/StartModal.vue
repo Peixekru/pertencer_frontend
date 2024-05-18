@@ -32,7 +32,7 @@
                             :class="appStore.isDarkMode ? 'white-svg' : 
                             appStore.appData.access.color == 0 ? 'icon-dark-blue-svg' : 'icon-dark-blue-mono-svg' "
 
-                            src="../assets/img/start-top-icon.svg"
+                            src="../assets/img/workplace-top-icon.svg"
                             max-width="40"
                             />
 
@@ -40,7 +40,7 @@
                             class="text-h5 w-auto "
                             :class=" appStore.isDarkMode ? 'text-white' : 'primary' "
                             > 
-                                Conhecendo bem
+                                Começando bem
                             </h5>
                         </v-container>
 

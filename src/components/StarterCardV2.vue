@@ -13,8 +13,8 @@
 
                             <v-img 
                             :class="appStore.appData.start.status == 0 ? 'opacity-control me-4' : '' "
-                            src="../assets/img/start-icon.svg"
-                            width="80" 
+                            src="../assets/img/workplace-icon.svg"
+                            width="100" 
                             />
                             
                             <v-icon
