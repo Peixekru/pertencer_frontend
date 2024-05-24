@@ -1,4 +1,4 @@
-# Project Description: Content Management Platform for Albert Einstein Hospital
+Content Management Platform for Albert Einstein Hospital
 
 ---
 ![](https://github.com/Peixekru/pertencer_frontend/blob/main/_info/header.png)
