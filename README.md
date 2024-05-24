@@ -8,9 +8,9 @@ Content Management Platform for Albert Einstein Hospital
 
 The project involves the development of a comprehensive content management platform designed to train new employees joining the Albert Einstein Hospital Network. The platform is built to facilitate an engaging and efficient onboarding process for new staff members, providing a range of features aimed at enhancing their learning experience.
 
-https://www.einstein.br/
+[Einstein](https://www.einstein.br/)
 
-# Key Features:
+## Key Features:
 
 Time Capsule:
 
@@ -28,13 +28,13 @@ Responsiveness:
 The platform is designed to be fully responsive, ensuring it works seamlessly across a wide range of devices, including desktops, tablets, and smartphones. This guarantees that users have a consistent experience regardless of how they access the platform.
 Technologies Used:
 
-# Frontend:
+### Frontend:
 
 Vue 3 (Composition API): Utilized for building the user interface, providing a modern and efficient framework for creating interactive web applications.
 Pinia: Used for state management, ensuring a seamless and reactive user experience.
 Axios: Employed for making HTTP requests, enabling smooth communication between the frontend and backend.
 
-# Backend:
+### Backend:
 
 Node.js: Serves as the runtime environment, allowing for scalable and high-performance server-side code execution.
 Express: Utilized as the web application framework, providing robust routing and middleware capabilities.
@@ -49,4 +49,3 @@ This content management platform is a significant step towards modernizing the t
 #####
 ---
 ![](https://github.com/Peixekru/pertencer_frontend/blob/main/_info/descript.png)
----
