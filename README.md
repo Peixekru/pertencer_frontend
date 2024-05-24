@@ -4,13 +4,13 @@ Content Management Platform for Albert Einstein Hospital
 ![](https://github.com/Peixekru/pertencer_frontend/blob/main/_info/header.png)
 ---
 
-# Overview:
+# Overview
 
 The project involves the development of a comprehensive content management platform designed to train new employees joining the Albert Einstein Hospital Network. The platform is built to facilitate an engaging and efficient onboarding process for new staff members, providing a range of features aimed at enhancing their learning experience.
 
 [Einstein](https://www.einstein.br/)
 
-## Key Features:
+## Key Features
 
 Time Capsule:
 
@@ -28,24 +28,22 @@ Responsiveness:
 The platform is designed to be fully responsive, ensuring it works seamlessly across a wide range of devices, including desktops, tablets, and smartphones. This guarantees that users have a consistent experience regardless of how they access the platform.
 Technologies Used:
 
-### Frontend:
+### Frontend
 
 Vue 3 (Composition API): Utilized for building the user interface, providing a modern and efficient framework for creating interactive web applications.
 Pinia: Used for state management, ensuring a seamless and reactive user experience.
 Axios: Employed for making HTTP requests, enabling smooth communication between the frontend and backend.
 
-### Backend:
+### Backend
 
 Node.js: Serves as the runtime environment, allowing for scalable and high-performance server-side code execution.
 Express: Utilized as the web application framework, providing robust routing and middleware capabilities.
 JWT (JSON Web Token): Implemented for secure authentication, ensuring that user sessions are managed safely and efficiently.
 SQL: Used for the database, managing and storing user data reliably.
 
-# Conclusion:
+# Conclusion
 
 This content management platform is a significant step towards modernizing the training and onboarding processes at the Albert Einstein Hospital Network. By leveraging state-of-the-art technologies and focusing on user engagement, accessibility, and responsiveness, the platform aims to provide an exceptional experience for new employees, setting them up for success in their roles.
 
-
-#####
 ---
 ![](https://github.com/Peixekru/pertencer_frontend/blob/main/_info/descript.png)
