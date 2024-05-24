@@ -8,6 +8,8 @@ Content Management Platform for Albert Einstein Hospital
 
 The project involves the development of a comprehensive content management platform designed to train new employees joining the Albert Einstein Hospital Network. The platform is built to facilitate an engaging and efficient onboarding process for new staff members, providing a range of features aimed at enhancing their learning experience.
 
+https://www.einstein.br/Pages/Home.aspx
+
 # Key Features:
 
 Time Capsule:
