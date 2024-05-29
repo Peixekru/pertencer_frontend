@@ -12,26 +12,23 @@ The project involves the development of a comprehensive content management platf
 
 ## Key Features
 
-Time Capsule:
+Time Capsule:  
+Users can send messages to themselves to be received at a future date. This feature aims to encourage reflection and personal growth by allowing users to set future reminders or motivational messages.  
 
-Users can send messages to themselves to be received at a future date. This feature aims to encourage reflection and personal growth by allowing users to set future reminders or motivational messages.
-Image Gallery:
-
+Image Gallery:  
 Users can take photos using their device's camera or upload images from their device.
 The platform allows customization of images with the project’s visual identity, making it easy for users to personalize their photos.
-Users can share these customized images across various social media platforms, promoting engagement and a sense of community among employees.
-Accessibility Support:
+Users can share these customized images across various social media platforms, promoting engagement and a sense of community among employees.  
 
+Accessibility Support:  
 The platform includes multiple levels of accessibility support to ensure it is usable by employees with diverse needs. This includes features like screen reader compatibility, keyboard navigation, and adjustable text sizes.
-Responsiveness:
 
+Responsiveness:  
 The platform is designed to be fully responsive, ensuring it works seamlessly across a wide range of devices, including desktops, tablets, and smartphones. This guarantees that users have a consistent experience regardless of how they access the platform.
-Technologies Used:
 
 ### Frontend
 
-Vue 3 (Composition API): Utilized for building the user interface, providing a modern and efficient framework for creating interactive web applications.
-Pinia: Used for state management, ensuring a seamless and reactive user experience.
+Vue 3 (Composition API): Utilized for building the user interface, providing a modern and efficient framework for creating interactive web applications. Pinia: Used for state management, ensuring a seamless and reactive user experience.
 Axios: Employed for making HTTP requests, enabling smooth communication between the frontend and backend.
 
 ### Backend
