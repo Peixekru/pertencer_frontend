@@ -172,7 +172,7 @@
 	import BlockScreenModal from '@/components/BlockScreenModal'
 
 
-	//*!Retirar para produção!!
+	//!Retirar para produção!!
 	//import DebugModal from '@/components/DebugModal'
 
 
