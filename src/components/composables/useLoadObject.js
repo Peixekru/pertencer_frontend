@@ -1,7 +1,7 @@
 import { useAppStore } from '../../store/app'
 
 //Carrega o conteúdo 
-export function useLoadCurrentObject( unidadeNum, conteudoNum,  objetoNum, content ) { 
+export function useLoadCurrentObject( unidadeNum, conteudoNum, objetoNum, content ) { 
     //Inicia a store
     const appStore = useAppStore();
 
@@ -38,6 +38,10 @@ export function useLoadNextObject(obj){
     appStore.objectContent = obj.objectContent; // Nome da tela que será carregada - Tela000
     appStore.currentObjectIndex = obj.currentObjectIndex; //Arrey da rota - [0,0,0]
     appStore.nextContenNumber = obj.nextContenNumber; // String da rota - '000'
+
+    console.log(obj.currentObjectIndex)
+
+    console.log(obj.currentSelectedObject)
 
     window.scrollTo({ top: 0, behavior: "smooth" });
 }

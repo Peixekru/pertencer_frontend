@@ -43,6 +43,7 @@
 
 <script setup>
 
+    import { onMounted } from 'vue'
     import { useAppStore } from '../store/app'
     import { useApiStore } from '../store/api'
     import { useRouter } from 'vue-router'
@@ -67,6 +68,37 @@
             "sendMessage": ""
         }
     }
+
+    /*onMounted(() => {
+        console.log('Tudo limpo')
+
+        //Fecha modal debug
+        appStore.debugModal = false
+
+        //Atualiza o localStorage
+        localStorage.setItem('localAppData', JSON.stringify(cleanDataContent));
+
+        //Atualiza backend
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        //port / path / data
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+
+        //Atualiza o localStorage - Cápsula
+        localStorage.setItem('capsulaInfo', JSON.stringify(clearCapsule))
+                //Atualiza backend - Cápsula
+        const userName = JSON.parse(localStorage.getItem('userName'))
+        //descriptografia
+        const decrypt = CryptoJS.AES.decrypt(userName, '19041981').toString(CryptoJS.enc.Utf8)
+        //port / path / data - Cáosula
+        apiStore.useSaveCapsule('/savecapsule', {"username": decrypt, "info": JSON.stringify(clearCapsule)})
+
+
+        //Volta para página de login
+        router.push('/')
+
+
+console.log('Foooiiiiiiiiiii!')
+    })*/
 
     const cleanData = () => {
 

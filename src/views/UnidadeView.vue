@@ -75,7 +75,7 @@
 								<ConteudoCardV2
 								:title="i.title"
 								:icon="i.icon"
-								:cardImg="getImg(index + 1)"
+								:cardImg="getImg(index)"
 								:time="i.time"
 								:content="i"
 								:index="index"
@@ -176,19 +176,14 @@
 
 	console.log(appStore.currentUnidadeNumber)
 
-	//Percorre todas todos os objetos
-	for(let i = 0; i < appStore.appData.unidades[appStore.currentUnidadeNumber].content.length; i++) {	
-		for (let j = 0; j < appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons.length; j++){
 
-			//console.log(appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons.length)
-			if(appStore.currentUnidadeNumber == 3 && j == 2) {
-				console.log('não usar')
-			} else {
-				carrossel.value.push(i)	
-				contents.value.push(appStore.appData.unidades[appStore.currentUnidadeNumber].content[i].lessons[j])	
-			}
-		}
-	}
+	// Percorre os conteúdos e suas lições
+	appStore.appData.unidades[appStore.currentUnidadeNumber].content.flatMap(content => {
+		// Adiciona o índice do conteúdo ao array carrossel.value
+		carrossel.value.push(content);
+		// Adiciona as lições ao array contents.value
+		contents.value.push(...content.lessons);
+	});
 
 
 
@@ -196,8 +191,6 @@
 	const loadObject = ( unidade, contentIndex, index, content ) => {
 
 		content.selected = 1
-
-		if(unidade == 3 && index >= 2) { index++ } 
 
 		useLoadCurrentObject(unidade, contentIndex, index, content)
 		router.push('/conteudo')
@@ -223,22 +216,28 @@
 	}
 
 
+
+
+
 	const getImg = (index) => {
+		// Acessa o número da unidade atual
+		const currentUnidade = appStore.appData.unidades[appStore.currentUnidadeNumber];
 
-		//console.log(appStore.currentUnidadeNumber)
+		// Acessa o conteúdo (lições) da unidade atual
+		const lessons = currentUnidade.content[0].lessons;
 
-			if (appStore.currentUnidadeNumber == 0 ){
-				return  new URL(`../assets/img/img-${index}.jpg`, import.meta.url).href
-			} else if (appStore.currentUnidadeNumber == 1) {
-				return  new URL(`../assets/img/img-${index + 2}.jpg`, import.meta.url).href
-			} else if (appStore.currentUnidadeNumber == 2) {
-				return  new URL(`../assets/img/img-${index + 10}.jpg`, import.meta.url).href
-			} else if (appStore.currentUnidadeNumber == 3) {
-
-				if(index >= 3) { index ++ }
-				return  new URL(`../assets/img/img-${index + 17}.jpg`, import.meta.url).href
-			}
-	} 
+		// Verifica se o índice é válido e se há uma lição correspondente
+		if (lessons && lessons[index]) {
+			// Obtém o nome da imagem da lição correspondente
+			const lessonImgName = lessons[index].img;
+			
+			// Retorna a URL da imagem correspondente ao nome encontrado
+			return new URL(`../assets/img/${lessonImgName}.jpg`, import.meta.url).href;
+		} else {
+			// Retorna uma imagem padrão caso o índice não seja válido ou não haja uma lição correspondente
+			return 'https://placehold.co/600x400/fff/eaeaea?text=No+Image';
+		}
+	};
 
 
 

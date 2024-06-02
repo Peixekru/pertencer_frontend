@@ -3,7 +3,7 @@
 	<template v-if="appStore.appData != 'undefined' && isScreenBlock == false">
 		<v-app class="cursor-preview">
 
-			<!--<DebugModal />-->
+			<DebugModal />
 
 			<!--Modal logout-->
 			<LogoutModal />
@@ -172,8 +172,8 @@
 	import BlockScreenModal from '@/components/BlockScreenModal'
 
 
-	//!Retirar para produção!!
-	//import DebugModal from '@/components/DebugModal'
+	//*!Retirar para produção!!
+	import DebugModal from '@/components/DebugModal'
 
 
 	import { useScreenOrientation } from '@vueuse/core'
@@ -238,13 +238,11 @@
 		appStore.logoutModal = true;
 	}
 
-		
-	
+
 
 	onMounted(() => {
 
 		appStore.allFinished == false
-
 
 		//Armazena valors iniciais do tamanho da tela, #App e posição do scroll
 		useScreenMonitor()

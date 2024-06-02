@@ -1,63 +1,67 @@
 <template>
-
-    <v-container 
-    fluid class="pa-0"
-    >
-
-        <!--//* Unidade 1 -->
-        <U0C0 
-        v-if="
-        appStore.currentObjectIndex[0] == '0' &&
-        appStore.currentObjectIndex[1] == '0' " 
-        />
-
-        <!--//* Unidade 2 -->
-        <U1C0 
-        v-if="
-        appStore.currentObjectIndex[0] == '1' &&
-        appStore.currentObjectIndex[1] == '0' " 
-        />
-
-        <!--//* Unidade 3 -->
-        <U2C0 
-        v-if="
-        appStore.currentObjectIndex[0] == '2' &&
-        appStore.currentObjectIndex[1] == '0' " 
-        />
-
-        <!--//* Unidade 4 -->
-        <U3C0 
-        v-if="
-        appStore.currentObjectIndex[0] == '3' &&
-        appStore.currentObjectIndex[1] == '0' " 
-        />
-
+    <v-container fluid class="pa-0">
+        <component :is="dynamicComponent" />
     </v-container>
-
-
 </template>
 
 <script setup>
-    import { useAppStore } from "../../store/app"
-    const appStore = useAppStore()
+import { ref, computed, defineAsyncComponent } from "vue";
+import { useAppStore } from "../../store/app";
 
-    //Importação das unidades
-    import U0C0 from "./U0.vue"
-    import U1C0 from "./U1.vue"
-    import U2C0 from "./U2.vue"
-    import U3C0 from "./U3.vue"
+const appStore = useAppStore();
+
+// Extrair os objectNames das lições da unidade atual
+const objectNames = computed(() => {
+    return appStore.appData.unidades[appStore.currentObjectIndex[0]].content
+        .flatMap(content => content.lessons.map(lesson => lesson.objectName));
+});
+
+// Computed property para obter o nome do componente dinamicamente
+const currentComponentName = computed(() => {
+    return objectNames.value[appStore.currentObjectIndex[2]];
+});
+
+// Definir o componente dinâmico
+const dynamicComponent = computed(() => {
+    const componentName = currentComponentName.value;
+    console.log('NOME DO COMPONENTE: ', "./U" + appStore.currentObjectIndex[0] + "/" + componentName + ".vue" );
+    return defineAsyncComponent(() => import(`./U${appStore.currentObjectIndex[0]}/${componentName}.vue`));
+});
+
+
+
+// Inicializar um array reativo para armazenar os valores de objectName
+const getObjectName = ref([]);
+
+
+console.log('Valores de objectName na unidade 3:');
+appStore.appData.unidades[3].content.forEach((content) => {
+    content.lessons.forEach((lesson) => {
+        getObjectName.value.push(lesson.objectName);
+    });
+});
+
+console.log('NOME DO JSON: ', getObjectName.value[appStore.currentObjectIndex[2]]);
+
+
 
 </script>
 
-
-<!--//* Styles Globais 'content- ...' -->
 <style>
-    .content-scroll-content{
-        overflow: scroll;
-    }
+.content-scroll-content {
+    overflow: scroll;
+}
 
-    .content-fade-in {
-        animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
-        animation-duration: 3s; /* don't forget to set a duration! */
-    }
+.content-fade-in {
+    animation: fadeIn;
+    animation-duration: 3s;
+}
 </style>
+
+
+
+
+
+//appStore.currentObjectIndex[0] //Unidade num
+//appStore.currentObjectIndex[1] //Lessons (antigo carrossel) num
+//appStore.currentObjectIndex[2] //Content num
