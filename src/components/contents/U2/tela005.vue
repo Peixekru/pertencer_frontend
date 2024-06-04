@@ -1911,7 +1911,7 @@
 <script setup>
 
 	//Imports
-	import { ref, onMounted } from "vue";
+	import { ref, onMounted, defineProps } from "vue";
 	import { useAppStore } from '../../../store/app'
 	import { useStartProgress } from '../../../components/composables/useProgress'
 	import { useAnim, useScrollMonitor } from '../GlobalJs/useContentGlobalJs'
@@ -1954,9 +1954,19 @@ const isAllContentFinished = ref(false)
 
 //Finaliza o conteúdo
 const finishedContent = () => {
+	// Ajusta isUnidadeFinished com base na prop isLastObject
+	props.isLastObject ?
+	appStore.isUnidadeFinished = true :
+	appStore.isUnidadeFinished = false;
+	
 	appStore.finishedContent(true)
 	useStartProgress();
 }
+
+// Recebe a prop isLastObject do componente pai
+const props = defineProps({
+	isLastObject: Boolean
+});
 
 //Acompanha o progresso da dos conteúdos 
 const prosseguir = (contentId) => {	

@@ -25,7 +25,7 @@
                             />
 
                             <v-icon
-                            v-if="appStore.appData.start.status > 0"
+                            v-if="appStore.appData.start.status > 2"
                             color="info"
                             icon="mdi-check-circle"
                             size="x-large"
@@ -43,7 +43,7 @@
                     density="comfortable"
                     rounded
                     class="bg-info letter-normal animate__animated animate__fadeInDown"
-                    @click="closeToolTip(); appStore.startModal = true"
+                    @click="showSheck(); appStore.startModal = true"
                     >
                         Acessar
                     </v-btn>
@@ -87,15 +87,18 @@
 
     const closeToolTip = () => {
         appStore.appData.start.status = 2
+        saveStatus()
+    }
 
-        //Atualiza o localStorage
+    const showSheck = () => {
+        appStore.appData.start.status = 3
+        saveStatus()
+    }
+
+    const saveStatus = () => {
         localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-
-        //Atualiza backend
         const userId = JSON.parse(localStorage.getItem('userId'));
-        //port / path / data
         apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
-
     }
 
 </script>

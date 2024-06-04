@@ -25,6 +25,7 @@
     "vue-confetti-explosion": "^1.0.2",
     "vue-cryptojs": "^2.4.5",
     "vue-iframes": "^0.0.20",
+    "vue-inner-image-zoom": "^2.0.0",
     "vue-router": "^4.0.0",
     "vue-social-sharing": "^4.0.0-alpha4",
     "vuetify": "^3.0.0",

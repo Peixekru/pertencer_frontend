@@ -25,7 +25,8 @@
 				<v-row>
 					<v-col class="cont1_col1" cols="12" md="6" align="left">
 						<div class="reveal fade-left texto_preto">
-							<p>Somos um hospital de grande porte, reconhecido como uma instituição de referência tanto na
+							<p>Somos um hospital de grande porte, reconhecido como uma instituição de referência tanto
+								na
 								área de saúde, como no ensino, pesquisa, inovação e responsabilidade social.
 							</p>
 						</div>
@@ -33,7 +34,8 @@
 					<v-col class="cont1_col2" cols="12" md="6" align="left">
 						<div class="reveal fade-right texto_preto">
 							<p>Somos pessoas atuando em prol de pessoas. Gente que cuida de gente, trabalhando
-								colaborativamente, com transparência, dedicação, fazendo a diferença e garantindo sempre a
+								colaborativamente, com transparência, dedicação, fazendo a diferença e garantindo sempre
+								a
 								excelência.
 							</p>
 						</div>
@@ -71,12 +73,14 @@
 				<v-col cols="12" md="5" align="left">
 					<div class="reveal fade-left texto_preto">
 						<p>
-							<strong>Para orquestrar a complexidade do Einstein, é preciso ter uma estrutura de governança
+							<strong>Para orquestrar a complexidade do Einstein, é preciso ter uma estrutura de
+								governança
 								que mantenha o foco e busque garantir a excelência da assistência em todos os
 								níveis.</strong>
 						</p>
 						<p class="mt-4">
-							<strong>Todas as estruturas seguem as mesmas diretrizes estratégicas que fazem do Einstein uma das
+							<strong>Todas as estruturas seguem as mesmas diretrizes estratégicas que fazem do Einstein
+								uma das
 								organizações líderes em termos de excelência de qualidade, segurança, inovação e
 								sustentabilidade no âmbito da saúde, reconhecidas globalmente.</strong>
 						</p>
@@ -123,9 +127,27 @@
 					<strong>Mandato: dezembro de 2022 a dezembro de 2028</strong>
 				</p>
 
-				<v-img class="mx-auto mt-10 reveal fade-in" src="./img/tela_estrutura/cont3_info1.svg" />
+
+				<v-col cols="12" md="5" align="left" class="mt-0" align-self="end">
+					<v-card class="box_dicas_tela_estrutura pl-0 pr-0 reveal fade-right">
+						<v-card-text>
+							<span class="mdi mdi-gesture-double-tap box_dicas_icon"></span> Clique na imagem para
+							ampliar.
+						</v-card-text>
+					</v-card>
+				</v-col>
+
+				<v-sheet color='#fff' elevation='10' class='pt-2 pb-1 px-2 mt-5 rounded-lg'>
+					<inner-image-zoom fullscreenOnMobile='true' hideCloseButton='true' hideHint='true'
+						fadeDuration='500' class="mx-auto style-zoom-img" src="./tela_estrutura/organograma_2024_s.png"
+						zoom-src="./tela_estrutura/organograma_2024.jpg" />
+				</v-sheet>
+
+				<!--<v-img class="mx-auto mt-10 reveal fade-in" src="./img/tela_estrutura/cont3_info1.svg" />
 				<v-img class="mx-auto reveal fade-in" src="./img/tela_estrutura/cont3_info2.svg" />
-				<v-img class="mx-auto reveal fade-in" src="./img/tela_estrutura/cont3_info3.svg" />
+				<v-img class="mx-auto reveal fade-in" src="./img/tela_estrutura/cont3_info3.svg" />-->
+
+
 			</v-container>
 		</v-card-text>
 
@@ -150,8 +172,8 @@
 
 
 
-<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0"
-		class="mx-auto bg-transparent" style="z-index:2;">
+	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0" class="mx-auto bg-transparent"
+		style="z-index:2;">
 
 		<v-img class="mx-auto grade_header" src="./img/tela_estrutura/grade_cont6.png" />
 
@@ -181,7 +203,8 @@
 							Números Einstein
 						</h1>
 						<p class="mt-n8">
-							Veja alguns indicadores operacionais que mostram a atuação do Einstein tanto no Sistema Privado
+							Veja alguns indicadores operacionais que mostram a atuação do Einstein tanto no Sistema
+							Privado
 							como no SUS.
 						</p>
 					</div>
@@ -224,21 +247,18 @@
 				</v-col>
 			</v-row>
 
-</v-container>
+		</v-container>
 
 	</v-card>
-	
-	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0"
-		class="mx-auto bg-transparent" style="z-index:1000!important;">
+
+	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="0" class="mx-auto bg-transparent"
+		style="z-index:1000!important;">
 
 		<!--Grafisrmos "Triangulo" do conteúdo 10-->
-	<v-container 
-	
-	class="d-flex justify-center mt-n12 mb-4"
-	>
-		<i style="color:#f5f5f5; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
-			aria-hidden="true"></i>
-	</v-container>
+		<v-container class="d-flex justify-center mt-n12 mb-4">
+			<i style="color:#f5f5f5; font-size:4rem;"
+				class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large" aria-hidden="true"></i>
+		</v-container>
 
 	</v-card>
 
@@ -268,8 +288,8 @@
 			</v-row>
 
 		</v-container>
-		
-		
+
+
 
 
 
@@ -323,49 +343,28 @@
 					</v-card>
 				</v-col>
 			</v-row>
-			
+
 
 			<!-- Btn prev -->
-			<v-btn
-			icon="mdi-chevron-left"
-			class="btn-left"
-			:color="carousel01 == 0 ? 'white' : 'primary'"
-			:variant="carousel01 == 0 ? 'text' : 'flat'"
-			:disabled="carousel01 == 0"
-			@click="carousel01 --"
-			/>
+			<v-btn icon="mdi-chevron-left" class="btn-left" :color="carousel01 == 0 ? 'white' : 'primary'"
+				:variant="carousel01 == 0 ? 'text' : 'flat'" :disabled="carousel01 == 0" @click="carousel01--" />
 
 			<!-- Btn next (16 slides) -->
-			<v-btn
-			icon="mdi-chevron-right"
-			class="btn-right"
-			:color="carousel01 == 16 ? 'white' : 'primary'"
-			:variant=" carousel01 == 16 ? 'text' : 'flat'" 
-			:disabled="carousel01 == 16"
-			@click="carousel01 ++"
-			/>
+			<v-btn icon="mdi-chevron-right" class="btn-right" :color="carousel01 == 16 ? 'white' : 'primary'"
+				:variant="carousel01 == 16 ? 'text' : 'flat'" :disabled="carousel01 == 16" @click="carousel01++" />
 
 			<!-- Carousel container -->
-			<v-card 
-			elevation="3" 
-			width="100%" 
-			class="mx-auto my-8 reveal fade-bottom"
-			:class=" appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg' "
-			>
+			<v-card elevation="3" width="100%" class="mx-auto my-8 reveal fade-bottom"
+				:class="appStore.isMobile ? 'rounded-b-lg rounded-t-0' : 'rounded-lg'">
 
 				<!-- Carousel -->
-				<v-carousel 
-				v-model="carousel01"
-				:show-arrows="false"
-				hide-delimiter-background 
-				:hide-delimiters="appStore.isMobile"
-				color="primary" 
-				:continuous="false"
-				:progress=" appStore.isMobile ? 'primary' : false"
-				>
+				<v-carousel v-model="carousel01" :show-arrows="false" hide-delimiter-background
+					:hide-delimiters="appStore.isMobile" color="primary" :continuous="false"
+					:progress="appStore.isMobile ? 'primary' : false">
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider01.png" />
@@ -375,8 +374,10 @@
 										Acreditação hospitalar Joint Commission International (JCI)
 									</h2>
 									<p class="mt-4">
-										Atestar padrões internacionais hospitalares de excelência, qualidade e de segurança.
-										Área e escopo: Unidades Morumbi, Alphaville, Jardins, Ibirapuera, Perdizes e Chácara
+										Atestar padrões internacionais hospitalares de excelência, qualidade e de
+										segurança.
+										Área e escopo: Unidades Morumbi, Alphaville, Jardins, Ibirapuera, Perdizes e
+										Chácara
 										Klabin.
 									</p>
 								</v-col>
@@ -385,7 +386,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider02.png" />
@@ -405,7 +407,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider03.png" />
@@ -424,7 +427,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider04.png" />
@@ -434,9 +438,11 @@
 										American College of Radiology (ACR)
 									</h2>
 									<p class="mt-4">
-										Garantir a qualidade do serviço de imagem. O Einstein é a única organização de saúde
+										Garantir a qualidade do serviço de imagem. O Einstein é a única organização de
+										saúde
 										do Brasil com acreditação em todas as modalidades diagnósticas. Área e escopo:
-										Imagem — mamografia, ultrassonografia, tomografia, ressonância e medicina nuclear.
+										Imagem — mamografia, ultrassonografia, tomografia, ressonância e medicina
+										nuclear.
 									</p>
 								</v-col>
 							</v-row>
@@ -444,7 +450,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider05.png" />
@@ -454,7 +461,8 @@
 										American Society for Histocompatibility and Immunogenetics (ASHI)
 									</h2>
 									<p class="mt-4">
-										Garantir o processo histocompatibilidade e imunogenética do Laboratório de Patologia
+										Garantir o processo histocompatibilidade e imunogenética do Laboratório de
+										Patologia
 										Clínica. Área e escopo: Laboratório — setor de histocompatibilidade.
 									</p>
 								</v-col>
@@ -463,7 +471,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider06.png" />
@@ -473,7 +482,8 @@
 										Association for the Accreditation of Human Research Protection Program (AAHRPP)
 									</h2>
 									<p class="mt-4">
-										Garantir a aplicação das melhores práticas de pesquisas em humanos. Área e escopo:
+										Garantir a aplicação das melhores práticas de pesquisas em humanos. Área e
+										escopo:
 										Unidade Morumbi.
 									</p>
 								</v-col>
@@ -482,14 +492,16 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider07.png" />
 								</v-col>
 								<v-col style="padding-right: 60px;" cols="12" md="6">
 									<h2>
-										Association for Assessment and Accreditation of Laboratory Animal Care International
+										Association for Assessment and Accreditation of Laboratory Animal Care
+										International
 										(AAALAC)
 									</h2>
 									<p class="mt-4">
@@ -503,7 +515,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider08.png" />
@@ -514,7 +527,8 @@
 									</h2>
 									<p class="mt-4">
 										Garantir a qualidade no processo de diagnóstico clínico no laboratório. Área e
-										escopo: Laboratório clínico e Anatomia Patológica – Unidade Morumbi e Núcleo Técnico
+										escopo: Laboratório clínico e Anatomia Patológica – Unidade Morumbi e Núcleo
+										Técnico
 										Operacional (NTO).
 									</p>
 								</v-col>
@@ -523,7 +537,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider09.png" />
@@ -534,8 +549,10 @@
 									</h2>
 									<p class="mt-4">
 										Garantir a qualidade e segurança no transplante de medula óssea, coleta,
-										processamento e armazenamento de cordão umbilical. O Einstein é a única organização
-										acreditada da América Latina. Área e escopo: Departamento de Hemoterapia, Terapia
+										processamento e armazenamento de cordão umbilical. O Einstein é a única
+										organização
+										acreditada da América Latina. Área e escopo: Departamento de Hemoterapia,
+										Terapia
 										Celular e Programa Clínico de Transplante de Medula Óssea.
 									</p>
 								</v-col>
@@ -544,7 +561,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider10.png" />
@@ -554,9 +572,11 @@
 										ISO 9001
 									</h2>
 									<p class="mt-4">
-										Certificar os padrões de qualidade e segurança do Departamento de Voluntários. Área
+										Certificar os padrões de qualidade e segurança do Departamento de Voluntários.
+										Área
 										e escopo: Unidades Morumbi, Perdizes, Alphaville, Ibirapuera, Vila Mariana,
-										Paraisópolis, Hospital Municipal Vila Santa Catarina — Dr. Gilson de Cássia Marques
+										Paraisópolis, Hospital Municipal Vila Santa Catarina — Dr. Gilson de Cássia
+										Marques
 										de Carvalho e Hospital Municipal M’Boi Mirim.
 									</p>
 								</v-col>
@@ -565,7 +585,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider11.png" />
@@ -575,11 +596,14 @@
 										ISO 14001/2015
 									</h2>
 									<p class="mt-4">
-										Garantir padrões nacionais para gestão ambiental de sustentabilidade. Área e escopo:
-										Unidades Morumbi, Perdizes, Jardins, Ibirapuera, Chácara Klabin e Alphaville, bem
+										Garantir padrões nacionais para gestão ambiental de sustentabilidade. Área e
+										escopo:
+										Unidades Morumbi, Perdizes, Jardins, Ibirapuera, Chácara Klabin e Alphaville,
+										bem
 										como as Clínicas Einstein Parque da Cidade, Alto de Pinheiros, Anália Franco e
 										Ibirapuera, o Residencial Israelita Albert Einstein (RIAE), o Núcleo Técnico
-										Operacional (NTO) Santana e o Programa Einstein na Comunidade Paraisópolis (PECP). ​
+										Operacional (NTO) Santana e o Programa Einstein na Comunidade Paraisópolis
+										(PECP). ​
 									</p>
 								</v-col>
 							</v-row>
@@ -587,7 +611,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider12.png" />
@@ -606,7 +631,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider13.png" />
@@ -616,7 +642,8 @@
 										Magnet
 									</h2>
 									<p class="mt-4">
-										Garantir padrões de qualidade e práticas assistenciais que evidenciam a excelência
+										Garantir padrões de qualidade e práticas assistenciais que evidenciam a
+										excelência
 										da enfermagem. Área e escopo: Unidade Morumbi.
 									</p>
 								</v-col>
@@ -625,7 +652,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider14.png" />
@@ -636,7 +664,8 @@
 									</h2>
 									<p class="mt-4">
 										Garantir a experiência e o cuidado centrado na pessoa (paciente, familiar,
-										colaborador). Área e escopo: A unidade Morumbi é certificada com a Credencial Ouro.
+										colaborador). Área e escopo: A unidade Morumbi é certificada com a Credencial
+										Ouro.
 									</p>
 								</v-col>
 							</v-row>
@@ -644,7 +673,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider15.png" />
@@ -654,8 +684,10 @@
 										Programa de Acreditação de Laboratórios Clínicos (PALC)
 									</h2>
 									<p class="mt-4">
-										Promover a qualidade dos serviços laboratoriais prestados a pacientes e usuários.
-										Área e escopo: Unidade Morumbi, Núcleo Técnico Operacional e os postos de coleta das
+										Promover a qualidade dos serviços laboratoriais prestados a pacientes e
+										usuários.
+										Área e escopo: Unidade Morumbi, Núcleo Técnico Operacional e os postos de coleta
+										das
 										Unidades Avançadas e das Clínicas Einstein.
 									</p>
 								</v-col>
@@ -664,7 +696,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider16.png" />
@@ -674,9 +707,12 @@
 										Selo Amigo do Idoso
 									</h2>
 									<p class="mt-4">
-										Garantir as iniciativas de adequação da infraestrutura, capacitação de profissionais
-										e familiares, engajamento comunitário e estímulo à prevenção em saúde do idoso. Área
-										e escopo: Unidade Morumbi e Hospital Municipal Vila Santa Catarina — Dr. Gilson de
+										Garantir as iniciativas de adequação da infraestrutura, capacitação de
+										profissionais
+										e familiares, engajamento comunitário e estímulo à prevenção em saúde do idoso.
+										Área
+										e escopo: Unidade Morumbi e Hospital Municipal Vila Santa Catarina — Dr. Gilson
+										de
 										Cássia Marques de Carvalho.
 									</p>
 								</v-col>
@@ -685,7 +721,8 @@
 					</v-carousel-item>
 
 					<v-carousel-item>
-						<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 pt-8 pb-12">
+						<v-sheet color="transparent" width="100%" height="100%"
+							class="d-flex justify-end px-8 pt-8 pb-12">
 							<v-row justify="center" align="center">
 								<v-col cols="12" md="6">
 									<v-img src="./img/tela_estrutura/slider17.png" />
@@ -709,7 +746,9 @@
 			<v-row justify="center" class="mt-4">
 				<v-col cols="12" md="12" align="left">
 					<h2 class="texto_branco text-primary mt-6 reveal fade-left">
-						As certificações e acreditações são evidências de como o Einstein é reconhecido como uma instituição de referência. É importante destacar, porém, que tudo isso não seria possível sem as pessoas.
+						As certificações e acreditações são evidências de como o Einstein é reconhecido como uma
+						instituição de referência. É importante destacar, porém, que tudo isso não seria possível sem as
+						pessoas.
 					</h2>
 				</v-col>
 			</v-row>
@@ -736,10 +775,14 @@
 <script setup>
 
 //Imports
-import { ref, onMounted } from "vue";
+import { ref, onMounted, defineProps } from "vue";
 import { useAppStore } from '../../../store/app'
 import { useStartProgress } from '../../../components/composables/useProgress'
 import { useAnim, useScrollMonitor } from '../GlobalJs/useContentGlobalJs'
+
+import InnerImageZoom from 'vue-inner-image-zoom';
+import 'vue-inner-image-zoom/lib/vue-inner-image-zoom.css';
+
 
 //Inicia o Pinia com a store global do App (appStore)
 const appStore = useAppStore();
@@ -763,9 +806,21 @@ const isAllContentFinished = ref(false)
 
 //Finaliza o conteúdo
 const finishedContent = () => {
+
+	// Ajusta isUnidadeFinished com base na prop isLastObject
+	props.isLastObject ?
+		appStore.isUnidadeFinished = true :
+		appStore.isUnidadeFinished = false;
+
 	appStore.finishedContent(true)
 	useStartProgress();
 }
+
+// Recebe a prop isLastObject do componente pai
+const props = defineProps({
+	isLastObject: Boolean
+});
+
 
 //Acompanha o progresso da dos conteúdos 
 const prosseguir = (contentId) => {
@@ -797,7 +852,7 @@ onMounted(() => {
 
 })
 
-</script> 
+</script>
 
 
 
@@ -927,7 +982,7 @@ onMounted(() => {
 	border-radius: 20px;
 	text-align: center;
 	box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.16);
-	width: 100%!important;
+	width: 100% !important;
 }
 
 .cont1_col1 {
@@ -971,7 +1026,7 @@ onMounted(() => {
 	.cont1_col2 {
 		padding-left: 0px;
 	}
-	
+
 
 }
 

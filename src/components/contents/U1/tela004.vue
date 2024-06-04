@@ -1,27 +1,17 @@
 <template>
 	<!-- header VOLUNTARIADO -->
-	<v-card 
-	width="100%" 
-	elevation="6"
-	class="card_header mx-auto rounded-lg pa-6"
-	>
+	<v-card width="100%" elevation="6" class="card_header mx-auto rounded-lg pa-6">
 		<v-img class="show_desktop" src="./img/tela_voluntariado/header.png" />
-		<v-img class="show_1277" src="./img/tela_voluntariado/header.png"/>
+		<v-img class="show_1277" src="./img/tela_voluntariado/header.png" />
 		<v-img class="show_mobile" src="./img/tela_voluntariado/header_mob.png" />
 		<v-img src="./img/tela_voluntariado/header_text.svg" class="header_text"
 			title="VOLUNTARIADO EINSTEIN. Uma história de amor. A história do voluntariado Einstein se baseia na força e na persistência de um grupo de pessoas unidas pelo amor, dedicação e profissionalismo com o propósito de promover bem-estar e transformação social." />
 	</v-card>
 	<!-- header -->
-	
+
 	<!-- conteúdo 01 -->
-	<v-card
-	v-show="isContent01Visible"
-	id="content01" 
-	width="100%" 
-	elevation="6"
-	style="z-index:5;" 
-	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
-	>
+	<v-card v-show="isContent01Visible" id="content01" width="100%" elevation="6" style="z-index:5;"
+		class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header.png" />
 		<v-card-text class="pt-10 pl-0 pr-0">
 
@@ -36,49 +26,31 @@
 				</v-card-text>
 			</v-card>
 		</v-card-text>
-		
+
 		<v-row class="mt-2">
 
 			<!--Card 01-->
 			<v-col cols="12" sm="6" md="3">
-				<v-card 
-				height="380"
-				elevation="4"
-				class="mx-auto rounded-lg reveal fade-in"
-				>
-					<v-sheet 
-					height="100%" 
-					align="center" 
-					color="transparent"
-					class="d-flex flex-column justify-center align-center cursor-pointer"
-					:class="!isCard01Visible ? 'card-bg-img' : '' "
-					@click="isCard01Visible = !isCard01Visible"
-					>
+				<v-card height="380" elevation="4" class="mx-auto rounded-lg reveal fade-in">
+					<v-sheet height="100%" align="center" color="transparent"
+						class="d-flex flex-column justify-center align-center cursor-pointer"
+						:class="!isCard01Visible ? 'card-bg-img' : ''" @click="isCard01Visible = !isCard01Visible">
 						<template v-if="!isCard01Visible">
-							<v-img 
-							src="./img/tela_voluntariado/card_1_icon.png" 
-							width="100"
-							max-height="100"
-							class="animate__animated animate__fadeInDown"
-							/>
-							<h5 
-							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
-							>
+							<v-img src="./img/tela_voluntariado/card_1_icon.png" width="100" max-height="100"
+								class="animate__animated animate__fadeInDown" />
+							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
+								:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'">
 								Quem somos
 							</h5>
-							<v-icon color="white" 
-							icon="mdi-gesture-double-tap" 
-							size="50"
-							class="animate__animated animate__fadeInDown animate__delay-0.7s"
-							/>
+							<v-icon color="white" icon="mdi-gesture-double-tap" size="50"
+								class="animate__animated animate__fadeInDown animate__delay-0.7s" />
 						</template>
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
 								Nosso grupo é formado por mais de 600 pessoas com idades que vão de 15 a mais de 80 anos
 								trabalhando incansavelmente para levar esperança para quem precisa de atenção e
-								conforto.			
+								conforto.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -87,44 +59,26 @@
 
 			<!--Card 02-->
 			<v-col cols="12" sm="6" md="3">
-				<v-card 
-				height="380"
-				elevation="4"
-				class="mx-auto rounded-lg reveal fade-in"
-				>
-					<v-sheet 
-					height="100%" 
-					align="center" 
-					color="transparent"
-					class="d-flex flex-column justify-center align-center cursor-pointer"
-					:class="!isCard02Visible ? 'card-bg-img' : '' "
-					@click="isCard02Visible = !isCard02Visible"
-					>
+				<v-card height="380" elevation="4" class="mx-auto rounded-lg reveal fade-in">
+					<v-sheet height="100%" align="center" color="transparent"
+						class="d-flex flex-column justify-center align-center cursor-pointer"
+						:class="!isCard02Visible ? 'card-bg-img' : ''" @click="isCard02Visible = !isCard02Visible">
 						<template v-if="!isCard02Visible">
-							<v-img 
-							src="./img/tela_voluntariado/card_2_icon.png" 
-							width="100"
-							max-height="100"
-							class="animate__animated animate__fadeInDown"
-							/>
-							<h5 
-							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
-							>
+							<v-img src="./img/tela_voluntariado/card_2_icon.png" width="100" max-height="100"
+								class="animate__animated animate__fadeInDown" />
+							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
+								:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'">
 								Nosso propósito
 							</h5>
-							<v-icon color="white" 
-							icon="mdi-gesture-double-tap" 
-							size="50"
-							class="animate__animated animate__fadeInDown animate__delay-0.7s"
-							/>
+							<v-icon color="white" icon="mdi-gesture-double-tap" size="50"
+								class="animate__animated animate__fadeInDown animate__delay-0.7s" />
 						</template>
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
 								Atuamos diretamente para a transformação social, a geração de conhecimento e a
 								humanização das pessoas atendidas constituindo, assim, uma referência em cidadania,
-								responsabilidade social e amor ao próximo.			
+								responsabilidade social e amor ao próximo.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -133,41 +87,24 @@
 
 			<!--Card 03-->
 			<v-col cols="12" sm="6" md="3">
-				<v-card 
-				height="380"
-				elevation="4"
-				class="mx-auto rounded-lg reveal fade-in"
-				>
-					<v-sheet 
-					height="100%" 
-					align="center" 
-					color="transparent"
-					class="d-flex flex-column justify-center align-center cursor-pointer"
-					:class="!isCard03Visible ? 'card-bg-img' : '' "
-					@click="isCard03Visible = !isCard03Visible"
-					>
+				<v-card height="380" elevation="4" class="mx-auto rounded-lg reveal fade-in">
+					<v-sheet height="100%" align="center" color="transparent"
+						class="d-flex flex-column justify-center align-center cursor-pointer"
+						:class="!isCard03Visible ? 'card-bg-img' : ''" @click="isCard03Visible = !isCard03Visible">
 						<template v-if="!isCard03Visible">
-							<v-img 
-							src="./img/tela_voluntariado/card_3_icon.png" 
-							width="100"
-							max-height="100"
-							class="animate__animated animate__fadeInDown"
-							/>
+							<v-img src="./img/tela_voluntariado/card_3_icon.png" width="100" max-height="100"
+								class="animate__animated animate__fadeInDown" />
 							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
-							>
+								:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'">
 								Alguns números
 							</h5>
-							<v-icon color="white" 
-							icon="mdi-gesture-double-tap" 
-							size="50"
-							class="animate__animated animate__fadeInDown animate__delay-0.7s"
-							/>
+							<v-icon color="white" icon="mdi-gesture-double-tap" size="50"
+								class="animate__animated animate__fadeInDown animate__delay-0.7s" />
 						</template>
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
-								Só para dar um exemplo, em 2022, o Voluntariado realizou 209.476 atendimentos.		
+								Só para dar um exemplo, em 2022, o Voluntariado realizou 209.476 atendimentos.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -176,42 +113,27 @@
 
 			<!--Card 04-->
 			<v-col cols="12" sm="6" md="3">
-				<v-card 
-				height="380"
-				elevation="4"
-				class="mx-auto rounded-lg reveal fade-in"
-				>
-					<v-sheet 
-					height="100%" 
-					align="center" 
-					color="transparent"
-					class="d-flex flex-column justify-center align-center cursor-pointer"
-					:class="!isCard04Visible ? 'card-bg-img' : '' "
-					@click="isCard04Visible = !isCard04Visible"
-					>
+				<v-card height="380" elevation="4" class="mx-auto rounded-lg reveal fade-in">
+					<v-sheet height="100%" align="center" color="transparent"
+						class="d-flex flex-column justify-center align-center cursor-pointer"
+						:class="!isCard04Visible ? 'card-bg-img' : ''" @click="isCard04Visible = !isCard04Visible">
 						<template v-if="!isCard04Visible">
-							<v-img 
-							src="./img/tela_voluntariado/card_4_icon.png" 
-							width="100"
-							max-height="100"
-							class="animate__animated animate__fadeInDown"
-							/>
-							<h5 
-							class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
-							:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'"
-							>
+							<v-img src="./img/tela_voluntariado/card_4_icon.png" width="100" max-height="100"
+								class="animate__animated animate__fadeInDown" />
+							<h5 class="text-h5 font-weight-bold py-6 animate__animated animate__fadeInDown animate__delay-0.5s"
+								:class="appStore.isDarkMode ? 'text-secondary' : 'texto_azul'">
 								Onde atuamos
 							</h5>
-							<v-icon color="white" 
-							icon="mdi-gesture-double-tap" 
-							size="50"
-							class="animate__animated animate__fadeInDown animate__delay-0.7s"
-							/>
+							<v-icon color="white" icon="mdi-gesture-double-tap" size="50"
+								class="animate__animated animate__fadeInDown animate__delay-0.7s" />
 						</template>
 
 						<template v-else>
 							<v-card-text class="d-flex align-center animate__animated animate__fadeInUp">
-								Estamos presente em 72 setores e atuamos efetivamente em 09 unidades de atuação: Hospital Morumbi, Programa Einstein na Comunidade, Residencial Israelita Albert Einstein, Unidade Externas Alphaville, lbirapuera, Perdizes, Hospital Municipal M Boi Mirim, Hospital Municipal Vila Santa Catarina, Hospital Municipal Aparecida de Goiânia. 		
+								Estamos presente em 72 setores e atuamos efetivamente em 09 unidades de atuação:
+								Hospital Morumbi, Programa Einstein na Comunidade, Residencial Israelita Albert
+								Einstein, Unidade Externas Alphaville, lbirapuera, Perdizes, Hospital Municipal M Boi
+								Mirim, Hospital Municipal Vila Santa Catarina, Hospital Municipal Aparecida de Goiânia.
 							</v-card-text>
 						</template>
 					</v-sheet>
@@ -222,29 +144,14 @@
 
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent02Visible = true; prosseguir('content02')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isContent02Visible = true; prosseguir('content02')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -253,14 +160,8 @@
 	</v-card>
 	<!-- conteúdo 01 -->
 	<!-- conteúdo 02 -->
-	<v-card 
-	v-show ="isContent02Visible" 
-	id="content02" 
-	width="100%"
-	elevation="6"
-	style="z-index:4"
-	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos"
-	>
+	<v-card v-show="isContent02Visible" id="content02" width="100%" elevation="6" style="z-index:4"
+		class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header.png" />
 		<v-row class="mx-auto mt-n10">
 			<v-col cols="12" md="9">
@@ -274,7 +175,8 @@
 					</p>
 					<p class="mt-4 reveal fade-left">
 						O Voluntariado Einstein iniciou suas atividades na mesma época em que foi fundado o Hospital
-						Israelita Albert Einstein, lá em 1959. São, portanto, mais de <strong>60 anos de atuação</strong>.
+						Israelita Albert Einstein, lá em 1959. São, portanto, mais de <strong>60 anos de
+							atuação</strong>.
 					</p>
 					<p class="mt-4 reveal fade-left">
 						Vamos conhecer um pouco dessa história?
@@ -291,58 +193,34 @@
 				abaixo.
 			</v-card-text>
 		</v-card>
-		
+
 		<v-card elevation="3" width="100%" class="mx-auto rounded-lg reveal fade-bottom">
 
 			<!--Timeline-->
 
-			
-				<v-sheet
-				color = "transparent"
-				class="mt-4 mx-auto my-0"
-				:max-width="
-				appStore.screenWidth < 600 ? 300 :
-				appStore.screenWidth > 600 && appStore.screenWidth < 700  ? 400 : 
-				appStore.screenWidth > 700 && appStore.screenWidth < 800  ? 500 : 
-				appStore.screenWidth > 800 && appStore.screenWidth < 960  ? 600 : 
-				appStore.screenWidth > 960 && appStore.screenWidth < 1280 ? 660 : 
-				1100"
-				>
-			
-					<v-slide-group
-					center-active
-					v-model="timelineSelect"
-					show-arrows = "always"
-					>
 
-					<v-sheet
-						height = "1"
-						width = "1250"
-						color = "info"
-						class = 'line-pos'
-					/>
+			<v-sheet color="transparent" class="mt-4 mx-auto my-0" :max-width="appStore.screenWidth < 600 ? 300 :
+			appStore.screenWidth > 600 && appStore.screenWidth < 700 ? 400 :
+				appStore.screenWidth > 700 && appStore.screenWidth < 800 ? 500 :
+					appStore.screenWidth > 800 && appStore.screenWidth < 960 ? 600 :
+						appStore.screenWidth > 960 && appStore.screenWidth < 1280 ? 660 :
+							1100">
 
-						<v-slide-group-item
-						v-for="i in timeLineNum.length"
-						:key="i"
-						v-slot="{ isSelected }"
-						>
-							<v-btn
-							class="ma-2"
-							elevation = 0
-							rounded
-							:color="isSelected ? 'primary' : 'info'"
-							:class = "!isSelected ? 'text-primary' : ''"
-							@click="timelineSelect = i - 1"
-							>
-							{{ timeLineNum[i - 1]}}
-							</v-btn>
-						</v-slide-group-item>
-					</v-slide-group>
-				</v-sheet>
+				<v-slide-group center-active v-model="timelineSelect" show-arrows="always">
+
+					<v-sheet height="1" width="1250" color="info" class='line-pos' />
+
+					<v-slide-group-item v-for="i in timeLineNum.length" :key="i" v-slot="{ isSelected }">
+						<v-btn class="ma-2" elevation=0 rounded :color="isSelected ? 'primary' : 'info'"
+							:class="!isSelected ? 'text-primary' : ''" @click="timelineSelect = i - 1">
+							{{ timeLineNum[i - 1] }}
+						</v-btn>
+					</v-slide-group-item>
+				</v-slide-group>
+			</v-sheet>
 
 
-<!--
+			<!--
 			<v-timeline class="timeline_carroussel" direction="horizontal">
 
 
@@ -435,12 +313,8 @@
 
 
 			<!--Carousel-->
-			<v-carousel 
-			v-model="timelineSelect"
-			:show-arrows="false"
-			hide-delimiters color="primary" 
-			:continuous="false"
-			>
+			<v-carousel v-model="timelineSelect" :show-arrows="false" hide-delimiters color="primary"
+				:continuous="false">
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -449,7 +323,13 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p>
-									Foi em 1959 que a história teve início. Algumas esposas de médicos e empresários se uniram para ajudar na construção do Hospital Israelita Albert Einstein. O grupo tinha como objetivo colaborar na obtenção de recursos, sendo responsável por organizar eventos e bazares para auxiliar na construção do Hospital, tendo grande relevância e representatividade. 
+									Foi em 1959 que a história teve início. Algumas esposas de médicos e empresários se
+									uniram para ajudar na construção do Hospital Israelita Albert Einstein. O grupo
+									tinha
+									como objetivo colaborar na obtenção de recursos, sendo responsável por organizar
+									eventos
+									e bazares para auxiliar na construção do Hospital, tendo grande relevância e
+									representatividade.
 								</p>
 							</v-col>
 						</v-row>
@@ -466,12 +346,12 @@
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
 									Em 1967, o Departamento Feminino, já ampliado, passou a ser o Corpo de Voluntárias.
- 								</p>
+								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -480,14 +360,15 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 1969, foi inaugurado o Ambulatório de Pediatria Assistencial, com a finalidade de prestar assistência médica e social às pessoas que não tinham recursos.
+									Em 1969, foi inaugurado o Ambulatório de Pediatria Assistencial, com a finalidade de
+									prestar assistência médica e social às pessoas que não tinham recursos.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -496,14 +377,15 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									No dia 28 de julho de 1971 houve a inauguração oficial do Hospital e o Corpo de Voluntárias passou a se denominar Departamento de Voluntárias.
+									No dia 28 de julho de 1971 houve a inauguração oficial do Hospital e o Corpo de
+									Voluntárias passou a se denominar Departamento de Voluntárias.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -512,14 +394,23 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 1997, a Pediatria Assistencial precisou introduzir ações voltadas para a prevenção de doenças e promoção da saúde, pois teve um alto índice de reinternações devido a problemas gastrointestinais e doenças do aparelho respiratório. Com isso, foi idealizado o Programa Einstein na Comunidade de Paraisópolis (PECP), um dos principais programas de assistência da Sociedade Beneficente Israelita Brasileira Hospital Albert Einstein e de seu Departamento de Voluntárias.  
- 
+									Em 1997, a Pediatria Assistencial precisou introduzir ações voltadas para a
+									prevenção de
+									doenças e promoção da saúde, pois teve um alto índice de reinternações devido a
+									problemas gastrointestinais e doenças do aparelho respiratório. Com isso, foi
+									idealizado
+									o Programa Einstein na Comunidade de Paraisópolis (PECP), um dos principais
+									programas de
+									assistência da Sociedade Beneficente Israelita Brasileira Hospital Albert Einstein e
+									de
+									seu Departamento de Voluntárias.
+
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -528,62 +419,48 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 1998, foi inaugurado o Programa Einstein na Comunidade de Paraisópolis, o PECP, marcando o início do trabalho voluntário nesta localidade.
+									Em 1998, foi inaugurado o Programa Einstein na Comunidade de Paraisópolis, o PECP,
+									marcando o início do trabalho voluntário nesta localidade.
 								</p>
 								<p class="padding-left:30px; mb-4">
 									Assista ao vídeo para saber mais sobre o PECP.
 								</p>
-								
-								
-								<v-btn 
-								type="button"
-								density="comfortable"
-								size="large"
-								rounded="pill"
-								class=""
-								:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-								@click="modal_voluntariado = true"
-								> 
+
+
+								<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+									:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+									@click="modal_voluntariado = true">
 									<span class="mdi mdi-video-outline"></span> Assistir Vídeo
 								</v-btn>
-								
+
 								<template>
 									<v-dialog v-model="modal_voluntariado" max-width="1200px">
-										<v-sheet
-										class="close-btn rounded-pill"
-										>
-											<v-icon 
-											icon="mdi-close-circle-outline" 
-											size="48px" 
-											:color="appStore.isDarkMode ? 'white' : 'primary'"
-											@click="modal_voluntariado = false" 
-											/>
+										<v-sheet class="close-btn rounded-pill">
+											<v-icon icon="mdi-close-circle-outline" size="48px"
+												:color="appStore.isDarkMode ? 'white' : 'primary'"
+												@click="modal_voluntariado = false" />
 										</v-sheet>
 										<v-card max-width="1200" class="rounded-xl me-6">
 											<!--Vimeo-->
 											<v-container fluid class="animate__animated animate__fadeInUp">
-												<div 
-												class="vimeo-container"
-												>
-													
-													<iframe src="https://player.vimeo.com/video/885695414?h=5f1b696fef&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" 
-													frameborder="0" 
-													allow="autoplay; fullscreen; picture-in-picture" 
-													title="2.4.1 - Voluntariado"
-													class="vimeo-player" 
-													/>
+												<div class="vimeo-container">
+
+													<iframe
+														src="https://player.vimeo.com/video/885695414?h=5f1b696fef&amp;badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479"
+														frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+														title="2.4.1 - Voluntariado" class="vimeo-player" />
 
 												</div>
 											</v-container>
 										</v-card>
 									</v-dialog>
-									</template>
-								
+								</template>
+
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -592,14 +469,18 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 1999, os homens começaram a trabalhar no Voluntariado do Einstein e, por isso houve uma mudança do nome para Departamento de Voluntários. Nesse mesmo período, foi renovada a identidade visual da Sociedade e criada a logomarca do Voluntariado.
- 
+									Em 1999, os homens começaram a trabalhar no Voluntariado do Einstein e, por isso
+									houve
+									uma mudança do nome para Departamento de Voluntários. Nesse mesmo período, foi
+									renovada
+									a identidade visual da Sociedade e criada a logomarca do Voluntariado.
+
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -608,14 +489,17 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2001, o PECP passou a ser conhecido como “Complexo Telma Sobolh” e ganhou novas instalações para o atual Ambulatório de Pediatria, uma quadra poliesportiva e a Casa da Criança.
+									Em 2001, o PECP passou a ser conhecido como “Complexo Telma Sobolh” e ganhou novas
+									instalações para o atual Ambulatório de Pediatria, uma quadra poliesportiva e a Casa
+									da
+									Criança.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -624,14 +508,17 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									2002 foi um marco importante da profissionalização do Voluntariado Einstein, quando se tornou o primeiro Voluntariado da América Latina a conquistar a certificação ISO 9001.
+									2002 foi um marco importante da profissionalização do Voluntariado Einstein, quando
+									se
+									tornou o primeiro Voluntariado da América Latina a conquistar a certificação ISO
+									9001.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -640,14 +527,20 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2004, o Departamento de Voluntários integrou o Voluntariado já existente do Residencial Israelita Albert Einstein (RIAE) e passou a prestar seus serviços à entidade que, além de oferecer abrigo aos idosos da comunidade, promoveu uma série de atividades de enriquecimento social e cultural, oferecendo opções de lazer e entretenimento e proporcionando um cotidiano saudável aos que ali residiam.
+									Em 2004, o Departamento de Voluntários integrou o Voluntariado já existente do
+									Residencial Israelita Albert Einstein (RIAE) e passou a prestar seus serviços à
+									entidade
+									que, além de oferecer abrigo aos idosos da comunidade, promoveu uma série de
+									atividades
+									de enriquecimento social e cultural, oferecendo opções de lazer e entretenimento e
+									proporcionando um cotidiano saudável aos que ali residiam.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -656,14 +549,23 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em fevereiro de 2010, atendendo à solicitação do Instituto Israelita de Responsabilidade Social, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas, inaugurando o Setor de Visitação no Hospital M’ Boi Mirim. Em agosto do mesmo ano, dois novos espaços foram patrocinados pelo Voluntariado: uma brinquedoteca para as crianças internadas na pediatria do hospital e salas de aula para capacitação e promoção de conhecimento tanto para os profissionais da Instituição, como para a população local.
+									Em fevereiro de 2010, atendendo à solicitação do Instituto Israelita de
+									Responsabilidade
+									Social, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas,
+									inaugurando o Setor de Visitação no Hospital M’ Boi Mirim. Em agosto do mesmo ano,
+									dois
+									novos espaços foram patrocinados pelo Voluntariado: uma brinquedoteca para as
+									crianças
+									internadas na pediatria do hospital e salas de aula para capacitação e promoção de
+									conhecimento tanto para os profissionais da Instituição, como para a população
+									local.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -672,14 +574,17 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2013, as Unidades Externas da Instituição (Ibirapuera, Perdizes e Alphaville) começaram a fazer parte das atividades desenvolvidas pelo Departamento com a missão de contribuir com os colaboradores no processo de humanização dos pacientes.
+									Em 2013, as Unidades Externas da Instituição (Ibirapuera, Perdizes e Alphaville)
+									começaram a fazer parte das atividades desenvolvidas pelo Departamento com a missão
+									de
+									contribuir com os colaboradores no processo de humanização dos pacientes.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -688,14 +593,20 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2015, o diretor do Hospital Municipal Vila Santa Catarina, antes mesmo de sua inauguração, entrou em contato com a diretoria do Voluntariado para solicitar que os voluntários atuassem no hospital. Logo após a inauguração, o Voluntariado iniciou seu trabalho no setor de Transplantes, seguido de visitação aos pacientes e acompanhantes, promovendo a humanização por meio de ações sociais.
+									Em 2015, o diretor do Hospital Municipal Vila Santa Catarina, antes mesmo de sua
+									inauguração, entrou em contato com a diretoria do Voluntariado para solicitar que os
+									voluntários atuassem no hospital. Logo após a inauguração, o Voluntariado iniciou
+									seu
+									trabalho no setor de Transplantes, seguido de visitação aos pacientes e
+									acompanhantes,
+									promovendo a humanização por meio de ações sociais.
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -704,14 +615,16 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2022, o Departamento de Voluntários expandiu a sua área de atuação assumindo a gestão do Voluntariado do Hospital Municipal de Aparecida de Goiânia (HMAP).
+									Em 2022, o Departamento de Voluntários expandiu a sua área de atuação assumindo a
+									gestão
+									do Voluntariado do Hospital Municipal de Aparecida de Goiânia (HMAP).
 
 								</p>
 							</v-col>
 						</v-row>
 					</v-sheet>
 				</v-carousel-item>
-				
+
 				<v-carousel-item>
 					<v-sheet color="transparent" width="100%" height="100%" class="d-flex justify-end px-8 py-8">
 						<v-row justify="center" align="center">
@@ -720,10 +633,16 @@
 							</v-col>
 							<v-col style="padding-right: 60px;" cols="12" md="6">
 								<p class="padding-left:30px;">
-									Em 2023, são mais de 60 anos de atuação e o grupo atualmente é formado por quase 600 voluntários. Suas ações se fazem presentes em diversas iniciativas educativas voltadas para a promoção da saúde e prevenção de doenças, além do incentivo à geração de renda.
+									Em 2023, são mais de 60 anos de atuação e o grupo atualmente é formado por quase 600
+									voluntários. Suas ações se fazem presentes em diversas iniciativas educativas
+									voltadas
+									para a promoção da saúde e prevenção de doenças, além do incentivo à geração de
+									renda.
 								</p>
 								<p class="padding-left:30px;">
-									Assim é o Voluntariado do Einstein, sempre contribuindo para a saúde física, mental e social da população de São Paulo!
+									Assim é o Voluntariado do Einstein, sempre contribuindo para a saúde física, mental
+									e
+									social da população de São Paulo!
 								</p>
 							</v-col>
 						</v-row>
@@ -734,45 +653,25 @@
 
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'white-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
-				@click="isContent03Visible = true; prosseguir('content03')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-secondary bg_escuro' : 'text-secondary bg_claro'"
+					@click="isContent03Visible = true; prosseguir('content03')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
 
 	</v-card>
 	<!-- conteúdo 02 -->
-	
+
 	<!-- conteúdo 03 -->
-	<v-card 
-	v-show="isContent03Visible"
-	id="content03" 
-	width="100%" 
-	elevation="6"
-	style="z-index:3; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos" 
-	>
+	<v-card v-show="isContent03Visible" id="content03" width="100%" elevation="6"
+		style="z-index:3; background-image: radial-gradient(#C4E8E1, #62C9CE);"
+		class="mt-n4 mx-auto rounded-lg pt-4 v-card-conteudos">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 		<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
 
@@ -783,10 +682,13 @@
 				<strong>Os aventais rosa: é assim que nos identificamos!</strong>
 			</p>
 			<p class="mt-4 texto_preto">
-				Qualquer pessoa que conhece as unidades do Einstein, já viu circulando mulheres e homens com aventais cor-de-rosa ou camisetas brancas com a marca do Voluntariado. São pessoas unidas pelo propósito de fazer a diferença e transformar o ambiente hospitalar em um lugar mais acolhedor.
+				Qualquer pessoa que conhece as unidades do Einstein, já viu circulando mulheres e homens com aventais
+				cor-de-rosa ou camisetas brancas com a marca do Voluntariado. São pessoas unidas pelo propósito de fazer
+				a
+				diferença e transformar o ambiente hospitalar em um lugar mais acolhedor.
 			</p>
 		</v-card-text>
-		
+
 		<v-row class="">
 			<v-col cols="12" md="12">
 				<v-img class="show_desktop" height="430" src="./img/tela_voluntariado/img_nossa_marca.png" />
@@ -794,32 +696,17 @@
 				<v-img class="show_mobile" height="200" src="./img/tela_voluntariado/img_nossa_marca.png" />
 			</v-col>
 		</v-row>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent04Visible = true; prosseguir('content04')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent04Visible = true; prosseguir('content04')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -827,26 +714,17 @@
 	</v-card>
 
 	<!--Grafisrmos "Triangulo" do conteúdo 3 -->
-	<v-sheet 
-	v-if="isContent03Visible" 
-	color="transparent"
-	class="d-flex justify-center mt-n8 mb-8"
-	>
+	<v-sheet v-if="isContent03Visible" color="transparent" class="d-flex justify-center mt-n8 mb-8">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-sheet>
 
 	<!-- conteúdo 03 -->
-	
+
 	<!-- conteúdo 04 -->
-	<v-card 
-	v-show="isContent04Visible"
-	id="content04" 
-	width="100%" 
-	elevation="6"
-	style="z-index:3; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	class="mt-n4 mx-auto rounded-lg pt-0 v-card-conteudos" 
-	>
+	<v-card v-show="isContent04Visible" id="content04" width="100%" elevation="6"
+		style="z-index:3; background-image: radial-gradient(#C4E8E1, #62C9CE);"
+		class="mt-n4 mx-auto rounded-lg pt-0 v-card-conteudos">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 		<v-card-text class="pl-0 pr-0 mt-n10 reveal fade-left">
 
@@ -872,36 +750,26 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				A Unidade Morumbi ampliou o atendimento em medicina preventiva e reabilitação, com a criação de infraestrutura ambulatorial e atendimento integrado e multiprofissional. Os voluntários têm como objetivo contribuir com o processo de humanização hospitalar por meio do contato cordial e acolhedor com pacientes e acompanhantes. 
+				A Unidade Morumbi ampliou o atendimento em medicina preventiva e reabilitação, com a criação de
+				infraestrutura ambulatorial e atendimento integrado e multiprofissional. Os voluntários têm como
+				objetivo
+				contribuir com o processo de humanização hospitalar por meio do contato cordial e acolhedor com
+				pacientes e
+				acompanhantes.
 
 			</p>
 		</v-card-text>
 
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent05Visible = true; prosseguir('content05')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent05Visible = true; prosseguir('content05')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -909,10 +777,7 @@
 	</v-card>
 
 	<!--Grafisrmos "Triangulo" do conteúdo 5-->
-	<v-container 
-	v-if="isContent04Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent04Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
@@ -920,14 +785,9 @@
 	<!-- conteúdo 04 -->
 
 	<!-- conteúdo 05 -->
-	<v-card 
-	v-show="isContent05Visible"
-	id="content05" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+	<v-card v-show="isContent05Visible" id="content05" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -948,35 +808,23 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Os voluntários têm como objetivo amenizar os efeitos do tratamento com uma palavra de conforto e esperança, oferecendo suporte aos pacientes e acompanhantes, além de contribuir com o trabalho da equipe Multiprofissional.
+				Os voluntários têm como objetivo amenizar os efeitos do tratamento com uma palavra de conforto e
+				esperança,
+				oferecendo suporte aos pacientes e acompanhantes, além de contribuir com o trabalho da equipe
+				Multiprofissional.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent06Visible = true; prosseguir('content06')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent06Visible = true; prosseguir('content06')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -985,25 +833,17 @@
 
 	<!-- conteúdo 05 -->
 	<!-- conteúdo 06 -->
-	
+
 	<!--Grafisrmos "Triangulo" do conteúdo 6-->
-	<v-container 
-	v-if="isContent05Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent05Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent06Visible"
-	id="content06" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent06Visible" id="content06" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1024,35 +864,24 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Os voluntários atuam em conjunto com a equipe profissional do PECP para oferecer aos moradores da comunidade atividades relacionadas à saúde e a educação, com o propósito de promover a transformação social e a geração de conhecimento.
+				Os voluntários atuam em conjunto com a equipe profissional do PECP para oferecer aos moradores da
+				comunidade
+				atividades relacionadas à saúde e a educação, com o propósito de promover a transformação social e a
+				geração
+				de conhecimento.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent07Visible = true; prosseguir('content07')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent07Visible = true; prosseguir('content07')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1060,27 +889,19 @@
 	</v-card>
 
 	<!-- conteúdo 06 -->
-	
+
 	<!-- conteúdo 07 -->
-	
+
 	<!--Grafisrmos "Triangulo" do conteúdo 7-->
-	<v-container 
-	v-if="isContent06Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent06Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent07Visible"
-	id="content07" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent07Visible" id="content07" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1101,38 +922,26 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Com mais de 80 anos de existência, o RIAE está localizado na Vila Mariana e acolhe cerca de 100 idosos da comunidade judaica, com o objetivo de cuidar e preservar sua história e preceitos.
+				Com mais de 80 anos de existência, o RIAE está localizado na Vila Mariana e acolhe cerca de 100 idosos
+				da
+				comunidade judaica, com o objetivo de cuidar e preservar sua história e preceitos.
 			</p>
 			<p class="mt-4 texto_preto">
-				Os voluntários auxiliam na promoção da socialização, bem-estar e entretenimento dos idosos, oferecendo qualidade de vida e acolhimento aos residentes.
+				Os voluntários auxiliam na promoção da socialização, bem-estar e entretenimento dos idosos, oferecendo
+				qualidade de vida e acolhimento aos residentes.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent08Visible = true; prosseguir('content08')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent08Visible = true; prosseguir('content08')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1140,27 +949,19 @@
 	</v-card>
 
 	<!-- conteúdo 07 -->
-	
-		<!-- conteúdo 08 -->
-	
+
+	<!-- conteúdo 08 -->
+
 	<!--Grafisrmos "Triangulo" do conteúdo 6-->
-	<v-container 
-	v-if="isContent08Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent08Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent08Visible"
-	id="content08" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent08Visible" id="content08" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1181,35 +982,21 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein contribuindo com à equipe multiprofissional e pacientes do Hospital M’Boi Mirim. 
+				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein
+				contribuindo com à equipe multiprofissional e pacientes do Hospital M’Boi Mirim.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent08aVisible = true; prosseguir('content08a')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent08aVisible = true; prosseguir('content08a')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1217,27 +1004,19 @@
 	</v-card>
 
 	<!-- conteúdo 08 -->
-	
-		<!-- conteúdo 08a -->
-	
+
+	<!-- conteúdo 08a -->
+
 	<!--Grafisrmos "Triangulo" do conteúdo 8a-->
-	<v-container 
-	v-if="isContent08aVisible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent08aVisible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent08aVisible"
-	id="content08a" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent08aVisible" id="content08a" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1258,35 +1037,21 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Em fevereiro de 2010, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein contribuindo com a humanização hospitalar, oferecendo acolhimento a pacientes e acompanhantes.
+				Em julho de 2022, o Voluntariado ampliou sua atuação junto à área de Parcerias Públicas do Einstein
+				contribuindo com a humanização hospitalar, oferecendo acolhimento a pacientes e acompanhantes.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent09Visible = true; prosseguir('content09')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent09Visible = true; prosseguir('content09')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1294,27 +1059,19 @@
 	</v-card>
 
 	<!-- conteúdo 08 -->
-	
+
 	<!-- conteúdo 09 -->
-	
+
 	<!--Grafisrmos "Triangulo" do conteúdo 9-->
-	<v-container 
-	v-if="isContent09Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent09Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent09Visible"
-	id="content09" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent09Visible" id="content09" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1335,35 +1092,22 @@
 		</v-row>
 		<v-card-text class="pl-0 pr-0 mt-0 reveal fade-left">
 			<p class="mt-4 texto_preto">
-				Desde 2015, ano de inauguração do hospital, o Voluntariado atua no Vila Santa Catarina com o propósito de promover a humanização e levar alegria e esperança aos pacientes. 
+				Desde 2015, ano de inauguração do hospital, o Voluntariado atua no Vila Santa Catarina com o propósito
+				de
+				promover a humanização e levar alegria e esperança aos pacientes.
 			</p>
 		</v-card-text>
-		
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent10Visible = true; prosseguir('content10')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent10Visible = true; prosseguir('content10')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1371,27 +1115,19 @@
 	</v-card>
 
 	<!-- conteúdo 09 -->
-	
+
 	<!-- conteúdo 10 -->
-	
+
 	<!--Grafisrmos "Triangulo" do conteúdo 10-->
-	<v-container 
-	v-if="isContent10Visible" 
-	class="d-flex justify-center mt-n12 mb-4"
-	>
+	<v-container v-if="isContent10Visible" class="d-flex justify-center mt-n12 mb-4">
 		<i style="color:#62C9CE; font-size:4rem;" class="mdi-triangle mdi-rotate-180 mdi v-icon v-icon--size-x-large"
 			aria-hidden="true"></i>
 	</v-container>
 
-	
-	<v-card 
-	v-show="isContent10Visible"
-	id="content10" 
-	width="100%" 
-	elevation="6"
-	class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide" 
-	style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);"
-	>
+
+	<v-card v-show="isContent10Visible" id="content10" width="100%" elevation="6"
+		class="mt-n4 mx-auto rounded-lg pt-0 pl-16 pr-16 content-slide"
+		style="z-index:2; background-image: radial-gradient(#C4E8E1, #62C9CE);">
 		<v-img class="mx-auto grade_header" src="./img/tela_voluntariado/grade_header_branco.png" />
 
 		<v-card-text class="pl-0 pr-0 mt-n10 texto_preto reveal fade-left">
@@ -1405,42 +1141,34 @@
 			</v-col>
 			<v-col cols="12" md="6">
 				<v-card-text class="pl-0 pr-0 mt-0 reveal fade-right">
-			<p class="mt-4 texto_preto">
-				O Voluntariado tem forte atuação na angariação de verba para os projetos sociais do Hospital, tanto por meio da realização de bazares, vendas de produtos e outras iniciativas, como através da captação de doações. 
-			</p>
-			<p class="mt-4 texto_preto">
-				Os valores arrecadados têm um impacto positivo nas ações de responsabilidade social do Hospital e envolvem patrocínio de projetos, reformas de infraestrutura, educação e capacitação, pesquisa e inovação, além de compra de equipamentos para melhoria do atendimento aos pacientes. 
-			</p>
-		</v-card-text>
+					<p class="mt-4 texto_preto">
+						O Voluntariado tem forte atuação na angariação de verba para os projetos sociais do Hospital,
+						tanto
+						por meio da realização de bazares, vendas de produtos e outras iniciativas, como através da
+						captação
+						de doações.
+					</p>
+					<p class="mt-4 texto_preto">
+						Os valores arrecadados têm um impacto positivo nas ações de responsabilidade social do Hospital
+						e
+						envolvem patrocínio de projetos, reformas de infraestrutura, educação e capacitação, pesquisa e
+						inovação, além de compra de equipamentos para melhoria do atendimento aos pacientes.
+					</p>
+				</v-card-text>
 			</v-col>
 		</v-row>
-		
-		
+
+
 		<!--Btn final-->
 		<v-container class="d-flex justify-center mb-4">
-			<v-sheet 
-			color="transparent"
-			class="mb-4"
-			width = "auto"
-			>
-				<v-img
-				width="40"
-				height="60"
-				src="../GlobalStyles/img/gota-icon.svg"
-				class=" mt-8 mb-4 mx-auto"
-				:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" 
-				/>
+			<v-sheet color="transparent" class="mb-4" width="auto">
+				<v-img width="40" height="60" src="../GlobalStyles/img/gota-icon.svg" class=" mt-8 mb-4 mx-auto"
+					:class="appStore.isDarkMode ? 'icon-dark-blue-svg' : 'icon-dark-blue-svg'" />
 
-				<v-btn 
-				type="button"
-				density="comfortable"
-				size="large"
-				rounded="pill"
-				class=""
-				:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
-				@click="isContent11Visible = true; prosseguir('content11')"
-				> 
-					Prosseguir	
+				<v-btn type="button" density="comfortable" size="large" rounded="pill" class=""
+					:class="appStore.isDarkMode ? 'text-primary bg_claro' : 'text-secondary bg_claro'"
+					@click="isContent11Visible = true; prosseguir('content11')">
+					Prosseguir
 				</v-btn>
 			</v-sheet>
 		</v-container>
@@ -1448,15 +1176,10 @@
 	</v-card>
 
 	<!-- conteúdo 10 -->
-	
+
 	<!-- conteúdo 11 footer -->
-	<v-card 
-	v-show="isContent11Visible"
-	id="content11" 
-	width="100%"
-	class="mt-n4 mx-auto rounded-lg pt-0 footer"
-	style="z-index:1; background-color: #dc7689;"  
-	>
+	<v-card v-show="isContent11Visible" id="content11" width="100%" class="mt-n4 mx-auto rounded-lg pt-0 footer"
+		style="z-index:1; background-color: #dc7689;">
 
 		<v-container fill-height class="my-10">
 			<v-row>
@@ -1476,7 +1199,7 @@
 						</v-col>
 					</v-row>
 
-					<v-row >
+					<v-row>
 						<v-col cols="12" md="12">
 							<v-img class=" reveal fade-right" src="./img/tela_voluntariado/texto_footer.svg"
 								title="O Voluntariado continua seu trabalho, levando uma gota de Einstein a cada pessoa e, com isso, é capaz de transformar sonhos em realidade e contribuir para a busca de uma sociedade mais justa e igualitária para todos os indivíduos." />
@@ -1506,101 +1229,107 @@
 
 	<!-- conteúdo 11 -->
 
-	<v-sheet
-	v-if="appStore.isFinished"
-	height="100"
-	color="transparent"
-	/>
+	<v-sheet v-if="appStore.isFinished" height="100" color="transparent" />
 
 </template>
 
 <script setup>
 
-	//Imports
-	import { ref, onMounted } from "vue";
-	import { useAppStore } from '../../../store/app'
-	import { useStartProgress } from '../../../components/composables/useProgress'
-	import { useAnim } from '../GlobalJs/useContentGlobalJs'
+//Imports
+import { ref, onMounted, defineProps } from "vue";
+import { useAppStore } from '../../../store/app'
+import { useStartProgress } from '../../../components/composables/useProgress'
+import { useAnim } from '../GlobalJs/useContentGlobalJs'
 
-	//Inicia o Pinia com a store global do App (appStore)
-	const appStore = useAppStore();
+//Inicia o Pinia com a store global do App (appStore)
+const appStore = useAppStore();
 
-	//!!! --> Defina o id do último bloco de conteúdo ou elemento da tela Ex: ref('#ultimoId')
-	const lastElementIdOnScreen = ref('#content11')
+//!!! --> Defina o id do último bloco de conteúdo ou elemento da tela Ex: ref('#ultimoId')
+const lastElementIdOnScreen = ref('#content11')
 
-	//Controle da visibilidade dos conteúdos
-	const isContent01Visible = ref(true) // <-- Primeiro conteúdo inicia visível
-	const isContent02Visible = ref(false)
-	const isContent03Visible = ref(false)
-	const isContent04Visible = ref(false)
-	const isContent05Visible = ref(false)
-	const isContent06Visible = ref(false)
-	const isContent07Visible = ref(false)
-	const isContent08Visible = ref(false)
-	const isContent08aVisible = ref(false)
-	const isContent09Visible = ref(false)
-	const isContent10Visible = ref(false)
-	const isContent11Visible = ref(false)
-	const modal_voluntariado = ref(false)
+//Controle da visibilidade dos conteúdos
+const isContent01Visible = ref(true) // <-- Primeiro conteúdo inicia visível
+const isContent02Visible = ref(false)
+const isContent03Visible = ref(false)
+const isContent04Visible = ref(false)
+const isContent05Visible = ref(false)
+const isContent06Visible = ref(false)
+const isContent07Visible = ref(false)
+const isContent08Visible = ref(false)
+const isContent08aVisible = ref(false)
+const isContent09Visible = ref(false)
+const isContent10Visible = ref(false)
+const isContent11Visible = ref(false)
+const modal_voluntariado = ref(false)
 
-	//Controle dos cards do conteúdo 01
-	const isCard01Visible = ref(false)
-	const isCard02Visible = ref(false)
-	const isCard03Visible = ref(false)
-	const isCard04Visible = ref(false)
+//Controle dos cards do conteúdo 01
+const isCard01Visible = ref(false)
+const isCard02Visible = ref(false)
+const isCard03Visible = ref(false)
+const isCard04Visible = ref(false)
 
-	//Linha do tempo
-	const timeLineNum = ref([
-		1959, 1967, 1969, 1971, 1997, 1998, 1999, 2001, 2002, 2004, 2010, 2013, 2015, 2022, 2023
-	])
-	//Controla a seleção da linha do tempo e do carrossel
-	const timelineSelect = ref(0)
-
-
-	const teste = () => {
-		console.log(timelineSelect)
-	}
+//Linha do tempo
+const timeLineNum = ref([
+	1959, 1967, 1969, 1971, 1997, 1998, 1999, 2001, 2002, 2004, 2010, 2013, 2015, 2022, 2023
+])
+//Controla a seleção da linha do tempo e do carrossel
+const timelineSelect = ref(0)
 
 
-	const isAllContentFinished = ref(false)
+const teste = () => {
+	console.log(timelineSelect)
+}
 
-	//Finaliza o conteúdo
-	const finishedContent = () => {
-		appStore.finishedContent(true)
-		useStartProgress();
-	}
 
-	//Acompanha o progresso da dos conteúdos 
-	const prosseguir = (contentId) => {	
-		console.log(`#${contentId}` + ' -- ' + lastElementIdOnScreen.value)
+const isAllContentFinished = ref(false)
 
-		setTimeout(()=> {
-			document.querySelector(`#${contentId}`).scrollIntoView({
-				behavior: 'smooth'
+//Finaliza o conteúdo
+const finishedContent = () => {
+	// Ajusta isUnidadeFinished com base na prop isLastObject
+	props.isLastObject ?
+		appStore.isUnidadeFinished = true :
+		appStore.isUnidadeFinished = false;
+
+	appStore.finishedContent(true)
+	useStartProgress();
+}
+
+// Recebe a prop isLastObject do componente pai
+const props = defineProps({
+	isLastObject: Boolean
+});
+
+//Acompanha o progresso da dos conteúdos 
+const prosseguir = (contentId) => {
+	console.log(`#${contentId}` + ' -- ' + lastElementIdOnScreen.value)
+
+	setTimeout(() => {
+		document.querySelector(`#${contentId}`).scrollIntoView({
+			behavior: 'smooth'
 		});
-		} ,500); 
+	}, 500);
 
-		if(`#${contentId}`  == lastElementIdOnScreen.value){	
-			document.addEventListener('scroll', () => {
-				const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight - 100
-				if (window.scrollY >= scrollableHeight && isAllContentFinished.value == false) { 
-					finishedContent() 
-					isAllContentFinished.value = true 
-				}
-			})
-		}
-
+	if (`#${contentId}` == lastElementIdOnScreen.value) {
+		document.addEventListener('scroll', () => {
+			const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight - 100
+			if (window.scrollY >= scrollableHeight && isAllContentFinished.value == false) {
+				finishedContent()
+				isAllContentFinished.value = true
+			}
+		})
 	}
 
+}
 
-	//Ações que acontecem após o carregamento da página 
-	onMounted(() => {	
-		//Configuração das animações de rolagem
-		useAnim(150, true);
 
-	})
+//Ações que acontecem após o carregamento da página 
+onMounted(() => {
+	//Configuração das animações de rolagem
+	useAnim(150, true);
 
-</script> 
+})
+
+</script>
 
 
 
@@ -1612,7 +1341,7 @@
 .custom-v-card {
 	position: absolute;
 	bottom: 0;
-	opacity: 1 !important;	
+	opacity: 1 !important;
 	width: 100%;
 	height: 100%;
 	text-align: center;
@@ -1732,7 +1461,7 @@
 }
 
 .bg_escuro {
-	background-color: $primaryDark !important;	
+	background-color: $primaryDark !important;
 }
 
 .azul-svg {
@@ -1806,7 +1535,7 @@
 	margin: 0px 0px 0px 0px;
 }
 
-.line-pos{
+.line-pos {
 	position: absolute;
 	top: 25px
 }
@@ -1840,20 +1569,22 @@
 	/* background: rgb(var(--v-theme-on-surface)); */
 	border: 2px solid #62C9CE !important;
 }
-@media screen and (max-width: 1277px){
-	.ilus_era_uma_vez{
-	width:90%;
-	}
-	}
-	@media screen and (max-width: 960px){
-	.ilus_era_uma_vez{
-	width:60%;
-	}
-	}
-@media screen and (max-width: 768px){
-	.ilus_era_uma_vez{
-	width:50%;
-	}
-	}
 
+@media screen and (max-width: 1277px) {
+	.ilus_era_uma_vez {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.ilus_era_uma_vez {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.ilus_era_uma_vez {
+		width: 50%;
+	}
+}
 </style>

@@ -3,7 +3,7 @@
 	<template v-if="appStore.appData != 'undefined' && isScreenBlock == false">
 		<v-app class="cursor-preview">
 
-			<DebugModal />
+			<!--<DebugModal />-->
 
 			<!--Modal logout-->
 			<LogoutModal />
@@ -173,7 +173,7 @@
 
 
 	//*!Retirar para produção!!
-	import DebugModal from '@/components/DebugModal'
+	//import DebugModal from '@/components/DebugModal'
 
 
 	import { useScreenOrientation } from '@vueuse/core'

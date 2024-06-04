@@ -32,7 +32,7 @@
                         />
 
                         <v-icon
-                        v-if="appStore.appData.workplace.status > 0"
+                        v-if="appStore.appData.workplace.status > 2"
                         color="info"
                         icon="mdi-check-circle"
                         size="x-large"
@@ -50,7 +50,7 @@
                 density="comfortable"
                 rounded
                 class="bg-info letter-normal animate__animated animate__fadeInDown"
-                @click="closeToolTip(); appStore.workplaceModal = true"
+                @click="showSheck(); appStore.workplaceModal = true"
                 >
                     Saiba mais
                 </v-btn>
@@ -90,22 +90,21 @@
     const appStore = useAppStore()
 
     const closeToolTip = () => {
-
-        if(appStore.appData.start.status == 2){
-
-            appStore.appData.workplace.status = 2
-        }
-
-
-        //Atualiza o localStorage
-        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
-
-        //Atualiza backend
-        const userId = JSON.parse(localStorage.getItem('userId'));
-        //port / path / data
-        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
-
+        appStore.appData.workplace.status = 2
+        saveStatus()
     }
+
+    const showSheck = () => {
+        appStore.appData.workplace.status = 3
+        saveStatus()
+    }
+
+    const saveStatus = () => {
+        localStorage.setItem('localAppData', JSON.stringify(appStore.appData));
+        const userId = JSON.parse(localStorage.getItem('userId'));
+        apiStore.usePost('/' + userId , JSON.parse(localStorage.getItem('localAppData')))
+    }
+
 </script>
 
 <style scoped>

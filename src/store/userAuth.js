@@ -75,8 +75,7 @@ export const useAuthStore = defineStore('userAuth', {
             sessionStorage.setItem('loginState', true);
 
             this.permition = response.data.hideactivities;
-
-
+            console.log('weiuieurowieu', response.data)
 
 
             console.log(' -> Objeto recebido do servidor no Login: ', data);
@@ -171,6 +170,36 @@ export const useAuthStore = defineStore('userAuth', {
 
             console.log('localStatePermition', this.permition)
 
+            const insertLastObjectMarkers = async () => {
+
+                // Marca o último objeto em cada lista de lições com a chave `lastObject`
+                appStore.appData.unidades = appStore.appData.unidades.map(unidade => (
+                    // Retorna uma nova unidade com a modificação no conteúdo
+                    {
+                        ...unidade,
+                        content: unidade.content.map(content => (
+                            // Retorna um novo conteúdo com a modificação nas lições
+                            {
+                                ...content,
+                                lessons: content.lessons.map((lesson, index, lessons) => (
+                                    // Retorna uma nova lição com a chave `lastObject` se for a última lição
+                                    {
+                                        ...lesson,
+                                        // Criea ou define lastObject true ou undefinide caso seja o último objeto
+                                        lastObject: index === lessons.length - 1 ? true : undefined
+                                    }
+                                ))
+                            }
+                        ))
+                    }
+                ));
+            }
+
+
+            // A variável appStore.appData.unidades agora contém as unidades atualizadas com `lastObject` marcado no último objeto das lições.
+
+            //this.permition = 1; // Simula chegada de permissão 1
+
             if (this.permition === 0) {
                 // Exclui o objeto que já está oculto para todos os perfis 
                 removeLessonsByIndice(appStore.appData, [[3, 0, 2]]);
@@ -189,7 +218,25 @@ export const useAuthStore = defineStore('userAuth', {
                     "heart": 'hide',
                     "picture": 0
                 };
+
+                // Nome para o título que será modificado
+                const findTitleByName = 'Meus Benefícios e Oportunidades';
+                // Nome para o título que será modificado
+                const newTitle = 'Oportunidades';
+
+                // Encontrar o índice da unidade com o título definido em findTitleByName
+                const index = appStore.appData.unidades.findIndex(
+                    unidade => unidade.title === findTitleByName
+                );
+
+                // Verificar se a unidade foi encontrada
+                if (index != -1) {
+                    appStore.appData.unidades[index].title = newTitle;
+                }
+
             }
+
+            await insertLastObjectMarkers();
 
         }
     }
